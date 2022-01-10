@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 .reveal {
-  background: url("/FiguresGeneral/Normal_slide_Maine.svg");
+  background: url("FiguresGeneral/Normal_slide_Maine.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -19,9 +19,9 @@
   text-align: center;
   font-style: bold;
   border-bottom-style: solid;
-  border-bottom-color: #b4c8e2;
+  border-bottom-color: #d6d2c4;
   padding-bottom: 0px;
-  border-bottom-width: 2px;
+  border-bottom-width: 3px;
   font-size: 1.7em;
 }
 
@@ -56,7 +56,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: EB Garamond, Helvetica, sans-serif;
-  --r-heading-color: #d6d2c4;
+  --r-heading-color: #7abbe6;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -68,9 +68,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #b4c8e2;
-  --r-link-color-dark: #7da0cd;
-  --r-link-color-hover: #ebf0f7;
+  --r-link-color: #7abbe6;
+  --r-link-color-dark: #3a9ada;
+  --r-link-color-hover: #badcf2;
   --r-selection-background-color: #2480bd;
   --r-selection-color: #fff;
 }
@@ -342,7 +342,7 @@ padding-left: 5px;
 border-left-width: 5px;
 }
 .reveal .theorem2:before {
-content: ;
+content: "";
 font-weight: bold;
 color: #7abbe6;
 font-style: normal;
@@ -363,7 +363,7 @@ padding-bottom: 5px;
 border-bottom-width: 5px;
 }
 .reveal .title_slide:before {
-content: ;
+content: "";
 color: #001d51;
 font-weight: bold;
 font-style: bold;
@@ -424,7 +424,7 @@ content: attr(name) ;
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #7abbe6;
+  color: var(--r-link-color);
 }
 
 /*********************************************
@@ -432,7 +432,7 @@ content: attr(name) ;
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #7abbe6;
+  color: var(--r-link-color);
 }
 
 /*********************************************

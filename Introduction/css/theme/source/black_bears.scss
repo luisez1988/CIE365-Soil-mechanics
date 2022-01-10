@@ -19,7 +19,7 @@
 
 
 .reveal {
-	background: url("/FiguresGeneral/Normal_slide_Maine.svg");
+	background: url("FiguresGeneral/Normal_slide_Maine.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -29,7 +29,7 @@
 
 $backgroundColor: #1c2e3f;
 $mainColor: #fff;
-$headingColor: #d6d2c4;
+$headingColor: #7abbe6;
 
 $mainFontSize: 40px;
 $mainFont: 'Roboto Slab', Helvetica, sans-serif;
@@ -54,14 +54,11 @@ $heading4Size: 1.0em;
   text-align: center;
   font-style: bold;
   border-bottom-style: solid;
-  border-bottom-color: #b4c8e2;
+  border-bottom-color: #d6d2c4;
   padding-bottom: 0px;
-  border-bottom-width: 2px;
+  border-bottom-width: 3px;
   font-size: $heading1Size;
 }
-
-
-
 
 // Change text colors against light slide backgrounds
 @include light-bg-text-color(#222);
