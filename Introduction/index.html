@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
 
 	</head>
   <body>
@@ -100,6 +102,14 @@
 					<p>Office hours: Tuesdays and Thursdays 8-9 AM by appointment due to COVID 19.</p>
 					<p>Email: luis.zambranocruzatty@maine.edu</p>
 					<p>Phone: 207.581.1277</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Graders</h1>
+					<ul style="margin-top:130px;">
+						<li class="fragment">Parry Seddiqi. OH M,W,F 11 AM- 12 PM.</li>
+						<li class="fragment">Benjamin Zeitlin. OH T 10-11 AM; F 9-10 AM and F 4-5 PM.</li>
+					</ul>
 				</section>
 
 
@@ -216,6 +226,7 @@
 						<div class="container">
 							<div class="col">
 								<ol>
+									<li class="fragment">Submit a physical copy before class time (i.e., 10 AM).</li>
 									<li class="fragment">Copying or plagiarizing is not allowed.</li>
 									<li class="fragment">Collaboration is allowed.</li>
 									<li class="fragment">Submit with memo. (Penalty: 25% of max possible grade)</li>
@@ -242,6 +253,7 @@
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Quizzes</h1>
 						<ul style="margin-top:100px">
+							<li class="fragment">Online in Brightspace.</li>
 							<li class="fragment">Five quizzes in total.</li>
 							<li class="fragment">They are made up of brief questions.</li>
 							<li class="fragment">closed-notes.</li>
@@ -262,12 +274,21 @@
 
 			<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Class policies</h1>
-					<ul style="margin-top:100px">
+					<ul style="margin-top:0px">
 						<li class="fragment">In-person and synchronous course. Assistance is required. </li>
-						<li class="fragment">Late homework will not be accepted.</li>
-						<li class="fragment">If you need more time or have a domestic issue let me know in advance.</li>
+						<li class="fragment">Do not play games, or navigate Facebook, Twitter, or other social networks in class. </li>
+						<li class="fragment">Switch to silent mode on your phone. Please exit the classroom if you have an urgent call.</li>
+						<li class="fragment">Late homework will not be accepted.If you need more time let me know in advance.</li>
 						<li class="fragment">DO NOT COME TO THE CLASSROOM if you are unwell with COVID-like symptoms and are afraid of missing a quiz date. Please send me an email to arrange a new date for the quiz.</li>
+						<li class="fragment">If necessary, I'll post video lectures.</li>
 					</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+						<h1>Course schedule disclaimer</h1>
+
+						<p style="margin-top:150px"> In the event of an extended disruption of normal classroom activities (due to COVID-19 or other long-term disruptions), the format for this course may be modified to enable its completion within its programmed time frame. In that event, you will be provided an addendum to the syllabus that will supersede this version.
+						</p>
 				</section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -291,12 +312,7 @@
 					</p>
 				</section>
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Course schedule disclaimer</h1>
 
-						<p style="margin-top:150px"> In the event of an extended disruption of normal classroom activities (due to COVID-19 or other long-term disruptions), the format for this course may be modified to enable its completion within its programmed time frame. In that event, you will be provided an addendum to the syllabus that will supersede this version.
-						</p>
-				</section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Course contents and schedule</h1>
@@ -304,15 +320,8 @@
 				</section>
 
 				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<p style="margin-top:400px; margin-left:900px">Questions or comments?</p>
+					<p style="margin-top:300px; margin-left:910px; font-size:80px">Questions or comments?</p>
 				</section>
-
-
-
-
-
-
-
 
 
 
@@ -349,13 +358,20 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   <script src="plugin/fullscreen/plugin.js"></script>
   <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
   <script src="plugin/chalkboard/plugin.js"></script>
+	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+	<script src="plugin/audio-slideshow/recorder.js"></script>
+	<script src="plugin/menu/menu.js"></script> -->
+	<script src="plugin/customcontrols/plugin.js"></script>
   <script>
 
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+											pdfSeparateFragments: false});
     // Also available as an ES module, see:
     // https://revealjs.com/initialization/
     Reveal.initialize({
       dependencies: [
-        { src: "plugin/svg_fragments/reveal-svg-fragment.js" }, { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+        { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
       controls: true,
       progress: true,
       center: false,
@@ -434,46 +450,80 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
       // Push each slide change to the browser history
       history: true,
+
+// 			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+// 				themes: false,
+// 				transitions: false,
+// 				markers: true,
+// 				hideMissingTitles: true,
+// 				custom: [
+// 									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+// 									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+// 							]
+// 			},
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
       // ...
-        chalkboard: {
-            boardmarkerWidth: 4,
-            chalkWidth: 4,
-            chalkEffect: 0.2,
-            src: null,
-            readOnly: false,
-            toggleChalkboardButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
-            toggleNotesButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
-            transition: 800,
-            theme: "chalkboard",
-            background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-            grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
-            eraser: { src: path + 'img/sponge.png', radius: 20},
-            boardmarkers : [
-                    { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-                    { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-                    { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-                    { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-                    { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-                    { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-                    { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-            ],
-            chalks: [
-                    { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-                    { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-                    { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-                    { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-                    { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-                    { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-                    { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-            ]
-        },
+			chalkboard: {
+			        boardmarkerWidth: 3,
+			        chalkWidth: 7,
+			        chalkEffect: 1.0,
+							src: "chalkboard.json",
+							storage: "chalkboard-demo",
+			        readOnly: undefined,
+			        transition: 800,
+			        theme: "chalkboard",
+			        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+			        grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+			        eraser: { src: path + 'img/sponge.png', radius: 20},
+			        boardmarkers : [
+			                { color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+			                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+			                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+			                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+			                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+			                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+			                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+			        ],
+			        chalks: [
+			                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+			                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+			                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+			                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+			                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+			                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+			                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+			        ]
+			    },
+			    customcontrols: {
+			  		controls: [
+			  			{ icon: '<i class="fa fa-pen-square"></i>',
+			  			  title: 'Toggle chalkboard (B)',
+			  			  action: 'RevealChalkboard.toggleChalkboard();'
+			  			},
+			  			{ icon: '<i class="fa fa-pen"></i>',
+			  			  title: 'Toggle notes canvas (C)',
+			  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+			  			}
+			  		]
+			    },
+
         // ...
       //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [ RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
-      ],
-
-    });
+      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
+								],
+                  // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+		    });
 
   </script>
 
