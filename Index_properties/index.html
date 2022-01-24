@@ -41,7 +41,7 @@
 				}
 				.reveal .slides section .fragment.fade-down.visible,
 				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 0.1;
+						opacity: 1;
 						margin-top:0px;
 					}
 				.reveal .slides section .fragment.fade-down,
@@ -87,11 +87,11 @@
 						<li>Soil phases</li>
 						<li>Important definitions</li>
 						<li>Phase digram</li>
-						<li>Volume and weigth relationships</li>
+						<li>Volume and weight relationships</li>
 						<li>Practical examples</li>
 					</ul>
 
-					<p>More in chapter 2 of Holtz et al. (2002)</p>
+					<p>More in chapter 2 of Holtz et al. (2013)</p>
 
         </section>
 
@@ -114,7 +114,7 @@
 		|Mass| kg | slug | 0.0685 |
 		|Force| N | lb | 0.225 |
 		| Gravity | 9.81 m/\\(m^2\\)| 32.17 ft/\\(s^2\\) | - |
-		| Unit weigth of water | 9.81 kN/\\(m^3\\) | 62.4 pcf |-|
+		| Unit weight of water | 9.81 kN/\\(m^3\\) | 62.4 pcf |-|
 
 
 	</textarea>
@@ -122,13 +122,13 @@
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Important unit weigth relations</h1>
+    <h1>Important unit weight relations</h1>
 		<div class="container">
 			<div class="col">
 				<p>In general the density of a material is:.
 					$$\rho=m/V$$
 
-					And its unit weigth is:
+					And its unit weight is:
 					$$\gamma=W/V=m g/V= g \rho$$
 				</p>
 			</div>
@@ -140,7 +140,7 @@
 				<ul>
 					<li>\(m:\) Mass</li>
 					<li>\(V:\) Volume</li>
-					<li>\(W:\) Weigth</li>
+					<li>\(W:\) weight</li>
 					<li>\(g:\) Gravity</li>
 					<li>\(\rho_w=1000\) kg/m\(^3\)</li>
 					<li>\(\gamma_w=9.81\) kN/m\(^3\)</li>
@@ -178,6 +178,142 @@
  	<h1>Phase diagram</h1>
  <img src="FiguresGeneral/phase-diagram.svg" style="margin-top:-50px;width:100%;">
  </section>
+
+ <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+     <h1>Void ratio, porosity, and Saturation</h1>
+ 		<div class="container">
+ 			<div class="col">
+        <ul>
+        	<li>Void ratio is defined as:
+					$$e=V_v/V_s$$
+				</li>
+				<li>Porosity is defined as:
+				$$n=V_v/V_t$$
+			  </li>
+        </ul>
+ 			</div>
+ 			<div class="col">
+				<ul>
+					<li>And saturation:
+						$$S[\%]=\cfrac{V_w}{V_v} \times 100$$
+					</li>
+					<li>\(V_v=\) Volume of voids</li>
+					<li>\(V_w=\) Volume of water</li>
+					<li>\(V_s=\) Volume of solids</li>
+				</ul>
+ 			</div>
+ 		</div>
+ </section>
+
+ <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	 <p>Porosity of uniform spherical particles.</p>
+	 <figure>
+	   <img src="FiguresGeneral/grains.png" style="margin-top:30px;width:100%;">
+	   <footer style="margin-top:0px;"><small>leeds.ac.uk Petrophysics course notes</small></footer>
+	 </figure>
+
+ </section>
+
+ <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+     <h1>Unit weight of soils</h1>
+ 		<div class="container">
+ 			<div class="col">
+				<ul>
+					<li>Total unit weight:
+						$$\gamma_t=W_t/V_t$$
+					</li>
+					<li>Dry unit weight \(S=0\%\)
+						$$\gamma_d=W_s/V_t$$
+					</li>
+				</ul>
+ 			</div>
+ 			<div class="col">
+				<ul>
+					<li>Saturated unit weight \(S=100\%\):
+						$$\gamma_{sat}=W_{sat}/V_t$$
+					</li>
+					<li>Buoyant unit weight:
+						$$\gamma'=\gamma_{sat}-\gamma_w$$
+					</li>
+				</ul>
+ 			</div>
+ 		</div>
+ </section>
+
+
+ <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg" data-markdown>
+
+	<textarea data-template style="margin-top:0px">
+		Typicall soil unit weight modified from Holtz et al. 2013
+		<style>
+		td {
+			font-size: 34px
+			}
+		</style>
+		|                   	| \\(\gamma_{sat}\\) 	|         	| \\(\gamma_d\\)    	|        	| \\(\gamma'\\)   	|       	|
+		|-------------------	|-------	|---------	|-------	|--------	|------	|-------	|
+		|S. type         	| kN/m<sup>3   	| pcf       	| kN/m<sup>3     	| pcf      	| kN/m<sup>3     	| pcf     	|
+		| Sands and gravels 	| 19-24 	| 119-150 	| 15-23 	| 94-144 	| 9-14 	| 62-81 	|
+		| Silts and clay    	| 14-21 	| 87-131  	| 6-18  	| 37-112 	| 4-11 	| 25-69 	|
+		| Glacial tills   	| 21-24 	| 131-150  	| 17-23 	| 106-144 	| 11-14 	| 69-87 	|
+		| Crushed rock   	| 19-22 	| 119-137  	| 15-20 	| 94-125 	| 9-12 	| 56-75 	|
+		| Peats   	| 10-11	| 60-69  	| 1-3	| 6-19	| 0-1 	| 0-6 	|
+		| Organincs silt and clay  	| 13-18	| 81-112  	| 5-15	| 31-94	| 3-8	| 19-50 	|
+	</textarea>
+ </section>
+
+ <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+     <h1>Water content</h1>
+ 		<div class="container">
+ 			<div class="col">
+      <p>Gravimetric water content
+				$$w=\cfrac{W_w}{W_s}\times 100$$
+				We showed that:
+				$$\gamma_t=\gamma_d(1+w/100)$$
+
+			</p>
+ 			</div>
+ 			<div class="col">
+				<p>Volumetric water content:
+					$$\Theta=\cfrac{V_w}{V_t}$$
+					If \(S=100\%\):
+					$$\Theta=n$$
+
+				</p>
+ 			</div>
+ 		</div>
+ </section>
+
+ <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+     <h1>Other useful phase relations</h1>
+ 		<div class="container">
+ 			<div class="col">
+				<p style="margin-top:-20px;">For unit weight:
+					$$\gamma_t=\cfrac{\gamma_w(G_s+Se)}{1+e}$$
+					$$\gamma_d=\cfrac{\gamma_w G_s}{1+e}$$
+					$$\gamma_{sat}=\cfrac{\gamma_w(G_s+e)}{1+e}$$
+				</p>
+ 			</div>
+ 			<div class="col">
+				<p>Relation between saturation, void ratio, specific gravity, and water content:
+					$$Se=wG_s$$
+
+					To remember: structural engineers are wacky guys 😂
+				</p>
+ 			</div>
+ 		</div>
+ </section>
+
+
+ <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+ 	<h1>Examples</h1>
+
+ </section>
+
+
+
+
+
 
 
 
