@@ -20,7 +20,7 @@
 		body.appendChild(tail)
 		setKeyboards()
 		if (window.Reveal.registerKeyboardShortcut) {
-			Reveal.registerKeyboardShortcut('CAPSLOCK', 'Toggle Mouse Pointer');
+			Reveal.registerKeyboardShortcut(107, 'Toggle Mouse Pointer');
 		}
 	}
 
@@ -46,7 +46,7 @@
 
 	function setKeyboards(params) {
 		document.addEventListener('keydown', function (event) {
-			if (event.keyCode === 20) {
+			if (event.keyCode === 107) {
 				event.preventDefault()
 				toggleBind = !toggleBind
 				toogleMousePointer()
