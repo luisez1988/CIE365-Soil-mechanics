@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lecture</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	</head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+				<style>
+				.container{
+						display: flex;
+				}
+				.col{
+						flex: 1;
+				}
+				</style>
+
+				<div class='footer'>
+					CIE-365
+					Spring 2022
+				</div>
+
+				<style>
+				.reveal .slides section .fragment.fade-down {
+						opacity: 1;
+						visibility: visible;
+				}
+				.reveal .slides section .fragment.fade-down.visible,
+				.reveal .slides section .fragment.visible:not(.current-fragment) {
+						opacity: 1;
+						margin-top:0px;
+					}
+				.reveal .slides section .fragment.fade-down,
+				.reveal .slides section .fragment.current-fragment {
+						color: #fff;
+						margin-top:0px;
+				}
+
+
+			</style>
+				<!-- <section> -->
+        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<div style="margin-top:400px;margin-left:600px" class="title_slide" name="Module 3: Compaction">
+						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+						<p style="color:#faffff; font-size:35px">Spring 2022</p>
+						<p style="color:#faffff; font-size:35px">February 7, 2022</p>
+						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					</div>
+        </section>
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Course contents and schedule</h1>
+					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Recap</h1>
+						<ul>
+							<li class="fragment"> We discussed soil particles characteristics and the grain size distribution.</li>
+							<li class="fragment"> We learned about the tests to determine the GSD. </li>
+							<li class="fragment"> We learned to quantify soil fractions.</li>
+							<li class="fragment"> We learned about clay mineralogy, activity, and consistency.</li>
+							<li class="fragment"> We learned how to classify soils according to the USCS.</li>
+							<li class="fragment"> Today we will learn about soil compaction. </li>
+						</ul>
+				</section>
+
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Homework assignment 2</h1>
+						<div class="container">
+							<div class="col">
+								<ul>
+									<li>Due on 02/09/2022.</li>
+									<li>80 points total.</li>
+									<li>Start ASAP.</li>
+								</ul>
+							</div>
+							<div class="col">
+				         <iframe src="FiguresGeneral/HMA2.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
+							</div>
+						</div>
+				</section> -->
+
+
+        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Contents</h1>
+					<ul>
+						<li>Soil fabric.</li>
+						<li>Compaction definition.</li>
+						<li>Proctor test and compactive effort.</li>
+						<li>Zero air voids, saturation lines, and line of optimums.</li>
+						<li>Properties and structure of compacted soils.</li>
+						<li>Field compaction equipment.</li>
+						<li>Compaction control and specifications.</li>
+						<li>Other soil compaction techniques.</li>
+					</ul>
+
+					<p>More in chapter 5 of Holtz et al. (2013)</p>
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+	<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	    <h1>Fabric of granular soils</h1>
+			<p>Soil fabric refers to the spatial distribution of pore spaces and individual particles in a soil.</p>
+			<div class="container">
+				<div class="col">
+					<ul>
+						<li class="fragment">Defines how strong the soil is because it configures force chains.</li>
+						<li class="fragment">It is dificult to measure directly. We use proxies (e.g., \(D_r\)). </li>
+						<li class="fragment">Soil fabric is unique. Different soil fabric configurations might lead to same \(D_r\). </li>
+					</ul>
+				</div>
+				<div class="col">
+					<figure>
+					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_5W1XvDok_e5UOlvldgdk8eTWOd3a5YrrQ&usqp=CAU" style="width:50%" data-preload/>
+					  <footer style="margin-top:-60px;"><small>Farhang Radjai</small></footer>
+					</figure>
+				</div>
+			</div>
+	</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Clay fabric</h1>
+		<div class="container">
+			<div class="col">
+        <ul style="margin-top:-25px;font-size:35px">
+        	<li class="fragment">Interaction scales range from elementary particles to mixed particle assemblages. </li>
+					<li class="fragment">Two main arrangements:
+						<ol>
+							<li class="fragment"><strong style="color:#7abbe6">Flocculated</strong>. </li>
+							<li class="fragment"><strong style="color:#7abbe6">Disperse</strong>.  </li>
+						</ol>
+					 </li>
+					 <li class="fragment">Electric attraction forces particles joint and form a floccule.</li>
+					 <li class="fragment">Floccules acts as particle of larger size. </li>
+					 <li class="fragment">Clay particles behave individually in a dispersed fabric. </li>
+        </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://i0.wp.com/theconstructor.org/wp-content/uploads/2019/02/Soil-Structures-1.jpg?resize=577%2C214&ssl=1" style="width:500px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>Theconstructor.com</small></footer>
+				</figure>
+
+				<img src="FiguresGeneral/flocs.svg" style="margin-top:0px;width:100%">
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Soil compaction</h1>
+		<p>It is a form of <strong style="color:#7abbe6">soil improvement</strong> that consists of <strong style="color:#7abbe6">densifiying the soil mechanically</strong> primarily with dynamic or vibratory loads.</p>
+		<div class="container">
+			<div class="col">
+      <p>Benefits of soil compaction:</p>
+			<ul>
+				<li class="fragment">Increased soil strength.  </li>
+				<li class="fragment">Increased load-bearing capacity. </li>
+				<li class="fragment">Lower compressibility. </li>
+				<li class="fragment">Reduction of water flow. </li>
+				<li class="fragment"> Increased soil stability. </li>
+				<li class="fragment"> Reduction in <strong style="color:#7abbe6">frost damage</strong>. </li>
+			</ul>
+			</div>
+			<div class="col">
+				<img src="FiguresGeneral/compaction.svg" style="margin-top:0px;width:60%" data-preload>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Proctor test (ASTM D1140, D1557)</h1>
+		<div class="container">
+			<div class="col">
+				<ul style="margin-top:-25px;font-size:33px">
+					<li class="fragment"> Named after R.R. Proctor. </li>
+					<li class="fragment"> He found compaction is function of:
+						<ul>
+							<li class="fragment"> Dry unit weight \(\gamma_d\). </li>
+							<li class="fragment"> Water content \(w\). </li>
+							<li class="fragment"> Compactive effort \(E_{comp}\).</li>
+							<li class="fragment"> Soil GSD. </li>
+						</ul>
+				 </li>
+				 <li class="fragment">Standard compaction effort is delivered to samples wih different water content.  </li>
+				 <li class="fragment"> We want to determine the <strong style="color:#7abbe6">maximum dry unit weight \(\gamma_{d,max}\) possible</strong> and the
+					 <strong style="color:#7abbe6">optimum water content \(w_{opt}\)</strong> for compaction. </li>
+				</ul>
+			</div>
+			<div class="col">
+
+				<figure>
+				  <img src="https://www.eng.hokudai.ac.jp/labo/geomech/ISSMGE%20TC202/proctor/Proctor.jpg" style="height:600px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>R.R. Proctor</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Compactive effort</h1>
+		<div class="container">
+			<div class="col">
+				<p style="margin-top:-25px;">Compactive effort:
+					$$E_{comp}=m_h g \cfrac{h_d N_b N_l}{V}$$
+					<ul>
+						<li>\(m_h=\) Hammer mass.</li>
+						<li>\(h_d=\) drop height.</li>
+						<li>\(N_b=\) number of blows per layer.</li>
+						<li>\(N_l=\) number of layers.</li>
+						<li>\(V=\) Volume of mold.</li>
+					</ul>
+				</p>
+			</div>
+			<div class="col">
+				<figure style="margin-top:-25px;">
+					<caption >Standard Proctor test.</caption>
+				  <img src="https://www.geotechdata.info/images/testing/Testing-Standard-Proctor.jpg" style="margin-top:-10px;height:600px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>Geotechdata.info</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 3.1</h1>
+	<p>Find the compaction effort of the modified Proctor test knowing \(h_d=\), \(m_h=\), \(N_b=\), \(N_l=\), \(V=\). Compute the result in lb-ft/ft<sup>3</sup> and kJ/m<sup>3</sup>.</p>
+
+</section>
+
+
+    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+    </section>
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+	document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+	</script>
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+		</script>
+		<script type="text/javascript">
+					 var months = ['January','February','March','April','May','June','July',
+		'August','September','October','November','December'];
+					var today = new Date();
+					today.setTime(today.getTime());
+			document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+		</script>
+	  <script src="dist/reveal.js"></script>
+	  <script src="plugin/zoom/zoom.js"></script>
+	  <script src="plugin/notes/notes.js"></script>
+	  <script src="plugin/search/search.js"></script>
+	  <script src="plugin/markdown/markdown.js"></script>
+	  <script src="plugin/highlight/highlight.js"></script>
+	  <script src="plugin/fullscreen/plugin.js"></script>
+	  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+	  <script src="plugin/chalkboard/plugin.js"></script>
+		<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+		<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+		<script src="plugin/audio-slideshow/recorder.js"></script>
+		<script src="plugin/menu/menu.js"></script> -->
+		<script src="plugin/customcontrols/plugin.js"></script>
+	  <script>
+
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+												pdfSeparateFragments: false});
+	    // Also available as an ES module, see:
+	    // https://revealjs.com/initialization/
+	    Reveal.initialize({
+	      dependencies: [
+	        { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+	      controls: true,
+	      progress: true,
+	      center: false,
+	      hash: true,
+	      transition: 'none',
+	      slideNumber: 'c/t',
+	      autoPlayMedia: true,
+	      width: 1280,
+	      height: 720,
+	      math: {
+	        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	        config: 'TeX-AMS_HTML-full',
+	        tex2jax: {
+	          inlineMath: [['\\(','\\)']],
+	          displayMath: [['\\[','\\]']],
+	          balanceBraces: true,
+	          processEscapes: false,
+	          processRefs: true,
+	          processEnvironments: true,
+	          preview: 'TeX',
+	          skipTags: ['script','noscript','style','textarea','pre','code'],
+	          ignoreClass: 'tex2jax_ignore',
+	          processClass: 'tex2jax_process'
+	        },
+	      },
+
+	      spotlight: {
+
+	          // size of the spotlight
+	          size: 100,
+
+	          // true: Locks the mouse pointer inside the presentation
+	          // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+	          // displayed regardless of the configured values
+	          lockPointerInsideCanvas: false,
+
+	          // toggle spotlight by holding down the mouse key
+	          toggleSpotlightOnMouseDown: false,
+
+	          // the keyCode pressed and held to turn on spotlight, disabled when set to false
+	          // Problems with this config? Maybe your touchpad is disabled on keypress?
+	          spotlightOnKeyPressAndHold: true,
+
+	          // choose the cursor when spotlight is on. Maybe "crosshair"?
+	          spotlightCursor: 'default',
+
+	          // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+	          presentingCursor: 'default',
+
+	          // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+	          initialPresentationMode: true,
+
+	          // true: disable selecting in presentation mode
+	          disablingUserSelect: false,
+
+	          // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+	          fadeInAndOut: 100,
+
+	          // enable pointer mode
+	          useAsPointer: false,
+
+	          // pointer color (If pointer mode enabled)
+	          pointerColor: 'red'
+	      },
+
+	      keyboard: {
+	          // alternative to toggleSpotlightOnMouseDown:
+	          // toggle spotlight by pressing key 'c'
+	          32: function() { RevealSpotlight.toggleSpotlight() },
+
+	          // enter/leave presentation mode by pressing key 'p'
+	          80: function() {
+	            RevealSpotlight.togglePresentationMode();
+	          },
+	      },
+
+	      // Push each slide change to the browser history
+	      history: true,
+
+	// 			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	// 				themes: false,
+	// 				transitions: false,
+	// 				markers: true,
+	// 				hideMissingTitles: true,
+	// 				custom: [
+	// 									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+	// 									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+	// 							]
+	// 			},
+	//
+	// 			audio: {
+	// 					prefix: 'chalkboard/',
+	// 					suffix: '.ogg',
+	// 					defaultDuration: 5,
+	// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+	// 					advance: 500,
+	// 					autoplay: false,
+	// 					defaultText: true,
+	// 					playerOpacity: 0.2,
+	// 				},
+	      // ...
+				chalkboard: {
+				        boardmarkerWidth: 3,
+				        chalkWidth: 7,
+				        chalkEffect: 1.0,
+								src: "chalkboard.json",
+								storage: "chalkboard-demo",
+				        readOnly: undefined,
+				        transition: 800,
+				        theme: "chalkboard",
+				        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				        grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				        eraser: { src: path + 'img/sponge.png', radius: 20},
+				        boardmarkers : [
+				                { color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+				                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+				                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+				                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+				                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+				                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+				                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				        ],
+				        chalks: [
+				                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+				                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+				                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+				                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+				                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+				                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+				                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				        ]
+				    },
+				    customcontrols: {
+				  		controls: [
+				  			{ icon: '<i class="fa fa-pen-square"></i>',
+				  			  title: 'Toggle chalkboard (B)',
+				  			  action: 'RevealChalkboard.toggleChalkboard();'
+				  			},
+				  			{ icon: '<i class="fa fa-pen"></i>',
+				  			  title: 'Toggle notes canvas (C)',
+				  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+				  			}
+				  		]
+				    },
+
+	        // ...
+	      //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	      // Learn about plugins: https://revealjs.com/plugins/
+	      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
+									],
+	                  // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+			    });
+
+	  </script>
+
+</html>
