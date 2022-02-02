@@ -104,7 +104,7 @@
 						<li>Compaction definition.</li>
 						<li>Proctor test and compactive effort.</li>
 						<li>Zero air voids, saturation lines, and line of optimums.</li>
-						<li>Properties and structure of compacted soils.</li>
+						<li>Effect of water content.</li>
 						<li>Field compaction equipment.</li>
 						<li>Compaction control and specifications.</li>
 						<li>Other soil compaction techniques.</li>
@@ -249,9 +249,197 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Example 3.1</h1>
-	<p>Find the compaction effort of the modified Proctor test knowing \(h_d=\), \(m_h=\), \(N_b=\), \(N_l=\), \(V=\). Compute the result in lb-ft/ft<sup>3</sup> and kJ/m<sup>3</sup>.</p>
+	<p>Find the compaction effort of the standard Proctor test knowing \(h_d=45.7\)cm, \(m_h=4.54\)kg, \(N_b=25\), \(N_l=3\). Compute the result in lb-ft/ft<sup>3</sup> and kJ/m<sup>3</sup>.</p>
+
 
 </section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Theorethical maximum dry density</h1>
+		<div class="container">
+			<div class="col">
+        <p>An expression relating \(\gamma_d\) with water content \(w\) and saturation \(S\) is:
+$$\gamma_d=\cfrac{\gamma_w G_s}{1+wG_s/S}$$
+				</p>
+			</div>
+			<div class="col">
+				<p>\(\gamma_d\) is maximazed if \(S=100\%\) (i.e., all air is removed).
+					$$\gamma_{d,max}=\cfrac{\gamma_w G_s}{1+wG_s}$$
+					Also knon as the zero-air voids (ZAV) line.
+				 </p>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Results of compaction tests</h1>
+		<div class="container">
+			<div class="col">
+				<ul>
+					<li class="fragment"> Test conducted with varying water content. </li>
+					<li class="fragment"> Typically shows a parabola shape. </li>
+					<li class="fragment">  \(\uparrow E_{comp}\longrightarrow \uparrow \gamma_d\)</li>
+					<li class="fragment"> \(\uparrow E_{comp}\longrightarrow \downarrow w_{opt}\) </li>
+					<li class="fragment"> Line of optimums is the line of all possible combinations of \(E_{comp}\), \(\gamma_{d,max}\), and \(w_{opt}\). </li>
+				</ul>
+			</div>
+			<div class="col">
+				<img src="FiguresGeneral/proctor_standard.svg" style="margin-top:0px;width:100%">
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Effect of water content</h1>
+		<div class="container">
+			<div class="col">
+				<ul style="margin-top:-25px;font-size:33px">
+					<li class="fragment"> Typically a range of \(\gamma_d\) and \(w\) is specified. </li>
+					<li class="fragment"> Same density can be achieved for different \(w\). </li>
+					<li class="fragment"> Compaction in the dry side ascending due to flocculated fabric. </li>
+					<li class="fragment"> Compaction in the wet side changes the soil fabric to a dispersed configuration. </li>
+					<li class="fragment"> Compaction in dry side suitable for stable soils. </li>
+					<li class="fragment"> Compaction in the wet side more suitable for soils with large expansion potential. </li>
+				</ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="FiguresGeneral/structure_proctor.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-20px;"><small>After Budhu (2015)</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Field compaction equipment</h1>
+		<div class="container">
+			<div class="col">
+        <img src="FiguresGeneral/equipment.svg" style="margin-top:0px;width:100%">
+			</div>
+			<div class="col">
+        <ul>
+        	<li class="fragment">Apply compaction energy by static pressure or vibration. </li>
+					<li class="fragment">Kneading with protrusions applies static pressure (sheep foot roller). </li>
+					<li class="fragment">Vibratory compaction usually used for granular soils.  </li>
+					<li class="fragment"> Impact rollers have a deeper influence zone. </li>
+        </ul>
+			</div>
+		</div>
+</section>
+
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Field compaction equipment</h1>
+		<div class="container">
+			<div class="col">
+        <p style="margin-top:-25px;font-size:33px">Characteristics of the compactor:
+					<ul style="margin-top:0px;font-size:33px">
+						<li class="fragment">Mass, size. </li>
+						<li class="fragment"> Operating frequency and frequency range. </li>
+					</ul>
+				</p>
+
+				<p style="margin-top:-20px;font-size:33px">Characteristics of soil:
+					<ul style="margin-top:0px;font-size:33px">
+						<li class="fragment"> Initial density. </li>
+						<li class="fragment"> Grain size and shape. </li>
+						<li class="fragment"> Water content. </li>
+					</ul>
+				</p>
+
+				<p style="margin-top:-20px;font-size:33px">Construction procedures:
+					<ul style="margin-top:0px;font-size:33px">
+						<li class="fragment"> Number of passes of roller. </li>
+						<li class="fragment"> Lift thickness. </li>
+						<li class="fragment"> Frequency of operation of vibrator. </li>
+						<li class="fragment"> Towing speed. </li>
+					</ul>
+				</p>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="FiguresGeneral/compactors.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-20px;"><small>Taken from Holtz et al. (2013)</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Compaction specifications</h1>
+		<div class="container">
+			<div class="col">
+        <p>Two types:
+					<ul>
+						<li class="fragment"> End product. </li>
+						<li class="fragment"> Method specifications. </li>
+					</ul>
+				</p>
+					<p class="fragment">
+					With the first type <strong style="color:#7abbe6">relative compaction</strong> is specified.
+						$$RC[\%]=\frac{\gamma_{d \ \mathrm{field}}}{\gamma_{d, max}} \times 100$$
+				</p>
+			</div>
+			<div class="col">
+        <p class="fragment">
+					Do not confuse with relative density, only used for <strong style="color:#7abbe6">clean granular</strong> soils (\(F_F< 12\% \)).
+				</p>
+
+				<p class="fragment">With the second type, all steps, equipment, and methods are specified by the engineer. Like a recipe.</p>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Compaction Q&A control</h1>
+		<div class="container">
+			<div class="col">
+        <ul>
+        	<li class="fragment"> Performed frequently (often using a volume threshold) in distributed representatitive in-situ sample. </li>
+					<li class="fragment"> Two types available:
+						<ul>
+							<li class="fragment">Destructive (requires excavation). </li>
+							<li class="fragment"> Non-destructive (Radiation to determine unit weight indirectly). </li>
+						</ul>
+					 </li>
+        </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://multiquip.co.uk/wp-content/uploads/2019/03/Screenshot-2019-03-01-at-16.03.54.png" style="width:100%" data-preload/>
+				  <footer style="margin-top:-20px;"><small>multiquip.com</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 3.2</h1>
+Add example of sand cone test.
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Dynamic compaction</h1>
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/ryBenk-R96Y?autoplay=0" data-preload></iframe>
+	</section>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Vibrocompaction</h1>
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/IaBj1D18gYc?autoplay=0" data-preload></iframe>
+	</section>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Blasting</h1>
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/CKzAOfdvz-M?autoplay=0" data-preload></iframe>
+	</section>
+</section>
+
 
 
     <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
