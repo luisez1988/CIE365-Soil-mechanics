@@ -399,8 +399,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	  <script src="plugin/chalkboard/plugin.js"></script>
 		<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 		<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-		<script src="plugin/audio-slideshow/recorder.js"></script>
-		<script src="plugin/menu/menu.js"></script> -->
+		<script src="plugin/audio-slideshow/recorder.js"></script> -->
+		<script src="plugin/menu/menu.js"></script>
 		<script src="plugin/customcontrols/plugin.js"></script>
 	  <script>
 
@@ -490,16 +490,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	      // Push each slide change to the browser history
 	      history: true,
 
-	// 			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-	// 				themes: false,
-	// 				transitions: false,
-	// 				markers: true,
-	// 				hideMissingTitles: true,
-	// 				custom: [
-	// 									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-	// 									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-	// 							]
-	// 			},
+				menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+					themes: false,
+					transitions: false,
+					markers: true,
+					hideMissingTitles: true,
+					custom: [
+										{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+										{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+								]
+				},
 	//
 	// 			audio: {
 	// 					prefix: 'chalkboard/',
@@ -514,11 +514,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	      // ...
 				chalkboard: {
 				        boardmarkerWidth: 3,
-				        chalkWidth: 7,
-				        chalkEffect: 1.0,
+				        chalkWidth: 5,
+				        chalkEffect: 0.05,
 								src: "chalkboard.json",
-								storage: "chalkboard-demo",
-				        readOnly: undefined,
+								// storage: ,
+				        readOnly: false,
 				        transition: 800,
 				        theme: "chalkboard",
 				        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
@@ -559,7 +559,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	        // ...
 	      //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	      // Learn about plugins: https://revealjs.com/plugins/
-	      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
+	      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
 									],
 	                  // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
 			    });
