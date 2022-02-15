@@ -301,8 +301,24 @@
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.x</h1>
-
+	<h1>Example 4.3</h1>
+	<div class="container">
+  	<div class="col">
+     <p>The figure shows water flow trought the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
+ 			<ol>
+ 				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
+ 				<li>Draw the levels of water in standpipes.</li>
+ 				<li>Compute the amount of water flow \(q\) through the specimen.</li>
+ 			</ol>
+ 		</p>
+  	</div>
+  	<div class="col">
+     <figure>
+       <img src="FiguresGeneral/tube_example.png" style="width:100%" data-preload/>
+       <footer style="margin-top:-60px;"><small></small></footer>
+     </figure>
+  	</div>
+  </div>
 </section>
 
 
@@ -350,18 +366,137 @@
 
 
 
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
+		<div class="container">
+			<div class="col">
+				<figure>
+				  <img src="falling_head.svg" style="width:75%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col">
+        <ul>
+        	<li>\(\Delta h\) not constant</li>
+        </ul>
+				<p>$$k=\frac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta h}\right)$$</p>
+				<ul>
+					<li class="fragment">\(\Delta t=\) elapsed time of measurement.</li>
+					<li class="fragment"> Rapid test.  </li>
+					<li class="fragment"> An operator is not always required in place. </li>
+				</ul>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Permeability of soils</h1>
+	<div class="container">
+		<div class="col">
+	      <p>Rule of thumb:
+					<ol>
+						<li>Gravel \(\longrightarrow\) \(k>1\) cm/s.</li>
+						<li>Sand \(\longrightarrow\) \(10^{-3}\) to 1 cm/s.</li>
+						<li>Silt \(\longrightarrow\) \(10^{-5}\) to \(10^-3\) cm/s.</li>
+						<li>Clay \(\longrightarrow\) \(10^{-9}\) to \(10^{-5}\) cm/s.</li>
+					</ol>
+				</p>
+		</div>
+		<div class="col">
+			<figure>
+			  <img src="FiguresGeneral/soil_permeability.svg" style="width:100%" data-preload/>
+			  <footer style="margin-top:-30px;"><small>Holtz et al. (2013)</small></footer>
+			</figure>
+		</div>
+	</div>
+</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 4.4</h1>
+ <div class="container">
+ 	<div class="col">
+    <p>The figure shows water flow trought the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
+			<ol>
+				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
+				<li>Draw the levels of water in standpipes.</li>
+				<li>Compute the amount of water flow \(q\) through the specimen.</li>
+			</ol>
+		</p>
+ 	</div>
+ 	<div class="col">
+    <figure>
+      <img src="FiguresGeneral/tube_example.png" style="width:100%" data-preload/>
+      <footer style="margin-top:-60px;"><small></small></footer>
+    </figure>
+ 	</div>
+ </div>
+</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Equivalent permeability</h1>
+	<p>If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:#7abbe6">equivalent permeability</strong> in order to apply Darcy's law.</p>
+	<div class="container">
+		<div class="col">
+			<p>We will study two cases:
+			 <ol>
+				 <li class="fragment"> Flow is <strong style="color:#7abbe6">perpendicular</strong> to the layering. </li>
+				 <li class="fragment"> Flow is <strong style="color:#7abbe6">parallel</strong> to the layering. </li>
+			 </ol>
+		 </p>
+		</div>
+		<div class="col">
+			<figure style="margin-top:0px;">
+				<img src="equivalent.svg" style="width:100%" data-preload/>
+				<footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+		</div>
+	</div>
+
+
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Perpendicular flow</h1>
+		<div class="container">
+			<div class="col">
+          <figure>
+            <img src="FiguresGeneral/perpendicular.svg" style="width:81%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+			</div>
+			<div class="col">
+				<p class="fragment" style="margin-top:400px;">$$k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i}$$</p>
+			</div>
+		</div>
+</section>
+
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Parallel flow</h1>
+		<div class="container">
+			<div class="col">
+          <figure>
+            <img src="FiguresGeneral/parallel.svg" style="width:73%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+			</div>
+			<div class="col">
+				<p class="fragment" style="margin-top:400px;">$$k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}$$</p>
+			</div>
+		</div>
+</section>
+
+    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+    </section>
 
 
 
 
 
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Case history</h1>
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/2wZRluVKPPg?autoplay=0" data-preload></iframe>
-	</section>
-</section> -->
 
 
 
