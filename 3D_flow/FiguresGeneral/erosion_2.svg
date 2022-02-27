@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.831245mm"
+   height="116.15208mm"
+   viewBox="0 0 56.831245 116.15208"
+   version="1.1"
+   id="svg17811"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="erosion_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17813"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.622695"
+     inkscape:cx="98.909531"
+     inkscape:cy="132.49563"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17808">
+    <clipPath
+       id="clip0">
+      <rect
+         x="33"
+         y="245"
+         width="256"
+         height="470"
+         id="rect17879" />
+    </clipPath>
+    <image
+       width="64"
+       height="64"
+       xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCABAAEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7jr8P6KK8rL8v+o83vc3Nbpba/m+56WOx313l921r9b728j9wKKKK/OT74/D+iiiv14/LAr9wK/D+ivHzDL/r3L73Ly36X3t5rsergcd9S5vdve3W21/IKKKK9g8oKKK/cCvHzDMPqPL7vNzX622t5PuergcD9d5veta3S+9/M/D+iv3Ar8P6MvzD69ze7y8tut97+S7BjsD9S5feve/S21vM/cCiiivzk++CiiigD8P6/cCvw/or9GzDL/r3L73Ly36X3t5rsfA4HHfUub3b3t1ttfyP3Ar8P6KKMvy/6jze9zc1ultr+b7hjsd9d5fdta/W+9vIKKKK9g8oKK/cCvw/rx8vzD69ze7y8tut97+S7Hq47A/UuX3r3v0ttbzCiiivYPKP3Aooor8hP1M/D+iiv3Ar9GzDMPqPL7vNzX622t5PufA4HA/Xeb3rWt0vvfzP/9k="
+       preserveAspectRatio="none"
+       id="img1" />
+    <pattern
+       width="64"
+       height="64"
+       patternUnits="userSpaceOnUse"
+       id="pattern2"
+       overflow="hidden"
+       patternTransform="matrix(0.15625 0 0 0.15625 100 410)">
+      <use
+         width="100%"
+         height="100%"
+         xlink:href="#img1"
+         id="use17883" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-139.91512,-154.528)">
+    <rect
+       x="155.6758"
+       y="154.528"
+       width="30.1625"
+       height="39.952084"
+       fill="#c8e3fb"
+       id="rect17888"
+       style="stroke-width:0.264583" />
+    <rect
+       x="155.6758"
+       y="194.74466"
+       width="30.1625"
+       height="62.441666"
+       fill="url(#pattern2)"
+       id="rect17890"
+       style="fill:#ddaa33;stroke-width:0.264583" />
+    <path
+       d="m 155.80808,195.06137 30.19187,-0.18444"
+       stroke="#cc0000"
+       stroke-width="1.32292"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="15, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path17892" />
+    <path
+       d="m 168.50808,257.45091 c 0,-1.38827 1.12528,-2.51354 2.51355,-2.51354 1.38826,0 2.51354,1.12527 2.51354,2.51354 0,1.38827 -1.12528,2.51354 -2.51354,2.51354 -1.38827,0 -2.51355,-1.12527 -2.51355,-2.51354 z"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#f5f5f5"
+       fill-rule="evenodd"
+       id="path17894"
+       style="fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text17896"
+       x="167.23148"
+       y="270.68008"
+       style="stroke-width:0.264583;fill:#ffffff">𝐴</text>
+    <path
+       d="m 189.32206,158.89362 v 32.01458 h -0.88212 v -32.01458 z m -1.76398,0.44106 1.32292,-4.40981 1.32292,4.40981 z m 2.64584,31.13246 -1.32292,4.40981 -1.32292,-4.40981 z"
+       fill="#f5f5f5"
+       id="path17898"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <path
+       d="m 189.07494,198.84385 0.22966,52.12292 -0.88212,0.004 -0.22966,-52.12291 z m -1.76212,0.44874 1.3036,-4.41564 1.34223,4.40373 z m 2.87178,51.22915 -1.3036,4.41563 -1.34223,-4.40372 z"
+       fill="#f5f5f5"
+       id="path17900"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text17902"
+       x="191.55806"
+       y="225.9655"
+       style="stroke-width:0.264583;fill:#ffffff">𝐿</text>
+    <path
+       d="m 142.8435,194.87695 h 12.7"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path17904"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <path
+       d="m 148.31155,194.87695 3e-5,-30.95625 h -0.88194 l -3e-5,30.95625 z m -1.76389,0 c 0,0.73063 0.59229,1.32292 1.32292,1.32292 0.73063,0 1.32292,-0.59229 1.32292,-1.32292 0,-0.73063 -0.59229,-1.32292 -1.32292,-1.32292 -0.73063,0 -1.32292,0.59229 -1.32292,1.32292 z m 2.64587,-30.51519 -1.32292,-4.40981 -1.32292,4.40981 z"
+       fill="#f5f5f5"
+       id="path17906"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text17920"
+       x="139.81824"
+       y="166.69884"
+       style="stroke-width:0.264583;fill:#ffffff">𝑧<tspan
+   font-size="10.5833px"
+   x="158.47426"
+   y="165.37592"
+   id="tspan17908"
+   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   font-size="7.67292px"
+   x="163.0295"
+   y="167.49258"
+   id="tspan17910"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑤</tspan><tspan
+   font-size="10.5833px"
+   x="159.00584"
+   y="205.59258"
+   id="tspan17912"
+   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   font-size="7.67292px"
+   x="164.22255"
+   y="207.70924"
+   id="tspan17914"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑠𝑎𝑡</tspan><tspan
+   fill="#c00000"
+   font-size="7.9375px"
+   x="155.80513"
+   y="189.98216"
+   id="tspan17916"
+   style="stroke-width:0.0700043;fill:#ffffff">ℎ</tspan><tspan
+   fill="#c00000"
+   font-size="5.82083px"
+   x="160.21486"
+   y="191.56966"
+   id="tspan17918"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan></text>
+  </g>
+</svg>

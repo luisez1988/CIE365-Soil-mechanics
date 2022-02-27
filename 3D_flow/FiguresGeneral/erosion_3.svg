@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="67.158501mm"
+   height="117.73958mm"
+   viewBox="0 0 67.158501 117.73958"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="erosion_3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.2948373"
+     inkscape:cx="111.33687"
+     inkscape:cy="248.81939"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0">
+      <rect
+         x="13"
+         y="245"
+         width="283"
+         height="476"
+         id="rect831" />
+    </clipPath>
+    <image
+       width="64"
+       height="64"
+       xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCABAAEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7jr8P6KK8rL8v+o83vc3Nbpba/m+56WOx313l921r9b728j9wKKKK/OT74/D+iiiv14/LAr9wK/D+ivHzDL/r3L73Ly36X3t5rsergcd9S5vdve3W21/IKKKK9g8oKKK/cCvHzDMPqPL7vNzX622t5PuergcD9d5veta3S+9/M/D+iv3Ar8P6MvzD69ze7y8tut97+S7BjsD9S5feve/S21vM/cCiiivzk++CiiigD8P6/cCvw/or9GzDL/r3L73Ly36X3t5rsfA4HHfUub3b3t1ttfyP3Ar8P6KKMvy/6jze9zc1ultr+b7hjsd9d5fdta/W+9vIKKKK9g8oKK/cCvw/rx8vzD69ze7y8tut97+S7Hq47A/UuX3r3v0ttbzCiiivYPKP3Aooor8hP1M/D+iiv3Ar9GzDMPqPL7vNzX622t5PufA4HA/Xeb3rWt0vvfzP/9k="
+       preserveAspectRatio="none"
+       id="img1" />
+    <pattern
+       width="64"
+       height="64"
+       patternUnits="userSpaceOnUse"
+       id="pattern2"
+       overflow="hidden"
+       patternTransform="matrix(0.15625 0 0 0.15625 100 410)">
+      <use
+         width="100%"
+         height="100%"
+         xlink:href="#img1"
+         id="use835" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(22.510928,-50.429899)">
+    <rect
+       x="-1.124017"
+       y="50.429897"
+       width="30.1625"
+       height="39.952084"
+       fill="#c8e3fb"
+       id="rect840"
+       style="stroke-width:0.264583" />
+    <rect
+       x="-1.124017"
+       y="90.646568"
+       width="30.1625"
+       height="62.441666"
+       fill="url(#pattern2)"
+       id="rect842"
+       style="fill:#ddaa33;stroke-width:0.264583" />
+    <path
+       d="M -0.99172537,90.963271 29.200143,90.778827"
+       stroke="#cc0000"
+       stroke-width="1.32292"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="15, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path844" />
+    <path
+       d="m 11.708274,153.35281 c 0,-1.38826 1.125273,-2.51354 2.513542,-2.51354 1.388269,0 2.513542,1.12528 2.513542,2.51354 0,1.38827 -1.125273,2.51355 -2.513542,2.51355 -1.388269,0 -2.513542,-1.12528 -2.513542,-2.51355 z"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#f5f5f5"
+       fill-rule="evenodd"
+       id="path846"
+       style="fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text848"
+       x="10.230841"
+       y="168.16948"
+       style="stroke-width:0.264583;fill:#ffffff">𝐵</text>
+    <path
+       d="M 32.522251,54.795524 V 86.810107 H 31.64013 V 54.795524 Z m -1.763977,0.44106 1.322917,-4.40981 1.322917,4.40981 z m 2.645834,31.132462 -1.322917,4.409811 -1.322917,-4.409811 z"
+       fill="#f5f5f5"
+       id="path850"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text854"
+       x="34.145737"
+       y="72.6549"
+       style="stroke-width:0.264583;fill:#ffffff">𝐻<tspan
+   font-size="7.67292px"
+   x="40.998444"
+   y="74.771568"
+   id="tspan852"
+   style="stroke-width:0.0700043;fill:#ffffff">1</tspan></text>
+    <path
+       d="m 32.27513,94.745754 0.229659,52.122916 -0.882121,0.004 -0.229658,-52.122911 z m -1.762125,0.448734 1.303603,-4.415631 1.342231,4.403725 z m 2.871788,51.229152 -1.303602,4.41563 -1.342231,-4.40372 z"
+       fill="#f5f5f5"
+       id="path856"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text858"
+       x="34.758244"
+       y="121.8674"
+       style="stroke-width:0.264583;fill:#ffffff">𝐿</text>
+    <path
+       d="M -13.956309,90.778857 H -1.2563087"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path860"
+       style="fill:#ffffff" />
+    <path
+       d="m -8.4882522,90.778857 2.91e-5,-30.95625 h -0.8819435 l -3.18e-5,30.95625 z m -1.7638898,-10e-7 c 0,0.730627 0.5922884,1.322918 1.3229154,1.322918 0.730627,0 1.3229179,-0.592289 1.3229179,-1.322916 0,-0.730627 -0.5922883,-1.322918 -1.3229153,-1.322918 -0.730627,0 -1.322918,0.592289 -1.322918,1.322916 z m 2.6458625,-30.515188 -1.3229111,-4.409811 -1.3229224,4.409811 z"
+       fill="#f5f5f5"
+       id="path862"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text872"
+       x="-16.981581"
+       y="62.600731"
+       style="stroke-width:0.264583;fill:#ffffff">𝑧<tspan
+   font-size="10.5833px"
+   x="1.6744546"
+   y="61.277817"
+   id="tspan864"
+   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   font-size="7.67292px"
+   x="6.2296796"
+   y="63.394482"
+   id="tspan866"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑤</tspan><tspan
+   font-size="10.5833px"
+   x="2.2060294"
+   y="101.49448"
+   id="tspan868"
+   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   font-size="7.67292px"
+   x="7.422739"
+   y="103.61115"
+   id="tspan870"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑠𝑎𝑡</tspan></text>
+    <path
+       d="m 12.105149,109.69656 -2.6e-5,21.96042 h 2.645833 l 2.7e-5,-21.96042 z m -2.6458594,20.6375 3.9687414,7.9375 3.968758,-7.9375 z"
+       fill="#00b050"
+       id="path874"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#00b050"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="10.5833px"
+       id="text880"
+       x="-22.805483"
+       y="123.98406"
+       style="stroke-width:0.264583">𝑭𝑳𝑶𝑾<tspan
+   fill="#c00000"
+   font-size="7.9375px"
+   x="-0.99468803"
+   y="85.884064"
+   id="tspan876"
+   style="stroke-width:0.0700043">ℎ</tspan><tspan
+   fill="#c00000"
+   font-size="5.82083px"
+   x="3.4150414"
+   y="87.471558"
+   id="tspan878"
+   style="stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan></text>
+  </g>
+</svg>
