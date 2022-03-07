@@ -196,7 +196,7 @@
          x="80.641365"
          y="67.79348">Pt A</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#StopL)"
+       style="fill:none;stroke:#ffffff;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#StopL)"
        d="M 65.718168,66.179347 V 20.753105"
        id="path3539" />
     <g
@@ -236,7 +236,7 @@
          id="id-09aa06c3-5952-4bd1-9419-c6eefa189fd9"
          transform="translate(-149.134,-130.359)">
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="id-d82393a1-7eb1-425c-b10a-1d84a20a8657">
           <g
              transform="translate(148.712,134.765)"
@@ -331,7 +331,7 @@
          x="226.40967"
          y="68.028328">Pt A</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#StopL)"
+       style="fill:none;stroke:#ffffff;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopL);marker-end:url(#StopL)"
        d="M 211.48647,66.41419 V 20.98795"
        id="path6217" />
     <g
@@ -371,7 +371,7 @@
          id="g6237"
          transform="translate(-149.134,-130.359)">
         <g
-           style="fill:#000000;fill-opacity:1"
+           style="fill:#ffffff;fill-opacity:1"
            id="g6235">
           <g
              transform="translate(148.712,134.765)"
