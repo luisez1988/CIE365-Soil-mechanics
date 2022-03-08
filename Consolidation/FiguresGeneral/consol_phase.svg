@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="231.17969mm"
+   height="154.71924mm"
+   viewBox="0 0 231.17968 154.71924"
+   version="1.1"
+   id="svg1126"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="consol_phase.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1128"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.81134749"
+     inkscape:cx="584.82956"
+     inkscape:cy="177.48252"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1123">
+    <clipPath
+       id="clip0">
+      <rect
+         x="391"
+         y="256"
+         width="733"
+         height="237"
+         id="rect1194" />
+    </clipPath>
+    <clipPath
+       id="clip0-9">
+      <rect
+         x="163"
+         y="492"
+         width="874"
+         height="367"
+         id="rect1371" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(60.597195,-109.20922)">
+    <rect
+       x="-36.107895"
+       y="121.48341"
+       width="36.247917"
+       height="45.772915"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#5b9bd5"
+       id="rect1199"
+       style="stroke:#ffffff" />
+    <rect
+       x="-36.107895"
+       y="147.41257"
+       width="36.247917"
+       height="19.84375"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#f57823"
+       id="rect1201"
+       style="stroke:#ffffff" />
+    <rect
+       x="16.015022"
+       y="133.12508"
+       width="36.247917"
+       height="34.131248"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#5b9bd5"
+       id="rect1203"
+       style="stroke:#ffffff" />
+    <rect
+       x="16.015022"
+       y="147.41257"
+       width="36.247917"
+       height="19.84375"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#f57823"
+       id="rect1205"
+       style="stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1207"
+       x="-28.481279"
+       y="136.30006"
+       style="stroke-width:0.264583">water</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1209"
+       x="-26.386574"
+       y="158.52507"
+       style="stroke-width:0.264583">solid</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1213"
+       x="24.343311"
+       y="142.38548"
+       style="stroke-width:0.264583">water<tspan
+   font-size="8.73125px"
+   x="25.540331"
+   y="157.20216"
+   id="tspan1211"
+   style="stroke-width:0.0700043">solid</tspan></text>
+    <path
+       d="m 1.7460424,118.81217 1.3350875,-0.45085 1.3885333,-0.31512 1.3821833,-0.17012 1.3977937,-0.0373 1.3596938,0.0976 1.3604874,0.22543 1.3049246,0.35586 1.283494,0.47704 1.222111,0.58791 1.163108,0.71675 1.085056,0.80407 1.014413,0.9316 0.928423,1.03373 0.826822,1.13268 0.667544,1.13321 -1.424781,0.83952 -0.646906,-1.09828 0.04445,0.0677 -0.77814,-1.06601 0.05265,0.0651 -0.873654,-0.97314 0.05583,0.0566 -0.953294,-0.87525 0.06694,0.0553 -1.021556,-0.75724 0.05874,0.0397 -1.096698,-0.67548 0.07514,0.041 -1.148821,-0.55298 0.07038,0.0299 -1.212585,-0.45059 0.07064,0.0228 -1.2284607,-0.33496 0.082285,0.018 -1.2811125,-0.21246 0.0762,0.009 -1.2811125,-0.0918 0.081227,0.002 -1.3173604,0.0352 0.078846,-0.006 -1.3017499,0.16008 0.082021,-0.0143 -1.3062479,0.2966 0.081492,-0.023 -1.2951354,0.43735 z m 17.0074166,6.9424 1.726935,-2.43019 -0.546629,5.51947 -4.087812,-3.74888 z"
+       fill="#f5f5f5"
+       id="path1215"
+       style="fill:#ffffff;stroke-width:0.264583" />
+    <path
+       d="M -12.427687,167.38861 H 16.195732"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1217"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <path
+       d="M -12.427687,147.54486 H 16.195732"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1219"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <path
+       d="m 34.050873,121.6157 v 9.58109 h -0.882121 v -9.58109 z m -1.763977,0 c 0,-0.73052 0.592402,-1.32292 1.322917,-1.32292 0.730514,0 1.322916,0.5924 1.322916,1.32292 0,0.73051 -0.592402,1.32291 -1.322916,1.32291 -0.730515,0 -1.322917,-0.5924 -1.322917,-1.32291 z m 2.645833,9.14029 -1.322916,2.64584 -1.322917,-2.64584 z"
+       fill="#f5f5f5"
+       id="path1221"
+       style="fill:#ffffff;stroke-width:0.264583" />
+    <path
+       d="M -11.633937,121.6157 H 52.291777"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1223"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text1231"
+       x="47.464455"
+       y="129.68549"
+       style="fill:#ffffff;stroke-width:0.264583">volume reduction <tspan
+   font-family="Wingdings, Wingdings_MSFontService, sans-serif"
+   font-size="7.9375px"
+   x="106.49961"
+   y="129.68549"
+   id="tspan1225"
+   style="fill:#ffffff;stroke-width:0.0700043"></tspan><tspan
+   font-size="7.9375px"
+   x="116.09075"
+   y="129.68549"
+   id="tspan1227"
+   style="fill:#ffffff;stroke-width:0.0700043">settlement</tspan><tspan
+   fill="#00b050"
+   font-style="italic"
+   font-weight="700"
+   font-size="7.9375px"
+   x="-10.320281"
+   y="114.60424"
+   id="tspan1229"
+   style="fill:#ffffff;stroke-width:0.0700043">consolidation</tspan></text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="700"
+       font-size="8.73125px"
+       id="text1386"
+       x="-54.344826"
+       y="188.2907"
+       style="stroke-width:0.264583"><tspan
+         style="fill:#ffffff"
+         id="tspan5631">Important!!</tspan><tspan
+         fill="#ff0000"
+         font-size="8.73125px"
+         x="-9.3106289"
+         y="188.2907"
+         id="tspan1378"
+         style="stroke-width:0.0700043">Do not confuseconsolidation</tspan><tspan
+         font-size="8.73125px"
+         x="99.168541"
+         y="188.2907"
+         id="tspan1382"
+         style="fill:#ffffff;stroke-width:0.0700043">with</tspan><tspan
+         fill="#7030a0"
+         font-style="italic"
+         font-size="8.73125px"
+         x="117.63434"
+         y="188.2907"
+         id="tspan1384"
+         style="stroke-width:0.0700043">compaction</tspan></text>
+    <rect
+       x="-39.4636"
+       y="213.16153"
+       width="35.71875"
+       height="45.243748"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#5b9bd5"
+       id="rect1388"
+       style="stroke:#ffffff" />
+    <rect
+       x="-39.4636"
+       y="239.0907"
+       width="35.71875"
+       height="19.314583"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#f57823"
+       id="rect1390"
+       style="stroke:#ffffff" />
+    <rect
+       x="12.923899"
+       y="223.2157"
+       width="35.71875"
+       height="34.131248"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#5b9bd5"
+       id="rect1392"
+       style="stroke:#ffffff" />
+    <rect
+       x="12.923899"
+       y="239.0907"
+       width="35.71875"
+       height="19.314583"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#f57823"
+       id="rect1394"
+       style="stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1402"
+       x="-32.042301"
+       y="234.32819"
+       style="stroke-width:0.264583">water<tspan
+   font-size="8.73125px"
+   x="-29.94768"
+   y="250.73236"
+   id="tspan1396"
+   style="stroke-width:0.0700043">solid</tspan><tspan
+   font-size="8.73125px"
+   x="21.539789"
+   y="233.79903"
+   id="tspan1398"
+   style="stroke-width:0.0700043">water</tspan><tspan
+   font-size="8.73125px"
+   x="22.337774"
+   y="250.73236"
+   id="tspan1400"
+   style="stroke-width:0.0700043">solid</tspan></text>
+    <path
+       d="m -2.3981221,210.82208 1.8997083,-1.34408 2.1817541,-0.98029 2.3235708,-0.53022 2.4119417,-0.11404 2.379927,0.30136 1.1959167,0.3056 1.1572875,0.42307 1.115483,0.50218 1.086379,0.62309 1.02288,0.71464 0.982927,0.83767 1.456531,1.60364 1.145646,1.8071 0.231775,0.5805 -1.535907,0.61277 -0.2032,-0.50905 0.06959,0.13626 -1.066271,-1.68196 0.08625,0.11324 -1.372923,-1.51156 0.07594,0.0733 -0.912548,-0.77761 0.06271,0.0487 -0.960173,-0.67098 0.06218,0.0394 -1.019439,-0.58446 0.07197,0.0365 -1.051454,-0.47334 0.05556,0.0228 -1.089819,-0.39846 0.07911,0.0246 -1.1059583,-0.28258 0.1008062,0.019 -2.2576895,-0.28575 0.142875,0.006 -2.26695,0.10715 0.1449917,-0.0198 -2.1719646,0.49583 0.1547813,-0.0519 -2.03358751,0.91361 0.13864166,-0.0791 -1.83409165,1.29751 z m 19.8236411,5.03661 1.931988,-2.27039 -1.025261,5.45094 -3.745441,-4.09072 z"
+       fill="#f5f5f5"
+       id="path1404"
+       style="stroke-width:0.264583" />
+    <rect
+       x="-39.4636"
+       y="213.16153"
+       width="35.983334"
+       height="11.377083"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#2c2d2f"
+       id="rect1406"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1408"
+       x="-26.823662"
+       y="220.83444"
+       style="stroke-width:0.264583">air</text>
+    <rect
+       x="12.923899"
+       y="219.51152"
+       width="35.71875"
+       height="4.7624998"
+       stroke="#f5f5f5"
+       stroke-width="0.440973"
+       stroke-miterlimit="8"
+       fill="#2c2d2f"
+       id="rect1410"
+       style="fill:#ffffff;stroke:#ffffff" />
+    <path
+       d="M -3.6125596,258.53757 H 24.662138"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1412"
+       style="stroke:#ffffff" />
+    <path
+       d="M -3.6125596,238.9584 H 24.662138"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1414"
+       style="stroke:#ffffff" />
+    <path
+       d="M -3.6125596,224.6709 H 24.662138"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1416"
+       style="stroke:#ffffff" />
+    <path
+       d="m 31.224069,213.28429 0.08996,4.12221 -0.881856,0.0193 -0.08969,-4.12247 z m -1.763448,0.0384 c -0.01588,-0.73052 0.563298,-1.33562 1.293813,-1.3515 0.730514,-0.0159 1.335616,0.5633 1.351491,1.29382 0.01588,0.73051 -0.563298,1.33561 -1.293812,1.35149 -0.730515,0.0159 -1.335617,-0.5633 -1.351492,-1.29381 z m 2.725473,3.62373 -1.264973,2.67414 -1.380066,-2.61646 z"
+       fill="#f5f5f5"
+       id="path1418"
+       style="stroke-width:0.264583" />
+    <path
+       d="M -13.402143,213.29382 H 49.744902"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1420"
+       style="stroke:#ffffff" />
+    <path
+       d="M 23.639523,167.25632 H 52.262942"
+       stroke="#f5f5f5"
+       stroke-width="0.220486"
+       stroke-miterlimit="8"
+       stroke-dasharray="3.33333, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1422"
+       style="stroke:#ffffff" />
+    <text
+       fill="#7030a0"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="700"
+       font-size="7.9375px"
+       id="text1424"
+       x="-15.178026"
+       y="204.1657"
+       style="stroke-width:0.264583">compaction</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text1426"
+       x="54.906921"
+       y="223.48027"
+       style="stroke-width:0.264583;fill:#ffffff">air</text>
+    <path
+       d="m 45.59994,221.8597 h 7.500937 v 0.33073 H 45.59994 Z m 0,1.04722 c -0.487098,0 -0.881856,-0.39476 -0.881856,-0.88185 0,-0.4871 0.394758,-0.88186 0.881856,-0.88186 0.487098,0 0.881856,0.39476 0.881856,0.88186 0,0.48709 -0.394758,0.88185 -0.881856,0.88185 z"
+       fill="#f5f5f5"
+       id="path1428"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text1438"
+       x="58.894196"
+       y="238.03236"
+       style="stroke-width:0.264583;fill:#ffffff">(<tspan
+   fill="#7030a0"
+   font-style="italic"
+   font-weight="700"
+   font-size="7.9375px"
+   x="61.319546"
+   y="238.03236"
+   id="tspan1430"
+   style="stroke-width:0.0700043;fill:#ffffff">compaction</tspan>:<tspan
+   font-size="7.9375px"
+   x="103.81833"
+   y="238.03236"
+   id="tspan1432"
+   style="stroke-width:0.0700043;fill:#ffffff">reduction of soil</tspan><tspan
+   font-size="7.9375px"
+   x="58.894196"
+   y="247.55736"
+   id="tspan1434"
+   style="stroke-width:0.0700043;fill:#ffffff">volume due to air escaping</tspan><tspan
+   font-size="7.9375px"
+   x="58.894196"
+   y="257.08237"
+   id="tspan1436"
+   style="stroke-width:0.0700043;fill:#ffffff">from the soil)</tspan></text>
+    <rect
+       x="-60.101101"
+       y="177.44278"
+       width="230.1875"
+       height="85.989586"
+       stroke="#161618"
+       stroke-width="0.992188"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       id="rect1440"
+       style="stroke:#ffffff" />
+  </g>
+</svg>

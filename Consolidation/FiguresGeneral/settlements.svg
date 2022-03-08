@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="267.03006mm"
+   height="52.895348mm"
+   viewBox="0 0 267.03006 52.895348"
+   version="1.1"
+   id="svg884"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="settlements.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview886"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1474186"
+     inkscape:cx="514.63344"
+     inkscape:cy="136.82887"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs881">
+    <clipPath
+       id="clip0">
+      <rect
+         x="107"
+         y="606"
+         width="1010"
+         height="231"
+         id="rect952" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(20.987082,-100.37686)">
+    <path
+       d="m -10.800624,120.90982 6.0470522,-5.7867 H 28.093655 l 5.291137,5.82083 z"
+       fill="#004e6d"
+       fill-rule="evenodd"
+       id="path957"
+       style="stroke-width:0.264583" />
+    <path
+       d="M -20.987082,120.81166 H 46.280584"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path959"
+       style="stroke:#ffffff" />
+    <path
+       d="m -15.959999,120.81166 4.013994,0.38629 7.718954,0.77285 c 2.4013583,0.27384 6.6897249,0.86942 6.6897249,0.86942 2.2471063,0.27384 4.3399604,0.64399 6.7929124,0.77285 2.4529517,0.12885 5.3003977,0.16113 7.9247997,0 2.624402,-0.16113 7.821877,-0.966 7.821877,-0.966 2.6416,-0.33813 5.506244,-0.78898 8.027988,-1.06256 2.521479,-0.27385 4.811447,-0.42678 7.101416,-0.57971"
+       stroke="#f5f5f5"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="7.5, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path961"
+       style="stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text963"
+       x="-0.10060937"
+       y="136.55437"
+       style="stroke-width:0.264583;fill:#ffffff">settlement</text>
+    <path
+       d="m 55.212917,120.81166 h 16.526404 c -0.09208,7.55914 0.229394,15.11829 0.137583,22.67717 l 22.861323,0.34158 c -0.09181,-7.37685 0.229658,-15.36859 0.137848,-22.74544 h 14.047255"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path965"
+       style="stroke:#ffffff" />
+    <path
+       d="m 71.881667,143.63118 c 1.192477,-0.39873 2.384954,-0.79746 3.940175,-1.19592 1.555221,-0.39873 3.283479,-1.0631 5.391679,-1.19592 2.108464,-0.13282 4.977077,-0.0333 7.258314,0.39873 2.280973,0.4318 4.354777,1.31207 6.428582,2.19234"
+       stroke="#f5f5f5"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="7.5, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path967"
+       style="stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text973"
+       x="76.880966"
+       y="153.22311"
+       style="stroke-width:0.264583;fill:#ffffff">heave<tspan
+   font-style="normal"
+   font-size="6.08542px"
+   x="-13.428731"
+   y="104.53979"
+   id="tspan969"
+   style="stroke-width:0.0700043;fill:#ffffff">Large fill placement</tspan><tspan
+   font-style="normal"
+   font-size="6.08542px"
+   x="68.97718"
+   y="104.80437"
+   id="tspan971"
+   style="stroke-width:0.0700043;fill:#ffffff">Excavation</tspan></text>
+    <path
+       d="m 119.24208,120.84817 47.87133,-0.0366"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path975"
+       style="stroke:#ffffff" />
+    <path
+       d="m 123.21083,131.13041 2.8022,0.73766 5.38877,1.47531 c 1.6764,0.52256 4.67016,1.65973 4.67016,1.65973 1.56872,0.52256 3.02975,1.22952 4.74213,1.47559 1.71238,0.24579 3.7002,0.30718 5.53244,0 1.83224,-0.30745 5.46073,-1.84441 5.46073,-1.84441 1.84415,-0.64532 3.84387,-1.50601 5.60414,-2.02857 1.76054,-0.52255 3.35915,-0.81438 4.95777,-1.10648"
+       stroke="#f5f5f5"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="7.5, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path977"
+       style="stroke:#ffffff" />
+    <rect
+       x="138.95354"
+       y="112.47728"
+       width="7.4083333"
+       height="14.287499"
+       fill="#7f7f7f"
+       id="rect979"
+       style="stroke-width:0.264583" />
+    <rect
+       x="135.51396"
+       y="122.79604"
+       width="14.287499"
+       height="7.1437497"
+       fill="#7f7f7f"
+       id="rect981"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text985"
+       x="132.17596"
+       y="148.98978"
+       style="stroke-width:0.264583;fill:#ffffff">settlement<tspan
+   font-style="normal"
+   font-size="6.08542px"
+   x="123.73103"
+   y="104.53978"
+   id="tspan983"
+   style="stroke-width:0.0700043;fill:#ffffff">Structure load</tspan></text>
+    <path
+       d="m 175.33375,121.07624 h 67.26766"
+       stroke="#f5f5f5"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path987"
+       style="stroke:#ffffff" />
+    <path
+       d="m 180.36083,121.07624 4.014,0.38629 7.71895,0.77285 c 2.40136,0.27384 6.68972,0.86942 6.68972,0.86942 2.24711,0.27385 4.33997,0.644 6.79292,0.77285 2.45295,0.12885 5.3004,0.16113 7.9248,0 2.62334,-0.16113 7.8224,-0.96599 7.8224,-0.96599 2.64054,-0.33814 5.50598,-0.78899 8.02746,-1.06257 2.52148,-0.27384 4.81013,-0.42677 7.10142,-0.5797"
+       stroke="#f5f5f5"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="7.5, 2.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path989"
+       style="stroke:#ffffff" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text991"
+       x="196.74146"
+       y="148.98978"
+       style="stroke-width:0.264583;fill:#ffffff">settlement</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="6.08542px"
+       id="text993"
+       x="177.49329"
+       y="104.53978"
+       style="stroke-width:0.264583;fill:#ffffff">Lowering the water table</text>
+    <path
+       d="m 240.42125,116.57833 -1.85209,3.96875 -1.85208,-3.96875 z"
+       stroke="#085091"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#0f6fc6"
+       fill-rule="evenodd"
+       id="path995" />
+    <path
+       d="m 176.25979,135.49603 h 65.37854"
+       stroke="#005eff"
+       stroke-width="0.440973"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path997" />
+    <path
+       d="m 240.42125,131.13041 -1.85209,3.96875 -1.85208,-3.96875 z"
+       stroke="#085091"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#0f6fc6"
+       fill-rule="evenodd"
+       id="path999" />
+    <path
+       d="m 242.53262,117.69593 1.25677,1.5875 1.11919,1.58564 0.46302,0.82233 0.34925,0.80989 0.22754,0.81835 c 0.005,0.0172 0.008,0.0347 0.0106,0.0524 l 0.082,0.76068 c 0.003,0.0238 0.003,0.0479 0,0.0717 l -0.082,0.76068 c -0.003,0.0188 -0.005,0.0376 -0.0106,0.0558 l -0.21431,0.74428 -0.3466,0.7866 -0.46567,0.78 -1.12977,1.48537 -0.11642,0.13626 -0.50006,-0.43233 0.0926,-0.10451 1.08744,-1.42505 0.42598,-0.70829 0.31486,-0.70167 0.21695,-0.74401 -0.0132,0.0558 0.0847,-0.76068 v 0.0717 l -0.0847,-0.76068 0.0106,0.0524 -0.20109,-0.73607 -0.3122,-0.74454 -0.42863,-0.76517 -1.09802,-1.55628 -1.25677,-1.5875 z m 0.89429,11.04132 1.57692,0.19712 -2.7305,1.1377 0.72761,-2.86702 z"
+       fill="#085091"
+       id="path1001"
+       style="stroke-width:0.264583" />
+  </g>
+</svg>
