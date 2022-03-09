@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="169.87883mm"
+   height="106.74222mm"
+   viewBox="0 0 169.87883 106.74222"
+   version="1.1"
+   id="svg1070"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="permeability_effect.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1072"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4467452"
+     inkscape:cx="363.57473"
+     inkscape:cy="184.89779"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1067">
+    <clipPath
+       id="clip0">
+      <rect
+         x="66"
+         y="591"
+         width="670"
+         height="285"
+         id="rect1138" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(53.849512,-59.766453)">
+    <path
+       d="m -18.097763,163.58416 c 6.425142,-12.33751 12.850548,-24.67503 22.5491146,-35.06437 9.6983024,-10.38932 20.7912224,-20.34542 35.6420204,-27.27214 14.850798,-6.926202 34.156914,-10.605479 53.463031,-14.285217"
+       stroke="#ff0000"
+       stroke-width="1.10243"
+       stroke-miterlimit="8"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1143" />
+    <path
+       d="m -18.384395,165.11755 3.3e-5,-101.409813 h -0.220486 l -3.3e-5,101.409813 z m 1.212708,-100.621366 -1.322916,-4.729731 -1.322917,4.729731 z"
+       fill="#9da1b4"
+       id="path1145"
+       style="stroke-width:0.264583" />
+    <path
+       d="m -17.965471,165.29603 131.790011,-3e-5 v -0.22049 l -131.790011,4e-5 z m 131.348951,1.21264 2.64584,-1.32291 -2.64584,-1.32292 z"
+       fill="#9da1b4"
+       id="path1147"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text1149"
+       x="-54.132053"
+       y="64.692543"
+       style="fill:#ffffff;stroke-width:0.264583">settlement</text>
+    <path
+       d="m -18.626929,165.00308 h 112.424102"
+       stroke="#9da1b4"
+       stroke-width="1.10243"
+       stroke-miterlimit="8"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1151" />
+    <path
+       d="m -18.626929,164.53011 c 0.121443,-25.57983 0.243152,-51.16014 0.364595,-76.739974 l 111.554153,-1.30067"
+       stroke="#767171"
+       stroke-width="1.10243"
+       stroke-miterlimit="8"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1153"
+       style="stroke:#808000" />
+    <path
+       d="m -18.626929,164.53011 c 0.586581,-17.42245 1.172898,-34.84491 3.33375,-47.69419 2.160852,-12.84926 4.445,-24.064888 9.6308328,-29.400501"
+       stroke="#00b050"
+       stroke-width="1.10243"
+       stroke-miterlimit="8"
+       stroke-dasharray="12.5, 4.16667"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1155" />
+    <path
+       d="m -5.6623462,87.435419 100.1712492,-1.59392"
+       stroke="#00b050"
+       stroke-width="1.10243"
+       stroke-miterlimit="8"
+       stroke-dasharray="12.5, 4.16667"
+       fill="none"
+       fill-rule="evenodd"
+       id="path1157" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="6.08542px"
+       id="text1167"
+       x="29.647886"
+       y="120.0462"
+       style="fill:#ffffff;stroke-width:0.264583">Clay, silt</text>
+    <path
+       d="m -12.82125,88.066914 3.5773191,-7.61093 -0.4988454,-0.2345 -3.5773317,7.61095 z m -1.44669,-0.67998 c -0.310793,0.66123 -0.02671,1.44921 0.634519,1.76 0.661229,0.31079 1.449207,0.0267 1.760003,-0.63452 0.310793,-0.66123 0.02671,-1.44921 -0.634519,-1.76 -0.661229,-0.31079 -1.449207,-0.0267 -1.760003,0.63452 z"
+       fill="#9da1b4"
+       id="path1169"
+       style="stroke-width:0.264583" />
+    <path
+       d="m -13.488577,109.1984 7.9465634,-3.50671 -0.222541,-0.5043 -7.9465604,3.50671 z m -0.645362,-1.46246 c -0.668436,0.29497 -0.97119,1.07597 -0.67622,1.7444 0.294974,0.66844 1.075969,0.97119 1.744406,0.67622 0.668436,-0.29497 0.97119,-1.07597 0.67622,-1.7444 -0.294974,-0.66844 -1.075969,-0.97119 -1.744406,-0.67622 z"
+       fill="#9da1b4"
+       id="path1171"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 14.455462,118.87966 11.922148,-0.4101 -0.01894,-0.55089 -11.922154,0.41011 z m -0.05495,-1.59758 c -0.730195,0.0251 -1.301774,0.63742 -1.276657,1.36762 0.02512,0.73019 0.637421,1.30177 1.367615,1.27666 0.730195,-0.0251 1.301774,-0.63742 1.276657,-1.36762 -0.02512,-0.73019 -0.637421,-1.30177 -1.367615,-1.27666 z"
+       fill="#9da1b4"
+       id="path1173"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 23.040428,164.25816 9.643499,-5.04591 -0.255535,-0.4884 -9.643514,5.04591 z m -0.741098,-1.41635 c -0.647361,0.33873 -0.897559,1.13811 -0.558831,1.78547 0.33873,0.64736 1.138113,0.89756 1.785477,0.55883 0.647361,-0.33873 0.897559,-1.13811 0.558831,-1.78547 -0.33873,-0.64736 -1.138113,-0.89756 -1.785477,-0.55883 z"
+       fill="#9da1b4"
+       id="path1175"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text1177"
+       x="-41.416019"
+       y="73.15921"
+       style="fill:#ffffff;stroke-width:0.264583">𝑆</text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.46281px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke:none;stroke-width:0.264582"
+       x="105.18684"
+       y="158.93785"
+       id="text2948"
+       transform="scale(0.97012906,1.0307907)"><tspan
+         sodipodi:role="line"
+         id="tspan2946"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264582"
+         x="105.18684"
+         y="158.93785">Time</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.46281px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke:none;stroke-width:0.264582"
+       x="34.239365"
+       y="155.18599"
+       id="text2948-4"
+       transform="scale(0.97012905,1.0307907)"><tspan
+         sodipodi:role="line"
+         id="tspan2946-6"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264582"
+         x="34.239365"
+         y="155.18599">100% impermeable</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.46281px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke:none;stroke-width:0.264582"
+       x="-10.626689"
+       y="77.476501"
+       id="text6167"
+       transform="scale(0.97012905,1.0307907)"><tspan
+         sodipodi:role="line"
+         id="tspan6165"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264582"
+         x="-10.626689"
+         y="77.476501">100% permeable</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.46281px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke:none;stroke-width:0.264582"
+       x="-4.9713044"
+       y="99.831284"
+       id="text7721"
+       transform="scale(0.97012905,1.0307907)"><tspan
+         sodipodi:role="line"
+         id="tspan7719"
+         style="fill:#ffffff;stroke:none;stroke-width:0.264582"
+         x="-4.9713044"
+         y="99.831284">Gravels and sands</tspan></text>
+  </g>
+</svg>
