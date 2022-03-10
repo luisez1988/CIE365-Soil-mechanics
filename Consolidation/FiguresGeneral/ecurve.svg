@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="139.16104mm"
+   height="60.541008mm"
+   viewBox="0 0 139.16104 60.541008"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="ecurve.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="291.68923"
+     inkscape:cy="351.82421"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0">
+      <rect
+         x="524"
+         y="222"
+         width="586"
+         height="261"
+         id="rect831" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-27.712579,-55.68393)">
+    <path
+       d="m 58.834394,107.90024 3.3e-5,-50.011541 h -0.330729 l -3.4e-5,50.011541 z m 1.157583,-49.570481 -1.322913,-2.645833 -1.32292,2.645833 z"
+       fill="#9da1b4"
+       id="path836"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 58.933613,107.97221 94.305437,-3e-5 v -0.33073 l -94.305437,4e-5 z m 93.864637,1.15752 2.64584,-1.32291 -2.64584,-1.32292 z"
+       fill="#9da1b4"
+       id="path838"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text840"
+       x="27.593983"
+       y="66.664139"
+       style="stroke-width:0.264583;fill:#ffffff">Void ratio</text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text842"
+       x="38.809933"
+       y="75.130806"
+       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+    <text
+       font-family="'Times New Roman', 'Times New Roman_MSFontService', sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text846"
+       x="146.37602"
+       y="116.14122"
+       style="stroke-width:0.264583;fill:#ffffff">σ<tspan
+   font-size="7.14375px"
+   x="149.84868"
+   y="116.14122"
+   id="tspan844"
+   style="stroke-width:0.0700043;fill:#ffffff">’</tspan></text>
+    <path
+       d="m 58.933613,62.563097 c 4.750435,6.560873 9.500843,13.121481 16.671316,18.646405 7.170473,5.52487 15.371842,10.8195 26.351521,14.502738 10.97968,3.683238 25.96197,7.36646 39.52716,7.59669"
+       stroke="#00b050"
+       stroke-width="1.32292"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path848" />
+    <path
+       d="m 89.360696,91.138096 c 0,0.730626 0.592291,1.322917 1.322917,1.322917 0.730625,0 1.322916,-0.592291 1.322916,-1.322917 0,-0.730625 -0.592291,-1.322916 -1.322916,-1.322916 -0.730626,0 -1.322917,0.592291 -1.322917,1.322916 z"
+       stroke="#9da1b4"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#252a33"
+       fill-rule="evenodd"
+       id="path850" />
+    <path
+       d="m 70.310696,77.644346 c 0,0.730626 0.592291,1.322917 1.322917,1.322917 0.730625,0 1.322916,-0.592291 1.322916,-1.322917 0,-0.730625 -0.592291,-1.322916 -1.322916,-1.322916 -0.730626,0 -1.322917,0.592291 -1.322917,1.322916 z"
+       stroke="#9da1b4"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#252a33"
+       fill-rule="evenodd"
+       id="path852" />
+    <path
+       d="m 71.01634,93.089398 h 17.491339 v 0.33073 h -17.491339 z m 0,0.165365 0.881856,1.322917 -2.645833,-1.322917 2.645833,-1.322917 z m 17.491339,0 -0.881856,-0.881856 2.645833,0.881856 -2.645833,0.881856 z"
+       fill="#9da1b4"
+       id="path854"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="'Times New Roman', 'Times New Roman_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text860"
+       x="77.305748"
+       y="101.05997"
+       style="stroke-width:0.264583;fill:#ffffff">Δ<tspan
+   font-style="italic"
+   font-size="7.14375px"
+   x="81.825706"
+   y="101.05997"
+   id="tspan856"
+   style="stroke-width:0.0700043;fill:#ffffff">σ</tspan><tspan
+   font-style="italic"
+   font-size="7.14375px"
+   x="85.298363"
+   y="101.05997"
+   id="tspan858"
+   style="stroke-width:0.0700043;fill:#ffffff">’</tspan></text>
+    <text
+       font-family="'Times New Roman', 'Times New Roman_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.14375px"
+       id="text864"
+       x="61.400322"
+       y="88.624557"
+       style="stroke-width:0.264583;fill:#ffffff">Δ<tspan
+   font-style="italic"
+   font-size="7.14375px"
+   x="65.92028"
+   y="88.624557"
+   id="tspan862"
+   style="stroke-width:0.0700043;fill:#ffffff">e</tspan></text>
+    <path
+       d="m 70.740644,81.52499 v 9.604904 h -0.330729 v -9.604904 z m -0.165365,0 -1.322916,0.881856 1.322916,-2.645833 1.322917,2.645833 z m 0,9.604904 0.881857,-0.882121 -0.881857,2.645834 -0.881856,-2.645834 z"
+       fill="#9da1b4"
+       id="path866"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="700"
+       font-size="7.9375px"
+       id="text870"
+       x="74.635841"
+       y="62.695389"
+       style="stroke-width:0.264583;fill:#ffffff">Consolidation curve <tspan
+   font-weight="400"
+   font-size="7.9375px"
+   x="141.40344"
+   y="62.695389"
+   id="tspan868"
+   style="stroke-width:0.0700043;fill:#ffffff">(</tspan></text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text872"
+       x="143.82887"
+       y="62.695389"
+       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text874"
+       x="149.73598"
+       y="62.695389"
+       style="stroke-width:0.264583;fill:#ffffff">vs</text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text876"
+       x="158.13383"
+       y="62.695389"
+       style="stroke-width:0.264583;fill:#ffffff">𝜎′</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text878"
+       x="164.80399"
+       y="62.695389"
+       style="stroke-width:0.264583;fill:#ffffff">)</text>
+    <path
+       d="m 118.3413,64.423382 -0.14869,2.94349 -0.4318,2.860675 -0.66437,2.661443 -0.88159,2.414323 -0.48419,1.069711 -0.53578,0.95541 -0.56886,0.854075 -0.5879,0.723635 -0.62653,0.594519 c -0.006,0.0056 -0.0122,0.01058 -0.0185,0.01535 l -0.61198,0.429948 c -0.01,0.0066 -0.0198,0.01243 -0.031,0.01693 l -0.62839,0.264584 c -0.0135,0.0058 -0.0278,0.0098 -0.0426,0.01164 l -0.62838,0.08281 -0.62839,0.08255 0.0426,-0.01164 -0.62838,0.264583 0.0309,-0.01693 -0.61172,0.429948 0.0201,-0.01667 -0.59531,0.578644 -0.56568,0.696913 -0.55298,0.830791 -0.52255,0.931598 -0.49054,1.04775 -0.85407,2.367227 -0.6567,2.646098 -0.42677,2.828925 -0.14711,2.910681 -0.33046,-0.01667 0.15054,-2.943225 0.43286,-2.859616 0.66649,-2.678642 0.86571,-2.395273 0.50165,-1.069181 0.53579,-0.953294 0.5715,-0.855927 0.59187,-0.725223 0.59531,-0.578908 c 0.006,-0.0061 0.013,-0.01164 0.0201,-0.01667 l 0.61198,-0.429948 c 0.01,-0.0069 0.0198,-0.01244 0.0307,-0.0172 l 0.62839,-0.264583 c 0.0138,-0.0056 0.028,-0.0095 0.0426,-0.01138 l 0.62838,-0.08281 0.62839,-0.08255 -0.0426,0.01138 0.62838,-0.264584 -0.0307,0.0172 0.61172,-0.429948 -0.0185,0.01508 0.59716,-0.563033 0.56939,-0.698235 0.55562,-0.832644 0.52282,-0.93001 0.47492,-1.046692 0.87128,-2.38125 0.65828,-2.630223 0.42836,-2.828131 0.14896,-2.94349 z m -12.76165,31.505525 c -0.0246,0.486304 -0.43894,0.860689 -0.92551,0.835818 -0.4863,-0.02461 -0.86069,-0.438943 -0.83608,-0.925512 0.0249,-0.486304 0.43921,-0.86069 0.92578,-0.836083 0.4863,0.02487 0.86068,0.439208 0.83581,0.925777 z"
+       fill="#9da1b4"
+       id="path880"
+       style="stroke-width:0.264583" />
+  </g>
+</svg>

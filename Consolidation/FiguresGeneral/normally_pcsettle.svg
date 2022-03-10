@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="107.17397mm"
+   height="87.517265mm"
+   viewBox="0 0 107.17397 87.517265"
+   version="1.1"
+   id="svg52577"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="normally_pcsettle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview52579"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4467452"
+     inkscape:cx="183.16978"
+     inkscape:cy="245.03278"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs52574">
+    <clipPath
+       id="clip0">
+      <rect
+         x="83"
+         y="280"
+         width="436"
+         height="358"
+         id="rect52645" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-47.729515,-77.674864)">
+    <path
+       d="m 55.731838,107.70507 h 21.479404"
+       stroke="#131519"
+       stroke-width="0.440973"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="6.66667, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52650"
+       style="stroke:#b3b3b3" />
+    <path
+       d="m 54.938088,131.51757 h 57.150002"
+       stroke="#131519"
+       stroke-width="0.440973"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="6.66667, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52652"
+       style="stroke:#b3b3b3" />
+    <path
+       d="m 81.131838,107.96966 v 49.68583"
+       stroke="#131519"
+       stroke-width="0.440973"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="6.66667, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52654"
+       style="stroke:#b3b3b3" />
+    <path
+       d="m 111.69889,130.98841 -0.14,25.84733"
+       stroke="#131519"
+       stroke-width="0.440973"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="6.66667, 5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52656"
+       style="stroke:#b3b3b3" />
+    <path
+       d="m 124.39121,140.21548 8.98155,-0.099 0.0143,6.35 z"
+       stroke="#085091"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#0f6fc6"
+       fill-rule="evenodd"
+       id="path52658" />
+    <path
+       d="m 55.235745,156.96652 3.3e-5,-77.086882 h -0.330729 l -3.4e-5,77.086882 z m 1.157586,-76.645822 -1.322916,-2.645833 -1.322917,2.645833 z"
+       fill="#9da1b4"
+       id="path52660"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 55.334963,157.21522 97.363757,-3e-5 v -0.33073 l -97.363757,4e-5 z m 96.922697,1.15752 2.64583,-1.32291 -2.64583,-1.32292 z"
+       fill="#9da1b4"
+       id="path52662"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.08542px"
+       id="text52664"
+       x="48.01791"
+       y="81.775909"
+       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+    <path
+       d="m 55.334963,88.787364 92.371337,68.521266"
+       stroke="#005eff"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="10, 7.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52666" />
+    <text
+       fill="#083763"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.08542px"
+       id="text52670"
+       x="134.6544"
+       y="140.51341"
+       style="stroke-width:0.264583">𝐶<tspan
+   font-size="4.49792px"
+   x="137.98595"
+   y="141.83633"
+   id="tspan52668"
+   style="stroke-width:0.0700043">𝑐</tspan></text>
+    <path
+       d="m 81.589832,107.34841 28.115158,20.72905 -0.91599,1.24222 -28.115156,-20.72878 z m -1.831975,2.48471 c -1.028965,-0.75883 -1.24804,-2.20822 -0.489479,-3.23745 0.758824,-1.02896 2.208212,-1.24804 3.237441,-0.48947 1.028965,0.75882 1.24804,2.20821 0.489479,3.23744 -0.758825,1.02896 -2.208212,1.24804 -3.237441,0.48948 z m 30.241873,16.54413 2.35294,4.61116 -5.10064,-0.88424 z"
+       fill="#9da1b4"
+       fill-opacity="0.8"
+       id="path52672"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52690"
+       x="47.599339"
+       y="107.17591"
+       style="stroke-width:0.264583;fill:#ffffff">𝑒<tspan
+   font-size="3.96875px"
+   x="50.090836"
+   y="108.49883"
+   id="tspan52674"
+   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   font-size="5.29167px"
+   x="109.22318"
+   y="163.26758"
+   id="tspan52676"
+   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   font-size="5.29167px"
+   x="112.31007"
+   y="163.26758"
+   id="tspan52678"
+   style="stroke-width:0.0700043;fill:#ffffff">′</tspan><tspan
+   font-size="3.96875px"
+   x="113.36841"
+   y="164.32591"
+   id="tspan52680"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan><tspan
+   font-size="5.29167px"
+   x="79.192703"
+   y="162.47383"
+   id="tspan52682"
+   style="stroke-width:0.0700043;fill:#ffffff">𝜎′</tspan><tspan
+   font-size="3.96875px"
+   x="83.657555"
+   y="163.53217"
+   id="tspan52684"
+   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   font-size="5.29167px"
+   x="47.458214"
+   y="130.72383"
+   id="tspan52686"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑒</tspan><tspan
+   font-size="3.96875px"
+   x="49.629997"
+   y="131.78217"
+   id="tspan52688"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan></text>
+    <path
+       d="m 53.218297,107.83736 h 3.622675"
+       stroke="#9da1b4"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52692" />
+    <path
+       d="m 53.48288,131.64986 h 3.622675"
+       stroke="#9da1b4"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52694" />
+    <path
+       d="m 81.26413,155.46236 v 3.05964"
+       stroke="#9da1b4"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52696" />
+    <path
+       d="m 111.42663,155.72695 v 3.05964"
+       stroke="#9da1b4"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52698" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52702"
+       x="90.663185"
+       y="96.063408"
+       style="stroke-width:0.264583;fill:#ffffff">Consolidation curve <tspan
+   font-size="5.29167px"
+   x="99.736198"
+   y="102.41341"
+   id="tspan52700"
+   style="stroke-width:0.0700043;fill:#ffffff">(</tspan></text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52704"
+       x="101.33489"
+       y="102.41341"
+       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52706"
+       x="105.31026"
+       y="102.41341"
+       style="stroke-width:0.264583;fill:#ffffff">vs log</text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52710"
+       x="117.52289"
+       y="102.41341"
+       style="stroke-width:0.264583;fill:#ffffff">𝜎<tspan
+   font-size="5.29167px"
+   x="120.6097"
+   y="102.41341"
+   id="tspan52708"
+   style="stroke-width:0.0700043;fill:#ffffff">′</tspan></text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.29167px"
+       id="text52712"
+       x="121.98774"
+       y="102.41341"
+       style="stroke-width:0.264583;fill:#ffffff">)</text>
+    <path
+       d="m 108.37916,104.92695 c -3.47144,0 -6.94288,3.25437 -6.94288,6.50878 0,3.25437 -3.471437,6.50875 -6.942876,6.50875"
+       stroke="#9da1b4"
+       stroke-width="0.330729"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path52714" />
+  </g>
+</svg>

@@ -313,14 +313,207 @@
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-
-
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Settlement vs. void ratio</h1>
+		<div class="container">
+			<div class="col">
+          <figure>
+            <img src="FiguresGeneral/ecurve.svg" style="width:100%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+					<p>It is more convenient to plot the <strong style="color:#7abbe6">consolidation curve</strong> in terms of void ration \(e\) than settlement \(S\)</p>
+			</div>
+			<div class="col">
+				<p>$$\Delta e= \cfrac{\Delta H}{H_0} (1+e_0)$$</p>
+				<ul>
+					<li>\(H_0=\) initial height of specimen</li>
+					<li>\(\Delta H=\) settlement (\(S\))</li>
+					<li>\(e_0=\) void ratio</li>
+					<li>\(\Delta e=\) change of void ratio</li>
+				</ul>
+			</div>
+		</div>
 </section>
 
 
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>The consolidation curve</h1>
+<figure>
+  <img src="FiguresGeneral/consol_curves.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
 
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Consolidation parameters</h1>
+<div class="container">
+	<div class="col">
+            <figure>
+              <img src="FiguresGeneral/uloading_reloading.svg" style="width:100%" data-preload/>
+              <footer style="margin-top:-60px;"><small></small></footer>
+            </figure>
+	</div>
+	<div class="col">
+		<p> <strong style="color:blue"> Virgin compression line</strong>
+$$\Delta e= -C_c \Delta \log (\sigma')$$
+		</p>
+		<p>\(C_c=\) compressive index</p>
 
+		<p> <strong style="color:red"> Unloading-reloading line</strong>
+$$\Delta e= -C_s \Delta \log (\sigma')$$
+		</p>
+<p>\(C_r=\) swelling index</p>
+	</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Consolidation parameters</h1>
+
+	<p>Typical values of \(C_c\) and \(C_r\)</p>
+	<ul>
+		<li>\(C_c < 0.05 \) "low" compressibility </li>
+		<li>\(0.05 < C_c < 0.25 \) "medium" compressibility </li>
+		<li> \(C_c>0.25 \) "high" compressibility </li>
+	</ul>
+	<p>$$C_S \approx 1/5 -- 1/10 C_c$$</p>
+<p>Correlation proposed by Terzaghi and Peck (1967) for undisturbed clays of low to medium plasticity.
+$$C_c=0.009(LL-10)$$
+</p>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Effect of sample disturbance</h1>
+		<div class="container">
+			<div class="col">
+          <figure>
+            <img src="FiguresGeneral/disturbance effect.svg" style="width:100%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+			</div>
+			<div class="col">
+				<p style="margin-top:-30px; font-size:35px">We use Casagrande's procedure to correct for disturbance:</p>
+				<ol style="margin-top:-30px; font-size:35px">
+					<li>Plot consolidation curve form experimental data.</li>
+					<li>Choose point of maximum curvature.</li>
+					<li>Draw horizontal line through such point</li>
+					<li>Bisect the angle between the lines in steps 3 and 4.</li>
+					<li>Draw virgin compression line.</li>
+					<li>Intersection of lines in step 5 and 6 is \(\sigma'_c\)</li>
+				</ol>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 5.1</h1>
+	<p>Find \(C_c\), \(C_r\), and \(\sigma'_c\) for the consolidation test results shown in the figure below</p>
+	<div class="container">
+		<div class="col">
+			<figure>
+				<img src="FiguresGeneral/example1.PNG" style="width:90%" data-preload/>
+				<footer style="margin-top:-30px;"><small>From Ishibashi and Hazarika (2010)</small></footer>
+			</figure>
+		</div>
+		<div class="col">
+
+		</div>
+	</div>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Overconsolidation ratio (OCR)</h1>
+<div class="container">
+	<div class="col">
+            <p style="margin-top:-25px;">Ratio between the <strong style="color:#7abbe6">preconsolidation stress \(\sigma'_c\)</strong> and the <strong style="color:#7abbe6">in-situ effective stress \(\sigma'_0\)</strong>
+$$OCR=\cfrac{\sigma'_c}{\sigma'_0}$$
+						</p>
+
+	<ul>
+		<li><strong style="color:#7abbe6">Normally consolidated soil:</strong> \(OCR=1\) \(\longrightarrow\) \(\sigma'c=\sigma'_0\)</li>
+		<li><strong style="color:#7abbe6">Overconsolidated soil:</strong> \(OCR>1\) \(\longrightarrow\) \(\sigma'_c>\sigma'_0\)</li>
+	</ul>
+	</div>
+	<div class="col">
+		<ul>
+			<li>Soils (clay) is a <strong style="color:#7abbe6">history dependent</strong> material \(\longrightarrow\) "have memory"</li>
+			<li>The \(OCR\) give us information about the <strong style="color:#7abbe6">loading geological history</strong> of soil</li>
+			<li>Similarly, if we know some details about the geological history we can <strong style="color:#7abbe6">make sense of OCR values</strong></li>
+		</ul>
+	</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
+	<p>Settlement in <strong style="color:#7abbe6">normally consolidated soils</strong></p>
+	<div class="container">
+		<div class="col">
+	            <figure>
+	              <img src="FiguresGeneral/normally_pcsettle.svg" style="width:100%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col">
+			<ul>
+				<li>Stress path moves along <strong style="color:blue">virgin curve</strong></li>
+				<li>Then:
+$$\Delta H= C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_0}\right)$$
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 5.2</h1>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
+	<p>Settlement in <strong style="color:#7abbe6">overconsolidated soils. Two cases:</strong></p>
+	<div class="container">
+		<div class="col">
+			<p>\(\sigma'_f<\sigma'c\)</p>
+	            <figure>
+	              <img src="FiguresGeneral/pc_overconsol.svg" style="width:80%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col">
+			<ul>
+				<li>Stress path moves along <strong style="color:red">recompression curve</strong></li>
+				<li>Then:
+$$\Delta H= C_r \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_0}\right)$$
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
+	<p>Settlement in <strong style="color:#7abbe6">overconsolidated soils. Two cases:</strong></p>
+	<div class="container">
+		<div class="col">
+			<p>\(\sigma'_f>\sigma'c\)</p>
+	            <figure>
+	              <img src="FiguresGeneral/pc_complexoverconsol.svg" style="width:80%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col">
+			<ul>
+				<li>Stress path moves along <strong style="color:red">recompression curve</strong></li>
+				<li style="margin-top:0px; font-size:30px">Then:
+$$\Delta H= C_r \cfrac{H_0}{1+e_0} \log \left(OCR\right)+ C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_c}\right)$$
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
 
 
 

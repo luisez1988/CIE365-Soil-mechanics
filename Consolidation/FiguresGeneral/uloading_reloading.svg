@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="129.54311mm"
+   height="105.49007mm"
+   viewBox="0 0 129.54311 105.49007"
+   version="1.1"
+   id="svg45559"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="uloading_reloading.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview45561"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="311.04302"
+     inkscape:cy="53.222916"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs45556">
+    <clipPath
+       id="clip0">
+      <rect
+         x="74"
+         y="211"
+         width="524"
+         height="437"
+         id="rect45627" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.645929,-76.003733)">
+    <path
+       d="m 73.714906,120.04416 10.5664,-0.11959 0.01693,7.67291 z"
+       stroke="#085091"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#0f6fc6"
+       fill-rule="evenodd"
+       id="path45632" />
+    <path
+       d="m 31.811522,169.70248 3.3e-5,-91.493709 h -0.330729 l -3.4e-5,91.493709 z m 1.157586,-91.052913 -1.322916,-2.645834 -1.322917,2.645834 z"
+       fill="#9da1b4"
+       id="path45634"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 31.91074,169.83159 115.4549,-6e-5 v -0.33073 l -115.4549,7e-5 z m 115.01384,1.15749 2.64584,-1.32292 -2.64584,-1.32292 z"
+       fill="#9da1b4"
+       id="path45636"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text45640"
+       x="132.35054"
+       y="179.5881"
+       style="fill:#ffffff;stroke-width:0.264583">log<tspan
+   font-size="8.73125px"
+   x="145.23132"
+   y="179.5881"
+   id="tspan45638"
+   style="fill:#ffffff;stroke-width:0.0700043">𝜎′</tspan></text>
+    <path
+       d="m 31.91074,88.968316 109.15465,80.971234"
+       stroke="#005eff"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="10, 7.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path45642" />
+    <path
+       d="m 82.029808,106.87529 -1.810787,0.55813 -1.774372,0.63815 -1.727065,0.78392 c -0.0072,0.003 -0.01407,0.007 -0.02071,0.0113 l -1.614161,1.03241 c -0.0068,0.004 -0.01332,0.009 -0.01942,0.0145 l -1.495089,1.30017 -1.409129,1.56802 -1.347183,1.72181 -0.265721,0.36691 0.267907,0.19392 0.258326,-0.35706 1.332777,-1.70468 1.380059,-1.53937 1.495091,-1.30016 -0.01942,0.0145 1.614161,-1.03242 -0.02071,0.0113 1.702249,-0.77384 1.759805,-0.63329 1.810787,-0.55813 z m -11.349681,8.09227 -0.197298,-1.23156 -0.836959,2.66042 2.265815,-1.62614 z"
+       fill="#005eff"
+       id="path45644"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#0f6fc6"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text45648"
+       x="98.429375"
+       y="94.392273"
+       style="stroke-width:0.264583">Virgin <tspan
+   font-size="7.9375px"
+   x="80.490623"
+   y="103.91727"
+   id="tspan45646"
+   style="stroke-width:0.0700043">compression line</tspan></text>
+    <text
+       fill="#083763"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text45652"
+       x="88.151367"
+       y="120.05686"
+       style="stroke-width:0.264583">𝐶<tspan
+   font-size="5.82083px"
+   x="92.426613"
+   y="121.64436"
+   id="tspan45650"
+   style="stroke-width:0.0700043">𝑐</tspan></text>
+    <path
+       d="m 61.014906,134.21207 51.901994,14.97674"
+       stroke="#c00000"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="10, 7.5"
+       fill="none"
+       fill-rule="evenodd"
+       id="path45654" />
+    <path
+       d="m 61.544073,134.1618 10.751079,-0.21432 0.09684,3.43959 z"
+       stroke="#c00000"
+       stroke-width="0.661458"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#ff0000"
+       fill-rule="evenodd"
+       id="path45656" />
+    <text
+       fill="#c00000"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text45660"
+       x="75.691345"
+       y="134.60893"
+       style="stroke-width:0.264583">𝐶<tspan
+   font-size="5.82083px"
+   x="79.96656"
+   y="136.19644"
+   id="tspan45658"
+   style="stroke-width:0.0700043">𝑠</tspan></text>
+    <path
+       d="m 83.159303,152.21309 0.780427,-0.44177 0.78223,-0.53103 c 0.0082,-0.006 0.01591,-0.0119 0.023,-0.0189 l 0.73106,-0.71902 c 0.0077,-0.008 0.0146,-0.0158 0.02064,-0.0247 l 0.667207,-0.9779 c 0.0053,-0.008 0.0099,-0.0159 0.0138,-0.0244 l 0.595604,-1.30248 0.53619,-1.59391 0.494544,-1.76451 0.03547,-0.1351 -0.319901,-0.0839 -0.03404,0.12979 -0.4896,1.74847 -0.523434,1.56166 -0.595602,1.30246 0.0138,-0.0244 -0.667207,0.9779 0.02064,-0.0247 -0.73106,0.71902 0.023,-0.0189 -0.759246,0.51673 -0.780428,0.44178 z m 4.520215,-7.57568 0.629258,1.07688 -0.181628,-2.78303 -1.524518,2.3354 z"
+       fill="#c00000"
+       id="path45662"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#c00000"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="7.9375px"
+       id="text45668"
+       x="38.03373"
+       y="158.95061"
+       style="stroke-width:0.264583">Unloading<tspan
+   font-size="7.9375px"
+   x="71.051613"
+   y="158.95061"
+   id="tspan45664"
+   style="stroke-width:0.0700043">-</tspan><tspan
+   font-size="7.9375px"
+   x="73.476776"
+   y="158.95061"
+   id="tspan45666"
+   style="stroke-width:0.0700043">reloading line</tspan></text>
+    <text
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="8.73125px"
+       id="text45670"
+       x="22.198282"
+       y="80.898521"
+       style="fill:#ffffff;stroke-width:0.264583">𝑒</text>
+  </g>
+</svg>
