@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="204.94888mm"
+   height="73.584511mm"
+   viewBox="0 0 204.94888 73.584511"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Consol_curve.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.81134749"
+     inkscape:cx="346.95368"
+     inkscape:cy="146.05333"
+     inkscape:window-width="1536"
+     inkscape:window-height="807"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0">
+      <rect
+         x="33"
+         y="336"
+         width="801"
+         height="294"
+         id="rect831" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.2087865,-91.876999)">
+    <path
+       d="m 121.29222,148.57289 c 2.55403,1.87669 5.73088,3.78407 8.96991,4.79954 3.23929,1.01521 6.91435,0.89218 10.46506,1.29196 3.55045,0.40005 7.06993,0.8308 10.83866,1.10755 3.76846,0.27702 7.91078,0.43074 11.7729,0.55377 3.86212,0.12303 7.63058,0.15399 11.39931,0.18468"
+       stroke="#161618"
+       stroke-width="1.05833"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path836" />
+    <path
+       d="m 69.698475,164.0526 2.7e-5,-62.53136 h -0.264584 l -2.7e-5,62.53136 z m 0.926068,-62.17867 -1.058332,-2.116667 -1.058335,2.116667 z"
+       fill="#c3c3c3"
+       id="path838"
+       style="stroke-width:0.264583" />
+    <path
+       d="M 69.566183,163.91872 H 211.39423 v 0.26459 H 69.566183 Z m 141.474827,-0.92604 2.11666,1.05834 -2.11666,1.05833 z"
+       fill="#c3c3c3"
+       id="path840"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="4.23333px"
+       id="text842"
+       x="50.680225"
+       y="96.714561"
+       style="stroke-width:0.264583;fill:#ffffff">Settlement</text>
+    <path
+       d="m 55.308846,98.974365 c 0.126735,0 0.24421,0.0087 0.352425,0.02593 0.108215,0.0172 0.227542,0.04657 0.35851,0.08784 l -0.115623,0.531283 h -0.198437 c -0.0056,-0.11721 -0.02355,-0.209285 -0.05371,-0.27596 -0.03043,-0.06694 -0.07382,-0.114829 -0.13044,-0.143669 -0.05636,-0.0291 -0.131498,-0.04339 -0.22516,-0.04339 -0.1143,0 -0.215107,0.02328 -0.30189,0.07012 -0.08678,0.04683 -0.152929,0.110596 -0.198437,0.191294 -0.04551,0.0807 -0.06826,0.170656 -0.06826,0.269875 0,0.103187 0.02725,0.193939 0.08176,0.271727 0.0545,0.07779 0.15875,0.169865 0.313267,0.275965 0.134937,0.0937 0.23786,0.17727 0.309033,0.25109 0.07091,0.0738 0.123296,0.15187 0.156898,0.23468 0.03387,0.0825 0.0508,0.17833 0.0508,0.28734 0,0.16801 -0.04048,0.31724 -0.120914,0.44741 -0.0807,0.13018 -0.194469,0.23098 -0.341048,0.30189 -0.146844,0.0709 -0.314061,0.10636 -0.501386,0.10636 -0.126735,0 -0.263525,-0.0103 -0.410368,-0.031 -0.14658,-0.0206 -0.277813,-0.0468 -0.3937,-0.0786 l 0.124089,-0.56833 h 0.198438 c 0,0.16801 0.03889,0.29316 0.116681,0.37518 0.07779,0.0818 0.198173,0.12277 0.360892,0.12277 0.187325,0 0.334697,-0.0508 0.442118,-0.15293 0.107686,-0.10187 0.161396,-0.24395 0.161396,-0.42572 0,-0.0841 -0.01482,-0.15822 -0.04445,-0.22225 -0.02963,-0.064 -0.07435,-0.12541 -0.134408,-0.18388 -0.06006,-0.0587 -0.146315,-0.12568 -0.259292,-0.20161 -0.102129,-0.0688 -0.186796,-0.13679 -0.254264,-0.20347 -0.06773,-0.0669 -0.121444,-0.14182 -0.161396,-0.22437 -0.03995,-0.08281 -0.0598,-0.175153 -0.0598,-0.277018 0,-0.162719 0.03916,-0.305858 0.117739,-0.429948 0.07858,-0.12409 0.189442,-0.219869 0.332846,-0.287337 0.14314,-0.06747 0.308504,-0.101336 0.496094,-0.101336 z"
+       fill-rule="evenodd"
+       id="path844"
+       style="stroke-width:0.264583;fill:#ffffff" />
+    <text
+       fill="#000000"
+       fill-opacity="0"
+       font-family="Arial, Arial_MSFontService, sans-serif"
+       font-size="2.88975px"
+       x="53.872162"
+       y="101.50298"
+       id="text846"
+       style="stroke-width:0.264583;fill:#ffffff">𝑆</text>
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="4.23333px"
+       id="text848"
+       x="57.143204"
+       y="101.74164"
+       style="stroke-width:0.264583;fill:#ffffff">[mm]</text>
+    <path
+       d="m 101.84535,152.40935 100.66866,6.38969"
+       stroke="#f5f5f5"
+       stroke-width="0.352777"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path850" />
+    <path
+       d="m 118.46319,129.30475 -5.78432,6.78161 0.2013,0.17171 5.78432,-6.78162 z m -6.25996,5.91227 -0.56838,2.29721 2.17882,-0.92363 z"
+       fill="#f5f5f5"
+       id="path852"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 161.54454,146.54077 -3.09425,7.99395 0.24675,0.0955 3.09424,-7.99397 z m -3.83051,7.33067 0.22291,2.35598 1.75104,-1.59189 z"
+       fill="#161618"
+       id="path854"
+       style="stroke-width:0.264583" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-weight="400"
+       font-size="5.55625px"
+       id="text858"
+       x="112.702"
+       y="126.08331"
+       style="stroke-width:0.264583;fill:#ffffff">Primary consolidation<tspan
+   fill="#7f7f7f"
+   font-size="5.55625px"
+   x="145.75481"
+   y="145.39789"
+   id="tspan856"
+   style="stroke-width:0.0700043;fill:#ffffff">Secondary compression</tspan></text>
+    <path
+       d="m 67.978683,115.85452 14.168623,-0.22231"
+       stroke="#f5f5f5"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="1.05833, 0.79375"
+       fill="none"
+       fill-rule="evenodd"
+       id="path860"
+       style="stroke-width:0.264583" />
+    <path
+       d="M 67.978683,153.73227 H 132.96723"
+       stroke="#f5f5f5"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="1.05833, 0.79375"
+       fill="none"
+       fill-rule="evenodd"
+       id="path862"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 66.038494,115.49998 v 36.52546 h -0.617538 v -36.52546 z m -1.367102,0 c 0,-0.58447 0.473868,-1.05834 1.058333,-1.05834 0.584465,0 1.058333,0.47387 1.058333,1.05834 0,0.58446 -0.473868,1.05833 -1.058333,1.05833 -0.584465,0 -1.058333,-0.47387 -1.058333,-1.05833 z m 2.116666,36.17277 -1.058333,2.11667 -1.058333,-2.11667 z"
+       fill="#00b050"
+       id="path864"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#00b050"
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.55625px"
+       id="text868"
+       x="12.142314"
+       y="122.64373"
+       style="stroke-width:0.264583">Final settlement in <tspan
+   font-size="5.55625px"
+   x="7.9830642"
+   y="129.5229"
+   id="tspan866"
+   style="stroke-width:0.0700043">Primary Consolidation</tspan></text>
+    <path
+       d="m 75.254725,115.76456 c 5.869781,0.77814 11.739827,1.55654 16.248856,3.3057 4.508764,1.74943 7.5057,4.1873 10.805049,7.19005 3.29909,3.00276 6.28465,7.72504 8.99028,10.82623 2.70563,3.10118 5.03899,5.85946 7.5057,8.56747 3.5859,4.5511 7.34298,6.59791 11.21886,7.68138"
+       stroke="#c00000"
+       stroke-width="1.05833"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path870" />
+    <text
+       font-family="Calibri, Calibri_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="5.55625px"
+       id="text890"
+       x="74.938019"
+       y="95.656227"
+       style="stroke-width:0.264583;fill:#ffffff">Consolidation curve <tspan
+   font-style="normal"
+   font-size="5.55625px"
+   x="83.341187"
+   y="102.53539"
+   id="tspan872"
+   style="stroke-width:0.0700043;fill:#ffffff">(</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="85.060974"
+   y="102.53539"
+   id="tspan874"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑆</tspan><tspan
+   font-size="5.55625px"
+   x="89.449516"
+   y="102.53539"
+   id="tspan876"
+   style="stroke-width:0.0700043;fill:#ffffff">vs</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="95.422058"
+   y="102.53539"
+   id="tspan878"
+   style="stroke-width:0.0700043;fill:#ffffff">log</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="102.74229"
+   y="102.53539"
+   id="tspan880"
+   style="stroke-width:0.0700043;fill:#ffffff">⁡</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="102.74229"
+   y="102.53539"
+   id="tspan882"
+   style="stroke-width:0.0700043;fill:#ffffff">(</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="105.07935"
+   y="102.53539"
+   id="tspan884"
+   style="stroke-width:0.0700043;fill:#ffffff">𝑡</tspan><tspan
+   font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+   font-style="normal"
+   font-size="5.55625px"
+   x="107.4659"
+   y="102.53539"
+   id="tspan886"
+   style="stroke-width:0.0700043;fill:#ffffff">)</tspan><tspan
+   font-style="normal"
+   font-size="5.55625px"
+   x="109.80296"
+   y="102.53539"
+   id="tspan888"
+   style="stroke-width:0.0700043;fill:#ffffff">)</tspan></text>
+    <path
+       d="m 91.784568,103.19685 c 0,3.34698 -1.916641,6.69369 -3.833018,6.69369 -1.916642,0 -3.833284,3.34698 -3.833284,6.69396"
+       stroke="#f5f5f5"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path892"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#00b050"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="8.46667px"
+       id="text896"
+       x="26.852644"
+       y="138.51872"
+       style="stroke-width:0.264583">𝑆<tspan
+   font-size="6.08542px"
+   x="30.978371"
+   y="140.10623"
+   id="tspan894"
+   style="stroke-width:0.0700043">𝑃𝐶</tspan></text>
+    <path
+       d="m 123.93806,153.46768 c 0,-0.36539 0.29607,-0.66146 0.66146,-0.66146 0.36539,0 0.66145,0.29607 0.66145,0.66146 0,0.36539 -0.29606,0.66146 -0.66145,0.66146 -0.36539,0 -0.66146,-0.29607 -0.66146,-0.66146 z"
+       stroke="#f5f5f5"
+       stroke-width="0.529167"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="#f5f5f5"
+       fill-rule="evenodd"
+       id="path898" />
+    <path
+       d="m 124.8641,165.46151 3e-5,-15.16872"
+       stroke="#f5f5f5"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       stroke-dasharray="1.05833, 0.79375"
+       fill="none"
+       fill-rule="evenodd"
+       id="path900"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 91.5266,112.45727 36.40587,44.89741"
+       stroke="#ff0000"
+       stroke-width="0.352777"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path902" />
+  </g>
+</svg>
