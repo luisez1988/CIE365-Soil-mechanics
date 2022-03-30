@@ -242,20 +242,23 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Solution approximation</h1>
-<p style="margin-top:100px;">Approximations exist for the analytical solution:
+<p style="margin-top:0px;">Approximations exist for the analytical solution:
 
 </p>
 <div class="container">
 	<div class="col">
                 <p>\(T_v=\cfrac{\pi}{4}U^2\) for \(U < 60\% \)</p>
-								<p style="margin-top:50px;">\(1.781-0.933 \log(1-U)\) for \(U \geq 60\%\)</p>
+								<p style="margin-top:50px;">\(T_v=1.781-0.933 \log(1-U)\) for \(U \geq 60\%\)</p>
 	</div>
 	<div class="col">
-    <ul>
-    	<li>These approximations guided the development of methods to calculate \(C_v\) from laboratory curves</li>
-    </ul>
+		<p>\(U=\cfrac{2 \sqrt{T_v}}{\sqrt{\pi}}\) for \(T_v \leq 0.2\)</p>
+		<p>\(U=1-\frac{8}{\pi^2}\exp(-\pi ^2 T_v /4)\) for \(T_v>0.2\)</p>
+
 	</div>
 </div>
+<ul>
+	<li>These approximations guided the development of methods to calculate \(C_v\) from laboratory curves</li>
+</ul>
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -292,9 +295,63 @@
 </figure>
 </section>
 
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Time rate of primary consolidation</h1>
+	<p style="margin-top:-15px;">Steps to calculate settlement due to P.C. with time:</p>
+	<ol style="margin-top:0px;font-size:33px">
+		<li>For a given time \(t\), calculate the corresponding dimensionless time \(T_v\):
+			$$T_v=\frac{C_v t}{H_{dr}^2}$$
+		</li>
+		<li>Use any of i) the anlytical solution, ii) approximate solutions, iii) tabulated values and obtain the corresponding degree of consolidation \(U(t)\)</li>
+		<li>Determine the final settlement from primary consolidation \(S_{pc}\)</li>
+		<li>Apply the definition of degree of consolidation and determine the settlement at time \(t\)
+$$U(t)=\frac{S(t)}{S_{pc}}$$
+		</li>
+	</ol>
 
+</section>
 
-    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 5.7</h1>
+	<p>For problem 5.2. Determine the time required to obtain 95% degree of consolidaiton if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Secondary consolidation</h1>
+ <ul style="margin-top:-20px;font-size:35px">
+ 	<li><strong style="color:#7abbe6">Secondary consolidation (SC)</strong> is the settlement that occurs after all pore pressure is dissipated and effective stress is constant. This is also known as <strong style="color:#7abbe6">creep</strong>.</li>
+	<li>Is a time dependent slippage between grains, breaking, bending,..</li>
+	<li>Occurs in all type of soils, specially in peats, organic clay, and sensitive clay.</li>
+ </ul>
+ <figure>
+   <img src="FiguresGeneral/secondary_consol.svg" style="margin-top:-10px;width:80%" data-preload/>
+   <footer style="margin-top:-60px;"><small></small></footer>
+ </figure>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Consolidation due to radial flow</h1>
+	<figure>
+	  <img src="FiguresGeneral/radial_consolidation.svg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+
+	<div class="container">
+		<div class="col">
+
+		</div>
+		<div class="col">
+	                <p style="margin-top:-60px;">\(\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial^2 u}{\partial z^2}+ C_{vr}\left[\cfrac{\partial ^2 u}{\partial z^2}+ \cfrac{1}{r} \cfrac{\partial u}{\partial r}\right]\)</p>
+		</div>
+	</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Case history: Kansai International Airport</h1>
+
+</section>
+
+  <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
     </section>
 
