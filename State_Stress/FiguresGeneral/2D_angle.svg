@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="94.481384mm"
+   height="87.797226mm"
+   viewBox="0 0 94.481384 87.797226"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="2D_angle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1474186"
+     inkscape:cx="50.112486"
+     inkscape:cy="27.452927"
+     inkscape:window-width="1536"
+     inkscape:window-height="807"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0">
+      <rect
+         x="22"
+         y="367"
+         width="380"
+         height="342"
+         id="rect831" />
+    </clipPath>
+    <image
+       width="25"
+       height="28"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAMAAACj+uTiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABIUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKuErJsAAAAXdFJOUwAMGBklMT1KTHN/i42ZmqGoqbe8yt3syGV5wAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAIZJREFUKFPdkNEagyAIRmFpyWqzpsL7v+mY4ffN1QuscwP+FxwE/gAcZ6ZPM2UONTEwiUgZAEhrtLAxsRCEBUnLDyTJzWiPDs/l4a3vUddhjhEP7oaKTjXgV+ZTD25jku6TDSIdpyK8WVCJ2ZE6gp4B798Th7KfRuv66lUkz7oVSXY1uBwAbx4FBVDlnIHLAAAAAElFTkSuQmCC"
+       preserveAspectRatio="none"
+       id="img1" />
+    <image
+       width="27"
+       height="34"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAMAAACZf1ICAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABCUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI7h9vIAAAAVdFJOUwAMGBklMUpMVmRzi42aoaipvMrd7MJ0UcUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVDhP3ZFrEoMgEIPZWrqWUioI979qw2uKAgeo3w83TmTIRnElbuvHcxRk8/yhArAEtex5tpAN+xKF6j3BwcssTBot0od8kc6ftFSPdXo9gBAKg7b+WPVUfJxBUISQWxcSJI/eaY8Og8X0qZMKvOfosgh66xspcCltBJfOBtBrbs0iRmsc8e6sdJP0Bv98thh79yjy/xDiC3KwBa+oeuM0AAAAAElFTkSuQmCC"
+       preserveAspectRatio="none"
+       id="img2" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter1019"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 0 -1 0 1 0 -1 0 0 1 0.21 0.72 0.07 1 0 "
+         result="color2"
+         id="feColorMatrix1017" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter1041"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 0 -1 0 1 0 -1 0 0 1 0.21 0.72 0.07 1 0 "
+         result="color2"
+         id="feColorMatrix1039" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-53.296573,-60.789277)">
+    <rect
+       x="72.107132"
+       y="76.664276"
+       width="56.885414"
+       height="56.885414"
+       stroke="#f5f5f5"
+       stroke-width="0.61736"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       id="rect838" />
+    <path
+       d="M 72.107128,75.870527 112.1034,133.90238"
+       stroke="#00b050"
+       stroke-width="1.67569"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       fill="none"
+       fill-rule="evenodd"
+       id="path840" />
+    <path
+       d="m 71.852102,94.391187 1.372526,-0.04961 1.365509,-0.184135 1.342311,-0.284492 1.309661,-0.385362 1.279101,-0.50377 1.242298,-0.603493 1.177925,-0.705578 1.110906,-0.806659 -0.103743,-0.142637 -1.097915,0.798045 -1.164352,0.698214 -1.229889,0.598038 -1.264205,0.498652 -1.296459,0.382013 -1.329372,0.282245 -1.348147,0.182646 -1.372526,0.04961 z m -0.01274,-0.352548 1.372526,-0.04961 1.330759,-0.181156 1.316461,-0.279996 1.283229,-0.378663 1.249336,-0.493536 1.217507,-0.592584 1.150752,-0.690843 1.084898,-0.789464 -0.103743,-0.142637 -1.071907,0.780839 -1.137179,0.683487 -1.205098,0.587134 -1.23444,0.488416 -1.270026,0.375314 -1.303523,0.277749 -1.313397,0.179665 -1.372526,0.04961 z"
+       fill="#00b050"
+       id="path842"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#00b050"
+       font-family="Arial, Arial_MSFontService, sans-serif"
+       font-style="italic"
+       font-weight="400"
+       font-size="6.35px"
+       id="text844"
+       x="75.316261"
+       y="102.06428"
+       style="stroke-width:0.264583">α</text>
+    <path
+       d="m 59.804002,105.23927 6.217709,2e-5 v -0.79375 l -6.217707,-10e-6 z m 5.820834,0.79377 3.96875,-1.19061 -3.96875,-1.19064 z"
+       fill="#0000ff"
+       id="path846"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 69.196738,94.788235 2.4e-5,18.653125 h 0.79375 l -2.4e-5,-18.653125 z m -0.793726,18.256245 1.190629,3.96875 1.190621,-3.96875 z"
+       fill="#ff0000"
+       id="path848"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#0000ff"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.35px"
+       id="text856"
+       x="53.017521"
+       y="102.06428"
+       style="stroke-width:0.264583">𝜎<tspan
+   font-size="4.7625px"
+   x="56.287769"
+   y="103.3872"
+   id="tspan850"
+   style="stroke-width:0.0700043">𝑥</tspan><tspan
+   fill="#ff0000"
+   font-size="6.35px"
+   x="58.677963"
+   y="116.61636"
+   id="tspan852"
+   style="stroke-width:0.0700043">𝜏</tspan><tspan
+   fill="#ff0000"
+   font-size="4.7625px"
+   x="61.588379"
+   y="117.93928"
+   id="tspan854"
+   style="stroke-width:0.0700043">𝑥𝑦</tspan></text>
+    <path
+       d="m 111.92692,136.19553 -18.388541,2e-5 v 0.79375 l 18.388541,-3e-5 z m -17.991666,-0.79373 -3.96875,1.19063 3.96875,1.19062 z"
+       fill="#ff0000"
+       id="path858"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 102.26962,146.64657 2e-5,-6.48229 h -0.79375 l -1e-5,6.48229 z m 0.79377,-6.08542 -1.19061,-3.96875 -1.19064,3.96875 z"
+       fill="#0000ff"
+       id="path860"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#ff0000"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.35px"
+       id="text870"
+       x="84.268173"
+       y="142.28094"
+       style="stroke-width:0.264583">𝜏<tspan
+   font-size="4.7625px"
+   x="87.178589"
+   y="143.60385"
+   id="tspan862"
+   style="stroke-width:0.0700043">𝑦</tspan><tspan
+   font-size="4.7625px"
+   x="90.13311"
+   y="143.60385"
+   id="tspan864"
+   style="stroke-width:0.0700043">𝑥</tspan><tspan
+   fill="#0000ff"
+   font-size="6.35px"
+   x="104.07216"
+   y="146.24969"
+   id="tspan866"
+   style="stroke-width:0.0700043">𝜎</tspan><tspan
+   fill="#0000ff"
+   font-size="4.7625px"
+   x="107.34241"
+   y="147.5726"
+   id="tspan868"
+   style="stroke-width:0.0700043">𝑦</tspan></text>
+    <path
+       d="m 135.60712,104.97471 6.4823,1e-5 v -0.79375 l -6.4823,-1e-5 z m 0.39688,-1.5875 -3.96875,1.19061 3.96875,1.19064 z"
+       fill="#0000ff"
+       id="path872"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 130.84463,97.56636 2e-5,18.38854 h 0.79375 l -2e-5,-18.38854 z m 1.5875,0.396875 -1.19063,-3.96875 -1.19062,3.96875 z"
+       fill="#ff0000"
+       id="path874"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#0000ff"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.35px"
+       id="text882"
+       x="139.25996"
+       y="102.06428"
+       style="stroke-width:0.264583">𝜎<tspan
+   font-size="4.7625px"
+   x="142.53021"
+   y="103.12261"
+   id="tspan876"
+   style="stroke-width:0.0700043">𝑥</tspan><tspan
+   fill="#ff0000"
+   font-size="6.35px"
+   x="134.42198"
+   y="116.61636"
+   id="tspan878"
+   style="stroke-width:0.0700043">𝜏</tspan><tspan
+   fill="#ff0000"
+   font-size="4.7625px"
+   x="137.33238"
+   y="117.93928"
+   id="tspan880"
+   style="stroke-width:0.0700043">𝑥𝑦</tspan></text>
+    <path
+       d="m 107.03213,74.018448 -18.388546,2.4e-5 v 0.793747 l 18.388546,-2.1e-5 z m -0.39688,1.5875 3.96875,-1.19063 -3.96875,-1.19062 z"
+       fill="#ff0000"
+       id="path884"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 101.21131,70.843443 1e-5,-6.482292 h -0.79375 l -1e-5,6.482292 z m -1.587504,-0.396875 1.190614,3.96875 1.19064,-3.96875 z"
+       fill="#0000ff"
+       id="path886"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#ff0000"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="6.35px"
+       id="text896"
+       x="84.343575"
+       y="71.108025"
+       style="stroke-width:0.264583">𝜏<tspan
+   font-size="4.7625px"
+   x="87.253998"
+   y="72.166359"
+   id="tspan888"
+   style="stroke-width:0.0700043">𝑦</tspan><tspan
+   font-size="4.7625px"
+   x="90.208519"
+   y="72.166359"
+   id="tspan890"
+   style="stroke-width:0.0700043">𝑥</tspan><tspan
+   fill="#0000ff"
+   font-size="6.35px"
+   x="103.37728"
+   y="66.874695"
+   id="tspan892"
+   style="stroke-width:0.0700043">𝜎</tspan><tspan
+   fill="#0000ff"
+   font-size="4.7625px"
+   x="106.64753"
+   y="68.197609"
+   id="tspan894"
+   style="stroke-width:0.0700043">𝑦</tspan></text>
+    <path
+       d="m 126.87588,133.54969 h 16.66875 v 0.52917 h -16.66875 z m 16.31606,-0.79375 3.52769,1.05834 -3.52769,1.05833 z"
+       fill="#f5f5f5"
+       id="path898"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 72.900878,75.870528 2.1e-5,-8.995834 h -0.529167 l -2e-5,8.995832 z m 0.793769,-8.643065 -1.058324,-3.527769 -1.058343,3.527769 z"
+       fill="#f5f5f5"
+       id="path900"
+       style="stroke-width:0.264583" />
+    <use
+       width="100%"
+       height="100%"
+       xlink:href="#img1"
+       fill="none"
+       transform="matrix(0.26458333,0,0,0.26458333,141.16338,135.13719)"
+       id="use902"
+       x="0"
+       y="0"
+       style="filter:url(#filter1041)" />
+    <use
+       width="100%"
+       height="100%"
+       xlink:href="#img2"
+       fill="none"
+       transform="matrix(0.26458333,0,0,0.26458333,64.698795,60.789277)"
+       id="use904"
+       x="0"
+       y="0"
+       style="filter:url(#filter1019)" />
+    <path
+       d="m 103.72589,117.85038 -11.912331,-17.868639 1.3208,-0.880533 11.912331,17.868632 z m -12.792864,-16.32744 -2.421731,-7.92533 6.384131,5.283464 z"
+       fill="#ff0000"
+       id="path906"
+       style="stroke-width:0.264583" />
+    <path
+       d="m 110.9342,96.623914 -8.21716,5.891746 -0.92498,-1.29038 8.21716,-5.891475 z m -6.64712,6.719356 -7.838285,2.68976 5.063335,-6.560347 z"
+       fill="#0000ff"
+       id="path908"
+       style="stroke-width:0.264583" />
+    <text
+       fill="#ff0000"
+       font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+       font-weight="400"
+       font-size="8.46667px"
+       id="text920"
+       x="87.694527"
+       y="91.745529"
+       style="stroke-width:0.264583">𝜏<tspan
+   font-size="6.08542px"
+   x="91.575089"
+   y="93.59761"
+   id="tspan910"
+   style="stroke-width:0.0700043">𝛼</tspan><tspan
+   font-family="Calibri, Calibri_MSFontService, sans-serif"
+   font-size="8.46667px"
+   x="96.214111"
+   y="91.745529"
+   id="tspan912"
+   style="stroke-width:0.0700043">?</tspan><tspan
+   fill="#0000ff"
+   font-size="8.46667px"
+   x="105.39571"
+   y="105.23927"
+   id="tspan914"
+   style="stroke-width:0.0700043">𝜎</tspan><tspan
+   fill="#0000ff"
+   font-size="6.08542px"
+   x="109.75601"
+   y="107.09136"
+   id="tspan916"
+   style="stroke-width:0.0700043">𝛼</tspan><tspan
+   fill="#0000ff"
+   font-family="Calibri, Calibri_MSFontService, sans-serif"
+   font-size="8.46667px"
+   x="114.39495"
+   y="105.23927"
+   id="tspan918"
+   style="stroke-width:0.0700043">?</tspan></text>
+  </g>
+</svg>
