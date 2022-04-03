@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lecture</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	</head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+				<style>
+				.container{
+						display: flex;
+				}
+				.col{
+						flex: 1;
+				}
+				</style>
+
+				<div class='footer'>
+					CIE-365
+					Spring 2022
+				</div>
+
+				<style>
+				.reveal .slides section .fragment.fade-down {
+						opacity: 1;
+						visibility: visible;
+				}
+				.reveal .slides section .fragment.fade-down.visible,
+				.reveal .slides section .fragment.visible:not(.current-fragment) {
+						opacity: 1;
+						margin-top:0px;
+					}
+				.reveal .slides section .fragment.fade-down,
+				.reveal .slides section .fragment.current-fragment {
+						color: #fff;
+						margin-top:0px;
+				}
+
+
+			</style>
+				<!-- <section> -->
+        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 6: Consolidation (part 2)">
+						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+						<p style="color:#faffff; font-size:35px">Spring 2022</p>
+						<p style="color:#faffff; font-size:35px">March 28, 2022</p>
+						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					</div>
+        </section>
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Course contents and schedule</h1>
+					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Recap</h1>
+						<ul>
+							<li class="fragment"> We learned about the process of consolidation of soils.</li>
+							<li class="fragment"> We learned about the consolidation curve and the parameters that define it. </li>
+							<li class="fragment"> We learned about the history-dependent behavior of soils and its effects on the consolidation path.</li>
+							<li class="fragment"> We learned the concept of overconsolidaiton ratio and relation with the geological stress history of soils. </li>
+							<li class="fragment">  We learned how to calculate primary consolidation settlements in normally and overconsolidated soils.</li>
+							<li class="fragment"> Today we will discuss about the rate of consolidation. </li>
+						</ul>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Homework assignment 5</h1>
+						<div class="container">
+							<div class="col">
+								<ul>
+									<li>Due on 04/04/2022.</li>
+									<li>35 points total.</li>
+									<li>Start ASAP.</li>
+								</ul>
+							</div>
+							<div class="col">
+				         <iframe src="FiguresGeneral/HMA5.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
+							</div>
+						</div>
+				</section>
+
+
+        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Contents</h1>
+					<ul>
+						<li>Terzaghi's one-dimensional consolidation theory.</li>
+						<li>Effect of the drainage boundary conditions.</li>
+						<li>Procedures for determining the coefficient of consolidation</li>
+						<li>Degree of consolidaiton</li>
+						<li>Secondary consolidation</li>
+						<li>Preloading and vertical drains</li>
+						<li>Case study</li>
+					</ul>
+
+					<!-- <p>More in chapter 9 of Holtz et al. (2013)</p> -->
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0" data-preload></iframe>
+	</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Time rate of primary consolidation</h1>
+ <figure>
+   <img src="FiguresGeneral/Consol_curve.svg" style="width:100%" data-preload/>
+   <footer style="margin-top:-60px;"><small></small></footer>
+ </figure>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
+	<div class="container">
+		<div class="col">
+	     <p style="margin-top:200px;">$$\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial ^2 u}{\partial z^2}$$</p>
+		</div>
+		<div class="col">
+			<ul>
+				<li>\(u=\) Excess pore water pressure</li>
+				<li>\(t=\) time</li>
+				<li>\(z=\) Drection of flow</li>
+				<li>\(C_v=\) <strong style="color:#7abbe6">Coefficient of consolidation</strong>
+					$$C_v= \cfrac{k}{\gamma_w m_v}$$
+				</li>
+				<li>\(m_v=\) Coefficient of volume change</li>
+
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
+
+<p><strong style="color:#7abbe6">Analytical solution</strong> for Terzaghi's 1D consolidation theory</p>
+<p>$$\Delta u(z,t)=\Delta \sigma \sum_{n=0}^{\infty} \cfrac{4}{(2n+1)\pi}\exp \left[- \cfrac{(2n+1)^2 \pi^2 }{4}T_v\right] \sin \left[\cfrac{(2n+1)\pi}{2}Z\right]$$</p>
+<div class="container">
+	<div class="col">
+		<p>With \(T_v=\cfrac{C_v t}{H_{dr}^2}\) and \(Z=\cfrac{z}{H_{dr}}\)
+</p>
+
+	</div>
+	<div class="col">
+		<p><strong style="color:#7abbe6">New concept:</strong> \(H_{dr}\)</p>
+	</div>
+</div>
+
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Drainage length \(H_{dr}\)</h1>
+<figure>
+  <img src="FiguresGeneral/hdr.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
+	<figure>
+	  <img src="FiguresGeneral/solution.svg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
+	<figure>
+	  <img src="FiguresGeneral/withhydrostatic.svg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Degree of consolidation</h1>
+	<p>We have a solution for \( \Delta u(z, t)\) but we also need to decribe settlements vs time \(S(t)\).</p>
+	<div class="container">
+		<div class="col">
+	                <p>The <strong style="color:#7abbe6">degree of consolidation</strong> \(U\) is useful to compute \(S(t)\)
+										$$U=1-\Delta u(z,t)/ \Delta u_0$$
+									</p>
+
+
+		</div>
+		<div class="col">
+			<ul>
+				<li>\(\Delta u=\Delta u_0\) \(\longrightarrow\) \(U=0\) \(\longrightarrow\) \(S=0\)</li>
+				<li>\(\Delta u=0\) \(\longrightarrow\) \(U=1\) \(\longrightarrow\) \(S=S_{pc}\)</li>
+			</ul>
+				<p>$$U=\cfrac{S(t)}{S_{pc}}$$</p>
+		</div>
+	</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
+	<figure>
+	  <img src="FiguresGeneral/curves.svg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Solution approximation</h1>
+<p style="margin-top:0px;">Approximations exist for the analytical solution:
+
+</p>
+<div class="container">
+	<div class="col">
+                <p>\(T_v=\cfrac{\pi}{4}(U/100)^2\) for \(U < 60\% \)</p>
+								<p style="margin-top:50px;">\(T_v=1.781-0.933 \log(100-U)\) for \(U \geq 60\%\)</p>
+	</div>
+	<div class="col">
+		<p>\(U=\cfrac{2 \sqrt{T_v}}{\sqrt{\pi}}\) for \(T_v \leq 0.2\)</p>
+		<p>\(U=1-\frac{8}{\pi^2}\exp(-\pi ^2 T_v /4)\) for \(T_v>0.2\)</p>
+
+	</div>
+</div>
+<ul>
+	<li>These approximations guided the development of methods to calculate \(C_v\) from laboratory curves</li>
+</ul>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Determining \(C_v\)</h1>
+		<div class="container">
+			<div class="col">
+				<p>Log t method</p>
+				<figure>
+				  <img src="FiguresGeneral/rate_consol.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col">
+          <ol style="margin-top:0px;font-size:28px">
+          	<li>Plot consolidation curve from experimental data</li>
+						<li>Determine settlement at end of primary (EOP) \(\delta_{100}\) by intersecting tangents to primary and secondary compression lines.</li>
+						<li>Designate \(t_1\) in "early" point of the curve, and identify its correspondent settlement as \(\delta_1\)</li>
+						<li>Designate a second point at \(4t_1\) and identify settlement \(\delta_2\)</li>
+						<li>Determine initial settlement \(\delta_0\) by taking \(\delta_1 - \delta_0= \delta_2 - \delta_1\)</li>
+						<li>Determine the mid-point settlement between \(\delta_0\) and \(\delta_{100}\), designated as \(\delta_{50}\)</li>
+						<li>Determine the corresponding time \(t_{50}\)</li>
+						<li>Use Terzaghi's consolidation theory to compute \(C_v\)</li>
+          </ol>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 5.6</h1>
+<p>Find the coefficient of consolidation for the test result shown in the figure below</p>
+<figure style="margin-top:-30px;">
+  <img src="example.svg" style="width:70%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Time rate of primary consolidation</h1>
+	<p style="margin-top:-15px;">Steps to calculate settlement due to P.C. with time:</p>
+	<ol style="margin-top:0px;font-size:33px">
+		<li>For a given time \(t\), calculate the corresponding dimensionless time \(T_v\):
+			$$T_v=\frac{C_v t}{H_{dr}^2}$$
+		</li>
+		<li>Use any of i) the anlytical solution, ii) approximate solutions, iii) tabulated values and obtain the corresponding degree of consolidation \(U(t)\)</li>
+		<li>Determine the final settlement from primary consolidation \(S_{pc}\)</li>
+		<li>Apply the definition of degree of consolidation and determine the settlement at time \(t\)
+$$U(t)=\frac{S(t)}{S_{pc}}$$
+		</li>
+	</ol>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 5.7</h1>
+	<p>For problem 5.2. Determine the time required to obtain 95% degree of consolidaiton if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Secondary consolidation</h1>
+ <ul style="margin-top:-20px;font-size:35px">
+ 	<li><strong style="color:#7abbe6">Secondary consolidation (SC)</strong> is the settlement that occurs after all pore pressure is dissipated and effective stress is constant. This is also known as <strong style="color:#7abbe6">creep</strong>.</li>
+	<li>Is a time dependent slippage between grains, breaking, bending,..</li>
+	<li>Occurs in all type of soils, specially in peats, organic clay, and sensitive clay.</li>
+ </ul>
+ <figure>
+   <img src="FiguresGeneral/secondary_consol.svg" style="margin-top:-10px;width:80%" data-preload/>
+   <footer style="margin-top:-60px;"><small></small></footer>
+ </figure>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Consolidation due to radial flow</h1>
+	<figure>
+	  <img src="FiguresGeneral/radial_consolidation.svg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+
+	<div class="container">
+		<div class="col">
+
+		</div>
+		<div class="col">
+	                <p style="margin-top:-60px;">\(\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial^2 u}{\partial z^2}+ C_{vr}\left[\cfrac{\partial ^2 u}{\partial z^2}+ \cfrac{1}{r} \cfrac{\partial u}{\partial r}\right]\)</p>
+		</div>
+	</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/eTGa0fG9HWY?autoplay=0" data-preload></iframe>
+	</section>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1 style="margin-top:0px;font-size:55px">Case history: Kansai International Airport</h1>
+<div class="container">
+	<div class="col">
+            <figure>
+              <img src="https://www.researchgate.net/profile/Jian-Chu-5/publication/258311283/figure/fig46/AS:645337597349888@1530871881269/Kansai-International-airport-Phase-2-in-front-and-Phase-1-in-the-back.png" style="width:100%" data-preload/>
+              <footer style="margin-top:-60px;"><small></small></footer>
+            </figure>
+	</div>
+	<div class="col">
+ <figure>
+   <img src="https://ascelibrary.org/cms/asset/08c0b3ea-af2e-415f-b298-102ba04e0a4a/figure2-1.gif" style="width:70%" data-preload/>
+   <footer style="margin-top:-60px;"><small></small></footer>
+ </figure>
+	</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<figure>
+	  <img src="https://ascelibrary.org/cms/asset/381183d9-851f-4a7d-b30d-8c79d08f61d2/figure15.jpg" style="width:70%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	  <object data="(ASCE)GT.1943-5606.0001224.pdf" style="width:100%; height:700px" data-preload/></object>
+
+</section>
+
+
+  <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/fullscreen/plugin.js"></script>
+	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+	<script src="plugin/audio-slideshow/recorder.js"></script> -->
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script>
+
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+											pdfSeparateFragments: false});
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+			controls: true,
+			progress: true,
+			center: false,
+			hash: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			autoPlayMedia: true,
+			width: 1280,
+			height: 720,
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+				config: 'TeX-AMS_HTML-full',
+				tex2jax: {
+					inlineMath: [['\\(','\\)']],
+					displayMath: [['\\[','\\]']],
+					balanceBraces: true,
+					processEscapes: false,
+					processRefs: true,
+					processEnvironments: true,
+					preview: 'TeX',
+					skipTags: ['script','noscript','style','textarea','pre','code'],
+					ignoreClass: 'tex2jax_ignore',
+					processClass: 'tex2jax_process'
+				},
+			},
+
+			spotlight: {
+
+					// size of the spotlight
+					size: 100,
+
+					// true: Locks the mouse pointer inside the presentation
+					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+					// displayed regardless of the configured values
+					lockPointerInsideCanvas: false,
+
+					// toggle spotlight by holding down the mouse key
+					toggleSpotlightOnMouseDown: false,
+
+					// the keyCode pressed and held to turn on spotlight, disabled when set to false
+					// Problems with this config? Maybe your touchpad is disabled on keypress?
+					spotlightOnKeyPressAndHold: true,
+
+					// choose the cursor when spotlight is on. Maybe "crosshair"?
+					spotlightCursor: 'default',
+
+					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+					presentingCursor: 'default',
+
+					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+					initialPresentationMode: true,
+
+					// true: disable selecting in presentation mode
+					disablingUserSelect: false,
+
+					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+					fadeInAndOut: 100,
+
+					// enable pointer mode
+					useAsPointer: false,
+
+					// pointer color (If pointer mode enabled)
+					pointerColor: 'red'
+			},
+
+			keyboard: {
+					// alternative to toggleSpotlightOnMouseDown:
+					// toggle spotlight by pressing key 'c'
+					32: function() { RevealSpotlight.toggleSpotlight() },
+
+					// enter/leave presentation mode by pressing key 'p'
+					80: function() {
+						RevealSpotlight.togglePresentationMode();
+					},
+			},
+
+			// Push each slide change to the browser history
+			history: true,
+
+			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+				themes: false,
+				transitions: false,
+				markers: true,
+				hideMissingTitles: true,
+				custom: [
+									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+							]
+			},
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+			// ...
+			chalkboard: {
+							boardmarkerWidth: 3,
+							chalkWidth: 5,
+							chalkEffect: 0.05,
+							src: "chalkboard.json",
+							storage: "chalkboard-demo",
+							readOnly: undefined,
+							transition: 800,
+							theme: "chalkboard",
+							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+							eraser: { src: path + 'img/sponge.png', radius: 20},
+							boardmarkers : [
+											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+							],
+							chalks: [
+											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+							]
+					},
+					customcontrols: {
+						controls: [
+							{ icon: '<i class="fa fa-pen-square"></i>',
+								title: 'Toggle chalkboard (B)',
+								action: 'RevealChalkboard.toggleChalkboard();'
+							},
+							{ icon: '<i class="fa fa-pen"></i>',
+								title: 'Toggle notes canvas (C)',
+								action: 'RevealChalkboard.toggleNotesCanvas();'
+							}
+						]
+					},
+
+				// ...
+			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+								],
+									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+				});
+
+	</script>
+
+</html>
