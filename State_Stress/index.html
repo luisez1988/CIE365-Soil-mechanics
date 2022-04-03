@@ -54,10 +54,10 @@
 			</style>
 				<!-- <section> -->
         <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 6: Consolidation (part 2)">
+					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 7: Shear strength of soils (part 1)">
 						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 						<p style="color:#faffff; font-size:35px">Spring 2022</p>
-						<p style="color:#faffff; font-size:35px">March 28, 2022</p>
+						<p style="color:#faffff; font-size:35px">April 4, 2022</p>
 						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
 					</div>
         </section>
@@ -71,16 +71,16 @@
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We learned about the process of consolidation of soils.</li>
-							<li class="fragment"> We learned about the consolidation curve and the parameters that define it. </li>
-							<li class="fragment"> We learned about the history-dependent behavior of soils and its effects on the consolidation path.</li>
-							<li class="fragment"> We learned the concept of overconsolidaiton ratio and relation with the geological stress history of soils. </li>
-							<li class="fragment">  We learned how to calculate primary consolidation settlements in normally and overconsolidated soils.</li>
-							<li class="fragment"> Today we will discuss about the rate of consolidation. </li>
+							<li class="fragment"> We learned about Terzaghi's consolidation theory.</li>
+							<li class="fragment"> We learned how to calculate primary consolidation settlements vs. time. </li>
+							<li class="fragment"> We learned how to calculate the coefficient of consolidation.</li>
+							<li class="fragment"> We learned about the importance of the drainage boundary conditions. </li>
+							<li class="fragment">  We learned about some miigation techniques used in practice.</li>
+							<li class="fragment"> Today we will discuss about the state of stress in soils. </li>
 						</ul>
 				</section>
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Homework assignment 5</h1>
 						<div class="container">
 							<div class="col">
@@ -94,19 +94,17 @@
 				         <iframe src="FiguresGeneral/HMA5.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
 							</div>
 						</div>
-				</section>
+				</section> -->
 
 
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
 					<ul>
-						<li>Terzaghi's one-dimensional consolidation theory.</li>
-						<li>Effect of the drainage boundary conditions.</li>
-						<li>Procedures for determining the coefficient of consolidation</li>
-						<li>Degree of consolidaiton</li>
-						<li>Secondary consolidation</li>
-						<li>Preloading and vertical drains</li>
-						<li>Case study</li>
+						<li>Stress tensor.</li>
+						<li>State of stress.</li>
+						<li>2D state of stress.</li>
+						<li>Geometric interpretation (Mohr's circle)</li>
+						<li>Stress paths: triaxial and simple shear test.</li>
 					</ul>
 
 					<!-- <p>More in chapter 9 of Holtz et al. (2013)</p> -->
@@ -122,268 +120,6 @@
 #     # #     # #    ##    #    #       #    ##    #    #     #
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
-
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0" data-preload></iframe>
-	</section>
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Time rate of primary consolidation</h1>
- <figure>
-   <img src="FiguresGeneral/Consol_curve.svg" style="width:100%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
-	<div class="container">
-		<div class="col">
-	     <p style="margin-top:200px;">$$\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial ^2 u}{\partial z^2}$$</p>
-		</div>
-		<div class="col">
-			<ul>
-				<li>\(u=\) Excess pore water pressure</li>
-				<li>\(t=\) time</li>
-				<li>\(z=\) Drection of flow</li>
-				<li>\(C_v=\) <strong style="color:#7abbe6">Coefficient of consolidation</strong>
-					$$C_v= \cfrac{k}{\gamma_w m_v}$$
-				</li>
-				<li>\(m_v=\) Coefficient of volume change</li>
-
-			</ul>
-		</div>
-	</div>
-
-
-
-
-
-
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
-
-<p><strong style="color:#7abbe6">Analytical solution</strong> for Terzaghi's 1D consolidation theory</p>
-<p>$$\Delta u(z,t)=\Delta \sigma \sum_{n=0}^{\infty} \cfrac{4}{(2n+1)\pi}\exp \left[- \cfrac{(2n+1)^2 \pi^2 }{4}T_v\right] \sin \left[\cfrac{(2n+1)\pi}{2}Z\right]$$</p>
-<div class="container">
-	<div class="col">
-		<p>With \(T_v=\cfrac{C_v t}{H_{dr}^2}\) and \(Z=\cfrac{z}{H_{dr}}\)
-</p>
-
-	</div>
-	<div class="col">
-		<p><strong style="color:#7abbe6">New concept:</strong> \(H_{dr}\)</p>
-	</div>
-</div>
-
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Drainage length \(H_{dr}\)</h1>
-<figure>
-  <img src="FiguresGeneral/hdr.svg" style="width:100%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
-
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
-	<figure>
-	  <img src="FiguresGeneral/solution.svg" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
-</section>
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
-	<figure>
-	  <img src="FiguresGeneral/withhydrostatic.svg" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Degree of consolidation</h1>
-	<p>We have a solution for \( \Delta u(z, t)\) but we also need to decribe settlements vs time \(S(t)\).</p>
-	<div class="container">
-		<div class="col">
-	                <p>The <strong style="color:#7abbe6">degree of consolidation</strong> \(U\) is useful to compute \(S(t)\)
-										$$U=1-\Delta u(z,t)/ \Delta u_0$$
-									</p>
-
-
-		</div>
-		<div class="col">
-			<ul>
-				<li>\(\Delta u=\Delta u_0\) \(\longrightarrow\) \(U=0\) \(\longrightarrow\) \(S=0\)</li>
-				<li>\(\Delta u=0\) \(\longrightarrow\) \(U=1\) \(\longrightarrow\) \(S=S_{pc}\)</li>
-			</ul>
-				<p>$$U=\cfrac{S(t)}{S_{pc}}$$</p>
-		</div>
-	</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Terzaghi's Consolidation Theory</h1>
-	<figure>
-	  <img src="FiguresGeneral/curves.svg" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Solution approximation</h1>
-<p style="margin-top:0px;">Approximations exist for the analytical solution:
-
-</p>
-<div class="container">
-	<div class="col">
-                <p>\(T_v=\cfrac{\pi}{4}(U/100)^2\) for \(U < 60\% \)</p>
-								<p style="margin-top:50px;">\(T_v=1.781-0.933 \log(100-U)\) for \(U \geq 60\%\)</p>
-	</div>
-	<div class="col">
-		<p>\(U=\cfrac{2 \sqrt{T_v}}{\sqrt{\pi}}\) for \(T_v \leq 0.2\)</p>
-		<p>\(U=1-\frac{8}{\pi^2}\exp(-\pi ^2 T_v /4)\) for \(T_v>0.2\)</p>
-
-	</div>
-</div>
-<ul>
-	<li>These approximations guided the development of methods to calculate \(C_v\) from laboratory curves</li>
-</ul>
-</section>
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Determining \(C_v\)</h1>
-		<div class="container">
-			<div class="col">
-				<p>Log t method</p>
-				<figure>
-				  <img src="FiguresGeneral/rate_consol.svg" style="width:100%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
-			</div>
-			<div class="col">
-          <ol style="margin-top:0px;font-size:28px">
-          	<li>Plot consolidation curve from experimental data</li>
-						<li>Determine settlement at end of primary (EOP) \(\delta_{100}\) by intersecting tangents to primary and secondary compression lines.</li>
-						<li>Designate \(t_1\) in "early" point of the curve, and identify its correspondent settlement as \(\delta_1\)</li>
-						<li>Designate a second point at \(4t_1\) and identify settlement \(\delta_2\)</li>
-						<li>Determine initial settlement \(\delta_0\) by taking \(\delta_1 - \delta_0= \delta_2 - \delta_1\)</li>
-						<li>Determine the mid-point settlement between \(\delta_0\) and \(\delta_{100}\), designated as \(\delta_{50}\)</li>
-						<li>Determine the corresponding time \(t_{50}\)</li>
-						<li>Use Terzaghi's consolidation theory to compute \(C_v\)</li>
-          </ol>
-			</div>
-		</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.6</h1>
-<p>Find the coefficient of consolidation for the test result shown in the figure below</p>
-<figure style="margin-top:-30px;">
-  <img src="example.svg" style="width:70%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Time rate of primary consolidation</h1>
-	<p style="margin-top:-15px;">Steps to calculate settlement due to P.C. with time:</p>
-	<ol style="margin-top:0px;font-size:33px">
-		<li>For a given time \(t\), calculate the corresponding dimensionless time \(T_v\):
-			$$T_v=\frac{C_v t}{H_{dr}^2}$$
-		</li>
-		<li>Use any of i) the anlytical solution, ii) approximate solutions, iii) tabulated values and obtain the corresponding degree of consolidation \(U(t)\)</li>
-		<li>Determine the final settlement from primary consolidation \(S_{pc}\)</li>
-		<li>Apply the definition of degree of consolidation and determine the settlement at time \(t\)
-$$U(t)=\frac{S(t)}{S_{pc}}$$
-		</li>
-	</ol>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.7</h1>
-	<p>For problem 5.2. Determine the time required to obtain 95% degree of consolidaiton if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Secondary consolidation</h1>
- <ul style="margin-top:-20px;font-size:35px">
- 	<li><strong style="color:#7abbe6">Secondary consolidation (SC)</strong> is the settlement that occurs after all pore pressure is dissipated and effective stress is constant. This is also known as <strong style="color:#7abbe6">creep</strong>.</li>
-	<li>Is a time dependent slippage between grains, breaking, bending,..</li>
-	<li>Occurs in all type of soils, specially in peats, organic clay, and sensitive clay.</li>
- </ul>
- <figure>
-   <img src="FiguresGeneral/secondary_consol.svg" style="margin-top:-10px;width:80%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Consolidation due to radial flow</h1>
-	<figure>
-	  <img src="FiguresGeneral/radial_consolidation.svg" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
-
-	<div class="container">
-		<div class="col">
-
-		</div>
-		<div class="col">
-	                <p style="margin-top:-60px;">\(\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial^2 u}{\partial z^2}+ C_{vr}\left[\cfrac{\partial ^2 u}{\partial z^2}+ \cfrac{1}{r} \cfrac{\partial u}{\partial r}\right]\)</p>
-		</div>
-	</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/eTGa0fG9HWY?autoplay=0" data-preload></iframe>
-	</section>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Case history: Kansai International Airport</h1>
-<div class="container">
-	<div class="col">
-            <figure>
-              <img src="https://www.researchgate.net/profile/Jian-Chu-5/publication/258311283/figure/fig46/AS:645337597349888@1530871881269/Kansai-International-airport-Phase-2-in-front-and-Phase-1-in-the-back.png" style="width:100%" data-preload/>
-              <footer style="margin-top:-60px;"><small></small></footer>
-            </figure>
-	</div>
-	<div class="col">
- <figure>
-   <img src="https://ascelibrary.org/cms/asset/08c0b3ea-af2e-415f-b298-102ba04e0a4a/figure2-1.gif" style="width:70%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-	</div>
-</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<figure>
-	  <img src="https://ascelibrary.org/cms/asset/381183d9-851f-4a7d-b30d-8c79d08f61d2/figure15.jpg" style="width:70%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	  <object data="(ASCE)GT.1943-5606.0001224.pdf" style="width:100%; height:700px" data-preload/></object>
-
-</section>
-
 
   <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
