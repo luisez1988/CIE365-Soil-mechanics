@@ -210,35 +210,72 @@
 	<h1>State of stress in 2D</h1>
  <div class="container">
  	<div class="col">
-      <figure>
+      <figure style="margin-top:100px;">
         <img src="FiguresGeneral/2D_angle.svg" style="width:100%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
  	</div>
  	<div class="col">
-
+  <ul style="margin-top:100px;font-size:33px">
+		<li class="fragment"> Normal stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\sigma_\alpha\) </li>
+  	<li class="fragment"> \(\sigma_\alpha= \sigma_x \sin^2 \alpha + \sigma_y \cos^2 \alpha = \cfrac{\sigma_x+ \sigma_y}{2}+ \cfrac{\sigma_x-\sigma_y}{2} \cos{2 \alpha}\) </li>
+		<li class="fragment"> Shear stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\tau_\alpha\) </li>
+		<li class="fragment"> \(\tau_\alpha= (\sigma_x-\sigma_y) \sin \alpha \cos \alpha= \cfrac{\sigma_x -\sigma_y}{2} \sin 2 \alpha\) </li>
+  </ul>
  	</div>
  </div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Principal stresses and directions</h1>
-
+	<h1 style="margin-top:0px;font-size:55px">Principal stresses and directions</h1>
+<p style="margin-top:-25px;">There <strong style="color:#7abbe6">always exists</strong> an angle \(\alpha\) that satisfies \(\tau=0\). Such that:
+$$ \boldsymbol{\sigma}=
+\begin{bmatrix}
+\sigma_1& 0& 0\\
+0 & \sigma_2 & 0\\
+0 & 0& \sigma_3
+\end{bmatrix}
+$$
+<ul style="margin-top:-25px;">
+	<li class="fragment"> These stresses are the so-called <strong style="color:#7abbe6">principal stresses</strong>. We named them so that \(\sigma_1 \leq \sigma_2 \leq \sigma_3\). </li>
+	<li class="fragment"> \(\sigma_1\) is the <strong style="color:#7abbe6">major pincipal stress</strong> and \(\sigma_3\) is the <strong style="color:#7abbe6">minor principal stress</strong> </li>
+		<li class="fragment">  In plane strain conditions, the stresses acting on the plane of interest are \(\sigma_1\) and \(\sigma_3\). \(\sigma_2\) acts on the direction perpendicular to the plane.</li>
+</ul>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Mohr's circle</h1>
+  <p>For <strong style="color:#7abbe6">2D stresses</strong>, the state of stress can be represented using Mohr's circle</p>
+	<div class="container">
+		<div class="col">
+			<figure>
+				<img src="FiguresGeneral/Mohr_circle.svg" style="width:100%" data-preload/>
+				<footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+		</div>
+		<div class="col">
+	         <ul>
+	         	<li class="fragment"> \(\sigma_\alpha= \cfrac{\sigma_1+ \sigma_2}{2} + \cfrac{\sigma_1 - \sigma_3}{2} \cos 2 \alpha\) </li>
+						<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_1 - \sigma_3}{2} \sin 2 \alpha\)  </li>
+	         </ul>
+		</div>
+	</div>
 
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Stress invariants</h1>
-
+ <p>Are stresses that do not change depending on the orientation. For example:</p>
+ <ul>
+ 	<li>\(\frac{\sigma_1+\sigma_3}{2}=\) the mean stress. Note that the mean stress that matters is the 3D mean stress \(p=\sigma_1+\sigma_2+\sigma_3 / 3\).</li>
+	<li>\(\sigma_d=\sigma_1-\sigma_3\) the deviator stress. <strong style="color:#7abbe6">This is what causes failure</strong>.</li>
+	<li>The principal stresses.</li>
+ </ul>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Example 7.1</h1>
-
+	<p>For the element in the figure find the normal and shear stress on a plane inclined at \(\alpha=35^o\) from the horizontal reference plane.</p>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
