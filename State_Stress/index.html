@@ -210,17 +210,17 @@
 	<h1>State of stress in 2D</h1>
  <div class="container">
  	<div class="col">
-      <figure style="margin-top:100px;">
+      <figure style="margin-top:0px;">
         <img src="FiguresGeneral/2D_angle.svg" style="width:100%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
  	</div>
  	<div class="col">
-  <ul style="margin-top:100px;font-size:33px">
+  <ul style="margin-top:0px;font-size:35px">
 		<li class="fragment"> Normal stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\sigma_\alpha\) </li>
-  	<li class="fragment"> \(\sigma_\alpha= \sigma_x \sin^2 \alpha + \sigma_y \cos^2 \alpha = \cfrac{\sigma_x+ \sigma_y}{2}+ \cfrac{\sigma_x-\sigma_y}{2} \cos{2 \alpha}\) </li>
+  	<li class="fragment"> \(\sigma_\alpha = \cfrac{\sigma_y+ \sigma_x}{2}+ \cfrac{\sigma_y-\sigma_x}{2} \cos{2 \alpha} + \tau_{xy} \sin 2\alpha\) </li>
 		<li class="fragment"> Shear stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\tau_\alpha\) </li>
-		<li class="fragment"> \(\tau_\alpha= (\sigma_x-\sigma_y) \sin \alpha \cos \alpha= \cfrac{\sigma_x -\sigma_y}{2} \sin 2 \alpha\) </li>
+		<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_y -\sigma_x}{2} \sin 2 \alpha- \tau_{xy} \cos 2\alpha\) </li>
   </ul>
  	</div>
  </div>
@@ -292,16 +292,93 @@ $$
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>The pole method</h1>
  <p>One useful graphical consequence of Mohr's circle is the existence of the <strong style="color:#7abbe6">pole</strong>. It links the <strong style="color:#7abbe6">physical angular coordinate system</strong> and <strong style="color:#7abbe6">Mohr's circle angular coordinate system</strong></p>
+<figure>
+  <img src="FiguresGeneral/Pole_method.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Example 7.2</h1>
+<p>For the element in the figure below, find the principal stresses and their orientation using the equations and the Pole's method. Find the stresses acting at the indicated angle.</p>
+<div class="container">
+	<div class="col">
+		<figure style="margin-top:-30px;">
+			<img src="FiguresGeneral/Example72.PNG" style="width:100%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		</figure>
+	</div>
+	<div class="col">
+
+	</div>
+</div>
 
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Example 7.3</h1>
+<p>Same as Example 7.2 for the figure below</p>
+<div class="container">
+	<div class="col">
+                <figure>
+                  <img src="FiguresGeneral/Example73.PNG" style="width:100%" data-preload/>
+                  <footer style="margin-top:-60px;"><small></small></footer>
+                </figure>
+	</div>
+	<div class="col">
 
+	</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Elastic solution for \(K_0\)</h1>
+	<p>A simplistic, but fundamental model relating stress-strain behavior.</p>
+	 <p style="margin-top:0px;font-size:34px">
+$$\begin{Bmatrix}
+\varepsilon_x\\
+\varepsilon_y\\
+\varepsilon_z\\
+\gamma_{xy}\\
+\gamma_{xz}\\
+\gamma_{yz}
+\end{Bmatrix}=1/E
+\begin{bmatrix}
+1 & -\nu & -\nu & 0 & 0 & 0\\
+-\nu & 1 & -\nu & 0 & 0 & 0\\
+-\nu & -\nu & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 2(1+\nu) & 0 & 0\\
+0 & 0 & 0 & 0 & 2(1+\nu)& 0\\
+0 & 0 & 0 & 0 & 0 & 2(1+\nu)
+\end{bmatrix}
+\begin{Bmatrix}
+\sigma_x\\
+\sigma_y\\
+\sigma_z\\
+\tau_{xy}\\
+\tau_{xz}\\
+\tau_{yz}
+\end{Bmatrix}
+$$
+	 </p>
+
+<p>Using linear elasticity we can find an <strong style="color:#7abbe6">elastic solution for \(K_0=\nu/(1-\nu)\)</strong> (more after shear strength)</p>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 7.4</h1>
+	<p>For the soil profile shown in the figure below plot the profile of in-situ vertical and horizontal total and effective stresses. Plot the Mohr's circle of stresses for point A</p>
+ <div class="container">
+ 	<div class="col">
+                 <figure style="margin-top:-30px;">
+                   <img src="FiguresGeneral/dexample_stress.svg.2022_04_05_21_27_21.0.svg" style="width:70%" data-preload/>
+                   <footer style="margin-top:-60px;"><small></small></footer>
+                 </figure>
+ 	</div>
+ 	<div class="col">
+
+ 	</div>
+ </div>
 </section>
 
 
