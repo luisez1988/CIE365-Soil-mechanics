@@ -54,10 +54,10 @@
 			</style>
 				<!-- <section> -->
         <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 7: Shear strength of soils (part 1)">
+					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 7: Shear strength of soils (part 2)">
 						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 						<p style="color:#faffff; font-size:35px">Spring 2022</p>
-						<p style="color:#faffff; font-size:35px">April 4, 2022</p>
+						<p style="color:#faffff; font-size:35px">April 15, 2022</p>
 						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
 					</div>
         </section>
@@ -71,12 +71,12 @@
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We learned about Terzaghi's consolidation theory.</li>
-							<li class="fragment"> We learned how to calculate primary consolidation settlements vs. time. </li>
-							<li class="fragment"> We learned how to calculate the coefficient of consolidation.</li>
-							<li class="fragment"> We learned about the importance of the drainage boundary conditions. </li>
-							<li class="fragment">  We learned about some miigation techniques used in practice.</li>
-							<li class="fragment"> Today we will discuss about the state of stress in soils. </li>
+							<li class="fragment"> We learned about the stress tensor and the state of stress in soils.</li>
+							<li class="fragment"> We learned that for 2D stresses, the state of stress is represented using Mohr's circles. </li>
+							<li class="fragment"> We learned how to calculate stresses acting at different angles using analytical and graphical procedures.</li>
+							<li class="fragment"> We learned to use the pole method to solve problems with Mohr's circle. </li>
+							<li class="fragment"> We learned how to calculate horizontal in-situ stresses and about the \(K_0\) line.</li>
+							<li class="fragment"> Today we will discuss about the shear strength of soils. </li>
 						</ul>
 				</section>
 
@@ -100,11 +100,16 @@
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
 					<ul>
-						<li>Stress tensor.</li>
-						<li>State of stress.</li>
-						<li>2D state of stress.</li>
-						<li>Geometric interpretation (Mohr's circle)</li>
-						<li>Stress paths: triaxial and simple shear test.</li>
+						<li>The block analogy</li>
+						<li>Mohr-Coulomb model</li>
+						<li>Friction of soils</li>
+						<li>Dilation of soils</li>
+						<li>Stress paths.</li>
+						<li>Triaxial, direct, and simple shear.</li>
+						<li>Undrained and drained behavior</li>
+						<li>Shear strength of sands</li>
+						<li>Shear strength of clay</li>
+						<li>\(K_0\) as a function of friction</li>
 					</ul>
 
 					<!-- <p>More in chapter 9 of Holtz et al. (2013)</p> -->
@@ -121,264 +126,74 @@
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Lateral stress</h1>
-		<div class="container">
-			<div class="col">
-          <p>We have learned how to compute total/effective <strong style="color:#7abbe6">vertical stresses</strong> (normal to the horizontal plane)</p>
-					<figure>
-					  <img src="FiguresGeneral/vert_hor_stress.svg" style="width:100%" data-preload/>
-					  <footer style="margin-top:-60px;"><small></small></footer>
-					</figure>
-			</div>
-			<div class="col">
-              <ul>
-              	<li>What about the <strong style="color:#7abbe6">Horizontal stress</strong>?</li>
-								<li>We use the concept of the <strong style="color:#7abbe6">coefficient of lateral earth pressure</strong></li>
-								<li>When soil is "<strong style="color:#7abbe6">at rest</strong>" (no lateral movement), we call it the <strong style="color:#7abbe6">at-rest</strong> coefficient \(K_0\).
-									$$K_0=\cfrac{\sigma'_h}{\sigma'_v}$$
-								</li>
-								<li>\(\sigma'_h=\) horizontal effective stress</li>
-								<li>\(\sigma'_v=\) vertical effective stress</li>
-              </ul>
-			</div>
-		</div>
-</section>
-
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>State of stress</h1>
- <p>Geotechnical engineers often require to analyse stresses in different angles. E.g: to calculate the bearing capacity of a foundation.</p>
- <figure>
-   <img src="FiguresGeneral/example_foundation.svg" style="width:100%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>State of stress</h1>
- <figure>
-   <img src="FiguresGeneral/stress_tensor.svg" style="width:100%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>2D stresses</h1>
-
-	<div class="container">
-		<div class="col">
-	       <p>Plane strain</p>
-				 <figure style="margin-top:-30px;">
-				   <img src="https://i0.wp.com/theconstructor.org/wp-content/uploads/2018/09/Types-of-retaining-walls.jpg?fit=558%2C380&ssl=1" style="width:100%" data-preload/>
-				   <footer style="margin-top:-60px;"><small></small></footer>
-				 </figure>
-				 <p>\(\boldsymbol{\sigma}=\begin{bmatrix}
-					 \sigma_{xx}& \tau_{xy} & 0\\
-					 \tau_{yx}& \sigma_{yy} & 0\\
-					 0& 0 & \sigma_{zz}
-					 \end{bmatrix}\)</p>
-		</div>
-		<div class="col">
-	       <p>Plane stress</p>
-				 <figure style="margin-top:-30px;">
-				   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJFqvw3cWRomEqQ_-Uzbb-UipkRWVlrxC5w&usqp=CAU" style="width:80%" data-preload/>
-				   <footer style="margin-top:-60px;"><small></small></footer>
-				 </figure>
-				 <p>\(\boldsymbol{\sigma}=\begin{bmatrix}
-					 \sigma_{xx}& \tau_{xy} & 0\\
-					 \tau_{yx}& \sigma_{yy} & 0\\
-					 0& 0 & 0
-					 \end{bmatrix}\)</p>
-		</div>
-		<div class="col">
-				 <p>Axisymmetric</p>
-				 <figure style="margin-top:-30px;">
-				   <img src="https://communities.bentley.com/cfs-file/__key/communityserver-wikis-components-files/00-00-00-05-58/2d2011_2D00_tutorial_2D00_chapter02_2D00_geometry.png" style="width:100%" data-preload/>
-				   <footer style="margin-top:-60px;"><small></small></footer>
-				 </figure>
-				 <p>\(\boldsymbol{\sigma}=\begin{bmatrix}
-					 \sigma_{xx}& \tau_{xr} & 0\\
-					 \tau_{rx}& \sigma_{rr} & 0\\
-					 0& 0 & \sigma_{\theta \theta}
-					 \end{bmatrix}\)</p>
-		</div>
-	</div>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>State of stress in 2D</h1>
- <div class="container">
- 	<div class="col">
-      <figure style="margin-top:0px;">
-        <img src="FiguresGeneral/2D_angle.svg" style="width:100%" data-preload/>
+	<h1>The block analogy</h1>
+<div class="container">
+	<div class="col">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Free_Body_Diagram_%28Angle_of_Repose%29.png/220px-Free_Body_Diagram_%28Angle_of_Repose%29.png" style="width:100%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
- 	</div>
- 	<div class="col">
-  <ul style="margin-top:0px;font-size:35px">
-		<li class="fragment"> Normal stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\sigma_\alpha\) </li>
-  	<li class="fragment"> \(\sigma_\alpha = \cfrac{\sigma_y+ \sigma_x}{2}+ \cfrac{\sigma_y-\sigma_x}{2} \cos{2 \alpha} + \tau_{xy} \sin 2\alpha\) </li>
-		<li class="fragment"> Shear stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\tau_\alpha\) </li>
-		<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_y -\sigma_x}{2} \sin 2 \alpha- \tau_{xy} \cos 2\alpha\) </li>
-  </ul>
- 	</div>
- </div>
+	</div>
+	<div class="col">
+
+	</div>
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px;font-size:55px">Principal stresses and directions</h1>
-<p style="margin-top:-25px;">There <strong style="color:#7abbe6">always exists</strong> an angle \(\alpha\) that satisfies \(\tau=0\). Such that:
-$$ \boldsymbol{\sigma}=
-\begin{bmatrix}
-\sigma_1& 0& 0\\
-0 & \sigma_2 & 0\\
-0 & 0& \sigma_3
-\end{bmatrix}
-$$
-<ul style="margin-top:-25px;">
-	<li class="fragment"> These stresses are the so-called <strong style="color:#7abbe6">principal stresses</strong>. We named them so that \(\sigma_1 \leq \sigma_2 \leq \sigma_3\). </li>
-	<li class="fragment"> \(\sigma_1\) is the <strong style="color:#7abbe6">major pincipal stress</strong> and \(\sigma_3\) is the <strong style="color:#7abbe6">minor principal stress</strong> </li>
-		<li class="fragment">  In plane strain conditions, the stresses acting on the plane of interest are \(\sigma_1\) and \(\sigma_3\). \(\sigma_2\) acts on the direction perpendicular to the plane.</li>
+	<h1>The Mohr-Coulomb model</h1>
+  <p>It is a simple linearization of the ultimate strength of soils or a <strong style="color:#7abbe6">limiting state when soils start to accumulate plastic deformation</strong></p>
+	<p>$$\tau_f=S=c+\sigma \tan \phi$$</p>
+	<ul>
+		<li>\(\tau_f=S=\) the shear strength of the soil</li>
+		<li>\(c=\) cohesion</li>
+		<li>\(\phi=\) friction angle</li>
+	</ul>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Friction of soils</h1>
+<p>Friction is a fundamental phenomena in nature, that its basic level depends on the materials in contact. In soils it is influenced by different factors.</p>
+<ul>
+	<li>Mineralogy</li>
+	<li>Particle size</li>
+	<li>Particle shape</li>
+	<li>Stress state</li>
+	<li>Stress path</li>
+	<li>Soil density</li>
+	<li>OCR</li>
+	<li>Anysotropy</li>
 </ul>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Mohr's circle</h1>
-  <p>For <strong style="color:#7abbe6">2D stresses</strong>, the state of stress can be represented using Mohr's circle</p>
-	<div class="container">
-		<div class="col">
-			<figure>
-				<img src="FiguresGeneral/Mohr_circle.svg" style="width:100%" data-preload/>
-				<footer style="margin-top:-60px;"><small></small></footer>
-			</figure>
-		</div>
-		<div class="col">
-	         <ul>
-	         	<li class="fragment"> \(\sigma_\alpha= \cfrac{\sigma_1+ \sigma_2}{2} + \cfrac{\sigma_1 - \sigma_3}{2} \cos 2 \alpha\) </li>
-						<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_1 - \sigma_3}{2} \sin 2 \alpha\)  </li>
-	         </ul>
-		</div>
-	</div>
+	<h1>Dilation of soils</h1>
+<p>Is the capacity of soils to expand its volume when sheared</p>
+
+<p>$$D=\cfrac{d \varepsilon_v} {d \varepsilon_q}$$</p>
+
+<ul>
+	<li>\(D=\) dilation</li>
+	<li>\(\varepsilon_q =\) deviatoric strain</li>
+	<li>\(\varepsilon_v =\) volumetric strain</li>
+</ul>
 
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Stress invariants</h1>
- <p>Are stresses that do not change depending on the orientation. For example:</p>
- <ul>
- 	<li>\(\frac{\sigma_1+\sigma_3}{2}=\) the mean stress. Note that the mean stress that matters is the 3D mean stress \(p=\sigma_1+\sigma_2+\sigma_3 / 3\).</li>
-	<li>\(\sigma_d=\sigma_1-\sigma_3\) the deviator stress. <strong style="color:#7abbe6">This is what causes failure</strong>.</li>
-	<li>The principal stresses.</li>
- </ul>
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/XCOPNMDhXkM?autoplay=0" data-preload></iframe>
+	</section>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.1</h1>
-	<p>For the element in the figure find the normal and shear stress on a plane inclined at \(\alpha=35^o\) from the horizontal reference plane.</p>
-	<div class="container">
-		<div class="col">
-	            <figure>
-	              <img src="FiguresGeneral/example71.svg" style="width:80%" data-preload/>
-	              <footer style="margin-top:-60px;"><small></small></footer>
-	            </figure>
-		</div>
-		<div class="col">
-
-		</div>
-	</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>The pole method</h1>
- <p>One useful graphical consequence of Mohr's circle is the existence of the <strong style="color:#7abbe6">pole</strong>. It links the <strong style="color:#7abbe6">physical angular coordinate system</strong> and <strong style="color:#7abbe6">Mohr's circle angular coordinate system</strong></p>
-<figure>
-  <img src="FiguresGeneral/Pole_method.svg" style="width:100%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.2</h1>
-<p>For the element in the figure below, find the principal stresses and their orientation using the equations and the Pole's method. Find the stresses acting at the indicated angle.</p>
-<div class="container">
-	<div class="col">
-		<figure style="margin-top:-30px;">
-			<img src="FiguresGeneral/Example72.PNG" style="width:100%" data-preload/>
-			<footer style="margin-top:-60px;"><small></small></footer>
-		</figure>
-	</div>
-	<div class="col">
-
-	</div>
-</div>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.3</h1>
-<p>Same as Example 7.2 for the figure below</p>
-<div class="container">
-	<div class="col">
-                <figure>
-                  <img src="FiguresGeneral/Example73.PNG" style="width:100%" data-preload/>
-                  <footer style="margin-top:-60px;"><small></small></footer>
-                </figure>
-	</div>
-	<div class="col">
-
-	</div>
-</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Elastic solution for \(K_0\)</h1>
-	<p>A simplistic, but fundamental model relating stress-strain behavior.</p>
-	 <p style="margin-top:0px;font-size:34px">
-$$\begin{Bmatrix}
-\varepsilon_x\\
-\varepsilon_y\\
-\varepsilon_z\\
-\gamma_{xy}\\
-\gamma_{xz}\\
-\gamma_{yz}
-\end{Bmatrix}=1/E
-\begin{bmatrix}
-1 & -\nu & -\nu & 0 & 0 & 0\\
--\nu & 1 & -\nu & 0 & 0 & 0\\
--\nu & -\nu & 1 & 0 & 0 & 0\\
-0 & 0 & 0 & 2(1+\nu) & 0 & 0\\
-0 & 0 & 0 & 0 & 2(1+\nu)& 0\\
-0 & 0 & 0 & 0 & 0 & 2(1+\nu)
-\end{bmatrix}
-\begin{Bmatrix}
-\sigma_x\\
-\sigma_y\\
-\sigma_z\\
-\tau_{xy}\\
-\tau_{xz}\\
-\tau_{yz}
-\end{Bmatrix}
-$$
-	 </p>
-
-<p>Using linear elasticity we can find an <strong style="color:#7abbe6">elastic solution for \(K_0=\nu/(1-\nu)\)</strong> (more after shear strength)</p>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.4</h1>
-	<p>For the soil profile shown in the figure below plot the profile of in-situ vertical and horizontal total and effective stresses. Plot the Mohr's circle of stresses for point A</p>
- <div class="container">
- 	<div class="col">
-                 <figure style="margin-top:-30px;">
-                   <img src="FiguresGeneral/dexample_stress.svg.2022_04_05_21_27_21.0.svg" style="width:70%" data-preload/>
-                   <footer style="margin-top:-60px;"><small></small></footer>
-                 </figure>
- 	</div>
- 	<div class="col">
-
- 	</div>
- </div>
+	<h1>Stress paths</h1>
+  <p>Graphical representation of the loading/shearing history</p>
+	<figure>
+	  <img src="https://structville.com/wp-content/uploads/2021/08/stress-path-1024x350.jpg" style="width:100%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
 </section>
 
 
