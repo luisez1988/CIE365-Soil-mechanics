@@ -6,13 +6,6 @@
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
-.reveal {
-  background: url("FiguresGeneral/Normal_slide_Maine.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
 .reveal h1 {
   font-size: var(--r-heading1-size);
   display: block;
@@ -22,7 +15,7 @@
   border-bottom-color: #d6d2c4;
   padding-bottom: 0px;
   border-bottom-width: 3px;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
@@ -49,10 +42,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #1c2e3f;
+  --r-background-color: #fff;
   --r-main-font: Roboto Slab, Helvetica, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #fff;
+  --r-main-color: #000;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: EB Garamond, Helvetica, sans-serif;
@@ -63,7 +56,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading-text-shadow: none;
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;
-  --r-heading1-size: 1.7em;
+  --r-heading1-size: 1.5em;
   --r-heading2-size: 1.5em;
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
@@ -76,7 +69,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal-viewport {
-  background: #1c2e3f;
+  background: #fff;
   background-color: var(--r-background-color);
 }
 
@@ -333,55 +326,59 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal .theorem2 {
-display: block;
-text-align: left;
-font-style: normal;
-border-left-style: solid;
-border-left-color: #7abbe6;
-padding-left: 5px;
-border-left-width: 5px;
+  display: block;
+  text-align: left;
+  font-style: normal;
+  border-left-style: solid;
+  border-left-color: #7abbe6;
+  padding-left: 5px;
+  border-left-width: 5px;
 }
+
 .reveal .theorem2:before {
-content: "";
-font-weight: bold;
-color: #7abbe6;
-font-style: normal;
+  content: "";
+  font-weight: bold;
+  color: #7abbe6;
+  font-style: normal;
 }
+
 .reveal .theorem2[name]:before {
-content: attr(name) ;
+  content: attr(name);
 }
 
 .reveal .title_slide {
-display: block;
-margin: 0px;
-background-color: #7abbe6;
-text-align: center;
-font-style: normal;
-border-bottom-style: solid;
-border-bottom-color: #7abbe6;
-padding-bottom: 5px;
-border-bottom-width: 5px;
+  display: block;
+  margin: 0px;
+  background-color: #7abbe6;
+  text-align: center;
+  font-style: normal;
+  border-bottom-style: solid;
+  border-bottom-color: #7abbe6;
+  padding-bottom: 5px;
+  border-bottom-width: 5px;
 }
+
 .reveal .title_slide:before {
-content: "";
-color: #001d51;
-font-weight: bold;
-font-style: bold;
-font-family: "EB Garamond";
-font-size:62px;
+  content: "";
+  color: #001d51;
+  font-weight: bold;
+  font-style: bold;
+  font-family: "EB Garamond";
+  font-size: 62px;
 }
+
 .reveal .title_slide[name]:before {
-content: attr(name) ;
+  content: attr(name);
 }
 
 .reveal .footer {
-    position: absolute;
-    bottom: 0.4em;
-    left: 0em;
-    font-size: 0.5em;
-    font-family: "Roboto Slab";
-    color: #77b5e6;
-  }
+  position: absolute;
+  bottom: 0.4em;
+  left: 0em;
+  font-size: 0.5em;
+  font-family: "Roboto Slab";
+  color: #77b5e6;
+}
 
 /*********************************************
  * LINKS
