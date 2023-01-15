@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	<link rel="stylesheet" href="plugin/chalkboard/style.css">
 	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+
 </head>
   <body>
 
@@ -67,12 +69,19 @@
     </style>
 				<!-- <section> -->
         <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:400px;margin-left:600px" class="title_slide" name="CIE-365: Soil Mechanics">
-						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Spring 2023</p>
-						<p style="color:#faffff; font-size:35px"> January 18, 2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
-					</div>
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/13cvDn2OYd1vzFkkS8T-sZ-sbHutjsSGw/view?usp=share_link"></div>
+			</div>
+
+			<div style="margin-top:-300px;margin-left: 600px;margin-right:0px" class="title_slide" name="CIE-365: Soil Mechanics">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Spring 2023</p>
+				<p style="color:#faffff; font-size:35px"> January 18, 2023</p>
+				<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+			</div>
+
+
         </section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -366,8 +375,8 @@
 				</section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Sexual violence policy</h1>
-						<p style="margin-top:100px"> Your teacher is required to report sexual violence events to Title IX Student Services or the Office of Equal Opportunity.
+				    <h1>Sexual violence policy</h1>					
+				    	<p style="margin-top:100px"> Your teacher is required to report sexual violence events to Title IX Student Services or the Office of Equal Opportunity.
 						If you want to talk in confidence to someone about an experience of sexual discrimination, please contact these resources:
 						For confidential resources on campus: Counseling Center.
 						For confidential resources off campus:  Rape Response Services or Partners for Peace.
@@ -378,8 +387,8 @@
 
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Course contents and schedule</h1>
-				    <object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+					<h1>Course contents and schedule</h1>								    		    
+					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
 				</section>
 
 				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
@@ -421,6 +430,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 </script>
 
 <script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/notes/notes.js"></script>
 <script src="plugin/search/search.js"></script>
