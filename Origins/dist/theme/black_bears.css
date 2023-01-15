@@ -371,10 +371,37 @@ section.has-light-background, section.has-light-background h1, section.has-light
   content: attr(name);
 }
 
+.reveal .qrCode_cont {
+  display: block;
+  width: 310px;
+  margin: 0px;
+  background-color: #001d51;
+  text-align: center;
+  font-style: normal;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-width: 5px;
+  border-radius: 25px;
+}
+
+.reveal .qrCode_cont:before {
+  content: "";
+  color: #ffffff;
+  font-weight: bold;
+  font-style: bold;
+  font-family: "EB Garamond";
+  font-size: 35px;
+}
+
+.reveal .qrCode_cont[name]:before {
+  content: "Get the pdf slides";
+}
+
 .reveal .footer {
   position: absolute;
   bottom: 0.4em;
-  left: 0em;
+  left: 5em;
   font-size: 0.5em;
   font-family: "Roboto Slab";
   color: #77b5e6;

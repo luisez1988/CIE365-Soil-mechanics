@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>CIE-365: Soil Origins</title>
+		<title>Lecture</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -29,10 +29,10 @@
 				}
 				</style>
 
-				<!-- <div class='footer'>
-					CIE-598
-					Fall 2021
-				</div> -->
+				<div class='footer'>
+					CIE-365
+					Spring 2022
+				</div>
 
 				<style>
 				.reveal .slides section .fragment.fade-down {
@@ -41,218 +41,670 @@
 				}
 				.reveal .slides section .fragment.fade-down.visible,
 				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 0.7;
-				}
+						opacity: 1;
+						margin-top:0px;
+					}
 				.reveal .slides section .fragment.fade-down,
 				.reveal .slides section .fragment.current-fragment {
-						color: #000;
+						color: #fff;
+						margin-top:0px;
 				}
+
 
 			</style>
 				<!-- <section> -->
-				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Introduction">
+        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Module 1: The geological cycle and the origin of soils">
 						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Fall 2022</p>
-						<p style="color:#faffff; font-size:35px">08/29/2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+						<p style="color:#faffff; font-size:35px">Spring 2022</p>
+						<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 					</div>
         </section>
 
 
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Course contents and schedule</h1>
+					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+				</section>
 
-        <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>Contents</h1>
-					<ol>
-						<li>Objectives and challenges of soil sampling and testing</li>
-						<li>Review: Units and dimensions</li>
-						<li>Review: Phase relationships</li>
-						<li>Review: Grain size distribution and consistency</li>
-						<li>Review: State of stress and shear strength</li>
-						<li>Anatomy of a ASTM standard</li>
-					</ol>
-
-        </section>
-
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>Objectives of testing</h1>
-					<ul>
-						<li class="fragment">  Soils are <strong style="color:#7abbe6">complex and multiphase</strong> material.</li>
-						<li class="fragment"> Soils are <strong style="color:#7abbe6">everywhere</strong>.
-						 </li>
-						 <li class="fragment"> Soils are <strong style="color:#7abbe6">non-prescribed</strong> natural materials. </li>
-					</ul>
-
-					<p class="fragment">Through testing we want determine: </p>
-					<div class="container">
-						<div class="col">
-					     <ul>
-					     	<li class="fragment"> Soil formation
-								 </li>
-								 <li class="fragment"> Mineralogy
-								  </li>
-									<li class="fragment"> Composition and fabric </li>
-									<li class="fragment"> <strong style="color:#7abbe6">Mechanical properties</strong> </li>
-									<li class="fragment"> Volume change behavior </li>
-					     </ul>
-						</div>
-						<div class="col">
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Recap</h1>
+						<div class="container">
+							<div class="col">
 								<ul>
-									<li class="fragment"> Stress-strain behavior </li>
-									<li class="fragment"> Hydraulic properties </li>
-									<li class="fragment"> Time effects </li>
-									<li class="fragment"> ... </li>
+									<li>We read the syllabus and discussed the course policies.</li>
+									<li>We watch Maria's presentation about geotechnical engineering in practice!!</li>
+									<li>Homework 1 is due next Monday (1/31/2022) with the memo.</li>
 								</ul>
+							</div>
+							<div class="col">
+				          <iframe src="FiguresGeneral/HMA1v1.pdf" width="600" height=700></iframe>
+							</div>
 						</div>
-					</div>
-
 				</section>
 
 
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1 style="margin-top:px;font-size:55px">Challenges with sampling and testing</h1>
-
-				</section>
 
 
-				<section data-background="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>Review: Units and dimensions</h1>
-					<div class="container">
-						<div class="col">
-					   <ul>
-					   	<p><strong style="color:#7abbe6">Dimension:</strong> Are physical quatities that can be measured</p>
-					   </ul>
-						</div>
-						<div class="col">
-							<p><strong style="color:#7abbe6">Unit:</strong> An arbitrary scale that is used to measure a dimension based upon a definition</p>
-						</div>
-					</div>
-				</section>
 
 
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>Review: Phase relationships</h1>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg" data-markdown>
-					<h1>Typical values</h1>
-					<textarea data-template style="margin-top:0px">
-						Typical soil unit weight. Modified from Holtz et al. 2013
-						<style>
-						td {
-							font-size: 34px
-							}
-						</style>
-						|                   	| \\(\gamma_{sat}\\) 	|         	| \\(\gamma_d\\)    	|        	| \\(\gamma'\\)   	|       	|
-						|-------------------	|-------	|---------	|-------	|--------	|------	|-------	|
-						|S. type         	| kN/m<sup>3   	| pcf       	| kN/m<sup>3     	| pcf      	| kN/m<sup>3     	| pcf     	|
-						| Sands and gravels 	| 19-24 	| 119-150 	| 15-23 	| 94-144 	| 9-14 	| 62-81 	|
-						| Silts and clay    	| 14-21 	| 87-131  	| 6-18  	| 37-112 	| 4-11 	| 25-69 	|
-						| Glacial tills   	| 21-24 	| 131-150  	| 17-23 	| 106-144 	| 11-14 	| 69-87 	|
-						| Crushed rock   	| 19-22 	| 119-137  	| 15-20 	| 94-125 	| 9-12 	| 56-75 	|
-						| Peats   	| 10-11	| 60-69  	| 1-3	| 6-19	| 0-1 	| 0-6 	|
-						| Organincs silt and clay  	| 13-18	| 81-112  	| 5-15	| 31-94	| 3-8	| 19-50 	|
-					</textarea>
-				</section>
-
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-				    <h1>Review: Grain size</h1>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-						<h1>Review: Consistency limits</h1>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>The plasticity chart</h1>
-					<img src="https://media.springernature.com/original/springer-static/image/prt%3A978-3-319-73568-9%2F16/MediaObjects/978-3-319-73568-9_16_Part_Fig1-223_HTML.png" width="80%">
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Review: State of stress</h1>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Review: Shear strength</h1>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>About ASTM</h1>
-					<div class="container">
-						<div class="col">
-					   <p><strong style="color:#7abbe6">FACTS about ASTM</strong></p>
-						 <ul>
-						 	<li>Over 12,500 standards</li>
-							<li>Over 140 participating countries</li>
-							<li>80+ volumes of ASTM book of standards</li>
-							<li>Manages the <strong style="color:#7abbe6">Geotechnical Testing Journal</strong></li>
-
-						 </ul>
-						</div>
-						<div class="col">
-							<iframe src="FiguresGeneral/Helping-Our-World-EN-2017.pdf" width="100%" height="600px"></iframe>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Parts of the ASTM standard</h1>
-					<div class="container">
-						<div class="col">
-					            <ul>
-					            	<li>Title</li>
-												<li>Designation</li>
-												<li>Introduction</li>
-												<li>Scope</li>
-												<li>Terminology</li>
-												<li>Summary of test method</li>
-												<li>Significance and use</li>
-												<li>Interferences</li>
-												<li>Apparatus</li>
-												<li>Reagents materials</li>
-												<li>Hazards</li>
-												<li>Sampling, t. specimens, t. units</li>
-					            </ul>
-						</div>
-						<div class="col">
-							<ul>
-
-								<li>Preparation of apparatus</li>
-								<li>Calibration and standardization</li>
-								<li>Conditioning</li>
-								<li>Procedure</li>
-								<li>Calculation and results interpretation</li>
-								<li>Precision and Bias</li>
-								<li>Measurement of uncertainty</li>
-								<li>Keywords</li>
-								<li>Annexes and Appendixes</li>
-								<li>References</li>
-								<li>Summary of changes</li>
-							</ul>
-						</div>
-					</div>
-
-				</section>
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Laboratory validation</h1>
+        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Contents</h1>
 					<ul>
-						<li>Required for all government and several private jobs.</li>
-						<li>Validation uses either ASTM or AASHTO standards.</li>
-						<li>Doesn't ensure a good job. It ensures the lab follows standards.</li>
+						<li>What is soil mechanics?</li>
+						<li>The geological cycle</li>
+						<li>Transported soils</li>
+						<li>Residual soils</li>
+					</ul>
+
+        </section>
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+
+					<p style="margin-top:240px; font-size:60px">Is there any structure or moving machine that doesn't interact with geological materials?</p>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<figure>
+					  <img src="https://cdn.mos.cms.futurecdn.net/fKZ2vtNGzTxa93C7KfaeRh-1024-80.jpg" style="height:700px" data-preload/>
+					  <footer style="margin-top:-60px;"><small>credits: Shutterstock</small></footer>
+					</figure>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<section data-fullscreen>
+						<iframe class="stretch" src="FiguresGeneral/Infrastructure.svg" ></iframe>
+					</section>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<section data-fullscreen>
+						<iframe class="stretch" src="https://www.youtube.com/embed/DopB8CtSn3E?autoplay=1" ></iframe>
+					</section>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<section data-fullscreen>
+						<iframe class="stretch" src="https://www.youtube.com/embed/LgDQsYAcS3o?autoplay=1" ></iframe>
+					</section>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<section data-fullscreen>
+						<iframe class="stretch" src="https://www.youtube.com/embed/sKZUZQytads?autoplay=1" ></iframe>
+					</section>
+				</section>
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<section data-fullscreen>
+						<iframe class="stretch" src="https://www.youtube.com/embed/q1N6JjwI-jw?autoplay=1" ></iframe>
+					</section>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<p style="margin-top:300px;">Geology matters, and we need to understand soil and rock mechanics.</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Soil mechanics</h1>
+
+					<ul>
+						<li class="fragment"> Is a fundamental discipline of geotechnical engineering. </li>
+						<li class="fragment"> According to Holtz et al (2002):
+							<p>"Is the branch of geotechnical engineering concerned with the engineering mechanics and properties of soils".</p>
+						 </li>
+						 <li class="fragment">  Soil mechanics integrates kinematics, dynamics, fluid mechanics, and material mechanics to soils. Soil, rather than water, steel, or concrete, becomes the engineering material whose properties and behavior we must understand to build with or upon it (Holtz et al. 2002).</li>
+						 <li class="fragment"> We can add: to protect our society from geohazards. </li>
+					</ul>
+
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Soil mechanics</h1>
+						<p>What is a key difference between these materials?</p>
+						<div class="container">
+							<div class="col">
+				          <figure>
+				            <img src="https://www.thespruce.com/thmb/kOo5P2B71T91yxam_471-RQraow=/2124x1412/filters:fill(auto,1)/concrete_mix-692096736-5af8a50ea9d4f90036623585.jpg" style="height:300px" data-preload/>
+				            <footer style="margin-top:-60px;"><small>credits: thespruce.com</small></footer>
+				          </figure>
+							</div>
+							<div class="col">
+								<figure>
+								  <img src="https://www.steelsupplylp.com/uploads/general/_508x304_crop_top-center_100_none/40760/homepage-ss-store-callout-background.jpg" style="height:300px" data-preload/>
+								  <footer style="margin-top:-60px;"><small>credits: steelsupply.com</small></footer>
+								</figure>
+							</div>
+							<div class="col">
+							    <figure>
+							      <img src="https://theconstructor.org/wp-content/uploads/2011/12/Soil-Samples-Collected.jpg" style="height:300px" data-preload/>
+							      <footer style="margin-top:-60px;"><small>credits: theconstructor.com</small></footer>
+							    </figure>
+							</div>
+						</div>
+						<p class="fragment">Concrete and steel are prescribed materials. Soils are natural and not prescribed. We must investigate and characterize them first! </p>
+				</section>
+
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Soil mechanics</h1>
+					<ul style="margin-top:100fpx;">
+						<li class="fragment">We assume some materials are CHILE: continous, homogeneous, isotropic, linear-elastic. </li>
+						<li class="fragment">Soils are DIANE materials: discontinous, inhomogeneous, anysotropic, non-elastic. </li>
+						<li class="fragment">Soil heterogeneity makes soil mechanics complex. </li>
+						<li class="fragment"> Soil mechanics is highly empirical. </li>
 					</ul>
 				</section>
 
 
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>The geological cycle</h1>
+					<div class="r-stack">
+						<img class="fragment" src="https://assets.sutori.com/user-uploads/image/21d2cc63-67c7-4357-8acc-3edaa214a2e3/660a4c7ff0c0a567b05cf014ca862160.png" style="height:600px"/>
+						<img class="fragment" src="https://media0.giphy.com/media/GrsGN4NyUkOuk/giphy-downsized-large.gif" style="height:600px"/>
+					</div>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Earth's structure</h1>
+						<div class="container">
+							<div class="col">
+				         <figure>
+				           <img src="https://talentkas.com/wp-content/uploads/2018/12/whataretheea.jpg" style="height:400px" data-preload/>
+				           <footer style="margin-top:-60px;"><small></small></footer>
+									 <p>Earth's structure</p>
+				         </figure>
+							</div>
+							<div class="col">
+								<ul style="margin-top:100px;">
+									<li > Crust: 5-70 km (3.1-43.5 mi).</li>
+									<li > Mantle: 2890 km. </li>
+									<li> Outer core: 2400 km. </li>
+									<li > Inner core: 1220 km. </li>
+								</ul>
 
 
-				<section data-background-image="FiguresGeneral\Main_slide_Maine.svg">
-					<p style="margin-top:400px">Questions or comments?</p>
+							</div>
+						</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Plate tectonics</h1>
+				 <figure style="margin-top:-30px;">
+				   <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/bab3009c-eb31-4e00-b264-5bc05eddd20e/ess2650-fig-0001-m.jpg" style="height:600px" data-preload/>
+				   <footer style="margin-top:-80px;"><small>Scotese and van der Plujim (2020)</small></footer>
+				 </figure>
+				</section>
+
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Plate tectonics</h1>
+						<div class="container">
+							<div class="col">
+								<figure>
+									<img src="https://thumbs.gfycat.com/AnchoredDarlingLarva-max-1mb.gif" style="height:350px" data-preload/>
+									<footer style="margin-top:-60px;"><small></small></footer>
+									<p>Divergent plates (e.g., oceanic ridges)</p>
+								</figure>
+							</div>
+							<div class="col">
+				         <figure>
+				           <img src="https://i.pinimg.com/originals/11/01/6d/11016de27e6cd3072484083c19d369d2.gif" style="height:350px" data-preload/>
+				           <footer style="margin-top:-60px;"><small></small></footer>
+									 <p>Convergent plates (e.g., subduction zones)</p>
+				         </figure>
+							</div>
+							<div class="col">
+								<figure>
+								  <img src="https://thumbs.gfycat.com/FarflungKlutzyAxolotl.webp" style="height:350px" data-preload/>
+								  <footer style="margin-top:-60px;"><small></small></footer>
+									<p>Strike-slip fault</p>
+								</figure>
+							</div>
+						</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Igneous rocks</h1>
+					<h4>Intrusive</h4>
+					<div class="h-stack" style="margin-top:-30px;">
+						<img src="https://i.giphy.com/aH2kNc1M4DG0g.gif" style="height:250px"/>
+						<img src="https://media.giphy.com/media/8P7WUiSyrb2GVj3ykc/giphy.gif" style="height:250px"/>
+					</div>
+					<h4 style="margin-top:-30px;">Extrusive</h4>
+					<div class="h-stack" style="margin-top:-30px;">
+						<img src="https://i.gifer.com/XH2.gif" style="height:250px"/>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Mid-ocean_ridge_topography.gif" style="height:250px"/>
+						<!-- <figure>
+
+							<footer style="margin-top:-60px;"><small></small></footer>
+						</figure>
+						<figure>
+
+							<footer style="margin-top:-60px;"><small></small></footer>
+						</figure> -->
+					</div>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Igneous rocks</h1>
+						<p style="margin-top:0px;">Formed by cooling magma/lava, producing crystalization of the rock minerals (mica, feldspar, quartz, etc.).</p>
+						<div class="container">
+							<div class="col">
+								<h4>Intrusive</h4>
+							 <ul>
+								 <li class="fragment"> Formed in the crust's interior. </li>
+								 <li class="fragment"> Crystalization is slow. </li>
+								 <li class="fragment"> Minerals form clusters. </li>
+								 <li class="fragment"> They have grained texture. </li>
+							 </ul>
+							</div>
+
+							<div class="col">
+								<h4>Extrusive</h4>
+								<ul>
+								 <li class="fragment"> Formed in the crust's exterior.</li>
+								 <li class="fragment"> Crystalization is rapid. </li>
+								 <li class="fragment"> Minerals have no time to form groups.</li>
+								 <li class="fragment"> They loock uniform in texture and color. </li>
+								</ul>
+
+							</div>
+						</div>
+				</section>
+
+
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Igneous rocks</h1>
+						<div class="container">
+							<div class="col">
+		                <h4>Intrusive</h4>
+										<figure>
+											<img src="https://3.bp.blogspot.com/-mvTYIY-sLJQ/W2sPjV_kVTI/AAAAAAAAQNs/CHzyvUWZpSIRZpzMY8_8HdRPxF7cVygMQCLcBGAs/s1600/What%2BIs%2BGranite%2BAnd%2BHow%2BIs%2BIt%2BFormed.jpg" style="height:400px" data-preload/>
+											<footer style="margin-top:-150px;"><small>Granite</small></footer>
+										</figure>
+							</div>
+							<div class="col">
+								<h4>Extrusive</h4>
+								<figure>
+									<img src="https://www.sandatlas.org/wp-content/uploads/00589-IMG_8229-12-cm-aphanitic-basalt.jpg" style="height:400px" data-preload/>
+									<footer style="margin-top:-150px;"><small>Basalt</small></footer>
+								</figure>
+							</div>
+						</div>
+				</section>
+
+
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Weathering</h1>
+						<p>The process of breaking apart or disintegrating rocks to form sediments/soils.</p>
+						<div class="container">
+							<div class="col">
+				        <h4>Physical</h4>
+								<ul>
+									<li >Root wedging.</li>
+									<li >Frost wedging.</li>
+									<li >Salt wedging. </li>
+									<li >Exfoliating. </li>
+									<li >Thermal expansion. </li>
+									<li >Abrasion. </li>
+								</ul>
+							</div>
+							<div class="col">
+				         <h4>Chemical</h4>
+								 <ul>
+								 	<li > Hydration. </li>
+									<li > Oxydation. </li>
+									<li> Dissolution.</li>
+								 </ul>
+							</div>
+						</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Weathering</h1>
+					<div class="h-stack">
+						<img src="https://i2.wp.com/acadiaonmymind.com/wp-content/uploads/2016/09/29-HK-ACADIA3-Pemetic-Northwest2.jpg?resize=625%2C536&ssl=1" style="height:250px"/>
+						<img src="http://s2.thingpic.com/images/zQ/hdTbebdTkmrWDZJfbqXkSSEi.jpeg" style="height:250px"/>
+						<img src="http://tafoni.com/Salt-Weathering_files/Salt_Residue.jpg" style="height:250px"/>
+					</div>
+					<div class="h-stack">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/GeologicalExfoliationOfGraniteRock.jpg/350px-GeologicalExfoliationOfGraniteRock.jpg" style="height:250px"/>
+						<img src="https://d1e4pidl3fu268.cloudfront.net/9a22112d-6ef3-4aef-8a69-517d9d1f724b/a02aa48b0ff3898f3eec64a26c3d703a.crop_569x427_36%2C0.preview.jpg" style="height:250px"/>
+						<img src="https://eartheclipse.com/wp-content/uploads/2016/05/scattered-clusters-of-marbles-rocks-chemical-weathering.jpg" style="height:250px"/>
+					</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<h1>Soils</h1>
+				Particulate matter desintegrated from rocks.
+				<figure>
+				  <img src="https://premierequestrian.com/wp-content/uploads/2018/12/Sand-size-comparisons.jpg" style="height:450px" data-preload/>
+				  <footer style="margin-top:-60px;color:black"><small>premierequestrian.com</small></footer>
+				</figure>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+						<h1>Soils</h1>
+						<p>We can subdivide them by particle diameter according to the Unified Soil Classification System (USCS- ASTM D2487):</p>
+							<ul>
+								<li>Boulders: \(d>\) 300 mm \(\longrightarrow \approx\) 1 ft</li>
+								<li>Cobbles: \(75  < d \leq \) 300 mm \(\longrightarrow \) 3 in - 1 ft</li>
+								<li>Gravels: \(4.75  < d \leq \) 75 mm \(\longrightarrow \) Sieve No.4 - 3 in</li>
+								<li>Sands: \(0.075  < d \leq \) 4.75 mm \(\longrightarrow \)  Sieve No.200 - Sieve No.4</li>
+								<li>Silt: \(2 \times 10^{-6}< d \leq \) 0.075 mm \(\longrightarrow \)  Pass sieve No. 200 </li>
+								<li>Clay: \(d \leq 2 \times 10^{-6}\)  mm \(\longrightarrow \) Pass sieve No. 200</li>
+							</ul>
+
+							<p>We'll discuss sieve analysis in Module 2.</p>
+				</section>
+
+
+
+
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Sedimentary rocks</h1>
+		Created by the consolidation or cementation of sediments. Soils are transformed back into rock.
+		<div class="container">
+			<div class="col">
+        <ul>
+        	<li>Clay \(\longrightarrow\) Claystone, mudstone, shale</li>
+					<li>Silts \(\longrightarrow\) Siltstone </li>
+					<li>Sand \(\longrightarrow\) Sandstone </li>
+					<li>Gravel \(\longrightarrow\) Conglomerate</li>
+        </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://www.thoughtco.com/thmb/Uz4m-VpSMNw7CpTZdGNNqwY0opw=/1992x1344/filters:fill(auto,1)/Layers_of_sedimentary_rock_in_Makhtesh_Ramon_50754-3a40a0968fea41718b339824873ef3e9.jpg" style="height:250px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>credits:Rhododendrites</small></footer>
+				</figure>
+				<figure style="margin-top:-30px;">
+					<img src="FiguresGeneral/sedimentary.png" style="height:200px" data-preload/>
+					<footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+		</div>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Metamorphic rocks</h1>
+	Created by high pressures and/or temperatures.
+	<div class="h-stack">
+		<img src="https://2.bp.blogspot.com/-K5WWnSwIFd0/VquIU8_PM2I/AAAAAAAAHrY/0Lui_DqxK5A/w1200-h630-p-k-no-nu/The%2Bformation%2Bof%2BFoliated%2BMetamorphic%2BRock-geology%2Bin.jpg" height=200 data-preload>
+		<img src="https://gotbooks.miracosta.edu/geology/images/meta_basalt_schist.jpg" height=200 data-preload>
+		<img src="http://geologycafe.com/images/meta_sand_quartzite.jpg" height=200 data-preload>
+	</div>
+	<div class="h-stack">
+		<img src="https://i.pinimg.com/originals/4c/f1/fd/4cf1fdf25b3f9ea0756a8e78cf528969.jpg" height=200 data-preload>
+		<img src="https://gotbooks.miracosta.edu/geology/images/metaconglomerate.jpg" height=200 data-preload>
+		<img src="http://geologycafe.com/images/meta_granite_gneiss.jpg" height=200 data-preload>
+	</div>
+	<p><small>credits:GotBooks.miracosta.edu</small> </p>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>The geological cycle</h1>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<p style="margin-top:150px;">Soils can be:</p>
+
+	<ul>
+		<li class="fragment">Residual soils: Soils are formed in situ primarily as a result of chemical reactions.</li>
+		<li class="fragment">Transported soils:Soils are transported from their original source and deposited in a new location.</li>
+	</ul>
+
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Residual soils</h1>
+		<div class="container">
+			<div class="col">
+        <ul>
+        	<li class="fragment"> Forms in place due to chemical processes. </li>
+					<li class="fragment"> The properties of residual soils depend on the parenting rock and climate. </li>
+					<li class="fragment"> In depth, the distribution is heterogeneous. </li>
+					<li class="fragment"> Particle size assortment with depth. </li>
+					<li class="fragment"> Difficult to characterize. </li>
+        </ul>
+			</div>
+			<div class="col">
+				<figure style="margin-top:-30px;">
+				  <img src="https://www.researchgate.net/profile/Atiye-Tugrul/publication/226556716/figure/fig3/AS:393657657118727@1470866707777/Weathering-profile-of-limes-tones.png" style="height:400px" data-preload/>
+				  <footer style="margin-top:-80px;color:black"><small>Tugrul and Zarif (2000)</small></footer>
+				</figure>
+				<figure style="margin-top:0px;">
+				  <img src="https://hkss.cedd.gov.hk/hkss/eng/education/gs/hkg/chapter4/figure6.jpg" style="height:200px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>hkss.cedd.gov.hk</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Transported soils</h1>
+		<p>How are soils transported?</p>
+		<ul style="margin-top:-20px;">
+			<li class="fragment"> Running water\(\longrightarrow\) Alluvial soils.  </li>
+			<li class="fragment"> Tide/wave dominated water \(\longrightarrow\) Coastal-estuarine sediments.</li>
+			<li class="fragment"> Deposition in lakes \(\longrightarrow\)  Lacustrine soils.</li>
+			<li class="fragment"> Deposition in the ocean \(\longrightarrow\) Marine soils. </li>
+			<li class="fragment"> Glaciers \(\longrightarrow\) Glacial soils, morraine deposits. </li>
+			<li class="fragment"> Wind-blow deposition \(\longrightarrow\) Aeolian soils. </li>
+			<li class="fragment"> Gravity, rockfall, landslide \(\longrightarrow\) Colluvial soils. </li>
+		</ul>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Alluvial deposits</h1>
+	<p style="margin-top:-30px;">Hjulström (1935) erosion curve. Figure taken from Earle (2019)</p>
+	<figure>
+	  <img src="https://opentextbc.ca/physicalgeology2ed/wp-content/uploads/sites/298/2019/08/hulstrom-2.png" style="height:600px; margin-top:-15px" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Alluvial deposits</h1>
+		<div class="container">
+			<div class="col">
+				<ul>
+					<li class="fragment"> They can be extremely complex due to stream alignment changes, floods, droughts, etc. </li>
+					<li class="fragment"> Particles are usually rounded. </li>
+					<li class="fragment"> Usually uniform gradation (soil particles have similar size). </li>
+					<li class="fragment"> Tey will often consist of coarse-sized material.</li>
+				</ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Waimakariri02_gobeirne.jpg" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+				<figure style="margin-top:-20px;">
+				  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Cobbles_Nash_Point.jpg" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Coastal/estuarine soils</h1>
+		<div class="container">
+			<div class="col">
+				<p style="margin-top:-20px;">Beaches</p>
+				<figure style="margin-top:-30px;">
+					<img src="https://acadiamagic.com/1200w/sand-beach-0357.jpg" style="height:220px" data-preload/>
+					<footer style="margin-top:-60px;"><small>credits: Acadia National Park</small></footer>
+				</figure>
+				<ul style="margin-top:-30px;font-size:25px">
+					<li class="fragment"> They are governed by wave currents across and along the shoreline. </li>
+					<li class="fragment"> They are usually made of uniform sand and, rarely, gravel. </li>
+					<li class="fragment"> Sediments migrate very rapidly and are deposited and acreed constantly.</li>
+					<li class="fragment"> Infiltration-exfiltration processes in the beach face regulate the erosion rate.</li>
+					<li class="fragment"> The beach profile responds quickly to sea level rise.</li>
+					<li class="fragment"> Influenced by on-shore activities.</li>
+				</ul>
+			</div>
+			<div class="col">
+				<p style="margin-top:-20px;">Estuarine soils</p>
+				<figure style="margin-top:-30px;">
+					<img src="https://zottoli.files.wordpress.com/2011/01/5-spartina-alterniflora-tall-lr-august-20-2004-a-720.jpg" style="height: 220px" data-preload/>
+					<footer style="margin-top:-60px;"><small>Credits rzotelli</small></footer>
+				</figure>
+				<ul style="margin-top:-30px;font-size:25px">
+					<li class="fragment"> They are influenced by wave and tide dominated currents. </li>
+					<li class="fragment"> Due to flow reversal, sand, silt, and clay deposits are possible.</li>
+					<li class="fragment"> In tide-dominated flooded areas, fine soils (silts and clay) are common.</li>
+					<li class="fragment"> In wave-dominated areas, sand is more common.</li>
+				</ul>
+
+
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Lacustrine/marine soils</h1>
+		<div class="container">
+			<div class="col">
+          <ul style="margin-top:-10px; font-size:37px">
+          	<li class="fragment"> They are depossited at very low flow velocities. </li>
+						<li class="fragment"> Usually they are made of fine soils and/or organic matter. </li>
+						<li class="fragment"> In lacustrine deposits, perios of flood and droughts influence the particle size and organinc content. </li>
+						<li class="fragment"> There is a significant difference between lacustrine and marine soils. The chemistry of clay particles in marine sediments is influenced by salt water. </li>
+
+          </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-53334-6_7/MediaObjects/213916_1_En_7_Fig1_HTML.jpg" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;color:black"><small>Yassoglou et al. (2017)</small></footer>
+				</figure>
+				<figure>
+				  <img src="https://ychef.files.bbci.co.uk/976x549/p09091bs.jpg" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>BBC</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Glacial deposits</h1>
+		<div class="container">
+			<div class="col">
+          <ul>
+          	<li class="fragment"> They are extremely complex.</li>
+						<li class="fragment"> These deposits can be found all around the world, not just near the poles. </li>
+						<li class="fragment"> Variety of mixed particle sizes. From clay to boulders. </li>
+						<li class="fragment"> Made of angular clasts. </li>
+          </ul>
+					<img src="https://slidetodoc.com/presentation_image/2f63ed6e50d6b8f1e39e2658792ad971/image-17.jpg" style="width:300px" data-preload/>
+			</div>
+			<div class="col">
+				<figure style="margin-top:-30px;">
+				  <img src="https://klimakaos.dk/____impro/1/onewebmedia/EmbeddedImage%20%289%29.jpg?etag=%2260242-5cdefeba%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=684%2B454&extract=0%2B0%2B684%2B451&quality=85" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>geo.libretexts.org</small></footer>
+				</figure>
+				<figure>
+				  <img src="https://www.nps.gov/common/uploads/articles/images/nri/20201001/articles/EDC1D19D-B72E-7F45-3B2E9EDB34C2760E/EDC1D19D-B72E-7F45-3B2E9EDB34C2760E.png" style="width:400px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>National Park Service</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Aeolian soils</h1>
+		<div class="container">
+			<div class="col">
+      <p style="margin-top:-15px;">Sand dunes:</p>
+			<figure style="margin-top:-45px;">
+			  <img src="https://assets.atlasobscura.com/media/W1siZiIsIjIwMjAvMTAvMDgvMTgvNDkvMDcvMmQ4NTBkY2MtNzFmMS00MGMwLWE2MzctMTcxZDllZTlhNjc5L3NwcmluZyBob3VzZSAxLmpwZyJdLFsicCIsImNvbnZlcnQiLCIiXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgODEgLWF1dG8tb3JpZW50Il0sWyJwIiwidGh1bWIiLCI2MDB4PiJdXQ" style="height:250px" data-preload/>
+			  <footer style="margin-top:-60px;"><small>Mela Heestand</small></footer>
+			</figure>
+			<ul style="margin-top:-30px;">
+				<li class="fragment"> Predominantly rounded sand-sized particles. </li>
+				<li class="fragment"> Common in arid regions and some coastal areas. </li>
+				<li class="fragment"> Different morphologies. </li>
+				<li class="fragment"> Travel pretty quickly. </li>
+			</ul>
+			</div>
+			<div class="col">
+				<p style="margin-top:-15px;"> Loess:</p>
+				<figure style="margin-top:-45px;">
+				  <img src="https://teara.govt.nz/files/p-10750-gns.jpg" style="height:250px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>teara.govt.nz</small></footer>
+				</figure>
+				<ul style="margin-top:-30px;">
+					<li class="fragment"> Accumulation of wind-blown fine sediments (silt). </li>
+					<li class="fragment"> Homogeneous, highly porous, non-stratified deposits. </li>
+					<li class="fragment"> Collapsible deposit upon saturation. </li>
+				</ul>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Colluvial deposits</h1>
+		<div class="container">
+			<div class="col">
+          <ul>
+						<li class="fragment"> Remainder of landslides and rockfall. </li>
+          	<li class="fragment">Heterogeneous deposits.  </li>
+						<li class="fragment"> Mixed particle size. </li>
+						<li class="fragment"> Indicate a zone of instability. </li>
+          </ul>
+					<figure>
+	          <img src="https://blog.ncascades.org/wp-content/uploads/2018/11/Chattermarks_OSO-cover-photo.jpg" style="width:500px" data-preload/>
+	          <footer style="margin-top:-60px;"><small>blog.ncascades.org</small></footer>
+	        </figure>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://landscape.soilweb.ca/wp-content/uploads/sites/7/2010/06/colluvial1.jpg" style="width:450px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>landscape.soilweb.ca</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Summary</h1>
+	<ul>
+		<li class="fragment"> Soil is a very complex material.</li>
+		<li class="fragment"> Soil is made up of individual solid particles. </li>
+		<li class="fragment"> Voids between particles can be filled with air and/or water. </li>
+		<li class="fragment"> Stresses at contacts between grains control strength and compressibility of the soil skeleton. </li>
+		<li class="fragment"> If shear stresses at contacts exceed the frictional resistance, particles will slide relative to each other. </li>
+	</ul>
+
+</section> -->
+
+
+
+
+
+
+
+
+
+
+				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<p style="margin-top:400px; margin-left:900px"></p>
 				</section>
 
 
@@ -274,19 +726,12 @@
   <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
-<script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
-document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
-</script>
-<script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
-	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+	document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
 	</script>
 	<script type="text/javascript">
 				 var months = ['January','February','March','April','May','June','July',
@@ -294,184 +739,190 @@ document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + 
 				var today = new Date();
 				today.setTime(today.getTime());
 		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
+		</script>
+		<script type="text/javascript">
+					 var months = ['January','February','March','April','May','June','July',
+		'August','September','October','November','December'];
+					var today = new Date();
+					today.setTime(today.getTime());
+			document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+		</script>
+	  <script src="dist/reveal.js"></script>
+	  <script src="plugin/zoom/zoom.js"></script>
+	  <script src="plugin/notes/notes.js"></script>
+	  <script src="plugin/search/search.js"></script>
+	  <script src="plugin/markdown/markdown.js"></script>
+	  <script src="plugin/highlight/highlight.js"></script>
+	  <script src="plugin/fullscreen/plugin.js"></script>
+	  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+	  <script src="plugin/chalkboard/plugin.js"></script>
+		<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+		<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+		<script src="plugin/audio-slideshow/recorder.js"></script>
+		<script src="plugin/menu/menu.js"></script> -->
+		<script src="plugin/customcontrols/plugin.js"></script>
+	  <script>
 
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/search/search.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script src="plugin/fullscreen/plugin.js"></script>
-	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-	<script src="plugin/chalkboard/plugin.js"></script>
-	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-	<script src="plugin/audio-slideshow/recorder.js"></script> -->
-	<script src="plugin/menu/menu.js"></script>
-	<script src="plugin/customcontrols/plugin.js"></script>
-	<script>
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+												pdfSeparateFragments: false});
+	    // Also available as an ES module, see:
+	    // https://revealjs.com/initialization/
+	    Reveal.initialize({
+	      dependencies: [
+	        { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+	      controls: true,
+	      progress: true,
+	      center: false,
+	      hash: true,
+	      transition: 'none',
+	      slideNumber: 'c/t',
+	      autoPlayMedia: true,
+	      width: 1280,
+	      height: 720,
+	      math: {
+	        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	        config: 'TeX-AMS_HTML-full',
+	        tex2jax: {
+	          inlineMath: [['\\(','\\)']],
+	          displayMath: [['\\[','\\]']],
+	          balanceBraces: true,
+	          processEscapes: false,
+	          processRefs: true,
+	          processEnvironments: true,
+	          preview: 'TeX',
+	          skipTags: ['script','noscript','style','textarea','pre','code'],
+	          ignoreClass: 'tex2jax_ignore',
+	          processClass: 'tex2jax_process'
+	        },
+	      },
 
-		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-											pdfSeparateFragments: false});
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-			controls: true,
-			progress: true,
-			center: false,
-			hash: true,
-			transition: 'none',
-			slideNumber: 'c/t',
-			autoPlayMedia: true,
-			width: 1280,
-			height: 720,
-			math: {
-				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-				config: 'TeX-AMS_HTML-full',
-				tex2jax: {
-					inlineMath: [['\\(','\\)']],
-					displayMath: [['\\[','\\]']],
-					balanceBraces: true,
-					processEscapes: false,
-					processRefs: true,
-					processEnvironments: true,
-					preview: 'TeX',
-					skipTags: ['script','noscript','style','textarea','pre','code'],
-					ignoreClass: 'tex2jax_ignore',
-					processClass: 'tex2jax_process'
-				},
-			},
+	      spotlight: {
 
-			spotlight: {
+	          // size of the spotlight
+	          size: 100,
 
-					// size of the spotlight
-					size: 100,
+	          // true: Locks the mouse pointer inside the presentation
+	          // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+	          // displayed regardless of the configured values
+	          lockPointerInsideCanvas: false,
 
-					// true: Locks the mouse pointer inside the presentation
-					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-					// displayed regardless of the configured values
-					lockPointerInsideCanvas: false,
+	          // toggle spotlight by holding down the mouse key
+	          toggleSpotlightOnMouseDown: false,
 
-					// toggle spotlight by holding down the mouse key
-					toggleSpotlightOnMouseDown: false,
+	          // the keyCode pressed and held to turn on spotlight, disabled when set to false
+	          // Problems with this config? Maybe your touchpad is disabled on keypress?
+	          spotlightOnKeyPressAndHold: true,
 
-					// the keyCode pressed and held to turn on spotlight, disabled when set to false
-					// Problems with this config? Maybe your touchpad is disabled on keypress?
-					spotlightOnKeyPressAndHold: true,
+	          // choose the cursor when spotlight is on. Maybe "crosshair"?
+	          spotlightCursor: 'default',
 
-					// choose the cursor when spotlight is on. Maybe "crosshair"?
-					spotlightCursor: 'default',
+	          // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+	          presentingCursor: 'default',
 
-					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-					presentingCursor: 'default',
+	          // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+	          initialPresentationMode: true,
 
-					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-					initialPresentationMode: true,
+	          // true: disable selecting in presentation mode
+	          disablingUserSelect: false,
 
-					// true: disable selecting in presentation mode
-					disablingUserSelect: false,
+	          // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+	          fadeInAndOut: 100,
 
-					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-					fadeInAndOut: 100,
+	          // enable pointer mode
+	          useAsPointer: false,
 
-					// enable pointer mode
-					useAsPointer: false,
+	          // pointer color (If pointer mode enabled)
+	          pointerColor: 'red'
+	      },
 
-					// pointer color (If pointer mode enabled)
-					pointerColor: 'red'
-			},
+	      keyboard: {
+	          // alternative to toggleSpotlightOnMouseDown:
+	          // toggle spotlight by pressing key 'c'
+	          32: function() { RevealSpotlight.toggleSpotlight() },
 
-			keyboard: {
-					// alternative to toggleSpotlightOnMouseDown:
-					// toggle spotlight by pressing key 'c'
-					32: function() { RevealSpotlight.toggleSpotlight() },
+	          // enter/leave presentation mode by pressing key 'p'
+	          80: function() {
+	            RevealSpotlight.togglePresentationMode();
+	          },
+	      },
 
-					// enter/leave presentation mode by pressing key 'p'
-					80: function() {
-						RevealSpotlight.togglePresentationMode();
-					},
-			},
+	      // Push each slide change to the browser history
+	      history: true,
 
-			// Push each slide change to the browser history
-			history: true,
+	// 			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	// 				themes: false,
+	// 				transitions: false,
+	// 				markers: true,
+	// 				hideMissingTitles: true,
+	// 				custom: [
+	// 									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+	// 									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+	// 							]
+	// 			},
+	//
+	// 			audio: {
+	// 					prefix: 'chalkboard/',
+	// 					suffix: '.ogg',
+	// 					defaultDuration: 5,
+	// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+	// 					advance: 500,
+	// 					autoplay: false,
+	// 					defaultText: true,
+	// 					playerOpacity: 0.2,
+	// 				},
+	      // ...
+				chalkboard: {
+				        boardmarkerWidth: 3,
+				        chalkWidth: 7,
+				        chalkEffect: 1.0,
+								src: "chalkboard.json",
+								storage: "chalkboard-demo",
+				        readOnly: undefined,
+				        transition: 800,
+				        theme: "chalkboard",
+				        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				        grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				        eraser: { src: path + 'img/sponge.png', radius: 20},
+				        boardmarkers : [
+				                { color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+				                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+				                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+				                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+				                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+				                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+				                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				        ],
+				        chalks: [
+				                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+				                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+				                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+				                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+				                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+				                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+				                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				        ]
+				    },
+				    customcontrols: {
+				  		controls: [
+				  			{ icon: '<i class="fa fa-pen-square"></i>',
+				  			  title: 'Toggle chalkboard (B)',
+				  			  action: 'RevealChalkboard.toggleChalkboard();'
+				  			},
+				  			{ icon: '<i class="fa fa-pen"></i>',
+				  			  title: 'Toggle notes canvas (C)',
+				  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+				  			}
+				  		]
+				    },
 
-			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-				themes: false,
-				transitions: false,
-				markers: true,
-				hideMissingTitles: true,
-				custom: [
-									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-							]
-			},
-//
-// 			audio: {
-// 					prefix: 'chalkboard/',
-// 					suffix: '.ogg',
-// 					defaultDuration: 5,
-// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
-// 					advance: 500,
-// 					autoplay: false,
-// 					defaultText: true,
-// 					playerOpacity: 0.2,
-// 				},
-			// ...
-			chalkboard: {
-							boardmarkerWidth: 3,
-							chalkWidth: 5,
-							chalkEffect: 0.05,
-							src: "chalkboard.json",
-							// storage: ,
-							readOnly: false,
-							transition: 800,
-							theme: "chalkboard",
-							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-							eraser: { src: path + 'img/sponge.png', radius: 20},
-							boardmarkers : [
-											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-							],
-							chalks: [
-											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-							]
-					},
-					customcontrols: {
-						controls: [
-							{ icon: '<i class="fa fa-pen-square"></i>',
-								title: 'Toggle chalkboard (B)',
-								action: 'RevealChalkboard.toggleChalkboard();'
-							},
-							{ icon: '<i class="fa fa-pen"></i>',
-								title: 'Toggle notes canvas (C)',
-								action: 'RevealChalkboard.toggleNotesCanvas();'
-							}
-						]
-					},
+	        // ...
+	      //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	      // Learn about plugins: https://revealjs.com/plugins/
+	      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
+									],
+	                  // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+			    });
 
-				// ...
-			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
-								],
-									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-				});
-
-	</script>
+	  </script>
 
 </html>
