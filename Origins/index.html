@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Lecture</title>
-
+	
+		<title>CIE-365: Soil origins</title>
+	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
@@ -14,54 +14,69 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
 	</head>
-  <body>
-
-    <div class="reveal">
-
-      <div class="slides">
-				<style>
-				.container{
-						display: flex;
-				}
-				.col{
-						flex: 1;
-				}
-				</style>
-
-				<div class='footer'>
-					CIE-365
-					Spring 2022
-				</div>
-
-				<style>
-				.reveal .slides section .fragment.fade-down {
-						opacity: 1;
-						visibility: visible;
-				}
-				.reveal .slides section .fragment.fade-down.visible,
-				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 1;
-						margin-top:0px;
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
 					}
-				.reveal .slides section .fragment.fade-down,
-				.reveal .slides section .fragment.current-fragment {
-						color: #fff;
-						margin-top:0px;
-				}
-
-
-			</style>
+					.col{
+							flex: 1;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-365
+						Spring 2023
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 0.7;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
 				<!-- <section> -->
         <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Module 1: The geological cycle and the origin of soils">
+					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Module 1: The origin of soils">
 						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Spring 2022</p>
+						<p style="color:#faffff; font-size:35px">Spring 2023</p>
 						<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 					</div>
         </section>
 
-
+<!-- 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Course contents and schedule</h1>
 					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
@@ -81,7 +96,7 @@
 				          <iframe src="FiguresGeneral/HMA1v1.pdf" width="600" height=700></iframe>
 							</div>
 						</div>
-				</section>
+				</section> -->
 
 
 
@@ -89,18 +104,47 @@
 
 
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Contents</h1>
-					<ul>
-						<li>What is soil mechanics?</li>
-						<li>The geological cycle</li>
-						<li>Transported soils</li>
-						<li>Residual soils</li>
+			<h1>Contents</h1>
+			<div class="container">
+				<div class="col">
+					<ul class="contentStyle">
+						<li class="l1">What is soil mechanics?</li>
+						<li class="l1">History of soil mechanics</li>
+						<li class="l1">Origin of soils</li>
+						<li class="l1">Soil deposits</li>
+						<li class="l1">Site investigation</li>
 					</ul>
+				</div>
+				<div class="col">
+					<div class="container">
+						<div class="col">
+							<div class="stickynote" style="margin-top:50px; margin-left: 10px;">
+								<p>Objectives covered in this lecture</p>
+								<ul>
+									<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+								</ul>
+							</div>
+						</div>
+						<div class="col">
+							<div class="stickynote" style="margin-top:50px; margin-left: 0px;">
+								<p>After this lecture we will be able to:</p>
+								<ul>
+									<li>Describe the origins of soils. </li>
+									<li>Describe some soil deposits.</li>
+									<li>Describe the complexities of site investigation.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
 
         </section>
 
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 
 					<p style="margin-top:240px; font-size:60px">Is there any structure or moving machine that doesn't interact with geological materials?</p>
 
@@ -111,106 +155,67 @@
 					  <img src="https://cdn.mos.cms.futurecdn.net/fKZ2vtNGzTxa93C7KfaeRh-1024-80.jpg" style="height:700px" data-preload/>
 					  <footer style="margin-top:-60px;"><small>credits: Shutterstock</small></footer>
 					</figure>
-				</section>
+				</section> -->
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<section data-fullscreen>
 						<iframe class="stretch" src="FiguresGeneral/Infrastructure.svg" ></iframe>
 					</section>
+				</section>				
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Soil mechanics</h1>
+
+					<ul>	
+						<li class="fragment"> According to Holtz et al (2002):
+							<p>"Is the branch of <span class="atb" >geotechnical engineering</span>. concerned with the engineering <span class="atb">mechanics and properties of soils</span>".</p>
+						 </li>
+						 <li class="fragment">  Soil mechanics integrates <span class="atb">kinematics, dynamics, fluid mechanics, and material mechanics to soils</span>. Soil, rather than water, steel, or concrete, becomes the engineering material whose properties and behavior we must understand to build with or upon it (Holtz et al. 2002).</li>
+						 <li class="fragment"> We can add: <span class="atb">to protect our society from geohazards</span>. </li>
+					</ul>
+
 				</section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<section data-fullscreen>
-						<iframe class="stretch" src="https://www.youtube.com/embed/DopB8CtSn3E?autoplay=1" ></iframe>
+						<iframe class="stretch" src="https://www.youtube.com/embed/DopB8CtSn3E?autoplay=0" ></iframe>
 					</section>
 				</section>
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<section data-fullscreen>
 						<iframe class="stretch" src="https://www.youtube.com/embed/LgDQsYAcS3o?autoplay=1" ></iframe>
 					</section>
-				</section>
+				</section> -->
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<section data-fullscreen>
-						<iframe class="stretch" src="https://www.youtube.com/embed/sKZUZQytads?autoplay=1" ></iframe>
+						<iframe class="stretch" src="https://www.youtube.com/embed/sKZUZQytads?autoplay=0" ></iframe>
 					</section>
 				</section>
 
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<section data-fullscreen>
 						<iframe class="stretch" src="https://www.youtube.com/embed/q1N6JjwI-jw?autoplay=1" ></iframe>
 					</section>
 
-				</section>
+				</section> -->
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<p style="margin-top:300px;">Geology matters, and we need to understand soil and rock mechanics.</p>
+					<img src="https://i.kym-cdn.com/entries/icons/facebook/000/029/718/Untitled.jpg" width="90%">
+					<p style="margin-top: -600px; margin-left: 100px; width: 80%; color: #fff;">I DON'T WANT TO ALARM YOU, BUT THE PRESUMPSCOT CLAY FORMATION IS SIMILAR TO THE RISA SOIL DEPOSITS</p>
 				</section>
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Soil mechanics</h1>
-
-					<ul>
-						<li class="fragment"> Is a fundamental discipline of geotechnical engineering. </li>
-						<li class="fragment"> According to Holtz et al (2002):
-							<p>"Is the branch of geotechnical engineering concerned with the engineering mechanics and properties of soils".</p>
-						 </li>
-						 <li class="fragment">  Soil mechanics integrates kinematics, dynamics, fluid mechanics, and material mechanics to soils. Soil, rather than water, steel, or concrete, becomes the engineering material whose properties and behavior we must understand to build with or upon it (Holtz et al. 2002).</li>
-						 <li class="fragment"> We can add: to protect our society from geohazards. </li>
-					</ul>
-
-				</section>
-
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Soil mechanics</h1>
-						<p>What is a key difference between these materials?</p>
-						<div class="container">
-							<div class="col">
-				          <figure>
-				            <img src="https://www.thespruce.com/thmb/kOo5P2B71T91yxam_471-RQraow=/2124x1412/filters:fill(auto,1)/concrete_mix-692096736-5af8a50ea9d4f90036623585.jpg" style="height:300px" data-preload/>
-				            <footer style="margin-top:-60px;"><small>credits: thespruce.com</small></footer>
-				          </figure>
-							</div>
-							<div class="col">
-								<figure>
-								  <img src="https://www.steelsupplylp.com/uploads/general/_508x304_crop_top-center_100_none/40760/homepage-ss-store-callout-background.jpg" style="height:300px" data-preload/>
-								  <footer style="margin-top:-60px;"><small>credits: steelsupply.com</small></footer>
-								</figure>
-							</div>
-							<div class="col">
-							    <figure>
-							      <img src="https://theconstructor.org/wp-content/uploads/2011/12/Soil-Samples-Collected.jpg" style="height:300px" data-preload/>
-							      <footer style="margin-top:-60px;"><small>credits: theconstructor.com</small></footer>
-							    </figure>
-							</div>
-						</div>
-						<p class="fragment">Concrete and steel are prescribed materials. Soils are natural and not prescribed. We must investigate and characterize them first! </p>
-				</section>
-
-
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Soil mechanics</h1>
-					<ul style="margin-top:100fpx;">
-						<li class="fragment">We assume some materials are CHILE: continous, homogeneous, isotropic, linear-elastic. </li>
-						<li class="fragment">Soils are DIANE materials: discontinous, inhomogeneous, anysotropic, non-elastic. </li>
-						<li class="fragment">Soil heterogeneity makes soil mechanics complex. </li>
-						<li class="fragment"> Soil mechanics is highly empirical. </li>
-					</ul>
-				</section>
-
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>The geological cycle</h1>
 					<div class="r-stack">
 						<img class="fragment" src="https://assets.sutori.com/user-uploads/image/21d2cc63-67c7-4357-8acc-3edaa214a2e3/660a4c7ff0c0a567b05cf014ca862160.png" style="height:600px"/>
 						<img class="fragment" src="https://media0.giphy.com/media/GrsGN4NyUkOuk/giphy-downsized-large.gif" style="height:600px"/>
 					</div>
-				</section>
+				</section> -->
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Earth's structure</h1>
 						<div class="container">
 							<div class="col">
@@ -231,18 +236,18 @@
 
 							</div>
 						</div>
-				</section>
+				</section> -->
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Plate tectonics</h1>
 				 <figure style="margin-top:-30px;">
 				   <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/bab3009c-eb31-4e00-b264-5bc05eddd20e/ess2650-fig-0001-m.jpg" style="height:600px" data-preload/>
 				   <footer style="margin-top:-80px;"><small>Scotese and van der Plujim (2020)</small></footer>
 				 </figure>
-				</section>
+				</section> -->
 
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Plate tectonics</h1>
 						<div class="container">
 							<div class="col">
@@ -267,9 +272,9 @@
 								</figure>
 							</div>
 						</div>
-				</section>
+				</section> -->
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Igneous rocks</h1>
 					<h4>Intrusive</h4>
 					<div class="h-stack" style="margin-top:-30px;">
@@ -280,18 +285,18 @@
 					<div class="h-stack" style="margin-top:-30px;">
 						<img src="https://i.gifer.com/XH2.gif" style="height:250px"/>
 						<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Mid-ocean_ridge_topography.gif" style="height:250px"/>
-						<!-- <figure>
+						<figure>
 
 							<footer style="margin-top:-60px;"><small></small></footer>
 						</figure>
 						<figure>
 
 							<footer style="margin-top:-60px;"><small></small></footer>
-						</figure> -->
+						</figure>
 					</div>
-				</section>
+				</section> -->
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Igneous rocks</h1>
 						<p style="margin-top:0px;">Formed by cooling magma/lava, producing crystalization of the rock minerals (mica, feldspar, quartz, etc.).</p>
 						<div class="container">
@@ -316,11 +321,11 @@
 
 							</div>
 						</div>
-				</section>
+				</section> -->
 
 
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Igneous rocks</h1>
 						<div class="container">
 							<div class="col">
@@ -338,7 +343,9 @@
 								</figure>
 							</div>
 						</div>
-				</section>
+				</section> -->
+
+
 
 
 
@@ -694,28 +701,34 @@
 
 </section> -->
 
-
-
-
-
-
-
-
-
-
-				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<p style="margin-top:400px; margin-left:900px"></p>
-				</section>
-
-
-
-
-
-
-
-
-
-
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Soil mechanics</h1>
+		<p>What is a key difference between these materials?</p>
+		<div class="container">
+			<div class="col">
+		  <figure>
+			<img src="https://www.thespruce.com/thmb/kOo5P2B71T91yxam_471-RQraow=/2124x1412/filters:fill(auto,1)/concrete_mix-692096736-5af8a50ea9d4f90036623585.jpg" style="height:300px" data-preload/>
+			<footer style="margin-top:-60px;"><small>credits: thespruce.com</small></footer>
+		  </figure>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://www.steelsupplylp.com/uploads/general/_508x304_crop_top-center_100_none/40760/homepage-ss-store-callout-background.jpg" style="height:300px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>credits: steelsupply.com</small></footer>
+				</figure>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://theconstructor.org/wp-content/uploads/2011/12/Soil-Samples-Collected.jpg" style="height:300px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>credits: theconstructor.com</small></footer>
+				</figure>
+			</div>
+		</div>
+		<p class="fragment">Concrete and steel are prescribed materials. Soils are natural and not prescribed. We must investigate and characterize them first! </p>
+</section>
+			<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+				<p style="margin-top:400px; margin-left:900px"></p>
+			</section>
       </div>
     </div>
   </body>
@@ -726,203 +739,208 @@
   <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
-	<script type="text/javascript">
-				 var months = ['January','February','March','April','May','June','July',
-	'August','September','October','November','December'];
-				var today = new Date();
-				today.setTime(today.getTime());
-	document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
-	</script>
-	<script type="text/javascript">
-				 var months = ['January','February','March','April','May','June','July',
-	'August','September','October','November','December'];
-				var today = new Date();
-				today.setTime(today.getTime());
-		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-		</script>
-		<script type="text/javascript">
-					 var months = ['January','February','March','April','May','June','July',
-		'August','September','October','November','December'];
-					var today = new Date();
-					today.setTime(today.getTime());
-			document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-		</script>
-	  <script src="dist/reveal.js"></script>
-	  <script src="plugin/zoom/zoom.js"></script>
-	  <script src="plugin/notes/notes.js"></script>
-	  <script src="plugin/search/search.js"></script>
-	  <script src="plugin/markdown/markdown.js"></script>
-	  <script src="plugin/highlight/highlight.js"></script>
-	  <script src="plugin/fullscreen/plugin.js"></script>
-	  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-	  <script src="plugin/chalkboard/plugin.js"></script>
-		<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-		<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-		<script src="plugin/audio-slideshow/recorder.js"></script>
-		<script src="plugin/menu/menu.js"></script> -->
-		<script src="plugin/customcontrols/plugin.js"></script>
-	  <script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
 
-			Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-												pdfSeparateFragments: false});
-	    // Also available as an ES module, see:
-	    // https://revealjs.com/initialization/
-	    Reveal.initialize({
-	      dependencies: [
-	        { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-	      controls: true,
-	      progress: true,
-	      center: false,
-	      hash: true,
-	      transition: 'none',
-	      slideNumber: 'c/t',
-	      autoPlayMedia: true,
-	      width: 1280,
-	      height: 720,
-	      math: {
-	        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-	        config: 'TeX-AMS_HTML-full',
-	        tex2jax: {
-	          inlineMath: [['\\(','\\)']],
-	          displayMath: [['\\[','\\]']],
-	          balanceBraces: true,
-	          processEscapes: false,
-	          processRefs: true,
-	          processEnvironments: true,
-	          preview: 'TeX',
-	          skipTags: ['script','noscript','style','textarea','pre','code'],
-	          ignoreClass: 'tex2jax_ignore',
-	          processClass: 'tex2jax_process'
-	        },
-	      },
 
-	      spotlight: {
 
-	          // size of the spotlight
-	          size: 100,
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
 
-	          // true: Locks the mouse pointer inside the presentation
-	          // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-	          // displayed regardless of the configured values
-	          lockPointerInsideCanvas: false,
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
 
-	          // toggle spotlight by holding down the mouse key
-	          toggleSpotlightOnMouseDown: false,
+   spotlight: {
 
-	          // the keyCode pressed and held to turn on spotlight, disabled when set to false
-	          // Problems with this config? Maybe your touchpad is disabled on keypress?
-	          spotlightOnKeyPressAndHold: true,
+		   // size of the spotlight
+		   size: 100,
 
-	          // choose the cursor when spotlight is on. Maybe "crosshair"?
-	          spotlightCursor: 'default',
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
 
-	          // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-	          presentingCursor: 'default',
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
 
-	          // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-	          initialPresentationMode: true,
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
 
-	          // true: disable selecting in presentation mode
-	          disablingUserSelect: false,
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
 
-	          // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-	          fadeInAndOut: 100,
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
 
-	          // enable pointer mode
-	          useAsPointer: false,
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
 
-	          // pointer color (If pointer mode enabled)
-	          pointerColor: 'red'
-	      },
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
 
-	      keyboard: {
-	          // alternative to toggleSpotlightOnMouseDown:
-	          // toggle spotlight by pressing key 'c'
-	          32: function() { RevealSpotlight.toggleSpotlight() },
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
 
-	          // enter/leave presentation mode by pressing key 'p'
-	          80: function() {
-	            RevealSpotlight.togglePresentationMode();
-	          },
-	      },
+		   // enable pointer mode
+		   useAsPointer: false,
 
-	      // Push each slide change to the browser history
-	      history: true,
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
 
-	// 			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-	// 				themes: false,
-	// 				transitions: false,
-	// 				markers: true,
-	// 				hideMissingTitles: true,
-	// 				custom: [
-	// 									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-	// 									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-	// 							]
-	// 			},
-	//
-	// 			audio: {
-	// 					prefix: 'chalkboard/',
-	// 					suffix: '.ogg',
-	// 					defaultDuration: 5,
-	// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
-	// 					advance: 500,
-	// 					autoplay: false,
-	// 					defaultText: true,
-	// 					playerOpacity: 0.2,
-	// 				},
-	      // ...
-				chalkboard: {
-				        boardmarkerWidth: 3,
-				        chalkWidth: 7,
-				        chalkEffect: 1.0,
-								src: "chalkboard.json",
-								storage: "chalkboard-demo",
-				        readOnly: undefined,
-				        transition: 800,
-				        theme: "chalkboard",
-				        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-				        grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-				        eraser: { src: path + 'img/sponge.png', radius: 20},
-				        boardmarkers : [
-				                { color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-				                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-				                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-				                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-				                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-				                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-				                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-				        ],
-				        chalks: [
-				                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-				                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-				                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-				                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-				                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-				                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-				                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-				        ]
-				    },
-				    customcontrols: {
-				  		controls: [
-				  			{ icon: '<i class="fa fa-pen-square"></i>',
-				  			  title: 'Toggle chalkboard (B)',
-				  			  action: 'RevealChalkboard.toggleChalkboard();'
-				  			},
-				  			{ icon: '<i class="fa fa-pen"></i>',
-				  			  title: 'Toggle notes canvas (C)',
-				  			  action: 'RevealChalkboard.toggleNotesCanvas();'
-				  			}
-				  		]
-				    },
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
 
-	        // ...
-	      //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-	      // Learn about plugins: https://revealjs.com/plugins/
-	      plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard,
-									],
-	                  // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-			    });
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
 
-	  </script>
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
 
 </html>
