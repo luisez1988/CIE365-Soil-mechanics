@@ -265,6 +265,58 @@ li.l1:nth-child(even){
 
 }
 
+.reveal ul.iClicker,
+.reveal ol.iClicker{
+  /* list-style-type: upper-alpha; */
+  list-style: none;
+}
+li.l2 {
+  background: #a05fd4;
+  color: #fff;
+  counter-increment: myCounter;
+  margin: 0 0 7px 0;
+  padding: 10px;
+  position: relative;
+  top: 1em;
+  border-radius:  0em 1em 1em 0em;
+  padding-left: 2em;
+  font-size: 1em;  
+}
+li.l2:before{
+  content: counter(myCounter, upper-alpha);
+  display: inline-block;  
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1em;
+  background-color:  #6b77ff;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute; 
+  top: -2px;
+  left: -40px;
+  border-radius: 10%;
+  border: 5px solid rgb(0, 0, 0);
+  font-family:  EB Garamond;
+}
+
+
+li.l2:nth-child(even){
+  background-color: #accf94;
+}
+
+.reveal .stickynote {
+  text-decoration:none;
+  color:#000;
+  background:rgb(245, 223, 125);
+  display:block;
+  height:15em;
+  width:12em;
+  padding:1em;  
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  font-size: 0.5em;  
+
+}
+
 
 .reveal blockquote {
   display: block;
