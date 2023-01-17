@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1366"
-   height="768"
-   viewBox="0 0 1366 768"
+   width="915.00232"
+   height="725.03448"
+   viewBox="0 0 915.00232 725.03448"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="0.83854165"
-     inkscape:cx="611.18014"
-     inkscape:cy="422.1615"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="-9"
+     inkscape:cx="599.25467"
+     inkscape:cy="398.90684"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
@@ -42,31 +42,31 @@
       <title
          id="title76852">ios-sunny</title>
       <path
-         d="M15.438 6h1.125v3.5h-1.125v-3.5z"
+         d="m 15.438,6 h 1.125 v 3.5 h -1.125 z"
          id="path76854" />
       <path
-         d="M15.438 22.25h1.125v3.75h-1.125v-3.75z"
+         d="m 15.438,22.25 h 1.125 V 26 h -1.125 z"
          id="path76856" />
       <path
-         d="M22.5 15.438h3.5v1.125h-3.5v-1.125z"
+         d="M 22.5,15.438 H 26 v 1.125 h -3.5 z"
          id="path76858" />
       <path
-         d="M6 15.438h3.75v1.125h-3.75v-1.125z"
+         d="m 6,15.438 h 3.75 v 1.125 H 6 Z"
          id="path76860" />
       <path
-         d="M23.141 22.018l-0.742 0.742-2.112-2.112 0.742-0.742 2.112 2.112z"
+         d="m 23.141,22.018 -0.742,0.742 -2.112,-2.112 0.742,-0.742 z"
          id="path76862" />
       <path
-         d="M12.097 10.967l-0.742 0.742-2.117-2.117 0.742-0.742 2.117 2.117z"
+         d="M 12.097,10.967 11.355,11.709 9.238,9.592 9.98,8.85 Z"
          id="path76864" />
       <path
-         d="M22.396 8.859l0.742 0.742-2.112 2.112-0.742-0.742 2.112-2.112z"
+         d="m 22.396,8.859 0.742,0.742 -2.112,2.112 -0.742,-0.742 z"
          id="path76866" />
       <path
-         d="M11.348 19.9l0.742 0.743-2.117 2.117-0.742-0.743 2.117-2.117z"
+         d="M 11.348,19.9 12.09,20.643 9.973,22.76 9.231,22.017 Z"
          id="path76868" />
       <path
-         d="M16 20.738c-2.613 0-4.738-2.125-4.738-4.738s2.125-4.738 4.738-4.738c2.613 0 4.738 2.125 4.738 4.738s-2.125 4.738-4.738 4.738z"
+         d="m 16,20.738 c -2.613,0 -4.738,-2.125 -4.738,-4.738 0,-2.613 2.125,-4.738 4.738,-4.738 2.613,0 4.738,2.125 4.738,4.738 0,2.613 -2.125,4.738 -4.738,4.738 z"
          id="path76870" />
     </symbol>
     <clipPath
@@ -93,7 +93,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-12.521732,-24.374959)">
     <rect
        style="fill:#b4c8e2;stroke:none;stroke-width:3.26929;stroke-linecap:round;stroke-linejoin:round"
        id="rect961"
@@ -121,7 +122,7 @@
        id="path1232"
        inkscape:flatsided="true"
        sodipodi:sides="3"
-       sodipodi:cx="44.124219"
+       sodipodi:cx="44.124218"
        sodipodi:cy="412.02484"
        sodipodi:r1="13.131557"
        sodipodi:r2="6.5657787"
