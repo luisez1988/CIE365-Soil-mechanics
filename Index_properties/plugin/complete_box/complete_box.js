@@ -4,6 +4,7 @@ const audio_src= new Audio("https://cdn.pixabay.com/download/audio/2022/03/10/au
 const boxes = document.getElementsByClassName("atb");
 const boxpressed = e => {
     audio_src.play()
+    audio_src.volume=.5
     caption=e.target.textContent; 
     widthEl=getComputedStyle(e.target).width;
     heightEl=getComputedStyle(e.target).height;

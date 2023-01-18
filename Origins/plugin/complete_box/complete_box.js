@@ -2,8 +2,9 @@ var captionLength = 0;
 var caption = '';
 const audio_src= new Audio("https://cdn.pixabay.com/download/audio/2022/03/10/audio_7eef141153.mp3?filename=chalk-on-chalkboard-32542.mp3")
 const boxes = document.getElementsByClassName("atb");
-const boxpressed = e => {
+const boxpressed = e => {    
     audio_src.play()
+    audio_src.volume=.5
     caption=e.target.textContent; 
     widthEl=getComputedStyle(e.target).width;
     heightEl=getComputedStyle(e.target).height;
