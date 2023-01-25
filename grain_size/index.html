@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Lecture</title>
-
+	
+		<title>CIE-365: Phase relationships</title>
+	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
@@ -14,88 +14,87 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
 	</head>
-  <body>
-
-    <div class="reveal">
-
-      <div class="slides">
-				<style>
-				.container{
-						display: flex;
-				}
-				.col{
-						flex: 1;
-				}
-				</style>
-
-				<div class='footer'>
-					CIE-365
-					Spring 2022
-				</div>
-
-				<style>
-				.reveal .slides section .fragment.fade-down {
-						opacity: 1;
-						visibility: visible;
-				}
-				.reveal .slides section .fragment.fade-down.visible,
-				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 1;
-						margin-top:0px;
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
 					}
-				.reveal .slides section .fragment.fade-down,
-				.reveal .slides section .fragment.current-fragment {
-						color: #fff;
-						margin-top:0px;
-				}
-
-
-			</style>
-				<!-- <section> -->
-        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Module 2: Index properties (Part 2)">
-						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Spring 2022</p>
-						<p style="color:#faffff; font-size:35px">January 28, 2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					.col{
+							flex: 1;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-365
+						Spring 2023
 					</div>
-        </section>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/161BshRbky6LpE0930DX3cZcjCgrhgVrE/view?usp=share_link"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Index properties and GSD">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Spring 2023</p>
+				<p style="color:#faffff; font-size:35px"> January 28, 2023</p>
+				<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+			</div>
 
 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Course contents and schedule</h1>
-					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
-				</section>
+		</section>
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Recap</h1>
-						<ul>
-							<li class="fragment"> We discussed phase diagrams and their use.</li>
-							<li class="fragment"> Three possible saturation states: Dry, partially saturated, and fully saturated. </li>
-							<li class="fragment"> We learned to measure soil voids using void ratio and porosity.</li>
-							<li class="fragment"> We learned to measure water in soils using saturation, gravimetric, and volumetric water content.</li>
-							<li class="fragment"> We derived expressions relating unit weights, saturation, void ratio, and water content.</li>
-							<li class="fragment"> Today we will learn about sieve analysis and Atterberg limits. </li>
-						</ul>
-				</section>
-
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Homework assignment 2</h1>
-						<div class="container">
-							<div class="col">
-								<ul>
-									<li>Due on 02/09/2022.</li>
-									<li>80 points total.</li>
-									<li>Start ASAP.</li>
-								</ul>
-							</div>
-							<div class="col">
-				         <iframe src="FiguresGeneral/HMA2.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
-							</div>
-						</div>
-				</section>
-
+		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+			<h1>Recap</h1>
+				<ul>
+					<li class="fragment"> We discussed phase diagrams and their use.</li>
+					<li class="fragment"> Three possible saturation states: Dry, partially saturated, and fully saturated. </li>
+					<li class="fragment"> We learned to measure soil voids using void ratio and porosity.</li>
+					<li class="fragment"> We learned to measure water in soils using saturation, gravimetric, and volumetric water content.</li>
+					<li class="fragment"> We derived expressions relating unit weights, saturation, void ratio, and water content.</li>
+					<li class="fragment"> Today we will learn about sieve analysis and Atterberg limits. </li>
+				</ul>
+		</section>
 
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
