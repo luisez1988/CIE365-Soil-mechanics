@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
-		<title>CIE-365: Phase relationships</title>
+		<title>CIE-365: Grain size distribution</title>
 	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -71,13 +71,13 @@
 		<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-				<div class="qrCode" name="https://drive.google.com/file/d/161BshRbky6LpE0930DX3cZcjCgrhgVrE/view?usp=share_link"> </div>
+				<div class="qrCode" name="https://drive.google.com/file/d/1ZwNHsMXBnJdyb1o8hdpiR4ZCIGskeE7z/view?usp=sharing"> </div>
 			</div>
 
-			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Index properties and GSD">
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Grain size distribution">
 				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 				<p style="color:#faffff; font-size:35px">Spring 2023</p>
-				<p style="color:#faffff; font-size:35px"> January 28, 2023</p>
+				<p style="color:#faffff; font-size:35px"> January 30, 2023</p>
 				<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
 			</div>
 
@@ -98,11 +98,11 @@
 					<div class='container'>
 					<div class='col'>
 						<ul class="contentStyle">
-							<li class="l1">Grain size distribution (GSD)</li>							
-							<li class="l1">Specific surface</li>
+							<li class="l1">Sieve and hydrometer analysis.</li>							
+							<li class="l1">Soil fractions</li>
 							<li class="l1">Clay mineralogy</li>
-							<li class="l1">Atterberg limits and activity</li>
-							<li class="l1">Soil classification</li>
+							<li class="l1">Grain size metrics</li>
+							<li class="l1">Gradation coefficients</li>
 						</ul>	
 					</div>
 					<div class='col'>
@@ -121,7 +121,8 @@
 					<ul>
 						<li>Plot a grain size distribution curve. </li>
 						<li>Determine the fractions of soil according to grain size.</li>
-						<li>Approximate the specific surface of soil particles.</li>
+						<li>Determine particle sizes and the gradation coefficients.</li>
+						<!-- <li>Approximate the specific surface of soil particles.</li> -->
 						<!-- <li>Describe different clay mineralogy properties.</li>
 						<li>Calculate Atterberg limits and the activity of soils.</li>
 						<li>Classify soils according to the USCS and AASHTO.</li> -->
@@ -430,7 +431,7 @@ When dealing with GSD data we will need an interpolation formula to obtain the s
 <div class='col'>
 <div class="fragment"> <p>Thus a linear interpolation in log space can resolve this issue:</p>
 <div class='equationBox' style="font-size: 0.8em;">
-<p> \( \log (D_x/d_i) = -\cfrac{\log (d_{i+1}/d_i) }{P_{P,i}-P_{P,i+1}} (x-P_{P,i})\) </p>
+<p> \( \log (D_x/d_i) = \cfrac{\log (d_{i}/d_{i+1}) }{P_{P,i}-P_{P,i+1}} (x-P_{P,i})\) </p>
 </div>
 </div>
 </div>
@@ -439,24 +440,44 @@ When dealing with GSD data we will need an interpolation formula to obtain the s
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Example 2.8</h1>
-	<p>Determine the gradation coefficients of the soil used in Example 2.7</p>
+	<p>Determine the <strong style='color:#7abbe6'>gradation coefficients</strong> and the <strong style='color:#7abbe6'> median grain size</strong> of the soil used in Example 2.7</p>
 	<p><a href="#12">Go to Jupyter Notebook</a></p>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Particle shape</h1>
-	<figure>
-	  <img src="https://www.researchgate.net/profile/Katia-Bicalho/publication/318945021/figure/fig1/AS:563427752017920@1511343052406/Examples-of-particle-shape-characterization-Powers-1953-McLane-1995.png" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small>Powers (1953)</small></footer>
+	<div class='textBox' style='margin-top: -20px;margin-left: 0px;'>
+	Particle shape plays an important role on the <span class='atb'>shear strength</span> of soils, particularly of <span class='atb'>coarse soils</span>. Particle shape can be visually classified using Powers (1953) scheme.
+	</div>
+	<figure style="margin-top: -20px;">
+	  <img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" style="width:70%" data-preload/>	  
 	</figure>
 </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 2.8</h1>
+<p>What is the shape classification of the sand shown in the picture below?</p>
+<div class="h-stack">
+<img src="https://microscopyofnature.com/sites/default/files/styles/afbeelding_paragraph_/public/2022-06/Wit-zand-Australi%C3%AB-Leitz-4_0.jpg?itok=wyRxbGzD" height="300px">
+<img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" height="300px">
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Quiz 2.9</h1>
+	<p>What is the shape classification of the sand shown in the picture below?</p>
+	<div class="h-stack">
+	<img src="https://www.intelligentliving.co/wp-content/uploads/2019/04/sandmagnified.jpg" height="300px">
+	<img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" height="300px">
+	</div>
+	</section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Particle shape</h1>
 	<img src="FiguresGeneral/photos.svg" style="margin-top:-10px;">
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Specific surface</h1>
 		<div class="container">
 			<div class="col">
@@ -533,7 +554,7 @@ When dealing with GSD data we will need an interpolation formula to obtain the s
           </ul>
 			</div>
 		</div>
-</section>
+</section> -->
 
 <!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<section data-fullscreen>
@@ -542,7 +563,7 @@ When dealing with GSD data we will need an interpolation formula to obtain the s
 
 </section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Consistency limits</h1>
 		<div class="container">
 			<div class="col">
@@ -785,7 +806,7 @@ When dealing with GSD data we will need an interpolation formula to obtain the s
 	<section data-fullscreen>
 		<iframe class="stretch" src="https://en.wikipedia.org/wiki/AASHTO_Soil_Classification_System" data-preload></iframe>
 	</section>
-</section>
+</section> -->
 
     <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
