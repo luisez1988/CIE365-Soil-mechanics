@@ -1,0 +1,1039 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>CIE-365: Grain size distribution</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: 1;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-365
+						Spring 2023
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1ZwNHsMXBnJdyb1o8hdpiR4ZCIGskeE7z/view?usp=sharing"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Grain size distribution">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Spring 2023</p>
+				<p style="color:#faffff; font-size:35px"> January 30, 2023</p>
+				<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+			</div>
+
+
+		</section>
+
+		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+			<h1>Recap</h1>
+				<ul>
+					<li class="fragment"> We learned how to calculate the bulk, dry, saturated, and buoyant unit weight of soil.</li>
+					<li class="fragment"> We learned how to calculate water content and degree of saturation. </li>
+					<li class="fragment"> We learned how to calculate void ratio.</li>	
+				</ul>
+		</section>
+
+        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Contents</h1>
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle">
+							<li class="l1">Sieve and hydrometer analysis.</li>							
+							<li class="l1">Soil fractions</li>
+							<li class="l1">Clay mineralogy</li>
+							<li class="l1">Grain size metrics</li>
+							<li class="l1">Gradation coefficients</li>
+						</ul>	
+					</div>
+					<div class='col'>
+					<div class='container'>
+					<div class='col'>
+					<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+						<p> Objectives covered in this lecture</p>
+						<ul>
+							<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+						</ul>
+					</div>
+					</div>
+					<div class='col'>
+					<div class='stickynote' style='margin-top: 100px;margin-left: 50px;'>
+					<p>After this lecture we will able to:</p>
+					<ul>
+						<li>Plot a grain size distribution curve. </li>
+						<li>Determine the fractions of soil according to grain size.</li>
+						<li>Determine particle sizes and the gradation coefficients.</li>
+						<!-- <li>Approximate the specific surface of soil particles.</li> -->
+						<!-- <li>Describe different clay mineralogy properties.</li>
+						<li>Calculate Atterberg limits and the activity of soils.</li>
+						<li>Classify soils according to the USCS and AASHTO.</li> -->
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+					
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Particle grain size</h1>
+
+
+<div class='container'>
+<div class='col'>
+	<img src="./FiguresGeneral/grain_size_scale.svg" width="100%">
+</div>
+<div class='col'>
+	<div class="textBox" style="margin-top: 50px;"> An important characteristic of soils, that <span class='atb'>influences its engineering behavior</span> is grain size. Particles can be smaller than 2 \(\mu\)m or larger than 2m.</div>
+</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Grain size characteristics</h1>
+	<Table border='0' cellspacing='1' cellpadding='1' style='border-collapse:collapse;border:none;font-size: 0.8em;margin-top: -20px;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><b>Soil name:</b></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Gravels, sands</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Silts</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'> <span class='atb'>Clay</span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Grain size:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Coarse grained. Can see individual particles.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Cannot see individual grains.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Cannot see individual grains.</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Characteristics:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesionless
+		Nonplastic
+		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesionless
+		Nonplastic
+		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesive
+		Plastic
+		</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Effect of water on engineering behavior:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively important</span>, particularly for  loose material under dynamic loadings.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Important</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Very important</span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Effect of grain size on engineering behavior:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Very important</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively important</span></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively unimportant</span></td></tr></font></table>
+		
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Sieve analysis (ASTM D6913)</h1>
+
+	<div class="textBox" style="margin-top: -15px;font-size: 1em;"> The objective of this test is to determine the <span class='atb'> grain size distribution </span> 	<strong style='color: green'>(GSD)</strong> and other <span class='atb'> grain size metrics </span>. It is conducted on <span class='atb'>dry samples</span>. With this test it is possible to plot the <span class='atb'>coarse portion</span> of the GSD. </div>
+		<div class="container">
+			<div class="col">
+				<img src="https://www.civilclick.com/wp-content/uploads/2020/04/Sieve-Analysis-300x214.jpg?ezimgfmt=rs:350x250/rscb3/ngcb3/notWebP" width="80%">
+
+			</div>
+			<div class="col">
+				<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse; font-size:.65em; background-color: antiquewhite;'>   <tr align='center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><b>U.S. Standard </b></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><b>Sieve Opening</b></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Sieve No.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(mm)</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'> <span class='atb'> 4.75 </span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>10</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>20</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.85</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>40</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.425</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>60</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.25</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>100</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.15</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>140</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.106</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>200</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'> <span class='atb'> 0.075 </span> </td></tr></font>
+				</table>
+
+			</div>
+		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 2.3</h1>
+<p>If a soil mass 	<strong style='color:#7abbe6'>pass</strong> sieve No 200, the soil is?</p>
+
+<ul class="iClicker">
+	<li class="l2">Coarse grained</li>
+	<li class="l2">Clay</li>
+	<li class="l2">Silt</li>
+	<li class="l2">Fine grained</li>
+	<li class="l2">Gravel</li>
+</ul>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/AM-NrQoRIYY?autoplay=0" data-preload></iframe>
+	</section>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Sieve analysis (ASTM D6913)</h1>
+
+<div class="defBox" name="Individual sieve weight" style="margin-top: 0px;font-size: 1em;"> 	<strong style='color:green'>\(W_i\)</strong>: Is the weight of soil retained on sieve \(i\). </div>
+
+<div class='defBox' name='Retained weight' style='margin-top: 10px;font-size: 1em;'> 	<strong style='color:green'>\(W_{ri}\)</strong>: Is the 	<strong style='color:#7abbe6'>cumulative</strong> weight <span class='atb'> retained </span> on sieve \(i\). 
+
+	<p><div class='equationBox'>$$W_{ri}=\sum_{k=1}^{k=i}W_{k}$$</div></p>
+
+
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Sieve analysis (ASTM D6913)</h1>
+<p>Note that the total dry weight of the sample is \(W_{td}=\sum_{i=1}^{n_s}W_i\), where \(n_s\) is the total number of sieves used.</p>
+
+<div class='container'>
+<div class='col'>
+	<div class="fragment"> 	<div class='defBox' name='Percentage retained or coarser' style='margin-top: 50px;font-size: 1em;'> 	<strong style='color:green'> \(P_{Ri}\)</strong>: Is the <span class='atb'> percentage </span> of soil mass <span class='atb'> retained </span> on sive \(i\).
+		<p>
+			<div class='equationBox'> \(P_{Ri}=\cfrac{W_{ri}}{W_{td}}\times 100\) </div>
+		</p>
+		</div></div>
+
+</div>
+<div class='col'>
+	<div class="fragment">	<div class='defBox' name='Percentage passing or finer' style='margin-top: 50px;font-size: 1em; margin-left: 20px;'> 	<strong style='color:green'> \(P_{Pi}\)</strong>: Is the <span class='atb'> percentage </span> of soil mass <span class='atb'> passing </span> sieve \(i\).
+		<p>
+			<div class='equationBox'> \(P_{Pi}=100-P_{Ri}\) </div>
+		</p>
+		</div></div>
+
+</div>
+</div>
+
+
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Soil fractions</h1>
+
+	<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
+	Soil fractions are calculated to determine the <span class='atb'>amount of gravel, sand, and fines</span> in a soil.
+
+	</div>
+	<div class='container' style="font-size: 0.8em;">
+	<div class='col'>
+	<div class="fragment"> <div class='defBox' name='Gravel fraction' style='margin-top: 10px;margin-left: 0px;'>
+		<strong style='color:green'>\(G_F\) :</strong> Is the cumulative retained percentage in <span class='atb'>Sieve No 4</span> or soil <span class='atb'>coarser</span> than \(d=4.75\) mm.
+	</div></div>
+	<div class="fragment"><div class='defBox' name='Fine fraction' style='margin-top: 10px;margin-left: 0px;'>
+		<strong style='color:green'>\(F_F\):</strong> Is the portion of soils that passes <span class='atb'>Sieve No 200</span> or is finer than <span class='atb'>0.075 mm</span>.
+	</div></div>		
+	</div>
+	<div class='col'>
+		<div class="fragment"><div class='defBox' name='Sand fraction' style='margin-top: 10px;margin-left: 5px;'>
+		<strong style='color:green'>\(S_F\):</strong> Is the percentage of soil that passes <span class='atb'>Sieve No 4</span> and is retained in <span class='atb'>Sieve No 200</span>.
+		<div class='equationBox'>
+		<p>\(S_F=100-G_F-F_F\)</p>
+		</div>
+		</div> </div>
+		<div class="fragment"> <div class='defBox' name='Clay fraction' style='margin-top: 10px;margin-left: 5px;'>
+		<strong style='color:green'>\(C_F\):</strong> Is the portion of soils <span class='atb'>finer</span> than 2 \(\mu\)m. 
+		</div></div>
+	</div>
+	</div>
+</section>
+
+
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.6</h1>
+	<div class='textBox' style='margin-top: 0px;font-size: 1em;'> A sieve analysis was conducted on a soil producing the data shown in the table below. 	<strong style='color:#7abbe6'>Calculate (i) the retained weights, (ii) Percentage retained, (iii) Percentage passing, (iv) the gravel, sand, and fine fractions, (v) and plot the grain size distribution.</strong></div>
+
+	<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;font-size: 0.6em;background-color: antiquewhite;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Sieve Opening</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Weight</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Retained</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Passing</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(mm)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(g)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(%)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(%)</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4.75</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>12.5</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>233.67</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.85</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>144.13</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.425</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>75.75</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.25</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>25.47</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.15</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>10.14</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.106</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.5</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.075</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1.7</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Pan</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Total</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>509.86</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr></font>
+	</table>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Hydrometer analysis</h1>
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> The objective of the hydrometer test is to determine the GSD of <span class='atb'> fine grained soils </span>. It is used to complement <span class='atb'> the sieve analysis </span> to extend the GSD beyond sieve No 200. </div>
+
+<div class='container'>
+<div class='col'>
+	<ul>
+	<li class="fragment">Separation of particles by sedimentation (Stokes law).</li>
+	<li class="fragment">Relative density of suspended flow is measured in time to determine particle diameter. </li>
+	<li class="fragment">Has several limitations due to unrealistic assumptions. </li>
+	</ul>
+</div>
+<div class='col'>
+	<figure >
+		<img src="https://mikhailova.org/images/stokes.gif" style="width:70%" data-preload/>
+		<footer style="margin-top:-60px;"><small></small></footer>
+	  </figure>
+</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/WkN4LxXKKKI?autoplay=0" data-preload></iframe>
+	</section>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Example 2.7</h1>
+
+	<div class='textBox' style='margin-top: 0px;font-size: 1em;'> A sieve analysis and a hydrometer analysis was conducted on a soil producing the results shown in the tables below. 	<strong style='color:#7abbe6'>Calculate the clay fraction and plot the combined GSD</strong>.
+	<a href="#12">Go to Jupyter Notebook</a></div>
+		<div class="container" style="font-size: 0.8em;">
+			<div class="col" >
+				<p>Sieve analysis</p>
+				<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;font-size:0.65em;background-color: antiquewhite;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Sieve Opening</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Weight</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Retained</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Passing</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(mm)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(g)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(%)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(%)</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4.75</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.0%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>100.0%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>12.12</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>3.6%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>96.4%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.85</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>25.36</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>11.2%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>88.8%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.425</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>32.15</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>20.8%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>79.2%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.25</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>33.14</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>30.7%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>69.3%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.15</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>33.78</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>40.8%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>59.2%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.106</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>47.56</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>55.0%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>45.0%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.075</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>50.14</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>70.0%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>30.0%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Pan</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>100.25</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>100.0%</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.0%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Total</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>334.5</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'></td></tr></font>
+				</table>
+
+			</div>
+			<div class="col">
+				<p style="margin-top:-5px;">Hydrometer analysis</p>
+				<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none; font-size:0.65em;background-color: antiquewhite;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Part. Diameter</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Percentage Finer</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>(mm)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.066</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>85%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.045</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>74%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.036</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>68%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.025</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>58%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.015</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>48%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.011</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>42%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.007</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>35%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.005</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>28%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.004</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>24%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.003</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>20%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.0018</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16%</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.0012</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>12%</td></tr></font>
+				</table>
+
+
+
+			</div>
+		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>GSD metrics</h1>
+<p>Recognizable GSD features:</p>
+
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> If GSD is <span class='atb'> vertical </span> soil is <span class='atb'> uniform </span>, or <span class='atb'> poorly graded </span>, or <span class='atb'> well sorted </span>. </div>
+
+<div class='textBox' style='margin-top: 30px;font-size: 1em;'> If GSD <span class='atb'> spans all ranges of soil sizes </span> in a <strong style="color:#7abbe6">smooth curve</strong> the soil is <span class='atb'> well graded </span> or <span class='atb'> poorly sorted </span>.</div>
+
+<div class='textBox' style='margin-top: 30px;font-size: 1em;'>  If there is a <span class='atb'> horizontal </span> line in the GSD, the soil is <span class='atb'> gap graded </span>.</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Quiz 2.4</h1>
+	<p>Select the GSD that is a poorly graded sand:</p>
+	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Quiz 2.5</h1>
+	<p>Select the GSD that is a well graded soil:</p>
+	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Quiz 2.6</h1>
+	<p>Select the GSD that is a gap graded soil:</p>
+	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>GSD metrics</h1>
+		<div class="container">
+			<div class="col">
+				<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:green'>\(D_x\):</strong> Is the <span class='atb'>particle size</span>  for which \(x\) percent of soil is finer thant that diameter.
+				</div>
+				<p>Common values are:</p>
+				<ol>
+					<li class="fragment"> \(D_{10}\) also known as the effective diameter. </li>
+					<li class="fragment"> \(D_{30}\). </li>
+					<li class="fragment"> \(D_{50}\) or <span class='atb'>median particle size</span>. </li>
+					<li class="fragment"> \(D_{60}\).</li>
+				</ol>
+			</div>
+			<div class="col">
+				<div class="fragment"><p style="margin-top: -25px;">Gradation coefficients:</p>
+					<div class='defBox' name='Coefficient of uniformity' style='margin-top: 0px;margin-left: 5px;'>
+					<strong style='color:green'> \(C_u\):</strong>
+					<div class='equationBox'>
+						<p>\(C_u=\cfrac{D_{60}}{D_{10}}\)</p>				
+					</div>
+					</div>
+					<div class='defBox' name='Coefficient of curvature' style='margin-top: 10px;margin-left: 5px;'>
+						<strong style='color:green'> \(C_c\):</strong>
+						<div class='equationBox'>
+							<p>\(C_c=\cfrac{D_{30}^2}{D_{10}D_{60}}\)</p>				
+						</div>
+				</div></div>				
+			</div>
+		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 2.7</h1>
+<p>What is the <strong style='color:#7abbe6'>coefficient of uniformity \(C_u\)</strong> of perfectly uniform soil?</p>
+
+<ol class='iClicker' >
+<li class='l2'>0</li>
+<li class='l2'>100</li>
+<li class='l2'>>1</li>
+<li class='l2'><1</li>
+<li class='l2'>1</li>
+</ol>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Interpolation in the GSD</h1>
+<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+When dealing with GSD data we will need an interpolation formula to obtain the size corresponding to \(D_x\). Recall that the GSD is plotted in <span class='atb'>logarithmic space</span> when using interpolation.
+</div>
+<div class='container'>
+<div class='col'>
+<div class="fragment">
+	<img style="margin-top: 0px;" src="./FiguresGeneral/interpolation.svg" width="90%">
+</div>
+</div>
+<div class='col'>
+<div class="fragment"> <p>Thus a linear interpolation in log space can resolve this issue:</p>
+<div class='equationBox' style="font-size: 0.8em;">
+<p> \( \log (D_x/d_i) = \cfrac{\log (d_{i}/d_{i+1}) }{P_{P,i}-P_{P,i+1}} (x-P_{P,i})\) </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.8</h1>
+	<p>Determine the <strong style='color:#7abbe6'>gradation coefficients</strong> and the <strong style='color:#7abbe6'> median grain size</strong> of the soil used in Example 2.7</p>
+	<p><a href="#12">Go to Jupyter Notebook</a></p>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Particle shape</h1>
+	<div class='textBox' style='margin-top: -20px;margin-left: 0px;'>
+	Particle shape plays an important role on the <span class='atb'>shear strength</span> of soils, particularly of <span class='atb'>coarse soils</span>. Particle shape can be visually classified using Powers (1953) scheme.
+	</div>
+	<figure style="margin-top: -20px;">
+	  <img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" style="width:70%" data-preload/>	  
+	</figure>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 2.8</h1>
+<p>What is the shape classification of the sand shown in the picture below?</p>
+<div class="h-stack">
+<img src="https://microscopyofnature.com/sites/default/files/styles/afbeelding_paragraph_/public/2022-06/Wit-zand-Australi%C3%AB-Leitz-4_0.jpg?itok=wyRxbGzD" height="300px">
+<img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" height="300px">
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Quiz 2.9</h1>
+	<p>What is the shape classification of the sand shown in the picture below?</p>
+	<div class="h-stack">
+	<img src="https://www.intelligentliving.co/wp-content/uploads/2019/04/sandmagnified.jpg" height="300px">
+	<img src="https://www.researchgate.net/publication/303702743/figure/fig4/AS:368119399895044@1464777912894/A-new-roundness-scale-for-sedimentary-particles-after-Powers.png" height="300px">
+	</div>
+	</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Particle shape</h1>
+	<img src="FiguresGeneral/photos.svg" style="margin-top:-10px;">
+</section>
+
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Specific surface</h1>
+		<div class="container">
+			<div class="col">
+          <p>Specific surface is defined as:
+						$$SSA= S_a/ M$$
+						\(S_a\)= Surface area.
+						\(M\)= mass
+					</p>
+					<img src="https://miro.medium.com/max/1194/1*PVnOhLdEXXIHL4oJn9chug.png">
+			</div>
+			<div class="col">
+				<ul>
+					<li class="fragment"> Coarse particles have lower \(SSA\) than fine particles. </li>
+					<li class="fragment"> A high \(SSA\) means more chemical and physical reactions. </li>
+					<li class="fragment"> A high \(SSA\) means more area for drag. Finer soils are less permeable than coarse soils. </li>
+				</ul>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Clay mineralogy</h1>
+		<div class="container">
+			<div class="col">
+          <ul>
+          	<li class="fragment"> Chemical weathering of rocks form phyllosilicates (hydrous aluminum silicates).</li>
+						<li class="fragment"> Only visible with electron microscope and look like plates, flakes, or needles. </li>
+						<li class="fragment"> Two simple blocks: tetrahedral silica and octahedral alumina. </li>
+						<li class="fragment"> The main blocks are arranged in various ways to produce clay minerals. </li>
+          </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://www.intechopen.com/media/chapter/76780/media/F5.png" style="height:600px" data-preload/>
+				  <footer style="margin-top:-60px;"><small>IntechOpen</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Clay mineralogy</h1>
+	<div class="h-stack" style="margin-top:-20px;">
+		  <img src="https://www.researchgate.net/profile/L-Wilson/publication/262582095/figure/fig2/AS:392458824372226@1470580883320/SEM-image-of-well-crystallized-crystallized-kaolinite-from-sandstone-Note-hexagonal.png" style="height:200px" data-preload/>
+		  <img src="https://ars.els-cdn.com/content/image/3-s2.0-B0123693969003117-gr7.jpg" style="height:200px" data-preload/>
+			<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0921883114000119-fx1.jpg" style="height:200px" data-preload>
+	</div>
+	<div class="h-stack" style="margin-top:-20px;font-size:30px">
+		<span style="margin-left:-100px;">Kaolinite</span>
+		<span style="margin-left:200px;">Illite</span>
+		<span style="margin-left:200px;">Montmorillonite</span>
+	</div>
+	<figure>
+	  <img src="tableishi.svg" style="height:350px" data-preload/>
+	  <footer style="margin-top:-65px;"><small>Ishibashi and Hazarika (2010)</small></footer>
+	</figure>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Interaction of clay with water</h1>
+		<div class="container">
+			<div class="col">
+       <figure style="margin-top:-25px;">
+         <img src="DBL.svg" style="height:550px" data-preload/>
+         <footer style="margin-top:-30px;"><small>Ishibashi and Hazarika (2010) and Holtz et al. (2013)</small></footer>
+       </figure>
+			</div>
+			<div class="col">
+          <ul style="margin-top:0px;font-size:33px">
+          	<li class="fragment"> Stronger influence for minerals with large \(SSA\). </li>
+						<li class="fragment"> Interaction of negatively charged particle with water and cations will increase/decrease the diffuse double layer thickness. </li>
+						<li class="fragment"> Changes in the DBL thickness can be seen macroscopically as swelling and shrinkage. </li>
+						<li class="fragment"> Interaction with water also causes changes in <strong style="color:#7abbe6">consistency</strong> of fine soils. </li>
+          </ul>
+			</div>
+		</div>
+</section> -->
+
+<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://www.youtube.com/embed/SW-NoiM726U?autoplay=0" data-preload></iframe>
+	</section>
+
+</section> -->
+
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Consistency limits</h1>
+		<div class="container">
+			<div class="col">
+          <ul>
+          	<li class="fragment">Also known as Atterberg limits after the soil scientist who proposed them.  </li>
+						<li class="fragment"> They are thresholds of water content at which the behavior of fine soils changes.  </li>
+						<li class="fragment"> From experimentation he found three limits: the <strong style="color:#7abbe6">liquid limit \(LL\)</strong>,
+							<strong style="color:#7abbe6">plastic limit \(PL\)</strong>, and the <strong style="color:#7abbe6">shrinkage limit \(SL\)</strong>.</li>
+          </ul>
+			</div>
+			<div class="col">
+              <figure>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2uRFHc1f_pehjTktQ2G-vQNoWtZTbHjFTCqN7exOgziizhdsygS7T2RI-f1rlA0D-HHA&usqp=CAU" style="width:60%" data-preload/>
+                <footer style="margin-top:-60px;"><small></small></footer>
+              </figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Liquid limit ASTM D4318</h1>
+		<div class="container">
+			<div class="col">
+          <ul style="margin-top:-25px;">
+          	<li class="fragment"> Arthur Casagarnde proposed the modern test procedures. </li>
+						<li class="fragment"> He defined \(LL\) as the water content at which a standard groove cut in the soil will close 0.5 in at 25 blows. </li>
+						<li class="fragment"> Values from zero to 1000. Most soils have \(LL\) less than 100. </li>
+          </ul>
+					<figure>
+					  <img src="https://media.springernature.com/original/springer-static/image/prt%3A978-3-319-73568-9%2F3/MediaObjects/978-3-319-73568-9_3_Part_Fig1-44_HTML.png" style="width:50%" data-preload/>
+					  <footer style="margin-top:-60px;"><small></small></footer>
+					</figure>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Arthur_Casagrande.jpg" style="height:600px" data-preload/>
+				  <footer style="margin-top:0px;"><small>Arthur Casagrande</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Plastic limit ASTM D4318</h1>
+		<div class="container">
+			<div class="col">
+          <ul>
+          	<li class="fragment">Defined as the water content at which a thread of soil just crumbles when rolled to a diameter of 3 mm. </li>
+						<li class="fragment"> Requires more practice to obtain consistent and reproducible results. </li>
+						<li class="fragment"> Ranges from zero to 100. Most soils have \(PL < 40\).</li>
+          </ul>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://www.humboldtmfg.com/product-originals/H-4253.png" style="height:300px" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+				<figure>
+				  <img src="https://4.bp.blogspot.com/-QaWSi_ZzWT8/WWIX1qaZKOI/AAAAAAAAIaM/UHNXqEmcFwsc-47aYHaGd1YDroBXYw70gCLcBGAs/s1600/.51.jpg" style="height:300px" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Shrinkage limit ASTM D4943</h1>
+		<div class="container">
+			<div class="col">
+				<li class="fragment">Defined as the water content at which no more volume change occurs when soil is desiccated. </li>
+				<li class="fragment">Module 4 will expand on this.</li>
+			</div>
+			<div class="col">
+				<figure>
+				  <img src="https://qjegh.lyellcollection.org/content/qjegh/52/2/220/F1.large.jpg?width=800&height=600&carousel=1" style="width:100%" data-preload/>
+				  <footer style="margin-top:0px;"><small>Hobb et al. (2018)</small></footer>
+				</figure>
+			</div>
+		</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Consistency indices</h1>
+		<div class="container">
+			<div class="col">
+        <p><strong style="color:#7abbe6">Plastic index:</strong></p>
+				<p>Is the range of water content in which the fine fraction of soils behaves as a plastic material.
+					$$PI=LL-PL$$
+				</p>
+			</div>
+			<div class="col">
+				<p><strong style="color:#7abbe6">Liquidity index:</strong></p>
+				<p>This is a scaling parameter that maps the natural water content to the consistency limits.
+					$$LI=\cfrac{w_n-PL}{PI}$$
+				</p>
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<figure>
+  <img src="limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Activity of clays</h1>
+		<div class="container">
+			<div class="col">
+        <p style="margin-top:-25px;">Relates the plasticity index and the clay fraction of soils.
+					$$A=\cfrac{PI}{C_F}$$
+				 \(A\) is highly correlated to clay mineralogy.</p>
+			</div>
+			<div class="col">
+				<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;margin-top:-15px'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Mineral</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Activity</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Na-montmorillonite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4-7</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Ca-montmorillonite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Illite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.3</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Kaolinite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.3-0.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Hallosyte (dehydrated)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Hallosyte (hydrated)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.1</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Attapulgite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Allophane</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Mica (muscovite)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Calcite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Quartz</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0</td></tr></font>
+				</table>
+
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.7</h1>
+<p>For the parameters shown in the table, compute \(LL\), \(PI\), \(LI\), and \(A\).</p>
+<div class="container">
+<div class="col">
+	<p >LL results.</p>
+	<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Blow count \(N\)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>\(w \%\)</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>55</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>23.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>43</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>27.9</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>22</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>36.4</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>15</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>45.3</td></tr></font>
+	</table>
+</div>
+<div class="col" >
+	<ul>
+		<li>\(PL=12 \% \)</li>
+		<li>\(C_F=13 \% \)</li>
+		<li>\(w_n=38\% \)</li>
+	</ul>
+</div>
+</div>
+</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Soil classification</h1>
+	<p style="margin-top:-25px;">Unified soil classification system (USCS) ASTM D2487.</p>
+	<p>Input parameters:</p>
+	<ul>
+		<li>Soil fractions (\(G_F, S_F, F_F\)).</li>
+		<li>Coefficient of uniformity (\(C_u\)).</li>
+		<li>Coefficient of gradation or curvature (\(C_c\)).</li>
+		<li>Liquid limit (\(LL\)).</li>
+		<li>Plastic index (\(PI\)).</li>
+		<li><strong style="color:#7abbe6">Plasticity chart.</strong></li>
+	</ul>
+	<p>Output:</p>
+	<ul>
+		<li class="fragment"> <strong style="color:#7abbe6">Group symbol.</strong> </li>
+		<li class="fragment"> <strong style="color:#7abbe6">Group name.</strong> </li>
+	</ul>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Group symbols</h1>
+	<ul style="margin-top:-25px;">
+		<li> <b>Two letters</b>
+			<ul>
+				<li class="fragment"> First letter \(\longrightarrow\) dominant fraction.</li>
+				<li class="fragment"> Second letter \(\longrightarrow\) minor fraction </li>
+			</ul>
+		 </li>
+		 <li> <b>Dominant fraction</b>
+			 <ul>
+			 	<li class="fragment"> Coarse (retained in sieve No 200).
+					<ul>
+						<li class="fragment"> Gravel (<strong style="color:#7abbe6">G</strong>), sand (<strong style="color:#7abbe6">S</strong>). </li>
+					</ul>
+				 </li>
+				 <li class="fragment"> Fines (passing sieve No 200).
+					 <ul>
+					 	<li class="fragment"> Silt (<strong style="color:#7abbe6">M</strong>), clay (<strong style="color:#7abbe6">C</strong>), organic content (<strong style="color:#7abbe6">O</strong>). </li>
+					 </ul>
+
+				 </li>
+			 </ul>
+		  </li>
+
+			<li> <b>Minor fraciton</b>
+				<ul>
+					<li class="fragment"> Coarse, depending on well/poorly-graded (<strong style="color:#7abbe6">W, P</strong>) and fines (<strong style="color:#7abbe6">M, C</strong>). </li>
+					<li class="fragment"> Fine, depending on low/high plasticity (<strong style="color:#7abbe6">L,H</strong>). </li>
+				</ul>
+
+			</li>
+
+
+	</ul>
+
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Plasticity chart</h1>
+<figure style="margin-top:-25px;">
+  <img src="https://media.springernature.com/original/springer-static/image/prt%3A978-3-319-73568-9%2F16/MediaObjects/978-3-319-73568-9_16_Part_Fig1-223_HTML.png" style="height:600px" data-preload/>
+  <footer style="margin-top:-30px;"><small>Keaton (2018)</small></footer>
+</figure>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Classification flow diagram</h1>
+		<div class="container">
+			<div class="col">
+				<p>If \(F_F \geq 50\%\)</p>
+          <img src="finesflow.svg" style="margin-top:0px; width:100%;">
+			</div>
+			<div class="col">
+				<p>If \(F_F< 50\%\)</p>
+				<img src="coarseflow.svg" style="margin-top:0px; width:100%;">
+			</div>
+		</div>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.8</h1>
+<img src="ex1.svg" style="margin-top:-15px;width:80%">
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.9</h1>
+<img src="ex2.svg" style="margin-top:-15px;width:80%">
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Example 2.10</h1>
+<img src="ex3.svg" style="margin-top:-15px;width:80%">
+</section>
+
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>AASHTO Classification</h1>
+	<section data-fullscreen>
+		<iframe class="stretch" src="https://en.wikipedia.org/wiki/AASHTO_Soil_Classification_System" data-preload></iframe>
+	</section>
+</section> -->
+
+    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+</html>
