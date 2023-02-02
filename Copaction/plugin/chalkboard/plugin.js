@@ -156,7 +156,7 @@ const initChalkboard = function ( Reveal ) {
 		{
 			color: 'rgba(255,220,0,0.5)',
 			cursor: 'url(' + path + 'img/chalk-yellow.png), auto'
-		}
+		},
 	];
 	var keyBindings = {
 		toggleNotesCanvas: {
@@ -200,7 +200,7 @@ const initChalkboard = function ( Reveal ) {
 			keyCode: 68,
 			key: 'D',
 			description: 'Download drawings'
-		}
+		},
 	};
 
 
@@ -283,8 +283,8 @@ const initChalkboard = function ( Reveal ) {
 
 	function whenReady( callback ) {
 		// wait for markdown to be parsed and code to be highlighted
-		if ( !document.querySelector( 'section[data-markdown]:not([data-markdown-parsed])' ) 
-		     && !document.querySelector( 'code[data-line-numbers*="|"]') 	
+		if ( !document.querySelector( 'section[data-markdown]:not([data-markdown-parsed])' )
+		     && !document.querySelector( 'code[data-line-numbers*="|"]')
 		) {
 			callback();
 		} else {
@@ -359,6 +359,9 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 	var drawing = false;
 	var erasing = false;
+	var lining = false;
+	var circling= false;
+	var protractor= false;
 
 	var slideStart = Date.now();
 	var slideIndices = {
@@ -419,7 +422,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 			mode,
 			board
 		};
-		document.dispatchEvent( message );	
+		document.dispatchEvent( message );
 	}
 
 	function setupDrawingCanvas( id ) {
@@ -490,8 +493,10 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 				} );
 
 				container.appendChild( handle );
-			}
-		}
+			}}
+			// Adding a second layer for objects
+
+
 
 
 		var sponge = document.createElement( 'img' );
@@ -503,15 +508,21 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 		drawingCanvas[ id ].sponge = sponge;
 
 		var canvas = document.createElement( 'canvas' );
+		// var canvas_tools=document.createElement( 'canvas' );
 		canvas.width = drawingCanvas[ id ].width;
+		// canvas_tools.width = drawingCanvas[ id ].width;
 		canvas.height = drawingCanvas[ id ].height;
+		// canvas_tools.height = drawingCanvas[ id ].height;
 		canvas.setAttribute( 'data-chalkboard', id );
+		// canvas_tools.setAttribute( 'data-chalkboard', id );
 		canvas.style.cursor = pens[ id ][ color[ id ] ].cursor;
+		// canvas_tools.style.cursor = pens[ id ][ color[ id ] ].cursor;
 		container.appendChild( canvas );
+		// container.appendChild( canvas_tools );
 		drawingCanvas[ id ].canvas = canvas;
-
+		// drawingCanvas[ id ].canvas_tools = canvas_tools;
 		drawingCanvas[ id ].context = canvas.getContext( '2d' );
-
+		// drawingCanvas[ id ].context_tools = canvas_tools.getContext( '2d' );
 		setupCanvasEvents( container );
 
 		document.querySelector( '.reveal' ).appendChild( container );
@@ -690,7 +701,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 				return data;
 			}
 		}
-		var page = Number( Reveal.getCurrentSlide().getAttribute('data-pdf-page-number') ); 
+		var page = Number( Reveal.getCurrentSlide().getAttribute('data-pdf-page-number') );
 //console.log( indices, Reveal.getCurrentSlide() );
 		storage[ id ].data.push( {
 			slide: indices,
@@ -741,7 +752,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 					count = Number(fragments[j].getAttribute('data-fragment-index')) + 1;
 				}
 			}
-//console.log(count,fragments.length,( slides[i].querySelector('h1,h2,h3,h4')||{}).innerHTML, page); 
+//console.log(count,fragments.length,( slides[i].querySelector('h1,h2,h3,h4')||{}).innerHTML, page);
 			page += count + 1;
 		}
 	}
@@ -935,7 +946,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 			}
 		}
 	}
- 
+
 	function eraseWithSponge( context, x, y ) {
 		context.save();
 		context.beginPath();
@@ -1435,13 +1446,124 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 		) {
 			draw[ mode ]( ctx, fromX * scale + xOffset, fromY * scale + yOffset, toX * scale + xOffset, toY * scale + yOffset, colorIdx );
 		}
-	}
+	};
+
+	function drawCircle(centerX, centerY, toX, toY, colorIdx) {
+		var ctx = drawingCanvas[ mode ].context;
+		var scale = drawingCanvas[ mode ].scale;
+		var xOffset = drawingCanvas[ mode ].xOffset;
+		var yOffset = drawingCanvas[ mode ].yOffset;
+		var R=0;
+		// Need to create a record circle event capable of redrawing itself
+
+
+		if (
+			centerX * scale + xOffset > 0 &&
+			centerY * scale + yOffset > 0 &&
+			centerX * scale + xOffset < drawingCanvas[ mode ].width &&
+			centerY * scale + yOffset < drawingCanvas[ mode ].height &&
+			toX * scale + xOffset > 0 &&
+			toY * scale + yOffset > 0 &&
+			toX * scale + xOffset < drawingCanvas[ mode ].width &&
+			toY * scale + yOffset < drawingCanvas[ mode ].height
+		) {
+	 R = Math.sqrt(((centerX-toX)*scale)**2+((centerY-toY)*scale)**2);
+	 var dtheta= 2*Math.PI/100
+	 var theta=0.0
+	 var xl= centerX * scale + xOffset + R *Math.cos(theta)
+	 var yl= centerY * scale + yOffset + R *Math.sin(theta)
+	 var xn=0.0
+	 var yn=0.0
+	 for (var i = 0; i < 100; i++) {
+	 	theta=theta+dtheta
+		xn=centerX * scale + xOffset + R *Math.cos(theta)
+		yn=centerY * scale + yOffset + R *Math.sin(theta)
+		recordEvent( {
+			type: 'draw',
+			color: colorIdx,
+			x1: (xl-xOffset)/scale,
+			y1: (yl-yOffset)/scale,
+			x2: (xn-xOffset)/scale,
+			y2: (yn-yOffset)/scale,
+		} );
+		draw[ mode ]( ctx, xl, yl, xn, yn, colorIdx );
+		xl=xn;
+		yl=yn;
+	 }
+	};
+	};
+	var clicks = 0;
+	var lastClick = [0, 0];
+
+
+	function drawMyLine(fromX, fromY, toX, toY, colorIdx) {
+		if (clicks != 1) {
+				clicks++;
+				var ctx = drawingCanvas[ mode ].context;
+				var scale = drawingCanvas[ mode ].scale;
+				var xOffset = drawingCanvas[ mode ].xOffset;
+				var yOffset = drawingCanvas[ mode ].yOffset;
+				lastX = toX * scale + xOffset;
+				lastY = toY * scale + yOffset;
+		} else {
+				drawSegment( fromX, fromY, toX, toY, colorIdx )
+				clicks = 0;
+				lining = false;
+		}
+	};
+
+	function drawMyCircle(centerX, centerY, toX, toY, colorIdx){
+		if (clicks != 1) {
+				clicks++;
+				var ctx = drawingCanvas[ mode ].context;
+				var scale = drawingCanvas[ mode ].scale;
+				var xOffset = drawingCanvas[ mode ].xOffset;
+				var yOffset = drawingCanvas[ mode ].yOffset;
+				lastX = toX * scale + xOffset;
+				lastY = toY * scale + yOffset;
+		} else {
+
+				drawCircle( centerX, centerY, toX, toY, colorIdx );
+				clicks = 0;
+				circling = false;
+		}
+	};
 
 	function stopDrawing() {
 		drawing = false;
-	}
+	};
+
+	function start_line(){
+		lining = true;
+	};
+
+	function stop_lining(){
+		lining = false
+	};
+
+	function start_circling(){
+		circling=true;
+	};
 
 
+
+	function switch_protractor( xMouse, yMouse){
+		if (!protractor){
+			var ctx = drawingCanvas[ mode ].context
+			var img=new Image()
+			img.src=path + 'img/Portractor.png';
+			img.onload=function(){
+			ctx.drawImage(img, xMouse-546/2,yMouse-277,546,277);
+			};
+			protractor=true;
+
+		}else{
+			switchBoard( board + 1 );
+			switchBoard( board - 1 );
+			protractor=false;
+
+		};
+	};
 /*****************************************************************
  ** User interface
  ******************************************************************/
@@ -1538,36 +1660,89 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 		canvas.addEventListener( 'mousedown', function ( evt ) {
 			evt.preventDefault();
-			if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
-//console.log( "mousedown: " + evt.button );
-				var scale = drawingCanvas[ mode ].scale;
-				var xOffset = drawingCanvas[ mode ].xOffset;
-				var yOffset = drawingCanvas[ mode ].yOffset;
+			if (lining){
+				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
+					var scale = drawingCanvas[ mode ].scale;
+					var xOffset = drawingCanvas[ mode ].xOffset;
+					var yOffset = drawingCanvas[ mode ].yOffset;
+					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
+					mouseX = evt.pageX;
+					mouseY = evt.pageY;
+				drawMyLine(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
+			}}else if (circling) {
+				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
+					var scale = drawingCanvas[ mode ].scale;
+					var xOffset = drawingCanvas[ mode ].xOffset;
+					var yOffset = drawingCanvas[ mode ].yOffset;
+					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
+					mouseX = evt.pageX;
+					mouseY = evt.pageY;
+				drawMyCircle(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
 
+			}}else {
+				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
+	//console.log( "mousedown: " + evt.button );
+					var scale = drawingCanvas[ mode ].scale;
+					var xOffset = drawingCanvas[ mode ].xOffset;
+					var yOffset = drawingCanvas[ mode ].yOffset;
+
+					mouseX = evt.pageX;
+					mouseY = evt.pageY;
+
+					if ( evt.button == 2 || evt.button == 1 ) {
+						startErasing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
+						// broadcast
+						var message = new CustomEvent( messageType );
+						message.content = {
+							sender: 'chalkboard-plugin',
+							type: 'erase',
+							timestamp: Date.now() - slideStart,
+							mode,
+							board,
+							x: ( mouseX - xOffset ) / scale,
+							y: ( mouseY - yOffset ) / scale
+						};
+						document.dispatchEvent( message );
+					} else {
+						startDrawing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
+					}
+			}
+		}
+	});
+
+
+
+
+		canvas.addEventListener('dblclick', function ( evt ) {
+			evt.preventDefault();
+			drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
+			stopDrawing();
+			stopErasing();
+			start_line();
+		});
+
+		canvas.addEventListener('click', ( evt ) =>{
+			var shifted= evt.shiftKey;
+			var ctled=evt.ctrlKey;
+			if (shifted){
+				evt.preventDefault();
+				drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
+				stopDrawing();
+				stopErasing();
+				start_circling();
+			};
+			if (ctled){
+				evt.preventDefault();
+				stopDrawing();
+				stopErasing();
 				mouseX = evt.pageX;
 				mouseY = evt.pageY;
-
-				if ( evt.button == 2 || evt.button == 1 ) {
-					startErasing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
-					// broadcast
-					var message = new CustomEvent( messageType );
-					message.content = {
-						sender: 'chalkboard-plugin',
-						type: 'erase',
-						timestamp: Date.now() - slideStart,
-						mode,
-						board,
-						x: ( mouseX - xOffset ) / scale,
-						y: ( mouseY - yOffset ) / scale
-					};
-					document.dispatchEvent( message );
-				} else {
-					startDrawing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
-				}
-			}
-		} );
+				switch_protractor(mouseX, mouseY);
+			};
+		});
 
 		canvas.addEventListener( 'mousemove', function ( evt ) {
+			if (!lining || !circling){
 			evt.preventDefault();
 //console.log("Mouse move");
 			if ( drawing || erasing ) {
@@ -1615,7 +1790,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 				}
 
 			}
-		} );
+		}} );
 
 
 		canvas.addEventListener( 'mouseup', function ( evt ) {
