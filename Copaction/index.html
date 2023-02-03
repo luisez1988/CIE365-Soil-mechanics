@@ -93,46 +93,53 @@
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We discussed soil particles characteristics and the grain size distribution.</li>
-							<li class="fragment"> We learned about the tests to determine the GSD. </li>
-							<li class="fragment"> We learned to quantify soil fractions.</li>
-							<li class="fragment"> We learned about clay mineralogy, activity, and consistency.</li>
-							<li class="fragment"> We learned how to classify soils according to the USCS.</li>
-							<li class="fragment"> Today we will learn about soil compaction. </li>
+							<li class="fragment"> We learned how to approximate the specific surface of soil particles.</li>
+							<li class="fragment"> We learned about clay mineralogy and its role in clay behavior. </li>
+							<li class="fragment"> We learned how to calculate the activity of soils.</li>
+							<li class="fragment"> We learned how to calculate the Atterberg limits.</li>
+							<li class="fragment"> We learned how to classify soils according to the USCS adn AASHTO.</li>
 						</ul>
 				</section>
 
-				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Homework assignment 2</h1>
-						<div class="container">
-							<div class="col">
-								<ul>
-									<li>Due on 02/09/2022.</li>
-									<li>80 points total.</li>
-									<li>Start ASAP.</li>
-								</ul>
-							</div>
-							<div class="col">
-				         <iframe src="FiguresGeneral/HMA2.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
-							</div>
-						</div>
-				</section> -->
-
-
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
-					<ul>
-						<li>Soil fabric.</li>
-						<li>Compaction definition.</li>
-						<li>Proctor test and compactive effort.</li>
-						<li>Zero air voids, saturation lines, and line of optimums.</li>
-						<li>Effect of water content.</li>
-						<li>Field compaction equipment.</li>
-						<li>Compaction control and specifications.</li>
-						<li>Other soil compaction techniques.</li>
-					</ul>
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle" style="margin-top: -45px;font-size: 0.9em;">
+							<li class="l1">Soil fabric and relative density</li>							
+							<li class="l1">Proctor test and compactive effort</li class="l1">
+							<li class="l1">Effect of water content</li>
+							<li class="l1">Field compaction equipment</li>
+							<li class="l1">Control and specifications</li>
+							<li class="l1">Other compaction techniques</li>
+						</ul>
+					</div>
+					<div class='col'>
+					<div class='container'>
+					<div class='col'>
+						<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+							<p> Objectives covered in this lecture</p>
+							<ul>
+								<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+							</ul>
+						</div>
+					</div>
+					<div class='col'>
+						<div class='stickynote' style='margin-top: 100px;margin-left: 50px;'>
+							<p style="margin-top: -20px;">After this lecture we will able to:</p>
+							<ul style="margin-top: -15px;">
+								<li>Calculate the relative density of coarse soils.</li>
+								<li>Calculate optimum water content and density after compaction.</li>
+								<li>Create and control compaction specifications.</li>
+							</ul>
+							</div>
+					</div>
+					</div>
+					</div>
+					</div>
 
-					<p>More in chapter 5 of Holtz et al. (2013)</p>
+
+
 
         </section>
 
@@ -148,23 +155,110 @@
 
 	<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	    <h1>Fabric of granular soils</h1>
-			<p>Soil fabric refers to the spatial distribution of pore spaces and individual particles in a soil.</p>
+		<div class='defBox' name='Soil fabric' style='margin-top: 0px;margin-left: 0px;'>
+		It denotes the <span class='atb'>geometric arrangement</span> of particles, particle groups, and pore spaces in a soil.
+		</div>
+
 			<div class="container">
 				<div class="col">
+					For coarse particles it is <strong style='color:#7abbe6'>very important</strong>
 					<ul>
 						<li class="fragment">Defines how strong the soil is because it configures force chains.</li>
-						<li class="fragment">It is dificult to measure directly. We use proxies (e.g., \(D_r\)). </li>
-						<li class="fragment">Soil fabric is unique. Different soil fabric configurations might lead to same \(D_r\). </li>
+						<li class="fragment">It is difficult to measure directly. </li>
+						<li class="fragment">Soil fabric is unique. </li>
 					</ul>
 				</div>
 				<div class="col">
-					<figure>
-					  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_5W1XvDok_e5UOlvldgdk8eTWOd3a5YrrQ&usqp=CAU" style="width:50%" data-preload/>
-					  <footer style="margin-top:-60px;"><small>Farhang Radjai</small></footer>
-					</figure>
+					<div class='container'>
+					<div class='col'>
+					<div class="fragment"><div class='stickynote' style='margin-top: 50px;margin-left: 10px;'>
+					Note: In general de denser the soil, he more contact there is between its particles, and the stronger it is.
+					</div> </div>
+					</div>
+					<div class='col'>
+						<figure>
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_5W1XvDok_e5UOlvldgdk8eTWOd3a5YrrQ&usqp=CAU" style="width:100%" data-preload/>
+							<footer style="margin-top:-60px;"><small>Farhang Radjai</small></footer>
+						  </figure>
+					</div>
+					</div>
 				</div>
 			</div>
 	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Relative density</h1>
+	<figure>
+		<img src="FiguresGeneral/grains.png" style="margin-top:30px;width:100%;">
+		<footer style="margin-top:0px;"><small>leeds.ac.uk Petrophysics course notes</small></footer>
+	  </figure>
+
+	</section>
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Relative density</h1>
+<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:green'>\(D_r\): </strong> Measures the <span class='atb'>packing of coarse soils</span> using a mapping of void ratio compared to its <span class='atb'>maximum and minimum</span> possible densities. This measurement is a <span class='atb'>proxy</span> to asses the coarse soil fabric.
+
+<div class='equationBox'>
+\(D_r= \cfrac{e_{max}-e}{e_{max}-e_{min}} \times 100\)
+</div>
+</div>
+<ul>
+	<li class='fragment'>\(e_{max}\) is the <strong style='color:#7abbe6'>maximum possible void ratio</strong> of the soil. ASTM D4253 test explains the procedure to calculate it.</li>
+	<li class='fragment'>\(e_{min}\) is the <strong style='color:#7abbe6'>minimum possible void ratio</strong> of the soil. ASTM D4253 explains the procedure to calculate it.</li>
+</ul>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 2.14</h1>
+
+<p>What is the relative density of a sand in its densest state?</p>
+
+<ol class='iClicker' >
+<li class='l2'>50%</li>
+<li class='l2'><0%</li>
+<li class='l2'>0%</li>
+<li class='l2'>100%</li>
+<li class='l2'>>100%</li>
+</ol>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Compaction of loose coarse soils</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+When \(e=e_{min}\) the soil is at its <span class='atb'>densest state</span> and \(D_r=100\%\). Densification of coarse soils aims to increase <strong style='color:#7abbe6'>the relative density</strong>.
+</div>
+<div class='container'>
+<div class='col'>
+<ul>
+	<li class='fragment'>For coarse soils, densification is achieved by <span class='atb'>vibration</span>.</li>
+	<li class='fragment'>Reaching \(D_r=100\%\) is virtually impossible. </li>
+	<li class='fragment'> There are different techniques to densify coarse soils in the field. We will talk about some briefly.</li>
+</ul>
+</div>
+<div class='col'>
+	<div class="fragment">  <div class='stickynote' style='margin-top: 50px;margin-left: 200px;'>
+		Note: In nature \(D_r=0\%\) is also virtually impossible. Both max and min relative densities would require a high level of organization of millions of particles. 
+		</div></div>
+
+</div>
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 2.18</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Calculate the relative density of perfectly spherical particles when their porosity is 0.5. What is the maximum and minimum densities of soil with uniform spherical particles? Assume \(G_s=2.65\)
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
+
+</section>
+
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Clay fabric</h1>
