@@ -575,6 +575,25 @@ li.l2:nth-child(even){
   /* width:500px; */
 }
 
+.reveal .wall{
+  column-count: 4;
+  column-gap: 0px;
+  margin: 0 0 0 0;
+  padding: 0px;
+  width:100%
+}
+
+.reveal .item{
+  background-color: rgb(92, 125, 156, 5%);  
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+ 
+
 
 /*********************************************
  * LINKS
