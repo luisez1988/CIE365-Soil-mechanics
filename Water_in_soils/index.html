@@ -149,97 +149,147 @@
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Water in hydrostatic conditions</h1>
-		<img src="FiguresGeneral/phases.svg" width="1000" data-preload></img>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	In <span class='atb'>hydrostatic</span> conditions, pore water pressure (<strong style='color:green'>\(u\)</strong> ) is controlled by the <span class='atb'>ground water table</span> (GWT) elevation.
+	</div>
+	<div class='container'>
+	<div class='col'>
+		<img src="FiguresGeneral/phases.svg" style="margin-left: 0px;" width="90%" data-preload></img>
+	</div>
+	<div class='col'>
+		<div class="fragment">		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+			If the soil is <strong style='color:#7abbe6'>fully dry</strong> \(u=0\)
+		</div></div>
+		<div class="fragment"> 		<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+			If the soil is <strong style='color:#7abbe6'>partially saturated</strong> \(u<0\). <span class='atb'>Suction is generated</span> by the water surface tension and pore size.
+			</div></div>
+		<div class="fragment">		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+			Below the GWT \(u \geq 0\).
+			</div></div>
+	</div>
+	</div>
+		
+
+
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Capillary rise</h1>
-		<div class="container">
-			<div class="col">
-          <ul>
-          	<li class="fragment"> It arises from <strong style="color:#7abbe6">surface tension</strong>. </li>
-						<li class="fragment"> In soils, it occurs between water and particles. </li>
-          </ul>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:#7abbe6'>Capillarity</strong> arises from <span class='atb'>surface tension</span> <strong style='color:green'>\(T\)</strong> that occurs at the interface between water and soil particles.
+	</div>
 
-					<p>Capillary rise:
-						$$h_c=\cfrac{-4T}{\gamma_w d}$$
-					</p>
-					<ul>
-						<li>\(T=\) surface tension</li>
-						<li>\(d=\) tube diameter</li>
-					</ul>
-			</div>
-			<div class="col">
-          <img src="FiguresGeneral/suction_white.png" style="margin-top:100px;width:100%">
-			</div>
+	<div class="container">
+		<div class="col">
+			<div class="fragment"> <img src="FiguresGeneral/meniscus.svg" style="margin-top:0px;width:80%"></div>	
 		</div>
+		<div class="col">
+  <ul>
+	  <li class="fragment"> Surface tension will form a <span class='atb'>water meniscus</span>.  </li>
+			<li class="fragment"> Inter-particle <strong style="color:#7abbe6">contact force</strong> increases. </li>
+			<li class="fragment"> The meniscus radii is function of the shape and size of the pore space which is empirically relate as 20% of \(D_{10}\). </li>
+  </ul>
+		</div>
+	</div>
+		
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Capillary rise</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Simplifying the soil's pore structure as <span class='atb'>tubes</span> will help us to obtain mathematical expressions to <strong style='color:#7abbe6'>understand capillarity</strong>.
+
+</div>
+<div class='container'>
+<div class='col'>
+	<div class="fragment"> 	<img src="FiguresGeneral/suctionplot.svg.2022_02_08_21_49_35.0.svg" style="margin-top:0x;width:85%"></div>
+
+</div>
+<div class='col'>
+<div class="fragment"><div class='defBox' name='Capillary rise' style='margin-top: 25px;margin-left: 0px;'>
+	<strong style='color:green'> \(h_c\):</strong> Is the height of the water column that rises in a tube of diameter \(d\) above the GWT because of water surface tension \(T\).
+	<div class='equationBox'>
+	\( h_c=\cfrac{-4T}{\gamma_w d_t} \)
+	</div>
+</div></div>
+
+</div>
+</div>
+
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 4.1</h1>
+<p> In which of the soils below will the capillary rise be greater?</p>
+<ol class='iClicker' >
+<li class='l2'>A loose poorly graded gravel</li>
+<li class='l2'>A loose well graded gravel</li>
+<li class='l2'>A dense well graded gravel</li>
+<li class='l2'>A dense poorly graded gravel</li>
+</ol>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.1</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Using the tube analogy what will be the capillary rise in a uniform loose sand with \(d=0.015\)mm and in a clay with \(D_{10}=1.5 \mu\)m. Assume the pore size is 20% of \(D_{10}\).
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Suction pressure</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Due to the surface tension and capillary rise, the water column <span class='atb'>above the GWT</span> must be in tension. This generates the <span class='atb'>suction</span> that <strong style='color:#7abbe6'>helps</strong> to hold particles together.
+	</div>
 		<div class="container">
 			<div class="col">
-					<p style="margin-top:-25px;">Negative pore water pressure:
-						$$u_c=\cfrac{-2T}{r_m}$$
-						\(r_m=\) radius of water meniscus
-					</p>
-					<ul>
-						<li class="fragment"> In coarse soils, suction is limited. <strong style="color:#7abbe6">Cavitation</strong>, or "boiling", occurs if \(u_c< p_{atm}\).</li>
-						<li class="fragment"> In fine soils, cavitation is prevented. Thus, \(h_c>10\)m. </li>
+				<div class="fragment">				<p> <strong style='color:#7abbe6'>Negative pore water pressure</strong></p>
+					<div class='equationBox'>
+					\(u_c= -h_c \gamma_w=\cfrac{-2T}{r_m}\)
+					</div>
+					<p>\(r_m=\) radius of water meniscus</p></div>
+			</div>
+			<div class="col">
+          <img src="FiguresGeneral/suctionplot_full.svg" style="margin-top:0px;width:100%">
+			</div>
+		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 4.2</h1>
+
+<p><strong style='color:#7abbe6'>Select </strong> the zone of in the beach profile with excellent bearing capacity</p>
+<img src="./FiguresGeneral/beach_profile.svg" width="90%" style="margin-top: -20px;">
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.2</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>Calculate the capillarity water pressure for the same soils of Example 4.1. 		
+	</p>
+	<a href="#8">Go to Jupyter Notebooks</a>
+</div>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>Capillarity explains shrinkage</h1>
+		<div class="container">
+			<div class="col">
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+					<ul style="margin-top:0px;">
+						<li class="fragment"> Recall that the menisci radii and pressure are related as \(u_c \ \alpha \ 1/r\). </li>
+						<li class="fragment"> Thus, reducing the water content should make the space between particles <span class='atb'>shrink</span> and \(r_m\) decrease. </li>
+						<li class="fragment"> Menisci tension and wall rigidity balance. No further shrinkage of pore space occurs. </li>
 					</ul>
-			</div>
-			<div class="col">
-          <img src="FiguresGeneral/suction_white.png" style="margin-top:100px;width:100%">
-			</div>
-		</div>
-</section>
+				</div>
 
-<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>capillary rise</h1>
-		<div class="container">
-			<div class="col">
-        <ol style="margin-top:-25px;">
-        	<li class="fragment">Tube 1 has diameter \(d_c\) \(\longrightarrow\) capillary rise is \(h_c\) </li>
-					<li class="fragment">Constrained capillary rise \(r_m=r_c\) \(\longrightarrow\) \(h< h_c\)</li>
-					<li class="fragment">Large bubble prevents water to be pulled above void with \(D>>d_c\)  </li>
-					<li class="fragment"> If water infiltrates down from top \(\longrightarrow\) full capillary rise </li>
-					<li class="fragment"> Tube filled with soil \(\longrightarrow\) water rises to top since voids are smaller than \(d_c\) </li>
-        </ol>
-			</div>
-			<div class="col">
-        <img src="FiguresGeneral/tubes.png" style="margin-top:100px;width:100%">
-			</div>
-		</div>
-</section> -->
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Capillary rise</h1>
-		<div class="container">
-			<div class="col">
-        <img src="FiguresGeneral/meniscus.svg" style="margin-top:0px;width:100%">
-			</div>
-			<div class="col">
-      <ul>
-      	<li class="fragment">Particles are <strong style="color:#7abbe6">connected</strong> by menisci.  </li>
-				<li class="fragment"> Interparticle <strong style="color:#7abbe6">effective stress</strong> increases. </li>
-				<li class="fragment"> In soils, it is common to assume the effective size of pores is 20% of effective grain size \(D_{10}\). </li>
-      </ul>
-			</div>
-		</div>
-</section>
-
-
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Shrinkage in soils</h1>
-		<div class="container">
-			<div class="col">
-				<ul style="margin-top:0px;">
-					<li class="fragment"> Menisci radii and pores are not fully developed. </li>
-					<li class="fragment"> The tube length and radius decrease with evaporation. </li>
-					<li class="fragment"> Menisci tension and wall rigidity eventually balance. </li>
-					<li class="fragment"> In water, the menisci are destroyed and the tube expands. </li>
-				</ul>
 			</div>
 			<div class="col">
 			 <figure>
@@ -250,61 +300,19 @@
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<!-- <h1>Shrinkage limit test ASTM D427</h1> -->
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/rVvra7h5U8g?autoplay=0" data-preload></iframe>
-	</section>
-</section>
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Swelling potential</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+When water is added back to the soil, water meniscus are <span class='atb'>broken</span> and the soil <span class='atb'>swells</span>. Clay <span class='atb'>mineralogy</span> plays a significant role on how much a soil will expand.
+</div>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Shrinkage in soils</h1>
-		<div class="container">
-			<div class="col">
-        <!-- <ul>
-        	<li class="fragment"> When equilibrium conditions are reached, no further volume decrease occurs. </li>
-					<li class="fragment"> The water content at this point is <strong style="color:#7abbe6">the shrinkage limit</strong>. </li>
-        </ul> -->
+<div class='defBox' name='Swelling potential' style='margin-top: 5px;margin-left: 0px;'>
+: Measures the capacity of the soil to swell freely as the ratio of the change of volume of the soil over its initial state before water is added.
+</div>
 
-				<p style="margin-top:-25px;font-size:30px">Can be computed using any of:
-					$$SL=\left(\frac{V_{dry}}{M_s}-\frac{1}{\rho_s}\right)\rho_w \times 100$$
-					$$SL=\left(\frac{V_{dry} \gamma_w}{W_s}-\frac{1}{G_s}\right) \times 100$$
-					$$SL=w_i-\left(\cfrac{(V_i-V_{dry})\gamma_w}{W_s}\right) \times 100$$
-				</p>
-				<ul style="margin-top:-25px;font-size:30px">
-					<li>\(V_i=\) initial volume</li>
-					<li>\(w_i=\) initial water content</li>
-					<li>\(V_{dry}\) dried volume</li>
-				</ul>
-			</div>
-			<div class="col">
-          <figure style="margin-top:-30px;">
-            <img src="FiguresGeneral/shrinkage.png" style="width:80%" data-preload/>
-            <footer style="margin-top:-30px;"><small>Reproduced from Holtz (2013)</small></footer>
-          </figure>
-			</div>
-		</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.1</h1>
-<p>During the determination of the shrinkage limit of a sandy clay, the following laboratory data was obtained:
-<ul>
-	<li>Wet wt. of soil + dish= 87.85 g</li>
-	<li>Dry wt. + dish= 76.91 g</li>
-	<li>Wt. dish = 52.7 g</li>
-</ul>
-</p>
-<p>
-Volumetric determination of soil pat:
-<ul>
-	<li>Wt. of dish + mercury= 430.8 g</li>
-	<li>Wt. of dish = 244.62 g</li>
-</ul>
-</p>
-<p>
-calculate the \(SL\) assuming \(G_s=2.65\).
-</p>
+<div class='defBox' name='Swelling pressure' style='margin-top: 5px;margin-left: 0px;'>
+: Measures how much pressure a soil can produce when <strong style='color:#7abbe6'>it can not</strong> freely swell due to a imposed load.
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
