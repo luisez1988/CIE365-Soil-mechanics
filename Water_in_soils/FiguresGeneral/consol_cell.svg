@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="56.609455mm"
+   width="68.788887mm"
    height="48.84243mm"
-   viewBox="0 0 56.609455 48.84243"
+   viewBox="0 0 68.788887 48.84243"
    version="1.1"
    id="svg3293"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.2044227"
-     inkscape:cx="101.29334"
-     inkscape:cy="27.814156"
+     inkscape:zoom="3.4066218"
+     inkscape:cx="117.2716"
+     inkscape:cy="83.513819"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="-9"
@@ -170,7 +170,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-12.548283,-3.2285156)">
+     transform="translate(-0.3688492,-3.2285156)">
     <rect
        style="fill:#37abc8;fill-opacity:1;stroke:#0000ff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
        id="rect15598"
@@ -278,5 +278,62 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 35.697424,6.0411034 36.85073,5.2173163"
        id="path19416" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;white-space:pre;inline-size:23.8765;stroke-width:0.264583"
+       x="43.53756"
+       y="5.713871"
+       id="text3917"
+       transform="translate(9.8172624,0.36173522)"><tspan
+         x="43.53756"
+         y="5.713871"
+         id="tspan9743">Force applied or<tspan
+   y="5.713871"
+   id="tspan9745"> </tspan></tspan><tspan
+         x="43.53756"
+         y="9.241641"
+         id="tspan9747">displacement<tspan
+   y="9.241641"
+   id="tspan9749"> </tspan></tspan><tspan
+         x="43.53756"
+         y="12.769411"
+         id="tspan9751">measured</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="40.56234"
+       y="37.091484"
+       id="text7353"><tspan
+         sodipodi:role="line"
+         id="tspan7351"
+         style="stroke-width:0.264583"
+         x="40.56234"
+         y="37.091484">Soil</tspan></text>
+    <g
+       id="g9512"
+       transform="translate(-57.163179,-1.0096757)">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.564999;stroke-linecap:round;paint-order:fill markers stroke"
+         id="rect9075"
+         width="20.809845"
+         height="2.8049273"
+         x="57.532028"
+         y="33.984791" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.52777px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="67.969681"
+         y="36.531025"
+         id="text8543"><tspan
+           sodipodi:role="line"
+           id="tspan8541"
+           style="stroke-width:0.264583"
+           x="67.969681"
+           y="36.531025">Porous stones</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 28.081755,25.829718 -6.903061,8.54786 6.903062,8.699248"
+       id="path9547" />
   </g>
 </svg>
