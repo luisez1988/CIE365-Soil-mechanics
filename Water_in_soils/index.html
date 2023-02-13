@@ -187,7 +187,7 @@
   <ul>
 	  <li class="fragment"> Surface tension will form a <span class='atb'>water meniscus</span>.  </li>
 			<li class="fragment"> Inter-particle <strong style="color:#7abbe6">contact force</strong> increases. </li>
-			<li class="fragment"> The meniscus radii is function of the shape and size of the pore space which is empirically relate as 20% of \(D_{10}\). </li>
+			<li class="fragment"> The meniscus radii is function of the shape and size of the pore space which is empirically relate as 20% of \(D_{10}\) </li>
   </ul>
 		</div>
 	</div>
@@ -350,7 +350,7 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Quiz 4.3</h1>
-<p>For the data of example 2.7 what is its estimated swelling potential.</p>
+<p>For the data of example 2.7 (\(C_F=5.5\%\) and \(A=1.81\)) what is its estimated swelling potential.</p>
 
 <ol class='iClicker' >
 <li class='l2'> \(S_P<1.5\%\) Low </li>
@@ -400,40 +400,101 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Frost susceptible soils</h1>
-
-	
-	<div class="h-stack" style="margin-top:-20px;">
-		<img src="FiguresGeneral/frost_susceptibility.svg" style="width:60%" data-preload/>
-		<img src="FiguresGeneral/frost_suscep_soilGroups.png" style="width:30%" data-preload/>
+<section data-auto-animate data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Frost susceptible soils</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	There are several tools to determine soil's <span class='atb'>frost susceptibility</span>. For example, the Canadian Department of Transport had use the limits proposed by Armstrong and Csathy (1963).
 	</div>
+<div class='container'>
+<div class='col'>
+
+<figure>
+<img src='./FiguresGeneral/frost_limits.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> > </footer>
+</figure>
+</div>
+<div class='col'>
+	<table style="font-size: 0.75em; background-color: antiquewhite; margin-top: 5px;">
+		<tr>
+			<td><strong>Group</strong> </td>
+			<td><strong>Frost susceptibility</strong> </td>
+			<td><strong>Soils</strong> </td>
+		</tr>
+		<tr>
+			<td>I</td>
+			<td>None</td>
+			<td>Gravel, sand, gravelly tills</td>
+		</tr>
+		<tr>
+			<td>II</td>
+			<td>Moderate</td>
+			<td>Fine clay ( \(C_F>40\%\))</td>
+		</tr>
+		<tr>
+			<td>III</td>
+			<td>Strong</td>
+			<td>Silt, coarse clay (\(C_F\) 15-25%), silty tills</td>
+		</tr>
+	</table>
+</div>
+</div>
 </section>
 
+<section data-auto-animate data-background-image="FiguresGeneral/Normal_slide_Maine.svg">	
+	<img src="./FiguresGeneral/frost_limits.svg" width="90%" >
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Frost penetration depth</h1>
+<figure style="margin-top: -25px;">
+<img src='https://www.brickwood.info/uploads/db5988/original/2X/9/9f3f5a45db1a90b4c924defa2d24ff9c96b6e41d.jpg' width='80%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Determine how the frost susceptibility of the soil in Example 2.7.
+
+<a href="#8">Go to Jupyter Notebook</a>
+</div>
+</section>
 
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Principle of effective stress</h1>
+	
+
 	<div class="container">
 		<div class="col">
-	     <ul style="margin-top:-20px;font-size:35px">
-	     	<li class="fragment"> <strong style="color:#7abbe6">Terzaghi (1925)</strong> proposed a <strong style="color:#7abbe6">new concept</strong> for saturated and dry soils.</li>
-				<li class="fragment"> <strong style="color:#7abbe6">The effective stress principle:</strong> Stress is carried by the solid particles trough <strong style="color:#7abbe6">contacts</strong> in the soil skeleton. </li>
+			<div class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px; text-align: left; font-size: 1em;'>
+		
+				<p> According to the <strong style='color:#7abbe6'>Principle of effective stresses</strong> the stress that produces the deformation of the soil skeleton is transmitted through the <span class='atb'>particle contacts</span> and is equal to the <span class='atb'>total stress</span> <strong style='color:green'>\(\sigma\)</strong> minus the <span class='atb'>water pore pressure</span> <strong style='color:green'>\(u\)</strong>.</p>
+			<div class='equationBox'>
+			\(\sigma'=\sigma - u\)	
+			</div>
+			</div>
+			</div>	
 
-	     </ul>
-			 <p class="fragment">$$\sigma'=\sigma - u$$ </p>
-			 <ul class="fragment">
-			 	<li>\(\sigma'=\) Effective stress.</li>
-				<li>\(\sigma=\) Total stress.</li>
-				<li>\(u=\) Pore water pressure.</li>
-			 </ul>
 		</div>
 		<div class="col">
-			<figure style="margin-top:-25px;">
-			  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/KT_1926.jpg" style="width:75%" data-preload/>
-			  <footer style="margin-top:-60px;"><small>Karl Terzaghi</small></footer>
-			</figure>
+			<p> In (1925) <strong style='color:#7abbe6'>Karl Terzaghi</strong> proposed a <strong style='color:#7abbe6'>new concept</strong> that profoundly impacted the field of Geotechnics: <span class='atb'>The principle of effective stresses</span>.</p>
+			<div class='container'>
+			<div class='col'>
+				<figure style="margin-top:-25px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/KT_1926.jpg" style="width:80%" data-preload/>
+					<footer style="margin-top:-60px;"><small>Karl Terzaghi</small></footer>
+				  </figure>
+			</div>
+			<div class='col'>
+			<div class='stickynote' style='margin-top: 0px;margin-left: 25px;'>
+			Note: The principle of effective stresses only applies for dry and fully saturated soils. For partially saturated soils the pressure of the gases entrapped in the soil must be considered.
+			</div>
+			</div>
+			</div>
+
 		</div>
 	</div>
 </section>
@@ -441,26 +502,29 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Principle of effective stress</h1>
 	<figure style="margin-top:-25px;">
-	  <img src="FiguresGeneral/effective_stress_principle.png" style="width:85%" data-preload/>
+	  <img src="FiguresGeneral/effective stress.svg.2022_02_10_22_01_41.0.svg" style="width:85%" data-preload/>
 	  <footer style="margin-top:-60px;"><small></small></footer>
 	</figure>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1 style="margin-top:0px;">In-situ vertical stresses</h1>
+	<div class='defBox' name='In-situ stresses:' style='margin-top: 0px;margin-left: 0px;'>
+	The in-situ stresses is <strong style='color:#7abbe6'>state of stress</strong> in the field <span class='atb'>as they are</span> previous to any change in the loading conditions in the subsurface.
+	</div>
 <div class="container">
 	<div class="col">
-    <p style="margin-top:-30px;">The <strong style="color:#7abbe6">vertical total stress</strong> is the full weight of soil column:
-			$$\sigma_v=\gamma_t h$$
-		</p>
+		<div class="fragment"> <div class='defBox' name='Vertical total stress' style='margin-top: 5px;margin-left: 0px;'>
+		<strong style='color:green'>\(\sigma_v\): </strong> Is the <strong style='color:#7abbe6'>sum of all</strong> vertical stresses above a point in the subsurface.	
+		</div></div>
+		<div class="fragment"> <div class='defBox' name='Hydrostatic pore water pressure' style='margin-top: 5px;margin-left: 0px;'>
+		<strong style='color:green'>\(u\): </strong>
+		<div class='equationBox'>
+		\( u=\gamma_w h_w\)
+		</div>
+		</div></div>
+		<div class="fragment"></div>
 
-		<p style="margin-top:-30px;">The <strong style="color:#7abbe6">hydrostatic pore pressure</strong> can be calculated using:
-			$$u=\gamma_w h_w$$
-		</p>
-
-		<p style="margin-top:-30px;">The <strong style="color:#7abbe6">vertical effective stress</strong> is:
-			$$\sigma'_v=\sigma_v-u$$
-		</p>
 	</div>
 	<div class="col">
 		<figure>
