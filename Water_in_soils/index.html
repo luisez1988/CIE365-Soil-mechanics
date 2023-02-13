@@ -528,7 +528,7 @@ Determine how the frost susceptibility of the soil in Example 2.7.
 	</div>
 	<div class="col">
 		<figure>
-		  <img src="FiguresGeneral/profile_1.png" style="width:60%" data-preload/>
+		  <img src="FiguresGeneral/vert_profile.svg" style="width:100%" data-preload/>
 		  <footer style="margin-top:-60px;"><small></small></footer>
 		</figure>
 	</div>
@@ -540,27 +540,47 @@ Determine how the frost susceptibility of the soil in Example 2.7.
 	<div class="container">
 		<div class="col">
 			<figure>
-			  <img src="FiguresGeneral/multilayer.png" style="width:100%" data-preload/>
+			  <img src="FiguresGeneral/multilayer.svg" style="width:100%" data-preload/>
 			  <footer style="margin-top:-60px;"><small></small></footer>
 			</figure>
 		</div>
 		<div class="col">
 			<p>The <strong style="color:#7abbe6">total vertical stress</strong> at depth \(z\) is:
-				$$\sigma_v=\sum_{i=1}^n \gamma_i h_i$$
+				<div class='equationBox'>
+				\(\sigma_v=\sum_{i=1}^n \gamma_i h_i\)
+				</div>				
 			</p>
 			<p>\(n=\) number of interfaces below the ground surface including the water table.</p>
+			<div class='defBox' name='Vertical effective stress' style='margin-top: 0px;margin-left: 0px;'>
+			<strong style='color:green'> \(\sigma'_v\): </strong>
+			<div class='equationBox'>
+			\(\sigma'_v= \sigma_v -u \)
+			</div>
+			</div>
 		</div>
 	</div>
 </section>
 
+
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.2</h1>
- <p>Compute the total and effective stress at point A. Plot the vertical total and effective stress with the pore pressure profile in the same graph.</p>
+	<h1>Example 4.4</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Compute the total and effective stress at point A. Plot the vertical total and effective stresses with the pore pressure profile in the same graph.</p>
+		<a href="#8">Go to Jupyter Notebooks</a>
+	</div>
+ 
  <figure>
-   <img src="FiguresGeneral/example.png" style="width:30%; margin-left:-800px" data-preload/>
+   <img src="FiguresGeneral/dexample_stress.svg" style="width:30%; margin-left:-800px; margin-top: -10px;" data-preload/>
    <footer style="margin-top:-60px;"><small></small></footer>
  </figure>
 </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Quiz 4.4</h1>
+	<p>For the soil profile shown below, which stress profile plot is correct?</p>
+	<img src="FiguresGeneral/Quiz_stresses.svg" width="100%" style="margin-top: -25px;">
+</section>
+	
 
 
 
