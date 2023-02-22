@@ -228,46 +228,92 @@
 		<div class='equationBox'>
 		\(h=z+\cfrac{u}{\gamma_w}\)			</div>
 		</div>
-		<p>From fluid mechanics, the most important variable to study the behavior of water is the <strong style="color:#7abbe6">TOTAL HEAD</strong> \(h\), which comes from <strong style="color:#7abbe6">Bernoulli's equation</strong>.</p>
-		<p>TOTAL head \(h\) measures the <strong style="color:#7abbe6">total energy per unit weight of water</strong> of a reference volume.
-			$$h=\frac{u}{\gamma_w}+z$$
-		</p>
-		<ul>
-			<li>\(z=\) elevation</li>
-		</ul>
+		<div class="fragment"><div class='defBox' name='Pressure head' style='margin-top: 15px;margin-left: 0px;'>
+		<strong style='color:green'>\(h_w\):  </strong> Is the height of the water column from the point of interest to the <span class='atb'>zero water pressure line</span> or <strong style='color:#7abbe6'>piezometric line</strong>.
+		<div class='equationBox'>
+		\(h_w=\cfrac{u}{\gamma_w}\)
+		</div>
+		</div> </div>
+		<div class="fragment"></div>
+		<p class="fragment"><strong style='color:#7abbe6'>Note:</strong> The piezometric line is <strong style='color:#7abbe6'>not necesarilly the same</strong> as the water table.</p>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.7</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For the points in the figure below determine the total head, the pressure head, and the location of the piezometric line.
+</div>
+<div class='container'>
+<div class='col'>
+<figure>
+<img src='./FiguresGeneral/Pressure_heaed.svg' width='90%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'>
+
+</div>
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Water in movement</h1>
-	<ul>
-		<li class="fragment"> To have flow, there needs to be <strong style="color:#7abbe6">a difference in total head</strong> \(\Delta h \neq 0\) </li>
-		<li class="fragment"> Water flows from point of higher \(h\) to points of lower \(h\). </li>
-	</ul>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Water flows <strong style='color:#7abbe6'>if and only if</strong> there is a <span class='atb'>total head gradient</span> (i.e., <span class='atb'>difference</span> in total head <strong style='color:green'>\(\Delta h \neq 0 \)</strong> ). If the flow moves from point A to B, then <strong style='color:green'> \(h_a>h_b\)</strong>
+	</div>
 	<div class="container">
 		<div class="col">
-			<figure style="margin-top:-25px;">
-				<img src="FiguresGeneral/cup_of_water.svg" style="width:75%" data-preload/>
+			<figure style="margin-top:0px;">
+				<img src="FiguresGeneral/cup_of_water.svg" style="width:100%" data-preload/>
 				<footer style="margin-top:-60px;"><small></small></footer>
 			</figure>
 		</div>
 		<div class="col">
-
+			<div class="fragment"> <div class="blackboard" style="--width: 600px; --height: 400px;"></div></div>
+			
 		</div>
 	</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 4.6</h1>
+<p>In the figure below: what option is accurate regarding the water movement?</p>
+<div class='container'>
+<div class='col'>
+<figure>
+<img src='./FiguresGeneral/extrange_1D_noflow.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'>
+<ol class='iClicker' >
+<li class='l2'>Water moves from B to A</li>
+<li class='l2'>Water moves from A to B</li>
+<li class='l2'>The water isn't moving</li>
+</ol>
+</div>
+</div>
 </section>
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Hydraulic gradient</h1>
-	<p>Is the <strong style="color:#7abbe6">gradient</strong> or change of <strong style="color:#7abbe6">total head</strong> over a length \(L\) of flow path.
-		$$i=\frac{\Delta h}{L}$$
-	</p>
+	<div class='defBox' name='Hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(i\):</strong> Is the <strong style='color:#7abbe6'>gradient</strong> of total head, or change of <span class='atb'>total head</strong></span>  (<strong style='color:green'>\(\Delta h\)</strong>) over the <span class='atb'>length</span> of <strong style='color:#7abbe6'>flow path (<strong style='color:green'> \(L\)</strong>)</strong>.
+	<div class='equationBox'>
+	\(i=\cfrac{\Delta h}{L}=\cfrac{h_a-h_b}{L_{ab}}  \)
+	</div>
+	<p>Although the hydraulic gradient could be negative we usually calculate it using \(h_a>h_b\)</p>
+	</div>
+	
 
-	<p>Where \(\Delta h= h_a-h_b\) with \(h_a>h_b\).</p>
-
-	<ul>
-	 <li class="fragment"> \(i=0\) \(\longrightarrow\) no flow. </li>
-	 <li class="fragment"> \(i \neq 0\) \(\longrightarrow\) flow between the two points. </li>
+	<ul style="margin-top: 30px;">
+	 <li class="fragment"> \(i=0\) \(\longrightarrow\) <span class='atb'>no flow.</span> </li>
+	 <li class="fragment"> \(i \neq 0\) \(\longrightarrow\) <span class='atb'> flow between the two points.</span> </li>
 	</ul>
 
 </section>

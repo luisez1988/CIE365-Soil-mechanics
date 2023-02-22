@@ -317,6 +317,18 @@ li.l2:nth-child(even){
 
 }
 
+.reveal .blackboard {
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid black;
+  background-color: whitesmoke; 
+  background-image: url('https://cutewallpaper.org/cdn-cgi/mirage/91b98c5373d6a01796e55b9f978389531ff4e5ebae85abd935c54ab8d42fdd46/1280/24/grid-png-transparent/grid-images-png-grid-images-transparent-background-freeiconspng.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .reveal .textBox {
   text-decoration:none;
   color:#000;
