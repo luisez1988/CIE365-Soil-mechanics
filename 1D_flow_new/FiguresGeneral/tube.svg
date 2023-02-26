@@ -3,8 +3,8 @@
 
 <svg
    width="276.31924mm"
-   height="175.68668mm"
-   viewBox="0 0 276.31924 175.68668"
+   height="160.34105mm"
+   viewBox="0 0 276.31924 160.34105"
    version="1.1"
    id="svg3921"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
@@ -24,11 +24,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.81134749"
-     inkscape:cx="556.48166"
+     inkscape:cx="555.8654"
      inkscape:cy="248.96854"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="-9"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -72,7 +72,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path3994"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <g
        id="g4556"
        clip-path="url(#clipPath4558)">
@@ -350,7 +350,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4056"
-       style="stroke:#ffffff" />
+       style="stroke:#ff0000" />
     <path
        d="M 31.96986,160.52981 95.949284,136.89815"
        stroke="#1d1d1f"
@@ -361,7 +361,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4058"
-       style="stroke:#ffffff" />
+       style="stroke:#ff0000" />
     <path
        d="m 3.0307937,99.059699 c 5.5543978,14.850001 -1.9812,31.390691 -16.8309397,36.945091 -8.367448,3.12949 -17.714647,2.18546 -25.287287,-2.55376"
        stroke="#252628"
@@ -382,7 +382,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4062"
-       style="stroke:#004488" />
+       style="stroke:#ff0000" />
     <path
        d="m 2.733402,97.871984 c 10.491523,19.936086 20.98331,39.872176 34.168291,52.924866 13.184981,13.05296 29.063685,19.22225 44.942125,25.3918"
        stroke="#f5f5f5"
@@ -392,7 +392,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4064"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m -40.129097,132.26782 c 28.843022,17.97182 57.686309,35.94391 74.663563,47.71787 16.977519,11.77395 18.08771,11.24082 27.201019,22.92588"
        stroke="#f5f5f5"
@@ -402,7 +402,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4066"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m -39.169189,132.87027 c -13.410935,-8.45661 -17.42731,-26.18369 -8.970698,-39.594627 8.456612,-13.410936 26.183696,-17.427311 39.5946308,-8.970698 5.1498499,3.247231 9.13394572,8.047831 11.376554,13.707798"
        stroke="#f5f5f5"
@@ -412,7 +412,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4068"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 67.027151,107.92615 c 0,-15.927651 12.911931,-28.839582 28.839583,-28.839582 15.927656,0 28.839586,12.911931 28.839586,28.839582 0,15.92765 -12.91193,28.83958 -28.839586,28.83958 -15.927652,0 -28.839583,-12.91193 -28.839583,-28.83958 z"
        stroke="#f5f5f5"
@@ -422,7 +422,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path4070"
-       style="stroke:#ffffff" />
+       style="stroke:#ff0000" />
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="700"
@@ -430,7 +430,7 @@
        id="text4072"
        x="-74.784225"
        y="63.740734"
-       style="fill:#ffffff;stroke-width:0.264583">Flow tube or “Pipe”</text>
+       style="fill:#000000;stroke-width:0.264583">Flow tube or “Pipe”</text>
     <path
        d="m 11.596944,146.95219 c 5.613664,5.88963 11.449579,10.90242 19.51937,16.72326 8.069792,5.82083 18.37346,12.4497 28.899379,18.20174"
        stroke="#00b0f0"
@@ -447,37 +447,37 @@
        id="text4086"
        x="-45.946754"
        y="107.92615"
-       style="fill:#ffffff;stroke-width:0.264583">ℎ<tspan
+       style="fill:#000000;stroke-width:0.264583">ℎ<tspan
    font-size="8.99583px"
    x="-39.111694"
    y="110.3074"
    id="tspan4076"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan><tspan
    font-size="12.4354px"
    x="63.435696"
    y="200.53032"
    id="tspan4078"
-   style="fill:#ffffff;stroke-width:0.0700043">ℎ</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">ℎ</tspan><tspan
    font-size="8.99583px"
    x="70.270935"
    y="203.17615"
    id="tspan4080"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
    font-size="10.5833px"
    x="127.49132"
    y="85.436569"
    id="tspan4082"
-   style="fill:#ffffff;stroke-width:0.0700043">𝐴</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝐴</tspan><tspan
    font-size="7.67292px"
    x="134.59328"
    y="87.55323"
    id="tspan4084"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑇</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑇</tspan></text>
     <path
        d="m 117.94886,89.507921 5.84081,-5.107673 -0.508,-0.580919 -5.84081,5.107678 z m 6.12571,-4.111993 1.12086,-2.737564 -2.86258,0.74586 z"
        fill="#f5f5f5"
        id="path4088"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -485,116 +485,116 @@
        id="text4092"
        x="130.53482"
        y="136.76573"
-       style="fill:#ffffff;stroke-width:0.264583">𝐴<tspan
+       style="fill:#000000;stroke-width:0.264583">𝐴<tspan
    font-size="7.67292px"
    x="137.25966"
    y="138.8824"
    id="tspan4090"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑣</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑣</tspan></text>
     <path
        d="m 116.0973,117.82263 12.2899,10.78732 -0.50906,0.57997 -12.28989,-10.78733 z m 12.57671,9.79222 1.11575,2.73977 -2.86121,-0.75116 z"
        fill="#f5f5f5"
        id="path4094"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
        font-size="12.4354px"
        id="text4098"
        x="-70.235771"
-       y="190.74072"
-       style="fill:#ffffff;stroke-width:0.264583">ℎ<tspan
+       y="175.3951"
+       style="fill:#000000;stroke-width:0.264583">ℎ<tspan
    font-size="8.99583px"
    x="-63.400711"
-   y="193.12198"
+   y="177.77635"
    id="tspan4096"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="12.4354px"
        id="text4100"
        x="-22.156481"
-       y="190.74072"
-       style="fill:#ffffff;stroke-width:0.264583">&gt;</text>
+       y="177.51173"
+       style="fill:#000000;stroke-width:0.264583">&gt;</text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
        font-size="12.4354px"
        id="text4112"
        x="-15.982958"
-       y="190.74072"
-       style="fill:#ffffff;stroke-width:0.264583"><tspan
+       y="175.3951"
+       style="fill:#000000;stroke-width:0.264583"><tspan
          font-size="12.4354px"
          x="-13.282012"
-         y="190.74072"
+         y="175.3951"
          id="tspan4102"
-         style="fill:#ffffff;stroke-width:0.0700043">ℎ</tspan><tspan
+         style="fill:#000000;stroke-width:0.0700043">ℎ</tspan><tspan
          font-size="8.99583px"
          x="-6.4469256"
-         y="193.12198"
+         y="177.77635"
          id="tspan4104"
-         style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
+         style="fill:#000000;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
          font-size="12.4354px"
          x="103.72672"
-         y="213.4949"
+         y="198.14928"
          id="tspan4106"
-         style="fill:#ffffff;stroke-width:0.0700043">𝑞</tspan><tspan
+         style="fill:#000000;stroke-width:0.0700043">𝑞</tspan><tspan
          font-size="7.14375px"
          x="140.57602"
-         y="211.11365"
+         y="195.76802"
          id="tspan4108"
-         style="fill:#ffffff;stroke-width:0.0700043">𝐴</tspan><tspan
+         style="fill:#000000;stroke-width:0.0700043">𝐴</tspan><tspan
          font-size="5.29167px"
          x="145.04086"
-         y="212.43657"
+         y="197.09094"
          id="tspan4110"
-         style="fill:#ffffff;stroke-width:0.0700043">𝑣</tspan></text>
+         style="fill:#000000;stroke-width:0.0700043">𝑣</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="7.14375px"
        id="text4114"
        x="149.98434"
-       y="211.11365"
-       style="fill:#ffffff;stroke-width:0.264583">= area of voids</text>
+       y="195.76802"
+       style="fill:#000000;stroke-width:0.264583">= area of voids</text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
        font-size="7.14375px"
        id="text4118"
        x="140.57629"
-       y="220.90323"
-       style="fill:#ffffff;stroke-width:0.264583">𝐴<tspan
+       y="205.5576"
+       style="fill:#000000;stroke-width:0.264583">𝐴<tspan
    font-size="5.29167px"
    x="145.04114"
-   y="222.22615"
+   y="206.88052"
    id="tspan4116"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑡</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑡</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="7.14375px"
        id="text4120"
        x="147.73328"
-       y="220.90323"
-       style="fill:#ffffff;stroke-width:0.264583">= total coss section</text>
+       y="205.5576"
+       style="fill:#000000;stroke-width:0.264583">= total coss section</text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
        font-size="7.14375px"
        id="text4122"
        x="140.57629"
-       y="230.69283"
-       style="fill:#ffffff;stroke-width:0.264583">𝑞</text>
+       y="215.3472"
+       style="fill:#000000;stroke-width:0.264583">𝑞</text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="7.14375px"
        id="text4124"
        x="146.19206"
-       y="230.69283"
-       style="fill:#ffffff;stroke-width:0.264583">= water flow rate</text>
+       y="215.3472"
+       style="fill:#000000;stroke-width:0.264583">= water flow rate</text>
     <path
        d="m -14.332223,115.73136 c 2.47994,3.4962 7.8909334,11.88693 11.9038688,16.78173 2.94216663,3.34221 6.9389624,7.74991 12.1732144,12.58702"
        stroke="#00b0f0"
@@ -615,51 +615,51 @@
        font-size="12.4354px"
        id="text4144"
        x="-71.886772"
-       y="227.51782"
-       style="fill:#ffffff;stroke-width:0.264583">𝑞<tspan
+       y="212.1722"
+       style="fill:#000000;stroke-width:0.264583">𝑞<tspan
    font-size="8.99583px"
    x="-65.457397"
-   y="229.89906"
+   y="214.55344"
    id="tspan4130"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑒𝑛𝑡𝑟𝑎𝑛𝑐𝑒</tspan><tspan
    font-family="Calibri, Calibri_MSFontService, sans-serif"
    font-size="12.4354px"
    x="-24.213352"
-   y="227.51782"
+   y="212.1722"
    id="tspan4132"
-   style="fill:#ffffff;stroke-width:0.0700043">=</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">=</tspan><tspan
    font-size="12.4354px"
    x="-18.039564"
-   y="227.51782"
+   y="212.1722"
    id="tspan4134"
-   style="fill:#ffffff;stroke-width:0.0700043" /><tspan
+   style="fill:#000000;stroke-width:0.0700043" /><tspan
    font-size="12.4354px"
    x="-15.338696"
-   y="227.51782"
+   y="212.1722"
    id="tspan4136"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑞</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑞</tspan><tspan
    font-size="8.99583px"
    x="-8.9093246"
-   y="229.89906"
+   y="214.55344"
    id="tspan4138"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑒𝑥𝑖𝑡</tspan><tspan
    font-size="12.4354px"
    x="12.638875"
-   y="227.51782"
+   y="212.1722"
    id="tspan4140"
-   style="fill:#ffffff;stroke-width:0.0700043">=</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">=</tspan><tspan
    font-size="12.4354px"
    x="25.274845"
-   y="227.51782"
+   y="212.1722"
    id="tspan4142"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑞</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑞</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
        font-size="7.9375px"
        id="text4146"
        x="-71.622719"
-       y="216.66991"
-       style="fill:#ffffff;stroke-width:0.264583">If water is assumed incompressible:</text>
+       y="201.32428"
+       style="fill:#000000;stroke-width:0.264583">If water is assumed incompressible:</text>
   </g>
 </svg>

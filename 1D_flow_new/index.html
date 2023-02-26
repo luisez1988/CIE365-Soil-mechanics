@@ -182,7 +182,7 @@
 
 
 
-<section  data-auto-animate data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section   data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Total head</h1>
 	<div class='textBox' style='margin-top: -10px;margin-left: 0px; text-align: left;'>
 	Bernoulli's equation describes the <span class='atb'>total energy</span> of an incompressible flow in terms of its potential, kinetic, and pressure energy.
@@ -221,7 +221,7 @@
 	</div>
 </section>
 
-<section  data-auto-animate data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Total head</h1>
 	<div class='defBox' name='Total head' style='margin-top: 15px;margin-left: 0px;'>
 		<strong style='color:green'>\(h\): </strong> Is the total energy per unit weight of water.
@@ -235,7 +235,7 @@
 		</div>
 		</div> </div>
 		<div class="fragment"></div>
-		<p class="fragment"><strong style='color:#7abbe6'>Note:</strong> The piezometric line is <strong style='color:#7abbe6'>not necesarilly the same</strong> as the water table.</p>
+		<p class="fragment"><strong style='color:#7abbe6'>Note:</strong> The piezometric line is <strong style='color:#7abbe6'>not necessarily the same</strong> as the water table.</p>
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
@@ -273,8 +273,7 @@ For the points in the figure below determine the total head, the pressure head, 
 			</figure>
 		</div>
 		<div class="col">
-			<div class="fragment"> <div class="blackboard" style="--width: 600px; --height: 400px;"></div></div>
-			
+			<div class="fragment"> <div class="blackboard" style="--width: 600px; --height: 400px;"></div></div>			
 		</div>
 	</div>
 </section>
@@ -318,42 +317,26 @@ For the points in the figure below determine the total head, the pressure head, 
 
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.8</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Calculate the hydraulic gradient between points A and B in the figure bellow and plot the piezometric line between points C and D.
+<p><a href="#7"> Go to Jupyter Notebooks</a> </p>
+</div>
+<div class='container'>
+<div class='col'>
+<figure>
+<img src='./FiguresGeneral/artisian_condition.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Water in movement</h1>
-	<figure>
-	  <img src="tube.svg" style="width:70%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
+</div>
+</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>True seepage velocity</h1>
-		<div class="container">
-			<div class="col">
-        <figure>
-          <img src="FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
-          <footer style="margin-top:-60px;"><small></small></footer>
-        </figure>
-			</div>
-			<div class="col">
-        <p style="margin-top:-25px;">Water flow rate \(q\):
-					$$q=v_w A_v= vA_t$$
-				</p>
-				<p style="margin-top:-25px;">"Discharge" velocity (or Darcy velocity) \(v\)
-					$$v=v_w \frac{A_v}{A_t}=v_w n$$
-				</p>
-				<ul style="margin-top:-25px;">
-					<li>\(A_v=\) area of voids</li>
-					<li>\(A_t=\) total area</li>
-					<li>\(v_w=\) seepage velocity (real velocity)</li>
-				</ul>
-			</div>
-		</div>
-</section>
-
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Darcy's law</h1>
 		<div class="container">
 			<div class="col">
@@ -370,91 +353,143 @@ For the points in the figure below determine the total head, the pressure head, 
 				</figure>
 			</div>
 		</div>
-</section>
+</section> -->
 
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Darcy's law</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Was proposed by <strong style='color:#7abbe6'>Henry Darcy</strong> (1803-1858) after measurements of flow and hydraulic heads.
+	</div>
 		<div class="container">
 			<div class="col">
-          <figure>
-            <img src="FiguresGeneral/darcy_experiment.svg" style="width:75%" data-preload/>
+          <figure class="fragment">
+            <img src="FiguresGeneral/darcy_experiment.svg" style="width:75%; margin-top: -25px;" data-preload/>
             <footer style="margin-top:-60px;"><small></small></footer>
           </figure>
 			</div>
 			<div class="col">
-				<p style="margin-top:-25px;">He observed that the flow rate \(q\) was:
+				<div class="fragment">				<p style="margin-top:0px;">He observed that the flow rate <strong style='color:green'>\(q\)</strong> was:
 					<ul>
-						<li class="fragment"> Proportional to \(A\) and \(\Delta h\). </li>
-						<li class="fragment"> Inversely proportional to \(L\). </li>
+						<li > <span class='atb'>Proportional to</span> the cross sectional area  \(A\) and the head difference \(\Delta h\). </li>
+						<li > <span class='atb'>Inversely proportional</span>  to \(L\). </li>
 					</ul>
-					$$q=k \frac{\Delta h}{L} A$$
-					$$q= kiA$$
-					$$q=vA$$
+					<div class='equationBox'>
+					\(q=k \frac{\Delta h}{L} A= kiA\)
+					</div>
+					
 				</p>
-				<ul style="margin-top:-25px;">
-					<li class="fragment">\(k=\) permeability coefficient. </li>
-				</ul>
+				<p style="margin-top: -25px;">\(k=\) Coefficient of permeability</p>
+			</div>
+
+
 			</div>
 		</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Darcy's law</h1>
-	<p>Darcy's law is valid if:
-<ul>
-	<li class="fragment"> The water flow is <strong style="color:#7abbe6">slow, laminar, not turbulent</strong>. </li>
-	<li class="fragment"> Kinematic energy is negligible. </li>
-	<li class="fragment"> The soil is <strong style="color:#7abbe6">homogeneous</strong> (i.e., properties do not depend on the location of measurement). </li>
-	<li class="fragment"> The soil is <strong style="color:#7abbe6">isotropic</strong> (i.e., properties do not depend on the direction that you measure them). </li>
-</ul>
 
-	</p>
+<div class='defBox' name='Hydraulic conductivity/permeability' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:#7abbe6'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. The permeability is tightly related to the soil fabric and pore network distribution.
+</div>	
+<p><strong style='color:#7abbe6'>Darcy's law is valid if:</strong> </p>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<ul>
+		<li class="fragment"> The water flow is <strong style="color:#7abbe6">slow, laminar, not turbulent</strong>. </li>
+		<li class="fragment"> Kinematic energy is negligible. </li>
+		<li class="fragment"> The soil is <strong style="color:#7abbe6">homogeneous</strong> (i.e., properties do not depend on the location of measurement). </li>
+		<li class="fragment"> The soil is <strong style="color:#7abbe6">isotropic</strong> (i.e., properties do not depend on the direction that you measure them). </li>
+	</ul>
+</div>
 
 </section>
 
-
-
-
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.3</h1>
+	<h1>Example 4.9</h1>
+	<div class='textBox' style='margin-top: -15px;margin-left: 0px;font-size: 0.85em;'>
+		The figure shows water flow through the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
+			<ol>
+				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
+				<li>Draw the levels of water in standpipes.</li>
+				<li>Compute the amount of water flow \(q\) through the specimen.</li>
+			</ol>
+		<p><a href="#7">Go to Jupyter Notebooks</a></p>	
+		
+	</div>
 	<div class="container">
   	<div class="col">
-     <p>The figure shows water flow trought the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
- 			<ol>
- 				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
- 				<li>Draw the levels of water in standpipes.</li>
- 				<li>Compute the amount of water flow \(q\) through the specimen.</li>
- 			</ol>
- 		</p>
+		<figure>
+			<img src="FiguresGeneral/tube_example.png" style="width:90%;margin-top: -15px;" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
   	</div>
   	<div class="col">
-     <figure>
-       <img src="FiguresGeneral/tube_example.png" style="width:100%" data-preload/>
-       <footer style="margin-top:-60px;"><small></small></footer>
-     </figure>
+
   	</div>
   </div>
 </section>
 
 
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Water seepage</h1>
+	<figure>
+	  <img src="./FiguresGeneral/tube.svg" style="width:80%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+</section>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+    <h1>True seepage velocity</h1>
+		<div class="container">
+			<div class="col">
+        <figure style="margin-top: -20px;">
+          <img src="FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
+          <footer style="margin-top:-60px;"><small></small></footer>
+        </figure>
+			</div>
+			<div class="col">
+				<div class='defBox' name='Discharge or Darcy velocity' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:green'> \(v\):</strong> Is the <span class='atb'>equivalent flow velocity</span> considering the entire cross section.
+					<p> 				<div class='equationBox'>
+						\( v=ki\)				
+						</div></p>
+
+				</div>
+
+				<div class='defBox' name='True velocity' style='margin-top: 6px;margin-left: 0px;'>
+				<strong style='color:green'> \(v_w\):</strong> Is the true velocity in the <strong style='color:#7abbe6'>porous media</strong>.
+				<div class='equationBox'>
+					\(v=v_w \frac{A_v}{A_t}=v_w n\)
+				</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.10</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For Example 4.9, find the Darcy and True velocity of flow. How long will a particle of water take to pass trough the soil specimen?
+<p><a href="#7">Go to Jupyter Notebooks</a></p>
+</div>
+</section>
+
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Measurement of permeability</h1>
-
-	<p>Recall:
-	<ul>
-		<li class="fragment"> Is the ability of water to flow trough soil. </li>
-		<li class="fragment"> Depends on void ratio, GSD, voids connectivity, viscosity of the fluid,... </li>
-		<li class="fragment"> One of the <strong style="color:#7abbe6">most variable</strong> parameters of soils and difficult to determine in the field accurately. </li>
-		<li class="fragment"> Different methods and between most popular we have:
-			<ol>
-				<li><strong style="color:#7abbe6">Constant head test</strong></li>
-				<li> <strong style="color:#7abbe6">Falling head.</strong> </li>
-			</ol>
-		</li>
-	</ul>
-	</p>
-
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<ul>
+			<li class="fragment"> Is the parameter that measures ability of water to flow trough soil. </li>
+			<li class="fragment"> Depends on void ratio, GSD, voids connectivity, viscosity of the fluid,... </li>
+			<li class="fragment"> One of the <strong style="color:#7abbe6">most variable</strong> parameters of soils and difficult to determine in the field accurately. </li>
+			<li class="fragment"> Different methods and between most popular we have:
+				<ol>
+					<li><strong style="color:#7abbe6">Constant head test</strong></li>
+					<li> <strong style="color:#7abbe6">Falling head.</strong> </li>
+				</ol>
+			</li>
+		</ul>
+	</div>
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -467,81 +502,114 @@ For the points in the figure below determine the total head, the pressure head, 
 				</figure>
 			</div>
 			<div class="col">
-        <ul>
-        	<li>\(\Delta h\) constant</li>
-        </ul>
-				<p>$$k=\frac{QL}{A \Delta h t}$$</p>
-				<ul>
-					<li class="fragment">\(t=\) elapsed time of measurement.</li>
-					<li class="fragment"> very slow test.  </li>
-					<li class="fragment"> Darcy used this test in his experiments. </li>
-				</ul>
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+					<p > Assuming \(\Delta h=\)cnt. the permeability is calculated measuring the total volume of water collected (<strong style='color:green'>\(Q\)</strong>) in a time period (<strong style='color:green'>\(\Delta t\)</strong>)</p>
+					<p> <div class='equationBox'>
+						\(k=\cfrac{QL}{A \Delta h \Delta t}\)
+						</div>
+					</p>
+				</div>
+			<ul>
+				<li class='fragment'>Better for coarse soils.</li>
+				<li class='fragment'>Shorter testing times.</li>
+				<li class='fragment'>Samples with large cross-sectional areas.</li>
+			</ul>		
+
 			</div>
 		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.11</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A soil permeability device has a chamber of 6 inches of diameter by 12 inches height. If the typical permeability of soil samples tested on these device ranges from \(1\times 10^{-5}\) cm/s to \(1 \times 10^{-3}\) cm/s, what is the maximum required head difference so the tests are no longer than 1 hr. 
+<p><a href="#7">Go to Jupyter Notebooks </a> </p>
+</div>
 </section>
 
 
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
+
 		<div class="container">
 			<div class="col">
 				<figure>
-				  <img src="falling_head.svg" style="width:75%" data-preload/>
+				  <img src="./Figuresgeneral/falling_head.svg" style="width:75%" data-preload/>
 				  <footer style="margin-top:-60px;"><small></small></footer>
 				</figure>
 			</div>
 			<div class="col">
-        <ul>
-        	<li>\(\Delta h\) not constant</li>
-        </ul>
-				<p>$$k=\frac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta h}\right)$$</p>
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:#7abbe6'> is not constant</strong>.
+				<p><div class='equationBox'>
+				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
+				</div> </p>
+				</div>
 				<ul>
-					<li class="fragment">\(\Delta t=\) elapsed time of measurement.</li>
-					<li class="fragment"> Rapid test.  </li>
-					<li class="fragment"> An operator is not always required in place. </li>
+					<li class='fragment'>Better suited for <strong style='color:#7abbe6'>low permeability soils</strong></li>
+					<li class='fragment'>Longer testing times</li>
+					<li class='fragment'>Soil samples with smaller cross-sectional areas.</li>
 				</ul>
 			</div>
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Permeability of soils</h1>
-	<div class="container">
-		<div class="col">
-	      <p>Rule of thumb:
-					<ol>
-						<li>Gravel \(\longrightarrow\) \(k>10^{-1}\) cm/s.</li>
-						<li>Sand \(\longrightarrow\) \(10^{-3}\) to \(10^{-1}\) cm/s.</li>
-						<li>Silt \(\longrightarrow\) \(10^{-5}\) to \(10^{-3}\) cm/s.</li>
-						<li>Clay \(\longrightarrow\) \(10^{-9}\) to \(10^{-5}\) cm/s.</li>
-					</ol>
-				</p>
-		</div>
-		<div class="col">
-			<figure>
-			  <img src="FiguresGeneral/soil_permeability.svg" style="width:100%" data-preload/>
-			  <footer style="margin-top:-30px;"><small>Holtz et al. (2013)</small></footer>
-			</figure>
-		</div>
-	</div>
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.12</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What is the burette size required to conduct a permeability test in a soil sample with permeability \(1 \times 10^-8\) cm/s in one day. The initial height of water above the soil specimen is 80 cm and the water in the burette can not be below the 10 cm mark.
+<p><a href="#7"> Go to Jupyter Notebooks</a></p>
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Permeability of soils</h1>
-	<p>Empirical correlations
+	<h1>Typical permeability of soils</h1>
+	<p>Rule of thumb:</p>
+	<table style="background-color: antiquewhite;">
+		<tr>				
+			<td><strong style='color:#7abbe6'>Soil type</strong></td>
+			<td>Permeability \(k\) [cm/s]</td>
+		</tr>
+		<tr>				
+			<td>Gravel</td>
+			<td> \(> 10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Sand</td>
+			<td> \(10^{-3}\) to \(10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Silt</td>
+			<td> \(10^{-5}\) to \(10^{-3}\)</td>
+		</tr>
+		<tr>				
+			<td>Clay</td>
+			<td> \(< 10^{-5}\)</td>
+		</tr>
+	</table>
+</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Empirical correlations</h1>
+
 		<div class="container">
 			<div class="col">
 				<ul>
-				 <li>Hazen's (1911) equation:
-					 $$k[cm/s]=C D_{10}^2$$
+				 <li class="fragment">Hazen's (1911) equation:
+					<p><div class='equationBox'>
+					\(k[cm/s]=C D_{10}^2\)
+					</div></p>
+					 
 					 <ul style="margin-top:0px;font-size:25px">
 						 <li>\(D_{10}\) in mm</li>
 						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
 					 </ul>
 				 </li>
-				 <li>Chapuis's formula
-					 $$k[cm/s]=2.4622\left(D_{10}^2 \cfrac{e^3}{1+e}\right)$$
+				 <li class="fragment">Chapuis's formula
+					<p><div class='equationBox' style="font-size: 0.9em;">
+					\(k[cm/s]=2.4622\left(D_{10}^2 \cfrac{e^3}{1+e}\right)\)
+					</div></p>					 
 					 <ul style="margin-top:0px;font-size:25px">
 						 <li>\(D_{10}\) in mm</li>
 					 </ul>
@@ -550,8 +618,10 @@ For the points in the figure below determine the total head, the pressure head, 
 			</div>
 			<div class="col">
 				<ul>
-					<li>Kozeny and Carman's formula:
-						$$k[cm/s]=\frac{\gamma_w}{\eta_w}\frac{1}{C_{k-c}S^2_s}\frac{e^3}{1+e}$$
+					<li class="fragment">Kozeny and Carman's formula:
+						<p><div class='equationBox' style="font-size: 0.9em;">
+						\(k[cm/s]=\cfrac{\gamma_w}{\eta_w}\cfrac{1}{C_{k-c}S^2_s}\cfrac{e^3}{1+e}\)
+						</div> </p>						
 						<ul style="margin-top:0px;font-size:25px">
 							<li>\(\gamma_w\) in kN/m<sup>3</sup> </li>
 							<li>\(\eta_w=\) viscosity of water \(1.002\times10^{-3}\) Ns/m<sup>2</sup> </li>
@@ -562,23 +632,34 @@ For the points in the figure below determine the total head, the pressure head, 
 				</ul>
 			</div>
 		</div>
+	</section>
 
-
-	</p>
-
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.13</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For the soil in Example 2.7 estimate its permeability using empirical correlations when \(e=0.4\) and \(e=0.87\). Assume the particles are spherical.
+<p> <a href="#7">Go to Jupyter Notebooks</a></p>
+</div>
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.4</h1>
- <div class="container">
- <p>A sample of sand, 5 cm in diamenter and 15 cm long, was prepared at porosity of 60% in a constant-head apparatus. The total head was kept constant at 30 cm and the amount of water collected was 40 cm<sup>3</sup>. The test temperature was 20&#176. Calculate the permeability and the seepage velocity. </p>
+
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<figure>
+<img src='./FiguresGeneral/soil_permeability.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em>Modified from Casagrande (1938)</em> </footer>
+</figure>
+
 </section>
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Equivalent permeability</h1>
-	<p>If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:#7abbe6">equivalent permeability</strong> in order to apply Darcy's law.</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:#7abbe6">equivalent permeability</strong> in order to apply Darcy's law.
+	</div>
+	<p></p>
 	<div class="container">
 		<div class="col">
 			<p>We will study two cases:
@@ -590,7 +671,7 @@ For the points in the figure below determine the total head, the pressure head, 
 		</div>
 		<div class="col">
 			<figure style="margin-top:0px;">
-				<img src="equivalent.svg" style="width:100%" data-preload/>
+				<img src="FiguresGeneral/equivalent.svg" style="width:100%" data-preload/>
 				<footer style="margin-top:-60px;"><small></small></footer>
 			</figure>
 		</div>
@@ -600,13 +681,28 @@ For the points in the figure below determine the total head, the pressure head, 
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Perpendicular flow</h1>
-		<div class="container">
-			<div class="col">
-          <figure>
+    <h1>Example 4.14</h1>
+	<div class='container'>
+	<div class='col'>
+		<figure>
             <img src="FiguresGeneral/perpendicular.svg" style="width:81%" data-preload/>
             <footer style="margin-top:-60px;"><small></small></footer>
           </figure>
+	</div>
+	<div class='col'>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			Derive an equation to calculate the equivalent permeability for flow perpendicular to the layers.
+		</div>
+		<div class="fragment" style="margin-top: 50px;"> 		<div class='equationBox'>
+			$$ k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i} $$
+		</div></div>
+
+	</div>
+	</div>
+
+		<div class="container">
+			<div class="col">
+
 			</div>
 			<div class="col">
 				<p class="fragment" style="margin-top:400px;">$$k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i}$$</p>
@@ -614,9 +710,18 @@ For the points in the figure below determine the total head, the pressure head, 
 		</div>
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.15</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A permeability test was conducted in a sand on a chamber of 6 inches of diameter by 12 inches heigh. The sample was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
+<p><a href="#7">Go to Jupyter Notebooks</a></p>
+</div>
+
+</section>
+
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Parallel flow</h1>
+    <h1>Example 4.16</h1>
 		<div class="container">
 			<div class="col">
           <figure>
@@ -625,9 +730,29 @@ For the points in the figure below determine the total head, the pressure head, 
           </figure>
 			</div>
 			<div class="col">
-				<p class="fragment" style="margin-top:400px;">$$k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}$$</p>
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				Derive an expression to calculate the equivalent permeability when the flow is parallel to the layering.
+				</div>
+
+				<p class="fragment" style="margin-top:50px;">
+					<div class='equationBox'>
+						$$k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}$$
+					</div>
+				</p>
 			</div>
 		</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 4.17</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;font-size: 0.85em;'>
+A permeable water channel will be constructed as shown in the figure below. Three layers of sand with permeabilities \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated in the figure. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length in the channel.
+<p><a href="#7">Go to Jupyter Notebooks</a></p>
+</div>
+<figure>
+<img src='FiguresGeneral/channels.svg' width='40%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
 </section>
 
     <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">

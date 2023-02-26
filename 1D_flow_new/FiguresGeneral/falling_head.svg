@@ -24,22 +24,17 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.81134749"
-     inkscape:cx="-97.985143"
-     inkscape:cy="191.04022"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="-9"
+     inkscape:zoom="1.622695"
+     inkscape:cx="165.15735"
+     inkscape:cy="287.17658"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern6"
-       id="pattern1184"
-       patternTransform="matrix(0.04134115,0,0,0.04134115,16.587527,230.39314)" />
     <pattern
        inkscape:collect="always"
        xlink:href="#pattern4"
@@ -54,7 +49,7 @@
        inkscape:collect="always"
        xlink:href="#pattern2"
        id="pattern1171"
-       patternTransform="matrix(0.04134115,0,0,0.04134115,45.691693,172.18481)" />
+       patternTransform="matrix(0.04134115,0,0,0.04134115,45.691693,176.94734)" />
     <clipPath
        id="clip0">
       <rect
@@ -144,7 +139,7 @@
        stroke-miterlimit="8"
        fill="#c8e3fb"
        id="rect850"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <rect
        x="47.808361"
        y="156.04523"
@@ -163,7 +158,7 @@
        stroke-miterlimit="8"
        fill="#ffffff"
        id="rect854"
-       style="fill:#ffffff;stroke:#ffffff" />
+       style="fill:#000000;stroke:#000000" />
     <rect
        x="59.714611"
        y="103.65772"
@@ -176,7 +171,7 @@
        d="m 63.683359,197.84939 v 3.43958 h -0.881856 v -3.43958 z m -1.763977,0 v 3.43958 h -0.881856 v -3.43958 z"
        fill="#ffffff"
        id="path858"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="m 62.492734,196.92335 v 4.49792"
        stroke="#c8e3fb"
@@ -195,7 +190,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path862"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 64.873984,151.15043 3.5e-5,-75.141666"
        stroke="#ffffff"
@@ -205,7 +200,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path864"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,91.3546 h 5.027083"
        stroke="#ffffff"
@@ -215,7 +210,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path866"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,94.000433 h 2.645833"
        stroke="#ffffff"
@@ -225,7 +220,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path868"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,96.381683 h 2.645833"
        stroke="#ffffff"
@@ -235,7 +230,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path870"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,98.762933 h 2.645833"
        stroke="#ffffff"
@@ -245,7 +240,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path872"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,101.40877 h 2.645833"
        stroke="#ffffff"
@@ -255,7 +250,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path874"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,103.79002 h 5.027083"
        stroke="#ffffff"
@@ -265,7 +260,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path876"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,106.43585 h 2.645833"
        stroke="#ffffff"
@@ -275,7 +270,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path878"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,108.8171 h 2.645833"
        stroke="#ffffff"
@@ -285,7 +280,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path880"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,111.46293 h 2.645833"
        stroke="#ffffff"
@@ -295,7 +290,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path882"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,113.84418 h 2.645833"
        stroke="#ffffff"
@@ -305,7 +300,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path884"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,116.49002 h 5.027083"
        stroke="#ffffff"
@@ -315,7 +310,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path886"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,118.87127 h 2.645833"
        stroke="#ffffff"
@@ -325,7 +320,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path888"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,121.25252 h 2.645833"
        stroke="#ffffff"
@@ -335,7 +330,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path890"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,123.89835 h 2.645833"
        stroke="#ffffff"
@@ -345,7 +340,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path892"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,126.2796 h 2.645833"
        stroke="#ffffff"
@@ -355,7 +350,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path894"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,128.92543 h 5.027083"
        stroke="#ffffff"
@@ -365,7 +360,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path896"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,131.30668 h 2.645833"
        stroke="#ffffff"
@@ -375,7 +370,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path898"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,133.95252 h 2.645833"
        stroke="#ffffff"
@@ -385,7 +380,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path900"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,136.33377 h 2.645833"
        stroke="#ffffff"
@@ -395,7 +390,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path902"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,138.9796 h 2.645833"
        stroke="#ffffff"
@@ -405,7 +400,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path904"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,86.327517 h 2.645833"
        stroke="#ffffff"
@@ -415,7 +410,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path906"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,88.97335 h 2.645833"
        stroke="#ffffff"
@@ -425,7 +420,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path908"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,141.36085 h 5.027083"
        stroke="#ffffff"
@@ -435,7 +430,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path910"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 52.438568,78.919183 h 5.027083"
        stroke="#ffffff"
@@ -445,7 +440,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path912"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,81.300433 h 2.645833"
        stroke="#ffffff"
@@ -455,7 +450,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path914"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 54.819818,83.946267 h 2.645833"
        stroke="#ffffff"
@@ -465,12 +460,12 @@
        fill="none"
        fill-rule="evenodd"
        id="path916"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 31.459147,193.48482 -0.2422,-85.98958 0.661459,-0.002 0.242199,85.98958 z m 1.652402,-0.44582 -1.310481,4.41352 -1.335326,-4.40611 z m -2.885545,-85.10005 1.310481,-4.41352 1.335352,4.40611 z"
        fill="#ffffff"
        id="path918"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="m 67.255234,113.84418 h 30.1625"
        stroke="#ffffff"
@@ -480,12 +475,12 @@
        fill="none"
        fill-rule="evenodd"
        id="path920"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 75.25888,107.75877 v 2.11666 h -0.661458 v -2.11666 z m -1.653646,0.44106 1.322917,-4.40981 1.322917,4.40981 z m 2.645834,1.23454 -1.322917,4.40981 -1.322917,-4.40981 z"
        fill="#ffffff"
        id="path922"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="m 79.955234,156.4421 h 7.408333"
        stroke="#ffffff"
@@ -495,7 +490,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path924"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 79.955234,196.39418 h 7.408333"
        stroke="#ffffff"
@@ -505,14 +500,14 @@
        fill="none"
        fill-rule="evenodd"
        id="path926"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 85.048463,160.41085 v 32.01458 h -0.661458 v -32.01458 z m -1.653646,0.44106 1.322917,-4.40981 1.322917,4.40981 z m 2.645834,31.13246 -1.322917,4.40981 -1.322917,-4.40981 z"
        fill="#ffffff"
        id="path928"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
-       d="m 47.80836,177.47647 c 0,-2.04575 6.455833,-3.70416 14.419791,-3.70416 7.963958,0 14.419792,1.65841 14.419792,3.70416 0,2.04576 -6.455834,3.70417 -14.419792,3.70417 -7.963958,0 -14.419791,-1.65841 -14.419791,-3.70417 z"
+       d="m 47.80836,182.239 c 0,-2.04575 6.455833,-3.70416 14.419791,-3.70416 7.963958,0 14.419792,1.65841 14.419792,3.70416 0,2.04576 -6.455834,3.70417 -14.419792,3.70417 -7.963958,0 -14.419791,-1.65841 -14.419791,-3.70417 z"
        stroke="#ffffff"
        stroke-width="0.440973"
        stroke-linejoin="round"
@@ -521,7 +516,7 @@
        fill="url(#pattern2)"
        fill-rule="evenodd"
        id="path930"
-       style="fill:url(#pattern1171);stroke:#ffffff" />
+       style="fill:url(#pattern1171);stroke:#000000" />
     <path
        d="m 59.714609,79.977517 c 0,-0.65749 1.125273,-1.190625 2.513542,-1.190625 1.388269,0 2.513542,0.533135 2.513542,1.190625 0,0.657489 -1.125273,1.190625 -2.513542,1.190625 -1.388269,0 -2.513542,-0.533136 -2.513542,-1.190625 z"
        stroke="#ffffff"
@@ -532,12 +527,12 @@
        fill="url(#pattern3)"
        fill-rule="evenodd"
        id="path932"
-       style="fill:url(#pattern1174);stroke:#ffffff" />
+       style="fill:url(#pattern1174);stroke:#000000" />
     <path
        d="m 69.665853,71.611127 -1.372658,-1.389062 -0.664104,-0.599017 -0.620713,-0.459581 0.04313,0.02725 -0.628385,-0.330729 0.0717,0.02778 -0.578644,-0.14896 0.121973,0.0079 -0.545571,0.06615 0.149754,-0.05715 -0.496093,0.347133 0.07752,-0.07594 -0.446352,0.611717 0.03625,-0.06324 -0.380471,0.876565 -0.335491,1.059921 -0.290777,1.248304 -0.278606,1.426898 -0.132292,0.855927 -0.653521,-0.101071 0.13679,-0.881856 0.283633,-1.450446 0.304535,-1.298311 0.35904,-1.122891 0.380206,-0.8763 c 0.0098,-0.02249 0.02196,-0.04366 0.03625,-0.06324 l 0.446617,-0.611981 c 0.02143,-0.02937 0.04762,-0.05503 0.07752,-0.07594 l 0.496093,-0.347398 c 0.04445,-0.03096 0.09578,-0.0508 0.149755,-0.05715 l 0.545835,-0.06615 c 0.04075,-0.005 0.08228,-0.0024 0.121973,0.0079 l 0.578908,0.148696 c 0.02487,0.0066 0.04895,0.01588 0.0717,0.02778 l 0.628386,0.330729 c 0.01508,0.0079 0.02963,0.01693 0.04313,0.02725 l 0.669131,0.499533 0.691885,0.624681 1.372394,1.389063 z m -5.223669,3.137165 -1.94945,4.170891 -0.668337,-4.555066 z"
        fill="#ffffff"
        id="path934"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="m 62.669211,105.37752 v 6.08541 h -0.88212 v -6.08541 z m 0.881857,5.64435 -1.322917,4.40981 -1.322917,-4.40981 z"
        fill="#ff0000"
@@ -553,7 +548,7 @@
        fill="url(#pattern4)"
        fill-rule="evenodd"
        id="path938"
-       style="fill:url(#pattern1179);stroke:#ffffff" />
+       style="fill:url(#pattern1179);stroke:#000000" />
     <path
        d="m 77.309401,151.41502 v 50.00625"
        stroke="#ffffff"
@@ -563,7 +558,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path940"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="M 17.248985,228.93793 H 152.45107"
        stroke="#ffffff"
@@ -573,13 +568,13 @@
        fill="none"
        fill-rule="evenodd"
        id="path942"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="M 17.248985,229.11441 H 152.45107 v 4.40954 H 17.248985 Z"
        fill="url(#pattern6)"
        fill-rule="evenodd"
        id="path944"
-       style="fill:url(#pattern1184);stroke-width:0.264583" />
+       style="fill:#808080;stroke-width:0.264583" />
     <rect
        x="47.1469"
        y="197.98169"
@@ -590,7 +585,7 @@
        stroke-miterlimit="8"
        fill="#ffffff"
        id="rect946"
-       style="fill:#ffffff;stroke:#ffffff" />
+       style="fill:#000000;stroke:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -598,12 +593,12 @@
        id="text950"
        x="59.347103"
        y="179.85773"
-       style="fill:#ffffff;stroke-width:0.264583">𝐴<tspan
+       style="fill:#000000;stroke-width:0.264583">𝐴<tspan
    font-size="7.9375px"
    x="86.549446"
    y="179.32855"
    id="tspan948"
-   style="fill:#ffffff;stroke-width:0.0700043">𝐿</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝐿</tspan></text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -611,17 +606,17 @@
        id="text958"
        x="27.014704"
        y="155.51607"
-       style="fill:#ffffff;stroke-width:0.264583">𝐻<tspan
+       style="fill:#000000;stroke-width:0.264583">𝐻<tspan
    font-size="5.82083px"
    x="32.154236"
    y="157.10356"
    id="tspan954"
-   style="fill:#ffffff;stroke-width:0.0700043">1</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">1</tspan><tspan
    font-size="7.9375px"
    x="79.849609"
    y="111.59523"
    id="tspan956"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑑ℎ</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝑑ℎ</tspan></text>
     <path
        d="M 21.217735,103.52543 H 43.707318"
        stroke="#ffffff"
@@ -631,7 +626,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path960"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -639,7 +634,7 @@
        id="text962"
        x="71.236687"
        y="74.024391"
-       style="fill:#ffffff;stroke-width:0.264583">𝑎</text>
+       style="fill:#000000;stroke-width:0.264583">𝑎</text>
     <text
        font-family="Arial, Arial_MSFontService, sans-serif"
        font-weight="400"
@@ -647,12 +642,12 @@
        id="text964"
        x="78.045204"
        y="74.024391"
-       style="fill:#ffffff;stroke-width:0.264583">(area burette)</text>
+       style="fill:#000000;stroke-width:0.264583">(area burette)</text>
     <path
        d="m 21.603585,196.60347 3.2e-5,-20.49407 h -0.7717 l -3.2e-5,20.49407 z m -1.708767,0 c 0,0.73063 0.592289,1.32292 1.322915,1.32292 0.730628,0 1.322919,-0.59229 1.322919,-1.32292 0,-0.73063 -0.592289,-1.32292 -1.322915,-1.32292 -0.730628,0 -1.322919,0.59229 -1.322919,1.32292 z m 2.645865,-20.05309 -1.322913,-2.64583 -1.32292,2.64583 z"
        fill="#161618"
        id="path966"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <text
        fill="#7f7f7f"
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
@@ -661,31 +656,31 @@
        id="text976"
        x="15.104563"
        y="183.56189"
-       style="fill:#ffffff;stroke-width:0.264583">z<tspan
+       style="fill:#000000;stroke-width:0.264583">z<tspan
    fill="#ffffff"
    font-size="7.9375px"
    x="99.672546"
    y="105.24522"
    id="tspan968"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑡</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑡</tspan><tspan
    fill="#ffffff"
    font-size="5.82083px"
    x="102.51443"
    y="106.83273"
    id="tspan970"
-   style="fill:#ffffff;stroke-width:0.0700043">1</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">1</tspan><tspan
    fill="#ffffff"
    font-size="7.9375px"
    x="99.811714"
    y="114.50564"
    id="tspan972"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑡</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑡</tspan><tspan
    fill="#ffffff"
    font-size="5.82083px"
    x="102.83696"
    y="116.09314"
    id="tspan974"
-   style="fill:#ffffff;stroke-width:0.0700043">2</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">2</tspan></text>
     <path
        d="m 68.842734,103.79002 h 30.1625"
        stroke="#ffffff"
@@ -695,7 +690,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path978"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="M 19.365652,196.39418 H 92.390651"
        stroke="#ffffff"
@@ -705,19 +700,19 @@
        fill="none"
        fill-rule="evenodd"
        id="path980"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 60.772943,155.51606 c 0,-0.87683 0.710671,-1.5875 1.5875,-1.5875 0.876829,0 1.5875,0.71067 1.5875,1.5875 0,0.87683 -0.710671,1.5875 -1.5875,1.5875 -0.876829,0 -1.5875,-0.71067 -1.5875,-1.5875 z"
        fill="#ffffff"
        fill-rule="evenodd"
        id="path982"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="m 60.772943,195.46814 c 0,-0.87683 0.710671,-1.5875 1.5875,-1.5875 0.876829,0 1.5875,0.71067 1.5875,1.5875 0,0.87683 -0.710671,1.5875 -1.5875,1.5875 -0.876829,0 -1.5875,-0.71067 -1.5875,-1.5875 z"
        fill="#ffffff"
        fill-rule="evenodd"
        id="path984"
-       style="fill:#ffffff;stroke-width:0.264583" />
+       style="fill:#000000;stroke-width:0.264583" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -725,57 +720,57 @@
        id="text1006"
        x="54.971424"
        y="195.46814"
-       style="fill:#ffffff;stroke-width:0.264583">𝐵<tspan
+       style="fill:#000000;stroke-width:0.264583">𝐵<tspan
    font-size="7.9375px"
    x="54.486183"
    y="157.36813"
    id="tspan986"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑃</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑃</tspan><tspan
    font-size="7.9375px"
    x="106.39981"
    y="211.60773"
    id="tspan988"
-   style="fill:#ffffff;stroke-width:0.0700043">ℎ</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">ℎ</tspan><tspan
    font-size="5.82083px"
    x="110.80936"
    y="213.19522"
    id="tspan990"
-   style="fill:#ffffff;stroke-width:0.0700043">𝑃</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝑃</tspan><tspan
    font-size="7.9375px"
    x="117.2255"
    y="211.60773"
    id="tspan992"
-   style="fill:#ffffff;stroke-width:0.0700043">=</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">=</tspan><tspan
    font-size="7.9375px"
    x="125.38366"
    y="211.60773"
    id="tspan994"
-   style="fill:#ffffff;stroke-width:0.0700043">𝐻</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝐻</tspan><tspan
    font-size="5.82083px"
    x="130.52319"
    y="213.19522"
    id="tspan996"
-   style="fill:#ffffff;stroke-width:0.0700043">1</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">1</tspan><tspan
    font-size="7.9375px"
    x="106.39531"
    y="222.9848"
    id="tspan998"
-   style="fill:#ffffff;stroke-width:0.0700043">ℎ</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">ℎ</tspan><tspan
    font-size="5.82083px"
    x="110.80512"
    y="224.57231"
    id="tspan1000"
-   style="fill:#ffffff;stroke-width:0.0700043">𝐵</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">𝐵</tspan><tspan
    font-size="7.9375px"
    x="117.40648"
    y="222.9848"
    id="tspan1002"
-   style="fill:#ffffff;stroke-width:0.0700043">=</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">=</tspan><tspan
    font-size="7.9375px"
    x="125.56438"
    y="222.9848"
    id="tspan1004"
-   style="fill:#ffffff;stroke-width:0.0700043">0</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">0</tspan></text>
     <path
        d="m 62.636139,203.58556 c -0.338932,0.25876 -1.668992,1.93437 -1.728259,2.58762 -0.05927,0.65299 0.889529,1.28138 1.372394,1.33059 0.482865,0.0495 1.414727,-0.5543 1.524794,-1.03505 0.110066,-0.48048 -0.669132,-1.41684 -0.864129,-1.84811 -0.194734,-0.43127 0.03387,-1.29382 -0.3048,-1.03505 z"
        stroke="#085091"
@@ -792,7 +787,7 @@
        id="text1010"
        x="53.292645"
        y="214.25356"
-       style="fill:#ffffff;stroke-width:0.264583">𝑞</text>
+       style="fill:#000000;stroke-width:0.264583">𝑞</text>
     <path
        d="m 57.333359,214.38585 h 2.447396 v -4.63021 h 4.894792 v 4.63021 h 2.447396 l -4.894792,4.63021 z"
        fill="#00b0f0"
@@ -817,12 +812,12 @@
        id="text1020"
        x="66.769989"
        y="98.101479"
-       style="fill:#ffffff;stroke-width:0.264583">falling <tspan
+       style="fill:#000000;stroke-width:0.264583">falling <tspan
    font-size="7.14375px"
    x="80.605476"
    y="204.19939"
    id="tspan1016"
-   style="fill:#ffffff;stroke-width:0.0700043">constant</tspan><tspan
+   style="fill:#000000;stroke-width:0.0700043">constant</tspan><tspan
    fill="#ffffff"
    font-family="Arial, Arial_MSFontService, sans-serif"
    font-style="normal"
@@ -830,7 +825,7 @@
    x="82.221733"
    y="132.49731"
    id="tspan1018"
-   style="fill:#ffffff;stroke-width:0.0700043">Burette</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">Burette</tspan></text>
     <path
        d="m 80.881276,130.38064 -18.785416,4.7625"
        stroke="#ffffff"
@@ -840,6 +835,6 @@
        fill="none"
        fill-rule="evenodd"
        id="path1022"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
   </g>
 </svg>
