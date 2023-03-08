@@ -245,7 +245,16 @@ Use finite differences to solve the total head field for the seepage problem sho
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<figure>
 	<img src='./FiguresGeneral/seepage _flownet.svg' width='100%'/>
-	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 4.7</h1>
+Indicate the water elevation in the standpipes shown in the figure.
+<figure>
+	<img src='FiguresGeneral/seepage _flownet_quizz.svg' width='60%'/>
+	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
 	</figure>
 </section>
 
@@ -257,40 +266,49 @@ Use finite differences to solve the total head field for the seepage problem sho
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>FLow nets</h1>
-<ul style="margin-top:-20px;font-size:35px">
-	<li class="fragment">  <strong style="color:#7abbe6">Graphical solution</strong> to the Laplace equation.</li>
-	<li class="fragment">  Real advantage in 2D flow (in 1D we already have analytical solution). </li>
-	<li class="fragment">  <strong style="color:#7abbe6">Reminder</strong>: what we really want is to know the total head (\(h\)) at any point of the domain (\(x,y\)).</li>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	They are a <span class='atb'>graphical solution</span> to the Laplace equation and offer a "simplified" method to calculate the <span class='atb'>total head field</span>.
+	</div>
+	<div class='container'>
+	<div class='col'>
+		<div class="fragment"> <div class='defBox' name='' style='margin-top: 5px;margin-left: 0px;'>
+			<ul style="margin-top:-15px;font-size:35px">
+				<li class="fragment"> <strong style="color:red">Equipotential lines:</strong> contours of constant total head (\(h\)=𝑐𝑜𝑛𝑠𝑡𝑎𝑛𝑡).
+			
+			</li>
+			<li class="fragment"> <strong style="color:green"> Flow lines:</strong>indicate the direction of the water flow. </li>
+			<li class="fragment"> <strong style="color:orange">Flow tube:</strong> area defined between two any adjacent flow lines.</li>
+			<li class="fragment"> <strong style="color:blue">Total head drop:</strong> decrease in total head between two adjacent equipotential lines.</li>
+			</ul>
+		</div></div>
+	</div>
+	<div class='col'>
+		<figure style="margin-top:50px;">
+			<img src="FiguresGeneral/flow_tube.svg" style="width:100%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	</div>
 
-</ul>
-
-<p class="fragment" style="margin-top:-15px;font-size:35px">Definitions:
-<ul style="margin-top:-15px;font-size:35px">
-	<li class="fragment"> <strong style="color:red">Equipotential lines:</strong> contours of constant total head (\(h\)=𝑐𝑜𝑛𝑠𝑡𝑎𝑛𝑡).
+	
 
 
-</li>
-<li class="fragment"> <strong style="color:green"> Flow lines:</strong>indicate the direction of the water flow. </li>
-<li class="fragment"> <strong style="color:orange">Flow tube:</strong> area defined between two any adjacent flow lines.</li>
-<li class="fragment"> <strong style="color:blue">Total head drop:</strong> decrease in total head between two adjacent equipotential lines.</li>
-</ul>
-<figure style="margin-top:-40px;">
-  <img src="FiguresGeneral/flow_tube.svg" style="width:38%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</p>
+
+
+
 </section>
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Rules for drawing a flow net</h1>
-	<ul style="margin-top:50px;">
-		<li class="fragment"> <strong style="color:#7abbe6">Intersections</strong> of flow lines with equipotential lines are <strong style="color:#7abbe6">perpendicular</strong>,  hence each cell in a flow net should be "<strong style="color:#7abbe6">as squared as possible</strong>." </li>
-		<li class="fragment"> "<strong style="color:#7abbe6">Entrance</strong>" and "<strong style="color:#7abbe6">exit</strong>" boundaries are (usually) equipotential lines. </li>
-		<li class="fragment"> <strong style="color:#7abbe6">Impervious boundaries</strong> are flow lines. </li>
+	<ul style="margin-top:5px;">
+		<li class="fragment"> <strong style="color:#7abbe6">Intersections</strong> of flow lines with equipotential lines are <span class='atb'>perpendicular</span>,  hence each cell in a flow net should be "<strong style="color:#7abbe6">as squared as possible</strong>." </li>
+		<li class="fragment"> "<strong style="color:#7abbe6">Entrance</strong>" and "<strong style="color:#7abbe6">exit</strong>" boundaries are (usually) <span class='atb'>equipotential lines</span>. </li>
+		<li class="fragment"> <strong style="color:#7abbe6">Impervious boundaries</strong> are <span class='atb'>flow lines</span>. </li>
 		<li class="fragment">  <strong style="color:#7abbe6">Flow nets</strong> are drawn only in porous media, <strong style="color:#7abbe6">never in "free" water.</strong></li>
 		<li class="fragment"> You will need <strong style="color:#7abbe6">many iterations</strong>, so use a pencil (never a pen!). </li>
 		<li class="fragment"> <strong style="color:#7abbe6">Flow lines can never cross</strong>. </li>
+		<li class='fragment'><strong style='color:#7abbe6'>Label</strong> the number of equipotential drops <strong style='color:green'>\(N_d\)</strong> and flow tubes <strong style='color:green'>\(N_f\).</strong></li>
 	</ul>
 
 </section>
@@ -298,7 +316,7 @@ Use finite differences to solve the total head field for the seepage problem sho
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Flow net</h1>
 <figure>
-  <img src="FiguresGeneral/flow_net_1.svg" style="width:60%" data-preload/>
+  <img src="FiguresGeneral/flow_net_1.svg" style="width:75%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
 </figure>
 </section>
