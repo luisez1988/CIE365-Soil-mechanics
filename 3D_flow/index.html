@@ -322,30 +322,38 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Flow net</h1>
-	<figure>
-	  <img src="FiguresGeneral/squares.svg" style="width:100%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
+	<div class='container'>
+	<div class='col'>
+		<figure>
+			<img src="FiguresGeneral/squares.svg" style="width:100%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	<div class='col'>
+		Examples
+		<figure>
+			<img src="FiguresGeneral/Examples.svg" style="width:100%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	</div>
+
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Examples</h1>
-<figure>
-  <img src="FiguresGeneral/Examples.svg" style="width:70%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
 
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Flow nets</h1>
-<p>If the flow net is sketched properly, the following rules will apply:
-<ul style="margin-top:-25px;font-size:35px">
-	<li class="fragment"> The flow within a <strong style="color:orange">flow tube</strong> is constant (\(q=\) constant). </li>
-	<li class="fragment"> The decrease in total head in each <strong style="color:blue">drop</strong> is constant (\(\Delta h_{d}=\) constant). </li>
-</ul>
-</p>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>If the flow net is sketched properly, the following rules will apply:
+		<ul style="margin-top:-25px;font-size:35px">
+			<li class="fragment"> The flow within a <strong style="color:orange">flow tube</strong> is <span class='atb'>constant</span> (\(q=\) constant). </li>
+			<li class="fragment"> The decrease in total head in each <strong style="color:blue">drop</strong> is <span class='atb'>constant</span> (\(\Delta h_{d}=\) constant). </li>
+		</ul>
+		</p>
+</div>	
+
+
 <div class="container">
 	<div class="col">
       <figure style="margin-top:-25px;">
@@ -355,8 +363,12 @@ Indicate the water elevation in the standpipes shown in the figure.
 	</div>
 	<div class="col">
 		<p class="fragment">
-			$$q=k \Delta H \cfrac{N_f}{N_d}$$
-			<ul class="fragment" style="margin-top:-15px;font-size:35px">
+			<div class="fragment"><div class='equationBox'>
+				\(q=k \Delta H \cfrac{N_f}{N_d}\)
+				</div></div>
+			
+			
+			<ul class="fragment" style="margin-top:0px;font-size:35px">
 				<li>\(\Delta H=\) Total head loss between entrance and exit of problem.</li>
 				<li>\(N_f=\) number of flow channels. </li>
 				<li> \(N_d=\) number of drop heads. </li>
@@ -368,12 +380,11 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Flow nets</h1>
 	<p><strong style="color:#7abbe6">How to solve a flow net exercise:</strong></p>
-	<ol style="margin-top:-15px;font-size:35px">
-		<li class="fragment"> Plot the <strong style="color:#7abbe6">flow net</strong> following all the rues. </li>
+	<ol style="margin-top:-20px;font-size:1em">
+		<li class="fragment"> Plot the <strong style="color:#7abbe6">flow net</strong> following all the rules. </li>
 		<li class="fragment"> Determine the <strong style="color:#7abbe6">number of flow lines and tubes</strong>, <strong style="color:#7abbe6">number of equipotential lines and drops</strong>. </li>
-		<li class="fragment"> <strong style="color:#7abbe6">Label</strong> all equipotential lines and determine the <strong style="color:#7abbe6">total head at the entrance</strong> and <strong style="color:#7abbe6">exit quipotential lines</strong>. </li>
+		<li class="fragment"> <strong style="color:#7abbe6">Label</strong> all equipotential lines and determine the <strong style="color:#7abbe6">total head at the entrance</strong> and <strong style="color:#7abbe6">exit equipotential lines</strong>. </li>
 		<li class="fragment"> Determine \(\Delta H= h_{entrance}-h_{exit}\) and \(\Delta h_d= \Delta H/N_d\) </li>
 		<li class="fragment"> You are now able to determine \(h\) at any point of your geometry base on its position in the flow net. </li>
 		<li class="fragment"> You can now determine the pore pressure at any point using the total head equation \(u=(h-z)\gamma_w\). </li>
@@ -383,28 +394,17 @@ Indicate the water elevation in the standpipes shown in the figure.
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.5</h1>
+	<h1>Example 4.19</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Determine the flow below the sheet pile, the total head and the pore pressure at point A.
+	</div>
 <figure>
-  <img src="FiguresGeneral/example.svg" style="width:60%" data-preload/>
+  <img src="FiguresGeneral/Example45.svg" style="width:50%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
 </figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Homework assignment 4</h1>
-		<div class="container">
-			<div class="col">
-				<ul>
-					<li>Due on 03/11/2022.</li>
-					<li>30 points total.</li>
-					<li>Start ASAP.</li>
-				</ul>
-			</div>
-			<div class="col">
-				 <iframe src="FiguresGeneral/HMA4.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
-			</div>
-		</div>
-</section>
+
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Uplift pressure</h1>
