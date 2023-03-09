@@ -103,7 +103,6 @@
 				<li class="l1">Seepage erosion and piping</li>
 				<li class="l1">Solutions if erosion is a potential problem.</li>
 			</ul>
-
 		</div>
 		<div class='col'>
 		<div class='container'>
@@ -408,52 +407,64 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Uplift pressure</h1>
-<ul>
-	<li class="fragment"> Water pressure (\(u\)) along the base of a dam is referred to as <strong style="color:#7abbe6">uplift pressure</strong>. </li>
-	<li class="fragment"> Uplift pressure can make the dam <strong style="color:#7abbe6">unstable</strong>! \(\longrightarrow\) Important to ensure the stability of the structure. </li>
-	<li class="fragment"> Recall that water pressure acts in all directions. In practice we use the perpendicular component to the surface. </li>
-</ul>
-<figure>
-  <img src="FiguresGeneral/uplift_1.svg" style="width:60%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
+	<div class='defBox' name='Uplift pressure' style='margin-top: 0px;font-size: 1em;'> Is the <span class='atb'> water pressure </span> acting at the base of a <span class='atb'> structure </span> such as a dam foundation that pushes that structure upwards. </div>
+
+	<div class='container'>
+	<div class='col'>
+		<figure>
+			<img src="FiguresGeneral/uplift_1.svg" style="width:100%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	<div class='col'>
+		<ul>
+			<li class="fragment"> Uplift pressure can make the dam <span class='atb'> unstable </span>! \(\longrightarrow\) Important to ensure the stability of the structure. </li>
+			<li class="fragment"> Water pressure acts in all directions. We use the <span class='atb'> perpendicular </span> component to the surface. </li>
+		</ul>
+	</div>
+	</div>
+
+
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Uplift pressure</h1>
-		<p><strong style="color:#7abbe6">Steps to determine uplift pressure distribution:</strong> (also applicable to any surface type)</p>
-		<div class="container">
-			<div class="col">
-        <ol style="margin-top:-15px;font-size:35px">
-        	<li class="fragment"> Plot the flow net. </li>
-					<li class="fragment"> Distribute a certain number of points along the surface of interest. </li>
-					<li class="fragment"> Determine the pore water pressure at each selected point. </li>
-        </ol>
-			</div>
-			<div class="col">
-				<ol start="4" style="margin-top:-15px;font-size:35px">
-					<li class="fragment">Plot the pore pressure distribution.  </li>
-					<li class="fragment">Finally, compute the area of the pressure distribution. </li>
-				</ol>
-			</div>
+ 		<p><strong style="color:#7abbe6">Steps to determine uplift pressure distribution:</strong></p>
+		<div class='container'>
+		<div class='col'>
+			<ol style="margin-top:-15px;font-size:1em">
+				<li class="fragment"> 	<strong style='color:#7abbe6'>Plot</strong> the flow net. </li>
+						<li class="fragment"> 	<strong style='color:#7abbe6'>Distribute</strong> a certain number of points along the surface of interest. </li>
+						<li class="fragment"> 	<strong style='color:#7abbe6'>Calculate</strong> the pore water pressure at each selected point. </li>
+						<li class="fragment"> 	<strong style='color:#7abbe6'>Plot </strong> the pore pressure distribution.</li>
+						<li class="fragment">Finally, 	<strong style='color:#7abbe6'>compute</strong> the area of the pressure distribution. </li>
+			</ol>
 		</div>
-		<figure style="margin-top:-15px">
-		  <img src="FiguresGeneral/uplift_2.svg" style="width:60%" data-preload/>
-		  <footer style="margin-top:-60px;"><small></small></footer>
-		</figure>
+		<div class='col'>
+			<figure style="margin-top:-15px">
+				<img src="FiguresGeneral/uplift_2.svg" style="width:100%" data-preload/>
+				<footer style="margin-top:-60px;"><small></small></footer>
+			  </figure>
+			  <div class="fragment">			  <div class='stickynote' style='margin-top: 0px;margin-left: 200px;'>
+				Note: These steps are applicable to the calculation of water pressure in any surface type.
+			</div></div>
+
+		</div>
+		</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.6</h1>
-	<p>For the example in the figure, find the uplift force and the factor of safety against uplift if the dam weights 2500 kN</p>
-	<figure>
-	  <img src="FiguresGeneral/dam.PNG" style="width:70%" data-preload/>
+	<h1>Example 4.20</h1>
+	<div class='textBox' style='margin-top: -20px;font-size: 1em;'> <p>For the example in the figure, find the uplift force and the factor of safety against uplift if the dam weighs 7000 kN</p> 
+	<a href="#9">Go to Jupyter Notebook</a></div>
+	
+	<figure style="margin-top: -25px;">
+	  <img src="FiguresGeneral/Dam_uplift.svg" style="width:65%" data-preload/>
 	  <footer style="margin-top:-60px;"><small></small></footer>
 	</figure>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Eorsion due to seepage</h1>
+	<h1>Erosion due to seepage</h1>
 	<p><strong style="color:#7abbe6">Erosion:</strong> mobilization of solid grains due to watr flow (seepage forces).</p>
 	<p class="fragment">Recall: In this course we have seen that the <strong style="color:#7abbe6">soil strength</strong> depends directly on the contacts beyween solid grains. The <strong style="color:#7abbe6">effective stress</strong> quantifies contact forces. <strong style="color:#7abbe6">If solid particles are not in contact, soil becomes a fluid with no shear resistance.</strong></p>
 	<p class="fragment">If \(\sigma'=0\), there is no contact between solid grains, soil becomes <strong style="color:#7abbe6">internally unstable</strong>, and grains can be dragged away.</p>
@@ -469,9 +480,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<section data-fullscreen>
 		<iframe class="stretch" src="https://www.youtube.com/embed/eImtYyuQCZ8?autoplay=0" data-preload></iframe>
-	</section>
 
 </section>
 
