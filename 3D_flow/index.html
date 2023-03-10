@@ -465,15 +465,20 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Erosion due to seepage</h1>
-	<p><strong style="color:#7abbe6">Erosion:</strong> mobilization of solid grains due to watr flow (seepage forces).</p>
-	<p class="fragment">Recall: In this course we have seen that the <strong style="color:#7abbe6">soil strength</strong> depends directly on the contacts beyween solid grains. The <strong style="color:#7abbe6">effective stress</strong> quantifies contact forces. <strong style="color:#7abbe6">If solid particles are not in contact, soil becomes a fluid with no shear resistance.</strong></p>
-	<p class="fragment">If \(\sigma'=0\), there is no contact between solid grains, soil becomes <strong style="color:#7abbe6">internally unstable</strong>, and grains can be dragged away.</p>
-	<div class="container">
-		<div class="col">
-	     <p class="fragment">Stable: \(\sigma'>0\)</p>
-		</div>
-		<div class="col">
-			<p class="fragment">Unstable: \(\sigma'=0\)</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p class="fragment">Recall: We learned that <strong style="color:#7abbe6">soil strength</strong> depends directly on the <span class='atb'>interparticle contacts</span>. <strong style="color:#7abbe6">If solid particles <span class='atb'>are not in contact</span>, soil becomes a fluid with no shear resistance.</strong>
+			The <span class='atb'>effective stress</span> quantifies contact forces. </p>
+	</div>
+
+	<p class="fragment">If \(\sigma'=0\), there is no contact between solid grains, soil becomes <span class='atb'>internally unstable</span>, and grains can be dragged away.</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class="container">		
+			<div class="col">
+				<p class="fragment"><span class='atb'>Stable</span>: <strong style='color:green'>\(\sigma'>0\)</strong></p>
+			   </div>
+			<div class="col">
+				<p class="fragment"><span class='atb'>Unstable</span>: <strong style='color:red'> \(\sigma'=0\)</strong></p>
+			</div>
 		</div>
 	</div>
 
@@ -520,6 +525,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 		</div>
 		<div class="col">
 			<p><strong style="color:#7abbe6">No flow</strong></p>
+			<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
 		</div>
 	</div>
 </section>
@@ -535,6 +541,8 @@ Indicate the water elevation in the standpipes shown in the figure.
 		</div>
 		<div class="col">
 			<p><strong style="color:#7abbe6">Downward flow</strong></p>
+		<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
+
 		</div>
 	</div>
 </section>
@@ -550,20 +558,38 @@ Indicate the water elevation in the standpipes shown in the figure.
 		</div>
 		<div class="col">
 			<p><strong style="color:#7abbe6">Upward flow</strong></p>
-			<p class="fragment">$$i_{crit}=\cfrac{\gamma'}{\gamma_w}=\cfrac{G_s-1}{1+e}$$</p>
-			<p class="fragment">Factor of safety againts piping:
-				$$FS=\cfrac{i_{crit}}{i_{max}}$$
-			</p>
+			<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
 		</div>
 	</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Erosion due to seepage</h1>
+	<div class='defBox' name='Critical hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(i_{crit}:\)</strong> Is the maximum hydraulic gradient in the <strong style='color:#7abbe6'>exit zone</strong> that a soil can experience before it erodes due to seepage forces.
+	<div class='equationBox'>
+	\(i_{crit}=\cfrac{\gamma'}{\gamma_w}=\cfrac{G_s-1}{1+e}\)
+	</div>
+	</div>
+	<div class='defBox' name='Factor of safety against piping' style='margin-top: 15px;margin-left: 0px;'>
+	<strong style='color:green'>\(FS_p:\)</strong> Is the ratio of the critical hydraulic gradient to the actual maximum hydraulic gradient at the exit zone.
+	<div class='equationBox'>
+	\(FS_p=\cfrac{i_{crit}}{i_{max}}\)
+	</div>
+	</div>
+	<p class="fragment">$$$$</p>
+	<p class="fragment">Factor of safety against piping:
+		$$FS=\cfrac{i_{crit}}{i_{max}}$$
+	</p>
+
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<ul>
 		<li class="fragment"> <strong style="color:#7abbe6">Erosion will start if</strong> \(FS\leq 1\). </li>
-		<li class="fragment"> It is important to <strong style="color:#7abbe6">identify what "element" in a flow net</strong> has the <strong style="color:#7abbe6">maximun hydraulic gradient</strong>. </li>
-		<li class="fragment">Erosion (also called <strong style="color:#7abbe6">piping</strong>) usually begins at <strong style="color:#7abbe6">downstream side</strong> (upwardflow).</li>
+		<li class="fragment"> It is important to <strong style="color:#7abbe6">identify what "element" in a flow net</strong> has the <strong style="color:#7abbe6">maximum hydraulic gradient</strong>. </li>
+		<li class="fragment"><strong style="color:#7abbe6">Piping</strong> usually begins at <strong style="color:#7abbe6">downstream side</strong> (upward flow).</li>
 		<li class="fragment"> Because the total head drop is constant between equipotentials, the size of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:#7abbe6">Smaller elements will have larger hydraulic gradients</strong>.  </li>
 	</ul>
 
@@ -571,8 +597,12 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.7</h1>
-	<p>For the example in the figure, determine the factor of safety against piping knowing \(G_s=2.65\) and \(\gamma_{sat}=15.2\) kN/m\(^3\)</p>
+	<h1>Example 4.21</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>For the example in the figure, determine the factor of safety against piping knowing \(G_s=2.65\) and \(\gamma_{sat}=15.2\) kN/m\(^3\)</p>
+		<a href="#9">Go to Jupyter Notebook</a>
+	</div>
+	
 	<div class="container">
 		<div class="col">
 	                <figure>
@@ -587,7 +617,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Erosion due to seepage</h1>
+	<p><strong style='color:#7abbe6'>How to reduce the risk of seepage?</strong></p>
 	<ol>
 		<li class="fragment">Lower the upstream water level.
 			$$\downarrow H_1 \longrightarrow \downarrow \Delta h \longrightarrow \downarrow i$$

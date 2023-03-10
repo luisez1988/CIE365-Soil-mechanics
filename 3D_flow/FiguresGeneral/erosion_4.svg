@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.1474186"
-     inkscape:cx="153.82354"
+     inkscape:cx="154.25931"
      inkscape:cy="166.46061"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="-9"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -104,7 +104,7 @@
        fill="#f5f5f5"
        fill-rule="evenodd"
        id="path2155"
-       style="fill:#ffffff" />
+       style="fill:#ff0000;stroke:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -112,12 +112,12 @@
        id="text2157"
        x="113.17267"
        y="217.01323"
-       style="stroke-width:0.264583;fill:#ffffff">𝐶</text>
+       style="stroke-width:0.264583;fill:#000000">𝐶</text>
     <path
        d="m 135.25242,103.63928 v 32.01458 h -0.88213 v -32.01458 z m -1.76398,0.44106 1.32291,-4.409814 1.32292,4.409814 z m 2.64583,31.13246 -1.32292,4.40981 -1.32291,-4.40981 z"
        fill="#f5f5f5"
        id="path2159"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -125,17 +125,17 @@
        id="text2163"
        x="136.8759"
        y="121.49865"
-       style="stroke-width:0.264583;fill:#ffffff">𝐻<tspan
+       style="stroke-width:0.264583;fill:#000000">𝐻<tspan
    font-size="7.67292px"
    x="143.97334"
    y="123.61532"
    id="tspan2161"
-   style="stroke-width:0.0700043;fill:#ffffff">2</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">2</tspan></text>
     <path
        d="m 135.00529,143.58951 0.22966,52.12291 -0.88212,0.004 -0.22966,-52.12292 z m -1.76212,0.44873 1.3036,-4.41563 1.34223,4.40372 z m 2.87179,51.22915 -1.30361,4.41563 -1.34223,-4.40372 z"
        fill="#f5f5f5"
        id="path2165"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -143,7 +143,7 @@
        id="text2167"
        x="137.4884"
        y="170.71115"
-       style="stroke-width:0.264583;fill:#ffffff">𝐿</text>
+       style="stroke-width:0.264583;fill:#000000">𝐿</text>
     <path
        d="M 88.773855,139.62261 H 101.47386"
        stroke="#f5f5f5"
@@ -153,12 +153,12 @@
        fill="none"
        fill-rule="evenodd"
        id="path2169"
-       style="stroke:#ffffff" />
+       style="stroke:#000000" />
     <path
        d="m 94.241912,139.62261 2.9e-5,-30.95625 h -0.881943 l -3.2e-5,30.95625 z m -1.76389,0 c 0,0.73063 0.592289,1.32292 1.322916,1.32292 0.730627,0 1.322918,-0.59229 1.322918,-1.32292 0,-0.73063 -0.592289,-1.32292 -1.322916,-1.32292 -0.730627,0 -1.322918,0.59229 -1.322918,1.32292 z m 2.645863,-30.51519 -1.322911,-4.40981 -1.322923,4.40981 z"
        fill="#f5f5f5"
        id="path2171"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -166,27 +166,27 @@
        id="text2181"
        x="85.748581"
        y="111.44448"
-       style="stroke-width:0.264583;fill:#ffffff">𝑧<tspan
+       style="stroke-width:0.264583;fill:#000000">𝑧<tspan
    font-size="10.5833px"
    x="104.40462"
    y="110.12157"
    id="tspan2173"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝛾</tspan><tspan
    font-size="7.67292px"
    x="108.95985"
    y="112.23823"
    id="tspan2175"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑤</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑤</tspan><tspan
    font-size="10.5833px"
    x="104.9362"
    y="150.33823"
    id="tspan2177"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛾</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝛾</tspan><tspan
    font-size="7.67292px"
    x="110.1529"
    y="152.4549"
    id="tspan2179"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑠𝑎𝑡</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑠𝑎𝑡</tspan></text>
     <path
        d="m 114.83531,165.1549 -3e-5,21.96042 h 2.64583 l 3e-5,-21.96042 z m 5.29167,1.32292 -3.96875,-7.9375 -3.96875,7.9375 z"
        fill="#00b050"
