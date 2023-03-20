@@ -604,6 +604,22 @@ li.l2:nth-child(even){
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
+.reveal .fp-Video {
+  border: 1px double black;
+  width: 322px;
+  height: 242px;
+}
+.reveal .display {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.reveal .display > video,
+object {
+  width: 100%;
+  height: 100%;
+}
  
 
 

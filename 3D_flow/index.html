@@ -15,9 +15,12 @@
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
 		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
 	
 	</head>
-	  <body>
+	  <body onload="init_api()">
 	
 		<div class="reveal">
 	
@@ -228,6 +231,14 @@ Use finite differences to solve the total head field for the seepage problem sho
 	</figure>
 
 </section>
+
+<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1></h1>
+<div class="fp-Video" style="width: 100%; height: 600px;">
+	<div id="screen-sharing" class="display" style="width: 100%;"></div>
+</div>
+<button id="shareBtn">Share Screen</button>
+</section> -->
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
