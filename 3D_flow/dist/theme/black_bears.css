@@ -607,8 +607,8 @@ li.l2:nth-child(even){
 
 .reveal .fp-Video {
   border: 1px double black;
-  width: 322px;
-  height: 242px;
+  /* width: 322px;
+  height: 242px; */
 }
 .reveal .display {
   width: 100%;
