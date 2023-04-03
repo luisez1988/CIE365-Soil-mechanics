@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
-		<title>CIE-365: 2D/3D Seepage</title>
+		<title>CIE-365: Consolidation</title>
 	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -85,21 +85,14 @@
 				</div>
 			</section>
 
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Course contents and schedule</h1>
-					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
-				</section>
-
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Recap</h1>
-						<ul>
-							<li class="fragment"> We learned how to compute the increment of vertical stress for an infinitely loaded area.</li>
-							<li class="fragment"> We learned about the Boussinesq equations and the distribution of stresses in an elastic semi-infinite medium. </li>
-							<li class="fragment"> We described a numerical method for complex shapes and load distributions (more in CIE 460).</li>
-							<li class="fragment"> Today we will learn about consolidation settlements. </li>
-						</ul>
-				</section>
+			<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<h1>Recap</h1>
+					<ul>
+						<li class="fragment"> We learned how to calculate total head field, hydraulic gradient and seepage velocities in 2D.</li>
+						<li class="fragment"> We learned to calculate the uplift pressure produced by underground moving water on structures. </li>
+						<li class="fragment"> We learned how to calculate the factor of safety against internal erosion due to seepage.</li>
+					</ul>
+			</section>
 
 				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Homework assignment 4</h1>
@@ -119,17 +112,41 @@
 
 
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Contents</h1>
-					<ul>
-						<li>Case study</li>
-						<li>Consolidation of soils</li>
-						<li>Primary consolidation</li>
-						<li>Consolidation curve</li>
-						<li>Overconsolidation ratio</li>
-						<li>Settlement due to primary consolidation</li>
+			<h1>Contents</h1>
+			<div class='container'>
+			<div class='col'>
+				<ul class="contentStyle" style="margin-top: -45px;">
+					<li class="l1">Definition of consolidation</li>
+					<li class="l1">Primary consolidation</li>
+					<li class="l1">Oedometer/consolidation test</li>
+					<li class="l1">Virgin and reloading compression</li>
+					<li class="l1">Stress history</li>
+					<li class='l1'>Settlement in multilayered systems</li>
+				</ul>
+			</div>
+			<div class='col'>
+			<div class='container'>
+				<div class='col'>
+					<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+						<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
+						<ul>
+							<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='col'>
+				<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+					<p style="margin-top: -20px;">After this lecture we will able to:</p>
+					<ul style="margin-top: -15px;">
+						<li>Calculate the coefficients of compressibility and recompression of fine-grained soils.</li>					
+						<li>Calculate the overconsolidation ratio.</li>
+						<li>Estimate settlements due to primary consolidation.</li>
 					</ul>
-
-					<p>More in chapter 9 of Holtz et al. (2013)</p>
+				</div>
+				</div>
+				</div>
+		</div>
+			</div>
 
         </section>
 
@@ -210,16 +227,18 @@
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Deformation of soils</h1>
-	 <p style="margin-top:-25px;font-size:35px">Recall: <strong style="color:#7abbe6">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <strong style="color:#7abbe6">change in effective stress</strong> there is a corresponding deformaiton.
-	 $$\sigma'=\sigma-u$$</p>
-	 <p style="margin-top:-25px;">Examples:</p>
+	<div class='textBox' style="margin-top:-20px;font-size:35px">
+		<p >Recall: <strong style="color:#7abbe6">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <strong style="color:#7abbe6">change in effective stress</strong> there is a corresponding deformation.
+			$$\sigma'=\sigma-u$$</p>
+	</div>
+	 
 	 <ul style="margin-top:-25px;font-size:35px">
-	 	<li>Large fill placement \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
-		<li>Excavation \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
-		<li>Structure load \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
-		<li>Lowering the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+	 	<li>Large fill <span class='atb'>placement</span> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><span class='atb'>Excavation</span> \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
+		<li>Structure <span class='atb'>load</span> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><span class='atb'>Lowering</span> the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
 	 </ul>
-	 <figure>
+	 <figure style="margin-top: -15px;">
 	   <img src="FiguresGeneral/settlements.svg" style="width:70%" data-preload/>
 	   <footer style="margin-top:-60px;"><small></small></footer>
 	 </figure>
@@ -228,17 +247,20 @@
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Consolidation</h1>
 
-		<p><strong style="color:#7abbe6">Def.</strong> <strong style="color:green">CONSOLIDATION</strong> <strong style="color:#7abbe6">of soils (always in satudated soils!)</strong></p>
-		<p style="margin-top:-25px;font-size:35px">Process by which soil volume decreases due to water scaping from the soil.</p>
-		<figure style="margin-top:-40px;">
-		  <img src="FiguresGeneral/consol_phase.svg" style="width:60%" data-preload/>
-		  <footer style="margin-top:-60px;"><small></small></footer>
-		</figure>
+		<div class='defBox' name='Consolidation:' style='margin-top: -20px;margin-left: 0px;'>
+			Process by which soil volume <span class='atb'>decreases</span> due to water scaping from the soil.
+		</div>
+		<figure style="margin-top:-20px;">
+			<img src="FiguresGeneral/consol_phase.svg" style="width:90%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
 	</section>
 
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0" data-preload></iframe>
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<iframe class="stretch" src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0" data-preload></iframe>	
 	</section>
+
+	
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Consolidation</h1>
@@ -250,15 +272,44 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Effect of drainage</h1>
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 <p>If we apply a load on...
-<ul>
-	<li class="fragment"> <strong style="color:#7abbe6">100% impermeable soil</strong>: water cannot leave \(\longrightarrow\) no consolidation \(\longrightarrow\) no settlement.</li>
-	<li class="fragment"> <strong style="color:#7abbe6">100% permeable soil</strong>: Water can leave instantaneously \(\longrightarrow\) instantaneous consolidation \(\longrightarrow\) instantaneous settlement.</li>
-	<li class="fragment"> <strong style="color:#7abbe6">Gravel and sands (very permeable):</strong> Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement. </li>
-	<li class="fragment"> <strong style="color:#7abbe6">Clay, silty soils (close to impermeable):</strong> Water leaves the soil very slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) delayed settlement</li>
-</ul>
-</p>
+	<ul>
+		<li class="fragment"> <strong style="color:#7abbe6">100% impermeable soil</strong>: water cannot leave \(\longrightarrow\) no <span class='atb'>consolidation</span> \(\longrightarrow\) no <span class='atb'>settlement</span>.</li>
+		<li class="fragment"> <strong style="color:#7abbe6">100% permeable soil</strong>: Water can leave <span class='atb'>instantaneously</span> \(\longrightarrow\) instantaneous <span class='atb'>consolidation</span>\(\longrightarrow\) instantaneous <span class='atb'>settlement</span>.</li>
+	</ul>
+	</p>
+</div>
 </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Quiz 5.1</h1>
+<p>	For clean sand or gravels, what of the following statements is true?	
+ </p>
+
+<ol class='iClicker' >
+<li class='l2'>Water can leave slowly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+<li class='l2'>Water can leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) rapid settlement.</li>
+<li class='l2'>Water can leave rapidly \(\longrightarrow\) slow consolidation \(\longrightarrow\) slow settlement.</li>
+<li class='l2'>Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+
+</ol>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Quiz 5.2</h1>
+	<p>	For fine-grained soils, what of the following statements is true?	
+	 </p>
+	
+	<ol class='iClicker' >
+	<li class='l2'>Water leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) time-dependent settlement.</li>
+	<li class='l2'>Water leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) rapid settlement.</li>
+	<li class='l2'>Water can leave rapidly \(\longrightarrow\) slow consolidation \(\longrightarrow\) slow settlement.</li>
+	<li class='l2'>Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+	
+	</ol>
+	</section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Effect of drainage</h1>
@@ -270,7 +321,11 @@
         </figure>
 			</div>
 			<div class="col">
-        <p>In practice, <strong style="color:#7abbe6">consolidation in clays and silts is the most problematic</strong> because it occurs well after the project has finished. <strong style="color:#7abbe6">In this module</strong>, we will study the consolidation of fine soils.</p>
+
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+					<p>In practice, <strong style="color:#7abbe6">consolidation in clays and silts is the most problematic</strong> because it occurs well after the project has finished. <strong style="color:#7abbe6">In this module</strong>, we will study the consolidation of fine soils.</p>
+				</div>
+        
 			</div>
 		</div>
 </section>
@@ -279,8 +334,11 @@
     <h1>Primary consolidation</h1>
 		<div class="container">
 			<div class="col">
-          <p>The settlement due to consolidation in clays can be divided in three different parts:
-</p>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<p>The settlement due to consolidation in clays can be divided in three different parts:
+			</p>
+		</div>
+          
 <figure>
   <img src="FiguresGeneral/settlement_types.svg" style="width:100%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
@@ -291,11 +349,15 @@
 				  <img src="FiguresGeneral/consol_settlement.svg" style="width:100%" data-preload/>
 				  <footer style="margin-top:-60px;"><small></small></footer>
 				</figure>
-				<ul>
-					<li>\(S_0=\) Instantaneous settlement</li>
-					<li> \(S_{pc}=\) Primary consolidation </li>
-					<li>\(S_{sc}=\) Secondary consolidation</li>
-				</ul>
+<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;font-size: 0.85em;'>
+	<ul>
+		<li>\(S_0=\) Instantaneous settlement</li>
+		<li> \(S_{pc}=\) Primary consolidation </li>
+		<li>\(S_{sc}=\) Secondary consolidation</li>
+	</ul>
+</div>
+
+
 			</div>
 		</div>
 </section>
@@ -310,44 +372,55 @@
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Oedometer/consolidation test</h1>
-
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
+	</div>
 		<div class="container">
 			<div class="col">
-        <p>Laboratory test to determine soil's consolidation properties</p>
-				<figure>
+        				<figure>
 				  <img src="FiguresGeneral/consolidometer.svg" style="width:100%" data-preload/>
 				  <footer style="margin-top:-60px;"><small></small></footer>
 				</figure>
 			</div>
 			<div class="col">
-				<p style="margin-top:-30px;">Iterative process:</p>
+				<p style="margin-top:-0px;">Iterative process:</p>
 				<ol style="margin-top:0px;font-size:35px">
 					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
 					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
 					<li class="fragment"> Measure the settlement \(\Delta S\) </li>
-					<li class="fragment"> Plot cummulative stress vs settlement. </li>
+					<li class="fragment"> Plot cumulative stress vs settlement. </li>
 				</ol>
-
-				<figure>
-				  <img src="FiguresGeneral/Consolidation_raw.svg" style="width:100%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
 			</div>
 		</div>
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<figure>
+		<img src="FiguresGeneral/Consolidation_raw.svg" style="width:100%" data-preload/>
+		<footer style="margin-top:0px;"><small></small></footer>
+	</figure>
+
+</section>
+
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Settlement vs. void ratio</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>It is more convenient to plot the <strong style="color:#7abbe6">consolidation curve</strong> in terms of void ration \(e\) than settlement \(S\)</p>			
+	</div>
 		<div class="container">
+
 			<div class="col">
+
           <figure>
             <img src="FiguresGeneral/ecurve.svg" style="width:100%" data-preload/>
             <footer style="margin-top:-60px;"><small></small></footer>
           </figure>
-					<p>It is more convenient to plot the <strong style="color:#7abbe6">consolidation curve</strong> in terms of void ration \(e\) than settlement \(S\)</p>
+
 			</div>
 			<div class="col">
-				<p>$$\Delta e= \cfrac{\Delta H}{H_0} (1+e_0)$$</p>
+				<div class='equationBox'>
+				\(\Delta e= \cfrac{\Delta H}{H_0} (1+e_0)\)
+				</div>				
 				<ul>
 					<li>\(H_0=\) initial height of specimen</li>
 					<li>\(\Delta H=\) settlement (\(S\))</li>

@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4467452"
-     inkscape:cx="252.98165"
+     inkscape:cx="252.98166"
      inkscape:cy="118.54195"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1015"
      inkscape:window-x="-9"
-     inkscape:window-y="1341"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -155,22 +155,22 @@
        id="text21523"
        x="6.1815915"
        y="144.61626"
-       style="stroke-width:0.264583;fill:#ffffff">water<tspan
+       style="stroke-width:0.264583;fill:#000000">water<tspan
    font-size="8.73125px"
    x="8.2762156"
    y="166.57666"
    id="tspan21517"
-   style="stroke-width:0.0700043;fill:#ffffff">solid</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">solid</tspan><tspan
    font-size="8.73125px"
    x="59.00618"
    y="150.43709"
    id="tspan21519"
-   style="stroke-width:0.0700043;fill:#ffffff">water</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">water</tspan><tspan
    font-size="8.73125px"
    x="60.203156"
    y="165.51833"
    id="tspan21521"
-   style="stroke-width:0.0700043;fill:#ffffff">solid</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">solid</tspan></text>
     <path
        d="m 26.914606,175.70479 h 28.623418"
        stroke="#9da1b4"
@@ -210,7 +210,7 @@
        id="text21533"
        x="98.405022"
        y="137.4725"
-       style="stroke-width:0.264583;fill:#ffffff">𝑆</text>
+       style="stroke-width:0.264583;fill:#000000">𝑆</text>
     <path
        d="m 1.3712017,121.72979 v 6.0421 l -0.77152496,3e-5 v -6.04213 z m 0.9371542,5.60115 -1.32291666,2.64583 -1.32291665,-2.64583 z"
        fill="#9da1b4"
@@ -297,22 +297,22 @@
        id="text21571"
        x="-11.97835"
        y="127.68291"
-       style="stroke-width:0.264583;fill:#ffffff">∆<tspan
+       style="stroke-width:0.264583;fill:#000000">∆<tspan
    font-size="7.9375px"
    x="-7.2378898"
    y="127.68291"
    id="tspan21565"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="7.9375px"
    x="42.773468"
    y="138.53082"
    id="tspan21567"
-   style="stroke-width:0.0700043;fill:#ffffff">∆</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">∆</tspan><tspan
    font-size="7.9375px"
    x="47.514004"
    y="138.53082"
    id="tspan21569"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan></text>
     <path
        d="m 48.230232,183.68224 -0.615156,0.79798 -1.706827,1.27794 -1.821127,0.84746 -0.991658,0.27887 -0.988219,0.16642 -1.006475,0.0595 -1.000654,-0.0656 -0.992188,-0.17251 -1.001712,-0.29739 -0.962819,-0.40323 -0.95541,-0.54504 -1.12739,-0.83211 -0.994039,-1.00092 -0.89535,-1.13295 -0.72734,-1.24962 1.143265,-0.6657 0.703791,1.20915 -0.05265,-0.0773 0.842963,1.06654 -0.04948,-0.0558 0.931862,0.93848 -0.07673,-0.0661 1.055423,0.77893 -0.06482,-0.0423 0.886354,0.50588 -0.07223,-0.0357 0.892439,0.37385 -0.0672,-0.0241 0.93054,0.27622 -0.07488,-0.0175 0.919427,0.15981 -0.06985,-0.008 0.924189,0.0608 -0.08255,-2.6e-4 0.929746,-0.055 -0.07091,0.008 0.917839,-0.15478 -0.06879,0.0153 0.905933,-0.25479 -0.100012,0.037 1.710266,-0.7956 -0.117475,0.0701 1.579563,-1.18268 -0.12753,0.12567 0.559859,-0.72628 z m -2.519891,-1.03002 3.933031,-2.05449 -0.716227,4.37912 z"
        fill="#9da1b4"
@@ -325,6 +325,6 @@
        id="text21575"
        x="35.732372"
        y="192.77042"
-       style="stroke-width:0.264583;fill:#ffffff">time</text>
+       style="stroke-width:0.264583;fill:#000000">time</text>
   </g>
 </svg>
