@@ -25,10 +25,10 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.1474186"
-     inkscape:cx="211.34396"
-     inkscape:cy="116.78388"
+     inkscape:cx="210.90821"
+     inkscape:cy="186.06984"
      inkscape:window-width="1920"
-     inkscape:window-height="1011"
+     inkscape:window-height="1015"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
@@ -149,7 +149,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path852"
-       style="stroke:#ffffff" />
+       style="stroke:#000000;fill:#000000" />
     <path
        d="m 275.4886,176.12701 -1.98438,4.7625 -1.98437,-4.7625 z"
        fill="#0f6fc6"
@@ -165,7 +165,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path856"
-       style="stroke:#ffffff" />
+       style="stroke:#000000;fill:#000000" />
     <path
        d="m 170.58131,221.23847 108.69374,0.0508"
        stroke="#f5f5f5"
@@ -175,7 +175,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path858"
-       style="stroke:#ffffff" />
+       style="stroke:#000000;fill:#000000" />
     <path
        d="m 171.63964,240.02389 108.69374,0.0508"
        stroke="#f5f5f5"
@@ -185,7 +185,7 @@
        fill="none"
        fill-rule="evenodd"
        id="path860"
-       style="stroke:#ffffff" />
+       style="stroke:#000000;fill:#000000" />
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
@@ -193,17 +193,17 @@
        id="text866"
        x="169.52779"
        y="189.09158"
-       style="stroke-width:0.264583;fill:#ffffff">Clay #1<tspan
+       style="stroke-width:0.264583;fill:#000000">Clay #1<tspan
    font-size="5.29167px"
    x="169.52773"
    y="208.14159"
    id="tspan862"
-   style="stroke-width:0.0700043;fill:#ffffff">Clay #2</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">Clay #2</tspan><tspan
    font-size="5.29167px"
    x="169.52779"
    y="230.10201"
    id="tspan864"
-   style="stroke-width:0.0700043;fill:#ffffff">Clay #3</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">Clay #3</tspan></text>
     <rect
        x="223.89485"
        y="188.29785"
@@ -246,7 +246,7 @@
        id="text876"
        x="229.01534"
        y="161.83951"
-       style="stroke-width:0.264583;fill:#ffffff">Large fill</text>
+       style="stroke-width:0.264583;fill:#000000">Large fill</text>
     <path
        d="m 234.93909,163.5593 c 0,3.06441 -2.33125,6.12881 -4.66223,6.12881 -2.33124,0 -4.66222,3.06467 -4.66222,6.12907"
        stroke="#f5f5f5"
@@ -256,6 +256,6 @@
        fill="none"
        fill-rule="evenodd"
        id="path878"
-       style="stroke:#ffffff" />
+       style="stroke:#000000;fill:none" />
   </g>
 </svg>

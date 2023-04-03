@@ -27,9 +27,9 @@
      inkscape:cx="183.16978"
      inkscape:cy="245.03278"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1015"
      inkscape:window-x="-9"
-     inkscape:window-y="1341"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -119,7 +119,7 @@
        id="text52664"
        x="48.01791"
        y="81.775909"
-       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+       style="stroke-width:0.264583;fill:#000000">𝑒</text>
     <path
        d="m 55.334963,88.787364 92.371337,68.521266"
        stroke="#005eff"
@@ -157,47 +157,47 @@
        id="text52690"
        x="47.599339"
        y="107.17591"
-       style="stroke-width:0.264583;fill:#ffffff">𝑒<tspan
+       style="stroke-width:0.264583;fill:#000000">𝑒<tspan
    font-size="3.96875px"
    x="50.090836"
    y="108.49883"
    id="tspan52674"
-   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">0</tspan><tspan
    font-size="5.29167px"
    x="109.22318"
    y="163.26758"
    id="tspan52676"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="5.29167px"
    x="112.31007"
    y="163.26758"
    id="tspan52678"
-   style="stroke-width:0.0700043;fill:#ffffff">′</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">′</tspan><tspan
    font-size="3.96875px"
    x="113.36841"
    y="164.32591"
    id="tspan52680"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑓</tspan><tspan
    font-size="5.29167px"
    x="79.192703"
    y="162.47383"
    id="tspan52682"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎′</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎′</tspan><tspan
    font-size="3.96875px"
    x="83.657555"
    y="163.53217"
    id="tspan52684"
-   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">0</tspan><tspan
    font-size="5.29167px"
    x="47.458214"
    y="130.72383"
    id="tspan52686"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑒</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑒</tspan><tspan
    font-size="3.96875px"
    x="49.629997"
    y="131.78217"
    id="tspan52688"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑓</tspan></text>
     <path
        d="m 53.218297,107.83736 h 3.622675"
        stroke="#9da1b4"
@@ -242,12 +242,12 @@
        id="text52702"
        x="90.663185"
        y="96.063408"
-       style="stroke-width:0.264583;fill:#ffffff">Consolidation curve <tspan
+       style="stroke-width:0.264583;fill:#000000">Consolidation curve <tspan
    font-size="5.29167px"
    x="99.736198"
    y="102.41341"
    id="tspan52700"
-   style="stroke-width:0.0700043;fill:#ffffff">(</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">(</tspan></text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -255,7 +255,7 @@
        id="text52704"
        x="101.33489"
        y="102.41341"
-       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+       style="stroke-width:0.264583;fill:#000000">𝑒</text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-style="italic"
@@ -264,7 +264,7 @@
        id="text52706"
        x="105.31026"
        y="102.41341"
-       style="stroke-width:0.264583;fill:#ffffff">vs log</text>
+       style="stroke-width:0.264583;fill:#000000">vs log</text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -272,12 +272,12 @@
        id="text52710"
        x="117.52289"
        y="102.41341"
-       style="stroke-width:0.264583;fill:#ffffff">𝜎<tspan
+       style="stroke-width:0.264583;fill:#000000">𝜎<tspan
    font-size="5.29167px"
    x="120.6097"
    y="102.41341"
    id="tspan52708"
-   style="stroke-width:0.0700043;fill:#ffffff">′</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">′</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-style="italic"
@@ -286,7 +286,7 @@
        id="text52712"
        x="121.98774"
        y="102.41341"
-       style="stroke-width:0.264583;fill:#ffffff">)</text>
+       style="stroke-width:0.264583;fill:#000000">)</text>
     <path
        d="m 108.37916,104.92695 c -3.47144,0 -6.94288,3.25437 -6.94288,6.50878 0,3.25437 -3.471437,6.50875 -6.942876,6.50875"
        stroke="#9da1b4"

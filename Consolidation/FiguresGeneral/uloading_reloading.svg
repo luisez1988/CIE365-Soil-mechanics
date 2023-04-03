@@ -24,12 +24,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.72337262"
-     inkscape:cx="311.04302"
+     inkscape:cx="311.04301"
      inkscape:cy="53.222916"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1015"
      inkscape:window-x="-9"
-     inkscape:window-y="1341"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -75,12 +75,12 @@
        id="text45640"
        x="132.35054"
        y="179.5881"
-       style="fill:#ffffff;stroke-width:0.264583">log<tspan
+       style="fill:#000000;stroke-width:0.264583">log<tspan
    font-size="8.73125px"
    x="145.23132"
    y="179.5881"
    id="tspan45638"
-   style="fill:#ffffff;stroke-width:0.0700043">𝜎′</tspan></text>
+   style="fill:#000000;stroke-width:0.0700043">𝜎′</tspan></text>
     <path
        d="m 31.91074,88.968316 109.15465,80.971234"
        stroke="#005eff"
@@ -188,6 +188,6 @@
        id="text45670"
        x="22.198282"
        y="80.898521"
-       style="fill:#ffffff;stroke-width:0.264583">𝑒</text>
+       style="fill:#000000;stroke-width:0.264583">𝑒</text>
   </g>
 </svg>

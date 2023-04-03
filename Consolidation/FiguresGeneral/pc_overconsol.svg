@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4467452"
-     inkscape:cx="179.71374"
+     inkscape:cx="179.71375"
      inkscape:cy="131.67488"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1015"
      inkscape:window-x="-9"
-     inkscape:window-y="1341"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -111,57 +111,57 @@
        id="text52974"
        x="91.763824"
        y="172.87325"
-       style="stroke-width:0.264583;fill:#ffffff">log<tspan
+       style="stroke-width:0.264583;fill:#000000">log<tspan
    font-size="6.08542px"
    x="100.73101"
    y="172.87325"
    id="tspan52954"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎′</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎′</tspan><tspan
    font-size="5.29167px"
    x="-1.4785092"
    y="115.72324"
    id="tspan52956"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑒</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑒</tspan><tspan
    font-size="3.96875px"
    x="1.01307"
    y="116.78157"
    id="tspan52958"
-   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">0</tspan><tspan
    font-size="5.29167px"
    x="74.651505"
    y="171.28574"
    id="tspan52960"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="5.29167px"
    x="77.738319"
    y="171.28574"
    id="tspan52962"
-   style="stroke-width:0.0700043;fill:#ffffff">′</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">′</tspan><tspan
    font-size="3.96875px"
    x="78.796654"
    y="172.34407"
    id="tspan52964"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑓</tspan><tspan
    font-size="5.29167px"
    x="30.908867"
    y="170.75658"
    id="tspan52966"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎′</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎′</tspan><tspan
    font-size="3.96875px"
    x="35.373711"
    y="171.81491"
    id="tspan52968"
-   style="stroke-width:0.0700043;fill:#ffffff">0</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">0</tspan><tspan
    font-size="5.29167px"
    x="-1.6195374"
    y="126.83574"
    id="tspan52970"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑒</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑒</tspan><tspan
    font-size="3.96875px"
    x="0.55216467"
    y="127.89407"
    id="tspan52972"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑓</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑓</tspan></text>
     <path
        d="m 4.2714127,116.12011 h 3.6226749"
        stroke="#9da1b4"
@@ -244,7 +244,7 @@
        id="text52994"
        x="-1.3684456"
        y="89.794067"
-       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+       style="stroke-width:0.264583;fill:#000000">𝑒</text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-style="italic"
@@ -253,12 +253,12 @@
        id="text52998"
        x="42.591545"
        y="97.466988"
-       style="stroke-width:0.264583;fill:#ffffff">Consolidation curve <tspan
+       style="stroke-width:0.264583;fill:#000000">Consolidation curve <tspan
    font-size="5.29167px"
    x="51.664532"
    y="103.81699"
    id="tspan52996"
-   style="stroke-width:0.0700043;fill:#ffffff">(</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">(</tspan></text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -266,7 +266,7 @@
        id="text53000"
        x="53.262985"
        y="103.81699"
-       style="stroke-width:0.264583;fill:#ffffff">𝑒</text>
+       style="stroke-width:0.264583;fill:#000000">𝑒</text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-style="italic"
@@ -275,7 +275,7 @@
        id="text53002"
        x="57.23835"
        y="103.81699"
-       style="stroke-width:0.264583;fill:#ffffff">vs log</text>
+       style="stroke-width:0.264583;fill:#000000">vs log</text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -283,12 +283,12 @@
        id="text53006"
        x="69.451248"
        y="103.81699"
-       style="stroke-width:0.264583;fill:#ffffff">𝜎<tspan
+       style="stroke-width:0.264583;fill:#000000">𝜎<tspan
    font-size="5.29167px"
    x="72.538063"
    y="103.81699"
    id="tspan53004"
-   style="stroke-width:0.0700043;fill:#ffffff">′</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">′</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-style="italic"
@@ -297,7 +297,7 @@
        id="text53008"
        x="73.916092"
        y="103.81699"
-       style="stroke-width:0.264583;fill:#ffffff">)</text>
+       style="stroke-width:0.264583;fill:#000000">)</text>
     <path
        d="m 60.226024,106.33053 c -3.471439,0 -6.942878,3.25437 -6.942878,6.50878 0,3.25437 -3.471439,6.50875 -6.942878,6.50875"
        stroke="#9da1b4"
@@ -395,7 +395,7 @@
              id="g53485"
              style="fill:#ffffff;stroke-width:1.55189">
             <path
-               style="fill:#ffffff;stroke:none;stroke-width:0"
+               style="fill:#000000;stroke:none;stroke-width:0"
                d="m 5.15625,-3.71875 c 0.140625,0 0.5,0 0.5,-0.34375 0,-0.234375 -0.21875,-0.234375 -0.390625,-0.234375 h -2.28125 c -1.5,0 -2.609375,1.640625 -2.609375,2.828125 0,0.875 0.59375,1.578125 1.5,1.578125 1.171875,0 2.5,-1.203125 2.5,-2.734375 0,-0.171875 0,-0.65625 -0.3125,-1.09375 z m -3.265625,3.609375 c -0.5,0 -0.890625,-0.359375 -0.890625,-1.078125 0,-0.296875 0.109375,-1.109375 0.46875,-1.703125 0.421875,-0.6875 1.015625,-0.828125 1.359375,-0.828125 0.828125,0 0.90625,0.65625 0.90625,0.96875 0,0.46875 -0.203125,1.28125 -0.53125,1.796875 -0.390625,0.578125 -0.9375,0.84375 -1.3125,0.84375 z m 0,0"
                id="id-73f8cfdd-370b-429e-9762-573c2e3cd32b" />
           </g>
@@ -408,7 +408,7 @@
              id="g53489"
              style="fill:#ffffff;stroke-width:1.55189">
             <path
-               style="fill:#ffffff;stroke:none;stroke-width:0"
+               style="fill:#000000;stroke:none;stroke-width:0"
                d="m 2.015625,-3.296875 c 0.0625,-0.109375 0.0625,-0.171875 0.0625,-0.21875 0,-0.21875 -0.1875,-0.375 -0.40625,-0.375 -0.265625,0 -0.34375,0.21875 -0.375,0.328125 l -0.921875,3.015625 c -0.015625,0.015625 -0.046875,0.09375 -0.046875,0.109375 0,0.078125 0.21875,0.15625 0.28125,0.15625 0.046875,0 0.046875,-0.015625 0.09375,-0.125 z m 0,0"
                id="id-e3020df1-f52f-477d-963e-aece26831097" />
           </g>
@@ -421,7 +421,7 @@
              id="g53493"
              style="fill:#ffffff;stroke-width:1.55189">
             <path
-               style="fill:#ffffff;stroke:none;stroke-width:0"
+               style="fill:#000000;stroke:none;stroke-width:0"
                d="m 3.046875,-2.671875 c -0.25,0.046875 -0.34375,0.234375 -0.34375,0.390625 0,0.1875 0.140625,0.265625 0.265625,0.265625 0.15625,0 0.390625,-0.109375 0.390625,-0.453125 0,-0.46875 -0.53125,-0.609375 -0.90625,-0.609375 -1.046875,0 -2.015625,0.96875 -2.015625,1.9375 0,0.59375 0.40625,1.203125 1.28125,1.203125 1.1875,0 1.734375,-0.6875 1.734375,-0.78125 0,-0.046875 -0.0625,-0.125 -0.125,-0.125 -0.03125,0 -0.046875,0.015625 -0.109375,0.078125 -0.546875,0.640625 -1.359375,0.640625 -1.484375,0.640625 -0.5,0 -0.71875,-0.34375 -0.71875,-0.78125 0,-0.1875 0.09375,-0.953125 0.453125,-1.4375 0.265625,-0.34375 0.625,-0.53125 0.984375,-0.53125 0.09375,0 0.421875,0.015625 0.59375,0.203125 z m 0,0"
                id="id-7ff93546-b928-49c1-9ef5-51456b432e21" />
           </g>
