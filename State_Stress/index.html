@@ -314,7 +314,7 @@ $$ \boldsymbol{\sigma}=
 $$
 <ul style="margin-top:-25px;">
 	<li class="fragment"> By convention we name them so that \(\sigma_1 \geq \sigma_2 \geq \sigma_3\). </li>
-	<li class="fragment"> \(\sigma_1\) is the <strong style="color:#7abbe6">major pincipal stress</strong> and \(\sigma_3\) is the <strong style="color:#7abbe6">minor principal stress</strong> </li>
+	<li class="fragment"> \(\sigma_1\) is the <strong style="color:#7abbe6">major principal stress</strong> and \(\sigma_3\) is the <strong style="color:#7abbe6">minor principal stress</strong> </li>
 		<li class="fragment"> \(\sigma_2\) is the middle stress. In plane strain and stress conditions acts on the direction perpendicular to the plane.</li>
 </ul>
 </section>
@@ -339,7 +339,10 @@ For the element in the figure below find the principal stresses and their orient
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Mohr's circle</h1>
-  <p>For <strong style="color:#7abbe6">2D stresses</strong>, the state of stress can be represented using Mohr's circle</p>
+
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> The parametric equations for the normal (\(\sigma_{\alpha}\) ) and shear (\(\tau_{\alpha}\)) <span class='atb'> render a circle </span>  in the range of \( 0\leq \alpha \leq 180 \) degrees.</div>
+
+
 	<div class="container">
 		<div class="col">
 			<figure>
@@ -348,10 +351,11 @@ For the element in the figure below find the principal stresses and their orient
 			</figure>
 		</div>
 		<div class="col">
-	         <ul>
-	         	<li class="fragment"> \(\sigma_\alpha= \cfrac{\sigma_1+ \sigma_2}{2} + \cfrac{\sigma_1 - \sigma_3}{2} \cos 2 \alpha\) </li>
-						<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_1 - \sigma_3}{2} \sin 2 \alpha\)  </li>
-	         </ul>
+
+			<div class='equationBox' style="margin-top: 30px;""> \(\sigma_\alpha= \cfrac{\sigma_1+ \sigma_2}{2} + \cfrac{\sigma_1 - \sigma_3}{2} \cos 2 \alpha\) </div>
+
+			<div class='equationBox' style="margin-top: 30px;">  \(\tau_\alpha= \cfrac{\sigma_1 - \sigma_3}{2} \sin 2 \alpha\) </div>
+
 		</div>
 	</div>
 
@@ -359,33 +363,24 @@ For the element in the figure below find the principal stresses and their orient
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Stress invariants</h1>
- <p>Are stresses that do not change depending on the orientation. For example:</p>
- <ul>
- 	<li>\(\frac{\sigma_1+\sigma_3}{2}=\) the mean stress. Note that the mean stress that matters is the 3D mean stress \(p=\sigma_1+\sigma_2+\sigma_3 / 3\).</li>
-	<li>\(\sigma_d=\sigma_1-\sigma_3\) the deviator stress. <strong style="color:#7abbe6">This is what causes failure</strong>.</li>
-	<li>The principal stresses.</li>
- </ul>
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> Stress invariants are stress quantities that <span class='atb'> do not change </span> according to the orientation.</div>
+
+<div class='defBox' name='MIT mean stress' style='margin-top: 0px;font-size: 1em;'> 	<strong style='color:green'>\(\sigma_m\): </strong> Is the average compressive stress 	<strong style='color:#7abbe6'>(i.e., the center of the circle)</strong> <div class='equationBox'>  \(\sigma_m=\cfrac{\sigma_1+\sigma_3}{2}\) </div> </div>
+
+<div class='defBox' name='MIT deviator stress' style='margin-top: 10px;font-size: 1em;'> 	<strong style='color:green'>\(\sigma_d\): </strong> Is the difference between the major and minor stress over 2 	<strong style='color:#7abbe6'>(i.e., the radius of the circle)</strong>  <div class='equationBox'>  \(\sigma_d=\cfrac{\sigma_1-\sigma_3}{2}\) </div> </div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.1</h1>
-	<p>For the element in the figure find the normal and shear stress on a plane inclined at \(\alpha=35^o\) from the horizontal reference plane.</p>
-	<div class="container">
-		<div class="col">
-	            <figure>
-	              <img src="FiguresGeneral/example71.svg" style="width:80%" data-preload/>
-	              <footer style="margin-top:-60px;"><small></small></footer>
-	            </figure>
-		</div>
-		<div class="col">
-
-		</div>
-	</div>
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 6.3</h1>
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> For the same figure in Example 6.2 find: a) the mean and deviator stresses, and b) check the answers of problem 6.2 and 6.3 graphically. 
+<a href="#9">Go to Jupyter Notebooks </a>
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>The pole method</h1>
- <p>One useful graphical consequence of Mohr's circle is the existence of the <strong style="color:#7abbe6">pole</strong>. It links the <strong style="color:#7abbe6">physical angular coordinate system</strong> and <strong style="color:#7abbe6">Mohr's circle angular coordinate system</strong></p>
+<div class='defBox' name='Pole' style='margin-top: 0px;font-size: 1em;'> Is the the point where all planes intersect the Mohr's circle. It links the <strong style="color:#7abbe6">physical angular coordinate system</strong> and <strong style="color:#7abbe6">Mohr's circle angular coordinate system</strong></div>
+
 <figure>
   <img src="FiguresGeneral/Pole_method.svg" style="width:100%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
@@ -393,12 +388,13 @@ For the element in the figure below find the principal stresses and their orient
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.2</h1>
-<p>For the element in the figure below, find the principal stresses and their orientation using the equations and the Pole's method. Find the stresses acting at the indicated angle.</p>
+	<h1>Example 6.4</h1>
+	<div class='textBox' style='margin-top: 0px;font-size: 1em;'><p>For the element in the figure below, find the principal stresses and their orientation using the equations and the Pole's method. Find the stresses acting at the indicated angle.</p> <a href="#9"> Go to Jupyter Notebooks</a> </div>
+
 <div class="container">
 	<div class="col">
 		<figure style="margin-top:-30px;">
-			<img src="FiguresGeneral/Example72.PNG" style="width:100%" data-preload/>
+			<img src="FiguresGeneral/Example72.PNG" style="width:80%" data-preload/>
 			<footer style="margin-top:-60px;"><small></small></footer>
 		</figure>
 	</div>
@@ -410,8 +406,8 @@ For the element in the figure below find the principal stresses and their orient
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 7.3</h1>
-<p>Same as Example 7.2 for the figure below</p>
+	<h1>Example 6.5</h1>
+	<div class='textBox' style='margin-top: 0px;font-size: 1em;'> Find the stresses acting on the plane defined by angle \(\alpha\) using the pole method.</div>
 <div class="container">
 	<div class="col">
                 <figure>
@@ -425,7 +421,7 @@ For the element in the figure below find the principal stresses and their orient
 </div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Elastic solution for \(K_0\)</h1>
 	<p>A simplistic, but fundamental model relating stress-strain behavior.</p>
 	 <p style="margin-top:0px;font-size:34px">
@@ -473,7 +469,7 @@ $$
 
  	</div>
  </div>
-</section>
+</section> -->
 
 
 

@@ -12,7 +12,8 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns2="http://www.iki.fi/pav/software/textext/">
   <sodipodi:namedview
      id="namedview7"
      pagecolor="#505050"
@@ -23,17 +24,45 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.57370932"
-     inkscape:cx="626.62395"
-     inkscape:cy="215.26581"
-     inkscape:window-width="1536"
-     inkscape:window-height="807"
+     inkscape:zoom="2.2948373"
+     inkscape:cx="405.47537"
+     inkscape:cy="223.1095"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
      inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-y="44"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="DotM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path1374" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1319" />
+    </marker>
     <clipPath
        id="clip0">
       <rect
@@ -48,17 +77,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(60.89961,-91.227537)">
+     transform="translate(60.8996, -91.2275)">
     <path
        d="m -60.89961,152.4037 h 200.42185 v 0.79375 H -60.89961 Z m 200.02497,-0.79375 3.96875,1.19063 -3.96875,1.19062 z"
        fill="#f5f5f5"
        id="path836"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#000000" />
     <path
        d="m -36.690262,202.80683 2.6e-5,-104.378124 h -0.79375 l -2.6e-5,104.378124 z m 0.793776,-103.981249 -1.190623,-3.96875 -1.190627,3.96875 z"
        fill="#f5f5f5"
        id="path838"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#000000" />
     <path
        d="m 3.1295293,152.80058 c 0,-22.06493 17.8871557,-39.95209 39.9520827,-39.95209 22.064927,0 39.952083,17.88716 39.952083,39.95209 0,22.06492 -17.887156,39.95208 -39.952083,39.95208 -22.064927,0 -39.9520827,-17.88716 -39.9520827,-39.95208 z"
        stroke="#7b133c"
@@ -96,18 +125,18 @@
        fill="none"
        fill-rule="evenodd"
        id="path848"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;stroke:#000000" />
     <path
        d="m -34.044429,200.55787 h 73.81875 v 0.52916 h -73.81875 z m 0.35269,1.32291 -3.52769,-1.05833 3.52769,-1.05833 z m 73.11337,-2.11666 3.527689,1.05833 -3.527689,1.05833 z"
        fill="#f5f5f5"
        id="path850"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#000000" />
     <path
        d="m 64.909737,120.78599 c 0,-1.0959 0.888471,-1.98437 1.984375,-1.98437 1.095904,0 1.984375,0.88847 1.984375,1.98437 0,1.09591 -0.888471,1.98438 -1.984375,1.98438 -1.095904,0 -1.984375,-0.88847 -1.984375,-1.98438 z"
        fill="#f5f5f5"
        fill-rule="evenodd"
        id="path852"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#00ff00" />
     <path
        d="m 40.832654,152.80058 c 0,-1.09591 0.888471,-1.98438 1.984375,-1.98438 1.095904,0 1.984375,0.88847 1.984375,1.98438 0,1.0959 -0.888471,1.98437 -1.984375,1.98437 -1.095904,0 -1.984375,-0.88847 -1.984375,-1.98437 z"
        fill="#00b0f0"
@@ -123,7 +152,8 @@
        stroke-dasharray="2, 2"
        fill="none"
        fill-rule="evenodd"
-       id="path856" />
+       id="path856"
+       style="stroke:#000000" />
     <path
        d="m 66.76182,120.6537 -103.981249,3e-5"
        stroke="#f5f5f5"
@@ -133,7 +163,8 @@
        stroke-dasharray="2, 2"
        fill="none"
        fill-rule="evenodd"
-       id="path858" />
+       id="path858"
+       style="stroke:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -141,70 +172,70 @@
        id="text884"
        x="-43.612289"
        y="98.693283"
-       style="stroke-width:0.264583;fill:#ffffff">𝜏<tspan
+       style="stroke-width:0.264583;fill:#000000">𝜏<tspan
    font-size="8.46667px"
    x="139.02138"
    y="161.39954"
    id="tspan860"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-family="Calibri, Calibri_MSFontService, sans-serif"
    font-size="8.46667px"
    x="70.031013"
    y="119.59537"
    id="tspan862"
-   style="stroke-width:0.0700043;fill:#ffffff">(</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">(</tspan><tspan
    font-size="8.46667px"
    x="72.588737"
    y="119.59537"
    id="tspan864"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="6.08542px"
    x="76.949074"
    y="121.18287"
    id="tspan866"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛼</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝛼</tspan><tspan
    font-family="Calibri, Calibri_MSFontService, sans-serif"
    font-size="8.46667px"
    x="81.588013"
    y="119.59537"
    id="tspan868"
-   style="stroke-width:0.0700043;fill:#ffffff">,</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">,</tspan><tspan
    font-size="8.46667px"
    x="85.600945"
    y="119.59537"
    id="tspan870"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜏</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜏</tspan><tspan
    font-size="6.08542px"
    x="89.481331"
    y="121.18287"
    id="tspan872"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛼</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝛼</tspan><tspan
    font-family="Calibri, Calibri_MSFontService, sans-serif"
    font-size="8.46667px"
    x="94.120529"
    y="119.59537"
    id="tspan874"
-   style="stroke-width:0.0700043;fill:#ffffff">)</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">)</tspan><tspan
    font-size="6.35px"
    x="-45.747475"
    y="121.44745"
    id="tspan876"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜏</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜏</tspan><tspan
    font-size="4.7625px"
    x="-42.837055"
    y="122.77037"
    id="tspan878"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛼</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝛼</tspan><tspan
    font-size="6.35px"
    x="63.740547"
    y="158.22453"
    id="tspan880"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="4.7625px"
    x="67.010796"
    y="159.54745"
    id="tspan882"
-   style="stroke-width:0.0700043;fill:#ffffff">𝛼</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝛼</tspan></text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -212,22 +243,22 @@
        id="text890"
        x="-13.678127"
        y="207.9662"
-       style="stroke-width:0.264583;fill:#ffffff">1<tspan
+       style="stroke-width:0.264583;fill:#000000">1<tspan
    font-size="6.35px"
    x="-13.678127"
    y="216.96204"
    id="tspan888"
-   style="stroke-width:0.0700043;fill:#ffffff">2</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">2</tspan></text>
     <path
        d="m -13.778668,210.65357 h 3.439583 v 0.52917 h -3.439583 z"
        fill-rule="evenodd"
        id="path892"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <path
        d="m 13.629254,208.01647 c 0.603515,0.15902 1.067065,0.50271 1.39065,1.03082 0.323321,0.52811 0.484981,1.16549 0.484981,1.91161 0,0.74824 -0.161131,1.38536 -0.483658,1.91162 -0.322262,0.52599 -0.786342,0.86862 -1.391973,1.02764 l -0.07461,-0.23866 c 0.477573,-0.15927 0.832643,-0.47333 1.065212,-0.94271 0.232569,-0.4691 0.348721,-1.06547 0.348721,-1.78884 0,-0.69877 -0.115623,-1.279 -0.347133,-1.74096 -0.231511,-0.46196 -0.590286,-0.77259 -1.076061,-0.93186 z m -20.2871912,0 0.083608,0.23866 c -0.4836583,0.15927 -0.8416396,0.4699 -1.0742083,0.93186 -0.2325688,0.46196 -0.3489854,1.04219 -0.3489854,1.74096 0,0.72337 0.1164166,1.31974 0.3489854,1.78884 0.2325687,0.46938 0.587375,0.78344 1.0649479,0.94271 l -0.074348,0.23866 c -0.6056313,-0.15902 -1.0697105,-0.50165 -1.3922375,-1.02764 -0.3225271,-0.52626 -0.4836584,-1.16338 -0.4836584,-1.91162 0,-0.74612 0.1616605,-1.3835 0.4852459,-1.91161 0.3235854,-0.52811 0.7871354,-0.8718 1.3906504,-1.03082 z"
        fill-rule="evenodd"
        id="path894"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -235,27 +266,27 @@
        id="text904"
        x="-6.4565892"
        y="212.7287"
-       style="stroke-width:0.264583;fill:#ffffff">𝜎<tspan
+       style="stroke-width:0.264583;fill:#000000">𝜎<tspan
    font-size="4.7625px"
    x="-3.3327334"
    y="214.05162"
    id="tspan896"
-   style="stroke-width:0.0700043;fill:#ffffff">1</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">1</tspan><tspan
    font-size="6.35px"
    x="1.0311188"
    y="212.7287"
    id="tspan898"
-   style="stroke-width:0.0700043;fill:#ffffff">+</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">+</tspan><tspan
    font-size="6.35px"
    x="7.2047215"
    y="212.7287"
    id="tspan900"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="4.7625px"
    x="10.474972"
    y="214.05162"
    id="tspan902"
-   style="stroke-width:0.0700043;fill:#ffffff">3</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">3</tspan></text>
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -263,32 +294,32 @@
        id="text914"
        x="42.230713"
        y="214.05162"
-       style="stroke-width:0.264583;fill:#ffffff">𝑅<tspan
+       style="stroke-width:0.264583;fill:#000000">𝑅<tspan
    font-size="6.35px"
    x="48.236755"
    y="214.05162"
    id="tspan908"
-   style="stroke-width:0.0700043;fill:#ffffff">=</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">=</tspan><tspan
    font-size="6.35px"
    x="54.763149"
    y="209.28912"
    id="tspan910"
-   style="stroke-width:0.0700043;fill:#ffffff">1</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">1</tspan><tspan
    font-size="6.35px"
    x="54.763149"
    y="218.28496"
    id="tspan912"
-   style="stroke-width:0.0700043;fill:#ffffff">2</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">2</tspan></text>
     <path
        d="m 54.768522,211.88362 h 3.439584 v 0.52917 h -3.439584 z"
        fill-rule="evenodd"
        id="path916"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <path
        d="m 82.070347,209.24652 c 0.603515,0.15901 1.067065,0.50271 1.39065,1.03082 0.323585,0.5281 0.485246,1.16549 0.485246,1.91161 0,0.74824 -0.161131,1.38536 -0.483658,1.91135 -0.322528,0.52626 -0.786607,0.86889 -1.392238,1.02791 l -0.07435,-0.23866 c 0.477573,-0.15928 0.832379,-0.47334 1.064948,-0.94271 0.232569,-0.4691 0.348985,-1.06547 0.348985,-1.78885 0,-0.69876 -0.115887,-1.27899 -0.347397,-1.74095 -0.231511,-0.46223 -0.590021,-0.77259 -1.075796,-0.93187 z m -20.287191,0 0.08387,0.23865 c -0.483659,0.15928 -0.841905,0.46964 -1.074473,0.93187 -0.232569,0.46196 -0.348721,1.04219 -0.348721,1.74095 0,0.72338 0.116152,1.31975 0.348721,1.78885 0.232568,0.46937 0.587639,0.78343 1.065212,0.94271 l -0.07461,0.23866 c -0.605632,-0.15902 -1.069711,-0.50165 -1.391973,-1.02791 -0.322527,-0.52599 -0.483659,-1.16311 -0.483659,-1.91135 0,-0.74612 0.161661,-1.38351 0.484982,-1.91161 0.323585,-0.52811 0.787135,-0.87181 1.390651,-1.03082 z"
        fill-rule="evenodd"
        id="path918"
-       style="stroke-width:0.264583;fill:#ffffff" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -296,68 +327,68 @@
        id="text940"
        x="61.984505"
        y="214.05162"
-       style="stroke-width:0.264583;fill:#ffffff">𝜎<tspan
+       style="stroke-width:0.264583;fill:#000000">𝜎<tspan
    font-size="4.7625px"
    x="65.10836"
    y="215.37454"
    id="tspan920"
-   style="stroke-width:0.0700043;fill:#ffffff">1</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">1</tspan><tspan
    font-size="6.35px"
    x="69.472214"
    y="214.05162"
    id="tspan922"
-   style="stroke-width:0.0700043;fill:#ffffff">−</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">−</tspan><tspan
    font-size="6.35px"
    x="75.645844"
    y="214.05162"
    id="tspan924"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    font-size="4.7625px"
    x="78.916061"
    y="215.37454"
    id="tspan926"
-   style="stroke-width:0.0700043;fill:#ffffff">3</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">3</tspan><tspan
    fill="#fd8c00"
    font-size="8.46667px"
    x="48.5093"
    y="135.99954"
    id="tspan928"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑅</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑅</tspan><tspan
    fill="#0000ff"
    font-size="8.46667px"
    x="-7.8938041"
    y="161.13495"
    id="tspan930"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    fill="#0000ff"
    font-size="6.08542px"
    x="-3.5334721"
    y="162.98703"
    id="tspan932"
-   style="stroke-width:0.0700043;fill:#ffffff">3</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">3</tspan><tspan
    fill="#0000ff"
    font-size="8.46667px"
    x="84.57132"
    y="160.60579"
    id="tspan934"
-   style="stroke-width:0.0700043;fill:#ffffff">𝜎</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝜎</tspan><tspan
    fill="#0000ff"
    font-size="6.08542px"
    x="88.735733"
    y="162.45787"
    id="tspan936"
-   style="stroke-width:0.0700043;fill:#ffffff">1</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">1</tspan><tspan
    fill="#00b0f0"
    font-size="8.46667px"
    x="36.620937"
    y="160.3412"
    id="tspan938"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑜</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑜</tspan></text>
     <path
        d="m 94.751297,137.10946 -1.718204,-0.80883 -1.693334,-0.6387 0.03228,0.01 -1.717675,-0.36407 0.0426,0.005 -0.855663,-0.0124 -0.81915,0.10292 0.03678,-0.008 -0.852752,0.25665 -0.830527,0.37597 -1.670844,1.06045 -1.684602,1.36525 -0.112712,0.10134 -0.294217,-0.32862 0.129381,-0.11535 1.726142,-1.39515 1.725877,-1.09009 0.884502,-0.39608 0.852752,-0.25664 c 0.01191,-0.004 0.02408,-0.006 0.03651,-0.008 l 0.87921,-0.10609 0.855663,0.0124 c 0.01429,0 0.02858,0.002 0.0426,0.005 l 1.717411,0.36381 c 0.01111,0.002 0.0217,0.006 0.03228,0.01 l 1.725348,0.6522 1.718204,0.80883 z m -11.990917,1.28085 1.757363,-0.15293 -3.334279,1.56501 1.922198,-3.14193 z"
        fill="#f5f5f5"
        id="path942"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#000000" />
     <text
        fill="#7b133c"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -377,11 +408,100 @@
        fill="none"
        fill-rule="evenodd"
        id="path946"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;stroke:#000000" />
     <path
        d="m 46.12432,200.55787 h 34.13125 v 0.52916 H 46.12432 Z m 0.35269,1.32291 -3.52769,-1.05833 3.52769,-1.05833 z m 33.42587,-2.11666 3.52769,1.05833 -3.52769,1.05833 z"
        fill="#f5f5f5"
        id="path948"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#000000" />
+    <path
+       style="fill:none;stroke:#008000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend);marker-start:url(#DotM)"
+       d="m 57.965147,152.61654 c -0.423182,-5.16174 -2.410935,-9.07181 -7.174278,-10.76142"
+       id="path1091"
+       sodipodi:nodetypes="cc" />
+    <g
+       transform="matrix(0.740834,0,0,0.740834,47.79177,146.17049)"
+       ns2:version="1.6.0"
+       ns2:texconverter="pdflatex"
+       ns2:pdfconverter="inkscape"
+       ns2:text="$2\\alpha$"
+       ns2:preamble="C:\Users\$r.984804\OneDrive - University of Maine System\UMaine_docs\Faculty_Service\Brochure4+1\preamble_triptico.tex"
+       ns2:scale="2.1"
+       ns2:alignment="middle center"
+       ns2:stroke-to-path="0"
+       ns2:inkscapeversion="1.1.1"
+       ns2:jacobian_sqrt="0.740834"
+       id="g1855"
+       style="fill:#008000">
+      <defs
+         id="id-604d2a1a-a619-4aec-b505-a9c0e6458e85">
+        <g
+           id="id-84cefcdd-d4f4-4d6a-aabd-ac8d47fd32f7">
+          <symbol
+             overflow="visible"
+             id="id-8a7ebc17-b1f6-4ec1-aff0-2d01a8187945">
+            <path
+               style="stroke:none;stroke-width:0"
+               d=""
+               id="id-d7801f4a-3ec6-4172-9d2f-65e9bc4c56c7" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-a51f549e-6de3-4081-9505-24c61b5ecdfe">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 1.265625,-0.765625 1.0625,-1.03125 c 1.546875,-1.375 2.140625,-1.90625 2.140625,-2.90625 0,-1.140625 -0.890625,-1.9375 -2.109375,-1.9375 -1.125,0 -1.859375,0.921875 -1.859375,1.8125 0,0.546875 0.5,0.546875 0.53125,0.546875 0.171875,0 0.515625,-0.109375 0.515625,-0.53125 0,-0.25 -0.1875,-0.515625 -0.53125,-0.515625 -0.078125,0 -0.09375,0 -0.125,0.015625 0.21875,-0.65625 0.765625,-1.015625 1.34375,-1.015625 0.90625,0 1.328125,0.8125 1.328125,1.625 0,0.796875 -0.484375,1.578125 -1.046875,2.203125 l -1.90625,2.125 c -0.109375,0.109375 -0.109375,0.140625 -0.109375,0.375 h 3.703125 l 0.265625,-1.734375 h -0.234375 c -0.0625,0.296875 -0.125,0.734375 -0.234375,0.890625 -0.0625,0.078125 -0.71875,0.078125 -0.9375,0.078125 z m 0,0"
+               id="id-b1ed9250-ded7-43d1-9a74-13968ea474e5" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-43ef6e51-d88c-408c-ad0b-1cd656b54d09">
+            <path
+               style="stroke:none;stroke-width:0"
+               d=""
+               id="id-5340f195-45f1-4270-83e1-7be4cab6af33" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-aa0283fc-b8cf-4501-992b-13407b4e7b6c">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 4.75,-2.359375 c 0,-1.5625 -0.921875,-2.046875 -1.65625,-2.046875 -1.375,0 -2.6875,1.421875 -2.6875,2.828125 0,0.9375 0.59375,1.6875 1.625,1.6875 0.625,0 1.34375,-0.234375 2.09375,-0.84375 0.125,0.53125 0.453125,0.84375 0.90625,0.84375 0.53125,0 0.84375,-0.546875 0.84375,-0.703125 0,-0.078125 -0.0625,-0.109375 -0.125,-0.109375 -0.0625,0 -0.09375,0.03125 -0.125,0.109375 -0.1875,0.484375 -0.546875,0.484375 -0.5625,0.484375 -0.3125,0 -0.3125,-0.78125 -0.3125,-1.015625 0,-0.203125 0,-0.234375 0.109375,-0.34375 0.9375,-1.1875 1.140625,-2.34375 1.140625,-2.34375 0,-0.03125 -0.015625,-0.109375 -0.125,-0.109375 -0.09375,0 -0.09375,0.03125 -0.140625,0.21875 -0.1875,0.625 -0.515625,1.375 -0.984375,1.96875 z m -0.65625,1.375 c -0.890625,0.765625 -1.65625,0.875 -2.046875,0.875 -0.59375,0 -0.90625,-0.453125 -0.90625,-1.09375 0,-0.484375 0.265625,-1.5625 0.578125,-2.0625 0.46875,-0.734375 1.015625,-0.921875 1.359375,-0.921875 0.984375,0 0.984375,1.3125 0.984375,2.078125 0,0.375 0,0.953125 0.03125,1.125 z m 0,0"
+               id="id-22e9cb19-7162-45d6-981d-95be835c7a59" />
+          </symbol>
+        </g>
+      </defs>
+      <g
+         id="id-4c4555a6-65ef-4a26-a804-a3b378cab1a1"
+         transform="translate(-70.72,-99.8344)"
+         style="fill:#008000">
+        <g
+           style="fill:#008000;fill-opacity:1"
+           id="id-c9cf361f-5878-4330-9d29-04d1cef413bf">
+          <g
+             transform="translate(70.22,106.475)"
+             id="g1847"
+             style="fill:#008000">
+            <path
+               style="stroke:none;stroke-width:0;fill:#008000"
+               d="m 1.265625,-0.765625 1.0625,-1.03125 c 1.546875,-1.375 2.140625,-1.90625 2.140625,-2.90625 0,-1.140625 -0.890625,-1.9375 -2.109375,-1.9375 -1.125,0 -1.859375,0.921875 -1.859375,1.8125 0,0.546875 0.5,0.546875 0.53125,0.546875 0.171875,0 0.515625,-0.109375 0.515625,-0.53125 0,-0.25 -0.1875,-0.515625 -0.53125,-0.515625 -0.078125,0 -0.09375,0 -0.125,0.015625 0.21875,-0.65625 0.765625,-1.015625 1.34375,-1.015625 0.90625,0 1.328125,0.8125 1.328125,1.625 0,0.796875 -0.484375,1.578125 -1.046875,2.203125 l -1.90625,2.125 c -0.109375,0.109375 -0.109375,0.140625 -0.109375,0.375 h 3.703125 l 0.265625,-1.734375 h -0.234375 c -0.0625,0.296875 -0.125,0.734375 -0.234375,0.890625 -0.0625,0.078125 -0.71875,0.078125 -0.9375,0.078125 z m 0,0"
+               id="id-a6e289f7-c3d2-4b97-adc8-dc87937411f5" />
+          </g>
+        </g>
+        <g
+           style="fill:#008000;fill-opacity:1"
+           id="id-68ed5a1e-949a-4092-a85d-b063855f3530">
+          <g
+             transform="translate(75.201,106.475)"
+             id="g1851"
+             style="fill:#008000">
+            <path
+               style="stroke:none;stroke-width:0;fill:#008000"
+               d="m 4.75,-2.359375 c 0,-1.5625 -0.921875,-2.046875 -1.65625,-2.046875 -1.375,0 -2.6875,1.421875 -2.6875,2.828125 0,0.9375 0.59375,1.6875 1.625,1.6875 0.625,0 1.34375,-0.234375 2.09375,-0.84375 0.125,0.53125 0.453125,0.84375 0.90625,0.84375 0.53125,0 0.84375,-0.546875 0.84375,-0.703125 0,-0.078125 -0.0625,-0.109375 -0.125,-0.109375 -0.0625,0 -0.09375,0.03125 -0.125,0.109375 -0.1875,0.484375 -0.546875,0.484375 -0.5625,0.484375 -0.3125,0 -0.3125,-0.78125 -0.3125,-1.015625 0,-0.203125 0,-0.234375 0.109375,-0.34375 0.9375,-1.1875 1.140625,-2.34375 1.140625,-2.34375 0,-0.03125 -0.015625,-0.109375 -0.125,-0.109375 -0.09375,0 -0.09375,0.03125 -0.140625,0.21875 -0.1875,0.625 -0.515625,1.375 -0.984375,1.96875 z m -0.65625,1.375 c -0.890625,0.765625 -1.65625,0.875 -2.046875,0.875 -0.59375,0 -0.90625,-0.453125 -0.90625,-1.09375 0,-0.484375 0.265625,-1.5625 0.578125,-2.0625 0.46875,-0.734375 1.015625,-0.921875 1.359375,-0.921875 0.984375,0 0.984375,1.3125 0.984375,2.078125 0,0.375 0,0.953125 0.03125,1.125 z m 0,0"
+               id="id-1c0777a9-0548-4bcb-b827-8de42d9d5c36" />
+          </g>
+        </g>
+      </g>
+    </g>
   </g>
 </svg>
