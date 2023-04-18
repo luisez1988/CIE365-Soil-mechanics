@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="example71.svg"
+   sodipodi:docname="example62.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4467452"
-     inkscape:cx="168.65444"
-     inkscape:cy="120.26997"
+     inkscape:zoom="2.8934904"
+     inkscape:cx="226.0246"
+     inkscape:cy="89.51127"
      inkscape:window-width="2400"
      inkscape:window-height="1280"
      inkscape:window-x="2391"
@@ -128,15 +128,15 @@
          y="74.942459">200 kPa</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:5.75592px;line-height:1.25;font-family:sans-serif;stroke:none;stroke-width:0.264582;fill:#000000"
+       style="font-size:5.75592px;line-height:1.25;font-family:sans-serif;fill:#000000;stroke:none;stroke-width:0.264582"
        x="82.909309"
        y="90.030205"
        id="text7584"><tspan
          sodipodi:role="line"
          id="tspan7582"
-         style="stroke:none;stroke-width:0.264582;fill:#000000"
+         style="fill:#000000;stroke:none;stroke-width:0.264582"
          x="82.909309"
-         y="90.030205">35</tspan></text>
+         y="90.030205">25</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke:#000000;stroke-width:0.264583;fill:#000000"
@@ -148,5 +148,43 @@
          style="stroke:#000000;stroke-width:0.264583;fill:#000000"
          x="90.343597"
          y="86.137314">o</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="M 116.05679,53.63008 H 97.402847"
+       id="path919" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="M 96.037061,83.531251 H 114.691"
+       id="path3547" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="M 94.293859,78.776326 V 60.122383"
+       id="path3549" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="M 120.08019,58.756597 V 77.41054"
+       id="path3551" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.75592px;line-height:1.25;font-family:sans-serif;fill:#000000;stroke:none;stroke-width:0.264582"
+       x="86.384056"
+       y="51.663986"
+       id="text3555"><tspan
+         sodipodi:role="line"
+         id="tspan3553"
+         style="fill:#000000;stroke:none;stroke-width:0.264582"
+         x="86.384056"
+         y="51.663986">75 kPa</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.75592px;line-height:1.25;font-family:sans-serif;fill:#000000;stroke:none;stroke-width:0.264582"
+       x="121.31448"
+       y="77.594246"
+       id="text4959"><tspan
+         sodipodi:role="line"
+         id="tspan4957"
+         style="fill:#000000;stroke:none;stroke-width:0.264582"
+         x="121.31448"
+         y="77.594246">75 kPa</tspan></text>
   </g>
 </svg>

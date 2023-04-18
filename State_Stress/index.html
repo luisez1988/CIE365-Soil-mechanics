@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Lecture</title>
-
+	
+		<title>CIE-365: Stress state</title>
+	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
@@ -14,98 +14,123 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
 	</head>
-  <body>
-
-    <div class="reveal">
-
-      <div class="slides">
-				<style>
-				.container{
-						display: flex;
-				}
-				.col{
-						flex: 1;
-				}
-				</style>
-
-				<div class='footer'>
-					CIE-365
-					Spring 2022
-				</div>
-
-				<style>
-				.reveal .slides section .fragment.fade-down {
-						opacity: 1;
-						visibility: visible;
-				}
-				.reveal .slides section .fragment.fade-down.visible,
-				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 1;
-						margin-top:0px;
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
 					}
-				.reveal .slides section .fragment.fade-down,
-				.reveal .slides section .fragment.current-fragment {
-						color: #fff;
-						margin-top:0px;
-				}
-
-
-			</style>
-				<!-- <section> -->
-        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 7: Shear strength of soils (part 1)">
-						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Spring 2022</p>
-						<p style="color:#faffff; font-size:35px">April 4, 2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					.col{
+							flex: 1;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-365
+						Spring 2023
 					</div>
-        </section>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Course contents and schedule</h1>
-					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
-				</section>
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/1QiJxAbt0V7JfhsP3nG37nFdy0ccxnKJ-/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 6: State of stress">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Spring 2023</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We learned about Terzaghi's consolidation theory.</li>
-							<li class="fragment"> We learned how to calculate primary consolidation settlements vs. time. </li>
-							<li class="fragment"> We learned how to calculate the coefficient of consolidation.</li>
-							<li class="fragment"> We learned about the importance of the drainage boundary conditions. </li>
-							<li class="fragment">  We learned about some miigation techniques used in practice.</li>
-							<li class="fragment"> Today we will discuss about the state of stress in soils. </li>
+							<li class="fragment"> We learned how to estimate the end of primary consolidation.</li>
+							<li class="fragment"> We learned how to calculate the coefficient of consolidation of soils. </li>
+							<li class="fragment"> We learned how to calculate time-dependent settlements.</li>
 						</ul>
 				</section>
 
-				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Homework assignment 5</h1>
-						<div class="container">
-							<div class="col">
-								<ul>
-									<li>Due on 04/04/2022.</li>
-									<li>35 points total.</li>
-									<li>Start ASAP.</li>
-								</ul>
-							</div>
-							<div class="col">
-				         <iframe src="FiguresGeneral/HMA5.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
-							</div>
-						</div>
-				</section> -->
-
-
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
-					<ul>
-						<li>Stress tensor.</li>
-						<li>State of stress.</li>
-						<li>2D state of stress.</li>
-						<li>Geometric interpretation (Mohr's circle)</li>
-						<li>Stress paths: triaxial and simple shear test.</li>
-					</ul>
+
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle">
+							<li class="l1">Stress tensor.</li>
+							<li class="l1">State of stress.</li>
+							<li class="l1">2D state of stress.</li>
+							<li class="l1">Geometric interpretation (Mohr's circle)</li>							
+						</ul>
+					</div>
+					<div class='col'>
+						<div class='container'>
+							<div class='col'>
+								<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+									<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
+									<ul>
+										<li>[O4]: Develop an understanding of stress state and shear strength of soils and its role in the overall stability of
+											earthen systems.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col'>
+							<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+								<p style="margin-top: -20px;">After this lecture we will able to:</p>
+								<ul style="margin-top: -15px;">
+									<li>To calculate stresses acting at any angle.</li>					
+									<li>Calculate the magnitude and orientation of principal stresses.</li>
+									<li>Determine the location of the pole.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+
 
 					<!-- <p>More in chapter 9 of Holtz et al. (2013)</p> -->
 
@@ -121,7 +146,7 @@
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Lateral stress</h1>
 		<div class="container">
 			<div class="col">
@@ -143,11 +168,14 @@
               </ul>
 			</div>
 		</div>
-</section>
+</section> -->
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>State of stress</h1>
- <p>Geotechnical engineers often require to analyse stresses in different angles. E.g: to calculate the bearing capacity of a foundation.</p>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>Geotechnical engineers often require to analyses stresses in different angles. E.g: to calculate the bearing capacity of a foundation.</p>
+</div>
+
  <figure>
    <img src="FiguresGeneral/example_foundation.svg" style="width:100%" data-preload/>
    <footer style="margin-top:-60px;"><small></small></footer>
@@ -167,7 +195,7 @@
 
 	<div class="container">
 		<div class="col">
-	       <p>Plane strain</p>
+	       <p> <span class='atb'>plane strain</span></p>
 				 <figure style="margin-top:-30px;">
 				   <img src="https://i0.wp.com/theconstructor.org/wp-content/uploads/2018/09/Types-of-retaining-walls.jpg?fit=558%2C380&ssl=1" style="width:100%" data-preload/>
 				   <footer style="margin-top:-60px;"><small></small></footer>
@@ -179,7 +207,7 @@
 					 \end{bmatrix}\)</p>
 		</div>
 		<div class="col">
-	       <p>Plane stress</p>
+	       <p><span class='atb'>Plane stress</span></p>
 				 <figure style="margin-top:-30px;">
 				   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJFqvw3cWRomEqQ_-Uzbb-UipkRWVlrxC5w&usqp=CAU" style="width:80%" data-preload/>
 				   <footer style="margin-top:-60px;"><small></small></footer>
@@ -191,7 +219,7 @@
 					 \end{bmatrix}\)</p>
 		</div>
 		<div class="col">
-				 <p>Axisymmetric</p>
+				 <p> <span class='atb'>Axisymmetric</span> </p>
 				 <figure style="margin-top:-30px;">
 				   <img src="https://communities.bentley.com/cfs-file/__key/communityserver-wikis-components-files/00-00-00-05-58/2d2011_2D00_tutorial_2D00_chapter02_2D00_geometry.png" style="width:100%" data-preload/>
 				   <footer style="margin-top:-60px;"><small></small></footer>
@@ -208,27 +236,75 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>State of stress in 2D</h1>
- <div class="container">
- 	<div class="col">
-      <figure style="margin-top:0px;">
+<div class='container'>
+<div class='col'>
+	<figure style="margin-top:0px;">
         <img src="FiguresGeneral/2D_angle.svg" style="width:100%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
- 	</div>
- 	<div class="col">
-  <ul style="margin-top:0px;font-size:35px">
-		<li class="fragment"> Normal stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\sigma_\alpha\) </li>
-  	<li class="fragment"> \(\sigma_\alpha = \cfrac{\sigma_y+ \sigma_x}{2}+ \cfrac{\sigma_y-\sigma_x}{2} \cos{2 \alpha} + \tau_{xy} \sin 2\alpha\) </li>
-		<li class="fragment"> Shear stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\tau_\alpha\) </li>
-		<li class="fragment"> \(\tau_\alpha= \cfrac{\sigma_y -\sigma_x}{2} \sin 2 \alpha- \tau_{xy} \cos 2\alpha\) </li>
-  </ul>
- 	</div>
- </div>
+</div>
+<div class='col'>
+	<div class='defBox' name='Sign convention' style='margin-top: 0px;margin-left: 0px;'>
+		<ul>
+			<li><strong style='color:#7abbe6'>Compressive stresses</strong> are positive. </li>
+			<li>Angles are positive <strong style='color:#7abbe6'>counterclockwise from the \(x\) axis</strong>.</li>
+			<li>Shear stresses that produce a <strong style='color:#7abbe6'>counterclockwise rotation</strong> are positive.</li>
+		  </ul>
+	</div>
+</div>
+</div>
+</section>
+
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>State of stress in 2D</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Using equilibrium of forces the following equations are obtained.
+</div>
+
+<p>The <strong style='color:#7abbe6'>normal stress</strong> acting at angle \(\alpha\) is:</p>
+<div class='equationBox'>
+	\(\sigma_\alpha = \cfrac{\sigma_y+ \sigma_x}{2}+ \cfrac{\sigma_y-\sigma_x}{2} \cos{2 \alpha} + \tau_{xy} \sin 2\alpha\)
+</div>
+
+<p>Shear stress <strong style="color:#7abbe6">acting at angle \(\alpha\)</strong> is \(\tau_\alpha\)</p>
+
+<div class='equationBox' style="margin-top: 30px;">
+	\(\tau_\alpha= \cfrac{\sigma_y -\sigma_x}{2} \sin 2 \alpha- \tau_{xy} \cos 2\alpha\)
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 6.1</h1>
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the element in the figure below, find the stresses acting at 35 degrees from the horizontal. Plot the stresses at angles from 0 to 360 degrees. 
+</div>
+
+<div class="container">
+	<div class="col">
+			<figure>
+			  <img src="FiguresGeneral/example71.svg" style="width:80%" data-preload/>
+			  <footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+	</div>
+	<div class="col">
+
+	</div>
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
+
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1 style="margin-top:0px;font-size:55px">Principal stresses and directions</h1>
-<p style="margin-top:-25px;">There <strong style="color:#7abbe6">always exists</strong> an angle \(\alpha\) that satisfies \(\tau=0\). Such that:
+<div class='defBox' name='Principal stresses' style='margin-top: -15px;margin-left: 0px;'>
+These are the stresses acting with zero shear stresses in the element faces \(\tau_{xy}=\tau_{xz}=\tau_{yz}=0\)
+</div>
+
 $$ \boldsymbol{\sigma}=
 \begin{bmatrix}
 \sigma_1& 0& 0\\
@@ -237,10 +313,28 @@ $$ \boldsymbol{\sigma}=
 \end{bmatrix}
 $$
 <ul style="margin-top:-25px;">
-	<li class="fragment"> These stresses are the so-called <strong style="color:#7abbe6">principal stresses</strong>. We named them so that \(\sigma_1 \leq \sigma_2 \leq \sigma_3\). </li>
+	<li class="fragment"> By convention we name them so that \(\sigma_1 \geq \sigma_2 \geq \sigma_3\). </li>
 	<li class="fragment"> \(\sigma_1\) is the <strong style="color:#7abbe6">major pincipal stress</strong> and \(\sigma_3\) is the <strong style="color:#7abbe6">minor principal stress</strong> </li>
-		<li class="fragment">  In plane strain conditions, the stresses acting on the plane of interest are \(\sigma_1\) and \(\sigma_3\). \(\sigma_2\) acts on the direction perpendicular to the plane.</li>
+		<li class="fragment"> \(\sigma_2\) is the middle stress. In plane strain and stress conditions acts on the direction perpendicular to the plane.</li>
 </ul>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Example 6.2</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For the element in the figure below find the principal stresses and their orientation using the analytical solutions.
+</div>
+<div class="container">
+	<div class="col">
+			<figure>
+			  <img src="FiguresGeneral/example62.svg" style="width:80%" data-preload/>
+			  <footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+	</div>
+	<div class="col">
+
+	</div>
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -403,138 +497,143 @@ $$
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
+   var today = new Date();
+   today.setTime(today.getTime());
 document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
 </script>
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
-	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
-	<script type="text/javascript">
-				 var months = ['January','February','March','April','May','June','July',
-	'August','September','October','November','December'];
-				var today = new Date();
-				today.setTime(today.getTime());
-		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/search/search.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script src="plugin/fullscreen/plugin.js"></script>
-	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-	<script src="plugin/chalkboard/plugin.js"></script>
-	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-	<script src="plugin/audio-slideshow/recorder.js"></script> -->
-	<script src="plugin/menu/menu.js"></script>
-	<script src="plugin/customcontrols/plugin.js"></script>
-	<script>
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
 
-		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-											pdfSeparateFragments: false});
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-			controls: true,
-			progress: true,
-			center: false,
-			hash: true,
-			transition: 'none',
-			slideNumber: 'c/t',
-			autoPlayMedia: true,
-			width: 1280,
-			height: 720,
-			math: {
-				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-				config: 'TeX-AMS_HTML-full',
-				tex2jax: {
-					inlineMath: [['\\(','\\)']],
-					displayMath: [['\\[','\\]']],
-					balanceBraces: true,
-					processEscapes: false,
-					processRefs: true,
-					processEnvironments: true,
-					preview: 'TeX',
-					skipTags: ['script','noscript','style','textarea','pre','code'],
-					ignoreClass: 'tex2jax_ignore',
-					processClass: 'tex2jax_process'
-				},
-			},
 
-			spotlight: {
 
-					// size of the spotlight
-					size: 100,
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
 
-					// true: Locks the mouse pointer inside the presentation
-					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-					// displayed regardless of the configured values
-					lockPointerInsideCanvas: false,
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
 
-					// toggle spotlight by holding down the mouse key
-					toggleSpotlightOnMouseDown: false,
+   spotlight: {
 
-					// the keyCode pressed and held to turn on spotlight, disabled when set to false
-					// Problems with this config? Maybe your touchpad is disabled on keypress?
-					spotlightOnKeyPressAndHold: true,
+		   // size of the spotlight
+		   size: 100,
 
-					// choose the cursor when spotlight is on. Maybe "crosshair"?
-					spotlightCursor: 'default',
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
 
-					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-					presentingCursor: 'default',
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
 
-					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-					initialPresentationMode: true,
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
 
-					// true: disable selecting in presentation mode
-					disablingUserSelect: false,
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
 
-					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-					fadeInAndOut: 100,
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
 
-					// enable pointer mode
-					useAsPointer: false,
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
 
-					// pointer color (If pointer mode enabled)
-					pointerColor: 'red'
-			},
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
 
-			keyboard: {
-					// alternative to toggleSpotlightOnMouseDown:
-					// toggle spotlight by pressing key 'c'
-					32: function() { RevealSpotlight.toggleSpotlight() },
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
 
-					// enter/leave presentation mode by pressing key 'p'
-					80: function() {
-						RevealSpotlight.togglePresentationMode();
-					},
-			},
+		   // enable pointer mode
+		   useAsPointer: false,
 
-			// Push each slide change to the browser history
-			history: true,
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
 
-			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-				themes: false,
-				transitions: false,
-				markers: true,
-				hideMissingTitles: true,
-				custom: [
-									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-							]
-			},
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
 //
 // 			audio: {
 // 					prefix: 'chalkboard/',
@@ -546,59 +645,59 @@ document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + 
 // 					defaultText: true,
 // 					playerOpacity: 0.2,
 // 				},
-			// ...
-			chalkboard: {
-							boardmarkerWidth: 3,
-							chalkWidth: 5,
-							chalkEffect: 0.05,
-							src: "chalkboard.json",
-							storage: "chalkboard-demo",
-							readOnly: undefined,
-							transition: 800,
-							theme: "chalkboard",
-							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-							eraser: { src: path + 'img/sponge.png', radius: 20},
-							boardmarkers : [
-											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-							],
-							chalks: [
-											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-							]
-					},
-					customcontrols: {
-						controls: [
-							{ icon: '<i class="fa fa-pen-square"></i>',
-								title: 'Toggle chalkboard (B)',
-								action: 'RevealChalkboard.toggleChalkboard();'
-							},
-							{ icon: '<i class="fa fa-pen"></i>',
-								title: 'Toggle notes canvas (C)',
-								action: 'RevealChalkboard.toggleNotesCanvas();'
-							}
-						]
-					},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
 
-				// ...
-			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
-								],
-									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-				});
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
 
-	</script>
+</script>
 
 </html>
