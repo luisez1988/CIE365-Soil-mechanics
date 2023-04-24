@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Lecture</title>
-
+	
+		<title>CIE-365: Shear strength</title>
+	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
@@ -14,106 +14,125 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
 	</head>
-  <body>
-
-    <div class="reveal">
-
-      <div class="slides">
-				<style>
-				.container{
-						display: flex;
-				}
-				.col{
-						flex: 1;
-				}
-				</style>
-
-				<div class='footer'>
-					CIE-365
-					Spring 2022
-				</div>
-
-				<style>
-				.reveal .slides section .fragment.fade-down {
-						opacity: 1;
-						visibility: visible;
-				}
-				.reveal .slides section .fragment.fade-down.visible,
-				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 1;
-						margin-top:0px;
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
 					}
-				.reveal .slides section .fragment.fade-down,
-				.reveal .slides section .fragment.current-fragment {
-						color: #fff;
-						margin-top:0px;
-				}
-
-
-			</style>
-				<!-- <section> -->
-        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:300px;margin-left:600px" class="title_slide" name="Module 7: Shear strength of soils (part 2)">
-						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Spring 2022</p>
-						<p style="color:#faffff; font-size:35px">April 15, 2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					.col{
+							flex: 1;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-365
+						Spring 2023
 					</div>
-        </section>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
-
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Course contents and schedule</h1>
-					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
-				</section>
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/1Twc4k6Ib4ZHL0N4yaiSCb8HqRHacrRsH/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 6: Shear strength">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Spring 2023</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We learned about the stress tensor and the state of stress in soils.</li>
-							<li class="fragment"> We learned that for 2D stresses, the state of stress is represented using Mohr's circles. </li>
-							<li class="fragment"> We learned how to calculate stresses acting at different angles using analytical and graphical procedures.</li>
-							<li class="fragment"> We learned to use the pole method to solve problems with Mohr's circle. </li>
-							<li class="fragment"> We learned how to calculate horizontal in-situ stresses and about the \(K_0\) line.</li>
-							<li class="fragment"> Today we will discuss about the shear strength of soils. </li>
+							<li class="fragment"> We learned how to calculate stresses acting at any direction.</li>
+							<li class="fragment"> We learned how to calculate the magnitude and direction of principal stresses, the mean stress, and the deviator stress. </li>
+							<li class="fragment"> We learned how to locate the pole and solve problems graphically.</li>
 						</ul>
 				</section>
 
-				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Homework assignment 5</h1>
-						<div class="container">
-							<div class="col">
-								<ul>
-									<li>Due on 04/04/2022.</li>
-									<li>35 points total.</li>
-									<li>Start ASAP.</li>
-								</ul>
-							</div>
-							<div class="col">
-				         <iframe src="FiguresGeneral/HMA5.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
-							</div>
-						</div>
-				</section> -->
-
-
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Contents</h1>
-					<ul>
-						<li>The block analogy</li>
-						<li>Mohr-Coulomb model</li>
-						<li>Friction of soils</li>
-						<li>Dilation of soils</li>
-						<li>Triaxial, direct, and simple shear.</li>
-						<li>Undrained and drained behavior</li>
-						<li>Shear strength of sands</li>
-						<li>Shear strength of clay</li>
-						<li>\(K_0\) as a function of friction</li>
-					</ul>
 
-					<!-- <p>More in chapter 9 of Holtz et al. (2013)</p> -->
-
-        </section>
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle">
+							<li class="l1">Mohr-Coulomb model</li>
+							<li class="l1">Friction and dilation</li>
+							<li class="l1">Direct and simple shear test</li>
+							<li class="l1">Triaxial test</li>
+							<li class="l1">Strength of sands </li>
+							<li class="l1">Strength os clay </li>							
+						</ul>
+					</div>
+					<div class='col'>
+						<div class='container'>
+							<div class='col'>
+								<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+									<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
+									<ul>
+										<li>[O4]: Develop an understanding of stress state and shear strength of soils and its role in the overall stability of
+											earthen systems.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col'>
+							<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+								<p style="margin-top: -20px;">After this lecture we will able to:</p>
+								<ul style="margin-top: -15px;">
+									<li>To calculate drained strength properties for sand.</li>					
+									<li>To calculate drained and undrained strength properties for clay.</li>
+									
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+				</section>
 
 <!--
  #####  ####### #     # ####### ####### #     # #######  #####
@@ -126,11 +145,14 @@
 -->
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>The block analogy</h1>
+	<h1>Example 6.6</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p> For the figure below find the ultimate shear strength below the block.</p>
+	</div>
 <div class="container">
 	<div class="col">
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Free_Body_Diagram_%28Angle_of_Repose%29.png/220px-Free_Body_Diagram_%28Angle_of_Repose%29.png" style="width:100%" data-preload/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Free_Body_Diagram_%28Angle_of_Repose%29.png/220px-Free_Body_Diagram_%28Angle_of_Repose%29.png" style="width:80%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
 	</div>
@@ -142,8 +164,14 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>The Mohr-Coulomb model</h1>
-  <p>It is a simple linearization of the ultimate strength of soils or a <strong style="color:#7abbe6">limiting state when soils start to accumulate plastic deformation</strong></p>
-	<p>$$\tau_f=S=c+\sigma \tan \phi$$</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>It is a linearization of the ultimate strength of soils or a <strong style="color:#7abbe6">limiting state when soils start to accumulate plastic deformation</strong></p>
+	</div>
+	
+	<div class='equationBox'>
+	$$ \tau_f=S=c+\sigma \tan \phi $$
+	</div>
+	
 	<ul>
 		<li>\(\tau_f=S=\) the shear strength of the soil</li>
 		<li>\(c=\) cohesion</li>
@@ -153,7 +181,10 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Friction of soils</h1>
-<p>Friction is a fundamental phenomena in nature, that its basic level depends on the materials in contact. In soils it is influenced by different factors.</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Friction is a fundamental phenomena in nature, that its basic level depends on the materials in contact. In soils it is influenced by different factors.</p>
+	</div>
+
 <ul>
 	<li>Mineralogy</li>
 	<li>Particle size</li>
@@ -162,16 +193,19 @@
 	<li>Stress path</li>
 	<li>Soil density</li>
 	<li>OCR</li>
-	<li>Anysotropy</li>
+	<li>Anisotropy</li>
 </ul>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Dilation of soils</h1>
-<p>Is the capacity of soils to expand its volume when sheared</p>
+<div class='defBox' name='Dilation' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:green'>\(D\):</strong> Is the capacity of soils to expand its volume when sheared.
+<p><div class='equationBox'>
+	$$ D=\cfrac{d \varepsilon_v} {d \varepsilon_q} $$
+	</div></p>
 
-<p>$$D=\cfrac{d \varepsilon_v} {d \varepsilon_q}$$</p>
-
+</div>
 <ul>
 	<li>\(D=\) dilation</li>
 	<li>\(\varepsilon_q =\) deviatoric strain</li>
@@ -195,10 +229,22 @@
 	</figure>
 </section> -->
 
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>In-situ stress paths</h1>
+ <figure>
+   <img src="https://www.vjtech.co.uk/Portals/0/Blog/Jan%202021/Fig3.JPG" style="width:100%" data-preload/>
+   <footer style="margin-top:-60px;"><small></small></footer>
+ </figure>
+</section>
+
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Triaxial test</h1>
- <p>In the triaxial test a cell pressure \(\sigma_3\) is applied and the axial strain isincreases until the sample <strong style="color:#7abbe6">"fails"</strong>. </p>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>In the triaxial test a cell pressure \(\sigma_3\) is applied and the axial strain increases until the sample <strong style="color:#7abbe6">"fails"</strong>. </p>
+</div>
+
+ 
  <div class="container">
  	<div class="col">
       <figure>
@@ -220,7 +266,10 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Direct shear test</h1>
- <p>Shear stress is increased until sample fails in a predefined failure plane.</p>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>Shear stress is increased until sample fails in a predefined failure plane.</p>
+</div>
+
 <div class="container">
 	<div class="col">
       <figure>
@@ -241,7 +290,10 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Simple shear test</h1>
-	<p>Closest to pure shear test. Sample is distorted from ends.</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Closest to pure shear test. Sample is distorted from ends.</p>
+	</div>
+	
 	<div class="container">
 		<div class="col">
 	       <figure>
@@ -258,65 +310,41 @@
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>In-situ stress paths</h1>
- <figure>
-   <img src="https://www.vjtech.co.uk/Portals/0/Blog/Jan%202021/Fig3.JPG" style="width:100%" data-preload/>
-   <footer style="margin-top:-60px;"><small></small></footer>
- </figure>
-</section>
+
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Shear strength of sands</h1>
 
-	<p>Sand is inhert-uncharged particles that are <strong style="color:#7abbe6">permeable</strong>.</p>
+	<p>Sand is made of inert uncharged particles that are <strong style="color:#7abbe6">permeable</strong>.</p>
 	<ul style="margin-top:-15px;font-size:34px">
 	 <li>Under normal loading conditions, sand behaves in a <strong style="color:#7abbe6">drained</strong> manner.</li>
 	 <li>Shear strength is a function of confinement pressure and relative density.</li>
-	 <li>In drained conditions, dilatancy causes a peak.</li>
+	 <li>In drained conditions, dilation causes a peak.</li>
 	 <li>At large deformations, samples with identical cell pressure reach the same ultimate strength. This is known as <strong style="color:#7abbe6">critical state</strong>.</li>
-	 <li>For drained tests: Dense samples show shear banding and loose samples cause buldging.</li>
+	 <li>For drained tests: Dense samples show shear banding and loose samples cause bulging.</li>
 	 <li>For undrained tests: Dense samples bulge and loose samples have shear banding.</li>
-	 <li>If loads are applied rapiddly on loose sand (e.g., during earthquakes) the sand liquefies.</li>
+	 <li>If loads are applied rapidly on loose sand (e.g., during earthquakes) the sand liquefies.</li>
 	</ul>
 
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<div class="container">
-		<div class="col">
-	      <figure>
-	        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0020768302001774-gr1.jpg" style="width:100%" data-preload/>
-	        <footer style="margin-top:-60px;"><small></small></footer>
-	      </figure>
-		</div>
-		<div class="col">
-				<figure>
-				  <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs11440-022-01449-0/MediaObjects/11440_2022_1449_Fig6_HTML.png" style="width:100%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
+	<h1>Strength parameters of sand</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;text-align: left;'>
+	Sand is a <span class='atb'>permeable</span> material. When loaded, water can drain rapidly and therefore behave in a <span class='atb'>drained</span> manner. Thus, we often use <span class='atb'>effective stress</span> parameters.
+
+	<div class='equationBox'>
+		\(\tau_f=\sigma'_{nf} \tan \phi'\)
 		</div>
 	</div>
-</section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<section data-fullscreen>
-		<iframe class="stretch" src="https://www.youtube.com/embed/7nADYVyyC84?autoplay=0" data-preload></iframe>
-	</section>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Strength parameters of sand</h1>
+	
 	<div class="container">
 		<div class="col">
-			<p>When using the Mohr-Coulomb model we need to define either <strong style="color:#7abbe6">drained</strong> or <strong style="color:#7abbe6">undrained</strong> parameters. For sand we typically use drained parameters. What are these parameters for sand?</p>
-			<p>Recall:
-			$$\tau_f=c'+\sigma'_{nf} \tan \phi'$$
-			</p>
+			<p><strong style="color:#7abbe6">Sands have \(c'=0\) unless there is cementation</strong>. However, different friction angles exist depending on deformation level or definition of <strong style="color:#7abbe6">failure</strong>.
 		</div>
 		<div class="col">
-			<p><strong style="color:#7abbe6">Sands have \(c'=0\) unless there is cementation</strong>. However, different friction angles exist depending on deformation level or definition of <strong style="color:#7abbe6">failure</strong>.
+			
 		 <ul>
 			<li>\(\phi'_p=\) peak friction angle</li>
 			<li>\(\phi'_s=\) secant friction angle</li>
@@ -331,21 +359,39 @@
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>\(K_0\) formula</h1>
-
-	<p>Anlaytical and emphirical expressions have been developed for \(K_0\) as a function of the friction angle. These equations are often used to determine \(K_0\) for sand</p>
-
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;text-align: left;'>
+	<p>Analytical and empirical expressions have been developed for \(K_0\) as a function of the friction angle. These equations are often used to determine \(K_0\) for sand</p>
+<div class='equationBox'>
 	<p>\(K_0^{nc}=1-\sin \phi'_c\) \(\longrightarrow\) For NC soil (Jacky 1944)</p>
 	<p>\(K_0^{oc}=K_0^{nc} OCR^{0.5}\) \(\longrightarrow\) For OC soil (Meyerhof 1976)</p>
+</div>
+</div>
 
-	<figure>
-	  <img src="FiguresGeneral/phi_values.PNG" style="width:80%" data-preload/>
-	  <footer style="margin-top:-60px;"><small>Budhu 2015</small></footer>
-	</figure>
+
+
+
+
 
 </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Typical values of sand parameters</h1>
+<figure>
+	<img src="FiguresGeneral/phi_values.PNG" style="width:100%" data-preload/>
+	<footer style="margin-top:-60px;"><small>Budhu 2015</small></footer>
+  </figure>
+  <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+  <strong style='color:#7abbe6'>Note:</strong> \(N\), and \(N_{60}\) are the number of blows and corrected blows per meter of penetration obtained from the <strong style='color:#7abbe6'>Standard penetration test</strong>. You can learn more about this in <strong style='color:#7abbe6'>CIE-460</strong>.
+  </div>
+</section>
+
+
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Example 7.5</h1>
-    <p>The data in the figure below shows a set of triaxial tests conducted on sand (Riman et al. 2014). Find the peak friction angle, secant friction angles, and friction angle when \(\varepsilon_a=10\%\)</p>
+		<h1>Example 6.7</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<p>The data in the figure below shows a set of triaxial tests conducted on sand (Riman et al. 2014). Find the peak friction angle, secant friction angles, and friction angle when \(\varepsilon_a=10\%\)</p>
+		</div>
+    
 		<div class="container">
 			<div class="col">
 		            <figure style="margin-top:-35px;">
@@ -361,13 +407,15 @@
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Strength of clay</h1>
-		<p>The low permeability and stress-history of clay hughly influence its strength parameters.</p>
+		<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+			<p>The low permeability and stress-history of clay highly influence its strength parameters.</p>
+		</div>		
 
 		<ul style="margin-top:-15px; font-size:34px">
 			<li>Under normal loading conditions, clay can take years to dissipate pore pressures. Then it acts as it was <strong style="color:#7abbe6">undrained</strong></li>
-			<li>In long term, those exces pore pressures will dissipate and then it can be seen as a <strong style="color:#7abbe6">frained</strong> case.</li>
+			<li>In long term, those excess pore pressures will dissipate and then it can be seen as a <strong style="color:#7abbe6">drained</strong> case.</li>
 			<li>The behavior of clays is controlled by \(OCR\).</li>
-			<li>Clay with \(OCR>1\) have tendecies to dilate</li>
+			<li>Clay with \(OCR>1\) have tendency to dilate</li>
 			<li>Normally consolidated clays contract</li>
 			<li>Clay also has a critical state.</li>
 			<li>Mineralogy changes can affect the strength of clay.</li>
@@ -377,18 +425,27 @@
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Undrained strength of clay</h1>
-	<p>At <strong style="color:#7abbe6">short term</strong> conditions, the boundary conditions of the clay are similar to those of the UU test. Because of that we use the <strong style="color:#7abbe6">undrained shear strength</strong> \(S_u=c_u\).</p>
-	<p>We use <strong style="color:#7abbe6">total stresses</strong> with <strong style="color:#7abbe6">\(S_u\)</strong>. This is a "trick" we use because it is difficult to predict excess pore pressure during shear.</p>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;text-align: left;'>
+	Because clay is almost <span class='atb'>impermeable</span>, it builds <strong style='color:#7abbe6'>excess pore pressure</strong> <strong style='color:#7abbe6'>right after being loaded</strong>. Therefore, in the <strong style='color:#7abbe6'>short-term</strong> clay behaves <strong style='color:#7abbe6'>undrained</strong>. <strong style='color:#7abbe6'>Total stress and undrained</strong> parameters are used to represent this behavior.
+
+	<div class='equationBox'>
+	\(S_u=c_u\)
+	</div>
+
+	</div>
+
 	<figure style="margin-top:-30px;">
-	  <img src="FiguresGeneral/SuValues.PNG" style="width:60%" data-preload/>
+	  <img src="FiguresGeneral/SuValues.PNG" style="width:50%" data-preload/>
 	  <footer style="margin-top:-30px;"><small>Budhu (2013)</small></footer>
 	</figure>
 	</section>
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Example 7.6</h1>
-
-	<p>Find the undrained shear strength of the clay using the results of the UU triaxial tests shown below.</p>
+		<h1>Example 6.7</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<p>Find the undrained shear strength of the clay using the results of the UU triaxial tests shown below.</p>
+		</div>
+	
 <div class="container">
 	<div class="col">
                 <figure>
@@ -404,7 +461,10 @@
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Drained strength of clay</h1>
-	<p>In some cases we want to perform <strong style="color:#7abbe6">drained</strong> analysis of clay. In those situations we nee to know the parameters of clay.</p>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<p>In some cases we want to perform <strong style="color:#7abbe6">drained</strong> analysis of clay. In those situations we nee to know the parameters of clay.</p>
+		</div>
+	
 	<div class="container">
 		<div class="col">
 	     <ul>
@@ -415,7 +475,7 @@
 		</div>
 		<div class="col">
      <ul>
-     	<li>For overconsolidated clay, cohesion is observed. This cohesion is not necesarly due to cementation but due to suction during dilation.</li>
+     	<li>For overconsolidated clay, cohesion is observed. This cohesion is not necessarily due to cementation but due to suction during dilation.</li>
 			<li>As \(OCR\) increases, \(c'\) increases</li>
 			<li>As \(OCR\) increases, \(\phi'\) decreases</li>
      </ul>
@@ -423,7 +483,7 @@
 	</div>
 	</section>
 
-	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Relationship between \(OCR\) and \(S_u\)</h1>
 	 <p>Te undrained shear strength is highly related to the sample depth and OCR. For normally consolidated clay the folowing relationship is expected:</p>
 	 <p>$$\cfrac{S_u}{\sigma'_{v0}}=USR$$</p>
@@ -457,11 +517,14 @@
 
 		</div>
 	 </div>
-	</section>
+	</section> -->
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Example 7.7</h1>
-	The soil in the failure surface shown in figure has the normal and shear stresses as depicted in the figure. The soil failed after 20 yrs of construction. The soil has parameters \(\phi'=15^o\) and \(c'=75\) kPa. Find the ratio between the shear strength of the soil aand the acting shear stress.
+		<h1>Example 6.8</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			The soil in the failure surface shown in figure has the normal and shear stresses as depicted in the figure. The soil failed after 20 yrs of construction. The soil has parameters \(\phi'=15^o\) and \(c'=75\) kPa. Find the ratio between the shear strength of the soil and the acting shear stress.
+		</div>
+	
 	</section>
 
 
@@ -469,7 +532,7 @@
 		<h1>What's next?</h1>
 	<p>Geotechnical engineering is a fascinating discipline of Civil Engineering. It is a challenging and rewarding profession.</p>
 	<p>You have completed your first course in geotechnical engineering. <strong style="color:#7abbe6">CONGRATULATIONS!!!</strong></p>
-	<p>But how can I know more about GE?</p>
+	<p>how can I know more about GE?</p>
 	<div class="container">
 		<div class="col">
 			<ol>
@@ -485,7 +548,7 @@
 				<li>Advanced soil mechanics</li>
 				<li>Experimental soil mechanics</li>
 				<li>Geosytems modeling</li>
-				<li>Sediment transport and erosion</li>
+				<li>Soil erosion and sediment transport</li>
 			</ol>
 		</div>
 	</div>
@@ -528,138 +591,143 @@
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
+   var today = new Date();
+   today.setTime(today.getTime());
 document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
 </script>
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
-	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
-	<script type="text/javascript">
-				 var months = ['January','February','March','April','May','June','July',
-	'August','September','October','November','December'];
-				var today = new Date();
-				today.setTime(today.getTime());
-		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/search/search.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script src="plugin/fullscreen/plugin.js"></script>
-	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-	<script src="plugin/chalkboard/plugin.js"></script>
-	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-	<script src="plugin/audio-slideshow/recorder.js"></script> -->
-	<script src="plugin/menu/menu.js"></script>
-	<script src="plugin/customcontrols/plugin.js"></script>
-	<script>
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
 
-		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-											pdfSeparateFragments: false});
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-			controls: true,
-			progress: true,
-			center: false,
-			hash: true,
-			transition: 'none',
-			slideNumber: 'c/t',
-			autoPlayMedia: true,
-			width: 1280,
-			height: 720,
-			math: {
-				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-				config: 'TeX-AMS_HTML-full',
-				tex2jax: {
-					inlineMath: [['\\(','\\)']],
-					displayMath: [['\\[','\\]']],
-					balanceBraces: true,
-					processEscapes: false,
-					processRefs: true,
-					processEnvironments: true,
-					preview: 'TeX',
-					skipTags: ['script','noscript','style','textarea','pre','code'],
-					ignoreClass: 'tex2jax_ignore',
-					processClass: 'tex2jax_process'
-				},
-			},
 
-			spotlight: {
 
-					// size of the spotlight
-					size: 100,
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
 
-					// true: Locks the mouse pointer inside the presentation
-					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-					// displayed regardless of the configured values
-					lockPointerInsideCanvas: false,
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
 
-					// toggle spotlight by holding down the mouse key
-					toggleSpotlightOnMouseDown: false,
+   spotlight: {
 
-					// the keyCode pressed and held to turn on spotlight, disabled when set to false
-					// Problems with this config? Maybe your touchpad is disabled on keypress?
-					spotlightOnKeyPressAndHold: true,
+		   // size of the spotlight
+		   size: 100,
 
-					// choose the cursor when spotlight is on. Maybe "crosshair"?
-					spotlightCursor: 'default',
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
 
-					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-					presentingCursor: 'default',
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
 
-					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-					initialPresentationMode: true,
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
 
-					// true: disable selecting in presentation mode
-					disablingUserSelect: false,
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
 
-					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-					fadeInAndOut: 100,
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
 
-					// enable pointer mode
-					useAsPointer: false,
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
 
-					// pointer color (If pointer mode enabled)
-					pointerColor: 'red'
-			},
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
 
-			keyboard: {
-					// alternative to toggleSpotlightOnMouseDown:
-					// toggle spotlight by pressing key 'c'
-					32: function() { RevealSpotlight.toggleSpotlight() },
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
 
-					// enter/leave presentation mode by pressing key 'p'
-					80: function() {
-						RevealSpotlight.togglePresentationMode();
-					},
-			},
+		   // enable pointer mode
+		   useAsPointer: false,
 
-			// Push each slide change to the browser history
-			history: true,
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
 
-			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-				themes: false,
-				transitions: false,
-				markers: true,
-				hideMissingTitles: true,
-				custom: [
-									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-							]
-			},
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
 //
 // 			audio: {
 // 					prefix: 'chalkboard/',
@@ -671,59 +739,59 @@ document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + 
 // 					defaultText: true,
 // 					playerOpacity: 0.2,
 // 				},
-			// ...
-			chalkboard: {
-							boardmarkerWidth: 3,
-							chalkWidth: 5,
-							chalkEffect: 0.05,
-							src: "chalkboard.json",
-							storage: "chalkboard-demo",
-							readOnly: undefined,
-							transition: 800,
-							theme: "chalkboard",
-							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-							eraser: { src: path + 'img/sponge.png', radius: 20},
-							boardmarkers : [
-											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-							],
-							chalks: [
-											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-							]
-					},
-					customcontrols: {
-						controls: [
-							{ icon: '<i class="fa fa-pen-square"></i>',
-								title: 'Toggle chalkboard (B)',
-								action: 'RevealChalkboard.toggleChalkboard();'
-							},
-							{ icon: '<i class="fa fa-pen"></i>',
-								title: 'Toggle notes canvas (C)',
-								action: 'RevealChalkboard.toggleNotesCanvas();'
-							}
-						]
-					},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
 
-				// ...
-			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
-								],
-									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-				});
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
 
-	</script>
+</script>
 
 </html>
