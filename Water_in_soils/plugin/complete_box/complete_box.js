@@ -5,7 +5,7 @@ const boxes = document.getElementsByClassName("atb");
 
 const boxpressed = e => {
     audio_src.play()
-    audio_src.volume=.5
+    audio_src.volume=.25
     caption=e.target.textContent; 
     widthEl=getComputedStyle(e.target).width;
     heightEl=getComputedStyle(e.target).height;
