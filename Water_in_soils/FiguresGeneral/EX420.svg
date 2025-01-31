@@ -38,12 +38,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
+    <path 
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 50.667709,0 0,32.859461"
        id="path1"
        sodipodi:nodetypes="cc" />
-    <g
+    <g class="fragment"
        id="g85"
        style="stroke:#008000">
       <g
@@ -131,7 +131,7 @@
            style="stroke:#008000" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g86">
       <g
          id="g23"
@@ -602,7 +602,7 @@
            id="path61" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g87"
        style="stroke:#008000">
       <g
@@ -802,7 +802,7 @@
            style="stroke:#008000" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g88">
       <g
          id="g76"
@@ -913,7 +913,7 @@
            id="path84" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g241">
       <g
          id="g85-5"
@@ -1036,7 +1036,7 @@
            id="path94" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g242">
       <g
          id="g95"
@@ -1099,7 +1099,7 @@
            id="path99" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g243"
        style="stroke:#000080">
       <g
@@ -1327,7 +1327,7 @@
            style="stroke:#000080" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g244"
        style="stroke:#008000">
       <g
@@ -1471,7 +1471,7 @@
            style="stroke:#008000" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g245"
        style="stroke:#ff0000">
       <g
@@ -1727,7 +1727,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g246">
       <g
          id="g144"
@@ -1862,7 +1862,7 @@
            id="path154" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g247">
       <g
          id="g155"
@@ -1901,7 +1901,7 @@
            id="path157" />
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g158"
        transform="matrix(0.04309313,0,0,0.04309313,76.740905,-17.733859)">
       <path
@@ -1913,7 +1913,7 @@
          d="m -345.602,875.332 2.045,0.259 3.25,-0.204 1.342,-0.584 6.387,-0.485 1.836,-0.771 6.375,-1.362 2.987,0.044"
          id="path158" />
     </g>
-    <g
+    <g class="Animate"
        id="g248"
        style="stroke:#000080">
       <g
@@ -2127,7 +2127,7 @@
            style="stroke:#000080" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g249"
        style="stroke:#008000">
       <g
@@ -2257,7 +2257,7 @@
            style="stroke:#008000" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g183"
        transform="matrix(0.04309313,0,0,0.04309313,76.740905,-17.733859)">
       <path
@@ -2269,7 +2269,7 @@
          d="m 108.832,899.873 -0.622,-0.622"
          id="path183" />
     </g>
-    <g
+    <g class="Animate"
        id="g250"
        style="stroke:#ff0000">
       <g
