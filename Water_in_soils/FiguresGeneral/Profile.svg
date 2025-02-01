@@ -2588,19 +2588,19 @@
       </g>
     </g>
   </g>
-  <path
+  <path class="Animate"
      clip-path="url(#p7db5e51642)"
      d="m 102.24,53.568 102.672,80.64 107.136,80.64 120.528,80.64"
      style="fill:none;stroke:#000000;stroke-width:3.92123;stroke-linecap:round;stroke-dasharray:none"
      id="path85"
      transform="matrix(0.48506366,0,0,0.48506366,44.085266,-19.922535)" />
-  <path
+  <path class="Animate"
      clip-path="url(#p7db5e51642)"
      d="m 102.24,53.568 v 80.64 l 55.71072,80.64 55.71072,80.64"
      style="fill:none;stroke:#0000ff;stroke-width:3.92123;stroke-linecap:round;stroke-dasharray:none"
      id="path86"
      transform="matrix(0.48506366,0,0,0.48506366,44.085266,-19.922535)" />
-  <path
+  <path class="Animate"
      clip-path="url(#p7db5e51642)"
      d="m 102.24,53.568 102.672,80.64 51.42528,80.64 64.81728,80.64"
      style="fill:none;stroke:#ff0000;stroke-width:4.50562;stroke-linecap:round;stroke-dasharray:none"
@@ -2658,31 +2658,17 @@
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 72.024932,6.0613555 h 173.225928"
      id="path92" />
-  <path
+  <path class="Animate"
      style="fill:none;stroke:#808080;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:1.5,0.75;stroke-dashoffset:0"
      d="m 93.678173,45.176889 v 84.098401"
      id="path93" />
-  <path
+  <path class="Animate"
      style="fill:none;stroke:#0000ff;stroke-width:1.6015748;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:6.40629911,1.60157478;stroke-dashoffset:0"
      d="m 93.678173,44.752273 c -10.057959,-10.493024 -15.441574,-23.389997 -16.150846,-38.6909175"
      id="path164"
      sodipodi:nodetypes="cc" />
-  <text
-     xml:space="preserve"
-     style="font-size:9px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
-     x="163.26816"
-     y="18.029612"
-     id="text164"><tspan
-       sodipodi:role="line"
-       id="tspan164"
-       style="stroke-width:0.75"
-       x="163.26816"
-       y="18.029612">Real pore pressure profile</tspan></text>
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
-     d="m 116.09067,14.87443 -37.591192,-4.91e-4"
-     id="path165" />
-  <text
+
+  <text class="fragment"
      xml:space="preserve"
      style="font-size:9px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
      x="205.48041"
@@ -2693,11 +2679,11 @@
        style="stroke-width:0.75"
        x="205.48041"
        y="70.983681">Total stress</tspan></text>
-  <path
+  <path class="fragment"
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
      d="m 185.00014,68.34806 h -10.73495"
      id="path166" />
-  <text
+  <text class="fragment"
      xml:space="preserve"
      style="font-size:9px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:44.3647;display:inline;fill:#0000ff;stroke-width:0.75"
      x="140.23747"
@@ -2712,11 +2698,11 @@
        x="140.23747"
        y="109.24096"
        id="tspan3">pressure</tspan></text>
-  <path
+  <path class="fragment"
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
      d="m 120.70142,64.734656 h -13.51162"
      id="path167" />
-  <text
+  <text class="fragment"
      xml:space="preserve"
      style="font-size:9px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:53.146;display:inline;fill:#ff0000;stroke-width:0.75"
      x="153.6946"
@@ -2731,8 +2717,24 @@
        x="153.6946"
        y="113.34891"
        id="tspan6">stress</tspan></text>
-  <path
+  <path class="fragment"
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
      d="m 166.37263,102.13254 h 16.39217"
      id="path168" />
+
+  <text class="fragment"
+     xml:space="preserve"
+     style="font-size:9px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.75"
+     x="163.26816"
+     y="18.029612"
+     id="text164"><tspan
+       sodipodi:role="line"
+       id="tspan164"
+       style="stroke-width:0.75"
+       x="163.26816"
+       y="18.029612">Real pore pressure profile</tspan></text>
+  <path class="fragment"
+     style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
+     d="m 116.09067,14.87443 -37.591192,-4.91e-4"
+     id="path165" />
 </svg>
