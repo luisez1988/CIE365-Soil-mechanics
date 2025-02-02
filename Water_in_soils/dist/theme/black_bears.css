@@ -770,5 +770,5 @@ object {
 @media print {
   .backgrounds {
     background-color: var(--r-background-color);
-  }
+  };
 }
