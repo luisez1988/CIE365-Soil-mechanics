@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.1474186"
-     inkscape:cx="251.43395"
-     inkscape:cy="251.86971"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="-9"
+     inkscape:cx="251.86972"
+     inkscape:cy="182.148"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -186,7 +186,7 @@
          id="use4937"
          x="0"
          y="0"
-         style="fill:#ffffff" />
+         style="fill:#000000" />
     </g>
     <g
        fill="none"
@@ -205,7 +205,7 @@
          id="use4943"
          x="0"
          y="0"
-         style="fill:#ffffff" />
+         style="fill:#000000" />
     </g>
     <g
        fill="none"
@@ -224,7 +224,7 @@
          id="use4949"
          x="0"
          y="0"
-         style="fill:#ffffff" />
+         style="fill:#000000" />
     </g>
     <g
        fill="none"
@@ -243,7 +243,7 @@
          id="use4955"
          x="0"
          y="0"
-         style="fill:#ffffff" />
+         style="fill:#000000" />
     </g>
     <g
        fill="none"
@@ -262,7 +262,7 @@
          id="use4961"
          x="0"
          y="0"
-         style="fill:#ffffff" />
+         style="fill:#000000" />
     </g>
     <g
        fill="none"
@@ -343,7 +343,8 @@
        stroke-dasharray="6.25, 2.08333"
        fill="none"
        fill-rule="evenodd"
-       id="path4993" />
+       id="path4993"
+       style="fill:#ff0000;stroke:#000000" />
     <path
        d="m 158.11998,210.91376 h 4.23333 v 0.88213 h -4.23333 z m 3.79227,-0.88185 4.40981,1.32292 -4.40981,1.32291 z"
        fill="#0000ff"
@@ -477,7 +478,8 @@
        stroke-miterlimit="10"
        fill="none"
        fill-rule="evenodd"
-       id="path5045" />
+       id="path5045"
+       style="fill:#ff0000;stroke:#000000" />
     <path
        d="M 96.472061,113.98816 H 161.29498"
        stroke="#f5f5f5"
@@ -486,12 +488,13 @@
        stroke-miterlimit="10"
        fill="none"
        fill-rule="evenodd"
-       id="path5047" />
+       id="path5047"
+       style="fill:#ff0000;stroke:#000000" />
     <path
        d="m 149.28951,117.95691 v 94.45625 h -0.33073 v -94.45625 z m -1.48828,0.44106 1.32291,-4.40981 1.32292,4.40981 z m 2.64583,93.57413 -1.32292,4.40981 -1.32291,-4.40981 z"
        fill="#f5f5f5"
        id="path5049"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#ff0000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -499,32 +502,32 @@
        id="text5053"
        x="46.194427"
        y="166.24336"
-       style="stroke-width:0.264583;fill:#ffffff">𝐴<tspan
+       style="stroke-width:0.264583;fill:#000000">𝐴<tspan
    font-size="5.82083px"
    x="51.21048"
    y="167.83087"
    id="tspan5051"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑣</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑣</tspan></text>
     <path
        d="m 69.470502,132.50264 -0.03789,1.32617 0.330594,0.009 0.03789,-1.32617 z m 1.475078,0.48331 -1.196435,-4.44571 -1.448319,4.37015 z m -2.657454,0.36899 1.196436,4.44572 1.448318,-4.37015 z"
        fill="#f5f5f5"
        id="path5055"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#ff0000" />
     <path
        d="m 68.944475,154.19872 -0.04418,1.59054 0.330601,0.009 0.04418,-1.59054 z m 1.475465,0.48212 -1.199962,-4.44476 -1.444853,4.37129 z m -2.664507,0.63548 1.199962,4.44476 1.444852,-4.37129 z"
        fill="#f5f5f5"
        id="path5057"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#ff0000" />
     <path
        d="m 69.209059,175.89455 -0.04418,1.59054 0.330601,0.009 0.04418,-1.59054 z m 1.475465,0.48212 -1.199962,-4.44476 -1.444853,4.37129 z m -2.664507,0.63548 1.199962,4.44476 1.444852,-4.37129 z"
        fill="#f5f5f5"
        id="path5059"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#ff0000" />
     <path
        d="m 69.473642,194.41538 -0.04418,1.59054 0.330601,0.009 0.04418,-1.59054 z m 1.475465,0.48212 -1.199962,-4.44476 -1.444853,4.37129 z m -2.664507,0.63548 1.199962,4.44476 1.444852,-4.37129 z"
        fill="#f5f5f5"
        id="path5061"
-       style="stroke-width:0.264583" />
+       style="stroke-width:0.264583;fill:#ff0000" />
     <text
        font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
        font-weight="400"
@@ -532,27 +535,27 @@
        id="text5071"
        x="137.97935"
        y="165.44962"
-       style="stroke-width:0.264583;fill:#ffffff">𝐴<tspan
+       style="stroke-width:0.264583;fill:#000000">𝐴<tspan
    font-size="5.82083px"
    x="143.27763"
    y="167.03712"
    id="tspan5063"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑇</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑇</tspan><tspan
    font-size="7.9375px"
    x="106.10554"
    y="156.71837"
    id="tspan5065"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑣</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑣</tspan><tspan
    font-size="5.82083px"
    x="109.93988"
    y="158.30588"
    id="tspan5067"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑤</tspan><tspan
+   style="stroke-width:0.0700043;fill:#000000">𝑤</tspan><tspan
    font-size="7.9375px"
    x="167.10152"
    y="162.01004"
    id="tspan5069"
-   style="stroke-width:0.0700043;fill:#ffffff">𝑣</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">𝑣</tspan></text>
     <text
        font-family="Calibri, Calibri_MSFontService, sans-serif"
        font-weight="400"
@@ -560,11 +563,11 @@
        id="text5075"
        x="73.444054"
        y="94.541283"
-       style="stroke-width:0.264583;fill:#ffffff">Water flow <tspan
+       style="stroke-width:0.264583;fill:#000000">Water flow <tspan
    font-size="7.14375px"
    x="69.634048"
    y="103.00795"
    id="tspan5073"
-   style="stroke-width:0.0700043;fill:#ffffff">through voids</tspan></text>
+   style="stroke-width:0.0700043;fill:#000000">through voids</tspan></text>
   </g>
 </svg>
