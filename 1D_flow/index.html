@@ -651,6 +651,13 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 </div>
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4131.svg'></object>
+</div>
+
+</section>
+
 
 
 
@@ -690,7 +697,7 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 </section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Example 4.14</h1>
+    <h1>Case I: Flow perpendicular to layers</h1>
 	<div class='container'>
 	<div class='col' style="width: 50%;">
 		<figure>
@@ -700,37 +707,43 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 	</div>
 	<div class='col' style="width: 50%;">
 		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-			Derive an equation to calculate the equivalent permeability for flow perpendicular to the layers.
+			\( \begin{align}
+			q &=q_1=q_2=q_3 \\
+			q &= k_{eq} \frac{\Delta h}{L} A \\
+			&= k_{eq} \frac{\Delta h_1 + \Delta h_2 + \Delta h_3}{L} A\\
+			q &= k_{eq} \frac{\frac{q L_1}{k_1 A} + \frac{q L_2}{k_2 A} + \frac{q L_3}{k_3 A}}{L} A\\
+			\end{align} \)
 		</div>
 		<div class="fragment" style="margin-top: 50px;"> 		<div class='equationBox'>
-			$$ k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i} $$
+			\( k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i} \)
 		</div></div>
 
 	</div>
 	</div>
-
-		<div class="container">
-			<div class="col" style="width: 50%;">
-
-			</div>
-			<div class="col" style="width: 50%;">
-				<p class="fragment" style="margin-top:400px;">$$k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i}$$</p>
-			</div>
-		</div>
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Example 4.15</h1>
+<h1>Example 4.14</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-A permeability test was conducted in a sand on a chamber of 6 inches of diameter by 12 inches heigh. The sample was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
+A constant head permeability test was conducted on a chamber of 6 inches of diameter by 12 inches heigh. The soil was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s each. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
 
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4140.svg'></object>
 </div>
 
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4141.svg'></object>
+</div>
+
+</section>
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Example 4.16</h1>
+    <h1>Case II: Flow parallel to layers</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
           <figure>
@@ -739,29 +752,53 @@ A permeability test was conducted in a sand on a chamber of 6 inches of diameter
           </figure>
 			</div>
 			<div class="col" style="width: 50%;">
-				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-				Derive an expression to calculate the equivalent permeability when the flow is parallel to the layering.
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px; font-size: 1em;'>
+				\( \begin{align}
+				q & = q_1 + q_2 + q_3 \\
+				k_{eq} \frac{\Delta h}{L} A & = k_1 \frac{\Delta h}{L} A_1 + \\
+				&k_2 \frac{\Delta h}{L} A_2 + k_3 \frac{\Delta h}{L} A_3 \\
+
+				k_{eq} A &= k_1 A_1 + k_2 A_2 \\
+				& + k_3 A_3
+				\end{align} \)
 				</div>
 
-				<p class="fragment" style="margin-top:50px;">
-					<div class='equationBox'>
-						$$k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}$$
+				
+					<div class='equationBox fragment' style="margin-top:50px;">
+						\(k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}\)
 					</div>
-				</p>
+				
 			</div>
 		</div>
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Example 4.17</h1>
+<h1>Example 4.15</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;font-size: 0.85em;'>
-A permeable water channel will be constructed as shown in the figure below. Three layers of sand with permeabilities \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated in the figure. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length in the channel.
+A permeable water channel will be constructed as shown in the figure. Three layers of sand with \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length.
 
 </div>
-<figure>
-<img src='FiguresGeneral/channels.svg' width='40%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+	<figure>
+		<img src='FiguresGeneral/channels.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4150.svg'></object>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4151.svg'></object>
+</div>
 </section>
 
 <!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
