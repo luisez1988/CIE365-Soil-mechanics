@@ -37,7 +37,7 @@
 	
 					<div class='footer'>
 						CIE-365
-						Spring 2024
+						Spring 2025
 					</div>
 	
 					<style>
@@ -156,7 +156,28 @@
 
 <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
     <h1>Seepage 2D/3D: Governing equation</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/3Dflow.svg'></object>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	
+	</div>
+	<div class='col' style='width: 50%;'>
+<div style="position:absolute; margin-top:-320px; margin-left: -75px;"> 
+	<div class='equationBox fragment' >
+		\(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}+\cfrac{\partial^2 h}{\partial z^2}=0\)
+		</div> 
+		<div class="fragment" style="margin-left: 90px;"><ul>
+			<li>\(h=\) Total head field </li>
+			<li>\(x\), \(y\), and \(z\) are the spatial coordinates.</li>
+		</ul></div>
+</div>
+
+		
+	</div>
+	</div>
+
+	<!-- <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	The governing equation that describes the motion of water in soils is a <span class='atb'>Laplace equation</span>. It is derived <strong style='color:#7abbe6'>assuming</strong> that water and the soil skeleton is <span class='atb'>incompressible</span>. <strong style='color:#7abbe6'>Darcy's law</strong> is assumed valid.
 	</div>
 		<div class="container">
@@ -175,25 +196,35 @@
 					<li>\(x\), \(y\), and \(z\) are the spatial coordinates.</li>
 				</ul></div>				
 			</div>
-		</div>
+		</div> -->
 </section>
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Laplace equation</h1>
-	<p>Solution of the <strong style="color:#7abbe6">Laplace equation:</strong> \(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}=0\) \(\longrightarrow\) \(h(x,y)\)</p>
-	<ul style="margin-top:-35px;">
-		<li class="fragment"> For 1D flow: \(\cfrac{\partial^2 h}{\partial x^2}=0\) \(\longrightarrow\) \(h(x)=ax+b\)
-			<figure>
-			  <img src="FiguresGeneral/Example1D.svg" style="width:100%" data-preload/>
-			  <footer style="margin-top:-60px;"><small></small></footer>
-			</figure>
-		</li>
-		<li class="fragment"> For 2D/3D flow solve <strong style="color:#7abbe6">numerically</strong> or using <strong style="color:#7abbe6">FLOW NETS</strong>  </li>
-	</ul>
+	
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Solution of the <strong style="color:#7abbe6">Laplace equation:</strong> \(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}=0\) \(\longrightarrow\) \(h(x,y)\)
+	</div>
+	<p style="margin-top:-5px;" class="fragment"> For 1D flow: \(\cfrac{\partial^2 h}{\partial x^2}=0\) \(\longrightarrow\) \(h(x)=ax+b\)
+		<figure style="margin-top:-15px;" class="fragment">
+		  <img src="FiguresGeneral/Example1D.svg" style="width:80%" data-preload/>
+		  <footer style="margin-top:-60px;"><small></small></footer>
+		</figure> </p>
+
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+		For 2D/3D flow solve <strong style="color:green">numerically</strong> or using <strong style="color:green">FLOW NETS</strong>
+	</div>
+
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What about <strong style='color:green'>2D/3D</strong> flow? How can we solve the Laplace equation for 2D flow?
+</div>
+
+</section>
+
+<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Finite difference solution</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 A common way to solve <span class='atb'>partial differential equations</span> is using a finite difference approximation.
@@ -224,7 +255,7 @@ Recall Taylor's series expansion:
 
 <p class="fragment">With these equations we can now generate an approximation for the Laplace equation.</p>
 
-</section>
+</section> -->
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.18</h1>
