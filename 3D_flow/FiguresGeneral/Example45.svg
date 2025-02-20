@@ -488,7 +488,7 @@
        height="2.1930056"
        x="-11.027062"
        y="65.55407" />
-    <g
+    <g 
        id="patch_2"
        transform="matrix(0.1281834,0,0,0.1281834,-39.887121,60.109925)"
        style="fill:#ffb380;stroke:#008000;stroke-linecap:butt;stroke-linejoin:round">
@@ -1380,7 +1380,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.173202;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="M -9.2203876,57.630084 H -11.027071"
        id="path162" />
-    <g
+    <g 
        transform="matrix(0.21865484,0,0,0.21865484,-31.133969,79.361582)"
        ns2:version="1.10.2"
        ns2:texconverter="pdflatex"
@@ -1638,7 +1638,7 @@
          style="stroke-width:0.257915"
          x="7.8407884"
          y="67.335663">3 m</tspan></text>
-    <path
+    <path 
        style="fill:none;stroke:#000000;stroke-width:0.160841;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#ConcaveTriangle)"
        d="M -31.107678,67.695817 V 65.354926"
        id="path120" />
@@ -1681,16 +1681,16 @@
         </g>
       </g>
     </g>
-    <path
+    <path 
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M -32.965217,67.747092 V 89.204991"
        id="path125" />
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#ff0000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m -32.965217,89.204993 0,-21.457901 h 21.070721"
        id="path124"
        sodipodi:nodetypes="ccc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#ff0000"
        x="-22.809999"
@@ -1701,7 +1701,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#ff0000"
          x="-22.809999"
          y="66.954613">h=10 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-29.498695"
@@ -1712,11 +1712,11 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-29.498695"
          y="76.854584">h=10 m</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#008000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m -11.027062,67.747078 h 21.062145 l 0.01402,21.406643"
        id="path126" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="-1.1921581"
@@ -1727,7 +1727,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
          x="-1.1921581"
          y="67.252457">h= 3 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="7.0419579"
@@ -1738,12 +1738,12 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
          x="7.0419579"
          y="76.848381">h= 3 m</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#0000ff;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-mid:url(#ArrowWideRounded)"
        d="m -32.965217,89.204991 h 10.72895 10.72895 10.72895023 10.72895007"
        id="path127"
        sodipodi:nodetypes="ccccc" />
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#ArrowWide)"
        d="m -11.894496,67.747092 v 2.376005 2.376006 2.376006 2.376005 h 0.867418 v -2.376005 -2.376006 -2.376005 -2.376006"
        id="path128"

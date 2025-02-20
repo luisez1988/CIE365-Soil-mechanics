@@ -262,14 +262,11 @@ Recall Taylor's series expansion:
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.16</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-Use <strong style='color:#7abbe6'>finite differences</strong> to solve the total head field for the seepage problem shown in the figure below.
+Use the <strong style='color:#7abbe6'>Laplace equation</strong> to solve the total head field for the problem shown in the figure below.
 </div>
 <div class='container'>
 <div class='col' style='width: 50%;'>
-<figure>
-	<img src='./FiguresGeneral/Example45.svg' width='100%'/>
-	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-	</figure>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Example45.svg'></object>
 </div>
 <div class='col' style='width: 50%;'>
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -319,7 +316,10 @@ Use <strong style='color:#7abbe6'>finite differences</strong> to solve the total
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Quiz 4.7</h1>
-Indicate the water elevation in the standpipes shown in the figure.
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	Indicate the water elevation in the standpipes.
+</div>
+
 <figure>
 	<img src='FiguresGeneral/seepage _flownet_quizz.svg' width='60%'/>
 	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
@@ -328,7 +328,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 
-		<iframe class="stretch" src="https://www.youtube.com/embed/0EzoHXEzdwY?autoplay=0" data-preload></iframe>
+		<iframe class="stretch" src="https://www.youtube.com/embed/0EzoHXEzdwY?autoplay=0&start=55&end=204" data-preload></iframe>
 
 </section>
 
@@ -338,7 +338,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 	They are a <span class='atb'>graphical solution</span> to the Laplace equation and offer a "simplified" method to calculate the <span class='atb'>total head field</span>.
 	</div>
 	<div class='container'>
-	<div class='col'>
+	<div class='col' style="width: 50%;">
 		<div class="fragment"> <div class='defBox' name='' style='margin-top: 5px;margin-left: 0px;'>
 			<ul style="margin-top:-15px;font-size:35px">
 				<li class="fragment"> <strong style="color:red">Equipotential lines:</strong> contours of constant total head (\(h\)=𝑐𝑜𝑛𝑠𝑡𝑎𝑛𝑡).
@@ -350,7 +350,7 @@ Indicate the water elevation in the standpipes shown in the figure.
 			</ul>
 		</div></div>
 	</div>
-	<div class='col'>
+	<div class='col' style="width: 50%;">
 		<figure style="margin-top:50px;">
 			<img src="FiguresGeneral/flow_tube.svg" style="width:100%" data-preload/>
 			<footer style="margin-top:-60px;"><small></small></footer>
@@ -389,15 +389,15 @@ Indicate the water elevation in the standpipes shown in the figure.
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Flow net</h1>
+	
 	<div class='container'>
-	<div class='col'>
+	<div class='col' style="width: 35%;">
 		<figure>
 			<img src="FiguresGeneral/squares.svg" style="width:100%" data-preload/>
 			<footer style="margin-top:-60px;"><small></small></footer>
 		  </figure>
 	</div>
-	<div class='col'>
+	<div class='col' style="width: 65%;">
 		Examples
 		<figure>
 			<img src="FiguresGeneral/Examples.svg" style="width:100%" data-preload/>
@@ -423,13 +423,13 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 
 <div class="container">
-	<div class="col">
+	<div class="col" style="width: 50%;">
       <figure style="margin-top:-25px;">
         <img src="FiguresGeneral/flow_tube_2.svg" style="width:100%" data-preload/>
         <footer style="margin-top:-60px;"><small></small></footer>
       </figure>
 	</div>
-	<div class="col">
+	<div class="col" style="width: 50%;">
 		<p class="fragment">
 			<div class="fragment"><div class='equationBox'>
 				\(q=k \Delta H \cfrac{N_f}{N_d}\)
@@ -448,8 +448,10 @@ Indicate the water elevation in the standpipes shown in the figure.
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<p><strong style="color:#7abbe6">How to solve a flow net exercise:</strong></p>
-	<ol style="margin-top:-20px;font-size:1em">
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+		How to solve a flow net exercise?
+	</div>	
+	<ol style="margin-top:-10px;font-size:1em">
 		<li class="fragment"> Plot the <strong style="color:#7abbe6">flow net</strong> following all the rules. </li>
 		<li class="fragment"> Determine the <strong style="color:#7abbe6">number of flow lines and tubes</strong>, <strong style="color:#7abbe6">number of equipotential lines and drops</strong>. </li>
 		<li class="fragment"> <strong style="color:#7abbe6">Label</strong> all equipotential lines and determine the <strong style="color:#7abbe6">total head at the entrance</strong> and <strong style="color:#7abbe6">exit equipotential lines</strong>. </li>
@@ -462,14 +464,21 @@ Indicate the water elevation in the standpipes shown in the figure.
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.19</h1>
+	<h1>Example 4.17</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	Determine the flow below the sheet pile, the total head and the pore pressure at point A.
 	</div>
-<figure>
-  <img src="FiguresGeneral/Example45.svg" style="width:50%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4170.svg'></object>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+
+</div>
+</div>
+</div>
+
 </section>
 
 
