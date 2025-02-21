@@ -625,7 +625,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(38.4901,-56.3643)">
-    <g
+    <g 
        id="g1">
       <rect
          style="fill:#80b3ff;stroke:none;stroke-width:0.0961371;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.384549, 0.0961371;paint-order:fill markers stroke"
@@ -1867,7 +1867,7 @@
        style="fill:none;stroke:#008000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m -11.027062,67.747078 h 21.062145 l 0.01402,21.406643"
        id="path126" />
-    <circle
+    <circle 
        style="fill:#ff0000;stroke:none;stroke-width:0.196267;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.588805, 0.588805;stroke-dashoffset:0;paint-order:markers fill stroke"
        id="path92"
        cx="-2.3994007"
@@ -1935,68 +1935,68 @@
        d="m -11.894496,67.747092 v 2.376005 2.376006 2.376006 2.376005 h 0.867418 v -2.376005 -2.376006 -2.376005 -2.376006"
        id="path128"
        sodipodi:nodetypes="cccccccccc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#ArrowWideRounded);stroke-dasharray:none"
        d="m -17.691017,67.815373 c 0,1.738979 0.18681,3.27908 0.51387,4.613234 0.327059,1.334153 0.794369,2.46236 1.35537,3.37755 1.122,1.830382 2.618763,2.8087 4.117811,2.878408 1.499047,0.06971 3.0003795,-0.769196 4.1315198,-2.573259 0.5655701,-0.902031 1.0385921,-2.045352 1.3725065,-3.437032 0.3339144,-1.391679 0.5287212,-3.031717 0.5378606,-4.927181"
        id="path64"
        sodipodi:nodetypes="csssssc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#ArrowWideRounded);stroke-dasharray:none"
        d="m -25.706288,67.774082 c -0.006,1.685899 0.436535,3.375335 1.214188,4.961889 0.777653,1.586555 1.890424,3.070229 3.224895,4.344608 1.33447,1.274378 2.890642,2.33946 4.555095,3.088829 1.664454,0.74937 3.437191,1.183028 5.204793,1.194557 1.8870206,0.01231 3.666883,-0.483021 5.2735239,-1.320233 1.6066409,-0.837212 3.0400605,-2.016305 4.2341955,-3.371523 C -0.80546256,75.31699 0.14938793,73.785647 0.79889077,72.243935 1.4483936,70.702224 1.7925488,69.150144 1.7652932,67.753452"
        id="path65"
        sodipodi:nodetypes="csssssssc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#ArrowWideRounded);stroke-dasharray:none"
        d="m -32.965217,81.932993 c 3.961279,0 7.553001,0.703219 11.048592,1.410774 3.495592,0.707556 6.895053,1.419448 10.471813,1.436794 3.6273092,0.01759 6.9632867,-0.694301 10.3988726,-1.410591 3.4355858,-0.716289 6.97078,-1.436977 10.9965227,-1.436977"
        id="path81"
        sodipodi:nodetypes="csssc" />
-    <path
+    <path class="Animate"
        id="path82"
        style="fill:none;stroke:#ff0000;stroke-width:0.13;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.39000002,0.39000002;paint-order:markers fill stroke;stroke-dashoffset:0"
        d="m -12.136119,70.260719 a 2.5010245,2.5084879 0 0 1 -2.501024,2.508488 2.5010245,2.5084879 0 0 1 -2.501025,-2.508488 2.5010245,2.5084879 0 0 1 2.501025,-2.508488 2.5010245,2.5084879 0 0 1 2.501024,2.508488 z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m -12.051453,72.578157 c -8.52791,0.326923 -12.983901,5.869201 -13.367973,16.626834"
        id="path83"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        id="path84"
        style="fill:none;stroke:#ff0000;stroke-width:0.13;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.38999903,0.38999903;paint-order:markers fill stroke;stroke-dashoffset:0"
        d="m -12.200716,74.642135 a 1.7735249,1.7788174 0 0 1 -1.773524,1.778818 1.7735249,1.7788174 0 0 1 -1.773526,-1.778818 1.7735249,1.7788174 0 0 1 1.773526,-1.778817 1.7735249,1.7788174 0 0 1 1.773524,1.778817 z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m -12.051449,76.014734 c -3.887833,0.0539 -6.528645,5.041716 -6.974697,13.190257"
        id="path85"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        id="path86"
        style="fill:none;stroke:#ff0000;stroke-width:0.13;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.38999959,0.38999959;stroke-dashoffset:0;paint-order:markers fill stroke"
        d="m -12.188048,77.119334 a 0.90204698,0.90473887 0 0 1 -0.902047,0.90474 0.90204698,0.90473887 0 0 1 -0.902047,-0.90474 0.90204698,0.90473887 0 0 1 0.902047,-0.904737 0.90204698,0.90473887 0 0 1 0.902047,0.904737 z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m -11.894496,77.251114 c -1.330144,1.072133 -1.84624,7.4751 -1.989349,11.953877"
        id="path87"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        id="path88"
        style="fill:none;stroke:#ff0000;stroke-width:0.13;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.39000119,0.39000119;stroke-dashoffset:0;paint-order:markers fill stroke"
        d="m -10.714164,78.01071 a 0.74947802,0.75171461 0 0 1 -0.749478,0.751715 0.74947802,0.75171461 0 0 1 -0.749478,-0.751715 0.74947802,0.75171461 0 0 1 0.749478,-0.751713 0.74947802,0.75171461 0 0 1 0.749478,0.751713 z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M -10.870121,72.578157 C -2.342211,72.90508 2.11378,78.447358 2.497852,89.204991"
        id="path89"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m -10.870125,76.014734 c 3.887833,0.0539 6.528645,5.041716 6.974697,13.190257"
        id="path90"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m -11.027078,77.251114 c 1.330144,1.072133 1.84624,7.4751 1.989349,11.953877"
        id="path91"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="-19.916103"
@@ -2007,7 +2007,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
          x="-19.916103"
          y="74.192032">9 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="-17.427505"
@@ -2018,7 +2018,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
          x="-17.427505"
          y="78.358757">8 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="-15.276516"
@@ -2029,7 +2029,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
          x="-15.276516"
          y="83.866341">7 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="-7.7006059"
@@ -2040,7 +2040,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
          x="-7.7006059"
          y="83.891663">6 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="-5.456862"
@@ -2051,7 +2051,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
          x="-5.456862"
          y="78.314316">5 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="-2.2651803"
@@ -2062,7 +2062,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
          x="-2.2651803"
          y="74.658829">4 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#ff0000;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        x="-29.041622"
@@ -2073,7 +2073,7 @@
          style="stroke-width:0.264583;fill:#ff0000;-inkscape-font-specification:'Gunny Rewritten, Normal';font-family:'Gunny Rewritten';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:2.11666667px;font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
          x="-29.041622"
          y="86.395149">1</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-21.920063"
@@ -2084,7 +2084,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-21.920063"
          y="87.303429">2</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-17.360085"
@@ -2095,7 +2095,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-17.360085"
          y="87.688675">3</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-11.3819"
@@ -2106,7 +2106,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-11.3819"
          y="87.688675">4</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-6.2490435"
@@ -2117,7 +2117,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-6.2490435"
          y="87.565369">5</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="-1.0798759"
@@ -2128,7 +2128,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="-1.0798759"
          y="87.495667">6</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
        x="5.7291746"
@@ -2139,7 +2139,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
          x="5.7291746"
          y="86.96727">7</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="-8.2436018"
@@ -2150,7 +2150,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000080;stroke-width:0.264583"
          x="-8.2436018"
          y="70.8237">1</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="-2.4894564"
@@ -2161,7 +2161,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000080;stroke-width:0.264583"
          x="-2.4894564"
          y="71.545105">2</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="2.9934764"
@@ -2172,7 +2172,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000080;stroke-width:0.264583"
          x="2.9934764"
          y="78.360825">3</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="6.8119974"
@@ -2183,7 +2183,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000080;stroke-width:0.264583"
          x="6.8119974"
          y="84.668877">4</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:1.05833197, 0.26458299;stroke-dashoffset:0"
        d="m -3.713201,78.476042 c 1.3019881,0.847746 1.9551265,2.775029 2.1830263,4.994912"
        id="path112"
