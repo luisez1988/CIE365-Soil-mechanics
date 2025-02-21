@@ -540,31 +540,35 @@ How to determine the uplift pressure distribution?
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.20</h1>
+	<h1>Example 4.18</h1>
 	<div class='textBox' style='margin-top: -20px;font-size: 1em;'> <p>For the example in the figure, find the uplift force and the factor of safety against uplift if the dam weighs 7000 kN</p> 
-	<a href="#9">Go to Jupyter Notebook</a></div>
-	
-	<figure style="margin-top: -25px;">
-	  <img src="FiguresGeneral/Dam_uplift.svg" style="width:65%" data-preload/>
-	  <footer style="margin-top:-60px;"><small></small></footer>
-	</figure>
+	</div>
+
+	<object style='width:68%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Dam_uplift.svg'></object>	
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/1m24BWPUH_P4qVGrzm48k6TRPVrckS57bimCwYcLUFU8/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
+</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Erosion due to seepage</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p class="fragment">Recall: We learned that <strong style="color:#7abbe6">soil strength</strong> depends directly on the <span class='atb'>interparticle contacts</span>. <strong style="color:#7abbe6">If solid particles <span class='atb'>are not in contact</span>, soil becomes a fluid with no shear resistance.</strong>
-			The <span class='atb'>effective stress</span> quantifies contact forces. </p>
+		<strong style='color:#7abbe6'>Recall:</strong>  We learned that <strong style="color:#7abbe6">soil strength</strong> depends directly on the <span class='atb'>inter-particle contacts</span>. <strong style="color:#7abbe6">If solid particles <span class='atb'>are not in contact</span>, soil becomes a fluid with no shear resistance.</strong>
+			The <span class='atb'>effective stress</span> quantifies contact forces. 
 	</div>
 
-	<p class="fragment">If \(\sigma'=0\), there is no contact between solid grains, soil becomes <span class='atb'>internally unstable</span>, and grains can be dragged away.</p>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p class="fragment">If <strong style='color:red'>\(\sigma'=0\)</strong>, there is <strong style='color:red'>no contact</strong> between solid grains, soil becomes <span class='atb'>internally unstable</span>, and grains can be dragged away.</p>
+	<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
 	<div class="container">		
-			<div class="col">
-				<p class="fragment"><span class='atb'>Stable</span>: <strong style='color:green'>\(\sigma'>0\)</strong></p>
+			<div class="col" style="width: 50%;">
+				<p ><span class='atb'>Stable</span>: <strong style='color:green'>\(\sigma'>0\)</strong></p>
 			   </div>
-			<div class="col">
-				<p class="fragment"><span class='atb'>Unstable</span>: <strong style='color:red'> \(\sigma'=0\)</strong></p>
+			<div class="col" style="width: 50%;">
+				<p ><span class='atb'>Unstable</span>: <strong style='color:red'> \(\sigma'=0\)</strong></p>
 			</div>
 		</div>
 	</div>
@@ -572,25 +576,25 @@ How to determine the uplift pressure distribution?
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<iframe class="stretch" src="https://www.youtube.com/embed/eImtYyuQCZ8?autoplay=0" data-preload></iframe>
+		<iframe class="stretch" src="https://www.youtube.com/embed/eImtYyuQCZ8?autoplay=0&start=93&end=261" data-preload></iframe>
 
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Erosion due to seepage</h1>
+	
 	<div class="container">
-		<div class="col">
+		<div class="col" style="width: 50%;">
 	       <ul>
-	       	<li>Scenario A: No flow</li>
-					<li>Scenario B: Downward flow</li>
-					<li>Scenario C: Upward flow</li>
+	       	<li>Scenario A: <strong style='color:#7abbe6'>No flow</strong> </li>
+					<li>Scenario B: <strong style='color:green'>Downward flow</strong> </li>
+					<li>Scenario C: <strong style='color:red'>Upward flow</strong> </li>
 	       </ul>
 		</div>
-		<div class="col">
-	     <p style="margin-top:-25px;">Assumptions:
+		<div class="col" style="width: 50%;">
+	     <p style="margin-top:0px;">Assumptions:
 				 <ul>
-				 	<li>1D vertical flow</li>
-					<li>Horizontal direction is stable</li>
+				 	<li><span class='atb'>1D vertical flow</span></li>
+					<li>Horizontal direction is <span class='atb'>stable</span></li>
 				 </ul>
 			 </p>
 		</div>
@@ -602,17 +606,17 @@ How to determine the uplift pressure distribution?
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Erosion due to seepage</h1>
+	
 	<div class="container">
-		<div class="col">
-	      <figure>
+		<div class="col" style="width: 50%;">
+	      <figure style="margin-top: 50px;">
 	        <img src="FiguresGeneral/erosion_2.svg" style="width:40%" data-preload/>
 	        <footer style="margin-top:-60px;"><small></small></footer>
 	      </figure>
 		</div>
-		<div class="col">
-			<p><strong style="color:#7abbe6">No flow</strong></p>
-			<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
+		<div class="col" style="width: 50%;">
+			<h4>No Flow</h4>
+			<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/NoFlow.svg'></object>
 		</div>
 	</div>
 </section>
