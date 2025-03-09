@@ -621,35 +621,34 @@ How to determine the uplift pressure distribution?
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Erosion due to seepage</h1>
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">	
 	<div class="container">
-		<div class="col">
-	      <figure>
+		<div class="col" style="width: 50%;">
+	      <figure style="margin-top: 50px;">
 	        <img src="FiguresGeneral/erosion_3.svg" style="width:50%" data-preload/>
 	        <footer style="margin-top:-60px;"><small></small></footer>
 	      </figure>
 		</div>
-		<div class="col">
-			<p><strong style="color:#7abbe6">Downward flow</strong></p>
-		<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
+		<div class="col" style="width: 50%;">
+			<h4>Downward flow</h4>			
+			<object style='width:100%; margin-top: -50px;'  class='Animation' type='image/svg+xml' data='FiguresGeneral/DownwardFlow.svg'></object>
 
 		</div>
 	</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Erosion due to seepage</h1>
+	
 	<div class="container">
-		<div class="col">
-	      <figure>
+		<div class="col"  style="width: 50%;">
+	      <figure style="margin-top: 50px;">
 	        <img src="FiguresGeneral/erosion_4.svg" style="width:50%" data-preload/>
 	        <footer style="margin-top:-60px;"><small></small></footer>
 	      </figure>
 		</div>
-		<div class="col">
-			<p><strong style="color:#7abbe6">Upward flow</strong></p>
-			<div class="blackboard" style="--width: 600px; --height: 500px;" ></div>
+		<div class="col"  style="width: 50%;">
+			<h4>Upward flow</h4>
+			<object style='width:100%; margin-top: -50px;'  class='Animation' type='image/svg+xml' data='FiguresGeneral/UpwardFlow.svg'></object>
 		</div>
 	</div>
 </section>
@@ -657,58 +656,56 @@ How to determine the uplift pressure distribution?
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Erosion due to seepage</h1>
 	<div class='defBox' name='Critical hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
-	<strong style='color:green'>\(i_{crit}:\)</strong> Is the maximum hydraulic gradient in the <strong style='color:#7abbe6'>exit zone</strong> that a soil can experience before it erodes due to seepage forces.
+	<strong style='color:green'>\(i_{crit}:\)</strong> Is the maximum hydraulic gradient in the <strong style='color:red'>exit zone</strong> that a soil can experience before it erodes due to seepage forces.
 	<div class='equationBox'>
 	\(i_{crit}=\cfrac{\gamma'}{\gamma_w}=\cfrac{G_s-1}{1+e}\)
 	</div>
 	</div>
-	<div class='defBox' name='Factor of safety against piping' style='margin-top: 15px;margin-left: 0px;'>
+	<div class='defBox fragment' name='Factor of safety against piping' style='margin-top: 15px;margin-left: 0px;'>
 	<strong style='color:green'>\(FS_p:\)</strong> Is the ratio of the critical hydraulic gradient to the actual maximum hydraulic gradient at the exit zone.
 	<div class='equationBox'>
 	\(FS_p=\cfrac{i_{crit}}{i_{max}}\)
 	</div>
 	</div>
-	<p class="fragment">$$$$</p>
-	<p class="fragment">Factor of safety against piping:
-		$$FS=\cfrac{i_{crit}}{i_{max}}$$
-	</p>
+
 
 
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<ul>
-		<li class="fragment"> <strong style="color:#7abbe6">Erosion will start if</strong> \(FS\leq 1\). </li>
-		<li class="fragment"> It is important to <strong style="color:#7abbe6">identify what "element" in a flow net</strong> has the <strong style="color:#7abbe6">maximum hydraulic gradient</strong>. </li>
-		<li class="fragment"><strong style="color:#7abbe6">Piping</strong> usually begins at <strong style="color:#7abbe6">downstream side</strong> (upward flow).</li>
-		<li class="fragment"> Because the total head drop is constant between equipotentials, the size of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:#7abbe6">Smaller elements will have larger hydraulic gradients</strong>.  </li>
+	<ul style="margin-top: 100px;">
+		<li class="fragment">Erosion will <strong style="color:red"> begin if</strong> <span class='atb'>FS<1 </span> . </li>
+		<li class="fragment"> It is important to <strong style="color:green">identify</strong> what "element" in a flow net has the <strong style="color:red">maximum hydraulic gradient</strong> \(i_{max}\). </li>
+		<li class="fragment"><strong style="color:red">Piping</strong> usually begins at <strong style="color:#7abbe6">downstream side</strong> (upward flow).</li>
+		<li class="fragment"> Because the total head drop is constant between equipotential lines, the <strong style='color:#7abbe6'>size</strong> of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:red">Smaller elements</strong> will have <span class='atb'>larger hydraulic gradients</span>.  </li>
 	</ul>
 
 </section>
 
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.21</h1>
+	<h1>Example 4.19</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p>For the example in the figure, determine the factor of safety against piping knowing \(G_s=2.65\) and \(\gamma_{sat}=15.2\) kN/m\(^3\)</p>
-		<a href="#9">Go to Jupyter Notebook</a>
+		<p>For the example in the figure, determine the factor of safety against piping knowing \(G_s=2.65\) and \(\gamma_{sat}=15.2\) kN/m\(^3\)</p>		
 	</div>
 	
 	<div class="container">
-		<div class="col">
-	                <figure>
-	                  <img src="FiguresGeneral/piping_example.svg" style="width:100%" data-preload/>
-	                  <footer style="margin-top:-60px;"><small></small></footer>
-	                </figure>
+		<div class="col" style="width: 50%;">
+			<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4190.svg'></object>
 		</div>
-		<div class="col">
-
+		<div class="col" style="width: 50%;">
+			<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+			<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4191.svg'></object>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<p><strong style='color:#7abbe6'>How to reduce the risk of seepage?</strong></p>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+		How to reduce the risk of seepage?
+	</div>
+	
 	<ol>
 		<li class="fragment">Lower the upstream water level.
 			$$\downarrow H_1 \longrightarrow \downarrow \Delta h \longrightarrow \downarrow i$$
@@ -720,11 +717,6 @@ How to determine the uplift pressure distribution?
 	</ol>
 
 </section>
-
-
-    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-
-    </section>
 
 
 
