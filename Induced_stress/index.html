@@ -228,16 +228,18 @@
 		</section>
 
 		<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-			<h1>Infinitely loaded area</h1>
+		<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+		What is the increment of stress when the applied load is finite?
+		</div>	
 			<p>In many cases, loads at the surface are not infinitely extended or uniformly distributed. Other models are needed.</p>
 			<figure>
 			  <img src="FiguresGeneral/need.svg" style="width:100%" data-preload/>
 			  <footer style="margin-top:-60px;"><small></small></footer>
 			</figure>
-			<p>What is the relationship between \(\Delta \sigma_1\), \(\Delta \sigma_2\), and \(\Delta \sigma_3\)</p>
+			<p>What is the relationship between \(\Delta \sigma_1\), \(\Delta \sigma_2\), and \(\Delta \sigma_3\)?</p>
 		</section>
 
-		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		    <h1>Boussinesq equation</h1>
 				<div class="container">
 					<div class="col">
@@ -254,27 +256,34 @@
 		            </figure>
 					</div>
 				</div>
-		</section>
+		</section> -->
 
-		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 <h1 style="margin-top:0px;font-size:55px">Stress distribution due to a point load</h1>
 				<div class="container">
-					<div class="col">
-
-						<p style="margin-top:0px;">Boussinesq's equation for the <strong style="color:#7abbe6">stress distribution</strong> in a <strong style="color:#7abbe6">elastic semi-infinite</strong> medium is:
-							$$\Delta \sigma_z=\cfrac{3 Q}{2 \pi z^2 \left[1+(r/z)^2\right]^{5/2}}$$
+					<div class="col" style="width: 50%;">
+						<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							Boussinesq's equation for the <strong style="color:#7abbe6">stress distribution</strong> in a <strong style="color:#7abbe6">elastic semi-infinite</strong> medium is:
+						</div>
+						<p style="margin-top:0px;">
+							<div class='equationBox'>
+							\( \Delta \sigma_z=\cfrac{3 Q}{2 \pi z^2 \left[1+(r/z)^2\right]^{5/2}} \)
+							</div> <br>
+						
 							$$\Delta \sigma_z=QI$$
 						</p>
 						<p>\(I=\) influence factor</p>
 					</div>
-					<div class="col">
-						<p style="margin-top:0px;"> Assumptions:</p>
-						<ul style="margin-top:-25px;">
-							<li>Continous material</li>
-							<li>Isotropic</li>
-							<li>Uniform</li>
-							<li>Linear elastic</li>
-						</ul>
+					<div class="col" style="width: 50%;">
+						<div class='findingBox' style='margin-top: 0px;margin-left: 5px;'>
+							Assumptions:
+							<ul style="margin-top:-20px;">
+								<li>Continuous material</li>
+								<li>Isotropic</li>
+								<li>Uniform</li>
+								<li>Linear elastic</li>
+							</ul>
+						</div>						
 				                <figure>
 				                  <img src="FiguresGeneral/point.svg.2022_03_06_20_01_31.0.svg" style="width:100%" data-preload/>
 				                  <footer style="margin-top:-60px;"><small></small></footer>
@@ -289,7 +298,7 @@
 		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		    <h1 style="margin-top:0px;font-size:45px">Superposition and numerical approximation</h1>
 				<div class="container">
-					<div class="col">
+					<div class="col" style="width: 40%;">
 		         <figure>
 		           <img src="FiguresGeneral/generalization.svg" style="width:100%" data-preload/>
 		           <footer style="margin-top:-60px;"><small></small></footer>
@@ -298,16 +307,38 @@
 						 	<li>\(A_i=\) discretized area.</li>
 						 </ul>
 					</div>
-					<div class="col">
-		           <ul>
-		           	<li class="fragment">The <strong style="color:#7abbe6">principle of superposition</strong> implies that the effect of multiple loads can be taken into account by simple addition. </li>
-								<li class="fragment">For complex load distributions and shapes use a numerical approximation:
-$$\Delta \sigma_z=\sum_{i=1}^n q_i A_i I_i$$
-
-								 </li>
-		           </ul>
+					<div class="col"  style="width: 60%;">
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						The <strong style="color:#7abbe6">principle of superposition</strong> implies that the <span class='atb'>total</span> induced stress of multiple loads is the <strong style='color:#7abbe6'>addition</strong> of all individual induced stresses. <br>
+						$$\Delta \sigma_z= \int_{A} I(x,y) q(x,y) dA$$
+					</div>
 					</div>
 				</div>
+				We can use a numerical approximation instead:
+				<div class='equationBox' style="margin-left:380px;">
+				\(  \Delta \sigma_z=\sum_{i=1}^n q_i A_i I_i\)
+				</div>
+		</section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Example 5.2</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		A square footing of 2.5 m of width is placed at the surface of the soil as shown in in the figure. Structural analysis indicates that the footing will carry a load of 100 kN. Calculate the increment of stress at a depth of 2 m at the centerline and the mid edge of the footing. Use a discretization of two elements in each direction. How does solution compares with the point load solution?
+		</div>
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<figure>
+		<img src='FiguresGeneral/footing' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 50%;'>
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX520.svg'></object>
+		</div>
+		</div>
+		</div>
+		
 		</section>
 
 		<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
@@ -315,31 +346,9 @@ $$\Delta \sigma_z=\sum_{i=1}^n q_i A_i I_i$$
 			<video style="margin-top: 0px" width="100%" loop src="FiguresGeneral\Video4.mp4"  autoplay type="video/mp4"> </video>
 			<p style="position:Absolute; margin-top: -100px">$$E'=20,000 kPa$$ </p>
 			<p style="position:Absolute; margin-top: -100px; margin-left:600px">$$E'=1,000 kPa$$ </p>
-			<aside class="notes">
-				This is further validated in this video.
-				Here I chaged the localization pattern by perfoming parametric analysis of the sand stiffnes.
-				When the sand is rigid, the material approaches in behavior to a perfectly plastic material, and the general bearing capacity failure is observed.
-				In this case, the two maxima is observed.
-				In the video in the righ, the modulus i lower, and the localizaiton of strains is prevented which resembles a ounching type of failure.
-				Here the secondary peak vanishes as I'll show in the next slide.
-			</aside>
+
 		</section>
 		</section>
-
-
-
-    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-
-    </section>
-
-
-
-
-
-
-
-
-
 
 
 
