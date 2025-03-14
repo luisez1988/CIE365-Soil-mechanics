@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
-		<title>CIE-365: Consolidation</title>
+		<title>Consolidation settlements</title>
 	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -30,14 +30,14 @@
 							display: flex;
 					}
 					.col{
-							flex: 1;
+							flex: wrap;
 					}
 	
 					</style>
 	
 					<div class='footer'>
 						CIE-365
-						Spring 2024
+						Spring 2025
 					</div>
 	
 					<style>
@@ -77,22 +77,33 @@
 					<div class="qrCode" name="https://drive.google.com/file/d/1T9BiIpPC_angN2mfl7bmZ7QbXpa60kqr/view?usp=sharing"> </div>
 				</div>
 	
-				<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 5: Consolidation settlements">
+				<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 6: Consolidation settlements">
 					<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-					<p style="color:#faffff; font-size:35px">Spring 2024</p>
+					<p style="color:#faffff; font-size:35px">Spring 2025</p>
 					<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 					<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 				</div>
 			</section>
 
-			<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+			<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				<h1>Recap</h1>
 					<ul>
 						<li class="fragment"> We learned how to calculate total head field, hydraulic gradient and seepage velocities in 2D.</li>
 						<li class="fragment"> We learned to calculate the uplift pressure produced by underground moving water on structures. </li>
 						<li class="fragment"> We learned how to calculate the factor of safety against internal erosion due to seepage.</li>
 					</ul>
-			</section>
+			</section> -->
+
+	<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<h1>Recap</h1>
+			<ul>
+				<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				We learned how to calculate <strong style='color:#7abbe6'>induced stresses</strong> in the ground produced by <strong style='color:#7abbe6'>external loads</strong>.
+				</div>
+				</li>
+				<li class="fragment"> We learned how to <strong style='color:#7abbe6'>multiple loads</strong> using the <strong style='color:#7abbe6'>superposition principle</strong>. </li>				
+			</ul>
+	</section>
 
 				<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Homework assignment 4</h1>
@@ -114,7 +125,7 @@
         <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 			<h1>Contents</h1>
 			<div class='container'>
-			<div class='col'>
+			<div class='col' style="width: 50%;">
 				<ul class="contentStyle" style="margin-top: -45px;">
 					<li class="l1">Definition of consolidation</li>
 					<li class="l1">Primary consolidation</li>
@@ -124,18 +135,18 @@
 					<li class='l1'>Settlement in multilayered systems</li>
 				</ul>
 			</div>
-			<div class='col'>
+			<div class='col' style="width: 50%;">
 			<div class='container'>
-				<div class='col'>
-					<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+				<div class='col' style="width: 50%;">
+					<div class="stickynote" style="margin-top: 100px;margin-left: 20px;">
 						<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
 						<ul>
 							<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
 						</ul>
 					</div>
 				</div>
-				<div class='col'>
-				<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+				<div class='col' style="width: 50%;">
+				<div class='stickynote' style='margin-top: 100px;margin-left: 20px;'>
 					<p style="margin-top: -20px;">After this lecture we will able to:</p>
 					<ul style="margin-top: -15px;">
 						<li>Calculate the coefficients of compressibility and recompression of fine-grained soils.</li>					
@@ -163,14 +174,16 @@
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1 style="margin-top:0px;font-size:55px">Case history- Leaning Tower of Pisa</h1>
 		<div class="container">
-			<div class="col">
+			<div class="col" style="width: 30%;">
 		       <figure>
-		         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg/1200px-The_Leaning_Tower_of_Pisa_SB.jpeg" style="width:60%" data-preload/>
+		         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg/1200px-The_Leaning_Tower_of_Pisa_SB.jpeg" style="width:100%" data-preload/>
 		         <footer style="margin-top:-60px;"><small></small></footer>
 		       </figure>
 			</div>
-			<div class="col">
-				<p>Leaning is due to uneven settlements</p>
+			<div class="col" style="width: 70%;">
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				Leaning is due to <strong style='color:red'>uneven settlements</strong>.
+				</div>
 				<figure style="margin-top:-10px;">
 				  <img src="FiguresGeneral/profile.svg" style="width:100%" data-preload/>
 				  <footer style="margin-top:-60px;"><small>http://madridengineering.com
@@ -182,25 +195,29 @@
 
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1 style="margin-top:0px;font-size:55px">Case history- Leaning Tower of Pisa</h1>
-		<figure>
-		  <img src="FiguresGeneral/thistory.svg" style="width:80%" data-preload/>
+		<figure style="margin-top: -20px;">
+		  <img src="FiguresGeneral/thistory.svg" style="width:100%" data-preload/>
 		  <footer style="margin-top:-60px;"><small></small></footer>
 		</figure>
 	</section>
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1 style="margin-top:0px;font-size:55px">Case history- Leaning Tower of Pisa</h1>
 		<div class="container">
-			<div class="col">
-		                <p>Remediation:
-<ul>
-	<li class="fragment"> Put heavy load on north side to compensate settlement on the south. </li>
-	<li class="fragment"> Soil extraction mass (38 m\(^3\)) under the north side using angled holes. </li>
-</ul>
-										</p>
+			<div class="col" style="width: 50%;">
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:green'>Remediation:</strong>
+				<ul>
+					<li class="fragment"> Heavy load was put on north side to compensate settlement on the south. </li>
+					<li class="fragment"> Soil extraction mass (38 m\(^3\)) under the north side using angled drilling. </li>
+				</ul>
 			</div>
-			<div class="col">
+
+			<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+			Engineers <strong style='color:green'>could make the tower straight</strong>. For obvious reasons, the tower was stabilized at its current inclination.
+			</div>
+
+			</div>
+			<div class="col" style="width: 50%;">
 				<figure>
 				  <img src="FiguresGeneral/EngSol.svg" style="width:100%" data-preload/>
 				  <footer style="margin-top:-60px;"><small></small></footer>
@@ -211,35 +228,34 @@
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Other sinking problems</h1>
-		<figure>
+		<figure style="margin-top: -15px;">
 		  <img src="https://www.science.org/do/10.1126/science.aar8124/abs/mexico%20city_16x9.jpg" style="width:80%" data-preload/>
 		  <footer style="margin-top:-30px;"><small>Mexico City</small></footer>
 		</figure>
 	</section>
 
-	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Other sinking problems</h1>
+	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">		
 		<figure>
-			<img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/amsterdam-988047_1920-1.jpg" style="width:60%" data-preload/>
+			<img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/amsterdam-988047_1920-1.jpg" style="width:75%" data-preload/>
 			<footer style="margin-top:-30px;"><small>Amsterdam</small></footer>
 		</figure>
 	</section>
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Deformation of soils</h1>
-	<div class='textBox' style="margin-top:-20px;font-size:35px">
-		<p >Recall: <strong style="color:#7abbe6">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <strong style="color:#7abbe6">change in effective stress</strong> there is a corresponding deformation.
-			$$\sigma'=\sigma-u$$</p>
+	<div class='textBox' style="margin-top:-20px;font-size:1em">
+		Recall: <strong style="color:green">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <span class='atb'>change</span> <strong style="color:#7abbe6"> in effective stress</strong> there is a corresponding <span class='atb'>deformation</span>. <br>
+			\(\sigma'=\sigma-u\)
 	</div>
 	 
-	 <ul style="margin-top:-25px;font-size:35px">
-	 	<li>Large fill <span class='atb'>placement</span> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
-		<li><span class='atb'>Excavation</span> \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
-		<li>Structure <span class='atb'>load</span> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
-		<li><span class='atb'>Lowering</span> the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+	 <ul style="margin-top:-5px;font-size:0.9em">
+	 	<li>Large fill <strong style='color:green'>placement</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:blue'>Excavation</strong> \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
+		<li>Structure <strong style='color:green'>load</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:green'>Lowering</strong> the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
 	 </ul>
 	 <figure style="margin-top: -15px;">
-	   <img src="FiguresGeneral/settlements.svg" style="width:70%" data-preload/>
+	   <img src="FiguresGeneral/settlements.svg" style="width:90%" data-preload/>
 	   <footer style="margin-top:-60px;"><small></small></footer>
 	 </figure>
 	</section>
@@ -248,12 +264,16 @@
 		<h1>Consolidation</h1>
 
 		<div class='defBox' name='Consolidation:' style='margin-top: -20px;margin-left: 0px;'>
-			Process by which soil volume <span class='atb'>decreases</span> due to water scaping from the soil.
+			Process by which soil's bulk volume <span class='atb'>decreases</span> due to water scaping from the soil.
 		</div>
 		<figure style="margin-top:-20px;">
 			<img src="FiguresGeneral/consol_phase.svg" style="width:90%" data-preload/>
 			<footer style="margin-top:-60px;"><small></small></footer>
 		  </figure>
+
+		<div class='findingBox' style='margin-top: -10px;margin-left: 0px;'>
+		<strong style='color:red'>Do not confuse</strong> <strong style='color:green'>consolidation</strong> with <strong style='color:red'>compaction</strong>. Compaction is the process by which soil's bulk volume decreases due to air removal <strong style='color:red'>mechanical</strong> means.
+		</div>
 	</section>
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
@@ -263,32 +283,35 @@
 	
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Consolidation</h1>
+	
 <figure>
-  <img src="FiguresGeneral/consol_pros.svg" style="width:100%" data-preload/>
+  <img src="FiguresGeneral/consol_grains.svg" style="width:100%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
 </figure>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Effect of drainage</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the effect of soil permeability on consolidation?
+</div>
 
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='textBox fragment' style='margin-top: 50px;margin-left: 0px;'>
 <p>If we apply a load on...
 	<ul>
-		<li class="fragment"> <strong style="color:#7abbe6">100% impermeable soil</strong>: water cannot leave \(\longrightarrow\) no <span class='atb'>consolidation</span> \(\longrightarrow\) no <span class='atb'>settlement</span>.</li>
-		<li class="fragment"> <strong style="color:#7abbe6">100% permeable soil</strong>: Water can leave <span class='atb'>instantaneously</span> \(\longrightarrow\) instantaneous <span class='atb'>consolidation</span>\(\longrightarrow\) instantaneous <span class='atb'>settlement</span>.</li>
+		<li class="fragment"> <strong style="color:red">Fully impermeable soil</strong>: water cannot leave \(\longrightarrow\) no <span class='atb'>consolidation</span> \(\longrightarrow\) no <span class='atb'>settlement</span>.</li>
+		<li class="fragment"> <strong style="color:green">Perfectly permeable soil</strong>: Water can leave <span class='atb'>instantaneously</span> \(\longrightarrow\) instantaneous <span class='atb'>consolidation</span>\(\longrightarrow\) instantaneous <span class='atb'>settlement</span>.</li>
 	</ul>
 	</p>
 </div>
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 5.1</h1>
-<p>	For clean sand or gravels, what of the following statements is true?	
- </p>
+<h1>Quiz 6.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+For <strong style='color:green'>clean sand or gravels</strong> , what of the following statements is true?
+</div>
 
-<ol class='iClicker' >
+<ol class='iClicker' style="margin-top: -25px; font-size: 0.9em;" >
 <li class='l2'>Water can leave slowly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
 <li class='l2'>Water can leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) rapid settlement.</li>
 <li class='l2'>Water can leave rapidly \(\longrightarrow\) slow consolidation \(\longrightarrow\) slow settlement.</li>
@@ -1327,11 +1350,8 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
 </script>
 
-
-
 <script src="dist/reveal.js"></script>
 <script src="plugin/qrcode/qrcode.js"></script>
-<script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/notes/notes.js"></script>
 <script src="plugin/search/search.js"></script>
@@ -1340,6 +1360,9 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/fullscreen/plugin.js"></script>
 <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
