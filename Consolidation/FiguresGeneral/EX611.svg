@@ -142,7 +142,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 50.799999,0 V 48.259999"
        id="path1" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="6.6960845"
@@ -153,7 +153,7 @@
          style="stroke-width:0.264583"
          x="6.6960845"
          y="2.2510254">For the clay:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="19.531498"
@@ -164,7 +164,7 @@
          style="stroke-width:0.264583"
          x="19.531498"
          y="2.8409119">e= wGs=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="30.43354"
@@ -175,7 +175,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="30.43354"
          y="2.8409119">0.43*2.67=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="39.478619"
@@ -186,7 +186,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="39.478619"
          y="2.8238587">1.15</tspan></text>
-    <g
+    <g class="fragment"
        id="g36"
        transform="translate(-0.3695515,-13.675404)">
       <g
@@ -273,7 +273,7 @@
            x="16.386513"
            y="20.338816">=</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g6">
       <path
          style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -303,7 +303,7 @@
            x="24.798771"
            y="8.9330368">2.15</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g8"
        style="fill:#000080">
       <text
@@ -329,7 +329,7 @@
            x="46.469967"
            y="6.0581379">3</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g20">
       <g
          id="g45">
@@ -358,18 +358,7 @@
              y="12.881182">vo</tspan></text>
       </g>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
-       x="0.322119"
-       y="27.694807"
-       id="text20"><tspan
-         sodipodi:role="line"
-         id="tspan20"
-         style="stroke-width:0.264583"
-         x="0.322119"
-         y="27.694807">3) Calculate final effective stress</tspan></text>
-    <g
+    <g class="fragment"
        id="g13"
        transform="translate(-0.17270618,2.7267476)">
       <text
@@ -394,7 +383,19 @@
            x="1.8060193"
            y="17.968193">vo</tspan></text>
     </g>
-    <text
+    <text class="fragment"
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+       x="0.322119"
+       y="27.694807"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="stroke-width:0.264583"
+         x="0.322119"
+         y="27.694807">3) Calculate final effective stress</tspan></text>
+
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="5.4621716"
@@ -405,7 +406,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="5.4621716"
          y="20.419336">9*19 + 17.4*5</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="20.557945"
@@ -416,7 +417,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="20.557945"
          y="20.44104">-9.81*11</tspan></text>
-    <g
+    <g class="Animate"
        id="g15"
        transform="translate(0,4.6422161)">
       <path
@@ -435,7 +436,7 @@
            x="6.5101943"
            y="18.193495">sand</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g16"
        transform="translate(0,4.6422161)">
       <path
@@ -455,7 +456,7 @@
            x="14.858878"
            y="18.193495">clay</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g17"
        transform="translate(0,3.0973077)">
       <path
@@ -474,7 +475,7 @@
            x="8.9919453"
            y="14.237513">total stress</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g18"
        transform="translate(0,3.0973077)">
       <path
@@ -495,7 +496,7 @@
            y="24.431816"
            id="tspan49">pressure</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="29.685179"
@@ -506,7 +507,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="29.685179"
          y="20.405384">=150.1 kPa</tspan></text>
-    <g
+    <g class="fragment"
        id="g33"
        transform="translate(4.3902243,14.948408)">
       <g
@@ -570,7 +571,7 @@
            x="6.9112906"
            y="17.989058">v</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="13.085517"
@@ -581,7 +582,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="13.085517"
          y="32.91993">= 150.1+200= </tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="29.52836"
@@ -592,7 +593,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="29.52836"
          y="33.018589">350.1 kPa</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.30583796"
@@ -603,7 +604,7 @@
          style="stroke-width:0.264583"
          x="0.30583796"
          y="37.473171">4) Calculate p.c. settlement</tspan></text>
-    <g
+    <g class="fragment"
        id="g38"
        transform="translate(-3.2327083,13.320225)">
       <text
@@ -628,7 +629,7 @@
            x="5.812777"
            y="30.727669">pc</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g44"
        transform="translate(4.3902243,16.535908)">
       <path
@@ -706,7 +707,7 @@
          id="path44"
          sodipodi:nodetypes="cc" />
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="28.426813"
@@ -717,7 +718,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="28.426813"
          y="44.239006">=0.513 m</tspan></text>
-    <g
+    <g class="fragment"
        id="g55">
       <g
          id="g56">
@@ -889,21 +890,21 @@
         </g>
       </g>
     </g>
-    <circle
+    <circle class="Animate"
        style="fill:#ff0000;stroke:#ff0000;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        id="path55"
        cx="70.930946"
        cy="17.316082"
        r="0.57730263" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.79374898,0.79374898;stroke-dashoffset:0"
        d="M 70.930946,17.316082 V 7.0664879"
        id="path56" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.79374898,0.79374898;stroke-dashoffset:0"
        d="M 70.930946,17.316082 H 56.664473"
        id="path57" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="66.612755"
@@ -914,7 +915,7 @@
          style="stroke-width:0.264583"
          x="66.612755"
          y="6.1727281">150.1 kPa</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="52.576351"
@@ -925,16 +926,16 @@
          style="stroke-width:0.264583"
          x="52.576351"
          y="18.282173">1.15</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#marker60);marker-end:url(#Dot)"
        d="m 70.930946,17.316082 2.605093,4.512155 2.605094,4.512154 2.605094,4.512154 2.605093,4.512155"
        id="path58"
        sodipodi:nodetypes="ccccc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.79374898,0.79374898;stroke-dashoffset:0"
        d="M 81.35132,35.3647 V 7.0664879"
        id="path62" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="78.649445"
@@ -945,11 +946,11 @@
          style="stroke-width:0.264583"
          x="78.649445"
          y="6.1727281">350.1 kPa</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.79374898,0.79374898;stroke-dashoffset:0"
        d="M 81.35132,35.3647 H 56.664473"
        id="path63" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="54.595001"
@@ -960,7 +961,7 @@
          style="stroke-width:0.264583"
          x="54.595001"
          y="36.226921">?</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:27.3895;display:inline;stroke-width:0.264583"
        x="60.838818"
@@ -975,11 +976,11 @@
          x="60.838818"
          y="45.466714"
          id="tspan52">and new density</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide);stroke-dasharray:none"
        d="M 59.473726,40.884263 55.92364,35.496992"
        id="path64" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="83.005653"
@@ -989,12 +990,12 @@
          id="tspan65"
          x="83.005653"
          y="24.129999">Δe=</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 94.898211,23.630202 H 101.6"
        id="path66"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="87.085785"
@@ -1005,7 +1006,7 @@
          style="stroke-width:0.264583"
          x="87.085785"
          y="24.1511">0.3 log</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="95.110718"
@@ -1016,7 +1017,7 @@
          style="stroke-width:0.264583"
          x="95.110718"
          y="23.462254">350.1</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="95.110718"
@@ -1027,7 +1028,7 @@
          style="stroke-width:0.264583"
          x="95.110718"
          y="26.458712">150.1</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="85.840454"
@@ -1038,7 +1039,7 @@
          style="stroke-width:0.264583"
          x="85.840454"
          y="29.442436">=0.11</tspan></text>
-    <g
+    <g class="fragment"
        id="g73">
       <text
          xml:space="preserve"
@@ -1053,7 +1054,7 @@
            id="tspan71">e =1.15-0.11=<tspan
    style="fill:#008000"
    id="tspan72">1.04</tspan></tspan></text>
-      <text
+      <text class="fragment"
          xml:space="preserve"
          style="font-size:2.33601px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
          x="83.066879"
@@ -1065,7 +1066,7 @@
            x="83.066879"
            y="33.592583">f</tspan></text>
     </g>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker70)"
        d="m 86.51768,24.129999 c 0.782042,1.553639 -0.416497,0.75594 -0.543997,1.393438 -0.108907,0.544535 0.66947,0.657323 0.766035,1.043587 0.08102,0.324069 -0.488119,0.276079 -0.543996,0.499589 -0.02466,0.09861 0.270703,0.816358 0.33306,1.065789"
        id="path69" />

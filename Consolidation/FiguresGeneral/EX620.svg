@@ -43,7 +43,7 @@
        d="m 50.799999,0 0,29.209999"
        id="path1"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="-0.14882812"
@@ -54,7 +54,9 @@
          style="fill:#008000;stroke-width:0.264583"
          x="-0.14882812"
          y="2.2417235">Data:</tspan></text>
-    <text
+ <g class="fragment"
+       id="g9">
+           <text 
        xml:space="preserve"
        style="font-size:1.90232px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="6.7254872"
@@ -65,7 +67,7 @@
          style="stroke-width:0.264583"
          x="6.7254872"
          y="7.1699872">sat</tspan></text>
-    <text
+    <text 
        xml:space="preserve"
        style="font-size:2.08421px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="19.610239"
@@ -76,8 +78,7 @@
          style="stroke-width:0.264583"
          x="19.610239"
          y="4.0602388">3</tspan></text>
-    <g
-       id="g9">
+   
       <text
          xml:space="preserve"
          style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
@@ -135,7 +136,26 @@
            x="37.119728"
            y="9.7934637">r</tspan></text>
     </g>
-    <g
+    <text class="fragment"
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
+       x="0.13582572"
+       y="10.460533"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="fill:#008000;stroke-width:0.264583"
+         x="0.13582572"
+         y="10.460533">Principles:</tspan></text>
+    
+
+
+
+
+
+
+
+    <g class="fragment"
        id="g20"
        transform="translate(-7.0127193,-7.137471)">
       <text
@@ -270,7 +290,7 @@
            x="38.641041"
            y="19.868048">vf</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="0.28230709"
@@ -281,7 +301,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="0.28230709"
          y="18.939274">Solution:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="9.4107685"
@@ -292,7 +312,7 @@
          style="stroke-width:0.264583"
          x="9.4107685"
          y="19.270308">1) Find unit weigth of clay</tspan></text>
-    <g
+    <g class="fragment"
        id="g24"
        transform="translate(-11.884122,1.3409434)">
       <text
@@ -317,7 +337,7 @@
            x="13.517436"
            y="26.603333">sat</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.62802225"
@@ -328,7 +348,7 @@
          style="stroke-width:0.264583"
          x="0.62802225"
          y="22.019695">e=wGs= </tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="9.1129618"
@@ -339,7 +359,7 @@
          style="stroke-width:0.264583"
          x="9.1129618"
          y="22.037523">0.38*2.67=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="22.043589"
@@ -350,7 +370,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="22.043589"
          y="22.182791">1.01</tspan></text>
-    <g
+    <g  class="Animate"
        id="g29"
        transform="translate(0,1.0583333)">
       <path
@@ -381,7 +401,7 @@
            x="13.485751"
            y="27.612822">2.01</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g31"
        style="fill:#000080"
        transform="translate(0,1.0583333)">
@@ -408,7 +428,7 @@
            x="35.554459"
            y="24.899349">3</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="51.058224"
@@ -419,7 +439,7 @@
          style="stroke-width:0.264583"
          x="51.058224"
          y="2.7138956">2) Calculate effective stress @ midpoint</tspan></text>
-    <g
+    <g class="fragment"
        id="g34"
        transform="translate(-3.2660471,-0.09420337)">
       <text
@@ -444,7 +464,7 @@
            x="55.158878"
            y="6.9824538">vo</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="55.265976"
@@ -455,7 +475,7 @@
          style="stroke-width:0.264583"
          x="55.265976"
          y="6.6617708">19*9+18*5 - 9.81*11=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="78.251236"
@@ -466,7 +486,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="78.251236"
          y="6.6974277">153.1 kPa</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="51.246632"
@@ -477,7 +497,7 @@
          style="stroke-width:0.264583"
          x="51.246632"
          y="9.8205471">3) Calculate final vert. effective stress</tspan></text>
-    <g
+    <g class="fragment"
        id="g40"
        transform="translate(-3.2660471,6.3859929)">
       <text
@@ -502,7 +522,7 @@
            x="55.158878"
            y="6.9824538">vf</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="54.980103"
@@ -513,7 +533,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="54.980103"
          y="13.085986">153.1+200= 353.1 kPa</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:39.9859;display:inline;stroke-width:0.264583"
        x="54.446724"
@@ -523,7 +543,7 @@
          x="54.446724"
          y="11.015904"
          id="tspan61">4) Check case</tspan></text>
-    <g
+    <g class="fragment"
        id="g51">
       <text
          xml:space="preserve"
@@ -558,7 +578,7 @@
            x="64.011597"
            y="20.139387">vo</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="65.80529"
@@ -569,7 +589,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="65.80529"
          y="19.808264">=4*153.1=612.4kPa</tspan></text>
-    <g
+    <g class="Animate"
        id="g50"
        transform="translate(34.332019,12.855994)"
        style="fill:#ff0000">
@@ -607,7 +627,7 @@
            x="55.158878"
            y="6.9824538">vf</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="57.959663"
@@ -618,7 +638,7 @@
          style="stroke-width:0.264583"
          x="57.959663"
          y="23.253899" /></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000000;stroke-width:0.264583"
        x="51.418976"
@@ -629,18 +649,7 @@
          style="fill:#000000;stroke-width:0.264583"
          x="51.418976"
          y="22.918201">5) Calculate settlement</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
-       x="0.13582572"
-       y="10.460533"
-       id="text8"><tspan
-         sodipodi:role="line"
-         id="tspan8"
-         style="fill:#008000;stroke-width:0.264583"
-         x="0.13582572"
-         y="10.460533">Principles:</tspan></text>
-    <g
+<g class="fragment"
        id="g60">
       <text
          xml:space="preserve"
@@ -664,7 +673,7 @@
            x="52.850464"
            y="27.205463">pc</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g59">
       <path
          style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -741,7 +750,7 @@
          id="path59"
          sodipodi:nodetypes="cc" />
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="79.534782"

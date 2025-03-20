@@ -590,17 +590,17 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Dot);marker-mid:url(#Dot);marker-start:url(#Dot);stroke-dasharray:none"
        d="m 21.131565,28.406626 c 1.112575,0.332179 1.947007,0.839458 2.602405,1.489306 0.655397,0.649847 1.131761,1.442264 1.528201,2.344721 0.396441,0.902456 0.712957,1.914952 1.04866,3.004957 0.335702,1.090005 0.690591,2.257519 1.163776,3.470012 0.473186,1.212494 1.064667,2.469966 1.873555,3.739888 0.808888,1.269922 1.835182,2.552293 3.177993,3.814584 1.34281,1.26229 3.002137,2.5045 5.077091,3.694099 2.074953,1.189598 4.565533,2.326587 7.570849,3.378434"
        id="path1"
        sodipodi:nodetypes="csssssssc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 28.32156,37.610332 c 1.962667,3.790484 4.062843,6.402682 6.300529,7.836595"
        id="path2"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#0000ff"
        x="40.711613"
@@ -611,17 +611,17 @@
          style="stroke-width:0.264583;fill:#0000ff"
          x="40.711613"
          y="41.634476">Loading path</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Dot);marker-mid:url(#Dot);marker-start:url(#Dot);stroke-dasharray:none"
        d="m 45.174095,53.342627 c -2.268539,0.158336 -4.52361,0.294102 -6.709129,0.313312 -2.185518,0.01921 -4.301484,-0.07813 -6.291813,-0.386021 -1.99033,-0.307885 -3.855022,-0.826311 -5.537995,-1.649262 -1.682972,-0.82295 -3.184224,-1.950426 -4.447671,-3.476412"
        id="path4"
        sodipodi:nodetypes="csssc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="M 37.913961,55.208241 C 34.060306,55.141941 30.779762,54.73475 28.07233,53.986668"
        id="path5"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#ff0000"
        x="34.221092"
@@ -632,7 +632,7 @@
          style="stroke-width:0.264583;fill:#ff0000"
          x="34.221092"
          y="58.15284">Unloading</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.828;display:inline;stroke-width:0.264583"
        x="40.733315"
@@ -645,11 +645,11 @@
          x="40.733315"
          y="36.141518"
          id="tspan12">linearities</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#008000;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
        d="M 58.295333,43.463017 H 69.552507"
        id="path6" />
-    <path
+    <path 
        id="path13798"
        style="fill:none;stroke:#000000;stroke-width:0.444138;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 116.80907,61.140206 H 77.658739 V 25.563759"
@@ -1020,17 +1020,17 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Dot);marker-mid:url(#Dot);marker-start:url(#Dot)"
        d="m 80.468614,28.406626 c 2.383841,0.137595 4.512312,0.252784 6.427528,0.397114 1.915215,0.14433 3.617174,0.317801 5.147989,0.571959 1.530815,0.254158 2.890486,0.589004 4.121125,1.056085 1.230639,0.467081 2.332246,1.066396 3.346934,1.849493 1.01469,0.783097 1.94246,1.749976 2.82542,2.952183 0.88296,1.202208 1.72112,2.639744 2.55658,4.364156 0.83546,1.724411 1.66822,3.735699 2.5404,6.085409 0.87219,2.34971 1.78379,5.037843 2.77692,8.115945"
        id="path8"
        sodipodi:nodetypes="csssssssc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 97.12287,27.950395 c 4.72792,1.410051 7.51791,5.932546 10.27959,10.500497"
        id="path9"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:13.831;display:inline;fill:#0000ff;stroke-width:0.264583"
        x="105.8508"
@@ -1045,17 +1045,17 @@
          x="105.8508"
          y="31.674433"
          id="tspan16">path</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Dot);marker-mid:url(#Dot);marker-start:url(#Dot)"
        d="m 110.21151,53.79897 -7.35294,-0.724713 -7.352948,-0.724713 -7.352943,-0.724713 -7.352944,-0.724713"
        id="path10"
        sodipodi:nodetypes="ccccc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="M 93.032162,50.68326 85.566968,50.024757"
        id="path11"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:15.9463;display:inline;fill:#ff0000;stroke-width:0.264583"
        x="92.071648"
@@ -1070,11 +1070,11 @@
          x="92.071648"
          y="60.929341"
          id="tspan19">path</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="M 99.51219,32.281277 V 61.140205"
        id="path12" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,94.325509,56.982148)"
        ns14:version="1.10.2"
        ns14:texconverter="pdflatex"
@@ -1161,7 +1161,7 @@
         </g>
       </g>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:28.3026;display:inline;fill:#008000;stroke-width:0.264583"
        x="105.8508"

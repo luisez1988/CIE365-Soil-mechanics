@@ -38,7 +38,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="2.8029296"
@@ -49,7 +49,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="3.2439878"
          y="2.2417235">Data: </tspan></text>
-    <g
+    <g class="fragment"
        id="g6">
       <text
          xml:space="preserve"
@@ -112,8 +112,8 @@
            style="stroke-width:0.264583"
            x="44.157387"
            y="5.6624789">c</tspan></text>
-    </g>
-    <text
+   </g>
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="4.8485413"
@@ -124,7 +124,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="4.8485413"
          y="8.7681503">Principles:</tspan></text>
-    <g
+    <g class="fragment"
        id="g21"
        transform="translate(0,-1.0583333)">
       <text
@@ -267,7 +267,7 @@
            x="34.540646"
            y="13.490761">vo</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="4.8314881"
@@ -278,7 +278,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="4.8314881"
          y="16.05805">Solution:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="26.306599"
@@ -289,7 +289,7 @@
          style="stroke-width:0.264583"
          x="26.306599"
          y="16.05805">Let's find the unit weights first</tspan></text>
-    <g
+    <g class="fragment"
        id="g36">
       <g
          id="g28">
@@ -375,7 +375,7 @@
            x="16.386513"
            y="20.338816">=</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g35"
        style="fill:#000080">
       <path
@@ -417,7 +417,7 @@
            x="36.28125"
            y="20.649672">=</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g34"
        style="fill:#000080">
       <text
