@@ -672,20 +672,27 @@ The following observations can be drawn from observed soil behavior:
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
-	<p>Settlement in <strong style="color:#7abbe6">normally consolidated soils</strong></p>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+		Settlement in <strong style="color:green">normally consolidated soils</strong>
+	</div>	
 	<div class="container">
-		<div class="col">
+		<div class="col" style="width: 50%;">
 	            <figure>
 	              <img src="FiguresGeneral/normally_pcsettle.svg" style="width:100%" data-preload/>
 	              <footer style="margin-top:-60px;"><small></small></footer>
 	            </figure>
 		</div>
-		<div class="col">
+		<div class="col" style="width: 50%;">
 			<ul>
 				<li>Stress path moves along <strong style="color:blue">virgin curve</strong></li>
-				<li>Then:
+				<li>Then: <br>
+					\( \begin{align}
+					\delta_{pc}&= - \cfrac{H_0 \Delta e}{1+e_0} \\
+				
+					\end{align} \)
+
 				<div class='equationBox'>
-				\(\Delta H= C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_0}\right)\)
+				\(\delta_{pc}= C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
 				</div>
 
 				</li>
@@ -695,42 +702,54 @@ The following observations can be drawn from observed soil behavior:
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.2</h1>
+	<h1>Example 6.1</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p style="margin-top:0px;font-size:1em">Estimate the primary consolidation settlement for the clay in the profile below. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The increase of vertical stress is estimated to be 200 kPa at the middle of the clay layer. Assume the soil above the water table to be saturated, \(C_c=0.3\), and \(G_s=2.7\).</p>
+		
+	</div>
 	<div class="container">
-		<div class="col">
+		<div class="col" style="width: 30%;">
 <figure>
-  <img src="FiguresGeneral/problem_2.svg" style="width:100%" data-preload/>
+  <img src="FiguresGeneral/Profile_ex61.svg" style="width:100%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
 </figure>
 		</div>
-		<div class="col">
-			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-				<p style="margin-top:0px;font-size:30px">The soil profile at a site for a proposed office building consists of a layer of fine sand 10.4 m thick above a layer of soft, normally consolidated clay 10 m thick. Below the soft clay is a deposit of coarse sand. The groundwater table was observed at 3 m below ground level. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The building will impose a vertical stress increase of 200 kPa at the middle of the clay layer. Estimate the primary consolidation settlement of the clay. Assume the soil above the water table to be saturated, \(C_c=0.3\), and \(G_s=2.7\).</p>
-				<a href="#27">Go to Jupyter Notebook</a>
-			</div>
+		<div class="col" style="width: 70%;">
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX610.svg'></object>
+</div>
 
 		</div>
 	</div>
 
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX611.svg'></object>
+</div>
+
+</section>
+
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
-	<p>Settlement in <strong style="color:#7abbe6">overconsolidated soils. Case a:</strong></p>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	Settlement in <strong style="color:green">overconsolidated soils. <br>
+	Case a:</strong> \(\sigma'_f<\sigma'_c\)  
+</div>
+
 	<div class="container">
-		<div class="col">
-			<p>\(\sigma'_f<\sigma'_c\)</p>
+		<div class="col" style="width: 50%;">			
 	            <figure>
 	              <img src="FiguresGeneral/pc_overconsol.svg" style="width:80%" data-preload/>
 	              <footer style="margin-top:-60px;"><small></small></footer>
 	            </figure>
 		</div>
-		<div class="col">
+		<div class="col" style="width: 50%;">
 			<ul>
 				<li>Stress path moves along <strong style="color:red">recompression curve</strong></li>
 				<li>Then:
 				<div class='equationBox'>
-				\(\Delta H= C_r \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_0}\right)\)
+				\(\delta_{pc}= C_r \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
 				</div>
 
 				</li>
@@ -740,42 +759,50 @@ The following observations can be drawn from observed soil behavior:
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.3</h1>
+	<h1>Example 6.2</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p>Solve problem 5.2 but assuming \(OCR=4\), \(w=38\%\), and \(C_r=0.05\). All other soil values given in Example 5.2 remain unchanged. Note that the unit weight of sand is unchanged, only the clay unit weight is changed.</p>
-		<a href="#27">Go to Jupyter Notebook</a>
+		<p>Solve problem 6.1 but assuming the clay has \(OCR=4\), \(w=38\%\), and \(C_r=0.05\). All other values from Example 6.1 are unchanged.</p>		
+	</div>
+
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX620.svg'></object>
 	</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
-	<p>Settlement in <strong style="color:#7abbe6">overconsolidated soils. Case b:</strong></p>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+		Settlement in <strong style="color:green">overconsolidated soils. <br>
+		Case b:</strong> \(\sigma'_f>\sigma'_c\)
+	</div>
 	<div class="container">
-		<div class="col">
-			<p>\(\sigma'_f>\sigma'_c\)</p>
+		<div class="col" style="width: 50%;">			
 	            <figure>
 	              <img src="FiguresGeneral/pc_complexoverconsol.svg" style="width:100%" data-preload/>
 	              <footer style="margin-top:-60px;"><small></small></footer>
 	            </figure>
 		</div>
-		<div class="col">
-			<ul>
-				<li>Stress path moves along <strong style="color:red">recompression curve</strong> and <strong style="color:blue">virgin curve</strong></li>
-				<li style="margin-top:0px; font-size:30px">Then:
-					<div class='equationBox'>
-					\(\Delta H= C_r \cfrac{H_0}{1+e_0} \log \left(OCR\right)+ C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_f}{\sigma'_c}\right)\)
-					</div>
-				</li>
-			</ul>
+		<div class="col" style="width: 50%;">
+
+				<p style="margin-top: 100px;">Stress path moves along <strong style="color:red">recompression curve</strong> and <strong style="color:blue">virgin curve</strong></p>
+
+
 		</div>
 	</div>
+
+	<div class='equationBox'>
+		\(\delta_{pc} = C_r \cfrac{H_o}{1+e_o} \log \left(OCR\right)+ C_c \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_c}\right)\)
+		</div>
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.4</h1>
+	<h1>Example 6.3</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-<p>Solve problem 5.3 assuming \(OCR=1.2\). Determine the primary consolidation settlement.</p>
-<a href="#27">Go to Jupyter Notebook</a>
+<p>Solve problem 6.2 assuming \(OCR=1.2\). Determine the primary consolidation settlement.</p>
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX630.svg'></object>
 </div>
 
 </section>
@@ -783,46 +810,55 @@ The following observations can be drawn from observed soil behavior:
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1 style="margin-top:0px;font-size:55px">Primary consolidation in layered soils</h1>
-<div class="container">
-	<div class="col">
     <figure>
-      <img src="FiguresGeneral/multiple_consol.svg" style="width:100%" data-preload/>
-      <footer style="margin-top:-60px;"><small></small></footer>
-    </figure>
-	</div>
-	<div class="col">
-<ol style="margin-top:0px;font-size:28px">
-	<li class="fragment"> Determine initial vertical effective stresses (\(\sigma'_0\)) at the center of soil layers of concern. If thick layers, divide and find \(\sigma'_0\) for centers of sub-layers.
+		<img src="FiguresGeneral/multiple_consol.svg" style="width:60%" data-preload/>
+		<footer style="margin-top:-60px;"><small></small></footer>
+	  </figure>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Follow the steps below to calculate \(\delta_{pc}\) in multilayered soils:
+</div>
+<ol style="margin-top:0px;font-size:0.95em">
+	<li class="fragment"> Determine initial vertical effective stresses (\(\sigma'_{vo}\)) at the center of soil layers of concern. If thick layers, divide and find \(\sigma'_{vo}\) for centers of sub-layers.
  </li>
- <li class="fragment"> Extract soil sample at the center of each layer or sub-layer and run consolidation tests.
+ <li class="fragment"> Extract sample at the center of each layer or sub-layer and run consolidation tests.
  </li>
- <li class="fragment"> Determine preconsolidation stress \(\sigma'_c\) and initial void ratio \(e_0=G_s w_0\) for layers of concern.</li>
+ <li class="fragment"> Determine \(\sigma'_c\) and initial void ratio \(e_0=G_s w_0\) for layers of concern.</li>
 	 <li class="fragment"> Determine \(C_c\) and \(C_r\) for layers of concern.
 
  </li>
  <li class="fragment">Determine \(\Delta \sigma\) due to external load at the center of each layer of concern.
   </li>
-	<li class="fragment">Compute settlement \(\Delta H\) for each individual layer of concern considering initial high of each layer \(H_0\).
+	<li class="fragment">Compute settlement \(\delta_{pc,i}\) for each individual layer of concern considering initial high of each layer \(H_o\).
   </li>
-	<li class="fragment"> Total settlement \(=\sum \Delta H\)
+	<li class="fragment"> Total settlement \(=\sum \delta_{pc,i}\)
  </li>
 </ol>
-	</div>
-</div>
+
+
 </section>
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 5.5</h1>
+	<h1>Example 6.4</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-<p>Solve problem 5.2 subdividing the clay layer into 3 sublayers. How does the result compares with solution of problem 5.2?</p>
-<a href="#27">Go to Jupyter Notebook</a>
+Calculate the settlement due to primary consolidation for the soil profile shown in the figure below. Use: (a) a single layer assumption, and (b) 10 sub-layers.
 </div>
-
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/complex_problem.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX640.svg'></object>
+</div>
+</div>
+</div>
 </section>
-
-    <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-
-    </section>
 
 
 
@@ -869,7 +905,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/Animated_lines/animate_svg.js"></script>
