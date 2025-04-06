@@ -7,7 +7,7 @@
    viewBox="0 0 186.79584 86.518745"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    sodipodi:docname="solution.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,14 +26,16 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.622695"
-     inkscape:cx="409.19582"
-     inkscape:cy="94.903849"
-     inkscape:window-width="2400"
-     inkscape:window-height="1280"
-     inkscape:window-x="2391"
-     inkscape:window-y="-9"
+     inkscape:cx="317.37326"
+     inkscape:cy="174.40123"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2">
     <clipPath
@@ -204,7 +206,7 @@
      id="layer1"
      transform="translate(8.0795921,-81.259259)">
     <path
-       d="M 118.39124,91.048842 V 156.40092"
+       d="M 118.78811,91.048842 V 156.40092"
        stroke="#f5f5f5"
        stroke-width="0.529167"
        stroke-linejoin="round"
@@ -244,7 +246,7 @@
        id="path857"
        style="stroke-width:0.264583;fill:#000000" />
     <path
-       d="M 53.30374,91.048842 V 156.40092"
+       d="M 52.583146,91.048842 V 156.40092"
        stroke="#f5f5f5"
        stroke-width="0.529167"
        stroke-linejoin="round"
@@ -514,19 +516,19 @@
        id="path953"
        style="stroke-width:0.264583;fill:#000000" />
     <path
-       d="M 53.436032,163.94155 V 153.35822"
+       d="M 52.50999,163.94155 V 153.35822"
        stroke="#f5f5f5"
        stroke-linejoin="round"
        stroke-miterlimit="10"
        fill="none"
        fill-rule="evenodd"
        id="path955"
-       style="stroke-width:0.264583;fill:#000000;stroke:#000000" />
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583" />
     <path
-       d="m 53.436032,158.51759 h 10.583333 v 0.26458 H 53.436032 Z m 0,1.19063 c -0.584464,0 -1.058333,-0.47387 -1.058333,-1.05834 0,-0.58446 0.473869,-1.05833 1.058333,-1.05833 0.584465,0 1.058333,0.47387 1.058333,1.05833 0,0.58447 -0.473868,1.05834 -1.058333,1.05834 z"
+       d="m 52.50999,158.51759 h 10.583333 v 0.26458 H 52.50999 Z m 0,1.19063 c -0.584464,0 -1.058333,-0.47387 -1.058333,-1.05834 0,-0.58446 0.473869,-1.05833 1.058333,-1.05833 0.584465,0 1.058333,0.47387 1.058333,1.05833 0,0.58447 -0.473868,1.05834 -1.058333,1.05834 z"
        fill="#f5f5f5"
        id="path957"
-       style="stroke-width:0.264583;fill:#000000" />
+       style="fill:#000000;stroke-width:0.264583" />
     <path
        d="M 118.78811,161.82488 V 151.24155"
        stroke="#f5f5f5"
@@ -822,7 +824,7 @@
    id="tspan1039"
    style="stroke-width:0.0700043">0</tspan></text>
     <path
-       d="M 53.568324,91.048842 V 156.40092"
+       d="M 52.509991,91.048842 V 156.40092"
        stroke="#ff0000"
        stroke-width="1.05833"
        stroke-linejoin="round"
@@ -832,7 +834,7 @@
        id="path1043"
        style="fill:#000000" />
     <path
-       d="M 53.832907,91.048842 V 156.40092"
+       d="M 52.509991,90.818252 V 156.17033"
        stroke="#0000ff"
        stroke-width="1.05833"
        stroke-linejoin="round"
@@ -882,7 +884,7 @@
        id="path1053"
        style="fill:none" />
     <path
-       d="M 118.36002,91.313425 118.12669,155.74"
+       d="M 119.02144,91.313425 118.78811,155.74"
        stroke="#c00000"
        stroke-width="1.05833"
        stroke-linejoin="round"
