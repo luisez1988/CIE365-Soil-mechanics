@@ -388,9 +388,9 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(65.1616, -49.3477)">
-    <g
+    <g class="fragment"
        id="g36">
-      <g
+      <g 
          id="g35">
         <rect
            style="fill:#5b9bd5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke"
@@ -800,7 +800,7 @@
              y="95.210793">Only geostatic loading</tspan></text>
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g199">
       <rect
          style="fill:#5b9bd5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke"
@@ -1343,7 +1343,7 @@
            y="110.92083"
            id="tspan11">carried by the water</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g229">
       <path
          style="fill:none;stroke:#008000;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
@@ -1370,7 +1370,7 @@
            y="72.402649"
            id="tspan18">soil</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g230">
       <rect
          style="fill:#5b9bd5;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke"
@@ -1401,7 +1401,7 @@
          style="fill:url(#pattern179);fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:none"
          d="M 9.304695,57.586573 V 83.994776 H 30.082039 V 57.586573 H 28.216805 V 82.129542 H 11.167976 V 57.586573 Z"
          id="path128" />
-      <g
+      <g 
          id="g128"
          transform="translate(92.570293,32.098048)">
         <rect

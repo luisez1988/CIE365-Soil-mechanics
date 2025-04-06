@@ -34,7 +34,7 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
-  <g
+  <g 
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
@@ -42,7 +42,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 50.799999,0 V 48.259999"
        id="path1" />
-    <g
+    <g class="fragment"
        id="g2"
        transform="translate(-0.55204503,-4.4344621)">
       <text
@@ -68,7 +68,7 @@
            x="23.172506"
            y="6.2708564">2</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g7"
        transform="translate(-4.9104928,-1.6861595)">
       <text
@@ -139,7 +139,7 @@
            x="25.75935"
            y="9.690896">=70.6 yrs</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.7572;display:inline;fill:#ff0000;stroke-width:0.324583"
        x="34.05579"
@@ -164,7 +164,7 @@
          x="34.05579"
          y="14.842768"
          id="tspan57">centuries</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="17.239864"
@@ -175,7 +175,7 @@
          style="stroke-width:0.264583"
          x="17.239864"
          y="16.190645">3) Calculate settlement vs. time</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:31.657;display:inline;stroke-width:0.264583"
        x="4.0072942"
@@ -187,7 +187,7 @@
          x="4.0072942"
          y="22.445304"
          id="tspan59">e.g. t= 0 to 75 yrs</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="3.8310807"
@@ -198,7 +198,7 @@
          style="stroke-width:0.264583"
          x="3.8310807"
          y="26.548777">Sample calculation for t=25 yrs</tspan></text>
-    <g
+    <g class="fragment"
        id="g14"
        transform="translate(-2.0523649,-1.2148205)">
       <text
@@ -224,7 +224,7 @@
            x="20.990376"
            y="29.986656">2</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g20">
       <text
          xml:space="preserve"
@@ -291,7 +291,7 @@
              y="34.848415">2</tspan></text>
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g22"
        style="fill:#000080"
        transform="translate(-1.8002685,-0.24620605)">
@@ -334,7 +334,7 @@
            x="20.118856"
            y="36.170979">25</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="24.362589"
@@ -345,7 +345,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="24.362589"
          y="33.860321">=15</tspan></text>
-    <g
+    <g class="fragment"
        id="g29"
        transform="translate(-2.4222652,-0.66432591)">
       <text
@@ -417,7 +417,7 @@
            x="25.571825"
            y="40.21484">2</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="7.6957626"
@@ -428,7 +428,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="7.6957626"
          y="45.680286">=[1-0.811*exp(-9.87*15/4)]*100</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="42.835167"
@@ -439,7 +439,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="42.835167"
          y="45.616726">=100%</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="52.631756"
@@ -449,7 +449,7 @@
          id="tspan32"
          x="52.631756"
          y="4.0288792">δ(25 yr)= </tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="63.030407"
@@ -460,7 +460,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="63.030407"
          y="4.0443821">100*0.513/100=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="81.912163"
@@ -471,7 +471,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="81.912163"
          y="4.0443821">0.513 m</tspan></text>
-    <g
+    <g class="fragment"
        id="g36"
        transform="translate(-3.7075581,-3.1100782)">
       <text
@@ -497,7 +497,7 @@
            x="72.56179"
            y="10.106102">2</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g42"
        transform="translate(48.24423,-21.508609)">
       <text
@@ -565,7 +565,7 @@
              y="34.848415">2</tspan></text>
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g45">
       <text
          xml:space="preserve"
@@ -609,7 +609,7 @@
              y="14.481921">25</tspan></text>
       </g>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="73.026489"
@@ -620,7 +620,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="73.026489"
          y="12.602516">=0.4</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="53.133587"
@@ -631,7 +631,7 @@
          style="stroke-width:0.264583"
          x="53.133587"
          y="18.97003">From table:</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="66.360672"
@@ -642,7 +642,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="66.360672"
          y="19.005255">U[%]=70%</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="52.631756"
@@ -652,7 +652,7 @@
          id="tspan48"
          x="52.631756"
          y="24.737413">δ(25 yr)= </tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="62.574326"
@@ -663,7 +663,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="62.574326"
          y="24.752916">70*0.513/100=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="80.663155"
@@ -674,7 +674,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="80.663155"
          y="24.745939">0.36 m</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="52.601379"

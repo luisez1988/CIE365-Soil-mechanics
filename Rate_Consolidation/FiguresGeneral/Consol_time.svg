@@ -480,7 +480,7 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="45.705303"
          y="3.3539793">Settlement vs time</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;white-space:pre;inline-size:48.6557;display:inline;fill:#ff6600;stroke-width:0.264583"
        x="55.34066"
@@ -492,11 +492,11 @@
          id="tspan6">1) Pick an early time and label it t<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan2">1</tspan></tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff6600;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#ArrowWide)"
        d="M 12.443293,6.2343992 V 44.381787"
        id="path8" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,11.42726,45.043379)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -561,7 +561,7 @@
         </g>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;white-space:pre;inline-size:48.6462;display:inline;fill:#008000;stroke-width:0.264583"
        x="57.528744"
@@ -573,12 +573,12 @@
          id="tspan9">2) Use 4t<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan8">1</tspan> to find the initial void ratio</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker12);marker-mid:url(#X)"
        d="M 24.835854,44.381787 V 9.9066637 1.8704096"
        id="path11"
        sodipodi:nodetypes="ccc" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,22.790601,45.294461)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -665,15 +665,15 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
        d="M 12.443292,6.2343992 H 24.835854"
        id="path28" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker30);marker-end:url(#Stop)"
        d="M 26.781479,6.2343992 V 9.9066635"
        id="path29" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,27.669078,6.7915788)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -738,11 +738,11 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker30);marker-end:url(#Stop)"
        d="M 26.781479,2.5621349 V 6.2343992"
        id="path32" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,27.669078,3.1193145)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -807,11 +807,11 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker41)"
        d="M 26.781479,2.5621349 H 9.1398042"
        id="path40" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,6.1034603,2.5622231)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -876,7 +876,7 @@
         </g>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="52.845856"
@@ -887,20 +887,20 @@
          style="fill:#000080;stroke-width:0.264583"
          x="52.845856"
          y="19.861139">3) use tangents to find EOP</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.05833, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
        d="M 31.21664,17.27733 45.318305,42.492324"
        id="path43"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.05833, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
        d="M 74.904847,41.679328 38.255071,37.216214"
        id="path44" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker47);marker-end:url(#marker46)"
        d="m 42.668154,37.753628 v 6.628159"
        id="path45" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,38.843181,44.796294)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
@@ -1009,11 +1009,11 @@
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker52)"
        d="M 42.668154,37.753628 H 9.1398042"
        id="path51" />
-    <g
+    <g class="Animate"
        id="g57"
        transform="matrix(0.352778,0,0,0.352778,0.53854874,35.093461)"
        style="fill:#000080">
@@ -1082,7 +1082,7 @@
         </g>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:8.99999px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;white-space:pre;inline-size:142.763;display:inline;fill:#800000;stroke-width:0.75"
        x="134.63828"
@@ -1097,11 +1097,11 @@
          id="tspan12">t<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan11">50</tspan></tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#800000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker62);marker-mid:url(#marker60);marker-start:url(#marker61)"
        d="M 9.1398039,20.157881 H 32.876625 v 24.223906"
        id="path58" />
-    <g
+    <g class="Animate"
        transform="matrix(0.352778,0,0,0.352778,31.166596,44.750176)"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"

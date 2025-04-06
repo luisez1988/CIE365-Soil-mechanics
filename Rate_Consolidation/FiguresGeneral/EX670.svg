@@ -42,7 +42,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 50.799999,0 V 20.32"
        id="path1" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="0.38033855"
@@ -53,7 +53,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="0.38033855"
          y="2.7708902">Data:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="7.1453004"
@@ -64,7 +64,7 @@
          style="stroke-width:0.264583"
          x="7.1453004"
          y="2.8290262">Ho=10 m</tspan></text>
-    <g
+    <g class="fragment"
        id="g6"
        transform="translate(-4.4417854,-7.4870176)">
       <text
@@ -90,7 +90,7 @@
            y="10.472088"
            style="stroke-width:0.264583">α</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g7"
        transform="translate(9.1216216,-12.195261)">
       <text
@@ -116,7 +116,7 @@
            x="24.13018"
            y="15.302092">o</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g8"
        transform="translate(-30.010135,-8.027027)">
       <text
@@ -142,7 +142,7 @@
            x="37.415447"
            y="15.089866">95%</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:30.4895;stroke-width:0.264583"
        x="21.709459"
@@ -155,7 +155,7 @@
          x="21.709459"
          y="8.1699662"
          id="tspan32">properties)</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="0.091216095"
@@ -166,7 +166,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="0.091216095"
          y="11.836622">Principles:</tspan></text>
-    <g
+    <g class="fragment"
        id="g19">
       <g
          id="g18"
@@ -280,7 +280,7 @@
            x="24.355305"
            y="18.562794">o</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g21"
        transform="translate(-2.0317376,-1.3127749)">
       <text
@@ -306,7 +306,7 @@
            x="55.591511"
            y="6.0148473">f</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="56.366055"
@@ -317,7 +317,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="56.366055"
          y="4.4178638">1.88+10=</tspan></text>
-    <g
+    <g class="Animate"
        id="g23">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -337,7 +337,7 @@
            y="12.368693"
            id="tspan34">95% of consolidation</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="66.049492"
@@ -348,7 +348,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="66.049492"
          y="4.2841864">11.88 yrs</tspan></text>
-    <g
+    <g class="fragment"
        id="g26"
        transform="translate(-3.2077658,-1.6786606)">
       <text
@@ -373,7 +373,7 @@
            x="56.558643"
            y="15.869802">sc</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g29"
        transform="translate(0,0.86907378)">
       <path
@@ -415,7 +415,7 @@
            x="68.595329"
            y="12.258218">log(11.88/1.88)</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="83.882011"

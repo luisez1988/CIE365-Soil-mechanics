@@ -43,7 +43,7 @@
        d="m 50.799999,0 0,33.019999"
        id="path1"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="2.8029296"
@@ -54,7 +54,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="2.8029299"
          y="2.2417235">Data:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="19.657095"
@@ -65,7 +65,7 @@
          style="stroke-width:0.264583"
          x="19.657095"
          y="2.1967652">U= 50%, 90%, and 95%</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="5.1487813"
@@ -76,7 +76,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="5.1487813"
          y="5.1474895">Principles:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="23.315632"
@@ -87,7 +87,7 @@
          style="stroke-width:0.264583"
          x="23.315632"
          y="5.0002117">Approximation to solution</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="5.9868374"
@@ -98,7 +98,7 @@
          style="stroke-width:0.264583"
          x="5.9868374"
          y="8.2945843">1) U=50%</tspan></text>
-    <g
+    <g class="fragment"
        id="g11">
       <text
          xml:space="preserve"
@@ -161,7 +161,7 @@
              y="10.523737">π</tspan></text>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="3.2301166"
@@ -172,7 +172,7 @@
          style="stroke-width:0.264583"
          x="3.2301166"
          y="16.5193">Tv=</tspan></text>
-    <g
+    <g class="Animate"
        id="g13"
        style="fill:#000080">
       <text
@@ -197,7 +197,7 @@
            x="19.651415"
            y="14.843791">2</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="23.760262"
@@ -208,7 +208,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="23.760262"
          y="16.520849">=0.196</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="6.3586078"
@@ -219,7 +219,7 @@
          style="stroke-width:0.264583"
          x="6.3586078"
          y="22.263552">2) U=90%</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="7.1122065"
@@ -230,7 +230,7 @@
          style="stroke-width:0.264583"
          x="7.5532646"
          y="26.89892">Use: </tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="25.185837"
@@ -241,7 +241,7 @@
          style="stroke-width:0.264583"
          x="25.185837"
          y="27.073853">Tv=1.781-0.933 log(100-U)</tspan></text>
-    <text
+    <text class='fragment'
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="3.2301166"
@@ -252,7 +252,7 @@
          style="stroke-width:0.264583"
          x="3.2301164"
          y="31.197035">Tv=</tspan></text>
-    <text
+    <text class='Animate'
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="19.724365"
@@ -263,7 +263,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="19.724365"
          y="31.216618">1.781-0.933*log(100-90)=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="37.329235"
@@ -274,7 +274,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="37.329235"
          y="31.499905">0.848</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="57.79549"
@@ -285,7 +285,7 @@
          style="stroke-width:0.264583"
          x="57.79549"
          y="8.1256027">3) U=95%</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="60.558041"
@@ -296,7 +296,7 @@
          style="stroke-width:0.264583"
          x="60.9991"
          y="12.369285">Use: </tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="78.631668"
@@ -307,7 +307,7 @@
          style="stroke-width:0.264583"
          x="78.631668"
          y="12.544217">Tv=1.781-0.933 log(100-U)</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="54.294701"
@@ -318,7 +318,7 @@
          style="stroke-width:0.264583"
          x="54.294701"
          y="18.842627">Tv=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="70.788948"
@@ -329,7 +329,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="70.788948"
          y="18.862209">1.781-0.933*log(100-95)=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="87.769211"

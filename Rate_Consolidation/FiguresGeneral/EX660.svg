@@ -59,7 +59,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="-0.14882812"
@@ -70,7 +70,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="-0.14882812"
          y="2.4172297">Data:</tspan></text>
-    <g
+    <g class="fragment"
        id="g10">
       <g
          id="g3"
@@ -161,7 +161,7 @@
              y="2.5995598">2</tspan></text>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="-0.11472167"
@@ -172,7 +172,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="-0.11472167"
          y="5.729073">Principles:</tspan></text>
-    <g
+    <g class="fragment"
        id="g16"
        transform="translate(-0.86655409,-0.43369666)">
       <text
@@ -236,7 +236,7 @@
            x="38.134846"
            y="9.9463615">2</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g17"
        transform="translate(-6.1500714,-0.5785661)">
       <text
@@ -261,7 +261,7 @@
            x="18.775526"
            y="9.8716288">pc</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g19"
        transform="translate(-8.9391892,-2.7446672)">
       <text
@@ -287,7 +287,7 @@
            x="30.034777"
            y="15.751251">2</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="1.3213557"
@@ -298,7 +298,7 @@
          style="stroke-width:0.264583"
          x="1.3213557"
          y="18.220852">Tv= </tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="5.6032648"
@@ -309,11 +309,11 @@
          style="fill:#000080;stroke-width:0.264583"
          x="5.6032648"
          y="18.220852">1.129</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide);stroke-dasharray:none"
        d="m 11.607263,17.331081 h 5.085304"
        id="path21" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.2142px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="17.362514"
@@ -324,7 +324,7 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="17.362514"
          y="18.07221">from table for U=95%</tspan></text>
-    <g
+    <g class="fragment"
        id="g27"
        transform="translate(-5.9984633,2.6832484)">
       <text
@@ -391,7 +391,7 @@
            x="49.465168"
            y="17.874577">Cv</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g32"
        transform="translate(-5.224468,0.44849279)">
       <text
@@ -437,7 +437,7 @@
              y="10.353079">2</tspan></text>
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g31"
        transform="translate(-5.4938677,0.18189776)">
       <path
@@ -460,7 +460,7 @@
            y="11.175052"
            id="tspan35">drainage</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="55.634502"
@@ -471,7 +471,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="55.634502"
          y="20.32999">15</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="66.044426"
