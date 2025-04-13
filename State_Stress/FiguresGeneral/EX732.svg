@@ -59,7 +59,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="1.3865784"
@@ -70,7 +70,18 @@
          style="stroke-width:0.264583"
          x="1.3865784"
          y="3.0689387">Using equations:</tspan></text>
-    <g
+        <text class="fragment"
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+       x="1.5143692"
+       y="7.0949564"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="stroke-width:0.264583"
+         x="1.5143692"
+         y="7.0949564">For the total stress first:</tspan></text>
+    <g class="fragment"
        id="g5"
        transform="translate(-0.09121622,3.6119779)">
       <text
@@ -117,7 +128,7 @@
            x="15.641976"
            y="7.548398">h</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="17.235674"
@@ -128,7 +139,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="17.235674"
          y="10.894473">=0.5*(3.75+2.88)=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="37.398647"
@@ -139,7 +150,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="37.398647"
          y="10.82781">3.32 ksf</tspan></text>
-    <g
+    <g class="fragment"
        id="g11"
        transform="translate(-1.7092395,3.3862293)">
       <text
@@ -186,7 +197,7 @@
            x="11.931994"
            y="12.108766">3</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="11.279301"
@@ -197,7 +208,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="11.279301"
          y="15.091914">=3.75-2.88=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="25.260071"
@@ -208,18 +219,8 @@
          style="fill:#000080;stroke-width:0.264583"
          x="25.260071"
          y="15.094239">0.87 ksf</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
-       x="1.5143692"
-       y="7.0949564"
-       id="text14"><tspan
-         sodipodi:role="line"
-         id="tspan14"
-         style="stroke-width:0.264583"
-         x="1.5143692"
-         y="7.0949564">For the total stress first:</tspan></text>
-    <g
+
+    <g class="fragment"
        id="g18"
        transform="translate(-3.5666167,-2.9189189)">
       <text
@@ -266,7 +267,7 @@
            y="22.866705"
            style="stroke-width:0.264583">d</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="22.138771"
@@ -277,7 +278,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="22.138771"
          y="19.360668">=3.32+0.5*0.87*cos(2*38)</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="3.9826539"
@@ -288,11 +289,11 @@
          style="stroke-width:0.264583;fill:#008000"
          x="3.9826539"
          y="24.098993">=3.42 ksf</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="m 4.5608107,19.18416 c 0.7479996,1.093479 0.058556,0.713278 -0.1254223,1.510519 -0.1008097,0.436842 0.4153591,0.460964 0.4560811,0.78674 0.043844,0.350755 -0.2335091,0.625307 -0.1596284,0.95777"
        id="path20" />
-    <g
+    <g  class="fragment"
        id="g23"
        transform="translate(-3.0314814,-3.7087273)">
       <text
@@ -328,7 +329,7 @@
            y="32.967236"
            style="stroke-width:0.264583">d</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="18.197634"
@@ -339,7 +340,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="18.197634"
          y="28.668257">=0.5*0.87*sin(2*38)</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="40.411259"
@@ -350,7 +351,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="40.411259"
          y="28.811659">=0.42 ksf</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="1.1847137"
@@ -361,7 +362,7 @@
          style="stroke-width:0.264583"
          x="1.1847137"
          y="33.172974">For the Effective stress:</tspan></text>
-    <g
+    <g class="fragment"
        id="g29">
       <text
          xml:space="preserve"
@@ -385,7 +386,7 @@
            y="37.194225"
            style="stroke-width:0.264583">α</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="5.4787035"
@@ -396,11 +397,11 @@
          style="fill:#008000;stroke-width:0.264583"
          x="5.4787035"
          y="36.713371">0.42 ksf</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="M 18.585304,35.825168 H 15.347128"
        id="path29" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:30.4588;display:inline;fill:#ff0000;stroke-width:0.305655"
        x="20.341217"
@@ -413,7 +414,7 @@
          x="20.341217"
          y="38.841417"
          id="tspan37">affected by pore pressure</tspan></text>
-    <g
+    <g class="fragment"
        id="g34">
       <text
          xml:space="preserve"
@@ -448,7 +449,7 @@
            y="43.241196"
            style="stroke-width:0.264583">α</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="10.849123"
@@ -459,7 +460,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="10.849123"
          y="42.88773">=3.42-(20*62.4/1000)</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="36.048801"

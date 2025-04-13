@@ -84,7 +84,7 @@
        d="m 50.799999,0 0,48.259999"
        id="path43"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.44580105"
@@ -95,7 +95,7 @@
          style="stroke-width:0.264583"
          x="0.44580105"
          y="2.7259183">a) Principal stresses</tspan></text>
-    <g
+    <g class="fragment"
        id="g54"
        transform="translate(-13.349078,-14.281481)">
       <g
@@ -138,11 +138,11 @@
              y="20.933308">What α makes τ=0?</tspan></text>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 20.158784,10.431117 h 4.811655"
        id="path72" />
-    <g
+    <g class="fragment"
        id="g166">
       <g
          id="g69"
@@ -217,7 +217,7 @@
          id="path67"
          sodipodi:nodetypes="cc" />
     </g>
-    <g
+    <g class="fragment"
        id="g167">
       <g
          id="g85">
@@ -338,14 +338,16 @@
          id="path81"
          sodipodi:nodetypes="cc" />
     </g>
-    <rect
+    <g class="Animate"> 
+    <rect 
        style="fill:none;stroke:#008000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke"
        id="rect85"
        width="22.119932"
        height="8.0564795"
        x="25.540539"
        y="6.3556824" />
-    <text
+    </g>
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="1.2956461"
@@ -355,7 +357,7 @@
          id="tspan85"
          x="1.2956461"
          y="22.702787">α=</tspan></text>
-    <g
+    <g class="Animate"
        id="g89"
        transform="translate(0,4.1503378)">
       <g
@@ -410,7 +412,7 @@
            sodipodi:nodetypes="cc" />
       </g>
     </g>
-    <g
+    <g class="Animate"
        id="g90">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -430,7 +432,7 @@
            y="20.34733"
            id="tspan2">sign convention</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g93">
       <g
          id="g169">
@@ -460,7 +462,7 @@
              y="21.816614">o</tspan></text>
       </g>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.79295349"
@@ -471,7 +473,7 @@
          style="stroke-width:0.264583"
          x="0.79295349"
          y="29.554054">Now find principal stress:</tspan></text>
-    <g
+    <g class="fragment"
        id="g170">
       <text
          xml:space="preserve"
@@ -658,7 +660,7 @@
            x="31.240017"
            y="32.759289">sin(2α)</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g165">
       <text
          xml:space="preserve"
@@ -682,7 +684,7 @@
            y="39.124992"
            style="stroke-width:0.264583">α</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g130"
        style="fill:#000080"
        transform="translate(-15.57639,22.92418)">
@@ -713,7 +715,7 @@
            x="25.328295"
            y="18.0319">2</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g131"
        transform="translate(-15.57639,22.92418)">
       <text
@@ -754,7 +756,7 @@
            x="37.265705"
            y="18.0319">2</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="28.179893"
@@ -765,7 +767,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="28.179893"
          y="38.846516">cos(-2*28.2)...</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="13.784726"
@@ -776,7 +778,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="13.784726"
          y="43.723869">...+(-75)sin(-2*28.2)</tspan></text>
-    <g
+    <g class="fragment"
        id="g133"
        transform="translate(-15.57639,22.92418)">
       <text
@@ -795,7 +797,7 @@
          d="m 19.293451,15.542431 c 1.181044,1.402906 -0.190571,2.614938 0.0228,4.108556 0.306065,2.142451 0.921835,1.404491 0.09705,3.684828"
          id="path133" />
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="4.6866851"
@@ -806,7 +808,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="4.6866851"
          y="47.538666">250+27.7+62.5=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="22.396832"
@@ -820,7 +822,7 @@
     <g
        id="g141"
        transform="translate(-22.237941,22.274119)" />
-    <g
+    <g class="fragment"
        id="g172">
       <rect
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:0.495, 0.495;stroke-dashoffset:0;stroke-opacity:0.94902;paint-order:markers fill stroke"
@@ -947,7 +949,7 @@
            x="60.744694"
            y="6.8490067">β</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="76.73027"
@@ -957,7 +959,7 @@
          id="tspan143"
          x="76.73027"
          y="3.2816496">β=90+α</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.21909px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="88.77549"
@@ -968,11 +970,11 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="88.77549"
          y="2.9883928">Orthogonal dir.</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
        d="m 88.58235,2.394426 h -2.8049"
        id="path145" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="76.568367"
@@ -982,7 +984,7 @@
          id="tspan144"
          x="76.568367"
          y="8.0317411">β=90-28.2= 61.8</tspan></text>
-    <g
+    <g class="fragment"
        id="g158"
        transform="translate(-15.57639,22.92418)">
       <text
@@ -1006,7 +1008,7 @@
            x="69.518913"
            y="-1.2478515">β</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g149"
        style="fill:#000080"
        transform="translate(36.342377,5.376715)">
@@ -1037,7 +1039,7 @@
            x="25.328295"
            y="18.0319">2</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g152"
        transform="translate(36.342377,5.376715)">
       <text
@@ -1078,7 +1080,7 @@
            x="37.265705"
            y="18.0319">2</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="80.098656"
@@ -1089,7 +1091,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="80.098656"
          y="21.299051">cos(2*61.8)...</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="65.703491"
@@ -1100,7 +1102,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="65.703491"
          y="26.176403">...+(-75)sin(2*61.8)</tspan></text>
-    <g
+    <g class="fragment"
        id="g155"
        transform="translate(36.342377,5.376715)">
       <text
@@ -1119,7 +1121,7 @@
          d="m 19.293451,15.542431 c 1.181044,1.402906 -0.190571,2.614938 0.0228,4.108556 0.306065,2.142451 0.921835,1.404491 0.09705,3.684828"
          id="path155" />
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="56.60545"
@@ -1130,7 +1132,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="56.60545"
          y="29.991199">250-27.7-62.5=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="74.956612"
@@ -1141,7 +1143,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="74.956612"
          y="30.01988">160 kPa</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="52.362377"
@@ -1152,7 +1154,7 @@
          style="stroke-width:0.264583"
          x="52.362377"
          y="35.064606">Therefore:</tspan></text>
-    <g
+    <g class="Animate"
        id="g161"
        style="fill:#008000"
        transform="translate(-21.187856,17.221526)">
@@ -1178,7 +1180,7 @@
            x="75.208153"
            y="22.264032">1</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g163"
        style="fill:#008000"
        transform="translate(-21.187856,20.967778)">

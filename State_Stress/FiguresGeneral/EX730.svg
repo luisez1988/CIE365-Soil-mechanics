@@ -59,7 +59,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="-0.14882812"
@@ -70,7 +70,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="-0.14882812"
          y="2.2417235">Data:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="6.1919618"
@@ -81,7 +81,7 @@
          style="stroke-width:0.264583"
          x="6.1919618"
          y="2.2618773">Given in figure</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="23.800354"
@@ -92,7 +92,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="23.800354"
          y="2.2510252">Principles:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="34.669823"
@@ -103,7 +103,7 @@
          style="stroke-width:0.264583"
          x="34.669823"
          y="2.2510252">In-situ stresses, Mohr's circle</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.33105901"
@@ -114,7 +114,7 @@
          style="stroke-width:0.264583"
          x="0.33105901"
          y="5.7221313">1) Find vertical and total and effective stresses</tspan></text>
-    <g
+    <g class="fragment"
        id="g7">
       <text
          xml:space="preserve"
@@ -138,7 +138,7 @@
            x="2.0925245"
            y="8.725543">v</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="4.7131124"
@@ -149,7 +149,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="4.7131124"
          y="8.7613649">125*30=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="14.385389"
@@ -160,7 +160,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="14.385389"
          y="8.7613649">3750 psf=3.75 ksf</tspan></text>
-    <g
+    <g class="fragment"
        id="g11"
        transform="translate(-39.178566,3.5725019)">
       <text
@@ -185,7 +185,7 @@
            x="41.406715"
            y="8.725543">v</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="4.9016681"
@@ -196,7 +196,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="4.9016681"
          y="12.42472">3750-(20*62.4)=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
        x="23.842499"
@@ -207,7 +207,7 @@
          style="fill:#008000;stroke-width:0.264583"
          x="23.842499"
          y="12.371106">2502 psf=2.5 ksf</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.31865665"
@@ -218,7 +218,7 @@
          style="stroke-width:0.264583"
          x="0.31865665"
          y="15.222041">2) Find horizontal total and effc. stresses</tspan></text>
-    <g
+    <g class="fragment"
        id="g16">
       <text
          xml:space="preserve"
@@ -242,7 +242,7 @@
            x="2.0884433"
            y="18.906591">h</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="5.0978518"
@@ -253,7 +253,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="5.0978518"
          y="18.577021">2.5*0.65=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="16.00106"
@@ -264,11 +264,11 @@
          style="stroke-width:0.264583;fill:#008000"
          x="16.00106"
          y="18.612679">1.63 ksf</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 24.947635,17.741554 h 3.694257"
        id="path18" />
-    <g
+    <g class="fragment"
        id="g20">
       <text
          xml:space="preserve"
@@ -292,7 +292,7 @@
            x="30.900606"
            y="18.906591">h</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="33.590092"
@@ -303,7 +303,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="33.590092"
          y="18.442921">1.63+(20*62.4/1000)=</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="58.37838"
@@ -314,7 +314,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="58.37838"
          y="18.478577">2.88 ksf</tspan></text>
-    <g
+    <g class="fragment"
        id="g26"
        transform="translate(-2.0016496)">
       <g
@@ -349,7 +349,7 @@
            x="50.767788"
            y="15.584357">Total</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g27"
        transform="translate(-2.0016496)">
       <g
@@ -385,7 +385,7 @@
            x="62.08358"
            y="15.584357">Effc.</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.37793px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="51.828384"
@@ -396,7 +396,7 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="51.828384"
          y="6.4855695">3.75 ksf</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.37793px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="53.311874"
@@ -407,7 +407,7 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="53.311874"
          y="9.7246418">2.88 ksf</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.37793px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="62.634941"
@@ -418,7 +418,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="62.634941"
          y="6.4855695">2.5 ksf</tspan></text>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.37793px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="64.118431"

@@ -166,7 +166,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
+    <g class="fragment"
        id="g1">
       <g
          id="g26"
@@ -284,7 +284,7 @@
            x="94.614655"
            y="4.9087305">1.63 ksf</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g13">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#DartArrow)"
@@ -405,11 +405,11 @@
            x="5.3234448"
            y="45.841171">-1</tspan></text>
     </g>
-    <path
+    <path class="Animate"
        id="rect12"
        style="fill:#ff0000;stroke:#ff0000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 46.780003,23.582701 h 1.094594 v 1.094594 h -1.094594 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="42.173389"
@@ -420,11 +420,11 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="42.173389"
          y="27.055779">2.88</tspan></text>
-    <path
+    <path class="Animate"
        id="rect13"
        style="fill:#ff0000;stroke:#ff0000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 65.34008,23.582703 h 1.094595 v 1.094594 H 65.34008 Z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="66.679047"
@@ -435,23 +435,23 @@
          style="stroke-width:0.264583;fill:#ff0000"
          x="66.679047"
          y="23.371544">3.75</tspan></text>
-    <path
+    <path class="Animate"
        id="path14"
        style="fill:none;stroke:#808080;stroke-width:0.065;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:0.26, 0.52;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="M 78.631455,24.129999 A 12.744081,12.862582 0 0 1 65.887375,36.992581 12.744081,12.862582 0 0 1 53.143294,24.129999 12.744081,12.862582 0 0 1 65.887375,11.267417 12.744081,12.862582 0 0 1 78.631455,24.129999 Z" />
-    <path
+    <path class="Animate"
        id="ellipse14"
        style="fill:none;stroke:#808080;stroke-width:0.065;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:0.26, 0.52;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="M 60.071382,24.129997 A 12.744081,12.862582 0 0 1 47.327301,36.992579 12.744081,12.862582 0 0 1 34.58322,24.129997 12.744081,12.862582 0 0 1 47.327301,11.267415 12.744081,12.862582 0 0 1 60.071382,24.129997 Z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.065;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.51999998,0.25999999;stroke-dashoffset:0"
        d="M 56.60714,32.945564 V 15.314432"
        id="path15" />
-    <path
+    <path class="Animate"
        id="path16"
        style="fill:none;stroke:#ff0000;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 65.901171,24.129995 a 9.294035,9.2940435 0 0 1 -9.294035,9.294044 9.294035,9.2940435 0 0 1 -9.294035,-9.294044 9.294035,9.2940435 0 0 1 9.294035,-9.294043 9.294035,9.2940435 0 0 1 9.294035,9.294043 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="64.485115"
@@ -462,26 +462,26 @@
          style="stroke-width:0.264583;fill:#ff0000"
          x="64.485115"
          y="33.430965">Total stress circle</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="M 64.789854,32.523924 63.072557,30.80663"
        id="path17" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 47.313101,34.707934 0,-21.808013"
        id="path18"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 65.90117,24.129995 H 43.641263"
        id="path19" />
-    <path
+    <path class="Animate"
        id="path20"
        style="fill:#ffff00;stroke:#ff0000;stroke-width:0.621309;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        inkscape:transform-center-y="-0.080124173"
        transform="matrix(0.26607242,0,0,0.26506513,39.746061,23.370998)"
        d="m 28.497566,-0.00329185 0.930325,1.88504425 2.08027,0.3022811 -1.505297,1.4673024 0.355352,2.0718642 -1.86065,-0.9782015 -1.86065,0.9782014 0.355353,-2.0718641 -1.505298,-1.4673026 2.08027,-0.3022809 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="41.62278"
@@ -492,21 +492,21 @@
          style="stroke-width:0.264583"
          x="41.62278"
          y="22.542612">Pole</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="m 45.714094,21.881491 1.366848,1.988294"
        id="path21" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.79374898,0.79374898;stroke-dashoffset:0"
        d="M 47.313101,24.129995 63.839584,11.455068"
        id="path26"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="m 54.771215,24.129995 c 0.0809,-1.813816 -0.599995,-3.198262 -2.042694,-4.153338"
        id="path27"
        sodipodi:nodetypes="cc" />
-    <g
+    <g class="Animate"
        id="g32"
        transform="translate(-9.3268581,1.9635985)">
       <text
@@ -532,11 +532,11 @@
            x="62.467171"
            y="19.88031">o</tspan></text>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.49500002, 0.49500002;stroke-dashoffset:0;marker-mid:url(#X);marker-end:url(#X);marker-start:url(#X)"
        d="M 59.030885,24.129995 V 15.143082 H 7.6579295"
        id="path33" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="62.512493"
@@ -547,15 +547,15 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="62.512493"
          y="15.233808">(3.42,0.42)</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="M 62.414694,14.263936 59.03102,15.157592"
        id="path35" />
-    <path
+    <path class="Animate"
        id="rect35"
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 20.357929,23.582701 h 1.094595 v 1.094594 h -1.094595 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#0000ff"
        x="16.57336"
@@ -566,11 +566,11 @@
          style="stroke-width:0.264583;fill:#0000ff"
          x="16.57336"
          y="27.055779">1.63</tspan></text>
-    <path
+    <path class="Animate"
        id="rect36"
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 38.944984,23.582706 h 1.094595 v 1.094595 h -1.094595 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#0000ff;stroke-width:0.264583"
        x="35.14502"
@@ -581,11 +581,11 @@
          style="fill:#0000ff;stroke-width:0.264583"
          x="35.14502"
          y="23.35351">2.5</tspan></text>
-    <path
+    <path class="Animate"
        id="ellipse36"
        style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        d="m 39.506077,24.129999 a 9.294035,9.2940435 0 0 1 -9.294035,9.294044 9.294035,9.2940435 0 0 1 -9.294035,-9.294044 9.294035,9.2940435 0 0 1 9.294035,-9.294043 9.294035,9.2940435 0 0 1 9.294035,9.294043 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:19.6731;display:inline;fill:#0000ff;stroke-width:0.264583"
        x="8.8244686"
@@ -597,17 +597,17 @@
          x="8.8244686"
          y="38.768419"
          id="tspan2">circle</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 24.689917,35.752167 c 2.559872,0.09357 5.831193,0.192848 5.831193,-2.333264"
        id="path44"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        id="path36"
        style="fill:#ffff00;stroke:#0000ff;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
        inkscape:transform-center-y="-0.080124173"
        d="m 20.928239,23.370125 0.247534,0.49966 0.553502,0.08012 -0.400518,0.388931 0.09455,0.549179 -0.495068,-0.259287 -0.495067,0.259287 0.09455,-0.549179 -0.400518,-0.388931 0.553502,-0.08012 z" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="15.222542"
@@ -618,25 +618,25 @@
          style="stroke-width:0.264583"
          x="15.222542"
          y="22.542612">Pole</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 19.313856,21.881491 1.366848,1.988294"
        id="path37" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
        d="M 20.918007,24.129995 37.44449,11.455068"
        id="path38"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.49500002, 0.49500002;stroke-dashoffset:0;marker-end:url(#X);marker-mid:url(#X);marker-start:url(#X)"
        d="m 32.63579,15.143082 v 8.986917"
        id="path39" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 28.376122,24.129995 c 0.0809,-1.813816 -0.599995,-3.198262 -2.042694,-4.153338"
        id="path40"
        sodipodi:nodetypes="cc" />
-    <g
+    <g class="Animate"
        id="g41"
        transform="translate(-35.721951,1.9635985)">
       <text
@@ -662,7 +662,7 @@
            x="62.467171"
            y="19.88031">o</tspan></text>
     </g>
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#0000ff;stroke-width:0.264583"
        x="20.875835"
@@ -673,12 +673,12 @@
          style="fill:#0000ff;stroke-width:0.264583"
          x="20.875835"
          y="13.610422">(2.17,0.42)</tspan></text>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 31.911178,12.778984 c 0.503877,0.100953 0.669477,1.087869 0.724612,2.364099"
        id="path42"
        sodipodi:nodetypes="cc" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="21.472517"

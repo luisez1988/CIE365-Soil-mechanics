@@ -927,7 +927,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
      inkscape:label="Points"
      style="display:inline"
      transform="translate(-8.5957647,-11.46648)">
-    <path
+    <path class="fragment"
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.751177;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6.2"
        id="path10"
        sodipodi:type="arc"
@@ -939,7 +939,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
        sodipodi:end="2.3561945"
        sodipodi:arc-type="slice"
        d="m 109.47417,26.087107 a 1.0958903,1.0958903 0 0 1 0.0524,-1.541395 1.0958903,1.0958903 0 0 1 1.54183,0.03742 1.0958903,1.0958903 0 0 1 -0.0225,1.542121 1.0958903,1.0958903 0 0 1 -1.54227,-0.0075 l 0.77491,-0.774911 z" />
-    <g
+    <g class="fragment"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
        ns1:pdfconverter="inkscape"
@@ -1132,7 +1132,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
         </g>
       </g>
     </g>
-    <path
+    <path  class="fragment"
        style="fill:#008000;stroke:#008000;stroke-width:0.751177;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6.2"
        id="path11"
        sodipodi:type="arc"
@@ -1144,7 +1144,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
        sodipodi:end="2.3561945"
        sodipodi:arc-type="slice"
        d="m 63.796916,90.117643 a 1.0958903,1.0958903 0 0 1 0.05238,-1.541394 1.0958903,1.0958903 0 0 1 1.54183,0.03742 1.0958903,1.0958903 0 0 1 -0.02245,1.542121 1.0958903,1.0958903 0 0 1 -1.542266,-0.0075 l 0.774911,-0.774912 z" />
-    <g
+    <g class="fragment"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
        ns1:pdfconverter="inkscape"
@@ -1343,7 +1343,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
         </g>
       </g>
     </g>
-    <g
+    <g class="fragment"
        id="g24">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1354,7 +1354,7 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
          d="m 87.43863,57.359742 22.83994,-32.01689"
          id="path8" />
     </g>
-    <g
+    <g class="fragment"
        id="line2d_1"
        transform="translate(-49.65766,1.490393)">
       <path
@@ -1363,15 +1363,15 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
          style="fill:none;stroke:#1f77b4;stroke-width:1.5;stroke-linecap:square"
          id="path3" />
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 110.27857,25.342852 16.32954,28.283594"
        id="path123" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 64.599001,89.376632 126.58611,53.588354"
        id="path124" />
-    <path
+    <path class="Animate"
        sodipodi:type="star"
        style="fill:#ffff00;stroke:#ff0000;stroke-width:23.8354;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4.1"
        id="path126"
@@ -1389,11 +1389,11 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
        inkscape:transform-center-x="0.010419859"
        inkscape:transform-center-y="-0.21161614"
        transform="matrix(0.03151534,0,0,0.03151534,122.32125,51.889765)" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 134.10769,64.913843 126.6794,54.890233"
        id="path127" />
-    <text
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:9.99998px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;stroke-width:0.75"
        x="143.45009"
@@ -1404,26 +1404,26 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
          style="stroke-width:0.75"
          x="143.45009"
          y="69.576225">Pole</tspan></text>
-    <path
+    <path class="Animate"
        id="rect124"
        style="fill:#ffccaa;stroke:#000000;stroke-width:0.751177;stroke-linecap:round;stroke-miterlimit:4.1"
        d="m 118.00733,51.444812 5.50543,-3.176952 c 0,-10e-7 0,-10e-7 0,-10e-7 l 3.07335,5.320495 c 0,0 0,0 -1e-5,0 l -5.50543,3.176953 c 0,0 0,0 0,0 z" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#DartArrow)"
        d="m 174.794,35.035573 c -21.23906,11.986433 -30.16105,16.137513 -24.56652,7.938147 9.88841,-14.492487 -22.54281,6.934832 -22.54281,6.934832"
        id="path125"
        sodipodi:nodetypes="csc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 64.601312,89.373387 H 94.385456"
        id="path128"
        sodipodi:nodetypes="cc" />
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 85.254643,77.451089 c 3.894017,0.747165 6.68069,7.518858 6.5481,12.135314"
        id="path12"
        sodipodi:nodetypes="cc" />
-    <g
+    <g class="Animate"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
        ns1:pdfconverter="inkscape"
@@ -1462,12 +1462,12 @@ InkWeb.log = function () { /* requires inkweb-debug.js, not included in Inkscape
         </g>
       </g>
     </g>
-    <path
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 96.703738,45.004031 c 3.894022,0.747165 6.680692,7.518858 6.548102,12.135314"
        id="path136"
        sodipodi:nodetypes="cc" />
-    <g
+    <g class="Animate"
        ns1:version="1.10.2"
        ns1:texconverter="pdflatex"
        ns1:pdfconverter="inkscape"

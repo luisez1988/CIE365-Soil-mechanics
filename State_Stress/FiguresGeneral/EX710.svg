@@ -38,7 +38,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="-0.14882812"
@@ -49,7 +49,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="-0.14882812"
          y="2.2417235">Data:</tspan></text>
-    <g
+    <g class="fragment"
        id="g13">
       <text
          xml:space="preserve"
@@ -73,7 +73,7 @@
            x="7.7814794"
            y="2.8031161">y</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g12">
       <text
          xml:space="preserve"
@@ -97,7 +97,7 @@
            x="22.330465"
            y="2.8031161">x</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g1">
       <text
          xml:space="preserve"
@@ -121,7 +121,7 @@
            x="37.141636"
            y="2.8031161">xy</tspan></text>
     </g>
-    <g
+    <g class="Animate"
        id="g8">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -139,7 +139,7 @@
            x="38.406227"
            y="5.0911908">Clockwise</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g10"
        transform="translate(-2.5799842,-3.1240961)">
       <text
@@ -164,7 +164,7 @@
            x="58.909985"
            y="4.1530499">o</tspan></text>
     </g>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="0.064499572"
@@ -175,7 +175,7 @@
          style="stroke-width:0.264583;fill:#008000"
          x="0.064499572"
          y="6.4429579">Principles:</tspan></text>
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="10.642435"
@@ -186,11 +186,11 @@
          style="stroke-width:0.264583"
          x="10.642435"
          y="6.4429579">Many ways to resolve</tspan></text>
-    <path
+    <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 0.06449957,8.0412636 H 60.960002"
        id="path14" />
-    <text
+    <text class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
        x="0.60543525"
@@ -201,7 +201,7 @@
          style="stroke-width:0.264583"
          x="0.60543525"
          y="11.718545">1) Using the full analytical solutions</tspan></text>
-    <g
+    <g class="fragment"
        id="g2">
       <text
          xml:space="preserve"
@@ -388,7 +388,7 @@
            x="42.290905"
            y="16.061068">sin(2α)</tspan></text>
     </g>
-    <g
+    <g class="fragment"
        id="g3">
       <text
          xml:space="preserve"
