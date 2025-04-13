@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2in"
+   height="1.9in"
+   viewBox="0 0 50.800001 48.259999"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="EX732.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.0510461"
+     inkscape:cx="-3.4128925"
+     inkscape:cy="12.676458"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+       x="1.3865784"
+       y="3.0689387"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.264583"
+         x="1.3865784"
+         y="3.0689387">Using equations:</tspan></text>
+    <g
+       id="g5"
+       transform="translate(-0.09121622,3.6119779)">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="1.5962837"
+         y="7.1832762"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           x="1.5962837"
+           y="7.1832762">σ =0.5*(σ +σ )</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.48205px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="2.5540733"
+         y="7.5428028"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           style="stroke-width:0.264583"
+           x="2.5540733"
+           y="7.5428028">m</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.48205px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="11.971016"
+         y="7.5428028"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           style="stroke-width:0.264583"
+           x="11.971016"
+           y="7.5428028">v</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:1.84545px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="15.641976"
+         y="7.548398"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           style="stroke-width:0.264583"
+           x="15.641976"
+           y="7.548398">h</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
+       x="17.235674"
+       y="10.894473"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="fill:#000080;stroke-width:0.264583"
+         x="17.235674"
+         y="10.894473">=0.5*(3.75+2.88)=</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
+       x="37.398647"
+       y="10.82781"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="fill:#000080;stroke-width:0.264583"
+         x="37.398647"
+         y="10.82781">3.32 ksf</tspan></text>
+    <g
+       id="g11"
+       transform="translate(-1.7092395,3.3862293)">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="3.418479"
+         y="11.513179"
+         id="text8"><tspan
+           sodipodi:role="line"
+           id="tspan8"
+           x="3.418479"
+           y="11.513179">σ =σ -σ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:1.70239px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="4.5982013"
+         y="12.108766"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           style="stroke-width:0.264583"
+           x="4.5982013"
+           y="12.108766">d</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:1.70239px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="8.3095617"
+         y="12.108766"
+         id="text11"><tspan
+           sodipodi:role="line"
+           id="tspan11"
+           style="stroke-width:0.264583"
+           x="8.3095617"
+           y="12.108766">1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:1.70239px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="11.931994"
+         y="12.108766"
+         id="text10"><tspan
+           sodipodi:role="line"
+           id="tspan10"
+           style="stroke-width:0.264583"
+           x="11.931994"
+           y="12.108766">3</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
+       x="11.279301"
+       y="15.091914"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="fill:#000080;stroke-width:0.264583"
+         x="11.279301"
+         y="15.091914">=3.75-2.88=</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
+       x="25.260071"
+       y="15.094239"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="fill:#000080;stroke-width:0.264583"
+         x="25.260071"
+         y="15.094239">0.87 ksf</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+       x="1.5143692"
+       y="7.0949564"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="stroke-width:0.264583"
+         x="1.5143692"
+         y="7.0949564">For the total stress first:</tspan></text>
+    <g
+       id="g18"
+       transform="translate(-3.5666167,-2.9189189)">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="5.2244682"
+         y="22.316862"
+         id="text15"><tspan
+           sodipodi:role="line"
+           id="tspan15"
+           x="5.2244682"
+           y="22.316862">σ =σ +0.5σ cos(2α)</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.04968px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="6.2488871"
+         y="22.866705"
+         id="text16"><tspan
+           sodipodi:role="line"
+           id="tspan16"
+           x="6.2488871"
+           y="22.866705"
+           style="stroke-width:0.264583">α</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.04968px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="9.9576139"
+         y="22.866705"
+         id="text17"><tspan
+           sodipodi:role="line"
+           id="tspan17"
+           x="9.9576139"
+           y="22.866705"
+           style="stroke-width:0.264583">m</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.04968px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="16.990786"
+         y="22.866705"
+         id="text18"><tspan
+           sodipodi:role="line"
+           id="tspan18"
+           x="16.990786"
+           y="22.866705"
+           style="stroke-width:0.264583">d</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
+       x="22.138771"
+       y="19.360668"
+       id="text19"><tspan
+         sodipodi:role="line"
+         id="tspan19"
+         style="stroke-width:0.264583;fill:#000080"
+         x="22.138771"
+         y="19.360668">=3.32+0.5*0.87*cos(2*38)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
+       x="3.9826539"
+       y="24.098993"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="stroke-width:0.264583;fill:#008000"
+         x="3.9826539"
+         y="24.098993">=3.42 ksf</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
+       d="m 4.5608107,19.18416 c 0.7479996,1.093479 0.058556,0.713278 -0.1254223,1.510519 -0.1008097,0.436842 0.4153591,0.460964 0.4560811,0.78674 0.043844,0.350755 -0.2335091,0.625307 -0.1596284,0.95777"
+       id="path20" />
+    <g
+       id="g23"
+       transform="translate(-3.0314814,-3.7087273)">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="4.6460633"
+         y="32.314301"
+         id="text21"><tspan
+           sodipodi:role="line"
+           id="tspan21"
+           x="4.6460633"
+           y="32.314301">τ =0.5σ sin(2α)</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.25686px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="5.5204892"
+         y="32.967236"
+         id="text22"><tspan
+           sodipodi:role="line"
+           id="tspan22"
+           x="5.5204892"
+           y="32.967236"
+           style="stroke-width:0.264583">α</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.25686px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="12.66382"
+         y="32.967236"
+         id="text23"><tspan
+           sodipodi:role="line"
+           id="tspan23"
+           x="12.66382"
+           y="32.967236"
+           style="stroke-width:0.264583">d</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
+       x="18.197634"
+       y="28.668257"
+       id="text24"><tspan
+         sodipodi:role="line"
+         id="tspan24"
+         style="stroke-width:0.264583;fill:#000080"
+         x="18.197634"
+         y="28.668257">=0.5*0.87*sin(2*38)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
+       x="40.411259"
+       y="28.811659"
+       id="text25"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         style="stroke-width:0.264583;fill:#008000"
+         x="40.411259"
+         y="28.811659">=0.42 ksf</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+       x="1.1847137"
+       y="33.172974"
+       id="text26"><tspan
+         sodipodi:role="line"
+         id="tspan26"
+         style="stroke-width:0.264583"
+         x="1.1847137"
+         y="33.172974">For the Effective stress:</tspan></text>
+    <g
+       id="g29">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="1.6145819"
+         y="36.54129"
+         id="text27"><tspan
+           sodipodi:role="line"
+           id="tspan27"
+           x="1.6145819"
+           y="36.54129">τ =</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.25686px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="2.4890077"
+         y="37.194225"
+         id="text28"><tspan
+           sodipodi:role="line"
+           id="tspan28"
+           x="2.4890077"
+           y="37.194225"
+           style="stroke-width:0.264583">α</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
+       x="5.4787035"
+       y="36.713371"
+       id="text29"><tspan
+         sodipodi:role="line"
+         id="tspan29"
+         style="fill:#008000;stroke-width:0.264583"
+         x="5.4787035"
+         y="36.713371">0.42 ksf</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
+       d="M 18.585304,35.825168 H 15.347128"
+       id="path29" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:30.4588;display:inline;fill:#ff0000;stroke-width:0.305655"
+       x="20.341217"
+       y="35.825165"
+       id="text30"
+       transform="matrix(0.8656257,0,0,0.8656257,1.6580578,4.5127514)"><tspan
+         x="20.341217"
+         y="35.825165"
+         id="tspan33">Because shear is not </tspan><tspan
+         x="20.341217"
+         y="38.841417"
+         id="tspan37">affected by pore pressure</tspan></text>
+    <g
+       id="g34">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="1.6578516"
+         y="42.691353"
+         id="text31"><tspan
+           sodipodi:role="line"
+           id="tspan31"
+           x="1.6578516"
+           y="42.691353">σ' =σ -u </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.04968px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="2.6822703"
+         y="43.241196"
+         id="text32"><tspan
+           sodipodi:role="line"
+           id="tspan32"
+           x="2.6822703"
+           y="43.241196"
+           style="stroke-width:0.264583">α</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:2.04968px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
+         x="6.6068387"
+         y="43.241196"
+         id="text34"><tspan
+           sodipodi:role="line"
+           id="tspan34"
+           x="6.6068387"
+           y="43.241196"
+           style="stroke-width:0.264583">α</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
+       x="10.849123"
+       y="42.88773"
+       id="text35"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         style="fill:#000080;stroke-width:0.264583"
+         x="10.849123"
+         y="42.88773">=3.42-(20*62.4/1000)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
+       x="36.048801"
+       y="42.859825"
+       id="text36"><tspan
+         sodipodi:role="line"
+         id="tspan36"
+         style="fill:#008000;stroke-width:0.264583"
+         x="36.048801"
+         y="42.859825">=2.17 ksf</tspan></text>
+  </g>
+</svg>
