@@ -30,14 +30,14 @@
 							display: flex;
 					}
 					.col{
-							flex: 1;
+							flex: wrap;
 					}
 	
 					</style>
 	
 					<div class='footer'>
 						CIE-365
-						<!-- Spring 2023 -->
+						Spring 2025
 					</div>
 	
 					<style>
@@ -77,20 +77,28 @@
 							<div class="qrCode" name="https://drive.google.com/file/d/1cPz-L_9L_kVfabSS05gi3d8w5e9r5jHJ/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-250px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 6: Shear strength">
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 7: Shear strength">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-							<!-- <p style="color:#faffff; font-size:35px">Spring 2023</p> -->
+							<p style="color:#faffff; font-size:35px">Spring 2025</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
-							<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 						</div>
 					</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Recap</h1>
 						<ul>
-							<li class="fragment"> We learned how to calculate stresses acting at any direction.</li>
-							<li class="fragment"> We learned how to calculate the magnitude and direction of principal stresses, the mean stress, and the deviator stress. </li>
-							<li class="fragment"> We learned how to locate the pole and solve problems graphically.</li>
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								We learned how to <strong style='color:#7abbe6'>calculate</strong> stresses acting at any direction.
+							</div>
+
+								</li>
+							<li class="fragment"> We learned how to <strong style='color:#7abbe6'>calculate</strong> the magnitude and direction of principal stresses, the mean stress, and the deviator stress. </li>
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								We learned how to <strong style='color:#7abbe6'>locate</strong> the pole and solve problems graphically.
+							</div>
+								
+							</li>
 						</ul>
 				</section>
 
@@ -98,20 +106,20 @@
 					<h1>Contents</h1>
 
 					<div class='container'>
-					<div class='col'>
+					<div class='col' style="width: 50%;">
 						<ul class="contentStyle">
 							<li class="l1">Mohr-Coulomb model</li>
 							<li class="l1">Friction and dilation</li>
 							<li class="l1">Direct and simple shear test</li>
 							<li class="l1">Triaxial test</li>
 							<li class="l1">Strength of sands </li>
-							<li class="l1">Strength os clay </li>							
+							<li class="l1">Strength of clay </li>							
 						</ul>
 					</div>
-					<div class='col'>
+					<div class='col' style="width: 50%;">
 						<div class='container'>
-							<div class='col'>
-								<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+							<div class='col' style="width: 50%;">
+								<div class="stickynote" style="margin-top: 100px;margin-left: 25px;">
 									<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
 									<ul>
 										<li>[O4]: Develop an understanding of stress state and shear strength of soils and its role in the overall stability of
@@ -119,8 +127,8 @@
 									</ul>
 								</div>
 							</div>
-							<div class='col'>
-							<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+							<div class='col' style="width: 50%;">
+							<div class='stickynote' style='margin-top: 100px;margin-left: 25px;'>
 								<p style="margin-top: -20px;">After this lecture we will able to:</p>
 								<ul style="margin-top: -15px;">
 									<li>To calculate drained strength properties for sand.</li>					
@@ -145,80 +153,264 @@
 -->
 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 6.6</h1>
+	<h1>Mohr-Coulomb model</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	<p> For the figure below find the ultimate shear strength below the block.</p>
+	Consider a block sliding on a plane as <strong style='color:green'>analogous</strong> to a grain of soil sliding on another.
 	</div>
 <div class="container">
-	<div class="col">
+	<div class="col" style="width: 25%;">
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Free_Body_Diagram_%28Angle_of_Repose%29.png/220px-Free_Body_Diagram_%28Angle_of_Repose%29.png" style="width:80%" data-preload/>
-        <footer style="margin-top:-60px;"><small></small></footer>
-      </figure>
+	  <img src='FiguresGeneral/sliding_block.svg' width='100%'/>
+	  <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	  </figure>
 	</div>
-	<div class="col">
+	<div class="col"  style="width: 75%;">
+		<figure>
+		<img src='FiguresGeneral/MC.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+	</div>
+</div>
 
-	</div>
+<div class='container' style="margin-top: -50px;">
+<div class='col bordered' style='width: 50%;'>
+\( \begin{align}
+f &= W \sin \theta \\
+W \cos \theta \tan \phi &= W \sin \theta \\
+\tan \phi &= \tan \theta \\
+\phi &= \theta
+\end{align} \)
+</div>
+<div class='col bordered' style='width: 50%;'>
+<figure>
+<img src='https://miro.medium.com/v2/resize:fit:430/0*1ULfiQPAhd8YRFXy.' width='80%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
 </div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>The Mohr-Coulomb model</h1>
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What are the valid states of stress according to the Mohr-Coulomb model?
+</div>
+
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Mohr_circle_states.svg'></object>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What if the block is <strong style='color:green'>adhered</strong> to the plane?
+</div>
+
+<div class='container'>
+<div class='col' style='width: 25%;'>
+<figure>
+<img src='FiguresGeneral/sliding_block_adhered.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 75%;'>
+<p>The <span class='atb'>cohesion</span> <strong style='color:green'>\(c'\)</strong> between soil particles <strong style='color:green'>adds shear strength</strong> to the soil. <br>
+<div class='equationBox'>
+\( \tau_f= S= c'+\sigma_n' \tan \phi' \)
+</div>
+</p>
+</div>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 60%;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/MC_with_cohesion.svg'></object>
+</div>
+<div class='col' style='width: 40%;'>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+The Mohr-Coulomb model is a <strong style='color:green'>linearization</strong> of the shear strength of soils. This is not necessarily true for all soils. 
+</div>
+</div>
+</div>
+
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Soil Dilatancy</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p>It is a linearization of the ultimate strength of soils or a <strong style="color:#7abbe6">limiting state when soils start to accumulate plastic deformation</strong></p>
+	Soil dilatancy is the <strong style='color:#7abbe6'>increase</strong> in <span class='atb'>void volume</span> of a soil mass when it is <strong style='color:#7abbe6'>sheared</strong>. It has a significant effect on the <span class='atb'>shear strength</span> of soils.
 	</div>
 	
-	<div class='equationBox'>
-	$$ \tau_f=S=c+\sigma \tan \phi $$
+	<div class='container'>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>Loose sand</h4>
+	<figure>
+	<img src='FiguresGeneral/loose_balls.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>Dense sand</h4>
+	<figure>
+	<img src='FiguresGeneral/dense_balls.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
 	</div>
 	
+	
+	</section>
+
+<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	
+<iframe class="stretch" src="https://www.youtube.com/embed/XCOPNMDhXkM?autoplay=0&end=134&rel=0&modestbranding=1" data-preload></iframe>
+	
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	What factors affect the friction angle of sands❓
+	</div>
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+		<ul>
+			<li class='fragment'>\(\uparrow\) <span class='atb'>Density</span> \(\implies \uparrow \phi'\)  </li>
+			<li class='fragment'>\(\uparrow\) <span class='atb'>confining pressure</span> \(\implies \downarrow \phi'\) </li>
+			<li class='fragment'>Particle <span class='atb'>shape</span>: \(\uparrow\) angularity \(\implies \uparrow \phi'\)</li>
+			<li class='fragment'>\(\uparrow\) <span class='atb'>particle size</span> \(\implies \downarrow \phi'\)</li>
+			<li class='fragment'>\(\uparrow\) <span class='atb'>gradation</span> \(\implies \uparrow \phi'\)</li>
+			<li class='fragment'><span class='atb'>Mineralogy</span> controls <strong style='color:#7abbe6'>base</strong> coefficient of friction.</li>
+			
+			
+		</ul>
+	</div>	
+	
+	</div>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/seed_and_lee.svg' width='100%'/>
+	<footer style='margin-top: -45px;font-size: 0.8em;'> <em>Modified from Seed and Lee (1967)</em> </footer>
+	</figure>
+	</div>
+	</div>
+	</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Effect of water on the shear strength</h1>
+<div class='container'>
+<div class='col' style='width: 60%;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/shear_undrained.svg'></object>
+</div>
+<div class='col' style='width: 40%;'>
+<ul>
+	<li class='fragment'>Water <strong style='color:red'>can't</strong> scape the soil fabric.</li>
+	<li class='fragment'>Shear occurs with \(\Delta V=0\) or <span class='atb'>zero volume change</span>.</li>
+	<li class='fragment'><span class='atb'>Excess</span> <strong style='color:blue'>pore water pressure</strong> is generated.</li>
+</ul>
+
+<div class='findingBox fragment' style='margin-top: 25px;margin-left: 0px;'>
+This is known as the <span class='atb'>undrained condition</span>.
+</div>
+</div>
+</div>
+</section>
+
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='container'>
+<div class='col' style='width: 60%;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/shear_drained.svg'></object>
+</div>
+<div class='col' style='width: 40%;'>
+<ul>
+	<li class='fragment'>Water <strong style='color:green'>drains instantaneously</strong>.</li>
+	<li class='fragment'>Volume <span class='atb'>change</span> during shearing \(\Delta V \neq 0\).</li>
+	<li class='fragment'><strong style='color:blue'>Excess pore pressure</strong> is <strong style='color:red'>not</strong> generated.</li>
+
+</ul>
+
+<div class='findingBox fragment' style='margin-top: 100px;margin-left: 0px;'>
+This is known as the <span class='atb'>drained condition</span>.
+</div>
+</div>
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='container'>
+	<div class='col' style='width: 55%;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/shear_true.svg'></object>
+	</div>
+	<div class='col' style='width: 45%;'>
 	<ul>
-		<li>\(\tau_f=S=\) the shear strength of the soil</li>
-		<li>\(c=\) cohesion</li>
-		<li>\(\phi=\) friction angle</li>
+		<li class='fragment'>If <strong style='color:blue'>consolidation</strong> is faster than <strong style='color:green'>shear rate</strong> \(\implies\) <span class='atb'>closer to drained behavior</span> and \(\Delta u \approx 0\).</li>
+		<li class='fragment'>if <strong style='color:blue'>consolidation</strong> is slower than <strong style='color:green'>shear rate</strong> \(\implies\) <span class='atb'>akin to undrained behavior</span> and \(\Delta u \neq 0\).</li>
+		
+	
 	</ul>
-</section>
+	
+	<div class='findingBox fragment' style='margin-top: 20px;margin-left: 0px;'>
+	<strong style='color:green'>Drained</strong> and <strong style='color:red'>undrained</strong> behavior are <span class='atb'>idealizations</span>.
+	</div>
+	</div>
+	</div>
+	
+	</section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Friction of soils</h1>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Drained vs. undrained in practice</h1>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/real_undrained.svg'></object>
+
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+		For <strong style='color:green'>NC clays</strong> on loading stress path <span class='atb'>short-term</span> condition is <strong style='color:red'>critical</strong>. At this time the behavior is similar to <span class='atb'>undrained conditions</span>.
+	</div>	
+	
+	</section>
+
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>		
+		<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/real_drained.svg'></object>
+	
+		<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+			For heavily <strong style='color:green'>OC clays</strong> on unloading stress path <span class='atb'>long-term</span> condition is <strong style='color:red'>critical</strong>. At this time the behavior is similar to <span class='atb'>drained conditions</span>.
+		</div>	
+		
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Measuring shear strength of soils</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p>Friction is a fundamental phenomena in nature, that its basic level depends on the materials in contact. In soils it is influenced by different factors.</p>
+	The shear strength of soils is measured in the <strong style='color:#7abbe6'>laboratory</strong> or <span class='atb'>in-situ</span> using different tests. The most common tests are:
+	</div>
+	<div class='container'>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>Laboratory tests</h4>
+	<ol>
+		<li class='fragment'>Direct shear test (DST).</li>
+		<li class='fragment'>Triaxial test (TX).</li>
+		<li class='fragment'>Direct simple shear test (DSS).</li>
+		<li class='fragment'>Ring shear test.</li>
+		<li class='fragment'>Laboratory vane shear test.</li>
+		
+	</ol>
+	</div>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>In-situ tests</h4>
+	<ol>
+		<li class='fragment'>Standard penetration test (SPT).</li>
+		<li class='fragment'>Cone penetration test (CPT).</li>
+		<li class='fragment'>Vane shear test.</li>
+	</ol>
+	</div>
 	</div>
 
-<ul>
-	<li>Mineralogy</li>
-	<li>Particle size</li>
-	<li>Particle shape</li>
-	<li>Stress state</li>
-	<li>Stress path</li>
-	<li>Soil density</li>
-	<li>OCR</li>
-	<li>Anisotropy</li>
-</ul>
-</section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Dilation of soils</h1>
-<div class='defBox' name='Dilation' style='margin-top: 0px;margin-left: 0px;'>
-<strong style='color:green'>\(D\):</strong> Is the capacity of soils to expand its volume when sheared.
-<p><div class='equationBox'>
-	$$ D=\cfrac{d \varepsilon_v} {d \varepsilon_q} $$
-	</div></p>
-
-</div>
-<ul>
-	<li>\(D=\) dilation</li>
-	<li>\(\varepsilon_q =\) deviatoric strain</li>
-	<li>\(\varepsilon_v =\) volumetric strain</li>
-</ul>
-
-</section>
-
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	
-<iframe class="stretch" src="https://www.youtube.com/embed/XCOPNMDhXkM?autoplay=0" data-preload></iframe>
-	
-</section> -->
+	</section>
+
+
 
 <!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Stress paths</h1>
@@ -237,29 +429,114 @@
  </figure>
 </section> -->
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Direct shear test</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	<p>Shear stress is increased until sample fails in a predefined failure plane.</p>
-</div>
 
-<div class="container">
-	<div class="col">
-      <figure>
-        <img src="http://servereal.com/wp-content/uploads/2013/05/direct-shear-test-principle.jpg" style="width:100%" data-preload/>
-        <footer style="margin-top:-60px;"><small></small></footer>
-      </figure>
-	</div>
-	<div class="col">
-    <ul>
-    	<li>Conducted on <strong style="color:#7abbe6">consolidated</strong> and <strong style="color:#7abbe6">drained</strong> conditions.</li>
-			<li>Is \(K_0\)-consolidated \(\longrightarrow\) Real in-situ conditions.</li>
-			<li>Conservative for soils with pre-defined failure planes.</li>
-			<li>Produces <strong style="color:#7abbe6">rotation of principal stresses</strong></li>
-    </ul>
-	</div>
-</div>
+
+<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+	<h1>Direct shear test (DST)</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+			<span class='atb'>Initial configuration</span>
+						<figure>
+						  <img src="FiguresGeneral/DST_initial.svg" style="width:100%" data-preload/>
+						  <footer style="margin-top:-60px;"><small></small></footer>
+						</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+						<span class='atb'>Final configuration</span>
+						<figure>
+						  <img src="FiguresGeneral/DST_final.svg" style="width:100%" data-preload/>
+						  <footer style="margin-top:-60px;"><small></small></footer>
+						</figure>
+			</div>
+		</div>
 </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	During a <strong style='color:#7abbe6'>DST</strong> the <strong style='color:green'>normal</strong> and <strong style='color:red'>shear</strong> stresses, and the <strong style='color:blue'>axial and lateral</strong> <span class='atb'>displacements</span> are measured.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/DST_measurements.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<p>
+		<ul><li class='fragment'>At least <span class='atb'>three tests</span> needed.</li>
+		<li class='fragment'>Can get <span class='atb'>peak</span> shear stresses.</li>
+		<li class='fragment'>Must <span class='atb'>plot</span> results in \(\tau\) vs \(\sigma\) to get parameters.</li>
+		</ul>
+
+		
+	</p>
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:#7abbe6'>Note:</strong> You can <strong style='color:#7abbe6'>normalize</strong> the displacements using <strong style='color:blue'> \(\delta x/D\)</strong> and <strong style='color:blue'>\(\delta y/ H\)</strong>. However, these are not <span class='atb'>distortions or strains</span>.
+	</div>
+	</div>
+	</div>
+	
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>DST data interpretation</h1>
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/DST_interpretation.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<div class='defBox fragment' name='Peak friction angle' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(\phi'_p\)</strong> is obtained using <strong style='color:#7abbe6'>peak</strong> shear stresses.
+	</div>
+	<div class='defBox fragment' name='Secant fiction angle' style='margin-top: 5px;margin-left: 0px;'>
+	<strong style='color:blue'>\(\phi'_s\)</strong> obtained at <strong style='color:#7abbe6'>specific deformations</strong> (e.g., \(\delta x/D= 0.1\)).
+	</div>
+
+	<div class='defBox fragment' name='Critical friction angle' style='margin-top: 5px;margin-left: 0px;'>
+	<strong style='color:red'>\(\phi'_c\)</strong> is obtained at <strong style='color:#7abbe6'>very large</strong> deformations.
+	</div>
+	</div>
+	</div>
+	
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Example 7.4</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	The figure shows the results of three direct shear tests on a silty sand sample. Find: (a) the peak friction angle, and (b) the secant friction angle at \(\delta x/D=0.05\). \(D=2.5\) in.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/DST_data.svg'></object>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX740.svg'></object>
+	</div>
+	</div>
+	</div>
+	
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<iframe src='https://docs.google.com/spreadsheets/d/1-HCT3CMf1o23nZbkn3UP7r-nIBQ0AYMtUsJaJxJAzhs/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX741.svg'></object>
+	</div>
+	</div>
+	</div>
+	
+	</section>
 
 <!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Simple shear test</h1>
@@ -284,7 +561,7 @@
 </section> -->
 
 
-
+<!-- 
 <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 	<h1>Triaxial test</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -309,7 +586,7 @@
 
  	</div>
  </div>
-</section>
+</section> -->
 
 
 
@@ -342,10 +619,13 @@
 
 	
 	<div class="container">
-		<div class="col">
-			<p><strong style="color:#7abbe6">Sands have \(c'=0\) unless there is cementation</strong>. However, different friction angles exist depending on deformation level or definition of <strong style="color:#7abbe6">failure</strong>.
+		<div class="col" style="width: 50%;">
+			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style="color:green">Sands have \(c'=0\) unless there is cementation</strong>. However, different friction angles exist depending on deformation level or definition of <strong style="color:red">failure</strong>.
+			</div>
+			
 		</div>
-		<div class="col">
+		<div class="col" style="width: 50%;">
 			
 		 <ul>
 			<li>\(\phi'_p=\) peak friction angle</li>
@@ -353,7 +633,7 @@
 			<li>\(\phi'_r=\) repose friction angle</li>
 			<li>\(\phi'_c=\) critical friction angle</li>
 		 </ul>
-			 </p>
+			
 		</div>
 	</div>
 
@@ -363,10 +643,12 @@
 	<h1>\(K_0\) formula</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;text-align: left;'>
 	<p>Analytical and empirical expressions have been developed for \(K_0\) as a function of the friction angle. These equations are often used to determine \(K_0\) for sand</p>
-<div class='equationBox'>
+
+</div>
+
+<div class='equationBox' style="margin-top: 25px;">
 	<p>\(K_0^{nc}=1-\sin \phi'_c\) \(\longrightarrow\) For NC soil (Jacky 1944)</p>
 	<p>\(K_0^{oc}=K_0^{nc} OCR^{0.5}\) \(\longrightarrow\) For OC soil (Meyerhof 1976)</p>
-</div>
 </div>
 
 
@@ -382,8 +664,8 @@
 	<img src="FiguresGeneral/phi_values.PNG" style="width:100%" data-preload/>
 	<footer style="margin-top:-60px;"><small>Budhu 2015</small></footer>
   </figure>
-  <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-  <strong style='color:#7abbe6'>Note:</strong> \(N\), and \(N_{60}\) are the number of blows and corrected blows per meter of penetration obtained from the <strong style='color:#7abbe6'>Standard penetration test</strong>. You can learn more about this in <strong style='color:#7abbe6'>CIE-460</strong>.
+  <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+  <strong style='color:green'>Note:</strong> \(N\), and \(N_{60}\) are the number of blows and corrected blows per meter of penetration obtained from the <strong style='color:green'>Standard penetration test</strong>. You can learn more about this in <strong style='color:green'>CIE-460</strong>.
   </div>
 </section>
 
@@ -444,21 +726,80 @@
 	</section> -->
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Undrained strength of clay</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;text-align: left;'>
-	Because clay is almost <span class='atb'>impermeable</span>, it builds <strong style='color:#7abbe6'>excess pore pressure</strong> <strong style='color:#7abbe6'>right after being loaded</strong>. Therefore, in the <strong style='color:#7abbe6'>short-term</strong> clay behaves <strong style='color:#7abbe6'>undrained</strong>. <strong style='color:#7abbe6'>Total stress and undrained</strong> parameters are used to represent this behavior.
-
+		<h1>Drained strength of clay</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			Normally consolidated clay <span class='atb'>contracts</span> and heavily overconsolidated clay <span class='atb'>dilates</span>.
+		</div>
+	<div class='container'>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>N.C. clay</h4>
+	<p>For normally consolidated clay \(c'=0\).</p>
 	<div class='equationBox'>
-	\(S_u=c_u\)
+	\( \tau_f= \sigma'_{nf} \tan \phi' \)
 	</div>
-
 	</div>
-
-	<figure style="margin-top:-30px;">
-	  <img src="FiguresGeneral/SuValues.PNG" style="width:50%" data-preload/>
-	  <footer style="margin-top:-30px;"><small>Budhu (2013)</small></footer>
-	</figure>
+	<div class='col bordered' style='width: 50%;'>
+	<h4>Heavily O.C. clay</h4>
+	<p>For overconsolidated clay, cohesion is observed. This cohesion is not necessarily due to cementation but due to suction during dilation.</p>
+	<div class='equationBox'>
+	\( \tau_f= c' +  \sigma'_{nf} \tan \phi' \)
+	</div>
+	</div>
+	</div>
 	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Undrained strength of clay</h1>
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/undrained_circles.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	When <strong style='color:red'>undrained</strong>, soils develop <span class='atb'>excess pore pressure</span>. The result of undrained tests are states of stress shifted to the right and of equal magnitude in the <strong style='color:red'>total stress space</strong>.
+	</div>
+
+	<p>The undrained shear strength \(S_u\) is defined with \(\phi=0\):</p>
+	<div class='equationBox' style="margin-top: 10px;">
+	\( \tau_f= S_u=c_u \)
+	</div>
+	</div>
+	</div>
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	The undrained shear strength is related to the consolidation effective stress. 
+	</div>
+
+	<div class='equationBox' style="margin-top: 20px;">
+	\( \cfrac{S_u}{\sigma'_{vo}}= k \ OCR^b \)
+	</div>
+	<p>Where: <br>
+	\(k=\) Constant between 0.23-0.31 <br>
+	\(b \approx 0.8\) Constant <br>
+	</p>
+	</div>
+	<div class='col' style='width: 50%;'>
+		<p>Typical values of undrained shear strength as a function of soil consistency and SPT results. </p>
+
+		<figure style="margin-top:-30px;">
+			<img src="FiguresGeneral/SuValues.PNG" style="width:100%" data-preload/>
+			<footer style="margin-top:-30px;"><small>Budhu (2013)</small></footer>
+		  </figure>
+	</div>
+	</div>
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+	Note: The equation shown in this slide is often known as the <span class='atb'>SHANSEP equation</span>. Parameters \(k\) and \(b\) are obtained using such procedure. 
+	</div>
+	</section>
+
+
 
 	<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Example 6.9</h1>
@@ -479,29 +820,7 @@
 </div>
 	</section> -->
 
-	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-		<h1>Drained strength of clay</h1>
-		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-			<p>In some cases we want to perform <strong style="color:#7abbe6">drained</strong> analysis of clay. In those situations we nee to know the parameters of clay.</p>
-		</div>
-	
-	<div class="container">
-		<div class="col">
-	     <ul>
-	     	<li>Recall, normally consolidated clay contracts and overconsolidated clay dilates.</li>
-				<li>For normally consolidated clay \(c'=0\). Then we typically get a unique friction angle.</li>
 
-	     </ul>
-		</div>
-		<div class="col">
-     <ul>
-     	<li>For overconsolidated clay, cohesion is observed. This cohesion is not necessarily due to cementation but due to suction during dilation.</li>
-			<li>As \(OCR\) increases, \(c'\) increases</li>
-			<li>As \(OCR\) increases, \(\phi'\) decreases</li>
-     </ul>
-		</div>
-	</div>
-	</section>
 
 	<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>Relationship between \(OCR\) and \(S_u\)</h1>
@@ -547,6 +866,52 @@
 	
 	</section> -->
 
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	How is the shear strength of soils used in practice?
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Examples include: <br>
+	<ol>
+		<li>Slope stability analysis</li>
+		<li>Shallow and deep foundations</li>
+		<li>Tunneling</li>
+		<li>Deep excavations</li>
+	</ol>
+	</div>
+
+	<figure>
+	<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1200px-Landslide_in_Cusco%2C_Peru_-_2018.jpg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+
+	</div>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/slope_stability.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+
+	<div class='equationBox'>
+	\( FS= \cfrac{\tau_f}{\tau_{mob}}= \cfrac{S}{\tau_{mob}}\)
+	</div>
+	</div>
+	</div>
+
+	
+	</section>
+
+	<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Example 7.5</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	A slope stability analysis conducted for a proposed embankment on a normally consolidated clay is shown in the figure below. An element of the embankment has the state of stress shown in the figure. Determine the element's factor of safety for short and long-term conditions. Which condition is critical?
+	</div>
+	
+	</section> -->
+
 
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 		<h1>What's next?</h1>
@@ -554,7 +919,7 @@
 	<p>You have completed your first course in geotechnical engineering. <strong style="color:#7abbe6">CONGRATULATIONS!!!</strong></p>
 	<p>how can I know more about GE?</p>
 	<div class="container">
-		<div class="col">
+		<div class="col" style="width: 50%;">
 			<ol>
 				<li>Geotechnical Engineering</li>
 				<li>Geostructures I</li>
@@ -563,11 +928,11 @@
 
 			</ol>
 		</div>
-		<div class="col">
+		<div class="col"  style="width: 50%;">
 			<ol>
 				<li>Advanced soil mechanics</li>
 				<li>Experimental soil mechanics</li>
-				<li>Geosytems modeling</li>
+				<li>Geosystems modeling</li>
 				<li>Soil erosion and sediment transport</li>
 			</ol>
 		</div>
@@ -578,7 +943,7 @@
 	<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 
 
-		<iframe class="stretch" src="https://www.youtube.com/embed/KwvyfS9Icyc?autoplay=1" data-preload></iframe>
+		<iframe class="stretch" src="https://www.youtube.com/embed/KwvyfS9Icyc?autoplay=1&rel=0&modestbranding=1" data-preload></iframe>
 	
 	</section>
 
@@ -591,9 +956,7 @@
 
 
 
-  <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
-    </section>
 
 
 
