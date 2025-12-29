@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         svgPaths.forEach(path => {
             const tagType = getTagType(path);
 
-            // Select case based on the tag type
+            // Select case based on the tag type            
 
             // If the tag type is path
             if (tagType === 'path') {
-                // If path has dash style then save it 
+                // If path has dash style then save it
+                
+                
                 if (path.style.strokeDasharray) {
                     path.setAttribute('ns1:stroke-dasharray', path.style.strokeDasharray);
                     
@@ -64,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }  
             
             if (tagType === 'g') {
+                path.style.opacity = 0;
+            }
+
+            if (tagType === 'circle') {
                 path.style.opacity = 0;
             }
         });
@@ -122,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         const parentElement = getParentElement(path);
                         const ParentTagType = getTagType(parentElement);
 
-                        const animationDuration = pathLength / (ParentTagType === 'g' ? 30 : 30);
+                        const animationDuration = pathLength / (ParentTagType === 'g' ? 35 : 30);
                         const strokeDashStyle = path.style.strokeDasharray;
                         path.style.strokeDasharray = pathLength;
                         path.style.strokeDashoffset = pathLength;
@@ -173,6 +179,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (tagType === 'g') {    
                         path.style.transition = 'opacity 1s ease';
                         path.style.opacity = 1;     }     
+
+                        if (tagType === 'circle') {    
+                            path.style.transition = 'opacity 1s ease';
+                            path.style.opacity = 1;     } 
 
                         currentPathIndex++; // Move to the next path
                     }
