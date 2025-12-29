@@ -94,7 +94,7 @@ async function typeSentence(sentence, eleRef, delay = 10) {
     
     // Create pencil cursor icon
     const pencil = document.createElement('span');
-    pencil.innerHTML = '✏️';
+    pencil.innerHTML = '✍🏽';
     pencil.style.display = 'inline';
     pencil.style.marginLeft = '2px';
     pencil.style.animation = 'pencil-bounce 0.5s ease-in-out infinite';
