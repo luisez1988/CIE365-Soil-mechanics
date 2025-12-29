@@ -10,9 +10,18 @@ const boxpressed = e => {
     // Get original text from data attribute
     caption = e.target.getAttribute('data-original-text') || e.target.textContent;
     
-    // If caption is empty, skip animation
-    if (!caption || caption.trim() === '') {
+    // If caption is empty or already animated, skip
+    if (!caption || caption.trim() === '' || e.target.hasAttribute('data-animated')) {
         return;
+    }
+    
+    // Mark this box as animated
+    e.target.setAttribute('data-animated', 'true');
+    
+    // Update currentBoxIndex to skip this box when using 'w' key
+    const boxIndex = orderedBoxes.indexOf(e.target);
+    if (boxIndex !== -1 && boxIndex >= currentBoxIndex) {
+        currentBoxIndex = boxIndex + 1;
     }
     
     audio_src.play()
@@ -22,7 +31,7 @@ const boxpressed = e => {
     e.target.textContent="";//clean box      
     e.target.style.width=widthEl;
     e.target.style.height=heightEl ;   
-    e.target.style.color = "#001d51";  // changes color of font     
+    e.target.style.color = "#990000";  // changes color of font     
     typeSentence(caption,e.target,writingVelocity); 
     
 
@@ -47,24 +56,20 @@ orderedBoxes = Array.from(boxes)
 // Keyboard event listener for 'w' key
 document.addEventListener("keydown", (event) => {
     if (event.key.toLowerCase() === 'w') {
-        console.log('W key pressed');
-        console.log('Current index:', currentBoxIndex);
-        console.log('Total boxes:', orderedBoxes.length);
-        console.log('Ordered boxes:', orderedBoxes);
+        // Find the next non-animated box
+        while (currentBoxIndex < orderedBoxes.length && 
+               orderedBoxes[currentBoxIndex].hasAttribute('data-animated')) {
+            currentBoxIndex++;
+        }
         
         if (currentBoxIndex < orderedBoxes.length) {
             const nextBox = orderedBoxes[currentBoxIndex];
-            console.log('Next box:', nextBox);
-            console.log('Next box text:', nextBox.getAttribute('data-original-text'));
             
             // Create a synthetic event object
             const syntheticEvent = {
                 target: nextBox
             };
             boxpressed(syntheticEvent);
-            currentBoxIndex++;
-        } else {
-            console.log('No more boxes to animate');
         }
     }
 });

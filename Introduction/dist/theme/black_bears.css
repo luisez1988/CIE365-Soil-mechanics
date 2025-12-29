@@ -252,7 +252,7 @@ li.l1:nth-child(even){
 .reveal .stickynote {
   text-decoration:none;
   color:#000;
-  background:rgb(245, 223, 125);
+  background:#7d8c1f;
   display:block;
   height:15em;
   width:12em;
@@ -325,7 +325,7 @@ li.l2:nth-child(even){
 .reveal .stickynote {
   text-decoration:none;
   color:#000;
-  background:rgb(245, 223, 125);
+  background:#c7d46c;
   display:block;
   height:auto;
   width:12em;
@@ -358,7 +358,7 @@ li.l2:nth-child(even){
 .reveal .textBox {
   text-decoration:none;
   color:#000;
-  background:#fde565;
+  background:#f2f2f2;
   display:block;
   /* height:15em;
   width:12em; */
@@ -369,7 +369,7 @@ li.l2:nth-child(even){
 .reveal .findingBox {
   text-decoration:none;
   color:#fff;
-  background:#ea1500;
+  background:#d14905;
   display:block;
   /* height:15em;
   width:12em; */
@@ -408,7 +408,7 @@ li.l2:nth-child(even){
 .reveal .defBox {
   text-decoration:none;
   color:#000;
-  background:#cccccc;
+  background:#f3da6d;
   display:block;
   /* height:15em;
   width:12em; */
@@ -661,11 +661,11 @@ li.l2:nth-child(even){
 
 .reveal .atb {  
   margin: 0px;
-  background-color: #d8e9e5;
-  color: #d8e9e5;
+  background-color: #fff1b4;
+  color: #fff1b4;
   padding:2px; 
   padding-right: 10px;
-  border: 5px solid rgb(1, 36, 194);
+  border: 5px solid #000;
   border-radius:  5px 5px 5px 5px;
   font-family: "Caveat";
   font-weight: bold;
