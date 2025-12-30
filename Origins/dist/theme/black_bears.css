@@ -263,8 +263,8 @@ li.l1:nth-child(even){
 }
 
 .reveal .bordered {
-  border-right: 2px dashed navy; /* Adjust color and thickness as needed */
-  border-top: 2px dashed navy; /* Adjust color and thickness as needed */
+  border-right: 2px dashed black; /* Adjust color and thickness as needed */
+  border-top: 2px dashed black; /* Adjust color and thickness as needed */
   padding-right: 10px; /* Adjust as needed */
   padding-top: 10px; /* Adjust as needed */
   margin-right: 10px; /* Adjust as needed */
@@ -289,7 +289,7 @@ li.l1:nth-child(even){
   list-style: none;
 }
 li.l2 {
-  background: #a05fd4;
+  background: #8d9e2b;
   color: #fff;
   counter-increment: myCounter;
   margin: 0 0 7px 0;
@@ -306,7 +306,7 @@ li.l2:before{
   text-align: center;
   font-size: 1.2em;
   line-height: 1em;
-  background-color:  #6b77ff;
+  background-color:  #008473;
   padding: 10px;
   font-weight: bold;
   position: absolute; 
@@ -314,12 +314,14 @@ li.l2:before{
   left: -40px;
   border-radius: 10%;
   border: 5px solid rgb(0, 0, 0);
-  font-family:  EB Garamond;
+  font-family:  Arial;
+  width: 70px;
+  box-sizing: border-box;
 }
 
 
 li.l2:nth-child(even){
-  background-color: #accf94;
+  background-color: #1d4b61;
 }
 
 .reveal .stickynote {
