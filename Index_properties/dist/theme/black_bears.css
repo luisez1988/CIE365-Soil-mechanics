@@ -14,7 +14,7 @@
   text-align: center;
   font-style: bold;
   border-bottom-style: solid;
-  border-bottom-color: #d6d2c4;
+  border-bottom-color: #000; 
   padding-bottom: 0px;
   border-bottom-width: 3px;
   font-size: 1.5em;
@@ -42,13 +42,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 :root {
   --r-background-color: #fff;
-  --r-main-font: Roboto Slab, Helvetica, sans-serif;
+  --r-main-font: Roboto, Roboto Condensed, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #000;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: EB Garamond, Helvetica, sans-serif;
-  --r-heading-color: #002a5c;
+  --r-heading-font: Roboto, Roboto Condensed, sans-serif;
+  --r-heading-color: #cc0000;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -60,10 +60,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.15em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #7abbe6;
-  --r-link-color-dark: #3a9ada;
-  --r-link-color-hover: #badcf2;
-  --r-selection-background-color: #2480bd;
+  --r-link-color: #FAC800;
+  --r-link-color-dark: #005b97;
+  --r-link-color-hover: #ea1500;
+  --r-selection-background-color: #80c3d4;
   --r-selection-color: #fff;
 }
 
@@ -217,7 +217,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   list-style: none;
 }
 li.l1 {
-  background: #5d7d9b;
+  background: #12394d;
   color: #fff;
   counter-increment: myCounter;
   margin: 0 0 0px 0;
@@ -234,25 +234,25 @@ li.l1:before{
   text-align: center;
   font-size: 1.2em;
   line-height: 1em;
-  background-color:  #4798e4;
+  background-color:  #80c3d4;
   padding: 10px;
   font-weight: bold;
   position: absolute; 
   top: 0;
   left: -40px;
   border-radius: 50%;
-  font-family:  EB Garamond;
+  font-family:  sans-serif;
 }
 
 
 li.l1:nth-child(even){
-  background-color: #434A54;
+  background-color: #599baf;
 }
 
 .reveal .stickynote {
   text-decoration:none;
   color:#000;
-  background:rgb(245, 223, 125);
+  background:#7d8c1f;
   display:block;
   height:15em;
   width:12em;
@@ -263,8 +263,8 @@ li.l1:nth-child(even){
 }
 
 .reveal .bordered {
-  border-right: 2px dashed navy; /* Adjust color and thickness as needed */
-  border-top: 2px dashed navy; /* Adjust color and thickness as needed */
+  border-right: 2px dashed black; /* Adjust color and thickness as needed */
+  border-top: 2px dashed black; /* Adjust color and thickness as needed */
   padding-right: 10px; /* Adjust as needed */
   padding-top: 10px; /* Adjust as needed */
   margin-right: 10px; /* Adjust as needed */
@@ -289,7 +289,7 @@ li.l1:nth-child(even){
   list-style: none;
 }
 li.l2 {
-  background: #a05fd4;
+  background: #8d9e2b;
   color: #fff;
   counter-increment: myCounter;
   margin: 0 0 7px 0;
@@ -306,7 +306,7 @@ li.l2:before{
   text-align: center;
   font-size: 1.2em;
   line-height: 1em;
-  background-color:  #6b77ff;
+  background-color:  #008473;
   padding: 10px;
   font-weight: bold;
   position: absolute; 
@@ -314,18 +314,20 @@ li.l2:before{
   left: -40px;
   border-radius: 10%;
   border: 5px solid rgb(0, 0, 0);
-  font-family:  EB Garamond;
+  font-family:  Arial;
+  width: 70px;
+  box-sizing: border-box;
 }
 
 
 li.l2:nth-child(even){
-  background-color: #accf94;
+  background-color: #1d4b61;
 }
 
 .reveal .stickynote {
   text-decoration:none;
   color:#000;
-  background:rgb(245, 223, 125);
+  background:#c7d46c;
   display:block;
   height:auto;
   width:12em;
@@ -358,7 +360,7 @@ li.l2:nth-child(even){
 .reveal .textBox {
   text-decoration:none;
   color:#000;
-  background:rgb(241, 244, 252);
+  background:#f2f2f2;
   display:block;
   /* height:15em;
   width:12em; */
@@ -369,7 +371,7 @@ li.l2:nth-child(even){
 .reveal .findingBox {
   text-decoration:none;
   color:#000;
-  background:rgb(255, 193, 135);
+  background:orange;
   display:block;
   /* height:15em;
   width:12em; */
@@ -387,8 +389,8 @@ li.l2:nth-child(even){
 
 .reveal .InquiryBox {
   text-decoration:none;
-  color:#000;
-  background:rgb(163, 185, 255);
+  color:#fff;
+  background:#4156A1;
   display:block;
   /* height:15em;
   width:12em; */
@@ -408,7 +410,7 @@ li.l2:nth-child(even){
 .reveal .defBox {
   text-decoration:none;
   color:#000;
-  background:rgb(241, 252, 242);
+  background:#f3da6d;
   display:block;
   /* height:15em;
   width:12em; */
@@ -420,7 +422,7 @@ li.l2:nth-child(even){
 .reveal .defBox:before {
   content: "";
   font-weight: bold;
-  color: #001d51;
+  color: #ea1500;
   font-style: normal;
   
 }
@@ -444,7 +446,7 @@ li.l2:nth-child(even){
 .reveal .ProblemBox {
   text-decoration:none;
   color:#000;
-  background:#e1e7dd;
+  background:#fef8cb;
   display:block;
   /* height:15em;
   width:12em; */
@@ -458,7 +460,7 @@ li.l2:nth-child(even){
 .reveal .ProblemBox:before {
   content: "📝 Solution:";
   font-weight: bold;
-  color: #001d51;
+  color: #990000;
   font-style: normal;
   text-align: left;
   
@@ -601,31 +603,33 @@ li.l2:nth-child(even){
 .reveal .title_slide {
   display: block;
   margin: 0px;
-  background-color: #1c2224;
+  background-color: rgba(209, 73, 5, 0.85);
   text-align: center;
   font-style: normal;
-  border: 10px solid #e3e2db;
+  /* border: 10px solid #f8a812; */
   padding-bottom: 5px;
 }
 
 .reveal .title_slide:before {
   content: "";
-  color: #7abbe6;
+  color: #fff;
   font-weight: bold;
   font-style: bold;
-  font-family: "EB Garamond";
+  font-family: "Sans Serif";
   font-size: 62px;
 }
 
 .reveal .title_slide[name]:before {
   content: attr(name);
+  font-size: 1.4em;
 }
+
 
 .reveal .qrCode_cont {
   display: block;
   width: 310px;
   margin: 0px;
-  background-color: #1c2224;
+  background-color: #000;
   text-align: center;
   font-style: normal;
   padding-bottom: 5px;
@@ -640,7 +644,7 @@ li.l2:nth-child(even){
   color: #ffffff;
   font-weight: bold;
   font-style: bold;
-  font-family: "EB Garamond";
+  font-family: "Roboto Slab";
   font-size: 35px;
 }
 
@@ -654,16 +658,16 @@ li.l2:nth-child(even){
   left: 5em;
   font-size: 0.5em;
   font-family: "Roboto Slab";
-  color: #77b5e6;
+  color: var(--r-link-color);
 }
 
 .reveal .atb {  
   margin: 0px;
-  background-color: #d8e9e5;
-  color: #d8e9e5;
+  background-color: #fff1b4;
+  color: #fff1b4;
   padding:2px; 
   padding-right: 10px;
-  border: 5px solid rgb(1, 36, 194);
+  border: 5px solid #000;
   border-radius:  5px 5px 5px 5px;
   font-family: "Caveat";
   font-weight: bold;
@@ -722,7 +726,7 @@ object {
 }
 
 .reveal a:hover {
-  color: var(--r-link-color-hover);
+  color: var(--r-link-color);
   text-shadow: none;
   border: none;
 }
@@ -753,7 +757,7 @@ object {
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: var(--r-link-color);
+  color: var(--r-link-color-hover);
 }
 
 /*********************************************
@@ -761,7 +765,7 @@ object {
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: var(--r-link-color);
+  color: #ea1500;
 }
 
 /*********************************************

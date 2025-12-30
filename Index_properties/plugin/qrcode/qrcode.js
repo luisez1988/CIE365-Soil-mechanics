@@ -16,7 +16,7 @@ window.addEventListener("ready", (event) => {
     },
     dotsOptions:{
         type:"dots",
-        color:"#000080",
+        color:"#000",
         gradient:null,
     },
     backgroundOptions: {
@@ -37,7 +37,7 @@ window.addEventListener("ready", (event) => {
     },
     cornersSquareOptions:{
         type:"extra-rounded",
-        color:"#2ea5de",
+        color:"#cc0000",
         gradient:null,
     },
     cornersSquareOptionsHelper:{
@@ -53,7 +53,7 @@ window.addEventListener("ready", (event) => {
     },
     cornersDotOptions:{
         type:"dot",
-        color:"#0a03fc"
+        color:"#d14905"
     },
     cornersDotOptionsHelper:{
         colorType:{
