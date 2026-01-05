@@ -33,8 +33,8 @@
 					</style>
 	
 					<div class='footer'>
-						CIE-365
-						Spring 2025
+						CE 342
+						Spring 2026
 					</div>
 	
 					<style>
@@ -76,7 +76,7 @@
 
 			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Grain size distribution">
 				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-				<p style="color:#faffff; font-size:35px">Spring 2025</p>
+				<p style="color:#faffff; font-size:35px">Spring 2026</p>
 				<!-- <p style="color:#faffff; font-size:35px"> January 30, 2024</p> -->
 				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 			</div>
@@ -85,7 +85,7 @@
 		</section>
 		
 
-		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<section  >
 			<h1>Recap</h1>
 				<ul>
 				<li class="fragment"><div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -100,14 +100,14 @@
 				</ul>
 		</section>
 
-        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+        <section >
 					<h1>Contents</h1>
 					<div class='container'>
-					<div class='col' style="width: 50%;">
+					<div class='col' style="width: 50%; margin-top: 50px;">
 						<ul class="contentStyle">
-							<li class="l1">Sieve and hydrometer analysis.</li>							
-							<li class="l1">Soil fractions</li>
-							<li class="l1">Clay mineralogy</li>
+							<li class="l1">Sieve analysis</li>		
+                     <li class="l1">Hydrometer test</li>					
+							<li class="l1">Soil fractions</li>							
 							<li class="l1">Grain size metrics</li>
 							<li class="l1">Gradation coefficients</li>
 						</ul>	
@@ -115,7 +115,7 @@
 					<div class='col' style="width: 50%;">
 					<div class='container'>
 					<div class='col' style="width: 50%;">
-					<div class="stickynote" style="margin-top: 100px;margin-left: 30px;">
+					<div class="stickynote" style="margin-top: 100px;margin-left: 30px; height: 300px;">
 						<p> Objectives covered in this lecture</p>
 						<ul>
 							<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction. </li>
@@ -123,11 +123,11 @@
 					</div>
 					</div>
 					<div class='col' style="width: 50%;">
-					<div class='stickynote' style='margin-top: 100px;margin-left: 10px;'>
+					<div class='stickynote' style='margin-top: 100px;margin-left: 10px; height: 300px;'>
 					<p>After this lecture we will able to:</p>
 					<ul>
 						<li>Plot a grain size distribution curve. </li>
-						<li>Determine the fractions of soil according to grain size.</li>
+						<li>Determine the the percent of gravel, sand, and fines in a soil.</li>
 						<li>Determine particle sizes and the gradation coefficients.</li>
 						<!-- <li>Approximate the specific surface of soil particles.</li> -->
 						<!-- <li>Describe different clay mineralogy properties.</li>
@@ -153,13 +153,28 @@
 #     # #     # #    ##    #    #       #    ##    #    #     #
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Particle grain size</h1>
+<section >
+<h1>Particle size</h1>
 
 
 <div class='container'>
 <div class='col' style="width: 60%;">
-	<img src="./FiguresGeneral/grain_size_scale.svg" width="100%">
+	<img src="./FiguresGeneral/grain_size_scale.svg" width="100%"
+   alt="A diagram illustrating soil particle size classifications and visual comparisons. The top section features a horizontal scale dividing soil types by particle diameter, marked with specific measurement thresholds:
+
+    Boulders: Larger than 300 mm (1 ft).
+    Cobbles: Between 75 mm (3 in) and 300 mm.
+    Gravel: Between 4.75 mm (No. 4 sieve) and 75 mm.
+    Sand: Between 0.075 mm (No. 200 sieve) and 4.75 mm.
+    Silt + Clay: Smaller than 0.075 mm.
+
+An overhead bracket labels Gravel and Sand as 'Coarse,' while a second bracket labels Silt + Clay as 'Fine.'
+Below the chart, visual illustrations depict the relative sizes of the particles:
+
+    Gravel is shown as a large, fist-sized rock.
+    Sand is shown as a smaller, pebble-sized object.
+    Silt is shown as a tiny, single dot.
+    Clay is indicated by an arrow pointing to blank space with the text 'Invisible to the eye.'"/>
 </div>
 <div class='col' style="width: 40%;">
 	<div class="findingBox" style="margin-top: 100px;"> Grain size <span class='atb'>influence</span> the <strong style='color:green'>engineering behavior</strong> of soils. <br>
@@ -168,19 +183,141 @@
 </div>
 </section>
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Water effects soil differently depending on texture. <span class='atb'>Fined-grained</span> soils are more affected by water by affecting the interactions between mineral grains. We use two terms:
+</div>
+
+<div class='defBox' name='Plasiticy:' style='margin-top: 50px;margin-left: 0px;'>
+Ability to be <span class='atb'>molded</span>
+</div>
+
+<div class='defBox' name='Cohesiveness:' style='margin-top: 50px;margin-left: 0px;'>
+Ability to <span class='atb'>stick together</span>
+</div>
+
+</section>
+
+<section >
 	<h1>Grain size characteristics</h1>
-	<Table border='0' cellspacing='1' cellpadding='1' style='border-collapse:collapse;border:none;font-size: 0.8em;margin-top: -20px;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><b>Soil name:</b></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Gravels, sands</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Silts</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'> <span class='atb'>Clay</span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Grain size:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Coarse grained. Can see individual particles.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Cannot see individual grains.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Can't see individual grains.</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Characteristics:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesionless
+	<Table border='0' cellspacing='1' cellpadding='1' style='border-collapse:collapse;border:none;font-size: 0.77em;margin-top: -10px;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><b>Soil name:</b></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Gravels, sands</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Silts</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'> <span class='atb'>Clay</span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Grain size:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Coarse grained. Can see individual particles.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Cannot see individual grains.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Fine grained. Can't see individual grains.</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Characteristics:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Cohesionless</span>
 		Nonplastic
-		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesionless
+		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Cohesionless</span>
 		Nonplastic
-		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Cohesive
+		Granular</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Cohesive</span>
 		Plastic
 		</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Effect of water on engineering behavior:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively important</span>, particularly for  loose material under dynamic loadings.</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Important</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Very important</span> </td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Effect of grain size on engineering behavior:</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Very important</span> </td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively important</span></td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'><span class='atb'>Relatively unimportant</span></td></tr></font></table>
 		
+</section>
+
+
+<section >
+	<h1>Particle shape</h1>
+	<div class='textBox' style='margin-top: -20px;margin-left: 0px;'>
+	Particle shape plays an important role on the <span class='atb'>shear strength</span> of soils, particularly of <span class='atb'>coarse soils</span>. Particle shape can be visually classified using Powers (1953).
+	</div>
+	<figure style="margin-top: -20px;">
+	  <img src="FiguresGeneral/shapes.svg" style="width:70%" data-preload/>	  
+	</figure>
+</section>
+
+<section >
+<h1>Participation question 2.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the shape classification of the sand shown in the picture below?
+</div>
+
+<div class="h-stack">
+<img src="https://microscopyofnature.com/sites/default/files/styles/afbeelding_paragraph_/public/2022-06/Wit-zand-Australi%C3%AB-Leitz-4_0.jpg?itok=wyRxbGzD" height="300px">
+<img src="FiguresGeneral/shapes.svg" height="300px">
+</div>
+</section>
+
+<section >
+	<h1>Participation question 2.2</h1>
+   <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+      What is the shape classification of the sand shown in the picture below?
+   </div>
+	
+	<div class="h-stack">
+	<img src="https://www.intelligentliving.co/wp-content/uploads/2019/04/sandmagnified.jpg" height="300px">
+	<img src="FiguresGeneral/shapes.svg" height="300px">
+	</div>
+</section>
+
+<section>
+<h1>Particle shape: Sphericity and roundness</h1>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure  style='margin-top: -30px;font-size: 0.8em;'>
+<img src='FiguresGeneral/Shape_Santamarina.svg' width='100%'/>
+<footer style='margin-top: -50px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+
+</div>
+<div class='col' style='width: 50%;'>
+   <p style="font-size: 0.6em; margin-top: -20px;">From Santamarina et al. 2021</p>
+<table style="margin-top: -10px;">
+   <table>
+  <thead>
+    <tr>
+      <th>Classification</th>
+      <th>Roundness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Very angular</td>
+      <td>0.12 &ndash; 0.17</td>
+    </tr>
+    <tr>
+      <td>Angular</td>
+      <td>0.17 &ndash; 0.25</td>
+    </tr>
+    <tr>
+      <td>Subangular</td>
+      <td>0.25 &ndash; 0.35</td>
+    </tr>
+    <tr>
+      <td>Subrounded</td>
+      <td>0.35 &ndash; 0.49</td>
+    </tr>
+    <tr>
+      <td>Rounded</td>
+      <td>0.49 &ndash; 0.70</td>
+    </tr>
+    <tr>
+      <td>Well rounded</td>
+      <td>0.70 &ndash; 1.00</td>
+    </tr>
+  </tbody>
+</table>
+</table>
+</div>
+</div>
+
+<p> 
+
+   <div class='container'>
+   <div class='col' style='width: 50%;'>
+   \( \text{Sphericity}= \frac{\text{Part. Volume}}{\text{Vol. Circumscribed sphere}} \)
+   </div>
+   <div class='col' style='width: 50%;'>
+   \(\text{Roundness}= \frac{\text{Perimeter}^2}{4 \pi \times \text{Area}}\)
+   </div>
+   </div>
+</p>
+
+</section>
+
+<!-- <section >
+	<h1>Particle shape</h1>
+	<img src="FiguresGeneral/photos.svg" style="margin-top:-10px;">
 </section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Sieve analysis (ASTM D6913)</h1>
 
 	<div class="textBox" style="margin-top: -15px;font-size: 1em;"> The objective of this test is to determine the <span class='atb'> grain size distribution </span> 	<strong style='color: green'>(GSD)</strong> and other <span class='atb'> grain size metrics </span>. It is conducted on <span class='atb'>dry samples</span>. With this test it is possible to plot the <span class='atb'>coarse portion</span> of the GSD. </div>
@@ -197,8 +334,8 @@
 		</div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 2.3</h1>
+<section >
+<h1>Participation question 2.3</h1>
 
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 	If a soil mass 	<strong style='color:green'>pass</strong> sieve No 200, the soil is?
@@ -213,13 +350,13 @@
 </ul>
 </section>
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	
 	<iframe class="stretch" src="https://www.youtube.com/embed/AM-NrQoRIYY?autoplay=0" data-preload></iframe>
 	
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Sieve analysis (ASTM D6913)</h1>
 
 <div class="defBox" name="Individual sieve weight" style="margin-top: 0px;font-size: 1em;"> 	<strong style='color:green'>\(W_i\)</strong>: Is the weight of soil retained on sieve \(i\). </div>
@@ -234,7 +371,7 @@
 <p class="fragment">Note that the total dry weight of the sample is \(W_{td}=\sum_{i=1}^{n_s}W_i\), where \(n_s\) is the total number of sieves used.</p>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Sieve analysis (ASTM D6913)</h1>
 
 <div class="fragment"> 	<div class='defBox' name='Percentage retained or coarser' style='margin-top: 0px;font-size: 1em;'> 	<strong style='color:green'> \(P_{Ri}\)</strong>: Is the <span class='atb'> percentage </span> of soil mass <span class='atb'> retained </span> on sive \(i\).
@@ -253,7 +390,7 @@
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Soil fractions</h1>
 
 	<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
@@ -283,7 +420,7 @@
 </section>
 
 
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>What do you prefer?</h1>
 <ol class='iClicker' >
 <li class='l2'> Jupyter Notebooks</li>
@@ -291,7 +428,7 @@
 </ol>
 </section> -->
 
-<section id="EX260" data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section id="EX260" >
 	<h1>Example 2.6</h1>
 	<div class='textBox' style='margin-top: 0px;font-size: 1em;'> A sieve analysis was conducted on a soil producing the data shown in the table below. 	<strong style='color:#7abbe6'>Calculate (i) the retained weights, (ii) Percentage retained, (iii) Percentage passing, (iv) the gravel, sand, and fine fractions, (v) and plot the grain size distribution.</strong></div>
 
@@ -4670,11 +4807,11 @@
 	</div>	
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 	<iframe src="https://docs.google.com/spreadsheets/d/1Y-Lha2p_dtXF4CH57RaHdkEoyHSebLZXmY7WsHq--TQ/edit?usp=sharing" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 
 <figure style="margin-top: -20px;">
 <img src='FiguresGeneral/plot.svg' width='100%'/>
@@ -4682,11 +4819,11 @@
 </figure>
 </section>
 
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Hydrometer analysis</h1>
 <div class='textBox' style='margin-top: 0px;font-size: 1em;'> The objective is to determine the GSD of <span class='atb'> fine grained soils</span>. It <strong style='color:#7abbe6'>complements</strong> <span class='atb'> the sieve analysis </span> and extends the GSD beyond sieve No 200. </div>
 
@@ -4707,13 +4844,13 @@
 </div>
 </section>
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	
 	<iframe class="stretch" src="https://www.youtube.com/embed/WkN4LxXKKKI?autoplay=0" data-preload></iframe>
 	
 </section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Example 2.7</h1>
 
 	<div class='textBox' style='margin-top: 0px;font-size: 1em;'> A sieve analysis and a hydrometer analysis was conducted on a soil producing the results shown in the tables below. 	<strong style='color:#7abbe6'>Calculate the clay fraction and plot the combined GSD</strong>.
@@ -4736,7 +4873,7 @@
 		</div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <div class='container'>
 <div class='col bordered' style='width: 50%;'>
@@ -4767,12 +4904,12 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 
 	<iframe src="https://docs.google.com/spreadsheets/d/1jcgXeII6EwUhE7ey6UCIRpItIhZwW4HSsbzHOM2rpSU/edit?usp=sharing" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </section>
 
-<section id="EX270" data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section id="EX270" >
 <div class="Animation">
    <svg
    version="1.1"
@@ -7466,7 +7603,7 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>GSD metrics</h1>
 <p>Recognizable GSD features:</p>
 
@@ -7487,8 +7624,8 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </ul>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Quiz 2.4</h1>
+<section >
+	<h1>Participation question 2.4</h1>
    <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
    Select the GSD that is a poorly graded sand:
    </div>
@@ -7496,23 +7633,23 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Quiz 2.5</h1>
+<section >
+	<h1>Participation question 2.5</h1>
    <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
    Select the GSD that is a well graded soil:
    </div>	
 	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Quiz 2.6</h1>
+<section >
+	<h1>Participation question 2.6</h1>
    <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
       Select the GSD that is a gap graded soil:
    </div>	
 	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>GSD metrics</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -7545,8 +7682,8 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 		</div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 2.7</h1>
+<section >
+<h1>Participation question 2.7</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
    What is the <strong style='color:green'>coefficient of uniformity \(C_u\)</strong> of perfectly uniform soil?
 </div>
@@ -7561,7 +7698,7 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </ol>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Interpolation in the GSD</h1>
 <div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
 <span class='atb'>Logarithmic</span> <strong style='color:#7abbe6'>interpolation</strong> is used to determine \(D_x\). 
@@ -7582,7 +7719,7 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </div>
 </section>
 
-<section id="EX280" data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section id="EX280" >
 	<h1>Example 2.8</h1>
    <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
       Determine the <strong style='color:#7abbe6'>gradation coefficients</strong> and the <strong style='color:#7abbe6'> median grain size</strong> of the soil in Example 2.7
@@ -14227,7 +14364,7 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 		
 </section>
 
-<section id="EX281" data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section id="EX281" >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <div class="Animation">
    <svg
@@ -17646,46 +17783,9 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Particle shape</h1>
-	<div class='textBox' style='margin-top: -20px;margin-left: 0px;'>
-	Particle shape plays an important role on the <span class='atb'>shear strength</span> of soils, particularly of <span class='atb'>coarse soils</span>. Particle shape can be visually classified using Powers (1953).
-	</div>
-	<figure style="margin-top: -20px;">
-	  <img src="FiguresGeneral/shapes.svg" style="width:70%" data-preload/>	  
-	</figure>
-</section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 2.8</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-What is the shape classification of the sand shown in the picture below?
-</div>
 
-<div class="h-stack">
-<img src="https://microscopyofnature.com/sites/default/files/styles/afbeelding_paragraph_/public/2022-06/Wit-zand-Australi%C3%AB-Leitz-4_0.jpg?itok=wyRxbGzD" height="300px">
-<img src="FiguresGeneral/shapes.svg" height="300px">
-</div>
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<h1>Quiz 2.9</h1>
-   <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-      What is the shape classification of the sand shown in the picture below?
-   </div>
-	
-	<div class="h-stack">
-	<img src="https://www.intelligentliving.co/wp-content/uploads/2019/04/sandmagnified.jpg" height="300px">
-	<img src="FiguresGeneral/shapes.svg" height="300px">
-	</div>
-	</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Particle shape</h1>
-	<img src="FiguresGeneral/photos.svg" style="margin-top:-10px;">
-</section>
-
-<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  >
     <h1>Specific surface</h1>
 		<div class="container">
 			<div class="col">
@@ -17706,7 +17806,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Clay mineralogy</h1>
 		<div class="container">
 			<div class="col">
@@ -17726,7 +17826,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Clay mineralogy</h1>
 	<div class="h-stack" style="margin-top:-20px;">
 		  <img src="https://www.researchgate.net/profile/L-Wilson/publication/262582095/figure/fig2/AS:392458824372226@1470580883320/SEM-image-of-well-crystallized-crystallized-kaolinite-from-sandstone-Note-hexagonal.png" style="height:200px" data-preload/>
@@ -17744,7 +17844,7 @@ What is the shape classification of the sand shown in the picture below?
 	</figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Interaction of clay with water</h1>
 		<div class="container">
 			<div class="col">
@@ -17764,14 +17864,14 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section> -->
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	<section data-fullscreen>
 		<iframe class="stretch" src="https://www.youtube.com/embed/SW-NoiM726U?autoplay=0" data-preload></iframe>
 	</section>
 
 </section> -->
 
-<!-- <section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  >
     <h1>Consistency limits</h1>
 		<div class="container">
 			<div class="col">
@@ -17791,7 +17891,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Liquid limit ASTM D4318</h1>
 		<div class="container">
 			<div class="col">
@@ -17814,7 +17914,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Plastic limit ASTM D4318</h1>
 		<div class="container">
 			<div class="col">
@@ -17837,7 +17937,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Shrinkage limit ASTM D4943</h1>
 		<div class="container">
 			<div class="col">
@@ -17853,7 +17953,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Consistency indices</h1>
 		<div class="container">
 			<div class="col">
@@ -17871,14 +17971,14 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 <figure>
   <img src="limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" data-preload/>
   <footer style="margin-top:-60px;"><small></small></footer>
 </figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Activity of clays</h1>
 		<div class="container">
 			<div class="col">
@@ -17894,7 +17994,7 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.7</h1>
 <p>For the parameters shown in the table, compute \(LL\), \(PI\), \(LI\), and \(A\).</p>
 <div class="container">
@@ -17914,7 +18014,7 @@ What is the shape classification of the sand shown in the picture below?
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Soil classification</h1>
 	<p style="margin-top:-25px;">Unified soil classification system (USCS) ASTM D2487.</p>
 	<p>Input parameters:</p>
@@ -17933,7 +18033,7 @@ What is the shape classification of the sand shown in the picture below?
 	</ul>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Group symbols</h1>
 	<ul style="margin-top:-25px;">
 		<li> <b>Two letters</b>
@@ -17971,7 +18071,7 @@ What is the shape classification of the sand shown in the picture below?
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Plasticity chart</h1>
 <figure style="margin-top:-25px;">
   <img src="https://media.springernature.com/original/springer-static/image/prt%3A978-3-319-73568-9%2F16/MediaObjects/978-3-319-73568-9_16_Part_Fig1-223_HTML.png" style="height:600px" data-preload/>
@@ -17979,7 +18079,7 @@ What is the shape classification of the sand shown in the picture below?
 </figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Classification flow diagram</h1>
 		<div class="container">
 			<div class="col">
@@ -17993,23 +18093,23 @@ What is the shape classification of the sand shown in the picture below?
 		</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.8</h1>
 <img src="ex1.svg" style="margin-top:-15px;width:80%">
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.9</h1>
 <img src="ex2.svg" style="margin-top:-15px;width:80%">
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.10</h1>
 <img src="ex3.svg" style="margin-top:-15px;width:80%">
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>AASHTO Classification</h1>
 	<section data-fullscreen>
 		<iframe class="stretch" src="https://en.wikipedia.org/wiki/AASHTO_Soil_Classification_System" data-preload></iframe>
@@ -18071,7 +18171,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/Animated_lines/animate_svg.js"></script>
