@@ -338,8 +338,8 @@ In nature, soil particles are not perfectly uniform. To measure that variability
 </div>
 
 <p><ul>
-   <li class='fragment'><span class='atb'>Sieve analysis:</span> For particles coarser than 0.075 \(\mu\)m (i.e., coarser than sand) </li>
-   <li class='fragment'><span class='atb'>Hydrometer test:</span> For the portion of soils <strong style='color:#000'>finer than</strong> 0.075 \(\mu\)m (silts and clay)</li>
+   <li class='fragment'><span class='atb'>Sieve analysis:</span> For particles coarser than 0.075 mm </li>
+   <li class='fragment'><span class='atb'>Hydrometer test:</span> For the portion of soils <strong style='color:#000'>finer than</strong> 0.075 mm (silts and clay)</li>
 </ul> </p>
 
 <div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
@@ -4947,7 +4947,7 @@ Based on retained and passing percents we can define soil fractions
 </section>
 
 <section >
-	<iframe src="https://docs.google.com/spreadsheets/d/1Y-Lha2p_dtXF4CH57RaHdkEoyHSebLZXmY7WsHq--TQ/edit?usp=sharing" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	<iframe src="https://docs.google.com/spreadsheets/d/19yImMPySvFxg18KhbSi1YNIqqq5r-EysKZK6XsclFW4/edit?usp=sharing" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </section>
 
 <section >
@@ -4962,16 +4962,35 @@ Based on retained and passing percents we can define soil fractions
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section> -->
 
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Notes on how draw/read GSD plots
+</div>
+
+<ol style='font-size: 1em; margin-top: 50px;'>
+   <li class='fragment'>Must be plot in <strong style='color:#000'>semi-log space</strong>. Grain sizes vary in orders of magnitude.</li>
+
+   <li class='fragment'>x-axis (i.e., grain size) <strong style='color:#000'>can be flipped</strong>. Double check x-axis direction before reading.</li>
+
+   <li class='fragment'>Can use <strong style='color:#000'>double-sided y-axis</strong>. Passing/finer and retained/coarser.</li>
+
+   <li class='fragment'>Before reading the y-axis, double check that it is what you want (i.e., passing or retained).</li>
+
+   <li class='fragment'>At a minimum, it should contain annotations and vertical lines on the size corresponding to sieve #4 and #200.</li>
+</ols>
+
+</section>
+
 <section >
 <h1>Hydrometer analysis</h1>
-<div class='textBox' style='margin-top: 0px;font-size: 1em;'> The objective is to determine the GSD of <span class='atb'> fine grained soils</span>. It <strong style='color:black'>complements</strong> <span class='atb'> the sieve analysis </span> and extends the GSD beyond sieve No 200. </div>
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> <strong style='color:black'>Complements</strong> the sieve analysis and <span class='atb'>extends</span> the GSD beyond sieve No 200. </div>
 
 <div class='container'>
 <div class='col' style="width: 50%;">
 	<ul>
 	<li class="fragment"><strong style='color:black'>Segregation</strong> of particles by sedimentation (Stokes law).</li>
 	<li class="fragment">Relative density of suspended flow is measured in time to determine particle diameter. </li>
-	<li class="fragment">Has several <strong style='color:red'>limitations</strong> due to <strong style='color:black'>unrealistic assumptions</strong>. </li>
+	<li class="fragment">Assumes particles are spherical. <strong style='color:red'>Unrealistic</strong> assumption. </li>
 	</ul>
 </div>
 <div class='col' style="width: 50%;">
@@ -4982,6 +5001,8 @@ Based on retained and passing percents we can define soil fractions
 </div>
 </div>
 </section>
+
+
 
 <!-- <section >
 	
@@ -7752,41 +7773,39 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
    </li>
 
    <li class='fragment'>
-      If the GSD <span class='atb'> spans across the sizes </span> in a <strong style="color:black">smooth curve</strong> the soil is <span class='atb'> well graded </span> or <span class='atb'> poorly sorted </span>.
+      If the GSD smoothly <span class='atb'> spans across the sizes </span>, the soil is <span class='atb'> well graded </span> or <span class='atb'> poorly sorted </span>.
    </li>
 
    <li class='fragment'>
       <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-         If there is a <span class='atb'> horizontal </span> line in the GSD, the soil is <span class='atb'> gap graded </span>.
+         If the GSD features <span class='atb'>horizontal</span> segments, the soil is <span class='atb'> gap graded </span>. Such portions indicate that <span class='atb'> no particles </span> exist within that size range.
       </div>
    </li>
 </ul>
 </section>
 
-<section >
-	<h1>Participation question 2.4</h1>
-   <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-   Select the GSD that is a poorly graded sand:
-   </div>
-	
-	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
+<section >	
+	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:30px;width:100%" data-preload>
+   <p style="position: absolute; margin-top: -580px; margin-left: 700px;"><span class='atb'>Poorly graded</span> </p>
+   <p style="position: absolute; margin-top: -400px; margin-left: 760px;"><span class='atb'>Well graded</span> </p>
+   <p style="position: absolute; margin-top: -290px; margin-left: 260px;"><span class='atb'>Gap graded</span> </p>
 </section>
 
-<section >
+<!-- <section >
 	<h1>Participation question 2.5</h1>
    <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
    Select the GSD that is a well graded soil:
    </div>	
 	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
-</section>
+</section> -->
 
-<section >
+<!-- <section >
 	<h1>Participation question 2.6</h1>
    <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
       Select the GSD that is a gap graded soil:
    </div>	
 	<img src="./FiguresGeneral/Metrics.svg" style="margin-top:0px;width:70%" data-preload>
-</section>
+</section> -->
 
 <section  >
     <h1>GSD metrics</h1>
@@ -7858,7 +7877,9 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </div>
 </section>
 
-<section id="EX280" >
+
+
+<!-- <section id="EX280" >
 	<h1>Example 2.8</h1>
    <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
       Determine the <strong style='color:black'>gradation coefficients</strong> and the <strong style='color:black'> median grain size</strong> of the soil in Example 2.7
@@ -17920,7 +17941,7 @@ P_{p,hc} &= 74\% \times 30.0\% = 22.2\% & \text{For } d=0.045 \text{mm}\\
 </div>
 </div>
 
-</section>
+</section> -->
 
 
 
