@@ -4952,8 +4952,8 @@ Based on retained and passing percents we can define soil fractions
 
 <section >
 
-<figure style="margin-top: -20px;">
-<img src='FiguresGeneral/plot.svg' width='100%'/>
+<figure style="margin-top: 0px;">
+<object style='width:90%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/plot.svg'></object>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
 </section>
@@ -7842,22 +7842,6 @@ Important GSD metric definitions
 </section>
 
 <section >
-<h1>Participation question 2.7</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-   What is the <strong style='color:orange'>coefficient of uniformity \(C_u\)</strong> of perfectly uniform soil?
-</div>
-
-
-<ol class='iClicker' >
-<li class='l2'>0</li>
-<li class='l2'>100</li>
-<li class='l2'>>1</li>
-<li class='l2'><1</li>
-<li class='l2'>1</li>
-</ol>
-</section>
-
-<section >
 <h1>Interpolation in the GSD</h1>
 <div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
 <span class='atb'>Logarithmic</span> <strong style='color:black'>interpolation</strong> is used to determine \(D_x\). 
@@ -7878,23 +7862,77 @@ Important GSD metric definitions
 </div>
 </section>
 
+
+<section >
+<h1>Participation question 2.7</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+   What is the <strong style='color:orange'>coefficient of uniformity \(C_u\)</strong> of perfectly uniform soil?
+</div>
+
+
+<ol class='iClicker' >
+<li class='l2'>0</li>
+<li class='l2'>100</li>
+<li class='l2'>>1</li>
+<li class='l2'><1</li>
+<li class='l2'>1</li>
+</ol>
+</section>
+
 <section>
 <h1>Interpretation of gradation coefficients</h1>
 <div class='container'>
-<div class='col' style='width: 50%;'>
+<div class='col' style='width: 45%;'>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 <ul>
-   <li class='fragment'>A higher \(C_u\) indicates a wider range of particle sizes, meaning the soil is less uniform.</li>
+   <li class='fragment'><strong style='color:#000'>A higher \(C_u\) indicates</strong>  a wider range of particle sizes, meaning the soil is <strong style='color:#000'>less uniform</strong>.</li>
    <li class='fragment'>\(C_c\) describes the <span class='atb'>shape</span> of the GSD. \(C_c\) is also important for predicting flow patterns, pressure distribution, and other characteristics in curved channels </li>
 </ul>
 </div>
 </div>
-<div class='col' style='width: 50%;'>
+<div class='col' style='width: 55%;'>
+Gradation definitions for coarse-grained soils:
+<table style="font-size: 0.8em; margin-top: 50px;">
+   <tr>
+      <th>Gravel</th>
+      <td>Well-graded</td>
+      <td>\(C_u > 4\) & \( 1< C_c <3 \) </td>
+   </tr>
+   <tr>
+      <th></th>
+      <td>Uniform</td>
+      <td>\(C_u \leq 4\) </td>
+   </tr>
+   <tr>
+      <th></th>
+      <td>Gap-graded</td>
+      <td>\(C_c \leq 1\) or \(  C_c > 3 \) </td>
+   </tr>
 
+   <tr>
+      <th>Sand</th>
+      <td>Well-graded</td>
+      <td>\(C_u > 6\) & \( 1< C_c <3 \) </td>
+   </tr>
+
+   <tr>
+      <th></th>
+      <td>Uniform</td>
+      <td>\(C_u \leq 6\) </td>
+   </tr>
+   <tr>
+      <th></th>
+      <td>Gap-graded</td>
+      <td>\(C_c \leq 1\) or \(  C_c > 3 \) </td>
+   </tr>
+</table>
 </div>
 </div>
 
 </section>
+
+
+
 
 <section>
 <h1>Example 2.7</h1>
@@ -7904,18 +7942,19 @@ For the data shown below, determine: (i) the median grain size \(D_{50}\); (ii) 
 <div class='container'>
 <div class='col' style='width: 60%;'>
 <figure>
-<img src='FiguresGeneral/EX270.svg' width='100%'/>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX270.svg'></object>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
 </div>
 <div class='col' style='width: 40%;'>
-<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px; font-size: 0.8em;'>
+<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px; font-size: 0.8em; height: 400px;'>
 <br>
 (i) \(D_{50}= \color{green}{1.9}\) mm<br>
 (ii) \(C_u= D_{60}/D_{10} = 2.2/0.44 = \color{green}{5}\)<br>
 (iii) <br>
  \(C_c= D_{30}^2/(D_{10}D_{60}) = \) <br>
- \(1.0^2/(0.44*2.2) = \color{green}{1.03}\)
+ \(1.0^2/(0.44*2.2) = \color{green}{1.03}\) <br>
+ Based on interpretation soil is <strong style='color:green'>uniform</strong>
 
 </div>
 </div>
@@ -7965,9 +8004,25 @@ A sieve analysis yields the results shown below. Do the following:<br>
 
 <section>
 <figure>
-<img src='FiguresGeneral/GSD_plot.svg' width='100%'/>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/GSD_plot.svg'></object>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
+
+</section>
+
+<section>
+<h1>Participation question 2.x</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+According to the soil gradation classification, this soil is:
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>Well graded gravel</li>
+<li class='l2'>Well graded sand</li>   
+<li class='l2'>Uniform sand</li>
+<li class='l2'>Gap graded gravel</li>
+<li class='l2'>Uniform gravel</li>
+</ol>
 
 </section>
 
@@ -8017,6 +8072,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
