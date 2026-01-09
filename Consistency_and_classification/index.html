@@ -84,7 +84,7 @@
 
 		</section>
 
-		<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<section  >
 			<h1>Recap</h1>
 				<ul>
 				<li class="fragment"> 
@@ -102,7 +102,7 @@
 			</ul>
 		</section>
 
-        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+        <section >
 					<h1>Contents</h1>
 					<div class='container'>
 					<div class='col'>
@@ -196,60 +196,135 @@ We use plasticity to:
 </section>
 
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Atterberg limits</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	Named after soil scientist who proposed them (Albert Atterberg). The Atterberg limits are <span class='atb'>thresholds of water content</span> at which the behavior of soils changes.
 	</div>
 
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Atterberg_limits.svg'></object>
 
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 20px;"  ><span class='atb'>Solid-brittle</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 360px;"  ><span class='atb'>Solid-ductile</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 650px;"  ><span class='atb'>Plastic-malleable</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 1000px;"  ><span class='atb'>Liquid-viscous</span>  </p>
 
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 170px;"  ><span class='atb'>Shrinkage limit</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 530px;"  ><span class='atb'>Plastic limit</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 850px;"  ><span class='atb'>Liquid limit</span>  </p>
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
+    <h1>Consistency indices</h1>
+
+	<div class='defBox' name='Plasticity index' style='margin-top:20px;margin-left: 0px;'>
+	<strong style='color:red'>\(PI\): </strong> Is the range of water content in which the fine fraction of soils behaves as a plastic material.
+
+	<div class='equationBox'>
+		\( \begin{align}
+		PI=LL-PL
+		\end{align} \)	
+	</div>
+	</div>
+
+	<div class='defBox' name='Liquidity index' style='margin-top: 30px;margin-left: 0px;'>
+	<strong style='color:red'> \(LI\): </strong> is a scaling parameter that maps the natural water content to the consistency limits. it indicates how close a soil's natural water content is to its liquid limit, <strong style='color:#000'>relative</strong> to its plasticity index
+
+	<div class='equationBox'>
+		\( \begin{align}
+		LI=\cfrac{w_n-PL}{PI}
+		\end{align} \)	
+	</div> <br>
+	Where \(w_n\) is the natural water content of the soil.
+
+
+	</div>
+</section>
+
+<section >
+<h1>Participation question 2.11</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+  What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=PL\)?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>0</li>
+<li class='l2'>-1</li>
+<li class='l2'>2</li>
+<li class='l2'>0.5</li>
+<li class='l2'>inf.</li>
+</ol>
+</section>
+
+<section >
+	<h1>Participation question 2.12</h1>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+    What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=LL\)?
+  </div>
+	<ol class='iClicker' >
+	<li class='l2'>0</li>
+	<li class='l2'>-1</li>
+	<li class='l2'>2</li>
+	<li class='l2'>0.5</li>
+	<li class='l2'>1</li>
+	</ol>
+</section>
+
+
+
+<section >
+<figure>
+  <img src="FiguresGeneral/limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+<section  >
     <h1>Liquid limit (ASTM D4318)</h1>
 	<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
-	<strong style='color:green'>\(LL\):</strong> Is the <span class='atb'>water content</span> at which a standard groove cut in the soil will close <span class='atb'>0.5" at 25 blows</span>.
+	<strong style='color:red'>\(LL\):</strong> Is the <strong style='color:#000'>water content</strong> at which a standard groove cut in the soil will close <span class='atb'>0.5" at 25 blows</span>.
 	</div>
 
 	<div class='container'>
 	<div class='col' style="width: 50%;">
-	<ul>
-		<li class='fragment'>Arthur Casagrande refined the method to measure \(LL\) using <span class='atb'>the Casagrande cup method</span>.</li>
-		<li class='fragment'>You will learn the steps of the test in your laboratory class.</li>
-		<li class='fragment'><strong style='color:#000'>Plot \(w\) vs. \(N_{blows}\)</strong>. The \(N\) axis must be in logarithmic scale.</li>
-		<li class='fragment'><strong style='color:#000'>Interpolate \(LL\) from curve</strong>.</li>
-		
+	<ul style="margin-top: 50px;">
+		<li class='fragment'>Arthur Casagrande refined the method to measure \(LL\) so that is operator independent.</li>
+		<li class='fragment'>This method is known as the <span class='atb'>Casagrande cup method</span>.</li>		
 	</ul>
 	</div>
 	<div class='col' style="width: 50%;">
-	<div class='container'>
-	<div class='col' style="width: 50%;">
-	
 	<figure style="margin-top:0px;">
 	<img src='FiguresGeneral/casagrande_cup.svg' width='100%'/>
 	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
 	</figure>
-
-	<div class='stickynote' style='margin-top: 0px;margin-left: 20px;'>
-		Note: Most soils will have \(LL\) less than 100%. However, it can be as high as 300%.
-	</div>
-	
-	</div>
-	<div class='col' style="width: 50%;">
-	<figure>
-	<img src='https://www.nae.edu/File.aspx?id=215685' width='100%'/>
-	<footer style='margin-top: -25px;font-size: 0.8em;'> <em>A. Casagrande</em> </footer>
-	</figure>
-	</div>
-	</div>
 	</div>
 	</div>
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section>
+<h2>Casagrande's LL determination procedure</h2>
+<div class='container'>
+<div class='col' style='width: 55%;'>
+<ol style="font-size: 0.95em;">
+	<li class='fragment'>Take only dry soil passing <strong style='color:#000'>sieve 40</strong>. These are fine sands + fines.</li>
+	<li class='fragment'><strong style='color:#000'>Rehydrate</strong> the soil and put it into the brass cup.</li>
+	<li class='fragment'><strong style='color:#000'>Carve a grove</strong> through the soil paste using a standard grooving tool.</li>
+	<li class='fragment'><strong style='color:#000'>Turn handle at 2 rpm</strong> to close gap.</li>
+	<li class='fragment'><strong style='color:#000'>Stop</strong> when contact length is 13 mm</li>
+	<li class='fragment'><strong style='color:#000'>Determine water content</strong> at this point</li>
+	<li class='fragment'><strong style='color:#000'>Repat for different water contents</strong> so that the number of blows range from 10 to 40.</li>
+</ol>
+</div>
+<div class='col' style='width: 45%;'>
+
+<object style='width:100%'  class='Animation fragment' type='image/svg+xml' data='FiguresGeneral/flow_curve.svg'></object>
+</div>
+</div>
+</section>
+
+<!-- <section >
 <h1>Example 2.9</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 A liquid limit test was conducted on a soil and resulted in the data shown below. <strong style='color:#000'>Find the liquid limit</strong>.
@@ -259,22 +334,22 @@ A liquid limit test was conducted on a soil and resulted in the data shown below
 </section>
 
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'> <br>
 <iframe src="https://docs.google.com/spreadsheets/d/1BAR-cGodkUX7XsoPrAFVWCX19S1eDZruClETefAcmF4/edit?usp=sharing" frameborder="0" width="100%" height="600px" style="margin-left: 30px;"></iframe>
 </div>
 
-</section>
+</section> -->
 
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Plastic limit (ASTM D4318)</h1>
 	<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
-	<strong style='color:green'>\(PL\): </strong> Is the <strong style='color:#000'>water content</strong> at which soil crumbles when <span class='atb'>rolled</span> to a diameter of <span class='atb'>3 mm</span>.
+	<strong style='color:red'>\(PL\): </strong> Is the <strong style='color:#000'>water content</strong> at which soil crumbles when <span class='atb'>rolled</span> to a diameter of <span class='atb'>3 mm</span>.
 	</div>
 	<div class='container'>
 	<div class='col' style="width: 50%;">
@@ -308,7 +383,7 @@ A liquid limit test was conducted on a soil and resulted in the data shown below
 	</div>
 </section>
 
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Procedure to determine \(PL\)</h1>
 <div class='container'>
 <div class='col'>
@@ -330,7 +405,7 @@ A liquid limit test was conducted on a soil and resulted in the data shown below
 
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Example 2.10</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 The results of a plastic limit test are shown in the table below. <strong style='color:#000'>Calculate the plastic limit.</strong>
@@ -340,7 +415,7 @@ The results of a plastic limit test are shown in the table below. <strong style=
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src="https://docs.google.com/spreadsheets/d/1fy8CoCKrhB_Uy1QitU2vRmHm30x2ceYTxX0YPIN72As/edit?usp=sharing" frameborder="0" width="100%" height="600px" style="margin-left: 30px;"></iframe>
 </div>
@@ -349,71 +424,15 @@ The results of a plastic limit test are shown in the table below. <strong style=
 
 
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Consistency indices</h1>
-
-	<div class='defBox' name='Plasticity index' style='margin-top:20px;margin-left: 0px;'>
-	<strong style='color:green'>\(PI\): </strong> Is the range of water content in which the fine fraction of soils behaves as a plastic material.
-
-	<div class='equationBox'>
-	$$ PI=LL-PL $$
-	</div>
-	</div>
-
-	<div class='defBox' name='Liquidity index' style='margin-top: 5px;margin-left: 0px;'>
-	<strong style='color:green'> \(LI\): </strong> is a scaling parameter that maps the natural water content to the consistency limits.
-
-	<div class='equationBox'>
-	$$ LI=\cfrac{w_n-PL}{PI} $$
-	</div>
-	</div>
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 2.11</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-  What is the value of the <strong style='color:green'>liquidity index</strong> \(LI\) when \(w_n=PL\)?
-</div>
-
-<ol class='iClicker' >
-<li class='l2'>0</li>
-<li class='l2'>-1</li>
-<li class='l2'>2</li>
-<li class='l2'>0.5</li>
-<li class='l2'>inf.</li>
-</ol>
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<h1>Quiz 2.12</h1>
-	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-    What is the value of the <strong style='color:green'>liquidity index</strong> \(LI\) when \(w_n=LL\)?
-  </div>
-	<ol class='iClicker' >
-	<li class='l2'>0</li>
-	<li class='l2'>-1</li>
-	<li class='l2'>2</li>
-	<li class='l2'>0.5</li>
-	<li class='l2'>1</li>
-	</ol>
-</section>
 
 
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-<figure>
-  <img src="FiguresGeneral/limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Activity of clays</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
 
 				<div class='defBox' name='Activity' style='margin-top: 0px;margin-left: 0px;'>
-				<strong style='color:green'>\(A\): </strong> Is the ratio of the <span class='atb'>plasticity index</span> \(PI\) to the <span class='atb'>clay fraction</span> \(C_F\).
+				<strong style='color:orange'>\(A\): </strong> Is the ratio of the <span class='atb'>plasticity index</span> \(PI\) to the <span class='atb'>clay fraction</span> \(C_F\).
 
 				<div class='equationBox'>
 				\(  A=PI/CF\)
@@ -437,10 +456,10 @@ The results of a plastic limit test are shown in the table below. <strong style=
 		</div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 2.13</h1>
+<section >
+<h1>Participation question 2.13</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-  How can we obtain the <strong style='color:green'>clay fraction \(C_F\)</strong> of a soil?
+  How can we obtain the <strong style='color:orange'>clay fraction \(C_F\)</strong> of a soil?
 </div>
 
 <ol class='iClicker' >
@@ -452,7 +471,7 @@ The results of a plastic limit test are shown in the table below. <strong style=
 </ol>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.12</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 		<p>For the parameters shown in the table, compute \(LL\), \(PI\), \(LI\), and \(A\)</p>
@@ -466,17 +485,17 @@ The results of a plastic limit test are shown in the table below. <strong style=
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Soil classification</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-    Geotechnical Engineers <strong style='color:green'>classify</strong> soils using the <span class='atb'>Unified Soil Classification System</span> (USCS) for <span class='atb'>consistent naming</span>.
+    Geotechnical Engineers <strong style='color:orange'>classify</strong> soils using the <span class='atb'>Unified Soil Classification System</span> (USCS) for <span class='atb'>consistent naming</span>.
   </div>
   
 	<img class="fragment" src="./FiguresGeneral/classification.svg" width="100%">
 	
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Group symbols</h1>
 	<ul style="margin-top:-25px;">
 		<li> <b>Two letters</b>
@@ -514,7 +533,7 @@ The results of a plastic limit test are shown in the table below. <strong style=
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Plasticity chart</h1>
 <figure style="margin-top:-25px;">
   <img src="https://media.springernature.com/original/springer-static/image/prt%3A978-3-319-73568-9%2F16/MediaObjects/978-3-319-73568-9_16_Part_Fig1-223_HTML.png" style="height:600px" data-preload/>
@@ -522,18 +541,18 @@ The results of a plastic limit test are shown in the table below. <strong style=
 </figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>USCS flow diagram for fines \(F_F \geq 50\%\)</h1>
     
     <img src="FiguresGeneral/finesflow.svg" style="margin-top:-20px; width:70%;">
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
   <h1>USCS flow diagram for \(F_F < 50\%\)</h1>
     <img src="FiguresGeneral/coarseflow.svg" style="margin-top:-20px; width:70%;">
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.13</h1>
 	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
 		Classify the soil with data shown in the GSD below.
@@ -548,18 +567,18 @@ The results of a plastic limit test are shown in the table below. <strong style=
     <p>
       <ol>
         <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
-        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:green'>S or G</strong> </span>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
         </li>
         <li class='fragment'> Is \(S_F > G_F\)? <br>
-          <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) first letter is <strong style='color:green'>S</strong> </span>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
         </li>
         <li class='fragment'>What is \(F_F\)? <br>
         <span class="fragment">\(F_F < 5\%\) </span> </li>
         <li class='fragment'>What is \(C_u\)? <br>
-          <span class="fragment"> \(C_u<6 \ \text{and/or} \ [C_c<3 \cup C_c>3] \) is <strong style='color:green'>true</strong> \(\implies\) second letter is <strong style='color:green'>P</strong> </span>
+          <span class="fragment"> \(C_u<6 \ \text{and/or} \ [C_c<3 \cup C_c>3] \) is <strong style='color:orange'>true</strong> \(\implies\) second letter is <strong style='color:orange'>P</strong> </span>
         </li>
         <li class='fragment'> Is \(G_F< 15\%\)? <br>
-          <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) soil is <strong style='color:green'>SP Poorly graded sand</strong> </span>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SP Poorly graded sand</strong> </span>
         </li>
 
       </ol>
@@ -571,7 +590,7 @@ The results of a plastic limit test are shown in the table below. <strong style=
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.14</h1>
 	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
 		Classify the soil with data shown in the GSD below.
@@ -586,18 +605,18 @@ The results of a plastic limit test are shown in the table below. <strong style=
     <p>
       <ol>
         <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
-        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:green'>S or G</strong> </span>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
         </li>
         <li class='fragment'> Is \(S_F > G_F\)? <br>
-          <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) first letter is <strong style='color:green'>S</strong> </span>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
         </li>
         <li class='fragment'>What is \(F_F\)? <br>
         <span class="fragment">\(F_F > 12\%\) </span> </li>
         <li class='fragment'>What is the classication of the fines? <br>
-          <span class="fragment"> <strong style='color:green'>CL-ML</strong> \(\implies\) <strong style='color:green'>SC-SM</strong> </span>
+          <span class="fragment"> <strong style='color:orange'>CL-ML</strong> \(\implies\) <strong style='color:orange'>SC-SM</strong> </span>
         </li>
         <li class='fragment'> Is \(G_F< 15\%\)? <br>
-          <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) soil is <strong style='color:green'>SC-SM Silty, clayey sand</strong> </span>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SC-SM Silty, clayey sand</strong> </span>
         </li>
 
       </ol>
@@ -610,7 +629,7 @@ The results of a plastic limit test are shown in the table below. <strong style=
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 2.15</h1>
 	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
 		Classify the soil with data shown in the GSD below.		
@@ -624,18 +643,18 @@ The results of a plastic limit test are shown in the table below. <strong style=
     <p>
       <ol>
         <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
-        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:green'>S or G</strong> </span>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
         </li>
         <li class='fragment'> Is \(S_F > G_F\)? <br>
-          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) first letter is <strong style='color:green'>G</strong> </span>
+          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) first letter is <strong style='color:orange'>G</strong> </span>
         </li>
         <li class='fragment'>What is \(F_F\)? <br>
         <span class="fragment">\(F_F > 12\%\) </span> </li>
         <li class='fragment'>What is the classication of the fines? <br>
-          <span class="fragment"> <strong style='color:green'>CH</strong> \(\implies\) <stroncg style='color:green'>GC</stroncg> </span>
+          <span class="fragment"> <strong style='color:orange'>CH</strong> \(\implies\) <stroncg style='color:orange'>GC</stroncg> </span>
         </li>
         <li class='fragment'> Is \(S_F< 15\%\)? <br>
-          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) soil is <strong style='color:green'>GC Clayey gravel with sand</strong> </span>
+          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) soil is <strong style='color:orange'>GC Clayey gravel with sand</strong> </span>
         </li>
 
       </ol>
@@ -648,12 +667,12 @@ The results of a plastic limit test are shown in the table below. <strong style=
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>AASHTO Classification</h1>
 	<img src="https://www.aboutcivil.org/sites/default/files/2019-10/AASHTO-soil-classification-chart.jpg" width="100%" style="margin-top: -15px;">
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Example 2.16</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Classify the soil of Example 2.7 using the USCS and the AASHTO classification system. What is its rating as a subgrade material? The soil is non-plastic.
@@ -668,21 +687,21 @@ Classify the soil of Example 2.7 using the USCS and the AASHTO classification sy
 </figure>
 </div>
 <div class='col' style='width: 50%;'>
-<p style="font-size: 0.8em; margin-top: -50px;"><strong style='color:green'>Data:</strong> \(G_F=0\%\), \(F_F= 30\%\), \(C_c=5.6\), \(C_u=24.1\), non-plastic <br>
+<p style="font-size: 0.8em; margin-top: -50px;"><strong style='color:orange'>Data:</strong> \(G_F=0\%\), \(F_F= 30\%\), \(C_c=5.6\), \(C_u=24.1\), non-plastic <br>
   <ol style="font-size: 0.7em;">
     <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
-    <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:green'>S or G</strong> </span>
+    <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
     </li>
     <li class='fragment'> Is \(S_F > G_F\)? <br>
-      <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) first letter is <strong style='color:green'>S</strong> </span>
+      <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
     </li>
     <li class='fragment'>What is \(F_F\)? <br>
     <span class="fragment">\(F_F > 12\%\) </span> </li>
     <li class='fragment'>What is the classication of the fines? <br>
-      <span class="fragment"> <strong style='color:green'>ML</strong> \(\implies\) <stroncg style='color:green'>SM</stroncg> </span>
+      <span class="fragment"> <strong style='color:orange'>ML</strong> \(\implies\) <stroncg style='color:orange'>SM</stroncg> </span>
     </li>
     <li class='fragment'> Is \(G_F< 15\%\)? <br>
-      <span class="fragment"><strong style='color:green'>Yes</strong> \(\implies\) soil is <strong style='color:green'>SM Silty sand</strong> </span>
+      <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SM Silty sand</strong> </span>
     </li>
 
   </ol>
@@ -694,7 +713,7 @@ Classify the soil of Example 2.7 using the USCS and the AASHTO classification sy
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'> <br>
 
   <img src="https://www.aboutcivil.org/sites/default/files/2019-10/AASHTO-soil-classification-chart.jpg" width="100%" style="margin-top: 0px; margin-left: 25px;">
@@ -761,6 +780,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
@@ -892,7 +912,7 @@ Reveal.initialize({
 								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
 								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
 								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
 								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
 								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
 								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
@@ -901,7 +921,7 @@ Reveal.initialize({
 								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
 								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
 								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
 								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
 								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
 								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
