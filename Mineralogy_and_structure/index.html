@@ -1,0 +1,1245 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>Mineralogy and structure</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE 342
+						Spring 2026
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1vJETGYEPPp6wyCfSnGhiu1DQZM1XayAp/view?usp=sharing"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Soil Mineralogy and Structure">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Spring 2026</p>
+				<!-- <p style="color:#faffff; font-size:35px"> February 1, 2024</p> -->
+				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+			</div>
+
+
+		</section>
+
+		<section  >
+			<h1>Recap</h1>
+				<ul>
+				<li class="fragment"> 
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						We learned how to calculate the <strong style='color:#000'>Atterberg Limits</strong>
+					</div>
+					</li>
+				<li class="fragment"> 
+					We learned how to calculate the <strong style='color:#000'>Plasticity Index</strong> and the <strong style='color:#000'>Liquidity Index</strong> </li>
+				<li class="fragment"> 
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						We learned how to <strong style='color:#000'>classify soils</strong> according to the <strong style='color:#000'>USCS</strong>.
+					</div>
+					</li>	
+			</ul>
+		</section>
+
+        <section >
+					<h1>Contents</h1>
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle" style="margin-top: 55px;">
+							<li class="l1">Atterberg limits</li>
+							<li class="l1">USCS classification</li>
+							<li class="l1">AASHTO classification</li>
+						</ul>	
+					</div>
+					<div class='col'>
+					<div class='container'>
+					<div class='col'>
+					<div class="stickynote" style="margin-top: 100px;margin-left: 75px; height: 300px;">
+						<p> Objectives covered in this lecture</p>
+						<ul>
+							<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+						</ul>
+					</div>
+					</div>
+					<div class='col'>
+					<div class='stickynote' style='margin-top: 100px;margin-left: 50px; height: 300px;'>
+					<p style="margin-top: -20px;">After this lecture we will able to:</p>
+					<ul style="margin-top: -15px;">
+
+						<li>Describe the mineralogy of soils and its importance.</li>
+            			<li>Calculate the activity of clays.</li>
+						<li>Describe what soil fabric means</li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+					
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+<section>
+<h1>Consistency of fine-grained soils</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Atterberg limits</strong> are used to describe the <strong style='color:#000'>behavior</strong> (<span class='atb'>specifically plasticity</span>) of the fine fraction in the soil.
+</div>
+
+<ul style="margin-top: 50px;">
+<li class='fragment'>If you keep adding water to the soil, it will eventually behave as a <span class='atb'>liquid</span></li>
+
+<li class='fragment'>Water content is important, but not all soils behave the same at same water content.</li>
+
+<li class='fragment'>We need to map the water content to <span class='atb'>soil behavior</span> and <span class='atb'>plasticity</span> </li>
+
+</ul>
+
+</section>
+
+<section>
+<h1>Plasticity</h1>
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Is the degree of a soil to be <span class='atb'>molded</span> without noticeable elastic rebound or volume change and without <strong style='color:#000'>cracking or crumbling</strong>.
+
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/Soil_pottery.png' style='height:400px; width:auto;' alt="A close-up view of a large pair of adult hands guiding a smaller pair of child's hands as they shape wet, reddish-brown clay on a spinning pottery wheel. In the soft-focus background, there are shelves filled with finished terra cotta pots, dried plants, and bags of materials. The text 'SOIL PLASTICITY' is printed in white capital letters at the bottom center of the image."/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%; margin-top: 30px;'>
+We use plasticity to:
+<ol>
+  <li class='fragment'><span class='atb'>Differentiate</span> between <strong style='color:red'>plastic</strong> (e.g., <strong style='color:red'>clay</strong>) and <strong style='color:blue'>non-plastic</strong> (e.g., <strong style='color:blue'>silt</strong>) fines.</li>
+
+  <li class='fragment'>Further <strong style='color:#000'>classify</strong> soils by <span class='atb'>degree of plasticity</span>.</li>
+</ol>
+</div>
+</div>
+
+</section>
+
+
+<section  >
+    <h1>Atterberg limits</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Named after soil scientist who proposed them (Albert Atterberg). The Atterberg limits are <span class='atb'>thresholds of water content</span> at which the behavior of soils changes.
+	</div>
+
+	<object style='width:100%; margin-top:0px'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Atterberg_limits.svg' alt="A diagram showing 'Reference behavior' illustrating the changing states of soil consistency as water content increases. A horizontal axis representing 'Water content [%]' moves from left (drier) to right (wetter), demarcated by three specific limits.
+
+From left to right, the four states and their boundaries are:
+
+    Solid-brittle: Illustrated by dry, cracked earth. This phase ends at the SL or Shrinkage limit.
+
+    Solid-ductile: Illustrated by a hand holding clumpy soil. This phase ends at the PL or Plastic limit.
+
+    Plastic-malleable: Illustrated by hands shaping clay on a pottery wheel. This phase ends at the LL or Liquid limit.
+
+    Liquid-viscous: Illustrated by a gray, sludge-like fluid pouring onto a surface."></object>
+
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 20px;"  ><span class='atb'>Solid-brittle</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 360px;"  ><span class='atb'>Solid-ductile</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 650px;"  ><span class='atb'>Plastic-malleable</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -245px; margin-left: 1000px;"  ><span class='atb'>Liquid-viscous</span>  </p>
+
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 170px;"  ><span class='atb'>Shrinkage limit</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 530px;"  ><span class='atb'>Plastic limit</span>  </p>
+	<p class="fragment" style="position: absolute; margin-top: -50px; margin-left: 850px;"  ><span class='atb'>Liquid limit</span>  </p>
+
+</section>
+
+<section  >
+    <h1>Consistency indices</h1>
+
+	<div class='defBox' name='Plasticity index' style='margin-top:20px;margin-left: 0px;'>
+	<strong style='color:red'>\(PI\): </strong> Is the range of water content in which the fine fraction of soils behaves as a plastic material.
+
+	<div class='equationBox'>
+		\( \begin{align}
+		PI=LL-PL
+		\end{align} \)	
+	</div>
+	</div>
+
+	<div class='defBox' name='Liquidity index' style='margin-top: 30px;margin-left: 0px;'>
+	<strong style='color:red'> \(LI\): </strong> is a scaling parameter that maps the natural water content to the consistency limits. it indicates how close a soil's natural water content is to its liquid limit, <strong style='color:#000'>relative</strong> to its plasticity index
+
+	<div class='equationBox'>
+		\( \begin{align}
+		LI=\cfrac{w_n-PL}{PI}
+		\end{align} \)	
+	</div> <br>
+	Where \(w_n\) is the natural water content of the soil.
+
+
+	</div>
+</section>
+
+<section >
+<h1>Participation question 2.11</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+  What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=PL\)?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>0</li>
+<li class='l2'>-1</li>
+<li class='l2'>2</li>
+<li class='l2'>0.5</li>
+<li class='l2'>inf.</li>
+</ol>
+</section>
+
+<section >
+	<h1>Participation question 2.12</h1>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+    What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=LL\)?
+  </div>
+	<ol class='iClicker' >
+	<li class='l2'>0</li>
+	<li class='l2'>-1</li>
+	<li class='l2'>2</li>
+	<li class='l2'>0.5</li>
+	<li class='l2'>1</li>
+	</ol>
+</section>
+
+
+
+<section >
+<figure>
+  <img src="FiguresGeneral/limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" data-preload alt="A technical diagram correlating soil states with water content and stress-strain behavior.
+
+Top Section: A horizontal axis represents increasing 'Water content' (w) from left to right, divided into four states: 'Brittle', 'Semi-solid', 'Plastic', and 'Liquid'. The boundaries between these states are marked by limits:
+
+    'SL' (Shrinkage Limit) between Brittle/Semi-solid.
+
+    'PL' (Plastic Limit) between Semi-solid/Plastic.
+
+    'LL' (Liquid Limit) between Plastic/Liquid. Values for 'Liquidity index' (LI) are shown below the axis: LI<0 (left of PL), LI=0 (at PL), 0<LI<1 (Plastic zone), LI=1 (at LL), and LI>1 (Liquid zone). A red bracket labeled 'PI' (Plasticity Index) spans the Plastic zone.
+
+Bottom Section: Three graphs show 'Stress-strain' curves (τ versus γ) for different water contents:
+
+    Left Graph (w<SL): A steep red curve rising linearly and terminating abruptly with a red 'X', indicating brittle fracture.
+
+    Center Graph: Shows plastic behavior with two curves. A red curve (w≈PL) rises to a peak and declines slightly (ductile). A blue curve (w≈LL) rises gradually to a plateau.
+
+    Right Graph (w>LL): A flat blue line along the horizontal axis, indicating negligible shear strength (liquid behavior)."/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+<section  >
+    <h1>Liquid limit (ASTM D4318)</h1>
+	<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:red'>\(LL\):</strong> Is the <strong style='color:#000'>water content</strong> at which a standard groove cut in the soil will close <span class='atb'>0.5" at 25 blows</span>.
+	</div>
+
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+	<ul style="margin-top: 50px;">
+		<li class='fragment'>Arthur Casagrande refined the method to measure \(LL\) so that is operator independent.</li>
+		<li class='fragment'>This method is known as the <span class='atb'>Casagrande cup method</span>.</li>		
+	</ul>
+	</div>
+	<div class='col' style="width: 50%;">
+	<figure style="margin-top:0px;">
+	<img src='FiguresGeneral/casagrande_cup.svg' width='100%' alt="Two side-by-side photographs of a Casagrande cup device used for determining the liquid limit of soil. The left image shows the brass cup containing a soil paste with a clear vertical groove cut through the center, separating the sample. The right image shows the same sample after being subjected to shocks, where the two halves of the soil have flowed together at the bottom of the groove. A yellow label points to this closed section, indicating a closure length of '13 mm'"/>
+	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+
+</section>
+
+<section>
+<h2>Casagrande's LL determination procedure</h2>
+<div class='container'>
+<div class='col' style='width: 55%;'>
+<ol style="font-size: 0.95em;">
+	<li class='fragment'>Take only dry soil passing <strong style='color:#000'>sieve 40</strong>. These are fine sands + fines.</li>
+	<li class='fragment'><strong style='color:#000'>Rehydrate</strong> the soil and put it into the brass cup.</li>
+	<li class='fragment'><strong style='color:#000'>Carve a grove</strong> through the soil paste using a standard grooving tool.</li>
+	<li class='fragment'><strong style='color:#000'>Turn handle at 2 rpm</strong> to close gap.</li>
+	<li class='fragment'><strong style='color:#000'>Stop</strong> when contact length is 13 mm</li>
+	<li class='fragment'><strong style='color:#000'>Determine water content</strong> at this point</li>
+	<li class='fragment'><strong style='color:#000'>Repat for different water contents</strong> so that the number of blows range from 10 to 40.</li>
+</ol>
+</div>
+<div class='col' style='width: 45%;'>
+
+<object style='width:100%'  class='Animation fragment' type='image/svg+xml' data='FiguresGeneral/flow_curve.svg' alt="A semilog graph titled 'Flow Curve' plotting 'Water content (%)' on the vertical axis against 'Number of blows' on the horizontal axis. Green data points are scattered across the chart and fitted with a red straight line sloping downwards, labeled 'Best fit'. Blue guide lines demonstrate the determination of the Liquid Limit ('LL'): a vertical line rises from the 25-blow mark to intersect the red best-fit line, and from that intersection, a horizontal line extends to the left axis to mark the 'LL' at approximately 30% water content."></object>
+</div>
+</div>
+</section>
+
+<!-- <section >
+<h1>Example 2.9</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A liquid limit test was conducted on a soil and resulted in the data shown below. <strong style='color:#000'>Find the liquid limit</strong>.
+</div>
+<Table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;margin-top: 25px;background-color: antiquewhite;'>    <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Test No</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Wet soil + container</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Dry soil + container</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Container</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>N</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>17.71</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>15.27</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.23</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>32</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>20.08</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16.78</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.21</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>30</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>3</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>24.31</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>19.25</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.1</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>28</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16.45</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>13.2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.11</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>26</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>18.35</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>14.23</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.13</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>23</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>6</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>26.80</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>19.45</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.11</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>21</td></tr></font></table>
+
+</section>
+
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'> <br>
+<iframe src="https://docs.google.com/spreadsheets/d/1BAR-cGodkUX7XsoPrAFVWCX19S1eDZruClETefAcmF4/edit?usp=sharing" frameborder="0" width="100%" height="600px" style="margin-left: 30px;"></iframe>
+</div>
+
+</section> -->
+
+<!-- <section >
+
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
+</section> -->
+
+<section  >
+    <h1>Plastic limit (ASTM D4318)</h1>
+	<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:red'>\(PL\): </strong> Is the <strong style='color:#000'>water content</strong> at which soil crumbles when <span class='atb'>rolled</span> to a diameter of <span class='atb'>3 mm</span>.
+	</div>
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+	<ul style="margin-top: 50px;">
+		<li class='fragment'>Determined by rolling clay snakes</li>
+		<li class="fragment"> Results are operator dependent. </li>
+		<li class='fragment'>Repeat at least three times.</li>
+		<li class='fragment'>\(PL\) is the <strong style='color:#000'>average</strong> water content of the total number of tests performed.</li>
+		
+	</ul>
+	</div>
+	<div class='col' style="width: 50%;">
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+		<figure style="margin-top: 10px;">
+			<img src="https://www.humboldtmfg.com/product-originals/H-4253.png" style="height:300px" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+
+	</div>
+	<div class='col' style="width: 50%;">
+		<figure style="margin-top: 50px;">
+			<img src="https://4.bp.blogspot.com/-QaWSi_ZzWT8/WWIX1qaZKOI/AAAAAAAAIaM/UHNXqEmcFwsc-47aYHaGd1YDroBXYw70gCLcBGAs/s1600/.51.jpg" style="height:300px" data-preload alt="A photograph showing a hand rolling a small sample of brown soil into a thin, cylindrical thread on a smooth, light-colored surface. The hand is positioned palm-down with fingers extended, gently pressing the soil to form a filament, illustrating the manual procedure used to determine the 'Plastic Limit' of the soil."/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Notes on Atterberg Limits
+</div>
+
+<ul>
+	<li class='fragment'>Typical range of <strong style='color:green'>\(LL\)</strong> can be from <strong style='color:#000'>0 to 1,000</strong>, but most soils have \(LL < 100\)%.</li>
+	<li class='fragment'>The <strong style='color:green'>\(PL\)</strong> can range from <strong style='color:#000'>0 to more than 100</strong>, with most soils having \(PL < 40\)%.</li>
+	<li class='fragment'>These tests are performed in <span class='atb'>remolded soil</span>. This is well-mixed/blended; not the same state as in the ground.</li>
+	<li class='fragment'>These tests are very arbitrary and simple</li>
+	<li class='fragment'>Why do they work to categorize <strong style='color:#000'>soil behavior</strong>? <br>
+	<span class="fragment">Like many things in geotechnical engineering, they work <span class='atb'>empirically</span>. That is, they correlate with engineering properties because both are <strong style='color:#000'>affected by the same things</strong>. </span>
+	</li>
+</ul>
+
+</section>
+
+<!-- <section >
+<h1>Procedure to determine \(PL\)</h1>
+<div class='container'>
+<div class='col'>
+	<ol>
+		<li class='fragment'>Spread mixed soil in glass surface to dry it out.</li>
+		<li class='fragment'>Roll the soil to a 3 mm diameter</li>
+		<li class='fragment'>If soil crumbles, take moisture sample</li>
+		<li class='fragment'>Repeat at least three times.</li>
+		<li class='fragment'><strong style='color:#000'>\(PL\) is the average of water contents.</strong></li>
+	</ol>
+</div>
+<div class='col'>
+<figure>
+<img src='https://i0.wp.com/theconstructor.org/wp-content/uploads/2010/09/Rolling-plastic-limit-sample.jpg?resize=450%2C245&ssl=1' width='100%'/>
+<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+</section> -->
+
+<!-- <section >
+<h1>Example 2.10</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The results of a plastic limit test are shown in the table below. <strong style='color:#000'>Calculate the plastic limit.</strong>
+</div>
+
+<Table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;margin-top: 25px;background-color: antiquewhite;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Test No</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Wet soil + container</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Dry soil + container</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Container</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>17.34</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16.2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.11</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>2</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>18.07</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16.79</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.13</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>3</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>15.20</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>14.25</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.14</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>16.66</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>15.46</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>5.11</td></tr></font></table>
+
+</section> -->
+
+<!-- <section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src="https://docs.google.com/spreadsheets/d/1fy8CoCKrhB_Uy1QitU2vRmHm30x2ceYTxX0YPIN72As/edit?usp=sharing" frameborder="0" width="100%" height="600px" style="margin-left: 30px;"></iframe>
+</div>
+
+</section> -->
+
+
+
+
+
+<!-- <section  >
+    <h1>Activity of clays</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+
+				<div class='defBox' name='Activity' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:orange'>\(A\): </strong> Is the ratio of the <span class='atb'>plasticity index</span> \(PI\) to the <span class='atb'>clay fraction</span> \(C_F\).
+
+				<div class='equationBox'>
+				\(  A=PI/CF\)
+				</div>
+				</div>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<ul>
+  <li class='fragment'> \(A\) is highly correlated to clay mineralogy.</li>
+  <li class='fragment'>\(0.75 \leq A \leq 1.25 \implies\) <strong style='color:#000'>"Normal soils''</strong></li>
+  <li class='fragment'> \(A < 0.75 \implies\) <strong style='color:#000'>"inactive"</strong> </li>
+  <li class='fragment'>\(A>1.25 \implies \) <strong style='color:#000'>"active"</strong> </li>
+</ul>
+</div>
+        
+			</div>
+			<div class="col" style="width: 50%;">
+				<table border='0' cellspacing='1' cellpadding='7' style='border-collapse:collapse;border:none;margin-top:-15px;background-color: antiquewhite;'>   <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Mineral</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Activity</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Na-montmorillonite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>4-7</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Ca-montmorillonite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>1.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Illite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.3</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Kaolinite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.3-0.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Hallosyte (dehydrated)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Hallosyte (hydrated)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.1</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Attapulgite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Allophane</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.5-1.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Mica (muscovite)</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Calcite</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0.2</td></tr> <tr align='Center'; style='height:10.00pt'> <td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>Quartz</td><td valign='Center' style='border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt;height:1.05pt'>0</td></tr></font>
+				</table>
+
+			</div>
+		</div>
+</section> -->
+
+<!-- <section >
+<h1>Participation question 2.13</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+  How can we obtain the <strong style='color:orange'>clay fraction \(C_F\)</strong> of a soil?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>Sieve analysis</li>
+<li class='l2'>Casagrande cup</li>
+<li class='l2'>Plastic limit test</li>
+<li class='l2'>Hydrometer analysis</li>
+<li class='l2'>All of the above</li>
+</ol>
+</section> -->
+
+<!-- <section >
+	<h1>Example 2.12</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>For the parameters shown in the table, compute \(LL\), \(PI\), \(LI\), and \(A\)</p>
+		
+	</div>
+
+  <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+    <iframe src='https://docs.google.com/spreadsheets/d/1FaVFFOhhdQc5fgFXrfBIIuToojG9iDpr9SccBUopLkQ/edit?usp=sharing' width='100%' height='500px' style="margin-left: 30px;"></iframe>
+    
+  </div>
+</section> -->
+
+
+<section >
+	<h1>Soil classification</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+    Geotechnical Engineers <strong style='color:black'>classify</strong> soils using the <span class='atb'>Unified Soil Classification System</span> (USCS) for <span class='atb'>consistent naming</span>.
+  </div>
+<p>Important concepts for USCS soil classification: <br>
+<ol>
+<li class='fragment'><strong style='color:#000'>Coarse-grained soils</strong> are classified by <span class='atb'>grain size distribution</span>.</li>
+<li class='fragment'><strong style='color:#000'>Fine-grained soils</strong> are classified by engineering behavior e.g., <span class='atb'>plasticity</span>.</li>
+
+<li class='fragment'>Only sieve analysis and Atterberg Limits are used to classify soils</li>
+
+</ol>
+
+</p>
+  
+	
+	
+</section>
+
+<section>
+<img class="" src="./FiguresGeneral/classification.svg" width="100%" alt="A flowchart diagram illustrating the Unified Soil Classification System (USCS) process.
+
+Top Section (Workflow):
+
+    Input parameters (Red Box): Lists necessary data: 'GSD (Gr​,Sr​,Fr​)', 'Gradation coeffs. (Cc​,Cu​)', 'PI and LL', and 'Plasticity chart'.
+
+    Process (Yellow Box): Labeled 'USCS', representing the classification logic.
+
+    Output (Grey Box): Shows the results: 'Group symbol' and 'Soil name'.
+
+Bottom Section (Example): An annotated example breaks down the classification 'SM' and name 'Silty sand with gravel':
+
+    Group Symbol 'SM':
+
+        'S' (First letter) is labeled 'First letter is for dominant fraction'.
+
+        'M' (Second letter) is labeled 'Secondary descriptor'.
+
+    Soil Name 'Silty sand with gravel':
+
+        'Silty' matches the secondary descriptor.
+
+        'Sand' is labeled 'dominant fraction'.
+
+        'with gravel' is labeled 'Tertiary descriptor'.">
+
+</section>
+
+<section>
+<h1>USCS Symbols</h1>
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+	Primary soil symbols:
+<table style="font-size: 0.9em;">
+	<tr>
+		<th>Symbol</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>G</td>
+		<td>Gravel</td>
+	</tr>
+	<tr>
+		<td>S</td>
+		<td>Sand</td>
+	</tr>
+	<tr>
+		<td>M</td>
+		<td>Silt</td>
+	</tr>
+	<tr>
+		<td>C</td>
+		<td>Clay</td>
+	</tr>
+	<tr>
+		<td>O</td>
+		<td>Organic soil</td>
+	</tr>
+</table>
+
+<div class='stickynote' style='margin-top: 20px;margin-left: 150px;'>
+Note: The M is from Swedish terms mo (very fine sand) and mjäla (silt)
+</div>
+</div>
+<div class='col bordered' style='width: 50%;'>
+Secondary soil symbols:
+<table style="font-size: 0.9em;">
+	<tr>
+		<th>Symbol</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>W</td>
+		<td>Well graded</td>
+	</tr>
+	<tr>
+		<td>P</td>
+		<td>Poorly graded</td>
+	</tr>
+	<tr>
+		<td>H</td>
+		<td>High plasticity</td>
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>Low plasticity</td>
+	</tr>
+	<tr>
+		<td>G</td>
+		<td>Gravelly</td>
+	</tr>
+	<tr>
+		<td>S</td>
+		<td>Sandy</td>
+	</tr>
+	<tr>
+		<td>M</td>
+		<td>Silty</td>
+	</tr>
+	<tr>
+		<td>C</td>
+		<td>Clayey</td>
+	</tr>
+
+
+</table>
+</div>
+</div>
+
+</section>
+
+
+<section >
+	<h1>Plasticity chart</h1>
+<figure style="margin-top:-40px;">
+  <img src="FiguresGeneral/soil_consistency_classification_chart.svg" width="100%" data-preload alt="A 'Plasticity Chart' used for classifying fine-grained soils, plotting 'PLASTICITY INDEX (PI)' on the vertical axis against 'LIQUID LIMIT (LL)' on the horizontal axis. The chart is divided into distinct regions by two key lines: a solid diagonal 'A-LINE' and a vertical line at 'LL = 50'.
+
+The specific classification zones are:
+
+    'CH or OH': Located above the A-line and to the right of LL=50 (High plasticity).
+
+    'MH or OH': Located below the A-line and to the right of LL=50 (High plasticity).
+
+    'CL or OL': Located above the A-line and to the left of LL=50 (Low plasticity).
+
+    'ML or OL': Located below the A-line and to the left of LL=50 (Low plasticity).
+
+    'CL-ML': A hatched zone near the bottom left corner (where PI is between 4 and 7) indicating a dual classification.
+
+A dashed line labeled 'U-LINE' marks the upper boundary of the chart. Text annotations provide the equations for the 'A-line' (PI=0.73(LL−20)) and the 'U-line'."/>
+  <footer style="margin-top:-30px;"><small></small></footer>
+</figure>
+</section>
+
+<section  >
+    <h1>USCS flow diagram for fines \(F_F \geq 50\%\)</h1>
+    
+    <img src="FiguresGeneral/finesflow.svg" style="margin-top:-20px; width:70%;" alt="USCS flow diagram classification for fines with fine content greater or equal to 50% obtained from the ASTM standard">
+</section>
+
+<section >
+  <h1>USCS flow diagram for \(F_F < 50\%\)</h1>
+    <img src="FiguresGeneral/coarseflow.svg" style="margin-top:-20px; width:70%;" alt="USCS flow diagram classification for coarse-grained materials with fine content less than 50% obtained from the ASTM standard">
+</section>
+
+<section>
+<h1>Example 2.9</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Given the sieve analysis and plasticity data for the following three soils, classify each soil according to the USCS and provide a group name.
+</div>
+
+<table style="font-size: 0.8em;">
+	<tr>
+		<th>Sieve Size</th>
+		<th>Soil 1 (% finer)</th>
+		<th>Soil 2 (% finer)</th>
+		<th>Soil 3 (% finer)</th>
+	</tr>
+	<tr>
+		<td>No. 4</td>
+		<td>99</td>
+		<td>97</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 10</td>
+		<td>92</td>
+		<td>90</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 40</td>
+		<td>86</td>
+		<td>40</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 100</td>
+		<td>78</td>
+		<td>8</td>
+		<td>99</td>
+	</tr>
+	<tr>
+		<td>No. 200</td>
+		<td>60</td>
+		<td>5</td>
+		<td>97</td>
+	</tr>
+	<tr>
+		<td>\(LL\) (%)</td>
+		<td>20</td>
+		<td>-</td>
+		<td>124</td>
+	</tr>
+	<tr>
+		<td>\(PL\) (%)</td>
+		<td>15</td>
+		<td>-</td>
+		<td>47</td>
+	</tr>
+	<tr>
+		<td>\(PI\) (%)</td>
+		<td>5</td>
+		<td>NP</td>
+		<td>77</td>
+	</tr>
+</table>
+
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<p style="font-size: 0.8em;"><strong style='color:#000; '>Soil 1:</strong> <br>
+<span class="fragment">Step 1: Get the soil fractions: </span><br>
+<span class="fragment">\( \begin{align}
+G_F & = 100 -99= 1 \% \\
+F_F & = 60 \% \\
+S_F & = 100 - 60 -1 = 39 \% \\
+\end{align} \)</span> <br>
+<br>
+<span class="fragment">Is the \(F_F \geq 50\%\)? Answer:</span> <strong class="fragment" style='color:green'>Yes</strong> <span class="fragment">\(\implies\) Fine-grained soil (use plast. chart).</span> <br>
+<span class="fragment">From plasticity chart: <br>
+Soil is: <strong style='color:green'>CL-ML</strong></span> <br>
+<span class="fragment"> Is the coarse fraction > 30%? </span> <span class="fragment">Answer: <strong style='color:green'>Yes</strong> </span> <span class="fragment">\(\implies\) We need to check secondary descriptor </span><br>
+<span class="fragment">Since \(S_F > G_F\) \(\implies\) secondary descriptor is <strong style='color:green'>Sandy</strong> </span><br>
+<span class="fragment">Is \(G_F \geq 15\%\)? </span> <span class="fragment"> Answer: <strong style='color:red'>No</strong> </span> <span class="fragment">\(\implies\) Final soil classification is <strong style='color:green'>CL-ML Sandy silty clay</strong> </span> <br>
+</p>
+</div>
+
+</section>
+
+<section>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Modeule2_GSD_plot.svg' alt="An empty grain size distribution plot in semi-log space. In the x axis the particle size is inverted ranging from 0.001 mm to 100 mm, and in the y axis the percent passing in % is displayed. The plot contains red guidelines for standard US mesh sizes"></object>
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<p style="font-size: 0.8em;">
+<strong style='color:#000'>Soil 2:</strong> <br>
+<span class="fragment">
+Step 1: Get the soil fractions:</span> <br>
+<span class="fragment">
+\( \begin{align}
+G_F & = 100 -97= 3 \% \\
+F_F & = 5 \% \\
+S_F & = 100 - 5 -3 = 92 \% \\
+\end{align} \) </span><br>	
+<span class="fragment">
+Is the \(F_F \geq 50\%\)?</span> <span class="fragment"> Answer: <strong style='color:red'>No</strong> </span> <span class="fragment"> \(\implies\) Coarse-grained soil (use coarse flowchart). </span><br>
+<span class="fragment">
+Since \(S_F > G_F\) \(\implies\) first letter is <strong style='color:green'>S</strong> </span><br>
+<span class="fragment">
+What is \(F_F\)? </span> <span class="fragment"> Answer: \(F_F = 5\%\) \(\implies\) Dual symbols </span><br>
+<span class="fragment">
+\(D_{60}=0.8\)mm, \(D_{30}=0.30\) mm, \(D_{10}=0.17\) mm </span> <br>
+<span class="fragment">
+\(C_u = D_{60}/D_{10} = 0.8/0.17 = 4.7 < 6\) </span> <br>
+<span class="fragment">
+\(C_c = (D_{30})^2/(D_{60}*D_{10}) = (0.30)^2/(0.8*0.17) = 0.66 < 1\) </span><br>
+<span class="fragment">
+Since \(C_u < 6\) and/or \(C_c < 1\) is true \(\implies\) second letter is <strong style='color:green'>P</strong> </span><br>
+<span class="fragment">
+Since soil is <strong style='color:#000'>non-plastic</strong> dual descriptor is <strong style='color:green'>M</strong> </span> <span class="fragment">  \(\implies\) Soil is: <strong style='color:green'>SP-SM</strong></span> <br>
+<span class="fragment">
+Is \(G_F \geq 15\%\)?</span> <span class="fragment">Answer: <strong style='color:red'>No</strong> </span>  <span class="fragment"> \(\implies\) Final soil classification is <strong style='color:green'>SP-SM Poorly graded sand with silt</strong></span> <br>
+</p>
+</div>
+
+</section>
+
+
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<p style="font-size: 0.8em;">
+<strong style='color:#000'>Soil 3:</strong> <br>
+<span class="fragment">
+Step 1: Get the soil fractions:</span> <br>
+<span class="fragment">
+\( \begin{align}
+G_F & = 100 -100= 0 \% \\
+F_F & = 97 \% \\
+S_F & = 100 - 97 -0 = 3 \% \\
+\end{align} \) </span> <br>
+<span class="fragment">
+Is the \(F_F \geq 50\%\)?</span> <span class="fragment"> Answer: <strong style='color:green'>Yes</strong> </span> <span class="fragment"> \(\implies\) Fine-grained soil (use plast. chart). </span><br>
+<span class="fragment">From plasticity chart: </span><br>
+<span class="fragment">Use A-line equation: \(PI_{A_{line}}=0.73*(LL-20)=0.73*(124-20)=76\) </span><br>
+<span class="fragment">Since \(PI > PI_{A_{line}} \implies\) soil is <strong style='color:green'>CH</strong> </span><br>
+<span class="fragment">Is the coarse fraction > 30%? </span><span class="fragment">Answer: <strong style='color:red'>No</strong> </span><span class="fragment"> \(\implies\) No secondary descriptor needed </span><br>
+<span class="fragment">Soil is: <strong style='color:green'>CH Fat clay</strong> </span> 
+</p>
+</div>
+
+</section>
+
+
+
+<!-- <section >
+	<h1>Example 2.13</h1>
+	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+		Classify the soil with data shown in the GSD below.
+		
+	</div>
+  <div class='container'>
+  <div class='col' style='width:50%'>
+    <img src="FiguresGeneral/ex1.svg" style="margin-top:30px;width:100%">
+  </div>
+  <div class='col' style='width:50%'>
+  <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; font-size: 0.8em;'>
+    <p>
+      <ol>
+        <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
+        </li>
+        <li class='fragment'> Is \(S_F > G_F\)? <br>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
+        </li>
+        <li class='fragment'>What is \(F_F\)? <br>
+        <span class="fragment">\(F_F < 5\%\) </span> </li>
+        <li class='fragment'>What is \(C_u\)? <br>
+          <span class="fragment"> \(C_u<6 \ \text{and/or} \ [C_c<3 \cup C_c>3] \) is <strong style='color:orange'>true</strong> \(\implies\) second letter is <strong style='color:orange'>P</strong> </span>
+        </li>
+        <li class='fragment'> Is \(G_F< 15\%\)? <br>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SP Poorly graded sand</strong> </span>
+        </li>
+
+      </ol>
+    </p>
+
+  </div>
+  </div>
+  </div>	
+
+</section> -->
+
+<!-- <section >
+	<h1>Example 2.14</h1>
+	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+		Classify the soil with data shown in the GSD below.
+		
+	</div>	
+<div class='container'>
+<div class='col' style='width: 50%;'>
+  <img src="FiguresGeneral/ex2.svg" style="margin-top:30px;width:100%">
+</div>
+<div class='col' style='width: 50%;'>
+  <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; font-size: 0.8em;'>
+    <p>
+      <ol>
+        <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
+        </li>
+        <li class='fragment'> Is \(S_F > G_F\)? <br>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
+        </li>
+        <li class='fragment'>What is \(F_F\)? <br>
+        <span class="fragment">\(F_F > 12\%\) </span> </li>
+        <li class='fragment'>What is the classication of the fines? <br>
+          <span class="fragment"> <strong style='color:orange'>CL-ML</strong> \(\implies\) <strong style='color:orange'>SC-SM</strong> </span>
+        </li>
+        <li class='fragment'> Is \(G_F< 15\%\)? <br>
+          <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SC-SM Silty, clayey sand</strong> </span>
+        </li>
+
+      </ol>
+    </p>
+
+  </div>
+</div>
+</div>
+
+
+</section> -->
+
+<!-- <section >
+	<h1>Example 2.15</h1>
+	<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+		Classify the soil with data shown in the GSD below.		
+	</div>	
+<div class='container'>
+<div class='col' style='width: 50%;'>
+  <img src="FiguresGeneral/ex3.svg" style="margin-top:30px;width:100%">
+</div>
+<div class='col' style='width: 50%;'>
+  <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; font-size: 0.8em;'>
+    <p>
+      <ol>
+        <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
+        <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
+        </li>
+        <li class='fragment'> Is \(S_F > G_F\)? <br>
+          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) first letter is <strong style='color:orange'>G</strong> </span>
+        </li>
+        <li class='fragment'>What is \(F_F\)? <br>
+        <span class="fragment">\(F_F > 12\%\) </span> </li>
+        <li class='fragment'>What is the classication of the fines? <br>
+          <span class="fragment"> <strong style='color:orange'>CH</strong> \(\implies\) <stroncg style='color:orange'>GC</stroncg> </span>
+        </li>
+        <li class='fragment'> Is \(S_F< 15\%\)? <br>
+          <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) soil is <strong style='color:orange'>GC Clayey gravel with sand</strong> </span>
+        </li>
+
+      </ol>
+    </p>
+
+  </div>
+</div>
+</div>
+
+</section> -->
+
+
+<!-- <section >
+	<h1>AASHTO Classification</h1>
+	<img src="https://www.aboutcivil.org/sites/default/files/2019-10/AASHTO-soil-classification-chart.jpg" width="100%" style="margin-top: -15px;">
+</section> -->
+
+<!-- <section >
+<h1>Example 2.16</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Classify the soil of Example 2.7 using the USCS and the AASHTO classification system. What is its rating as a subgrade material? The soil is non-plastic.
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/Mod2Example7_GSD_full.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<p style="font-size: 0.8em; margin-top: -50px;"><strong style='color:orange'>Data:</strong> \(G_F=0\%\), \(F_F= 30\%\), \(C_c=5.6\), \(C_u=24.1\), non-plastic <br>
+  <ol style="font-size: 0.7em;">
+    <li class='fragment'>Is \(F_F \geq 50\%\)? <br>
+    <span class="fragment"><strong style='color:red'>No</strong> \(\implies\) Either <strong style='color:orange'>S or G</strong> </span>
+    </li>
+    <li class='fragment'> Is \(S_F > G_F\)? <br>
+      <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) first letter is <strong style='color:orange'>S</strong> </span>
+    </li>
+    <li class='fragment'>What is \(F_F\)? <br>
+    <span class="fragment">\(F_F > 12\%\) </span> </li>
+    <li class='fragment'>What is the classication of the fines? <br>
+      <span class="fragment"> <strong style='color:orange'>ML</strong> \(\implies\) <stroncg style='color:orange'>SM</stroncg> </span>
+    </li>
+    <li class='fragment'> Is \(G_F< 15\%\)? <br>
+      <span class="fragment"><strong style='color:orange'>Yes</strong> \(\implies\) soil is <strong style='color:orange'>SM Silty sand</strong> </span>
+    </li>
+
+  </ol>
+</p>
+
+</div>
+</div>
+</div>
+
+</section> -->
+
+<!-- <section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'> <br>
+
+  <img src="https://www.aboutcivil.org/sites/default/files/2019-10/AASHTO-soil-classification-chart.jpg" width="100%" style="margin-top: 0px; margin-left: 25px;">
+</div>
+
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+</html>
