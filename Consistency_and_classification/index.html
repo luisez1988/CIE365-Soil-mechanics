@@ -71,7 +71,7 @@
 		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
 
 			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-				<div class="qrCode" name="https://drive.google.com/file/d/1YxEy6La-WzAlOfUNQJxdLHwPcsKYk3OV/view?usp=sharing"> </div>
+				<div class="qrCode" name="https://drive.google.com/file/d/1vJETGYEPPp6wyCfSnGhiu1DQZM1XayAp/view?usp=sharing"> </div>
 			</div>
 
 			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Atterberg Limits and Classification">
@@ -629,7 +629,7 @@ Secondary soil symbols:
 </section>
 
 <section>
-<h1>Example 2.x</h1>
+<h1>Example 2.9</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Given the sieve analysis and plasticity data for the following three soils, classify each soil according to the USCS and provide a group name.
 </div>
@@ -696,68 +696,84 @@ Given the sieve analysis and plasticity data for the following three soils, clas
 <section>
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <p style="font-size: 0.8em;"><strong style='color:#000; '>Soil 1:</strong> <br>
-Step 1: Get the soil fractions: <br>
-\( \begin{align}
+<span class="fragment">Step 1: Get the soil fractions: </span><br>
+<span class="fragment">\( \begin{align}
 G_F & = 100 -99= 1 \% \\
 F_F & = 60 \% \\
 S_F & = 100 - 60 -1 = 39 \% \\
-\end{align} \) <br>
+\end{align} \)</span> <br>
 <br>
-Is the \(F_F \geq 50\%\)? Answer: <strong style='color:green'>Yes</strong> \(\implies\) Fine-grained soil (use plast. chart). <br>
-From plasticity chart: <br>
-Soil is: <strong style='color:green'>CL-ML</strong> <br>
-Is the coarse fraction > 30%? Answer: <strong style='color:green'>Yes</strong> \(\implies\) We need to check secondary descriptor <br>
-Since \(S_F > G_F\) \(\implies\) secondary descriptor is <strong style='color:green'>Sandy</strong> <br>
-Is \(G_F \geq 15\%\)? Answer: <strong style='color:red'>No</strong> \(\implies\) Final soil classification is <strong style='color:green'>CL-ML Sandy silty clay</strong> <br>
+<span class="fragment">Is the \(F_F \geq 50\%\)? Answer:</span> <strong class="fragment" style='color:green'>Yes</strong> <span class="fragment">\(\implies\) Fine-grained soil (use plast. chart).</span> <br>
+<span class="fragment">From plasticity chart: <br>
+Soil is: <strong style='color:green'>CL-ML</strong></span> <br>
+<span class="fragment"> Is the coarse fraction > 30%? </span> <span class="fragment">Answer: <strong style='color:green'>Yes</strong> </span> <span class="fragment">\(\implies\) We need to check secondary descriptor </span><br>
+<span class="fragment">Since \(S_F > G_F\) \(\implies\) secondary descriptor is <strong style='color:green'>Sandy</strong> </span><br>
+<span class="fragment">Is \(G_F \geq 15\%\)? </span> <span class="fragment"> Answer: <strong style='color:red'>No</strong> </span> <span class="fragment">\(\implies\) Final soil classification is <strong style='color:green'>CL-ML Sandy silty clay</strong> </span> <br>
 </p>
 </div>
 
+</section>
+
+<section>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Modeule2_GSD_plot.svg'></object>
 </section>
 
 <section>
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <p style="font-size: 0.8em;">
 <strong style='color:#000'>Soil 2:</strong> <br>
-Step 1: Get the soil fractions: <br>
+<span class="fragment">
+Step 1: Get the soil fractions:</span> <br>
+<span class="fragment">
 \( \begin{align}
 G_F & = 100 -97= 3 \% \\
 F_F & = 5 \% \\
 S_F & = 100 - 5 -3 = 92 \% \\
-\end{align} \) <br>	
-Is the \(F_F \geq 50\%\)? Answer: <strong style='color:red'>No</strong> \(\implies\) Coarse-grained soil (use coarse flowchart). <br>
-Since \(S_F > G_F\) \(\implies\) first letter is <strong style='color:green'>S</strong> <br>
-What is \(F_F\)? Answer: \(F_F = 5\%\) \(\implies\) Dual symbols<br>
-\(D_{60}=0.8\)mm, \(D_{30}=0.30\) mm, \(D_{10}=0.17\) mm <br>
-\(C_u = D_{60}/D_{10} = 0.8/0.17 = 4.7 < 6\) <br>
-\(C_c = (D_{30})^2/(D_{60}*D_{10}) = (0.30)^2/(0.8*0.17) = 0.66 < 1\) <br>
-Since \(C_u < 6\) and/or \(C_c < 1\) is true \(\implies\) second letter is <strong style='color:green'>P</strong> <br>
-Since soil is <strong style='color:#000'>non-plastic</strong> dual descriptor is <strong style='color:green'>M</strong> \(\implies\) Soil is: <strong style='color:green'>SP-SM</strong> <br>
-Is \(G_F \geq 15\%\)? Answer: <strong style='color:red'>No</strong> \(\implies\) Final soil classification is <strong style='color:green'>SP-SM Poorly graded sand with silt</strong> <br>
+\end{align} \) </span><br>	
+<span class="fragment">
+Is the \(F_F \geq 50\%\)?</span> <span class="fragment"> Answer: <strong style='color:red'>No</strong> </span> <span class="fragment"> \(\implies\) Coarse-grained soil (use coarse flowchart). </span><br>
+<span class="fragment">
+Since \(S_F > G_F\) \(\implies\) first letter is <strong style='color:green'>S</strong> </span><br>
+<span class="fragment">
+What is \(F_F\)? </span> <span class="fragment"> Answer: \(F_F = 5\%\) \(\implies\) Dual symbols </span><br>
+<span class="fragment">
+\(D_{60}=0.8\)mm, \(D_{30}=0.30\) mm, \(D_{10}=0.17\) mm </span> <br>
+<span class="fragment">
+\(C_u = D_{60}/D_{10} = 0.8/0.17 = 4.7 < 6\) </span> <br>
+<span class="fragment">
+\(C_c = (D_{30})^2/(D_{60}*D_{10}) = (0.30)^2/(0.8*0.17) = 0.66 < 1\) </span><br>
+<span class="fragment">
+Since \(C_u < 6\) and/or \(C_c < 1\) is true \(\implies\) second letter is <strong style='color:green'>P</strong> </span><br>
+<span class="fragment">
+Since soil is <strong style='color:#000'>non-plastic</strong> dual descriptor is <strong style='color:green'>M</strong> </span> <span class="fragment">  \(\implies\) Soil is: <strong style='color:green'>SP-SM</strong></span> <br>
+<span class="fragment">
+Is \(G_F \geq 15\%\)?</span> <span class="fragment">Answer: <strong style='color:red'>No</strong> </span>  <span class="fragment"> \(\implies\) Final soil classification is <strong style='color:green'>SP-SM Poorly graded sand with silt</strong></span> <br>
 </p>
 </div>
 
 </section>
 
-<section>
-ADD chart to draw GSD
 
-</section>
 
 <section>
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <p style="font-size: 0.8em;">
-Step 1: Get the soil fractions: <br>
+<strong style='color:#000'>Soil 3:</strong> <br>
+<span class="fragment">
+Step 1: Get the soil fractions:</span> <br>
+<span class="fragment">
 \( \begin{align}
 G_F & = 100 -100= 0 \% \\
 F_F & = 97 \% \\
 S_F & = 100 - 97 -0 = 3 \% \\
-\end{align} \) <br>
-Is the \(F_F \geq 50\%\)? Answer: <strong style='color:green'>Yes</strong> \(\implies\) Fine-grained soil (use plast. chart). <br>
-From plasticity chart: <br>
-Soil is: <strong style='color:green'>CH</strong> <br>
-Is the coarse fraction > 30%? Answer: <strong style='color:red'>No</strong> \(\implies\) No secondary descriptor needed <br>
-Soil is: <strong style='color:green'>CH Fat clay</strong> 
-
+\end{align} \) </span> <br>
+<span class="fragment">
+Is the \(F_F \geq 50\%\)?</span> <span class="fragment"> Answer: <strong style='color:green'>Yes</strong> </span> <span class="fragment"> \(\implies\) Fine-grained soil (use plast. chart). </span><br>
+<span class="fragment">From plasticity chart: </span><br>
+<span class="fragment">Use A-line equation: \(PI_{A_{line}}=0.73*(LL-20)=0.73*(124-20)=76\) </span><br>
+<span class="fragment">Since \(PI > PI_{A_{line}} \implies\) soil is <strong style='color:green'>CH</strong> </span><br>
+<span class="fragment">Is the coarse fraction > 30%? </span><span class="fragment">Answer: <strong style='color:red'>No</strong> </span><span class="fragment"> \(\implies\) No secondary descriptor needed </span><br>
+<span class="fragment">Soil is: <strong style='color:green'>CH Fat clay</strong> </span> 
 </p>
 </div>
 
