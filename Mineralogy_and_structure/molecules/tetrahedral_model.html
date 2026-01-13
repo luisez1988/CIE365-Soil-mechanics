@@ -74,10 +74,12 @@
         scene.background = new THREE.Color(0xffffff);
         
         const container = document.getElementById('canvas-container');
-        const camera = new THREE.PerspectiveCamera(
-            100,
-            container.clientWidth / container.clientHeight,
-            0.2,
+        const camera = new THREE.OrthographicCamera(
+            container.clientWidth / -100,
+            container.clientWidth / 100,
+            container.clientHeight / 100,
+            container.clientHeight / -100,
+            0.1,
             1000
         );
         
