@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetrahedral Silicate Structure</title>
+    <title>Octahedral Alumina Structure</title>
     <style>
         body {
             margin: 0;
@@ -49,21 +49,21 @@
             cursor: pointer;
         }
         button:hover {
-            background: rgb(255, 255, 255);
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
     <div id="canvas-container"></div>
     <div id="info">
-        <strong>SiO₄⁴⁻ Tetrahedron</strong><br>
-        <span style="color: #4DA6FF;">Blue</span>: Silicon (Si)<br>
+        <strong>AlO₆ Octahedron</strong><br>
+        <span style="color: #9370DB;">Purple</span>: Aluminum (Al)<br>
         <span style="color: #FF4444;">Red</span>: Oxygen (O)
     </div>
     <div id="controls">
         <button id="resetBtn">Reset View</button>
-        <button id="toggleSiBondsBtn">Toggle Si-O Bonds</button>
-        <button id="toggleEdgesBtn">Toggle Tetrahedral Edges</button>
+        <button id="toggleAlBondsBtn">Toggle Al-O Bonds</button>
+        <button id="toggleEdgesBtn">Toggle Octahedral Edges</button>
         <button id="toggleLabelsBtn">Toggle Labels</button>
         <button id="rotateBtn">Auto Rotate</button>
     </div>
@@ -101,8 +101,8 @@
         scene.add(directionalLight2);
         
         // Materials
-        const siliconMaterial = new THREE.MeshPhongMaterial({
-            color: 0x4DA6FF,
+        const aluminumMaterial = new THREE.MeshPhongMaterial({
+            color: 0x9370DB,
             shininess: 100,
             specular: 0x111111
         });
@@ -114,26 +114,34 @@
         });
         
         const bondMaterial = new THREE.MeshPhongMaterial({
-            color: 0x00AA00,
+            color: 0xCC6600,
             shininess: 50
         });
         
         // Create atoms
         const atoms = [];
-        const siBonds = new THREE.Group();
-        const tetrahedralEdges = new THREE.Group();
+        const alBonds = new THREE.Group();
+        const octahedralEdges = new THREE.Group();
         const labels = new THREE.Group();
         
-        // Silicon atom (center)
-        const siGeometry = new THREE.SphereGeometry(0.7, 32, 32);
-        const siAtom = new THREE.Mesh(siGeometry, siliconMaterial);
-        siAtom.position.set(0, 0, 0);
-        scene.add(siAtom);
-        atoms.push(siAtom);
+        // Aluminum atom (center)
+        const alGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+        const alAtom = new THREE.Mesh(alGeometry, aluminumMaterial);
+        alAtom.position.set(0, 0, 0);
+        scene.add(alAtom);
+        atoms.push(alAtom);
         
-        // Oxygen atoms (vertices)
+        // Oxygen atoms (vertices of octahedron)
         const oGeometry = new THREE.SphereGeometry(0.35, 32, 32);
-        const oPositions = [[2.886751345948129, 2.886751345948129, 2.886751345948129], [2.886751345948129, -2.886751345948129, -2.886751345948129], [-2.886751345948129, 2.886751345948129, -2.886751345948129], [-2.886751345948129, -2.886751345948129, 2.886751345948129]];
+        // Octahedral positions - 6 vertices at distance ~2.9 Angstroms
+        const oPositions = [
+            [2.9, 0, 0],    // +X
+            [-2.9, 0, 0],   // -X
+            [0, 2.9, 0],    // +Y
+            [0, -2.9, 0],   // -Y
+            [0, 0, 2.9],    // +Z
+            [0, 0, -2.9]    // -Z
+        ];
         
         oPositions.forEach((pos, index) => {
             const oAtom = new THREE.Mesh(oGeometry, oxygenMaterial);
@@ -142,13 +150,18 @@
             atoms.push(oAtom);
         });
         
-        scene.add(siBonds);
-        scene.add(tetrahedralEdges);
+        scene.add(alBonds);
+        scene.add(octahedralEdges);
         
-        // Create edges between oxygen atoms for tetrahedral shape
+        // Create edges between oxygen atoms for octahedral shape
+        // An octahedron has 12 edges connecting the 6 vertices
         const edges = [
-            [0, 1], [0, 2], [0, 3],
-            [1, 2], [1, 3], [2, 3]
+            // Square around equator (XY plane)
+            [0, 2], [2, 1], [1, 3], [3, 0],
+            // Top pyramid (from +Z to equator)
+            [4, 0], [4, 2], [4, 1], [4, 3],
+            // Bottom pyramid (from -Z to equator)
+            [5, 0], [5, 2], [5, 1], [5, 3]
         ];
         
         const edgeMaterial = new THREE.LineBasicMaterial({
@@ -242,12 +255,12 @@
             autoRotate = false;
         });
         
-        document.getElementById('toggleSiBondsBtn').addEventListener('click', () => {
-            siBonds.visible = !siBonds.visible;
+        document.getElementById('toggleAlBondsBtn').addEventListener('click', () => {
+            alBonds.visible = !alBonds.visible;
         });
         
         document.getElementById('toggleEdgesBtn').addEventListener('click', () => {
-            tetrahedralEdges.visible = !tetrahedralEdges.visible;
+            octahedralEdges.visible = !octahedralEdges.visible;
         });
         
         document.getElementById('toggleLabelsBtn').addEventListener('click', () => {
@@ -276,21 +289,9 @@
                 rotation.y += 0.005;
             }
             
-            // Apply rotation to all atoms and bonds
+            // Apply rotation to all atoms
             atoms.forEach(atom => {
                 const pos = atom.position.clone();
-                
-                // Rotate around Y axis
-                const cosY = Math.cos(rotation.y);
-                const sinY = Math.sin(rotation.y);
-                const newX = pos.x * cosY - pos.z * sinY;
-                const newZ = pos.x * sinY + pos.z * cosY;
-                
-                // Rotate around X axis
-                const cosX = Math.cos(rotation.x);
-                const sinX = Math.sin(rotation.x);
-                const newY = pos.y * cosX - newZ * sinX;
-                const finalZ = pos.y * sinX + newZ * cosX;
                 
                 // Store original position if not already stored
                 if (!atom.userData.originalPos) {
@@ -299,8 +300,16 @@
                 
                 // Apply rotation to original position
                 const orig = atom.userData.originalPos;
+                
+                // Rotate around Y axis
+                const cosY = Math.cos(rotation.y);
+                const sinY = Math.sin(rotation.y);
                 const rotatedX = orig.x * cosY - orig.z * sinY;
                 const rotatedZ = orig.x * sinY + orig.z * cosY;
+                
+                // Rotate around X axis
+                const cosX = Math.cos(rotation.x);
+                const sinX = Math.sin(rotation.x);
                 const rotatedY = orig.y * cosX - rotatedZ * sinX;
                 const rotatedZFinal = orig.y * sinX + rotatedZ * cosX;
                 
@@ -308,12 +317,12 @@
             });
             
             // Update bonds
-            scene.remove(siBonds);
-            scene.remove(tetrahedralEdges);
-            siBonds.clear();
-            tetrahedralEdges.clear();
+            scene.remove(alBonds);
+            scene.remove(octahedralEdges);
+            alBonds.clear();
+            octahedralEdges.clear();
             
-            // Si-O bonds (thick green cylinders)
+            // Al-O bonds (thick orange cylinders)
             oPositions.forEach((_, index) => {
                 const bond = createCylinderBond(
                     atoms[0].position.clone(),
@@ -321,7 +330,7 @@
                     bondMaterial,
                     0.15
                 );
-                siBonds.add(bond);
+                alBonds.add(bond);
             });
             
             // O-O edges (thin gray lines for geometry)
@@ -331,11 +340,11 @@
                     atoms[j + 1].position.clone()
                 ]);
                 const edge = new THREE.Line(edgeGeometry, edgeMaterial);
-                tetrahedralEdges.add(edge);
+                octahedralEdges.add(edge);
             });
             
-            scene.add(siBonds);
-            scene.add(tetrahedralEdges);
+            scene.add(alBonds);
+            scene.add(octahedralEdges);
             
             renderer.render(scene, camera);
         }
