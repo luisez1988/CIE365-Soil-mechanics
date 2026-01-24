@@ -445,7 +445,7 @@ In-situ tests are used to obtain information on the characteristics of soil, whe
 </div>
 <div class='col' style='width: 50%;'>
 <figure>
-<img src='FiguresGeneral/in-situ_tests.svg' width='100%'/>
+<img src='FiguresGeneral/in-situ_tests.svg' width='90%'/>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
 </div>
@@ -453,6 +453,296 @@ In-situ tests are used to obtain information on the characteristics of soil, whe
 
 </section>
 
+
+<section>
+<h1>Standard Penetration test (SPT)</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+This tests determines a <strong style='color:#000'>penetration resistance value</strong> <strong style='color:green'>\(N\)</strong> which can be used to obtain various soil properties.
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/SPT_def.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='defBox' name='SPT Blow count:' style='margin-top: 5px;margin-left: 0px; font-size: 0.85em;'>
+is defined as the number of blows required to drive a standard sampler 300 mm (12 in) into the soil using a 63.5 kg (140 lb) hammer falling a distance of 760 mm (30 in). The sampler is driven in three increments of 150 mm (6 in) each, and the sum of the number of blows for the last two increments is recorded as the <strong style='color:green'>\(N\)</strong> value. <br>
+<div class='equationBox'>
+\( N= N_f + N_s \)
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Notes on the use of SPT in the field
+</div>
+
+<ul style="margin-top: 0px;">
+	<li class='fragment'>When the \(N \geq 50\) for a penetration of less or equal to 150 mm (6 in), the test should be stopped and the value recorded as \(N = 50+\). This is called a <span class='atb'>refusal</span></li>
+	<li class='fragment'>The number of blows during the seating stage is not recorded because of soil disturbance effects due to drilling down do desired depth and loss of confinement due to excavation</li>
+	<li class='fragment'>Hammering <span class='atb'>efficiency</span> and flexibility of the system will affect <span class='atb'>energy delivery</span> to the soil, thereby affecting the \(N\) value</li>
+	<li class='fragment'>The SPT test is typically used for <span class='atb'>coarse-grained</span> soils, where intact sampling is <strong style='color:#000'>unfeasible</strong></li>
+</ul>
+</section>
+
+<section>
+<h1>Split barrel sampler</h1>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure style="margin-top: -30px;">
+<img src='FiguresGeneral/Split_barrel.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+It is used during <span class='atb'>SPT field investigation</span> to recover <span class='atb'>disturbed</span> soil samples.
+</div>
+
+<p> 
+<ol>
+<li>Samples are typically used to measure <strong style='color:#000'>index properties</strong> like moisture content, gradation, Atterberg Limits, visual classification </li>	
+<li><strong style='color:red'>Not used for:</strong> strength or consolidation testing</li>	
+ </ol>
+</p>
+</div>
+</div>
+
+
+
+</section>
+
+<section>
+<h1>SPT Hammer types</h1>
+<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+Three types of hammer available. Each one has a unique <strong style='color:#000'>efficiency</strong>
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/Hammer_types.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='defBox' name='Energy efficiency' style='margin-top: 5px;margin-left: 0px; font-size: 0.9em;'>
+Ratio of energy delivered by hammer blow to the theoretical potential energy of the hammer. <br>
+<div class='equationBox'>
+\( E_E= E_h / E_{max} \)
+</div>
+\(E_{max}= 4200 \) lb-in
+</div>
+
+<table style="width: 100%; font-size: 0.9em;">
+	<tr>
+		<th>Hammer type</th>
+		<th>Efficiency \(E_E\)</th>
+	</tr>
+	<tr>
+		<td>Donut</td>
+		<td>0.45</td>
+	</tr>
+	<tr>
+		<td>Safety</td>
+		<td>0.60</td>
+	</tr>
+	<tr>
+		<td>Automatic</td>
+		<td>0.78</td>
+	</tr>
+</table>
+</div>
+</div>
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+\(N\)-value must be <span class='atb'>corrected</span> to a energy level of 60% efficiency
+</div>
+
+<div class='equationBox' style="margin-top: 50px;">
+\( N_{60} = N \times C_E \times C_B \times C_S \times C_R \)
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%; text-align: left;'>
+	<br> <br>
+\(C_E=\) Energy correction factor <br>
+\(C_B=\) Borehole diameter correction factor <br>
+\(C_S=\) Sampler correction factor <br>
+\(C_R=\) Rod length correction factor
+</div>
+<div class='col' style='width: 50%;'>
+	<br> <br>
+		<table style="background-color: antiquewhite; width: 100%; font-size: 0.9em;">
+			<tr>
+				<th>Hammer</th>
+				<th>Correction factor</th>
+			</tr>
+			<tr>
+				<td>Donut</td>
+				<td>0.75</td>
+			</tr>
+			<tr>
+				<td>Safety</td>
+				<td>1.0</td>
+			</tr>
+			<tr>
+				<td>Automatic</td>
+				<td>1.3</td>
+			</tr>
+
+		</table>
+</div>
+</div>
+
+</section>
+
+
+<section>
+<h1>Example 3.1</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the data attached, calculate \(N\) and \(N_{60}\). The automatic hammer was used. 
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 25%;'>
+	<figure>
+	<img src='FiguresGeneral/Plots.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 75%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px; height: 480px;'>
+		<br>
+
+	Step 1: calculate \(N\) <br>
+	\( N= N_f + N_s = 7 + 11 = \color{green} 18 \) blows/ft <br> <br>
+	Step 2: calculate \(N_{60}\) <br>
+		\( \begin{align}
+		N_{60} & = N \times C_E \times C_B \times C_S \times C_R \\
+		 &= 18 \times 1.3 \times 1.0 \times 1.0 \times 1.0 \\
+		 N_{60} & = \color{green} 23 \text{ blows/ft}
+		\end{align} \)
+	</div>
+	</div>
+	</div>
+
+</section>
+
+
+<section>
+<h1>SPT - Empirical correlations</h1>
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<table style="font-size: 0.8em;">
+  
+  <thead>
+    <tr>
+      <th colspan="2">Sands<br>(Fairly reliable)</th>
+      <th colspan="2">Clays<br>(Rather reliable)</th>
+    </tr>
+    <tr>
+      <th>\(N\)</th>
+      <th>Relative<br>density</th>
+      <th>\(N\)</th>
+      <th>Consistency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>< 2</td>
+      <td>Very soft</td>
+    </tr>
+    <tr>
+      <td>0-4</td>
+      <td>Very loose</td>
+      <td>2-4</td>
+      <td>Soft</td>
+    </tr>
+    <tr>
+      <td>4-10</td>
+      <td>Loose</td>
+      <td>4-8</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>10-30</td>
+      <td>Medium</td>
+      <td>8-15</td>
+      <td>Stiff</td>
+    </tr>
+    <tr>
+      <td>30-50</td>
+      <td>Dense</td>
+      <td>15-30</td>
+      <td>Very stiff</td>
+    </tr>
+    <tr>
+      <td>> 50</td>
+      <td>Very dense</td>
+      <td>> 30</td>
+      <td>Hard</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<strong style='color:#000'>For sand:</strong> <br>
+<ul>
+	<li>Relative density \(D_r\)</li>
+	<li>Friction angle \(\phi\)</li>
+	<li>Elastic modulus \(E_s\)</li>
+	<li>Liquefaction potential</li>	
+</ul>
+<br>
+<strong style='color:#000'>For clay:</strong> <br>
+<ul>
+	<li>Undrained shear strength \(S_u\)</li>
+	<li>Stress history</li>
+	<li>Lateral stress ratio \(K_o\)</li>
+	<li>Undrained elastic modulus \(E_u\)</li>	
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<h2>Strengths</h2>
+<ul>
+	<li class='fragment'>Obtain <span class='atb'>sample</span> and \(N\)</li>
+	<li class='fragment'>Simple and <span class='atb'>rugged</span> device \(\implies\) <span class='atb'>low cost</span></li>
+	<li class='fragment'>Suitable for many soil types</li>
+	<li class='fragment'>Can perform in weak rocks</li>
+	<li class='fragment'>Available throughout the USA and worldwide</li>
+</ul>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<h2>Limitations</h2>
+<ul>
+	<li class='fragment'>Obtain results at <span class='atb'>discrete</span> depths</li>
+	<li class='fragment'><span class='atb'>Disturbed samples</span> only</li>
+	<li class='fragment'>Crude number for analysis</li>
+	<li class='fragment'>Not reliable for soft clays and silts</li>
+	<li class='fragment'>High variability and uncertainty</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+	
 
 
 
