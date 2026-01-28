@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
-		<title>Water in soils</title>
+		<title>Geostatic stresses</title>
 	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -33,8 +33,8 @@
 					</style>
 	
 					<div class='footer'>
-						CIE-365
-						Spring 2025
+						CE-342
+						Spring 2026
 					</div>
 	
 					<style>
@@ -49,7 +49,7 @@
 						}
 					.reveal .slides section .fragment.fade-down,
 					.reveal .slides section .fragment.current-fragment {
-							color: #000;
+							/* color: #000; */
 							margin-top:0px;
 					}
 	
@@ -68,61 +68,59 @@
 		  }
 		</style>
 				<!-- <section> -->
-		<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
 
-			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+			<div style="margin-top:360px;margin-left:0px" class="qrCode_cont" name="Get pdf">
 				<div class="qrCode" name="https://drive.google.com/file/d/1F4wofNXflmez_BtvEmYqC4Xk8KkoXS5f/view?usp=sharing"> </div>
 			</div>
 
-			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Effect of water in soils">
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Geostatic stresses">
 				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-				<p style="color:#faffff; font-size:35px">Spring 2025</p>
+				<p style="color:#faffff; font-size:35px">Spring 2026</p>
 				<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 			</div>
 		</section>		
 
 <!-- 
-				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<section >
 					<h1>Course contents and schedule</h1>
 					<img src="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></img>
 				</section> -->
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<section  >
 				    <h1>Recap</h1>
 						<ul>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to calculate the <strong style='color:black'>relative density</strong> of soils.
+								We learned about the importance and the steps of <strong style='color:#000'>site investigation</strong>
 							</div>
 								
 								</li>
-							<li class="fragment"> We learned how to calculate <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-							optimum water contents and density
-							</div> after compaction. </li>
+							<li class="fragment"> We learned about the <strong style='color:#000'>strengths and limitations</strong> of <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> </li>
 							<li class="fragment">
 							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-							We learned about <strong style='color:black'>technical specifications and quality control</strong> of compaction.
+							We learned how <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> can be used to determine <strong style='color:#000'>soil properties</strong>
 							</div>	
 							</li>
-							<li class="fragment"> We have <strong style='color:green'>accomplish objective 1</strong>.</li>
+							<li class="fragment"> We learned how in-situ tests and geophysics can be used to <strong style='color:#000'>draw a geotechnical soil profile</strong></li>
 						</ul>
 				</section>
 
-        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+        <section >
 					<h1>Contents</h1>
 					<div class='container' >
 					<div class='col' style="width: 50%;">					
-						<ul class="contentStyle">
-							<li class="l1">Suction and capillary action.</li>
-							<li class="l1">Swelling/shrinkage in soils.</li>
-							<li class="l1">Frost action in soils.</li>
-							<li class="l1">Total stress, pore pressure, and effective stress.</li>
+						<ul class="contentStyle" style="margin-top: 80px;">
+							<li class="l1">Hydrostatic pore pressure</li>
+							<li class="l1">Interparticle effective stress.</li>
+							<li class="l1">Effective stress principle</li>
+							<li class="l1">At-rest horizontal stresses</li>
 						</ul>
 					</div>
 					<div class='col' style="width: 50%;">
 					<div class='container'>
 					<div class='col' style="width: 50%;">
-						<div class="stickynote" style="margin-top: 110px;margin-left: 40px;">
+						<div class="stickynote" style="margin-top: 100px;margin-left: 40px; height: 300px;">
 							<p> Objective covered in this lecture</p>
 							<ul>
 								<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating the effective stress in soils  </li>
@@ -130,12 +128,12 @@
 						</div>
 					</div>
 					<div class='col' style="width: 50%;">
-					<div class='stickynote' style='margin-top: 100px;margin-left: 40px;'>
-						<p style="margin-top: -20px;">After this lecture we will able to:</p>
-						<ul style="margin-top: -15px;">
-							<li>Calculate suction caused by capillary rise and approximate its height.</li>
-							<li>Calculate the swelling and frost susceptibility of soils.</li>
-							<li>Calculate pore pressure, total, and effective stresses.</li>
+					<div class='stickynote' style='margin-top: 100px;margin-left: 40px; height: 300px;'>
+						<p style="margin-top: 0px;">After this lecture we will able to:</p>
+						<ul style="margin-top: -15px;">							
+							<li>Calculate the hydrostatic pore pressure.</li>
+							<li>Calculate geostatic vertical total and effective stresses.</li>
+							<li>Calculate geostatic horizontal total and effective stresses.</li>
 						</ul>
 					</div>
 					</div>
@@ -157,7 +155,34 @@
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What are <strong style='color:orange'>geostatic stresses</strong>?
+</div>
+
+<div class='defBox' name='' style='margin-top: 10px;margin-left: 0px;'>
+Is a field of stress generated by the soil's <span class='atb'>own weight</span> and influenced by <span class='atb'>intersticial pore water pressure</span>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+<strong style='color:#000'>Recall:</strong> Stress is defined as the force per unit area applied on a material. 
+</div>
+
+Since <strong style='color:#000'>force</strong> is a <span class='atb'>vectorial</span> entity, stress is also a <strong style='color:#000'>multi-dimensional</strong> value
+</div>
+<div class='col' style='width: 50%;'>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/stress_definition.svg'></object>
+</div>
+</div>
+
+
+
+
+</section>
+
+<section  >
     <h1>Water in hydrostatic conditions</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	In <span class='atb'>hydrostatic</span> conditions, pore water pressure (<strong style='color:green'>\(u\)</strong> ) is controlled by the <span class='atb'>ground water table</span> (GWT) elevation.
@@ -183,7 +208,33 @@
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Pore pressure is calculated based on <span class='atb'>depth</span> measured <span class='atb'>from the water table</span>. 
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/pore_water.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+	<br> <br>
+The <strong style='color:#000'>hydrostatic</strong> pore water pressure is then calculated as: <br>
+<div class='equationBox'>
+\( u= h_w \gamma_w = h_w g \rho_w \)
+</div> <br>
+Where: <br>
+\(h_w\) is the depth below the GWT<br>
+</div>
+</div>
+</section>
+
+
+
+<!-- <section  >
     <h1>Capillary rise</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	<strong style='color:black'>Capillarity</strong> arises from <span class='atb'>surface tension</span> <strong style='color:green'>\(T\)</strong> that occurs at the interface between water and soil particles.
@@ -202,9 +253,9 @@
 		</div>
 	</div>
 		
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Simplifying the soil's pore structure as <span class='atb'>tubes</span> will help us to obtain mathematical expressions to <strong style='color:black'>understand capillarity</strong>.
@@ -227,9 +278,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 </div>
 
 
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Quiz 4.1</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 	In which of the soils below will the capillary rise be <strong style='color:green'>greater</strong> ?
@@ -242,9 +293,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 <li class='l2'>A dense well graded gravel</li>
 <li class='l2'>A dense poorly graded gravel</li>
 </ol>
-</section>
+</section> -->
 
-<section id="EX410" data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section id="EX410" >
 <h1>Example 4.1</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	Using the tube analogy what will be the capillary rise in a uniform loose sand with \(d=0.15\)mm and in a clay with \(D_{10}=1.5 \mu\)m. Assume the pore size is 20% of \(D_{10}\).
@@ -254,13 +305,13 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 <object width="100%" class='Animation' type='image/svg+xml' data='FiguresGeneral/EX410.svg'></object>
 </div>
 
-</section>
+</section> -->
 
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
 </section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  >
     <h1>Suction pressure</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	Due to the surface tension and capillary rise, the water column <span class='atb'>above the GWT</span> must be in tension. This generates the <span class='atb'>suction</span> that <strong style='color:black'>helps</strong> holding particles together.
@@ -277,9 +328,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
           <img src="FiguresGeneral/suctionplot_full.svg" style="margin-top:0px;width:100%">
 			</div>
 		</div>
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Quiz 4.2</h1>
 
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -288,9 +339,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 
 <img src="./FiguresGeneral/beach_profile.svg" width="100%" style="margin-top: -0px;">
 
-</section>
+</section> -->
 
-<section id="EX420" data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section id="EX420" >
 <h1>Example 4.2</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	<p>Calculate the capillarity water pressure for the same soils of Example 4.1. 		
@@ -303,9 +354,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 	
 </div>
 
-</section>
+</section> -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section  >
     <h1>Capillarity explains shrinkage</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -325,13 +376,13 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 			 </figure>
 			</div>
 		</div>
-</section>
+</section> -->
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	<iframe class="stretch" src="https://www.youtube.com/embed/SW-NoiM726U?autoplay=0" data-preload></iframe>
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Swelling potential</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	When water is added back to the soil, water meniscus are <span class='atb'>broken</span> and the soil <span class='atb'>swells</span>. Clay <span class='atb'>mineralogy</span> plays a significant role on how much a soil will expand.
@@ -348,9 +399,9 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 	
 	</div>
 	</div>
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Swelling potential</h1>
 
 
@@ -367,17 +418,17 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 \(\sigma_S= F/A_c\)
 </div>
 </div>
-</section>
+</section> -->
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	<h1>swelling and activity relationship</h1>
 	<figure style="margin-top:-25px;">
 		<img src="FiguresGeneral/correlations.svg" style="width:80%" data-preload/>
 		<footer style="margin-top:-620px;"><small>Modified from Holtz et al. (2013) after Seed et al. (1962)</small></footer>
 	  </figure>
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Quiz 4.3</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 	For the data of example 2.7 (\(C_F=5.5\%\) and \(A=1.81\)) what is its estimated swelling potential?
@@ -389,11 +440,11 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 <li class='l2'> \(5 \leq S_P<25\%\) High</li>
 <li class='l2'> \(S_P \geq 25\%\) Very high</li>
 </ol>
-</section>
+</section> -->
 
 
 
-<section data-auto-animate data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section data-auto-animate >
 	<h1>Frost action</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	Anytime the ambient temperature falls below 0\(^o\) C (32 \(^o\)F) the pore water can <span class='atb'>freeze</span>. <strong style='color:black'>Frost action</strong> can have important consequences such as <span class='atb'>uneven heaving</span> that can affect light-weight structures.
@@ -418,23 +469,23 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 			</figure>
 		</div>
 	</div>
-</section>
+</section> -->
 
-<section data-auto-animate data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section data-auto-animate >
 <h1>Frost action</h1>
 <figure>
 	<img src="FiguresGeneral/icelenses.svg.2023_02_12_11_59_51.0.svg" style="width:75%" data-preload/>
 	<footer style="margin-top:-30px;"><small></small></footer>
   </figure>
-</section>
+</section> -->
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 
 	<iframe class="stretch" src="https://www.youtube.com/embed/uFdf8mmo0pc?start=400&end=500&autoplay=0" data-preload></iframe>
 
-</section>
+</section> -->
 
-<section data-auto-animate data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section data-auto-animate >
 <h1>Frost susceptible soils</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	There are several tools to determine soil's <span class='atb'>frost susceptibility</span>. For example, the Canadian Department of Transport had use the limits proposed by Armstrong and Csathy (1963).
@@ -472,21 +523,21 @@ Simplifying the soil's pore structure as <span class='atb'>tubes</span> will hel
 	</table>
 </div>
 </div>
-</section>
+</section> -->
 
-<section data-auto-animate data-background-image="FiguresGeneral/Normal_slide_Maine.svg">	
+<!-- <section data-auto-animate >	
 	<img src="./FiguresGeneral/frost_limits.svg" width="90%" >
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Frost penetration depth</h1>
 <figure style="margin-top: -25px;">
 <img src='https://www.brickwood.info/uploads/db5988/original/2X/9/9f3f5a45db1a90b4c924defa2d24ff9c96b6e41d.jpg' width='80%'/>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
-</section>
+</section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Example 4.3</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Determine the frost susceptibility of the soil in Example 2.7.
@@ -505,17 +556,38 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 
 </div>
+</section> -->
+
+<section >
+	<h1>Principle of effective stress</h1>
+	<div class='container'>
+	<div class='col' style='width: 65%;'>
+		<object  class='Animation' style='width: 100%' type='image/svg+xml' data='FiguresGeneral/effective stress.svg.2022_02_10_22_01_41.0.svg' ></object>
+	</div>
+	<div class='col' style='width: 35%;'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Consider a fully saturated soil. At the grain level the sum of pore pressure and inter-particle forces must balance the total stress applied to the soil element.
+	</div>
+	</div>
+	</div>
+
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+	Thus, 
+	<div class='equationBox' style="margin-left: 180px;">
+	\( \sigma= \sigma' + u \)
+	</div> <br>
+	 This called the <span class='atb'>principle of effective stress</span>
+	</div>
+
 </section>
 
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Principle of effective stress</h1>
+<section >
+	
 	
 
 	<div class="container">
 		<div class="col" style="width: 50%;">
-			<div> <div class='textBox' style='margin-top: 0px;margin-left: 0px; text-align: left; font-size: 1em;'>
+			<div> <div class='textBox' style='margin-top: 50px;margin-left: 0px; text-align: left; font-size: 1em;'>
 		
 				<p> According to the <strong style='color:black'>Principle of effective stresses</strong> the stress that produces the deformation of the soil skeleton is transmitted through the <span class='atb'>particle contacts</span> and is equal to the <span class='atb'>total stress</span> <strong style='color:green'>\(\sigma\)</strong> minus the <span class='atb'>pore water pressure</span> <strong style='color:green'>\(u\)</strong>.</p>
 			<div class='equationBox'>
@@ -526,7 +598,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 		</div>
 		<div class="col" style="width: 50%;">
-			<p> In (1925) <strong style='color:black'>Karl Terzaghi</strong> proposed a <strong style='color:black'>new concept</strong> that profoundly impacted the field of Geotechnics: <span class='atb'>The principle of effective stresses</span>.</p>
+			<p style="margin-top: 50px;"> In (1925) <strong style='color:black'>Karl Terzaghi</strong> proposed a <strong style='color:black'>new concept</strong> that profoundly impacted the field of Geotechnics: <span class='atb'>The principle of effective stresses</span>.</p>
 			<div class='container'>
 			<div class='col'>
 				<figure style="margin-top:-25px;">
@@ -545,12 +617,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Principle of effective stress</h1>
-	<object  class='Animation' style='width: 85%' type='image/svg+xml' data='FiguresGeneral/effective stress.svg.2022_02_10_22_01_41.0.svg' ></object>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1 style="margin-top:0px;">In-situ vertical stresses</h1>
 	<div class='defBox' name='In-situ stresses:' style='margin-top: 0px;margin-left: 0px;'>
 	Is the <strong style='color:black'>state of stress</strong> in the field <span class='atb'>as they are</span> previous to any change in the loading conditions in the subsurface.
@@ -578,7 +645,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 </div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Multilayer profiles</h1>
 	<div class="container">
 		<div class="col" style="width: 50%;">
@@ -605,7 +672,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 4.4</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 		<p>Compute the total and effective vertical stresses at point A. Plot the vertical total and effective stresses with the pore pressure profile in the same graph.</p>
@@ -629,13 +696,13 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/1gQR42_rf_UJoz9iBlKg-xVnGTFEjxulO9ROJeys--g0/edit?usp=sharing'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <object class="Animation" type='image/svg+xml' data='FiguresGeneral/Profile.svg' width='100%' style='margin-top: 0px;'></object>
 
@@ -643,7 +710,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 	<h1>Quiz 4.4</h1>
 	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 		For the soil profile shown below, which stress profile plot is correct?
@@ -652,7 +719,7 @@ Determine the frost susceptibility of the soil in Example 2.7.
 	<img src="FiguresGeneral/Quiz_stresses.svg" width="100%" style="margin-top: -20px;">
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Horizontal stresses</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Horizontal effective stresses are calculated based on the capacity of the soil to <span class='atb'>deform laterally</span>. When soil <strong style='color:black'>doesn't</strong> deform laterally it is in <span class='atb'>at-rest conditions</span>.
@@ -666,7 +733,7 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 	</div> </div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 
 <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
 	<strong style='color:green'>\(K_0\) </strong> only applies for horizontal surface conditions and <strong style='color:green'>only to</strong> <span class='atb'>effective stresses</span>
@@ -699,7 +766,7 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 </div>
 </section>
 	
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 4.5</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 		<p>Compute the total and effective horizontal stress at point A. Plot the horizontal total and effective stresses with the pore pressure profile in the same graph.</p>		
@@ -722,14 +789,14 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/11KmnIGHf2kMapxX15VRFZL8WfnDdsnfQIfxF41YJ-ko/edit?usp=sharing'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <object  class='Animation' style='width: 100%' type='image/svg+xml' src='FiguresGeneral/K0stresses.svg'></object>
 
@@ -737,7 +804,7 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Quiz 4.5</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 	What is the effect of lowering the ground water table on the effective vertical stresses?
@@ -751,7 +818,7 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 </ol>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <h1>Example 4.6</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 What is the effect of lowering the GWT 3 ft on the effective vertical stresses for the soil profile in Example 4.4. What if the GWT is at the surface?
