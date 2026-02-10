@@ -583,34 +583,32 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 <section >
 	
-	
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<ul>
+		<li class='fragment'>
+<strong style='color:green'>\(\sigma'\)</strong> is called the <span class='atb'>intergranular or effective stress</span> and is the stress that is transmitted through the <span class='atb'>particle contacts</span>
+		</li>
+
+		<li class='fragment'>
+	<strong style='color:red'>\(\sigma\)</strong> is the <span class='atb'>total stress</span> applied to the soil element and is the sum of the intergranular stress and the pore water pressure.
+		</li>
+	</ul>
+
+	</div>
 
 	<div class="container">
-		<div class="col" style="width: 50%;">
-			<div> <div class='textBox' style='margin-top: 50px;margin-left: 0px; text-align: left; font-size: 1em;'>
+
+
+		<div class="col" style="width: 75%;">
 		
-				<p> According to the <strong style='color:black'>Principle of effective stresses</strong> the stress that produces the deformation of the soil skeleton is transmitted through the <span class='atb'>particle contacts</span> and is equal to the <span class='atb'>total stress</span> <strong style='color:green'>\(\sigma\)</strong> minus the <span class='atb'>pore water pressure</span> <strong style='color:green'>\(u\)</strong>.</p>
-			<div class='equationBox'>
-			\(\sigma'=\sigma - u\)	
-			</div>
-			</div>
-			</div>	
+		<div class='findingBox' style='margin-top: 100px;margin-left: 0px;'>
+		Thus, <strong style='color:red'>soil deformations</strong> is caused by <span class='atb'>changes</span> of <strong style='color:green'>effective stress</strong>
+		</div>
 
 		</div>
-		<div class="col" style="width: 50%;">
-			<p style="margin-top: 50px;"> In (1925) <strong style='color:black'>Karl Terzaghi</strong> proposed a <strong style='color:black'>new concept</strong> that profoundly impacted the field of Geotechnics: <span class='atb'>The principle of effective stresses</span>.</p>
-			<div class='container'>
-			<div class='col'>
-				<figure style="margin-top:-25px;">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/KT_1926.jpg" style="width:80%" data-preload/>
-					<footer style="margin-top:-60px;"><small>Karl Terzaghi</small></footer>
-				  </figure>
-			</div>
-			<div class='col'>
-			<div class='stickynote' style='margin-top: 0px;margin-left: 25px;'>
+		<div class="col" style="width: 25%;">
+			<div class='stickynote' style='margin-top: 75px;margin-left: 25px;'>
 			Note: The principle of effective stresses only applies for dry and fully saturated soils. For partially saturated soils the pressure of the gases entrapped in the soil must be considered.
-			</div>
-			</div>
 			</div>
 
 		</div>
@@ -618,26 +616,25 @@ Determine the frost susceptibility of the soil in Example 2.7.
 </section>
 
 <section >
-	<h1 style="margin-top:0px;">In-situ vertical stresses</h1>
-	<div class='defBox' name='In-situ stresses:' style='margin-top: 0px;margin-left: 0px;'>
-	Is the <strong style='color:black'>state of stress</strong> in the field <span class='atb'>as they are</span> previous to any change in the loading conditions in the subsurface.
+	<h1 style="margin-top:0px;">In-situ total vertical stresses</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(\sigma_v\): </strong> Is the <strong style='color:black'>sum of all</strong> vertical stresses above a depth of interest in the subsurface.	
 	</div>
+
 <div class="container">
 	<div class="col" style="width: 50%;">
-		<div class="fragment"> <div class='defBox' name='Vertical total stress' style='margin-top: 5px;margin-left: 0px;'>
-		<strong style='color:green'>\(\sigma_v\): </strong> Is the <strong style='color:black'>sum of all</strong> vertical stresses above a depth of interest in the subsurface.	
-		</div></div>
-		<div class="fragment"> <div class='defBox' name='Hydrostatic pore water pressure' style='margin-top: 5px;margin-left: 0px;'>
-		<strong style='color:green'>\(u\): </strong>
-		<div class='equationBox'>
-		\( u=\gamma_w h_w\)
-		</div>
-		</div></div>
-		<div class="fragment"></div>
+		
+	<p>We can calculate this total weight by adding <strong style='color:#000'>all weights</strong> above the depth of interest: <br>
+	<br>
+
+	\( \begin{align}
+	\sigma_v= \int_{z=0}^{z=h} \gamma(z) dz  
+	\end{align} \)
+	</p>
 
 	</div>
 	<div class="col" style="width: 50%;">
-		<figure>
+		<figure style="margin-top: 50px;">
 		  <img src="FiguresGeneral/vert_profile.svg" style="width:100%" data-preload/>
 		  <footer style="margin-top:-60px;"><small></small></footer>
 		</figure>
@@ -646,7 +643,9 @@ Determine the frost susceptibility of the soil in Example 2.7.
 </section>
 
 <section >
-	<h1>Multilayer profiles</h1>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	In a multilayered system (i.e., the typical scenario) you can add the individual weight of each layer above the point of interest.
+	</div>
 	<div class="container">
 		<div class="col" style="width: 50%;">
 			<figure>
@@ -657,16 +656,14 @@ Determine the frost susceptibility of the soil in Example 2.7.
 		<div class="col" style="width: 50%;">
 			<p>The <strong style="color:black">total vertical stress</strong> at depth \(z\) is:
 				<div class='equationBox'>
-				\(\sigma_v=\sum_{i=1}^n \gamma_i h_i\)
+				\( \begin{align}
+				\sigma_v=\sum_{i=1}^n \gamma_i h_i
+				\end{align} \)
+				
 				</div>				
 			</p>
 			<p>\(n=\) number of interfaces below the ground surface including the water table.</p>
-			<div class='defBox' name='Vertical effective stress' style='margin-top: 0px;margin-left: 0px;'>
-			<strong style='color:green'> \(\sigma'_v\): </strong>
-			<div class='equationBox'>
-			\(\sigma'_v= \sigma_v -u \)
-			</div>
-			</div>
+
 		</div>
 	</div>
 </section>
