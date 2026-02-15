@@ -33,8 +33,8 @@
 					</style>
 	
 					<div class='footer'>
-						CIE-365
-						Spring 2025
+						CE-342
+						Spring 2026
 					</div>
 	
 					<style>
@@ -49,7 +49,7 @@
 						}
 					.reveal .slides section .fragment.fade-down,
 					.reveal .slides section .fragment.current-fragment {
-							color: #000;
+							/* color: #000; */
 							margin-top:0px;
 					}
 	
@@ -76,40 +76,40 @@
 			
 						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: 1D seepage">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-							<p style="color:#faffff; font-size:35px">Spring 2025</p>
+							<p style="color:#faffff; font-size:35px">Spring 2026</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 						</div>
 					</section>	
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<section  >
 				    <h1>Recap</h1>
 						<ul>
 							<li class="fragment"> 
 								<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to calculate the <strong style='color:#7abbe6'>capillary suction</strong>.
+								We learned how to calculate the <strong style='color:black'>capillary suction</strong>.
 								</div>
 								</li>
-							<li class='fragment'>We learned how to approximate the <strong style='color:#7abbe6'>heigh of the capillary rise</strong>.</li>
+							<li class='fragment'>We learned how to approximate the <strong style='color:black'>heigh of the capillary rise</strong>.</li>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to approximate the <strong style='color:#7abbe6'>swelling potential</strong> of soils.
+								We learned how to approximate the <strong style='color:black'>swelling potential</strong> of soils.
 							</div>
 								 </li>
-							<li class="fragment"> We learned how to determine  soil's <strong style='color:#7abbe6'>frost susceptibility</strong>.</li>
+							<li class="fragment"> We learned how to determine  soil's <strong style='color:black'>frost susceptibility</strong>.</li>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 								We learned the <strong style='color:green'>principle of effective stresses</strong>.
 							</div>
 								
 							</li>
-							<li class="fragment"> We learned how to calculate <strong style='color:#7abbe6'>hydrostatic pore pressures</strong>.</li>
+							<li class="fragment"> We learned how to calculate <strong style='color:black'>hydrostatic pore pressures</strong>.</li>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to calculate <strong style='color:#7abbe6'> in-situ total and effective stresses</strong>.
+								We learned how to calculate <strong style='color:black'> in-situ total and effective stresses</strong>.
 							</div>
 								 </li>
 						</ul>
 				</section>
 
-        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+        <section >
 					<h1>Contents</h1>
 
 					<div class='container'>
@@ -159,10 +159,36 @@
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
+<h1>Hydraulics review</h1>
+<div class='container'>
+<div class='col' style='width: 40%;'>
+<h4>Flow in an <span class='atb'>empty</span> pipe</h4>
+\( \begin{align}
+q=v A
+\end{align} \) <br>
+\(q=\) rate of fluid volume flow [L\(^3\)/T] 
+</div>
+<div class='col' style='width: 60%;'>
+<h4>Flow Through soils</h4>
+\( \begin{align}
+q= v_s A_V
+\end{align} \) <br>
+\(v_s=\) seepage velocity [L/T]
+</div>
+</div>
+
+<figure>
+<img src='FiguresGeneral/flow_definitions.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</section>
+
+<!-- <section  >
     <h1>Water in motion</h1>
 	<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
-		We learned how to calculate the <span class='atb'> water pressure in saturated soils</span> under <span class='atb'>hydrostatic conditions</span>  <strong style='color:#7abbe6'>(i.e., no flow)</strong>.
+		We learned how to calculate the <span class='atb'> water pressure in saturated soils</span> under <span class='atb'>hydrostatic conditions</span>  <strong style='color:black'>(i.e., no flow)</strong>.
 	</div>
 	<div class='container'>
 	<div class='col' style="width: 50%;">
@@ -182,7 +208,7 @@
 		</div>
 		<div class='col' style="width: 50%;">
 			<div class="fragment"> <div class='stickynote' style='margin-top: 15px;margin-left: 25px;'>
-				Note: In this module we will only work with <strong style='color:#7abbe6'>fully saturated soils</strong> \(S=100\%\)
+				Note: In this module we will only work with <strong style='color:black'>fully saturated soils</strong> \(S=100\%\)
 				</div></div>			
 		</div>
 		</div>
@@ -192,11 +218,37 @@
 		In this module we will learn what happens when water <span class='atb'>moves</span>.
 		</div></div>
 	
+</section> -->
+
+<section  >
+    <h1>True seepage velocity</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+        <figure style="margin-top: -20px;">
+          <img src="FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
+          <footer style="margin-top:-60px;"><small></small></footer>
+        </figure>
+			</div>
+			<div class="col"  style="width: 50%;">
+			
+			Using the principle of <strong style='color:#000'>mass conservation</strong>: <br>
+			\( \begin{align}
+			\rho_w v A & = \rho_w v_s A_v \\
+			v & = \cfrac{A_v L}{A L} v_s \\
+			v &= \cfrac{V_v}{V_t} v_s
+			\end{align} \) <br>
+
+			<div class='equationBox fragment' style='margin-top: 10px;margin-left: 250px;'>
+				\( \begin{align}
+				v= n v_s
+				\end{align} \)			
+			</div>
+
+			</div>
+		</div>
 </section>
 
-
-
-<section   data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section   >
     <h1>Total head</h1>
 	<div class='textBox' style='margin-top: -10px;margin-left: 0px; text-align: left;'>
 	Bernoulli's equation describes the <span class='atb'>total energy</span> of an incompressible flow in terms of its <strong style='color:green'>potential</strong>, <strong style='color:red'>kinetic</strong>, and <strong style='color:blue'>pressure</strong> energy. <br>
@@ -209,7 +261,7 @@
 			</div>
 	</div>
 	<div class='col' style='width:40%'>
-		<ul class="fragment" style="margin-top: -30px;">
+		<ul class="fragment" style="margin-top: -5px;">
 			<li> \(z=\) Elevation from datum</li>
 			<li> \(v=\) velocity</li>
 			<li> \(P=\) pressure</li>
@@ -231,7 +283,7 @@
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Example 4.7</h1>
+<h1>Example 5.1</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 For the points in the figure below determine the total head, the pressure head, and the location of the <strong style='color:blue'>piezometric line</strong>.
 </div>
@@ -259,10 +311,10 @@ For the points in the figure below determine the total head, the pressure head, 
 
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Water in movement</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	Water flows <strong style='color:#7abbe6'>if and only if</strong> there is a <span class='atb'>total head gradient</span> (i.e., <span class='atb'>difference</span> in total head <strong style='color:green'>\(\Delta h \neq 0 \)</strong> ). If the flow moves from point A to B, then <strong style='color:green'> \(h_a>h_b\)</strong>
+	Water flows <strong style='color:black'>if and only if</strong> there is a <span class='atb'>total head gradient</span> (i.e., <span class='atb'>difference</span> in total head <strong style='color:green'>\(\Delta h \neq 0 \)</strong> ). If the flow moves from point A to B, then <strong style='color:green'> \(h_a>h_b\)</strong>
 	</div>
 	<object class='Animation' type='image/svg+xml' data='FiguresGeneral/cup_of_water.svg' style="width: 100%;"></object>
 	<!-- <div class="container">
@@ -302,10 +354,10 @@ For the points in the figure below determine the total head, the pressure head, 
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Hydraulic gradient</h1>
 	<div class='defBox' name='Hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
-	<strong style='color:green'>\(i\):</strong> Is the <strong style='color:#7abbe6'>gradient</strong> of total head, or change of <span class='atb'>total head</strong></span>  (<strong style='color:green'>\(\Delta h\)</strong>) over the <span class='atb'>length</span> of <strong style='color:#7abbe6'>flow path (<strong style='color:green'> \(L\)</strong>)</strong>.
+	<strong style='color:green'>\(i\):</strong> Is the <strong style='color:black'>gradient</strong> of total head, or change of <span class='atb'>total head</strong></span>  (<strong style='color:green'>\(\Delta h\)</strong>) over the <span class='atb'>length</span> of <strong style='color:black'>flow path (<strong style='color:green'> \(L\)</strong>)</strong>.
 	<div class='equationBox'>
 	\(i=\cfrac{\Delta h}{L}=\cfrac{h_a-h_b}{L_{ab}}  \)
 	</div>
@@ -348,41 +400,12 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Darcy's law</h1>
-	<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
-	Proposed by <strong style='color:#7abbe6'>Henry Darcy</strong> (1803-1858) after measurements of flow and hydraulic heads on sand. He observed the unit flux <strong style='color:green'>\(q\)</strong>:
-	</div>
-		<div class="container">
-			<div class="col" style="width: 50%;">
-          <figure class="fragment">
-            <img src="FiguresGeneral/darcy_experiment.svg" style="width:75%; margin-top: -10px;" data-preload/>
-            <footer style="margin-top:-60px;"><small></small></footer>
-          </figure>
-			</div>
-			<div class="col" style="width: 50%;">
-				<div class="fragment">				<p style="margin-top:0px;">
-					<ul>
-						<li > <span class='atb'>Proportional to</span> the cross sectional area  \(A\) and the head difference \(\Delta h\). </li>
-						<li > <span class='atb'>Inversely proportional</span>  to \(L\). </li>
-					</ul>
-					<div class='equationBox'>
-					\(q=k \frac{\Delta h}{L} A= kiA\)
-					</div>
-					
-				</p>
-				<p style="margin-top: -25px;">\(k=\) Coefficient of permeability</p>
-			</div>
 
 
-			</div>
-		</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 
 <div class='defBox' name='Hydraulic conductivity/permeability' style='margin-top: 0px;margin-left: 0px;'>
-<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:#7abbe6'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. The permeability is tightly related to the soil fabric and pore network distribution.
+<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:black'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. The permeability is tightly related to the soil fabric and pore network distribution.
 </div>	
 <div class='findingBox fragment' style='margin-top: 20px;margin-left: 0px;'>
 	<strong style='color:green'>Darcy's law is valid if:</strong>
@@ -396,7 +419,7 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Example 4.9</h1>
 	<div class='textBox' style='margin-top: -15px;margin-left: 0px;font-size: 0.85em;'>
 		The figure shows water flow through the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
@@ -426,7 +449,7 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Water seepage</h1>
 	<figure>
 	  <img src="./FiguresGeneral/tube.svg" style="width:80%" data-preload/>
@@ -434,33 +457,7 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 	</figure>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>True seepage velocity</h1>
-		<div class="container">
-			<div class="col" style="width: 50%;">
-        <figure style="margin-top: -20px;">
-          <img src="FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
-          <footer style="margin-top:-60px;"><small></small></footer>
-        </figure>
-			</div>
-			<div class="col"  style="width: 50%;">
-				<div class='defBox' name='Discharge or Darcy velocity' style='margin-top: 0px;margin-left: 0px;'>
-				<strong style='color:green'> \(v\):</strong> Is the <span class='atb'>equivalent flow velocity</span> considering the entire cross section.
-					<p> 				<div class='equationBox'>
-						\( v=ki\)				
-						</div></p>
 
-				</div>
-
-				<div class='defBox' name='True velocity' style='margin-top: 6px;margin-left: 0px;'>
-				<strong style='color:green'> \(v_w\):</strong> Is the true velocity in the <strong style='color:#7abbe6'>porous media</strong>.
-				<div class='equationBox'>
-					\(v=v_w \frac{A_v}{A_t}=v_w n\)
-				</div>
-				</div>
-			</div>
-		</div>
-</section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.10</h1>
@@ -475,24 +472,24 @@ Find the Darcy and true velocity for the soil of example 4.9, knowing that \(e=0
 
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Measurement of permeability</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 		<ul>
 			<li class="fragment"> Is the parameter that measures ability of water to flow trough soil. </li>
 			<li class="fragment"> Depends on void ratio, GSD, voids connectivity, viscosity of the fluid,... </li>
-			<li class="fragment"> One of the <strong style="color:#7abbe6">most variable</strong> parameters of soils and difficult to determine in the field accurately. </li>
+			<li class="fragment"> One of the <strong style="color:black">most variable</strong> parameters of soils and difficult to determine in the field accurately. </li>
 			<li class="fragment"> Different methods and between most popular we have:
 				<ol>
-					<li><strong style="color:#7abbe6">Constant head test</strong></li>
-					<li> <strong style="color:#7abbe6">Falling head.</strong> </li>
+					<li><strong style="color:black">Constant head test</strong></li>
+					<li> <strong style="color:black">Falling head.</strong> </li>
 				</ol>
 			</li>
 		</ul>
 	</div>
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1 style="margin-top:0px;font-size:1.4em">Constant head permeability test</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -531,7 +528,7 @@ A soil permeability device has a chamber of 6 inches of diameter by 12 inches he
 
 
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
 
 		<div class="container">
@@ -543,13 +540,13 @@ A soil permeability device has a chamber of 6 inches of diameter by 12 inches he
 			</div>
 			<div class="col" style="width: 50%;">
 				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
-				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:#7abbe6'> is not constant</strong>.
+				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:black'> is not constant</strong>.
 				<p><div class='equationBox'>
 				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
 				</div> </p>
 				</div>
 				<ul>
-					<li class='fragment'>Better suited for <strong style='color:#7abbe6'>low permeability soils</strong></li>
+					<li class='fragment'>Better suited for <strong style='color:black'>low permeability soils</strong></li>
 					<li class='fragment'>Longer testing times</li>
 					<li class='fragment'>Soil samples with smaller cross-sectional areas.</li>
 				</ul>
@@ -568,12 +565,12 @@ A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What 
 </div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Typical permeability of soils</h1>
 	<p>Rule of thumb:</p>
 	<table style="background-color: antiquewhite;">
 		<tr>				
-			<td><strong style='color:#7abbe6'>Soil type</strong></td>
+			<td><strong style='color:black'>Soil type</strong></td>
 			<td>Permeability \(k\) [cm/s]</td>
 		</tr>
 		<tr>				
@@ -595,7 +592,7 @@ A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What 
 	</table>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Empirical correlations</h1>
 
 		<div class="container">
@@ -670,18 +667,18 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section >
 	<h1>Equivalent permeability</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:#7abbe6">equivalent permeability</strong> in order to apply Darcy's law.
+		If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:black">equivalent permeability</strong> in order to apply Darcy's law.
 	</div>
 	<p></p>
 	<div class="container">
 		<div class="col" style="width: 50%;">
 			<p>We will study two cases:
 			 <ol>
-				 <li class="fragment"> Flow is <strong style="color:#7abbe6">perpendicular</strong> to the layering. </li>
-				 <li class="fragment"> Flow is <strong style="color:#7abbe6">parallel</strong> to the layering. </li>
+				 <li class="fragment"> Flow is <strong style="color:black">perpendicular</strong> to the layering. </li>
+				 <li class="fragment"> Flow is <strong style="color:black">parallel</strong> to the layering. </li>
 			 </ol>
 		 </p>
 		</div>
@@ -696,7 +693,7 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Case I: Flow perpendicular to layers</h1>
 	<div class='container'>
 	<div class='col' style="width: 50%;">
@@ -742,7 +739,7 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section  >
     <h1>Case II: Flow parallel to layers</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -801,7 +798,7 @@ A permeable water channel will be constructed as shown in the figure. Three laye
 </div>
 </section>
 
-<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<!-- <section >
 	<figure>
 		<img src='FiguresGeneral/channels.svg' width='100%'/>
 		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
@@ -855,7 +852,7 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/Animated_lines/animate_svg.js"></script>

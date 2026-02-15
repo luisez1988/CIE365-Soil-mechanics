@@ -7,8 +7,22 @@ svgObjects.forEach(svgObject => {
         if (svgDoc) {
             console.log('SVG loaded:', svgObject);
 
-            // Hide elements with Animate class
-            const svgPaths = svgDoc.querySelectorAll('.Animate');
+            // Find all elements to animate - either individually tagged or children of AnimateGroup
+            let svgPaths = [];
+            
+            // First, get individually marked elements with .Animate class
+            const individualElements = svgDoc.querySelectorAll('.Animate');
+            individualElements.forEach(el => svgPaths.push(el));
+            
+            // Then, get all children of elements with .AnimateGroup class in document order
+            const animateGroups = svgDoc.querySelectorAll('.AnimateGroup');
+            animateGroups.forEach(group => {
+                // Get all direct children of the group
+                const children = Array.from(group.children);
+                children.forEach(child => svgPaths.push(child));
+            });
+            
+            // Process each element for animation
             svgPaths.forEach(path => {
                 const tagType = getTagType(path);
                 if (tagType === 'path') {
