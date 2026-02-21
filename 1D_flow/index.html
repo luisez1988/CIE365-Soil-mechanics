@@ -220,7 +220,7 @@ q= v_s A_V
 	
 </section> -->
 
-<section  >
+<section>
     <h1>True seepage velocity</h1>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -243,6 +243,10 @@ q= v_s A_V
 				v= n v_s
 				\end{align} \)			
 			</div>
+
+			<br>
+			\(v=\) Darcy velocity [L/T] <br>
+			\(v_s=\) Seepage velocity [L/T] 
 
 			</div>
 		</div>
@@ -331,7 +335,7 @@ For the points in the figure below determine the total head, the pressure head, 
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 4.6</h1>
+<h1>Participation question 4.6</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 	Base on the figure below: what option is accurate regarding the water movement?
 </div>
@@ -400,22 +404,163 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 
 </section>
 
+<section>
+<h1>Darcy experiments</h1>
+<div class='container'>
+<div class='col' style='width: 45%;'>
+<figure>
+<img src='FiguresGeneral/darcy_experiment.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 55%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<ol>
+	<li class='fragment'><strong style='color:#000'>Background:</strong> Henry Darcy managed the water supply for Dijon, France (1830s and 1840s)</li>
+	<li class='fragment'><strong style='color:#000'>Goal:</strong> Understand how water flows through sand filters used for water treatment</li>
+	<li class='fragment'><strong style='color:#000'>Experiment:</strong> Measured water flow and pressure change.</li>
+	<li class='fragment'><strong style='color:#000'>Control variables:</strong> Kept the sand column's area (\(A\)) and length (\(L\)) constant.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<h1>Participation question 5.2</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What do you think is the influence of <strong style='color:orange'>\(\Delta H= H_1 - H_2\)</strong> on <strong style='color:orange'>\(q\)?</strong>
+
+
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>\(q\) is independent of \(\Delta h\)</li>
+<li class='l2'>\(q\) is directly proportional to \(\Delta h\)</li>
+<li class='l2'>\(q\) is inversely proportional to \(\Delta h\)</li>
+</ol>
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Note that \(\Delta h\) is <span class='atb'>energy loss</span> from point 1 to 2.
+</div>
+
+<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+We can associate energy loss in with heat loss in a pipe assuming the velocity in on the <span class='atb'>laminar flow regime</span>
+</div>
+
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<span class="fragment">
+\( \begin{align}
+\Delta h = - h_f &= - \cfrac{32 L v^2}{R_e d_m g} \\
+R_e & = \cfrac{\rho v d_m}{\mu}
+\end{align} \)</span> <br>
+<span class="fragment">
+\( \begin{align}
+\Delta h = - \cfrac{32 \mu L q}{\gamma d_m^2 A}
+\end{align} \) </span>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<span class="fragment">\( \begin{align}
+q = - \left(\cfrac{C \gamma}{\mu} \ d_m^2 \right) \times \cfrac{\Delta h}{L} \times A
+\end{align} \) </span> <br>
+<span class="fragment">Thus: <br>
+<div class='equationBox' style="margin-left: 230px;">
+
+\( \begin{align}
+q= -k i A 
+\end{align} \) 
+</div> </span> <br>
+<span class="fragment">
+\(k\) is termed the <span class='atb'>hydraulic conductivity</span> </span>
+<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+This is the so-called <strong style='color:#000'>Darcy's law</strong>
+</div>
+</div>
+</div>
+
+</section>
+
 
 
 <section >
 
 <div class='defBox' name='Hydraulic conductivity/permeability' style='margin-top: 0px;margin-left: 0px;'>
-<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:black'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. The permeability is tightly related to the soil fabric and pore network distribution.
-</div>	
-<div class='findingBox fragment' style='margin-top: 20px;margin-left: 0px;'>
-	<strong style='color:green'>Darcy's law is valid if:</strong>
-	<ul>
-		<li class="fragment"> The water flow is <strong style="color:navy">slow, laminar, not turbulent</strong>. </li>
-		<li class="fragment"> Kinematic energy is negligible. </li>
-		<li class="fragment"> The soil is <strong style="color:navy">homogeneous</strong> (i.e., properties do not depend on the location of measurement). </li>
-		<li class="fragment"> The soil is <strong style="color:navy">isotropic</strong> (i.e., properties do not depend on the direction that you measure them). </li>
-	</ul>
+<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:black'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. 
 </div>
+
+Examining the the equation for \(k\) we can conclude that:
+
+<div class='equationBox fragment' style='margin-left: 400px;'>
+\( k= C \color{blue} \underbrace{\cfrac{\gamma}{\mu}}_{\substack{\text{Fluid}\\\text{properties}}} \ \color{red} \underbrace{d_m^2}_{\substack{\text{porous}\\\text{media}\\\text{properties}}} \)
+</div> 
+
+<div class='textBox fragment' style='margin-top: 50px;margin-left: 0px;'>
+	Soil permeability depends on two main factors:
+<ol>
+	<li class='fragment'>Properties of the <span class='atb'>fluid (liquid gas)</span></li>
+	<li class='fragment'>Properties of the porous media (soil)</li>
+</ol>
+</div>
+
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Note</strong>: Soil permeability varies <span class='atb'>widely</span> based on media
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>	
+	<table style="background-color: antiquewhite;">
+		<tr>				
+			<td><strong style='color:black'>Soil type</strong></td>
+			<td>Permeability \(k\) [cm/s]</td>
+		</tr>
+		<tr>				
+			<td>Gravel</td>
+			<td> \(> 10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Clean sands</td>
+			<td> \(10^{-3}\) to \(10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Dirty gravels and sands</td>
+			<td> \(10^{-5}\) to \(10^{-3}\)</td>
+		</tr>
+		<tr>				
+			<td>Silt</td>
+			<td> \(10^{-7}\) to \(10^{-5}\)</td>
+		</tr>
+		<tr>				
+			<td>Clay</td>
+			<td> \(< 10^{-7}\)</td>
+		</tr>
+	</table>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Context:</strong> \(10^{-7}\) cm/s is about 1.25 in/year
+</div>
+
+</div>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li class='fragment'>Fine-grained materials have lower \(k\) because they have smaller pores</li>
+	<li class='fragment'>As water moves it dissipates mechanical energy due to its viscosity. Since fine-grained soils like clay have larger $SSA$, the energy dissipated by viscous drag is orders of magnitude larger than for coarse-grained materials</li>
+</ol>
+</div>
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<figure>
+<img src='./FiguresGeneral/soil_permeability.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em>Modified from Casagrande (1938)</em> </footer>
+</figure>
 
 </section>
 
@@ -449,13 +594,13 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 
 </section>
 
-<section >
+<!-- <section >
 	<h1>Water seepage</h1>
 	<figure>
 	  <img src="./FiguresGeneral/tube.svg" style="width:80%" data-preload/>
 	  <footer style="margin-top:-60px;"><small></small></footer>
 	</figure>
-</section>
+</section> -->
 
 
 
@@ -565,32 +710,7 @@ A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What 
 </div>
 </section>
 
-<section >
-	<h1>Typical permeability of soils</h1>
-	<p>Rule of thumb:</p>
-	<table style="background-color: antiquewhite;">
-		<tr>				
-			<td><strong style='color:black'>Soil type</strong></td>
-			<td>Permeability \(k\) [cm/s]</td>
-		</tr>
-		<tr>				
-			<td>Gravel</td>
-			<td> \(> 10^{-1}\)</td>
-		</tr>
-		<tr>				
-			<td>Sand</td>
-			<td> \(10^{-3}\) to \(10^{-1}\)</td>
-		</tr>
-		<tr>				
-			<td>Silt</td>
-			<td> \(10^{-5}\) to \(10^{-3}\)</td>
-		</tr>
-		<tr>				
-			<td>Clay</td>
-			<td> \(< 10^{-5}\)</td>
-		</tr>
-	</table>
-</section>
+
 
 <section >
 	<h1>Empirical correlations</h1>
@@ -658,13 +778,7 @@ For the soil in Example 2.7 estimate its permeability using empirical correlatio
 
 
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<figure>
-<img src='./FiguresGeneral/soil_permeability.svg' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em>Modified from Casagrande (1938)</em> </footer>
-</figure>
 
-</section>
 
 
 <section >
