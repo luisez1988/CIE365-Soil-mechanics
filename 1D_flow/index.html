@@ -564,6 +564,199 @@ Examining the the equation for \(k\) we can conclude that:
 
 </section>
 
+<section  >
+    <h1 style="margin-top:0px;font-size:1.4em">Constant head permeability test</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="FiguresGeneral/darcy_experiment.svg" style="width:80%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+					<p > With \(\Delta h=\)cnt. the permeability is calculated measuring the total volume of water collected (<strong style='color:green'>\(Q\)</strong>) in a time period (<strong style='color:green'>\(\Delta t\)</strong>)</p>
+					<p> <div class='equationBox'>
+						\(k=\cfrac{QL}{A \Delta h \Delta t}\)
+						</div>
+					</p>
+				</div>
+			<ul>
+				<li class='fragment'>Better for coarse soils.</li>
+				<li class='fragment'>Shorter testing times.</li>
+				<li class='fragment'>Samples with large cross-sectional areas.</li>
+			</ul>		
+
+			</div>
+		</div>
+</section>
+
+<section  >
+    <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
+
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="./Figuresgeneral/falling_head.svg" style="width:75%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:black'> is not constant</strong>.
+				<p><div class='equationBox'>
+				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
+				</div> </p>
+				</div>
+				<ul>
+					<li class='fragment'>Better suited for <strong style='color:black'>low permeability soils</strong></li>
+					<li class='fragment'>Longer testing times</li>
+					<li class='fragment'>Soil samples with smaller cross-sectional areas.</li>
+				</ul>
+			</div>
+		</div>
+</section>
+
+
+<section >
+	<h1>Empirical correlations</h1>
+
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<ul>
+				 <li class="fragment">Shepard (1989) formula:
+					<p><div class='equationBox'>
+					\(k[cm/s]=C d_{50}^j\)
+					</div></p>
+					 
+					 <ul style="margin-top:0px;font-size:25px">
+						 <li>\(d_{50}\) in mm</li>
+						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
+						 <li>\(j=\) empirical exponent between 1.5-2.5</li>
+					 </ul>
+				 </li>
+				 <li class="fragment">Kozeny-Carman's from Bear (1972) formula
+					<p><div class='equationBox' style="font-size: 0.9em;">
+					\(k[m/s]= \left( \cfrac{\rho g}{\mu} \right)  \cfrac{n^3}{(1-n)^2}   \cfrac{d_{50}^2}{180}\)
+					</div></p>					 
+					 <ul style="margin-top:0px;font-size:25px">
+						 <li>\(d_{50}\) in m</li>
+					 </ul>
+				 </li>
+			 </ul>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:#000'>Notes on empirical equations:</strong> 
+				<ul>
+					<li> Recall that hydraulic conductivity varies <strong style='color:#000'>widely</strong>, therefore, you can expect high uncertainty associated with these equations</li>
+					<li>Use with caution and validate against field data when possible</li>
+					<li>Tend to work better for clean coarse-grained soils</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section>
+<h1>Example 5.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a constant-head permeability apparatus. A constant head of 85 cm is maintained during the test. After 2 min of testing, a total of 1054 g of water was collected. The temperature was 20<sup>o</sup>C. Calculate the permeability of the soil sample.
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 300px;'>
+
+</div>
+</section>
+
+<section>
+<h1>Example 5.4</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A laboratory falling-head permeability test is performed on a light-gray gravelly sand (SW), and the following data is obtained:
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li>\(a=7.25\) cm<sup>2</sup></li>
+	<li>\(A=11.43\) cm<sup>2</sup></li>
+	<li>\(L=11.62\) cm</li>
+
+</ol>
+</div>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li>\(H_1=171.4\) cm</li>
+	<li>\(H_2=79.3\) cm</li>
+	<li>\(\Delta t=110\) sec for the head to fall from \(H_1\) to \(H_2\)</li>
+</ol>
+</div>
+</div>
+Calculate the permeability of the soil sample in cm/s.
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 220px;'>
+
+</div>
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Recall that Darcy velocity (\(v\)) is the velocity of water it it could flow trough all the area \(A\) of the cross section
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/true velocity.svg' width='80%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+The <span class='atb'>true seepage velocity</span> \(v_s\) is the velocity needed for travel time calculations
+</div>
+
+<div class='equationBox' style="margin-top: 50px;">
+\( v_s = \cfrac{v}{n_e} = \cfrac{q}{A n_e} \)
+</div>
+
+<br>
+\(n_e=\) is the effective porosity. \(n_e \leq n\) because some pores may be isolated and not contribute to flow.
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Example 5.5</h1>
+<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
+The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of breakthrough at well B using a tracer introduced at A is 167 hours. Calculate (a) the horizontal hydraulic gradient, (b) the average linear velocity, and (c) the hydraulic conductivity
+</div>
+<div class='container'>
+<div class='col' style='width: 35%;'>
+<figure>
+<img src='FiguresGeneral/example_field_perm.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 65%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 370px;'>
+
+</div>
+</div>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+
+</div>
+<div class='col' style='width: 50%;'>
+
+</div>
+</div>
+</section>
+
+
 <section >
 	<h1>Example 4.9</h1>
 	<div class='textBox' style='margin-top: -15px;margin-left: 0px;font-size: 0.85em;'>
@@ -604,7 +797,7 @@ Examining the the equation for \(k\) we can conclude that:
 
 
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.10</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Find the Darcy and true velocity for the soil of example 4.9, knowing that \(e=0.88\). How long will a particle of water take to pass trough the soil specimen?
@@ -613,55 +806,15 @@ Find the Darcy and true velocity for the soil of example 4.9, knowing that \(e=0
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4100.svg' style="width: 100%;"></object>
 </div>
-</section>
+</section> -->
 
 
 
-<section >
-	<h1>Measurement of permeability</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<ul>
-			<li class="fragment"> Is the parameter that measures ability of water to flow trough soil. </li>
-			<li class="fragment"> Depends on void ratio, GSD, voids connectivity, viscosity of the fluid,... </li>
-			<li class="fragment"> One of the <strong style="color:black">most variable</strong> parameters of soils and difficult to determine in the field accurately. </li>
-			<li class="fragment"> Different methods and between most popular we have:
-				<ol>
-					<li><strong style="color:black">Constant head test</strong></li>
-					<li> <strong style="color:black">Falling head.</strong> </li>
-				</ol>
-			</li>
-		</ul>
-	</div>
-</section>
 
-<section  >
-    <h1 style="margin-top:0px;font-size:1.4em">Constant head permeability test</h1>
-		<div class="container">
-			<div class="col" style="width: 50%;">
-				<figure>
-				  <img src="FiguresGeneral/darcy_experiment.svg" style="width:80%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
-			</div>
-			<div class="col" style="width: 50%;">
-				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
-					<p > Assuming \(\Delta h=\)cnt. the permeability is calculated measuring the total volume of water collected (<strong style='color:green'>\(Q\)</strong>) in a time period (<strong style='color:green'>\(\Delta t\)</strong>)</p>
-					<p> <div class='equationBox'>
-						\(k=\cfrac{QL}{A \Delta h \Delta t}\)
-						</div>
-					</p>
-				</div>
-			<ul>
-				<li class='fragment'>Better for coarse soils.</li>
-				<li class='fragment'>Shorter testing times.</li>
-				<li class='fragment'>Samples with large cross-sectional areas.</li>
-			</ul>		
 
-			</div>
-		</div>
-</section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+
+<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.11</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 A soil permeability device has a chamber of 6 inches of diameter by 12 inches height. The water recipient at the exit has a maximum capacity of 100 gr. If the maximum head difference that can be applied to the soil is 1.5 m, what is the range of soil permeability that can be tested between 1 to 2 hr? 
@@ -669,37 +822,13 @@ A soil permeability device has a chamber of 6 inches of diameter by 12 inches he
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4110.svg' style="width: 100%;"></object>
 </div>
-</section>
+</section> -->
 
 
 
-<section  >
-    <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
 
-		<div class="container">
-			<div class="col" style="width: 50%;">
-				<figure>
-				  <img src="./Figuresgeneral/falling_head.svg" style="width:75%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
-			</div>
-			<div class="col" style="width: 50%;">
-				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
-				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:black'> is not constant</strong>.
-				<p><div class='equationBox'>
-				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
-				</div> </p>
-				</div>
-				<ul>
-					<li class='fragment'>Better suited for <strong style='color:black'>low permeability soils</strong></li>
-					<li class='fragment'>Longer testing times</li>
-					<li class='fragment'>Soil samples with smaller cross-sectional areas.</li>
-				</ul>
-			</div>
-		</div>
-</section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.12</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What is the burette size required to conduct a permeability test in a soil with permeability \(1 \times 10^{-8}\) cm/s in one day. The initial height of water above the soil specimen is 100 cm and the water in the burette must be read with at least 1 cm of accuracy.
@@ -708,53 +837,11 @@ A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What 
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <object  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4120.svg' style="width: 100%;"></object>
 </div>
-</section>
+</section> -->
 
 
 
-<section >
-	<h1>Empirical correlations</h1>
 
-		<div class="container">
-			<div class="col" style="width: 50%;">
-				<ul>
-				 <li class="fragment">Hazen's (1911) equation:
-					<p><div class='equationBox'>
-					\(k[cm/s]=C D_{10}^2\)
-					</div></p>
-					 
-					 <ul style="margin-top:0px;font-size:25px">
-						 <li>\(D_{10}\) in mm</li>
-						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
-					 </ul>
-				 </li>
-				 <li class="fragment">Chapuis's formula
-					<p><div class='equationBox' style="font-size: 0.9em;">
-					\(k[cm/s]=2.4622\left(D_{10}^2 \cfrac{e^3}{1+e}\right)\)
-					</div></p>					 
-					 <ul style="margin-top:0px;font-size:25px">
-						 <li>\(D_{10}\) in mm</li>
-					 </ul>
-				 </li>
-			 </ul>
-			</div>
-			<div class="col" style="width: 50%;">
-				<ul>
-					<li class="fragment">Kozeny and Carman's formula:
-						<p><div class='equationBox' style="font-size: 0.9em;">
-						\(k[cm/s]=\cfrac{\gamma_w}{\eta_w}\cfrac{1}{C_{k-c}S^2_s}\cfrac{e^3}{1+e}\)
-						</div> </p>						
-						<ul style="margin-top:0px;font-size:25px">
-							<li>\(\gamma_w\) in kN/m<sup>3</sup> </li>
-							<li>\(\eta_w=\) viscosity of water \(1.002\times10^{-3}\) Ns/m<sup>2</sup> </li>
-							<li>\(C_{k-c}=\) Kozeny-Carman's empirical constant (2 is usually used).</li>
-							<li>\(S_s=\) specific surface 1/cm</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.13</h1>
