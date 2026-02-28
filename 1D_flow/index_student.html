@@ -1,0 +1,1356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>1D seepage</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE-342
+						Spring 2026
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							/* color: #000; */
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/16h9s-b8m3tHaGByyTpC0jiuZm6T7xrNw/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: 1D seepage">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Spring 2026</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>	
+
+				<section  >
+				    <h1>Recap</h1>
+						<ul>
+									
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								We learned the <strong style='color:green'>principle of effective stresses</strong>.
+							</div>
+								
+							</li>
+							<li class="fragment"> We learned how to calculate <strong style='color:black'>hydrostatic pore pressures</strong>.</li>
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								We learned how to calculate <strong style='color:black'>vertical in-situ total and effective stresses</strong>.
+							</div>
+								</li>
+							<li class="fragment">We learned how to calculate <strong style='color:black'>horizontal in-situ total and effective stresses</strong>.</li>
+						</ul>
+				</section>
+
+        <section >
+					<h1>Contents</h1>
+
+					<div class='container'>
+					<div class='col' style="width: 50%;">
+						<ul class="contentStyle">
+							<li class="l1">Total head Hydraulic gradient.</li>							
+							<li class="l1">Darcy's law.</li>							
+							<li class="l1">Hydraulic conductivity and permeability of soils.</li>							
+							<li class="l1">Flow in series and parallel.</li>
+						</ul>
+					</div>
+					<div class='col' style="width: 50%;">
+						<div class='container'>
+							<div class='col' style="width: 50%;">
+								<div class="stickynote" style="margin-top: 100px;margin-left: 30px;">
+									<p> Objectives covered in this lecture</p>
+									<ul>
+										<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating effective stress in soils  </li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="width: 50%;">
+							<div class='stickynote' style='margin-top: 100px;margin-left: 30px;'>
+								<p style="margin-top: -20px;">After this lecture we will able to:</p>
+								<ul style="margin-top: -15px;">
+									<li>Calculate total head and hydraulic gradients.</li>
+									<li>Calculate seepage flows for 1D problems.</li>
+									<li>Calculate the permeability of uniform and composite soils.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+
+
+					
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+<section>
+<h1>Hydraulics review</h1>
+<div class='container'>
+<div class='col' style='width: 40%;'>
+<h4>Flow in an <span class='atb'>empty</span> pipe</h4>
+\( \begin{align}
+q=v A
+\end{align} \) <br>
+\(q=\) rate of fluid volume flow [L\(^3\)/T] 
+</div>
+<div class='col' style='width: 60%;'>
+<h4>Flow Through soils</h4>
+\( \begin{align}
+q= v_s A_V
+\end{align} \) <br>
+\(v_s=\) seepage velocity [L/T]
+</div>
+</div>
+
+<figure>
+<img src='FiguresGeneral/flow_definitions.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</section>
+
+<!-- <section  >
+    <h1>Water in motion</h1>
+	<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
+		We learned how to calculate the <span class='atb'> water pressure in saturated soils</span> under <span class='atb'>hydrostatic conditions</span>  <strong style='color:black'>(i.e., no flow)</strong>.
+	</div>
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+	<figure class="fragment">
+	<img src='./FiguresGeneral/static_water.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style="width: 50%;">
+		<div class='container'>
+		<div class='col' style="width: 50%;">
+			<div class="fragment"> <div class='equationBox'>
+				$$ u=\gamma_w h_w $$
+				</div>
+				<p> <strong style='color:red'>Only valid for hydrostatic conditions!</strong></p></div>
+			
+		</div>
+		<div class='col' style="width: 50%;">
+			<div class="fragment"> <div class='stickynote' style='margin-top: 15px;margin-left: 25px;'>
+				Note: In this module we will only work with <strong style='color:black'>fully saturated soils</strong> \(S=100\%\)
+				</div></div>			
+		</div>
+		</div>
+	</div>
+	</div>
+	<div class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		In this module we will learn what happens when water <span class='atb'>moves</span>.
+		</div></div>
+	
+</section> -->
+
+<section>
+    <h1>True seepage velocity</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+        <figure style="margin-top: -20px;">
+          <img src="FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
+          <footer style="margin-top:-60px;"><small></small></footer>
+        </figure>
+			</div>
+			<div class="col"  style="width: 50%;">
+			
+			Using the principle of <strong style='color:#000'>mass conservation</strong>: <br>
+			\( \begin{align}
+			\rho_w v A & = \rho_w v_s A_v \\
+			v & = \cfrac{A_v L}{A L} v_s \\
+			v &= \cfrac{V_v}{V_t} v_s
+			\end{align} \) <br>
+
+			<div class='equationBox fragment' style='margin-top: 10px;margin-left: 250px;'>
+				\( \begin{align}
+				v= n v_s
+				\end{align} \)			
+			</div>
+
+			<br>
+			\(v=\) Darcy velocity [L/T] <br>
+			\(v_s=\) Seepage velocity [L/T] 
+
+			</div>
+		</div>
+</section>
+
+<section   >
+    <h1>Total head</h1>
+	<div class='textBox' style='margin-top: -10px;margin-left: 0px; text-align: left;'>
+	Bernoulli's equation describes the <span class='atb'>total energy</span> of an incompressible flow in terms of its <strong style='color:green'>potential</strong>, <strong style='color:red'>kinetic</strong>, and <strong style='color:blue'>pressure</strong> energy. <br>
+	<div class='container'>
+	<div class='col' style='width:60%'>
+		<div class='equationBox'>
+			\(E= \underbrace{z \rho g}_{\textcolor{green}{\text{Potential e.}}} 
+			+ \underbrace{\rho \cfrac{v^2}{2g}}_{\textcolor{red}{\text{Kinetic e.}}} 
+			+ \underbrace{P}_{\textcolor{blue}{\text{Pressure e.}}}\)
+			</div>
+	</div>
+	<div class='col' style='width:40%'>
+		<ul class="fragment" style="margin-top: -5px;">
+			<li> \(z=\) Elevation from datum</li>
+			<li> \(v=\) velocity</li>
+			<li> \(P=\) pressure</li>
+		</ul>
+	</div>
+	</div>	
+	</div>
+
+	<div class='defBox fragment' name='Total head' style='margin-top: 5px;margin-left: 0px;'>
+		<strong style='color:green'>\(h\): </strong> Is the total energy per unit weight of water.
+		<div class='equationBox'>
+			\( 
+			h= \cfrac{E}{\gamma_w} = z+\textcolor{blue} {\underbrace{ \cfrac{u}{\gamma_w}}_{\substack{h_w=\text{Pressure}\\ \text{head}}}}
+			 = z + \textcolor{blue}{h_w}\)
+					</div>
+	</div>
+
+
+</section>
+
+<section >
+<h1>Example 5.1</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For the points in the figure below determine the total head, the pressure head, and the location of the <strong style='color:blue'>piezometric line</strong>.
+</div>
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure>
+<img src='./FiguresGeneral/Pressure_heaed.svg' width='90%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="width: 50%;">
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX470.svg" style="width: 100%;"/>
+</div>
+</div>
+</div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX471.svg" style="width: 100%;"/>
+</div>
+
+</section>
+
+
+
+<section >
+	<h1>Water in movement</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Water flows <strong style='color:black'>if and only if</strong> there is a <span class='atb'>total head gradient</span> (i.e., <span class='atb'>difference</span> in total head <strong style='color:green'>\(\Delta h \neq 0 \)</strong> ). If the flow moves from point A to B, then <strong style='color:green'> \(h_a>h_b\)</strong>
+	</div>
+	<img src="FiguresGeneral_student/cup_of_water.svg" style="width: 100%;"/>
+	<!-- <div class="container">
+		<div class="col" style="width: 50%;">
+			<figure style="margin-top:0px;">
+				<img src="FiguresGeneral/cup_of_water.svg" style="width:100%" data-preload/>
+				<footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+		</div>
+		<div class="col" style="width: 50%;">
+			<div class="fragment"> <div class="blackboard" style="--width: 600px; --height: 400px;"></div></div>			
+		</div>
+	</div> -->
+</section>
+
+<section >
+<h1>Participation question 5.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	Base on the figure below: what option is accurate regarding the water movement?
+</div>
+
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure>
+<img src='./FiguresGeneral/extrange_1D_noflow.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="width: 50%;">
+<ol class='iClicker' >
+<li class='l2'>Water moves from B to A</li>
+<li class='l2'>Water moves from A to B</li>
+<li class='l2'>The water doesn't move</li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section >
+	<h1>Hydraulic gradient</h1>
+	<div class='defBox' name='Hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(i\):</strong> Is the <strong style='color:black'>gradient</strong> of total head, or change of <span class='atb'>total head</strong></span>  (<strong style='color:green'>\(\Delta h\)</strong>) over the <span class='atb'>length</span> of <strong style='color:black'>flow path (<strong style='color:green'> \(L\)</strong>)</strong>.
+	<div class='equationBox'>
+	\(i=\cfrac{\Delta h}{L}=\cfrac{h_a-h_b}{L_{ab}}  \)
+	</div>
+	<p>Although the hydraulic gradient could be negative we usually calculate it using \(h_a>h_b\)</p>
+	</div>
+	
+
+	<ul style="margin-top: 30px;">
+	 <li class="fragment"> \(i=0\) \(\longrightarrow\) <span class='atb'>no flow.</span> </li>
+	 <li class="fragment"> \(i \neq 0\) \(\longrightarrow\) <span class='atb'> flow between the two points.</span> </li>
+	</ul>
+
+</section>
+
+<section >
+<h1>Example 5.2</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Calculate the hydraulic gradient between points A and B in the figure bellow and plot the piezometric line between points C and D.
+
+</div>
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure style="margin-top: 30px;">
+<img src='./FiguresGeneral/artisian_condition.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="width: 50%;">
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX480.svg" style="width: 100%;"/>
+</div>
+</div>
+</div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX481.svg" style="width: 100%;"/>
+</div>
+
+</section>
+
+<section>
+<h1>Darcy experiments</h1>
+<div class='container'>
+<div class='col' style='width: 45%;'>
+<figure>
+<img src='FiguresGeneral/darcy_experiment.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 55%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<ol>
+	<li class='fragment'><strong style='color:#000'>Background:</strong> Henry Darcy managed the water supply for Dijon, France (1830s and 1840s)</li>
+	<li class='fragment'><strong style='color:#000'>Goal:</strong> Understand how water flows through sand filters used for water treatment</li>
+	<li class='fragment'><strong style='color:#000'>Experiment:</strong> Measured water flow and pressure change.</li>
+	<li class='fragment'><strong style='color:#000'>Control variables:</strong> Kept the sand column's area (\(A\)) and length (\(L\)) constant.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<h1>Participation question 5.2</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What do you think is the influence of <strong style='color:orange'>\(\Delta H= H_1 - H_2\)</strong> on <strong style='color:orange'>\(q\)?</strong>
+
+
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>\(q\) is independent of \(\Delta h\)</li>
+<li class='l2'>\(q\) is directly proportional to \(\Delta h\)</li>
+<li class='l2'>\(q\) is inversely proportional to \(\Delta h\)</li>
+</ol>
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Note that \(\Delta h\) is <span class='atb'>energy loss</span> from point 1 to 2.
+</div>
+
+<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+We can associate energy loss in with heat loss in a pipe assuming the velocity in on the <span class='atb'>laminar flow regime</span>
+</div>
+
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<span class="fragment">
+\( \begin{align}
+\Delta h = - h_f &= - \cfrac{32 L v^2}{R_e d_m g} \\
+R_e & = \cfrac{\rho v d_m}{\mu}
+\end{align} \)</span> <br>
+<span class="fragment">
+\( \begin{align}
+\Delta h = - \cfrac{32 \mu L q}{\gamma d_m^2 A}
+\end{align} \) </span>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<span class="fragment">\( \begin{align}
+q = - \left(\cfrac{C \gamma}{\mu} \ d_m^2 \right) \times \cfrac{\Delta h}{L} \times A
+\end{align} \) </span> <br>
+<span class="fragment">Thus: <br>
+<div class='equationBox' style="margin-left: 230px;">
+
+\( \begin{align}
+q= -k i A 
+\end{align} \) 
+</div> </span> <br>
+<span class="fragment">
+\(k\) is termed the <span class='atb'>hydraulic conductivity</span> </span>
+<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+This is the so-called <strong style='color:#000'>Darcy's law</strong>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<section >
+
+<div class='defBox' name='Hydraulic conductivity/permeability' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:black'>how fast</strong> <span class='atb'>water can seep</span> through the soil matrix. 
+</div>
+
+Examining the the equation for \(k\) we can conclude that:
+
+<div class='equationBox fragment' style='margin-left: 400px;'>
+\( k= C \color{blue} \underbrace{\cfrac{\gamma}{\mu}}_{\substack{\text{Fluid}\\\text{properties}}} \ \color{red} \underbrace{d_m^2}_{\substack{\text{porous}\\\text{media}\\\text{properties}}} \)
+</div> 
+
+<div class='textBox fragment' style='margin-top: 50px;margin-left: 0px;'>
+	Soil permeability depends on two main factors:
+<ol>
+	<li class='fragment'>Properties of the <span class='atb'>fluid (liquid gas)</span></li>
+	<li class='fragment'>Properties of the porous media (soil)</li>
+</ol>
+</div>
+
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Note</strong>: Soil permeability varies <span class='atb'>widely</span> based on media
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>	
+	<table style="background-color: antiquewhite;">
+		<tr>				
+			<td><strong style='color:black'>Soil type</strong></td>
+			<td>Permeability \(k\) [cm/s]</td>
+		</tr>
+		<tr>				
+			<td>Gravel</td>
+			<td> \(> 10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Clean sands</td>
+			<td> \(10^{-3}\) to \(10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Dirty gravels and sands</td>
+			<td> \(10^{-5}\) to \(10^{-3}\)</td>
+		</tr>
+		<tr>				
+			<td>Silt</td>
+			<td> \(10^{-7}\) to \(10^{-5}\)</td>
+		</tr>
+		<tr>				
+			<td>Clay</td>
+			<td> \(< 10^{-7}\)</td>
+		</tr>
+	</table>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Context:</strong> \(10^{-7}\) cm/s is about 1.25 in/year
+</div>
+
+</div>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li class='fragment'>Fine-grained materials have lower \(k\) because they have smaller pores</li>
+	<li class='fragment'>As water moves it dissipates mechanical energy due to its viscosity. Since fine-grained soils like clay have larger \(SSA\), the energy dissipated by viscous drag is orders of magnitude larger than for coarse-grained materials</li>
+</ol>
+</div>
+</div>
+
+</section>
+
+<section >
+<figure>
+<img src='./FiguresGeneral/soil_permeability.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em>Modified from Casagrande (1938)</em> </footer>
+</figure>
+
+</section>
+
+<section  >
+    <h1 style="margin-top:0px;font-size:1.4em">Constant head permeability test</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="FiguresGeneral/darcy_experiment.svg" style="width:80%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+					<p > With \(\Delta h=\)cnt. the permeability is calculated measuring the total volume of water collected (<strong style='color:green'>\(Q\)</strong>) in a time period (<strong style='color:green'>\(\Delta t\)</strong>)</p>
+					<p> <div class='equationBox'>
+						\(k=\cfrac{QL}{A \Delta h \Delta t}\)
+						</div>
+					</p>
+				</div>
+			<ul>
+				<li class='fragment'>Better for coarse soils.</li>
+				<li class='fragment'>Shorter testing times.</li>
+				<li class='fragment'>Samples with large cross-sectional areas.</li>
+			</ul>		
+
+			</div>
+		</div>
+</section>
+
+<section  >
+    <h1 style="margin-top:0px;font-size:1.4em">Falling head permeability test</h1>
+
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="./Figuresgeneral/falling_head.svg" style="width:75%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:black'> is not constant</strong>.
+				<p><div class='equationBox'>
+				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
+				</div> </p>
+				</div>
+				<ul>
+					<li class='fragment'>Better suited for <strong style='color:black'>low permeability soils</strong></li>
+					<li class='fragment'>Longer testing times</li>
+					<li class='fragment'>Soil samples with smaller cross-sectional areas.</li>
+				</ul>
+			</div>
+		</div>
+</section>
+
+
+<section >
+	<h1>Empirical correlations</h1>
+
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<ul>
+				 <li class="fragment">Shepard (1989) formula:
+					<p><div class='equationBox'>
+					\(k[cm/s]=C d_{50}^j\)
+					</div></p>
+					 
+					 <ul style="margin-top:0px;font-size:25px">
+						 <li>\(d_{50}\) in mm</li>
+						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
+						 <li>\(j=\) empirical exponent between 1.5-2.5</li>
+					 </ul>
+				 </li>
+				 <li class="fragment">Kozeny-Carman's from Bear (1972) formula
+					<p><div class='equationBox' style="font-size: 0.9em;">
+					\(k[m/s]= \left( \cfrac{\rho g}{\mu} \right)  \cfrac{n^3}{(1-n)^2}   \cfrac{d_{50}^2}{180}\)
+					</div></p>					 
+					 <ul style="margin-top:0px;font-size:25px">
+						 <li>\(d_{50}\) in m</li>
+					 </ul>
+				 </li>
+			 </ul>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:#000'>Notes on empirical equations:</strong> 
+				<ul>
+					<li> Recall that hydraulic conductivity varies <strong style='color:#000'>widely</strong>, therefore, you can expect high uncertainty associated with these equations</li>
+					<li>Use with caution and validate against field data when possible</li>
+					<li>Tend to work better for clean coarse-grained soils</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section>
+<h1>Example 5.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a constant-head permeability apparatus. A constant head of 85 cm is maintained during the test. After 2 min of testing, a total of 1054 g of water was collected. The temperature was 20<sup>o</sup>C. Calculate the permeability of the soil sample.
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 300px;'>
+<img src="FiguresGeneral_student/EX530.svg" style="width:100%; margin-top: -50px;"/>
+</div>
+</section>
+
+<section>
+<h1>Example 5.4</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A laboratory falling-head permeability test is performed on a light-gray gravelly sand (SW), and the following data is obtained:
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li>\(a=7.25\) cm<sup>2</sup></li>
+	<li>\(A=11.43\) cm<sup>2</sup></li>
+	<li>\(L=11.62\) cm</li>
+
+</ol>
+</div>
+<div class='col' style='width: 50%;'>
+<ol>
+	<li>\(H_1=171.4\) cm</li>
+	<li>\(H_2=79.3\) cm</li>
+	<li>\(\Delta t=110\) sec for the head to fall from \(H_1\) to \(H_2\)</li>
+</ol>
+</div>
+</div>
+Calculate the permeability of the soil sample in cm/s.
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 220px;'>
+<img src="FiguresGeneral_student/EX540.svg" style="width:100%; margin-top: -30px;"/>
+</div>
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Recall that Darcy velocity (\(v\)) is the velocity of water if it could flow trough all the area \(A\) of the cross section
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/true velocity.svg' width='80%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+The <span class='atb'>true seepage velocity</span> \(v_s\) is the velocity needed for travel time calculations
+</div>
+
+<div class='equationBox' style="margin-top: 50px;">
+\( v_s = \cfrac{v}{n_e} = \cfrac{q}{A n_e} \)
+</div>
+
+<br>
+\(n_e=\) is the effective porosity. \(n_e \leq n\) because some pores may be isolated and not contribute to flow.
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Example 5.5</h1>
+<div class='textBox' style='margin-top: -10px;margin-left: 0px;'>
+The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of breakthrough at well B using a tracer introduced at A is 167 hours. Calculate (a) the horizontal hydraulic gradient, (b) the average linear velocity, and (c) the hydraulic conductivity
+</div>
+<div class='container'>
+<div class='col' style='width: 35%;'>
+<figure>
+<img src='FiguresGeneral/example_field_perm.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 65%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 370px;'>
+<img src="FiguresGeneral_student/EX550.svg" style="width:100%; margin-top: -20px;"/>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 660px;'>
+<img src="FiguresGeneral_student/EX551.svg" style="width:100%; margin-top: -50px;"/>
+</div>
+
+</section>
+
+
+<section >
+	<h1>Example 5.6</h1>
+	<div class='textBox' style='margin-top: -15px;margin-left: 0px;font-size: 0.85em;'>
+		The figure shows water flow through the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
+			<ol>
+				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
+				<li>Draw the levels of water in standpipes.</li>
+				<li>Compute the amount of water flow \(q\) through the specimen.</li>
+			</ol>		
+	</div>
+	<div class="container">
+  	<div class="col" style="width: 50%;">
+	<img src="FiguresGeneral_student/Example_tubes.svg" style="width: 100%;"/>
+  	</div>
+  	<div class="col" style="width: 50%;">
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral_student/EX490.svg" style="width: 100%;"/>
+		</div>
+  	</div>
+  </div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX491.svg" style="width: 100%;"/>
+
+</div>
+
+</section>
+
+
+<section>
+<h1>Example 5.7</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The test setup has the dimensions shown below. Calculate: (a) the pressure head, (b) elevation head, (c) total head, and (d) head loss at points B, C, D, and F in cm of water.
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/example_new.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 400px;'>
+<img src="FiguresGeneral_student/ex570.svg" style="width:100%; margin-top: -30px;"/>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 680px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/1859BThbITjdQO3eMNJqM7CbagsPY6Q6rMa1KVaNkpzw/edit?usp=sharing'width='100%' height='640' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 20px;">Loading...</iframe>
+</div>
+
+</section>
+
+<!-- <section >
+	<h1>Water seepage</h1>
+	<figure>
+	  <img src="./FiguresGeneral/tube.svg" style="width:80%" data-preload/>
+	  <footer style="margin-top:-60px;"><small></small></footer>
+	</figure>
+</section> -->
+
+
+
+<!-- <section >
+<h1>Example 4.10</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Find the Darcy and true velocity for the soil of example 4.9, knowing that \(e=0.88\). How long will a particle of water take to pass trough the soil specimen?
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4100.svg" style="width: 100%;"/>
+</div>
+</section> -->
+
+
+
+
+
+
+
+<!-- <section >
+<h1>Example 4.11</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A soil permeability device has a chamber of 6 inches of diameter by 12 inches height. The water recipient at the exit has a maximum capacity of 100 gr. If the maximum head difference that can be applied to the soil is 1.5 m, what is the range of soil permeability that can be tested between 1 to 2 hr? 
+</div>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4110.svg" style="width: 100%;"/>
+</div>
+</section> -->
+
+
+
+
+
+<!-- <section >
+<h1>Example 4.12</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A soil permeability device chamber is 1 inch of diameter and 1 inch heigh. What is the burette size required to conduct a permeability test in a soil with permeability \(1 \times 10^{-8}\) cm/s in one day. The initial height of water above the soil specimen is 100 cm and the water in the burette must be read with at least 1 cm of accuracy.
+
+</div>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4120.svg" style="width: 100%;"/>
+</div>
+</section> -->
+
+
+
+
+
+<!-- <section >
+<h1>Example 4.13</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For the soil in Example 2.7 estimate its permeability using empirical correlations when \(e=0.4\) and \(e=0.87\). Assume the particles are spherical.
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4130.svg" style="width: 100%;"/>
+</div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4131.svg" style="width: 100%;"/>
+</div>
+
+</section> -->
+
+
+<section>
+<h1>Anisotropy/Heterogeneity</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The distribution of hydraulic conductivity within an aquifer (\(k(x, y, z)\)) is <span class='atb'>rarely uniform</span>.
+</div>
+
+we classify this variability in two categories:
+
+<ul style="margin-top: 50px;">
+	<li class='fragment'><strong style='color:#000'>Homogeneous:</strong> Permeability is a constant WRT space.</li>
+	<li class='fragment'><strong style='color:#000'>Heterogeneous:</strong> Permeability <span class='atb'>varies</span> with position in space.</li>
+</ul>
+
+<div class='findingBox fragment' style='margin-top: 30px;margin-left: 0px;'>
+In practice, every aquifer is heterogeneous. We use statistical measure such as the <span class='atb'>mean value</span> but knowing the ranges is usefull
+</div>
+</section>
+
+<section>
+<h1>Directional variability</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+An ideal media would have well packed spherical particles, but in reality, grains can be irregular.
+</div>
+
+<div class='container'>
+<div class='col' style='width: 60%;'>
+We use two temrs to define this property:
+<ol style="margin-top: 0px;">
+	<li class='fragment'><strong style='color:#000'>Isotropic:</strong> Permeability is <span class='atb'>the same</span> in all directions.</li>
+	<li class='fragment'><strong style='color:#000'>Anisotropic:</strong> Permeability is <span class='atb'>dependent</span> on direction</li>
+</ol>
+<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+Note: \(k_x > k_y\) due to natural sedimentation processes and gravitational action
+</div>
+</div>
+<div class='col' style='width: 40%;'>
+<figure>
+<img src='FiguresGeneral/directional_permeability.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How does \(k\) varies directionoally and spatially in a soil?
+</div>
+<img src="FiguresGeneral_student/overall_directionality.svg" style="width:100%"/>
+</section>
+
+
+
+
+
+
+<section >
+	<h1>Equivalent permeability</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:black">equivalent permeability</strong> in order to apply Darcy's law.
+	</div>
+	<p></p>
+	<div class="container">
+		<div class="col" style="width: 50%;">
+			<p>We will study two cases:
+			 <ol>
+				 <li class="fragment"> Flow is <strong style="color:black">perpendicular</strong> to the layering. </li>
+				 <li class="fragment"> Flow is <strong style="color:black">parallel</strong> to the layering. </li>
+			 </ol>
+		 </p>
+		</div>
+		<div class="col" style="width: 50%;">
+			<figure style="margin-top:0px;">
+				<img src="FiguresGeneral/equivalent.svg" style="width:100%" data-preload/>
+				<footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+		</div>
+	</div>
+
+
+</section>
+
+<section  >
+    <h1>Case I: Flow perpendicular to layers</h1>
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+		<figure>
+            <img src="FiguresGeneral/perpendicular.svg" style="width:81%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+	</div>
+	<div class='col' style="width: 50%;">
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			\( \begin{align}
+			q &=q_1=q_2=q_3 \\
+			q &= k_{eq} \frac{\Delta h}{L} A \\
+			&= k_{eq} \frac{\Delta h_1 + \Delta h_2 + \Delta h_3}{L} A\\
+			q &= k_{eq} \frac{\frac{q L_1}{k_1 A} + \frac{q L_2}{k_2 A} + \frac{q L_3}{k_3 A}}{L} A\\
+			\end{align} \)
+		</div>
+		<div class="fragment" style="margin-top: 50px;"> 		<div class='equationBox'>
+			\( k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i} \)
+		</div></div>
+
+	</div>
+	</div>
+</section>
+
+<section >
+<h1>Example 5.8</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A constant head permeability test was conducted on a chamber of 6 inches of diameter by 12 inches heigh. The soil was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s each. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4140.svg" style="width: 100%"/>
+</div>
+
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4141.svg" style="width: 100%"/>
+</div>
+
+</section>
+
+<section  >
+    <h1>Case II: Flow parallel to layers</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+          <figure>
+            <img src="FiguresGeneral/parallel.svg" style="width:73%" data-preload/>
+            <footer style="margin-top:-60px;"><small></small></footer>
+          </figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px; font-size: 1em;'>
+				\( \begin{align}
+				q & = q_1 + q_2 + q_3 \\
+				k_{eq} \frac{\Delta h}{L} A & = k_1 \frac{\Delta h}{L} A_1 + \\
+				&k_2 \frac{\Delta h}{L} A_2 + k_3 \frac{\Delta h}{L} A_3 \\
+
+				k_{eq} A &= k_1 A_1 + k_2 A_2 \\
+				& + k_3 A_3
+				\end{align} \)
+				</div>
+
+				
+					<div class='equationBox fragment' style="margin-top:50px;">
+						\(k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}\)
+					</div>
+				
+			</div>
+		</div>
+</section>
+
+<section >
+<h1>Example 5.9</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;font-size: 0.85em;'>
+A permeable water channel will be constructed as shown in the figure. Three layers of sand with \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length.
+
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+	<figure>
+		<img src='FiguresGeneral/channels.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4150.svg" style="width: 100%"/>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX4151.svg" style="width: 100%"/>
+</div>
+</section>
+
+<section>
+<h1>Example 5.10</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px; font-size: 0.8em;'>
+Consider an aquifer with three horizontal layers as listed in the table. The head at the top of the top layer is 101.3 m and the head at the bottom of the bottom layer is 96.2 m. <br>
+<ol>
+	<li>Sketch the system</li>
+	<li>Calculate the equivalent horizontal and vertical hydraulic conductivities for the composite aquifer</li>
+	<li>Calculate the vertical component of the flow rate</li>
+	<li>Use Darcy's law to calculate the total head a the top, middle, and bottom of each individual layer</li>
+</ol>
+</div>
+
+<table style="font-size: 0.9em;">
+	<tr>
+		<th></th>
+		<th>Thickness (m)</th>
+		<th>\(k_x\)(m/d)</th>
+		<th>\(k_y\)(m/d)</th>
+	</tr>
+	<tr>
+		<td>Layer 1</td>
+		<td>1.5</td>
+		<td>6</td>
+		<td>0.1</td>
+	</tr>
+	<tr>
+		<td>Layer 2</td>
+		<td>3.9</td>
+		<td>0.5</td>
+		<td>0.02</td>
+	</tr>
+	<tr>
+		<td>Layer 3</td>
+		<td>2.75</td>
+		<td>2.5</td>
+		<td>0.05</td>
+	</tr>
+</table>
+
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 680px;'>
+<img src="FiguresGeneral_student/EX51000.svg" style="width:100%;margin-top: -30px;"/>
+</div>
+
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/1p7Vu99lvH4tH7IU8LDUBt92TDjYmRtwz8LTjfwKUuvo/edit?usp=sharing'width='100%' height='640' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 20px;">Loading...</iframe>
+</div>
+
+</section>
+
+
+
+<!-- <section >
+	<figure>
+		<img src='FiguresGeneral/channels.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>

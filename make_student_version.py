@@ -1,6 +1,16 @@
+import os
 import re
+import stat
 import shutil
 from pathlib import Path
+
+
+def force_rmtree(path: Path):
+    """Remove a directory tree, clearing read-only flags first (needed on Windows/OneDrive)."""
+    def remove_readonly(func, fpath, _):
+        os.chmod(fpath, stat.S_IWRITE)
+        func(fpath)
+    shutil.rmtree(path, onerror=remove_readonly)
 
 
 def transform_html(input_path: Path, output_path: Path,
@@ -168,7 +178,7 @@ def process_presentation(folder: Path):
             f.unlink()
             print(f"  [DEL] {f.name}")
     if figures_dst.exists():
-        shutil.rmtree(figures_dst)
+        force_rmtree(figures_dst)
         print(f"  [DEL] FiguresGeneral_student/")
 
     print(f"  Output     : {html_output.name}  +  FiguresGeneral_student/")
