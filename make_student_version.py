@@ -3,11 +3,13 @@ import shutil
 from pathlib import Path
 
 
-def transform_html(input_path: Path, output_path: Path, figures_folder: str = "FiguresGeneral"):
+def transform_html(input_path: Path, output_path: Path,
+                   figures_folder: str = "FiguresGeneral",
+                   figures_dst_folder: str = None):
     """
     Transforms <object class='Animation' ... data='FiguresGeneral/x.svg'>
-    into <img src='FiguresGeneral_student/x.svg'> in the HTML file,
-    so the student index sits at the same level as the original.
+    into <img src='{figures_dst_folder}/x.svg'> in the HTML file.
+    If figures_dst_folder is None, the original figures_folder name is kept.
     """
     with open(input_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -25,8 +27,9 @@ def transform_html(input_path: Path, output_path: Path, figures_folder: str = "F
         src   = data_match.group(1)  if data_match  else ''
         style = style_match.group(1) if style_match else ''
 
-        # Redirect to the student copy of FiguresGeneral
-        src = src.replace(figures_folder + '/', figures_folder + '_student/', 1)
+        # Redirect to the appropriate figures folder
+        target = figures_dst_folder if figures_dst_folder else figures_folder
+        src = src.replace(figures_folder + '/', target + '/', 1)
 
         return f'<img src="{src}" style="{style}"/>'
 
@@ -154,22 +157,37 @@ def process_presentation(folder: Path):
     figures_src = folder / "FiguresGeneral"
     figures_dst = folder / "FiguresGeneral_student"
     html_output = folder / "index_student.html"
+    prof_output = folder / "index_professor.html"
 
     print(f"\n{'='*60}")
     print(f"Processing : {folder.name}")
-    print(f"Output     : {html_output.name}  +  FiguresGeneral_student/")
 
-    # ── Step 1: Transform HTML ───────────────────────────────────────────────
+    # ── Cleanup: remove any previously generated files ───────────────────────
+    for f in [html_output, prof_output]:
+        if f.exists():
+            f.unlink()
+            print(f"  [DEL] {f.name}")
+    if figures_dst.exists():
+        shutil.rmtree(figures_dst)
+        print(f"  [DEL] FiguresGeneral_student/")
+
+    print(f"  Output     : {html_output.name}  +  FiguresGeneral_student/")
+    print(f"             : {prof_output.name}  (maps to FiguresGeneral/)")
+
+    # ── Step 1a: Student HTML ────────────────────────────────────────────────
     # Same folder as original so all css/, js/, plugin/ paths remain valid
-    transform_html(html_input, html_output)
+    transform_html(html_input, html_output, figures_dst_folder="FiguresGeneral_student")
+
+    # ── Step 1b: Professor HTML ──────────────────────────────────────────────
+    # object → img, but keep pointing at the original FiguresGeneral/
+    transform_html(html_input, prof_output, figures_dst_folder=None)
+    print(f"  [HTML] Professor version saved as {prof_output.name}")
 
     # ── Step 2: Copy FiguresGeneral → FiguresGeneral_student ────────────────
     if not figures_src.exists():
         print(f"  [WARN] No FiguresGeneral folder found in {folder}")
         return
 
-    if figures_dst.exists():
-        shutil.rmtree(figures_dst)
     shutil.copytree(figures_src, figures_dst)
     print(f"  [COPY] FiguresGeneral → FiguresGeneral_student")
 
