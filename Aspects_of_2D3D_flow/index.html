@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
-		<title>2D/3D Seepage</title>
+		<title>Aspects of 2D/3D Seepage</title>
 	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -36,8 +36,8 @@
 					</style>
 	
 					<div class='footer'>
-						CIE-365
-						Spring 2025
+						CE 342
+						Spring 2026
 					</div>
 	
 					<style>
@@ -52,7 +52,7 @@
 						}
 					.reveal .slides section .fragment.fade-down,
 					.reveal .slides section .fragment.current-fragment {
-							color: #000;
+							/* color: #000; */
 							margin-top:0px;
 					}
 	
@@ -77,38 +77,37 @@
 							<div class="qrCode" name="https://drive.google.com/file/d/1QiJxAbt0V7JfhsP3nG37nFdy0ccxnKJ-/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-400px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: 2D/3D seepage">
+						<div style="margin-top:-400px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 5: Aspects of 2D/3D Seepage">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-							<p style="color:#faffff; font-size:35px">Spring 2023</p>
+							<p style="color:#faffff; font-size:35px">Spring 2026</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 						</div>
 					</section>
 
 
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				<section >
 				    <h1>Recap</h1>
 						<ul>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to calculate <strong style='color:#7abbe6'>total head and hydraulic gradient</strong> in soils.
+								We learned how to calculate <strong style='color:black'>total head and hydraulic gradient</strong> in soils.
 							</div>
 								</li>
-							<li class="fragment"> We learned to calculate <strong style='color:#7abbe6'>1D seepage</strong>. </li>
+							<li class="fragment"> We learned to calculate <strong style='color:black'>1D seepage</strong>. </li>
 							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-								We learned how to calculate the <strong style='color:#7abbe6'>permeability</strong> of uniforms and layered soils.
+								We learned how to calculate the <strong style='color:black'>permeability</strong> of uniforms and layered soils.
 							</div>
 								</li>
 						</ul>
 				</section>
 
-        <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+        <section>
 		<h1>Contents</h1>
 		<div class='container'>
 		<div class='col'>
 			<ul class="contentStyle">
 				<li class="l1">Mass balance and Laplace equation.</li>
-				<li class="l1">Flow nets.</li>
-				<li class="l1">Uplift pressure.</li>
+				<li class="l1">Intro to flow nets.</li>				
 				<li class="l1">Seepage erosion and piping</li>
 				<li class="l1">Solutions if erosion is a potential problem.</li>
 			</ul>
@@ -116,7 +115,7 @@
 		<div class='col'>
 		<div class='container'>
 			<div class='col'>
-				<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+				<div class="stickynote" style="margin-top: 100px;margin-left: 75px; height: 300px;">
 					<p> Objectives covered in this lecture</p>
 					<ul>
 						<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating the effective stress in soils  </li>
@@ -124,11 +123,11 @@
 				</div>
 			</div>
 			<div class='col'>
-			<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+			<div class='stickynote' style='margin-top: 100px;margin-left: 75px; height: 300px;'>
 				<p style="margin-top: -20px;">After this lecture we will able to:</p>
 				<ul style="margin-top: -15px;">
-					<li>Calculate the field of total head, hydraulic gradients, and seepage velocities in 2D.</li>					
-					<li>Calculate the uplift pressure produced by seepage on structures.</li>
+					<li>Describe aspects of 2D/3D seepage.</li>					
+					<li>Describe a flow net.</li>
 					<li>Determine factor of safety against internal erosion.</li>
 				</ul>
 			</div>
@@ -148,37 +147,44 @@
  #####  ####### #     #    #    ####### #     #    #     #####
 -->
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 
 	<iframe class="stretch" src="https://www.youtube.com/embed/h1H5QQwoGiw?si=mdTD1HlIZXWZQKGC&amp;controls=0&amp;start=16&amp;end=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </section>
 
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-    <h1>Seepage 2D/3D: Governing equation</h1>
-	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/3Dflow.svg'></object>
-
-	<div class='container'>
-	<div class='col' style='width: 50%;'>
-	
-	</div>
-	<div class='col' style='width: 50%;'>
-<div style="position:absolute; margin-top:-320px; margin-left: -75px;"> 
-	<div class='equationBox fragment' >
-		\(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}+\cfrac{\partial^2 h}{\partial z^2}=0\)
-		</div> 
-		<div class="fragment" style="margin-left: 90px;"><ul>
-			<li>\(h=\) Total head field </li>
-			<li>\(x\), \(y\), and \(z\) are the spatial coordinates.</li>
-		</ul></div>
+<section >
+<h1>Seepage 2D/3D: Governing Equation</h1>
+<div class='container'>
+    <div class='col' style='width: 30%;'>
+        <figure>
+            <img src='FiguresGeneral/3Dflow.svg' 
+                 alt='A three-dimensional infinitesimal soil element illustrating water flux entering and exiting through its faces in the x, y, and z directions to demonstrate the principle of mass conservation.' 
+                 width='100%'/>
+            <footer style='margin-top: 0px; font-size: 0.8em;'><em></em></footer>
+        </figure>
+    </div>
+    <div class='col' style='width: 70%;'>
+        <div class='textBox' style='margin-top: 0px; margin-left: 0px;'>
+            Analyzing multi-dimensional flow in porous media requires applying 
+            <span class='atb'>conservation of mass</span> through differential calculus. 
+            This derivation yields the <span class='atb'>Laplace equation</span>, 
+            the fundamental governing expression for steady-state seepage in soils.
+        </div>
+    </div>
 </div>
+	<div class='equationBox fragment' style="margin-left: 600px;">
+		\(k_x\cfrac{\partial^2 h}{\partial x^2}+k_y\cfrac{\partial^2 h}{\partial y^2}+k_z\cfrac{\partial^2 h}{\partial z^2}=0\)
+		</div> 
+	<div class="fragment" style="margin-left: 0px;"><ul>
+		<li>\(h=\) Total head field </li>
+		<li>\(x\), \(y\), and \(z\) are the spatial coordinates.</li>
+	</ul></div>	
 
-		
-	</div>
-	</div>
+
 
 	<!-- <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	The governing equation that describes the motion of water in soils is a <span class='atb'>Laplace equation</span>. It is derived <strong style='color:#7abbe6'>assuming</strong> that water and the soil skeleton is <span class='atb'>incompressible</span>. <strong style='color:#7abbe6'>Darcy's law</strong> is assumed valid.
+	The governing equation that describes the motion of water in soils is a <span class='atb'>Laplace equation</span>. It is derived <strong style='color:black'>assuming</strong> that water and the soil skeleton is <span class='atb'>incompressible</span>. <strong style='color:black'>Darcy's law</strong> is assumed valid.
 	</div>
 		<div class="container">
 			<div class="col" style="width: 50%;">
@@ -200,10 +206,10 @@
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		Solution of the <strong style="color:#7abbe6">Laplace equation:</strong> \(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}=0\) \(\longrightarrow\) \(h(x,y)\)
+		Solution of the <strong style="color:black">Laplace equation:</strong> \(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}=0\) \(\longrightarrow\) \(h(x,y)\)
 	</div>
 	<p style="margin-top:-5px;" class="fragment"> For 1D flow: \(\cfrac{\partial^2 h}{\partial x^2}=0\) \(\longrightarrow\) \(h(x)=ax+b\)
 		<figure style="margin-top:-15px;" class="fragment">
@@ -217,16 +223,8 @@
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-What about <strong style='color:green'>2D/3D</strong>? How do <strong style='color:green'>boundary conditions</strong> look like?
-</div>
 
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/2D boundaries.svg'></object>
-
-</section>
-
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1>Finite difference solution</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 A common way to solve <span class='atb'>partial differential equations</span> is using a finite difference approximation.
@@ -243,7 +241,7 @@ A common way to solve <span class='atb'>partial differential equations</span> is
 	</div></div>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Recall Taylor's series expansion:
 <p style="font-size: 0.8em;">$$f(x)=f(x_0)+f'|_{x_0}\cfrac{(x-x_0)}{1}+f''|_{x_0}\cfrac{(x-x_0)^2}{2!}+f'''|_{x_0}\cfrac{(x-x_0)^3}{3!}+.... $$</p>
@@ -259,36 +257,9 @@ Recall Taylor's series expansion:
 
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Example 4.16</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-Use the <strong style='color:#7abbe6'>Laplace equation</strong> to solve the total head field for the problem shown in the figure below.
-</div>
-<div class='container'>
-<div class='col' style='width: 50%;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Example45.svg'></object>
-</div>
-<div class='col' style='width: 50%;'>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<div class='container'>
-<div class='col' style='width: 50%;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4160.svg'></object>
-</div>
-<div class='col' style='width: 50%;'>
-<div class='stickynote fragment' style='margin-top: 50px;margin-left: 0px;'>
-<strong> Note:</strong> This is an illustrative example on how flow problems are solved in practice using software. You will not be required to solve this type of problem by hand.
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
-
-</section>
-
-<!-- <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<!-- <section >
 <h1></h1>
 <div class="fp-Video" style="width: 100%; height: 600px;">
 	<div id="screen-sharing" class="display" style="width: 100%;"></div>
@@ -296,268 +267,34 @@ Use the <strong style='color:#7abbe6'>Laplace equation</strong> to solve the tot
 <button id="shareBtn">Share Screen</button>
 </section> -->
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 <iframe src='https://luisez1988.github.io/soilved/lab/index.html' width='100%'  height='680px' ></iframe>
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<figure>
-<img src='./FiguresGeneral/seepage.svg' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<figure>
-	<img src='./FiguresGeneral/seepage _flownet.svg' width='100%'/>
-	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
-	</figure>
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Quiz 4.7</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-	Indicate the water elevation in the standpipes.
-</div>
-
-<figure>
-	<img src='FiguresGeneral/seepage _flownet_quizz.svg' width='60%'/>
-	<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
-	</figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 
 		<iframe class="stretch" src="https://www.youtube.com/embed/0EzoHXEzdwY?autoplay=0&start=55&end=204" data-preload></iframe>
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>FLow nets</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	They are a <span class='atb'>graphical solution</span> to the Laplace equation and offer a "simplified" method to calculate the <span class='atb'>total head field</span>.
-	</div>
-	<div class='container'>
-	<div class='col' style="width: 50%;">
-		<div class="fragment"> <div class='defBox' name='' style='margin-top: 5px;margin-left: 0px;'>
-			<ul style="margin-top:-15px;font-size:35px">
-				<li class="fragment"> <strong style="color:red">Equipotential lines:</strong> contours of constant total head (\(h\)=𝑐𝑜𝑛𝑠𝑡𝑎𝑛𝑡).
-			
-			</li>
-			<li class="fragment"> <strong style="color:green"> Flow lines:</strong>indicate the direction of the water flow. </li>
-			<li class="fragment"> <strong style="color:orange">Flow tube:</strong> area defined between two any adjacent flow lines.</li>
-			<li class="fragment"> <strong style="color:blue">Total head drop:</strong> decrease in total head between two adjacent equipotential lines.</li>
-			</ul>
-		</div></div>
-	</div>
-	<div class='col' style="width: 50%;">
-		<figure style="margin-top:50px;">
-			<img src="FiguresGeneral/flow_tube.svg" style="width:100%" data-preload/>
-			<footer style="margin-top:-60px;"><small></small></footer>
-		  </figure>
-	</div>
-	</div>
-
+<section>
+	
+	Examples
+	<figure>
+		<img src="FiguresGeneral/Examples.svg" style="width:70%" data-preload/>
+		<footer style="margin-top:-60px;"><small></small></footer>
+		</figure>
 	
 
-
-
-
-
-</section>
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Rules for drawing a flow net</h1>
-	<ul style="margin-top:5px;">
-		<li class="fragment"> <strong style="color:#7abbe6">Intersections</strong> of flow lines with equipotential lines are <span class='atb'>perpendicular</span>,  hence each cell in a flow net should be "<strong style="color:#7abbe6">as squared as possible</strong>." </li>
-		<li class="fragment"> "<strong style="color:#7abbe6">Entrance</strong>" and "<strong style="color:#7abbe6">exit</strong>" boundaries are (usually) <span class='atb'>equipotential lines</span>. </li>
-		<li class="fragment"> <strong style="color:#7abbe6">Impervious boundaries</strong> are <span class='atb'>flow lines</span>. </li>
-		<li class="fragment">  <strong style="color:#7abbe6">Flow nets</strong> are drawn only in porous media, <strong style="color:#7abbe6">never in "free" water.</strong></li>
-		<li class="fragment"> You will need <strong style="color:#7abbe6">many iterations</strong>, so use a pencil (never a pen!). </li>
-		<li class="fragment"> <strong style="color:#7abbe6">Flow lines can never cross</strong>. </li>
-		<li class='fragment'><strong style='color:#7abbe6'>Label</strong> the number of equipotential drops <strong style='color:green'>\(N_d\)</strong> and flow tubes <strong style='color:green'>\(N_f\).</strong></li>
-	</ul>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Flow net</h1>
-<figure>
-  <img src="FiguresGeneral/flow_net_1.svg" style="width:75%" data-preload/>
-  <footer style="margin-top:-60px;"><small></small></footer>
-</figure>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	
-	<div class='container'>
-	<div class='col' style="width: 35%;">
-		<figure>
-			<img src="FiguresGeneral/squares.svg" style="width:100%" data-preload/>
-			<footer style="margin-top:-60px;"><small></small></footer>
-		  </figure>
-	</div>
-	<div class='col' style="width: 65%;">
-		Examples
-		<figure>
-			<img src="FiguresGeneral/Examples.svg" style="width:100%" data-preload/>
-			<footer style="margin-top:-60px;"><small></small></footer>
-		  </figure>
-	</div>
-	</div>
-
 </section>
 
 
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	<p>If the flow net is sketched properly, the following rules will apply:
-		<ul style="margin-top:-25px;font-size:35px">
-			<li class="fragment"> The flow within a <strong style="color:orange">flow tube</strong> is <span class='atb'>constant</span> (\(q=\) constant). </li>
-			<li class="fragment"> The decrease in total head in each <strong style="color:blue">drop</strong> is <span class='atb'>constant</span> (\(\Delta h_{d}=\) constant). </li>
-		</ul>
-		</p>
-</div>	
-
-
-<div class="container">
-	<div class="col" style="width: 50%;">
-      <figure style="margin-top:-25px;">
-        <img src="FiguresGeneral/flow_tube_2.svg" style="width:100%" data-preload/>
-        <footer style="margin-top:-60px;"><small></small></footer>
-      </figure>
-	</div>
-	<div class="col" style="width: 50%;">
-		<p class="fragment">
-			<div class="fragment"><div class='equationBox'>
-				\(q=k \Delta H \cfrac{N_f}{N_d}\)
-				</div></div>
-			
-			
-			<ul class="fragment" style="margin-top:0px;font-size:35px">
-				<li>\(\Delta H=\) Total head loss between entrance and exit of problem.</li>
-				<li>\(N_f=\) number of flow channels. </li>
-				<li> \(N_d=\) number of drop heads. </li>
-			</ul>
-		</p>
-	</div>
-</div>
-</section>
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-		How to solve a flow net exercise?
-	</div>	
-	<ol style="margin-top:-10px;font-size:1em">
-		<li class="fragment"> Plot the <strong style="color:#7abbe6">flow net</strong> following all the rules. </li>
-		<li class="fragment"> Determine the <strong style="color:#7abbe6">number of flow lines and tubes</strong>, <strong style="color:#7abbe6">number of equipotential lines and drops</strong>. </li>
-		<li class="fragment"> <strong style="color:#7abbe6">Label</strong> all equipotential lines and determine the <strong style="color:#7abbe6">total head at the entrance</strong> and <strong style="color:#7abbe6">exit equipotential lines</strong>. </li>
-		<li class="fragment"> Determine \(\Delta H= h_{entrance}-h_{exit}\) and \(\Delta h_d= \Delta H/N_d\) </li>
-		<li class="fragment"> You are now able to determine \(h\) at any point of your geometry base on its position in the flow net. </li>
-		<li class="fragment"> You can now determine the pore pressure at any point using the total head equation \(u=(h-z)\gamma_w\). </li>
-		<li class="fragment"> You can also determine the <strong style="color:#7abbe6">flow rate</strong> for any tube or the entire problem. </li>
-	</ol>
-
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.17</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	Determine the flow below the sheet pile, the total head and the pore pressure at point A.
-	</div>
-<div class='container'>
-<div class='col' style='width: 50%;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4170.svg'></object>
-</div>
-<div class='col' style='width: 50%;'>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4171.svg'></object>
-</div>
-</div>
-</div>
-
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4172.svg'></object>
-</div>
-
-</section>
-
-
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Uplift pressure</h1>
-	<div class='defBox' name='Uplift pressure' style='margin-top: 0px;font-size: 1em;'> Is the <span class='atb'> water pressure </span> acting at the base of a <span class='atb'> structure </span> such as a dam foundation that pushes that structure upwards. </div>
-
-	<div class='container'>
-	<div class='col' style="width: 45%;">
-		<figure style="margin-top: 80px;">
-			<img src="FiguresGeneral/uplift_1.svg" style="width:100%" data-preload/>
-			<footer style="margin-top:-60px;"><small></small></footer>
-		  </figure>
-	</div>
-	<div class='col' style="width: 55%;">
-		<ul>
-			<li class="fragment"> Uplift pressure can make the dam <span class='atb'> unstable </span>! \(\longrightarrow\) Important to ensure the stability of the structure. </li>
-			<li class="fragment"> Water pressure acts in all directions. We use the <span class='atb'> perpendicular </span> component to the surface. </li>
-		</ul>
-	</div>
-	</div>
-
-
-</section>
-
-<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-How to determine the uplift pressure distribution?
-</div>
-		<div class='container'>
-		<div class='col' style="width: 50%;">
-			<ol style="margin-top:0px;font-size:1em">
-				<li class="fragment"> 	<strong style='color:#7abbe6'>Plot</strong> the flow net. </li>
-						<li class="fragment"> 	<strong style='color:#7abbe6'>Distribute</strong> a certain number of points along the surface of interest. </li>
-						<li class="fragment"> 	<strong style='color:#7abbe6'>Calculate</strong> the pore water pressure at each selected point. </li>
-						<li class="fragment"> 	<strong style='color:#7abbe6'>Plot </strong> the pore pressure distribution.</li>
-						<li class="fragment">Finally, 	<strong style='color:#7abbe6'>compute</strong> the area of the pressure distribution. </li>
-			</ol>
-		</div>
-		<div class='col' style="width: 50%;">
-			<figure style="margin-top:0px">
-				<img src="FiguresGeneral/uplift_2.svg" style="width:100%" data-preload/>
-				<footer style="margin-top:-60px;"><small></small></footer>
-			  </figure>
-			  <div class="fragment">			  <div class='stickynote' style='margin-top: 50px;margin-left: 200px;'>
-				Note: These steps are applicable to the calculation of water pressure in any surface.
-			</div></div>
-
-		</div>
-		</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.18</h1>
-	<div class='textBox' style='margin-top: -20px;font-size: 1em;'> <p>For the example in the figure, find the uplift force and the factor of safety against uplift if the dam weighs 7000 kN</p> 
-	</div>
-
-	<object style='width:68%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Dam_uplift.svg'></object>	
-
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<iframe src='https://docs.google.com/spreadsheets/d/1m24BWPUH_P4qVGrzm48k6TRPVrckS57bimCwYcLUFU8/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
-</div>
-</section>
-
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	<h1>Erosion due to seepage</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<strong style='color:#7abbe6'>Recall:</strong>  We learned that <strong style="color:#7abbe6">soil strength</strong> depends directly on the <span class='atb'>inter-particle contacts</span>. <strong style="color:#7abbe6">If solid particles <span class='atb'>are not in contact</span>, soil becomes a fluid with no shear resistance.</strong>
+		<strong style='color:black'>Recall:</strong>  We learned that <strong style="color:black">soil strength</strong> depends directly on the <span class='atb'>inter-particle contacts</span>. <strong style="color:black">If solid particles <span class='atb'>are not in contact</span>, soil becomes a fluid with no shear resistance.</strong>
 			The <span class='atb'>effective stress</span> quantifies contact forces. 
 	</div>
 
@@ -575,17 +312,17 @@ How to determine the uplift pressure distribution?
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 		<iframe class="stretch" src="https://www.youtube.com/embed/eImtYyuQCZ8?autoplay=0&start=93&end=261" data-preload></iframe>
 
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	
 	<div class="container">
 		<div class="col" style="width: 50%;">
 	       <ul>
-	       	<li>Scenario A: <strong style='color:#7abbe6'>No flow</strong> </li>
+	       	<li>Scenario A: <strong style='color:black'>No flow</strong> </li>
 					<li>Scenario B: <strong style='color:green'>Downward flow</strong> </li>
 					<li>Scenario C: <strong style='color:red'>Upward flow</strong> </li>
 	       </ul>
@@ -605,7 +342,7 @@ How to determine the uplift pressure distribution?
 	</figure>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	
 	<div class="container">
 		<div class="col" style="width: 50%;">
@@ -621,7 +358,7 @@ How to determine the uplift pressure distribution?
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">	
+<section>	
 	<div class="container">
 		<div class="col" style="width: 50%;">
 	      <figure style="margin-top: 50px;">
@@ -637,7 +374,7 @@ How to determine the uplift pressure distribution?
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	
 	<div class="container">
 		<div class="col"  style="width: 50%;">
@@ -653,7 +390,7 @@ How to determine the uplift pressure distribution?
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	<h1>Erosion due to seepage</h1>
 	<div class='defBox' name='Critical hydraulic gradient' style='margin-top: 0px;margin-left: 0px;'>
 	<strong style='color:green'>\(i_{crit}:\)</strong> Is the maximum hydraulic gradient in the <strong style='color:red'>exit zone</strong> that a soil can experience before it erodes due to seepage forces.
@@ -672,26 +409,30 @@ How to determine the uplift pressure distribution?
 
 </section>
 
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<section >
 	<ul style="margin-top: 100px;">
 		<li class="fragment">Erosion will <strong style="color:red"> begin if</strong> <span class='atb'>FS<1 </span> . </li>
 		<li class="fragment"> It is important to <strong style="color:green">identify</strong> what "element" in a flow net has the <strong style="color:red">maximum hydraulic gradient</strong> \(i_{max}\). </li>
-		<li class="fragment"><strong style="color:red">Piping</strong> usually begins at <strong style="color:#7abbe6">downstream side</strong> (upward flow).</li>
-		<li class="fragment"> Because the total head drop is constant between equipotential lines, the <strong style='color:#7abbe6'>size</strong> of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:red">Smaller elements</strong> will have <span class='atb'>larger hydraulic gradients</span>.  </li>
+		<li class="fragment"><strong style="color:red">Piping</strong> usually begins at <strong style="color:black">downstream side</strong> (upward flow).</li>
+		<li class="fragment"> Because the total head drop is constant between equipotential lines, the <strong style='color:black'>size</strong> of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:red">Smaller elements</strong> will have <span class='atb'>larger hydraulic gradients</span>.  </li>
 	</ul>
 
 </section>
 
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-	<h1>Example 4.19</h1>
+<section>
+	<h1>Example 5.11</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p>For the example in the figure, determine the factor of safety against piping knowing \(G_s=2.65\) and \(\gamma_{sat}=15.2\) kN/m\(^3\)</p>		
+		A 10-m-thick layer of stiff saturated clay is underlain by a layer of sand. The sand is under artesian pressure. Calculate the maximum depth of cut, H, that can be made in the clay before the quicksand condition happens.	
 	</div>
+
 	
 	<div class="container">
 		<div class="col" style="width: 50%;">
-			<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4190.svg'></object>
+			<figure style="margin-top: 40px;">
+			<img src='FiguresGeneral/EX511.png' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
 		</div>
 		<div class="col" style="width: 50%;">
 			<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -701,7 +442,7 @@ How to determine the uplift pressure distribution?
 	</div>
 </section>
 
-<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+<section>
 	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 		How to reduce the risk of seepage?
 	</div>
