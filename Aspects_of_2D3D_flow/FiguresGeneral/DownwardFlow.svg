@@ -7,13 +7,13 @@
    viewBox="0 0 50.800001 48.26"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="DownwardFlow.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:ns13="http://www.iki.fi/pav/software/textext/">
+   xmlns:ns77="http://www.iki.fi/pav/software/textext/">
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.466344"
-     inkscape:cx="135.71168"
-     inkscape:cy="46.714823"
-     inkscape:window-width="1920"
-     inkscape:window-height="1012"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:zoom="4.1474471"
+     inkscape:cx="94.636529"
+     inkscape:cy="58.469702"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2870"
+     inkscape:window-y="6"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -504,7 +504,8 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text class="fragment"
+    <text
+       class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="8.1261187"
@@ -515,7 +516,8 @@
          style="font-size:3.175px;stroke-width:0.264583"
          x="8.1261187"
          y="3.26285">Total stress:</tspan></text>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g14">
       <g
          fill="#000000"
@@ -557,7 +559,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g15"
        style="fill:#000080">
       <g
@@ -625,7 +628,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g16"
        style="fill:#000080">
       <g
@@ -711,7 +715,8 @@
         </g>
       </g>
     </g>
-    <text class="fragment"
+    <text
+       class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="9.1165342"
@@ -722,17 +727,19 @@
          style="font-size:3.175px;stroke-width:0.264583"
          x="9.1165342"
          y="10.843315">Pore pressure:</tspan></text>
-    <text class="Animate"
+    <text
+       class="Animate"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.0006;display:inline;fill:#ff0000;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:40.0006;display:inline;fill:#ff0000;stroke-width:0.264583"
        x="25.507717"
        y="11.177495"
        id="text17"
-       transform="translate(8.587116,-0.05357764)"><tspan
+       transform="matrix(1.2419962,0,0,1.2419962,3.182849,-2.7941563)"><tspan
          x="25.507717"
          y="11.177495"
-         id="tspan1">Can't assume hydrostatic conditions</tspan></text>
-    <g class="fragment"
+         id="tspan5">Can't assume hydrostatic conditions</tspan></text>
+    <g
+       class="fragment"
        id="g25">
       <g
          fill="#000000"
@@ -800,7 +807,8 @@
         </g>
       </g>
     </g>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g26">
       <g
          fill="#000000"
@@ -842,36 +850,34 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
-       id="g27">
-      <path
-         style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="m 17.556173,15.717138 c 0.674859,0.211656 1.475201,-0.005 2.108408,0.374965 0.119266,0.07156 0.423948,0.53993 0.478457,0.526302 0.517181,-0.129295 0.330086,-0.559054 1.355628,-0.637942 0.596175,-0.04586 1.379626,0.154087 1.834085,-0.263325"
-         id="path26" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.90676px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
-         x="20.506104"
-         y="18.456799"
-         id="text26"><tspan
-           sodipodi:role="line"
-           id="tspan26"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.90676px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
-           x="20.506104"
-           y="18.456799">Need this</tspan></text>
-    </g>
-    <g class="Animate"
+    <path class="Animate"
+       style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 17.556173,15.717138 c 0.674859,0.211656 1.475201,-0.005 2.108408,0.374965 0.119266,0.07156 0.423948,0.53993 0.478457,0.526302 0.517181,-0.129295 0.330086,-0.559054 1.355628,-0.637942 0.596175,-0.04586 1.379626,0.154087 1.834085,-0.263325"
+       id="path26" />
+    <text class="Animate"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.27739px;line-height:0.95;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.454772"
+       x="20.864502"
+       y="18.902233"
+       id="text26"><tspan
+         sodipodi:role="line"
+         id="tspan26"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.27739px;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.454772"
+         x="20.864502"
+         y="18.902233">Need this</tspan></text>
+    <g
+       class="Animate"
        transform="matrix(0.31515625,0,0,0.31515625,23.342464,13.097026)"
-       ns13:version="1.10.2"
-       ns13:texconverter="pdflatex"
-       ns13:pdfconverter="inkscape"
-       ns13:text="$\\implies h_w=h_B - z_B$"
-       ns13:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns13:scale="1.0"
-       ns13:alignment="middle center"
-       ns13:stroke-to-path="0"
-       ns13:inkscapeversion="1.4"
-       ns13:jacobian_sqrt="0.352778"
+       ns77:version="1.10.2"
+       ns77:texconverter="pdflatex"
+       ns77:pdfconverter="inkscape"
+       ns77:text="$\\implies h_w=h_B - z_B$"
+       ns77:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns77:scale="1.0"
+       ns77:alignment="middle center"
+       ns77:stroke-to-path="0"
+       ns77:inkscapeversion="1.4"
+       ns77:jacobian_sqrt="0.352778"
        id="g38"
        style="fill:#000080;stroke-width:1.11937">
       <defs
@@ -1083,7 +1089,8 @@
         </g>
       </g>
     </g>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g47">
       <g
          fill="#000000"
@@ -1125,7 +1132,8 @@
         </g>
       </g>
     </g>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g48">
       <g
          fill="#000000"
@@ -1154,7 +1162,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g49"
        style="fill:#000080">
       <g
@@ -1199,45 +1208,40 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
-       id="g50">
-      <path
-         style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="m 16.374696,21.945702 c 1.133068,-0.18052 2.044722,0.283695 3.011049,0.766859 0.04998,0.02499 0.06563,-0.09405 0.112774,-0.124051 0.143022,-0.09101 0.344132,-0.144138 0.50748,-0.180438 0.673593,-0.149687 2.825885,0.341571 2.898276,-0.744304"
-         id="path49" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.12843px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
-         x="19.684547"
-         y="24.390928"
-         id="text49"><tspan
-           sodipodi:role="line"
-           id="tspan49"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.12843px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
-           x="19.684547"
-           y="24.390928">Loss of head</tspan></text>
-    </g>
     <path class="Animate"
+       style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 16.374696,21.945702 c 1.133068,-0.18052 2.044722,0.283695 3.011049,0.766859 0.04998,0.02499 0.06563,-0.09405 0.112774,-0.124051 0.143022,-0.09101 0.344132,-0.144138 0.50748,-0.180438 0.673593,-0.149687 2.825885,0.341571 2.898276,-0.744304"
+       id="path49" />
+    <text class="Animate"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.6917px;line-height:0.95;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.458912"
+       x="19.719809"
+       y="25.410719"
+       id="text49"><tspan
+         sodipodi:role="line"
+         id="tspan49"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.6917px;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.458912"
+         x="19.719809"
+         y="25.410719">Loss of head</tspan></text>
+    <path
+       class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
        d="m 24.386576,20.804831 c 7.490155,-0.09799 12.108647,-1.151894 15.003776,-4.437605"
        id="path50"
        sodipodi:nodetypes="cc" />
-    <text class="Animate"
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.18934px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:7.13828;display:inline;fill:#ff0000;stroke-width:0.264583"
-       x="34.599178"
-       y="22.06204"
-       id="text50"
-       transform="translate(-0.13532804,-0.10868159)"><tspan
-         x="34.599178"
-         y="22.06204"
-         id="tspan2">Replace<tspan
-   y="22.06204"
-   id="tspan3"> </tspan></tspan><tspan
-         x="34.599178"
-         y="24.141915"
-         id="tspan4">here</tspan></text>
-    <g class="fragment"
+   <text
+      class="Animate"
+      xml:space="preserve"
+      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3px;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.458912"
+      x="30"
+      y="23"
+      id="text50"
+      transform="translate(-0.13532804,-0.10868159)"><tspan
+       x="30"
+       y="23"
+       id="tspan9">Replace here</tspan></text>
+    <g
+       class="fragment"
        id="g61">
       <g
          fill="#000000"
@@ -1279,7 +1283,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g62"
        style="fill:#000080">
       <g
@@ -1388,7 +1393,8 @@
         </g>
       </g>
     </g>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g81">
       <g
          fill="#000000"
@@ -1430,18 +1436,19 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        transform="matrix(0.352778,0,0,0.352778,9.9189481,31.406092)"
-       ns13:version="1.10.2"
-       ns13:texconverter="pdflatex"
-       ns13:pdfconverter="inkscape"
-       ns13:text="$\\gamma_w$"
-       ns13:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns13:scale="1.0"
-       ns13:alignment="middle center"
-       ns13:stroke-to-path="0"
-       ns13:inkscapeversion="1.4"
-       ns13:jacobian_sqrt="0.352778"
+       ns77:version="1.10.2"
+       ns77:texconverter="pdflatex"
+       ns77:pdfconverter="inkscape"
+       ns77:text="$\\gamma_w$"
+       ns77:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns77:scale="1.0"
+       ns77:alignment="middle center"
+       ns77:stroke-to-path="0"
+       ns77:inkscapeversion="1.4"
+       ns77:jacobian_sqrt="0.352778"
        id="g86"
        style="fill:#000080">
       <defs
@@ -1495,7 +1502,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g83"
        style="fill:#000080"
        transform="translate(-2.8586286)">
@@ -1662,7 +1670,8 @@
         </g>
       </g>
     </g>
-    <text class="fragment"
+    <text
+       class="fragment"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="10.499146"
@@ -1673,7 +1682,8 @@
          style="stroke-width:0.264583"
          x="10.499146"
          y="37.530983">Effective stress:</tspan></text>
-    <g class="fragment"
+    <g
+       class="fragment"
        id="g145"
        transform="translate(0,-5.1634492)">
       <g
@@ -1729,7 +1739,8 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        id="g146"
        style="fill:#000080"
        transform="translate(0,-5.1634492)">
@@ -1953,18 +1964,19 @@
         </g>
       </g>
     </g>
-    <g class="Animate"
+    <g
+       class="Animate"
        transform="matrix(0.352778,0,0,0.352778,13.667302,43.724913)"
-       ns13:version="1.10.2"
-       ns13:texconverter="pdflatex"
-       ns13:pdfconverter="inkscape"
-       ns13:text="$\\sigma'_B &gt;0$"
-       ns13:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns13:scale="1.0"
-       ns13:alignment="middle center"
-       ns13:stroke-to-path="0"
-       ns13:inkscapeversion="1.4"
-       ns13:jacobian_sqrt="0.352778"
+       ns77:version="1.10.2"
+       ns77:texconverter="pdflatex"
+       ns77:pdfconverter="inkscape"
+       ns77:text="$\\sigma'_B &gt;0$"
+       ns77:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns77:scale="1.0"
+       ns77:alignment="middle center"
+       ns77:stroke-to-path="0"
+       ns77:inkscapeversion="1.4"
+       ns77:jacobian_sqrt="0.352778"
        id="g152"
        style="fill:#008000">
       <defs
@@ -2084,7 +2096,8 @@
         </g>
       </g>
     </g>
-    <text class="Animate"
+    <text
+       class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
        x="29.626348"
@@ -2095,7 +2108,8 @@
          style="fill:#008000;stroke-width:0.264583"
          x="29.626348"
          y="46.318699">Stable</tspan></text>
-    <path class="Animate"
+    <path
+       class="Animate"
        id="rect152"
        style="opacity:1;fill:none;stroke:#008000;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;paint-order:markers fill stroke"
        d="m 12.716517,43.469868 h 21.689127 v 4.312034 H 12.716517 Z" />
