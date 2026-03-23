@@ -7,7 +7,7 @@
    viewBox="0 0 50.800001 15.240001"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="EX520.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,13 +23,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="4.1474471"
-     inkscape:cx="47.499099"
-     inkscape:cy="25.196222"
-     inkscape:window-width="1920"
-     inkscape:window-height="1012"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:zoom="2.0737236"
+     inkscape:cx="1.9288974"
+     inkscape:cy="132.85281"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2870"
+     inkscape:window-y="6"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -68,59 +68,59 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
-       x="2.491493"
-       y="1.9926432"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="4.1154299"
+       y="2.1843128"
        id="text1"><tspan
          sodipodi:role="line"
          id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
-         x="2.491493"
-         y="1.9926432">Data:</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222003px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
+         x="4.1154299"
+         y="2.1843128">Data:</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="9.8514977"
-       y="1.9168512"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="12.513467"
+       y="2.3315139"
        id="text2"><tspan
          sodipodi:role="line"
          id="tspan2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="9.8514977"
-         y="1.9168512">z=2 m</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="12.513467"
+         y="2.3315139">z=2 m</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="19.897047"
-       y="2.147105"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="26.052574"
+       y="2.5617676"
        id="text3"><tspan
          sodipodi:role="line"
          id="tspan3"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="19.897047"
-         y="2.147105">Q=100 kN</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="26.052574"
+         y="2.5617676">Q=100 kN</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
-       x="31.830473"
-       y="2.1843128"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="41.543472"
+       y="2.5989754"
        id="text4"><tspan
          sodipodi:role="line"
          id="tspan4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="31.830473"
-         y="2.1843128">B=2.5 m</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="41.543472"
+         y="2.5989754">B=2.5 m</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
-       x="4.6595564"
-       y="5.3511257"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="6.8168097"
+       y="5.7548771"
        id="text5"><tspan
          sodipodi:role="line"
          id="tspan5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
-         x="4.6595569"
-         y="5.3511257">Principles:</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
+         x="6.8168097"
+         y="5.7548771">Principles:</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -160,168 +160,173 @@
          y="10.301119" /></text>
     <g
        id="g19"
-       transform="translate(-0.6379426,1.9322159)">
-      <text
-         xml:space="preserve"
-         style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="17.324837"
-         y="6.7884207"
-         id="text8"><tspan
-           sodipodi:role="line"
-           id="tspan12"
-           x="17.324837"
-           y="6.7884207">Δσ =  q A I</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:4.78962px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="17.257181"
-         y="7.8030601"
-         id="text13"><tspan
-           sodipodi:role="line"
-           id="tspan13"
+       transform="translate(-5.4319904,3.6162487)">
+      <g
+         id="g1"
+         transform="matrix(1.114399,0,0,1.114399,-4.0420983,-1.1130208)">
+        <text
+           xml:space="preserve"
+           style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="17.415775"
+           y="6.927309"
+           id="text8"><tspan
+             sodipodi:role="line"
+             id="tspan12"
+             x="17.415775"
+             y="6.927309"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Δσ =  q A I</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.78962px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="17.257181"
            y="7.8030601"
-           style="stroke-width:0.264583">Σ</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="14.409389"
-         y="7.4337707"
-         id="text14"><tspan
-           sodipodi:role="line"
-           id="tspan14"
-           style="stroke-width:0.264583"
-           x="14.409389"
-           y="7.4337707">z</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="17.151983"
-         y="8.9907494"
-         id="text16"><tspan
-           sodipodi:role="line"
-           id="tspan16"
-           style="stroke-width:0.264583"
-           x="17.151983"
-           y="8.9907494">i=1</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="17.293865"
-         y="4.4923368"
-         id="text17"><tspan
-           sodipodi:role="line"
-           id="tspan17"
-           style="stroke-width:0.264583"
+           id="text13"><tspan
+             sodipodi:role="line"
+             id="tspan13"
+             x="17.257181"
+             y="7.8030601"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.78962px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">Σ</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="13.715832"
+           y="7.4607081"
+           id="text14"><tspan
+             sodipodi:role="line"
+             id="tspan14"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="13.715832"
+             y="7.4607081">z</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="17.199829"
+           y="9.4771805"
+           id="text16"><tspan
+             sodipodi:role="line"
+             id="tspan16"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="17.199829"
+             y="9.4771805">i=1</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
            x="17.293865"
-           y="4.4923368">n</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="19.594538"
-         y="7.5135136"
-         id="text18"><tspan
-           sodipodi:role="line"
-           id="tspan18"
-           style="stroke-width:0.264583"
-           x="19.594538"
-           y="7.5135136">i</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="21.442705"
-         y="7.4337707"
-         id="text19"><tspan
-           sodipodi:role="line"
-           id="tspan19"
-           style="stroke-width:0.264583"
-           x="21.442705"
-           y="7.4337707">i</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.59502px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="22.901182"
-         y="7.3061819"
-         id="text15"><tspan
-           sodipodi:role="line"
-           id="tspan15"
-           style="stroke-width:0.264583"
-           x="22.901182"
-           y="7.3061819">i</tspan></text>
+           y="4.4923368"
+           id="text17"><tspan
+             sodipodi:role="line"
+             id="tspan17"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="17.293865"
+             y="4.4923368">n</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="19.251644"
+           y="7.994421"
+           id="text18"><tspan
+             sodipodi:role="line"
+             id="tspan18"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="19.251644"
+             y="7.994421">i</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="21.681934"
+           y="7.7924728"
+           id="text19"><tspan
+             sodipodi:role="line"
+             id="tspan19"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="21.681934"
+             y="7.7924728">i</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="24.360476"
+           y="7.7924728"
+           id="text15"><tspan
+             sodipodi:role="line"
+             id="tspan15"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59502px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="24.360476"
+             y="7.7924728">i</tspan></text>
+      </g>
     </g>
     <g
-       id="g26"
-       transform="translate(0.86654887,1.7435751)">
+       id="g2"
+       transform="translate(-1.373391,0.81907336)">
       <text
          xml:space="preserve"
-         style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="28.739317"
-         y="6.4968791"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="28.099318"
+         y="9.4996061"
          id="text20"><tspan
            sodipodi:role="line"
            id="tspan20"
-           style="stroke-width:0.264583"
-           x="29.131371"
-           y="6.4968791">I = </tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="28.504309"
+           y="9.4996061">I = </tspan></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 30.716937,6.4968791 H 44.292209"
+         d="M 30.482922,8.6915478 H 48.884895"
          id="path20"
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="37.492859"
-         y="5.9914136"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="39.717777"
+         y="7.9154258"
          id="text21"><tspan
            sodipodi:role="line"
            id="tspan21"
-           style="stroke-width:0.264583"
-           x="37.492859"
-           y="5.9914136">3</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="39.717777"
+           y="7.9154258">3</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="36.608955"
-         y="9.5372419"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="38.968727"
+         y="11.707948"
          id="text22"><tspan
            sodipodi:role="line"
            id="tspan22"
-           x="36.608955"
-           y="9.5372419">2πz [1+(r/z) ]</tspan></text>
+           x="38.968727"
+           y="11.707948">2πz [1+(r/z) ]</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:0.956319px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="33.770504"
-         y="8.7018871"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="34.916039"
+         y="10.40215"
          id="text23"><tspan
            sodipodi:role="line"
            id="tspan23"
-           style="stroke-width:0.264583"
-           x="33.770504"
-           y="8.7018871">2</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="34.916039"
+           y="10.40215">2</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:0.956319px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="41.712891"
-         y="8.1775875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="45.538715"
+         y="9.7355881"
          id="text25"><tspan
            sodipodi:role="line"
            id="tspan25"
-           style="stroke-width:0.264583"
-           x="41.712891"
-           y="8.1775875">2</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="45.538715"
+           y="9.7355881">2</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:0.956319px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
-         x="44.073277"
-         y="8.1775875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;line-height:0.95;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="48.350197"
+         y="9.6730165"
          id="text26"><tspan
            sodipodi:role="line"
            id="tspan26"
-           style="stroke-width:0.264583"
-           x="44.073277"
-           y="8.1775875">5/2</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.956319px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+           x="48.350197"
+           y="9.6730165">5/2</tspan></text>
     </g>
   </g>
 </svg>
