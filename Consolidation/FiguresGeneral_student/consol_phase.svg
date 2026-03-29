@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4in"
+   height="1.2in"
+   viewBox="0 0 101.6 30.480002"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="consol_phase.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.1291572"
+     inkscape:cx="116.94768"
+     inkscape:cy="27.945329"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker13"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Stop"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1"
+         d="M 0,4 V -4"
+         id="path13" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Stop"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Stop"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1"
+         d="M 0,4 V -4"
+         id="path23" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Dot"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Dot"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         sodipodi:nodetypes="sssss"
+         id="path17" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#d5e5ff;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect1"
+       width="12.974363"
+       height="9.5765562"
+       x="2.0649409"
+       y="4.0303016" />
+    <rect
+       style="fill:#ffb380;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect2"
+       width="12.974363"
+       height="7.9970288"
+       x="2.0649409"
+       y="13.606857" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 2.0649408,4.0303016 H 15.039304 V 21.603886 H 2.0649408 Z"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 2.0649408,13.606857 H 15.039304"
+       id="path3" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="4.7402697"
+       y="9.4073868"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="4.7402697"
+         y="9.4073868">Water</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="4.7402697"
+       y="17.557314"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="4.7402697"
+         y="17.557314">Solids</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.6429;display:inline;stroke-width:0.264583"
+       x="25.101871"
+       y="5.3434677"
+       id="text6"
+       transform="translate(-16.395845,19.559677)"><tspan
+         x="25.101871"
+         y="5.3434677"
+         id="tspan10">Original<tspan
+   y="5.3434677"
+   id="tspan12"> </tspan></tspan><tspan
+         x="25.101871"
+         y="8.3597178"
+         id="tspan13">configuration</tspan></text>
+    <rect
+       style="fill:#d5e5ff;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect6"
+       width="12.974363"
+       height="7.7752247"
+       x="25.42708"
+       y="5.8316331" />
+    <rect
+       style="fill:#ffb380;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect7"
+       width="12.974363"
+       height="7.9970288"
+       x="25.42708"
+       y="13.606857" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 25.427079,5.8744111 H 38.401443 V 21.603886 H 25.427079 Z"
+       id="path7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 25.427079,13.606857 H 38.401443"
+       id="path8" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="28.102407"
+       y="9.4073868"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="28.102407"
+         y="9.4073868">Water</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="28.102407"
+       y="17.557314"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="28.102407"
+         y="17.557314">Solids</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.6429;display:inline;stroke-width:0.264583"
+       x="25.101871"
+       y="5.3434677"
+       id="text10"
+       transform="translate(6.7644389,19.559677)"><tspan
+         x="25.101871"
+         y="5.3434677"
+         id="tspan17">Final<tspan
+   y="5.3434677"
+   id="tspan18"> </tspan></tspan><tspan
+         x="25.101871"
+         y="8.3597178"
+         id="tspan21">configuration</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#ArrowWide)"
+       d="m 15.7946,14.473705 c 2.760577,-2.138166 5.997116,-1.720784 8.962723,0.417382"
+       id="path10"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 15.039305,4.0303016 h 24.46943"
+       id="path11"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker13);marker-end:url(#Stop)"
+       d="M 38.401442,5.831633 V 4.0303016"
+       id="path12" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="47.594147"
+       y="6.0091963"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="stroke-width:0.264583"
+         x="47.594147"
+         y="6.0091963">Settlement</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+       d="M 40.759475,4.9309672 H 38.401442"
+       id="path14" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="21.361511"
+       y="2.8875003"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke-width:0.264583"
+         x="21.361511"
+         y="2.8875003">Consolidation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
+       x="80.388191"
+       y="2.8875003"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke-width:0.264583"
+         x="80.388191"
+         y="2.8875003">Compaction</tspan></text>
+    <rect
+       style="fill:#d5e5ff;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793745, 0.264583;paint-order:markers fill stroke"
+       id="rect16"
+       width="12.974363"
+       height="4.730155"
+       x="59.900795"
+       y="8.8767023" />
+    <rect
+       style="fill:#ffb380;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect17"
+       width="12.974363"
+       height="7.9970288"
+       x="59.900795"
+       y="13.606857" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 59.900795,4.0303016 H 72.875158 V 21.603886 H 59.900795 Z"
+       id="path18" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 59.900795,13.606857 H 72.875158"
+       id="path19" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="62.576122"
+       y="11.812858"
+       id="text19"><tspan
+         sodipodi:role="line"
+         id="tspan19"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="62.576122"
+         y="11.812858">Water</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="62.576122"
+       y="17.557314"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="62.576122"
+         y="17.557314">Solids</tspan></text>
+    <rect
+       style="fill:#ffb380;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793747, 0.264583;paint-order:markers fill stroke"
+       id="rect21"
+       width="12.974363"
+       height="7.9970288"
+       x="83.262932"
+       y="13.606857" />
+    <rect
+       style="fill:#d5e5ff;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793745, 0.264583;paint-order:markers fill stroke"
+       id="rect32"
+       width="12.974363"
+       height="4.730155"
+       x="83.262932"
+       y="8.8767023" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 83.262933,5.8744111 H 96.237297 V 21.603886 H 83.262933 Z"
+       id="path21" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 83.262933,13.606857 H 96.237297"
+       id="path22" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="85.938263"
+       y="12.268849"
+       id="text22"><tspan
+         sodipodi:role="line"
+         id="tspan22"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="85.938263"
+         y="12.268849">Water</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="85.938263"
+       y="17.557314"
+       id="text23"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583"
+         x="85.938263"
+         y="17.557314">Solids</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#ArrowWide)"
+       d="m 73.630454,14.473705 c 2.760577,-2.138166 5.997116,-1.720784 8.962723,0.417382"
+       id="path24"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 72.875159,4.0303016 h 24.46943"
+       id="path25"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker13);marker-end:url(#Stop)"
+       d="M 96.237296,5.831633 V 4.0303016"
+       id="path26" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.6429;display:inline;stroke-width:0.264583"
+       x="25.101871"
+       y="5.3434677"
+       id="text29"
+       transform="translate(41.440007,19.559677)"><tspan
+         x="25.101871"
+         y="5.3434677"
+         id="tspan24">Original<tspan
+   y="5.3434677"
+   id="tspan25"> </tspan></tspan><tspan
+         x="25.101871"
+         y="8.3597178"
+         id="tspan26">configuration</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;white-space:pre;inline-size:21.6429;display:inline;stroke-width:0.264583"
+       x="25.101871"
+       y="5.3434677"
+       id="text32"
+       transform="translate(64.600291,19.559677)"><tspan
+         x="25.101871"
+         y="5.3434677"
+         id="tspan27">Final<tspan
+   y="5.3434677"
+   id="tspan28"> </tspan></tspan><tspan
+         x="25.101871"
+         y="8.3597178"
+         id="tspan29">configuration</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 59.900795,8.8767024 H 72.87516"
+       id="path32" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 83.262931,8.8767024 H 96.237296"
+       id="path33" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="66.365501"
+       y="7.2630544"
+       id="text33"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         style="stroke-width:0.264583"
+         x="66.365501"
+         y="7.2630544">Air</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="89.727631"
+       y="8.3653126"
+       id="text34"><tspan
+         sodipodi:role="line"
+         id="tspan34"
+         style="stroke-width:0.264583"
+         x="89.727631"
+         y="8.3653126">Air</tspan></text>
+  </g>
+</svg>

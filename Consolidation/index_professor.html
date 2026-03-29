@@ -1,0 +1,1105 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>Consolidation settlements</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
+	</head>
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE 342
+						Spring 2026
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							/* color: #000; */
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+			<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+				<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+					<div class="qrCode" name="https://drive.google.com/file/d/1Ie88c8I5NilKkXbdB7NBW0iEw8noLjnV/view?usp=sharing"> </div>
+				</div>
+	
+				<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 7: Consolidation settlements">
+					<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+					<p style="color:#faffff; font-size:35px">Spring 2025</p>
+					<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+					<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+				</div>
+			</section>
+
+			<!-- <section  >
+				<h1>Recap</h1>
+					<ul>
+						<li class="fragment"> We learned how to calculate total head field, hydraulic gradient and seepage velocities in 2D.</li>
+						<li class="fragment"> We learned to calculate the uplift pressure produced by underground moving water on structures. </li>
+						<li class="fragment"> We learned how to calculate the factor of safety against internal erosion due to seepage.</li>
+					</ul>
+			</section> -->
+
+	<section  >
+		<h1>Recap</h1>
+			<ul>
+				<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				We learned how to calculate <strong style='color:black'>induced stresses</strong> in the ground produced by <strong style='color:black'>external loads</strong>.
+				</div>
+				</li>
+				<li class="fragment"> We learned how to <strong style='color:black'>multiple loads</strong> using the <strong style='color:black'>superposition principle</strong>. </li>				
+			</ul>
+	</section>
+
+				<!-- <section  >
+				    <h1>Homework assignment 4</h1>
+						<div class="container">
+							<div class="col">
+								<ul>
+									<li>Due on 03/04/2022.</li>
+									<li>50 points total.</li>
+									<li>Start ASAP.</li>
+								</ul>
+							</div>
+							<div class="col">
+				         <iframe src="FiguresGeneral/HMA3v1.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
+							</div>
+						</div>
+				</section> -->
+
+
+        <section >
+			<h1>Contents</h1>
+			<div class='container'>
+			<div class='col' style="width: 50%;">
+				<ul class="contentStyle" style="margin-top: -45px;">
+					<li class="l1">Definition of consolidation</li>
+					<li class="l1">Primary consolidation</li>
+					<li class="l1">Oedometer/consolidation test</li>
+					<li class="l1">Virgin and reloading compression</li>
+					<li class="l1">Stress history</li>
+					<li class='l1'>Settlement in multilayered systems</li>
+				</ul>
+			</div>
+			<div class='col' style="width: 50%;">
+			<div class='container'>
+				<div class='col' style="width: 50%;">
+					<div class="stickynote" style="margin-top: 100px;margin-left: 20px;">
+						<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
+						<ul>
+							<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='col' style="width: 50%;">
+				<div class='stickynote' style='margin-top: 100px;margin-left: 20px;'>
+					<p style="margin-top: -20px;">After this lecture we will able to:</p>
+					<ul style="margin-top: -15px;">
+						<li>Calculate the coefficients of compressibility and recompression of fine-grained soils.</li>					
+						<li>Calculate the overconsolidation ratio.</li>
+						<li>Estimate settlements due to primary consolidation.</li>
+					</ul>
+				</div>
+				</div>
+				</div>
+		</div>
+			</div>
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+	<section >
+		<h1 style="margin-top:0px;font-size:55px">Case history- Leaning Tower of Pisa</h1>
+		<div class="container">
+			<div class="col" style="width: 30%;">
+		       <figure>
+		         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg/1200px-The_Leaning_Tower_of_Pisa_SB.jpeg" style="width:100%" data-preload/>
+		         <footer style="margin-top:-60px;"><small></small></footer>
+		       </figure>
+			</div>
+			<div class="col" style="width: 70%;">
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				Leaning is due to <strong style='color:red'>uneven settlements</strong>.
+				</div>
+				<figure style="margin-top:-10px;">
+				  <img src="FiguresGeneral/profile.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small>http://madridengineering.com
+</small></footer>
+				</figure>
+			</div>
+		</div>
+	</section>
+
+
+	<section >
+		<figure style="margin-top: -20px;">
+		  <img src="FiguresGeneral/thistory.svg" style="width:100%" data-preload/>
+		  <footer style="margin-top:-60px;"><small></small></footer>
+		</figure>
+	</section>
+
+	<section >
+		<div class="container">
+			<div class="col" style="width: 50%;">
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:green'>Remediation:</strong>
+				<ul>
+					<li class="fragment"> Heavy load was put on north side to compensate settlement on the south. </li>
+					<li class="fragment"> Soil extraction mass (38 m\(^3\)) under the north side using angled drilling. </li>
+				</ul>
+			</div>
+
+			<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+			Engineers <strong style='color:green'>could make the tower straight</strong>. For obvious reasons, the tower was stabilized at its current inclination.
+			</div>
+
+			</div>
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="FiguresGeneral/EngSol.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+		</div>
+	</section>
+
+	<section >
+		<h1>Other sinking problems</h1>
+		<figure style="margin-top: -15px;">
+		<img src="https://substackcdn.com/image/fetch/$s_!7wGz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef4c8741-1f92-4076-8554-0c19fb99d529_1000x806.jpeg" style="width:100%; max-height:600px; object-fit:cover;" data-preload/>
+		  <footer style="margin-top:-30px;"><small>Mexico City</small></footer>
+		</figure>
+	</section>
+
+	<section >		
+		<figure>
+			<img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/amsterdam-988047_1920-1.jpg" style="width:75%" data-preload/>
+			<footer style="margin-top:-30px;"><small>Amsterdam</small></footer>
+		</figure>
+	</section>
+
+	<section >
+		<h1>Deformation of soils</h1>
+	<div class='textBox' style="margin-top:-20px;font-size:1em">
+		Recall: <strong style="color:green">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <span class='atb'>change</span> <strong style="color:black"> in effective stress</strong> there is a corresponding <span class='atb'>deformation</span>. <br>
+			\(\sigma'=\sigma-u\)
+	</div>
+	 
+	 <ul style="margin-top:-5px;font-size:0.9em">
+	 	<li>Large fill <strong style='color:green'>placement</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:blue'>Excavation</strong> \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
+		<li>Structure <strong style='color:green'>load</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:green'>Lowering</strong> the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+	 </ul>
+	 <figure style="margin-top: -15px;">
+	   <img src="FiguresGeneral/settlements.svg" style="width:90%" data-preload/>
+	   <footer style="margin-top:-60px;"><small></small></footer>
+	 </figure>
+	</section>
+
+	<section >
+		<h1>Consolidation</h1>
+
+		<div class='defBox' name='Consolidation:' style='margin-top: -20px;margin-left: 0px;'>
+			Process by which soil's bulk volume <span class='atb'>decreases</span> due to water scaping from the soil.
+		</div>
+		<figure style="margin-top:-20px;">
+			<img src="FiguresGeneral/consol_phase.svg" style="width:90%" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+
+		<div class='findingBox' style='margin-top: -10px;margin-left: 0px;'>
+		<strong style='color:red'>Do not confuse</strong> <strong style='color:green'>consolidation</strong> with <strong style='color:red'>compaction</strong>. Compaction is the process by which soil's bulk volume decreases due to air removal <strong style='color:red'>mechanical</strong> means.
+		</div>
+	</section>
+
+	<section >
+		<iframe class="stretch" src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0&rel=0&modestbranding=1" data-preload></iframe>	
+	</section>
+
+	
+
+<section >
+	
+<figure>
+  <img src="FiguresGeneral/consol_grains.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section>
+
+<section >
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the effect of soil permeability on consolidation?
+</div>
+
+<div class='textBox fragment' style='margin-top: 50px;margin-left: 0px;'>
+<p>If we apply a load on...
+	<ul>
+		<li class="fragment"> <strong style="color:red">Fully impermeable soil</strong>: water cannot leave \(\longrightarrow\) no <span class='atb'>consolidation</span> \(\longrightarrow\) no <span class='atb'>settlement</span>.</li>
+		<li class="fragment"> <strong style="color:green">Perfectly permeable soil</strong>: Water can leave <span class='atb'>instantaneously</span> \(\longrightarrow\) instantaneous <span class='atb'>consolidation</span>\(\longrightarrow\) instantaneous <span class='atb'>settlement</span>.</li>
+	</ul>
+	</p>
+</div>
+</section>
+
+<section >
+<h1>Participation question 7.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+For <strong style='color:orange'>clean sand or gravels</strong> , what of the following statements is true?
+</div>
+
+<ol class='iClicker' style="margin-top: -25px; font-size: 0.9em;" >
+<li class='l2'>Water can leave slowly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+<li class='l2'>Water can leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) rapid settlement.</li>
+<li class='l2'>Water can leave rapidly \(\longrightarrow\) slow consolidation \(\longrightarrow\) slow settlement.</li>
+<li class='l2'>Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+
+</ol>
+</section>
+
+<section >
+	<h1>Participation question 7.2</h1>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	For <strong style='color:orange'>fine-grained soils</strong>, what of the following statements is true?
+	</div>	
+	
+	<ol class='iClicker' style="margin-top: 0px; font-size: 0.9em;" >
+	<li class='l2'>Water leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) time-dependent settlement.</li>
+	<li class='l2'>Water leave slowly \(\longrightarrow\) slow consolidation \(\longrightarrow\) rapid settlement.</li>
+	<li class='l2'>Water can leave rapidly \(\longrightarrow\) slow consolidation \(\longrightarrow\) slow settlement.</li>
+	<li class='l2'>Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
+	
+	</ol>
+	</section>
+
+<section  >
+
+    <h1>Effect of drainage</h1>
+	<img src="FiguresGeneral/permeability_effect.svg" style="width:100%"/>
+
+	<div class='stickynote fragment' style='position: absolute; margin-top: -400px;margin-left: 800px;'>
+		In practice, <strong style="color:black">consolidation in clays and silts is the most problematic</strong> because it occurs well after the project has finished.
+	</div>
+
+</section>
+
+<section >
+<h1>Total settlement components</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The total settlement of a soil can be decomposed into three parts: (i) <strong style='color:green'>elastic</strong> <span class='atb'>a.k.a. immediate</span>, (ii) <strong style='color:blue'>primary consolidation</strong>, and (iii) <strong style='color:red'>secondary consolidation</strong>.
+</div>
+<div class='container'>
+<div class='col' style='width: 45%;'>
+<figure>
+<img src='FiguresGeneral/settlement_types.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 55%;'>
+<div class='equationBox' style="margin-top: 10px;">
+\( \delta_t= \color{green}{\delta_o} + \color{blue}{\delta_{pc}} +\color{red}{\delta_{sc}} \)
+</div>
+
+<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+	\(\color{green}\delta_o=\) Instantaneous settlement. <br>
+	\(\color{blue}\delta_{pc}=\) Primary consolidation. Time dependent process. <br>
+	\(\color{red}\delta_{sc}=\) Secondary consolidation. Also known as <span class='atb'>creep</span>. Is a time-dependent process.
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- <section >
+	<h1>Primary consolidation process</h1>
+<figure style="margin-top:-30px;">
+  <img src="FiguresGeneral/PC_process.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+</section> -->
+
+<section  >
+    <h1>Oedometer/consolidation test</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
+	</div>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+        				<figure>
+				  <img src="FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<p style="margin-top:-0px;">Iterative process:</p>
+				<ol style="margin-top:0px;font-size:0.9em">
+					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
+					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
+					<li class="fragment"> Measure the settlement \(\delta\) or void ratio \(e\). </li>
+					<li class='fragment'> <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
+					<li class='fragment'>Repeat 1-3 for each load increment.</li>
+					<li class="fragment"> <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
+				</ol>
+			</div>
+		</div>
+</section>
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+We often use <span class='atb'>void ration</span> for calculations of settlement. Thus, we want to relate \(\delta\) to \(e\).
+</div>
+<p class="fragment">
+Recall: \(\varepsilon_v= \Delta V/ V_o \longrightarrow\) Volumetric strain 
+</p>
+<div class='container fragment'>
+<div class='col bordered' style='width: 50%;'>
+	<div class="fragment">
+		For 1D oedometric deformation: <br>
+			\( \begin{align}
+			\varepsilon_v& = \Delta V/ V_o= \Delta H A /H_o A\\
+			&= \Delta H / H_o= \varepsilon_a
+			\end{align} \)
+	</div>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<div class="fragment">
+	Recall \(e=V_v/V_s\) <br>
+	\( \begin{align}
+	\Delta e& = -\Delta V_v / V_s\\
+	&=- \Delta H A /[H_o A/(1+e_o)]\\
+	&=- \Delta H (1+e_o)/H_o 
+	\end{align} \)
+</div>
+
+</div>
+</div>
+
+<div class='textBox fragment' style='margin-top: 20px;margin-left: 0px;'>
+	Two main equations are derived:
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='equationBox'>
+\( \varepsilon_a= -\frac{\Delta e}{ 1+ e_o} \)
+</div>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='equationBox' style="margin-left: 200px;">
+\( \delta= -\frac{\Delta e H_o}{1+e_o} \)
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+You will obtain <strong style='color:green'>one</strong> <span class='atb'>e vs. time</span> curve for each load increment.
+</div>
+<figure>
+<img src='FiguresGeneral/settlement_time.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+<div class='stickynote fragment' style='position: absolute; margin-top: -500px;margin-left: 900px;'>
+<strong style='color:black'>Note:</strong> We will look at detail at this curve in the next part of module 6.
+</div>
+
+</section>
+
+<section  >
+    <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	You will obtain <strong style='color:green'>one</strong> <span class='atb'>consolidation</span> curve per test/sample.
+	</div>
+<img src="FiguresGeneral/consol_curves.svg" style="width:100%"/>
+
+</section>
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+<span class='atb'>Sample disturbance</span> increases the <strong style='color:green'>curvature</strong> of the consolidation curve. <strong style='color:green'>Casagrande's method</strong> suppresses this effect.
+</div>
+<img src="FiguresGeneral/Casagrandes_method.svg" style="width:100%"/>
+
+</section>
+
+<section >
+<h1>Overconsolidation ratio (OCR)</h1>
+<div class='defBox' name='Overconsolidation ratio' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:green'>\(OCR\):</strong> Ratio between the <strong style="color:black">preconsolidation stress \(\sigma'_c\)</strong> and the <span class='atb'>in-situ</span> vertical effective stress <strong style="color:black">\(\sigma'_{vo}\)</strong>. <br>	
+<div class='equationBox'>
+\(OCR=\cfrac{\sigma'_c}{\sigma'_{vo}}\)
+</div>
+</div>
+
+<div class='defBox fragment' name='Normally consolidated (NC) soil' style='margin-top: 5px;margin-left: 0px;'>
+Is a soil with <span class='atb'>OCR=1</span>. Or a soil in which \(\sigma'_c=\sigma'_{vo}\)
+</div>
+
+<div class='defBox fragment' name='Overconsolidated (OC) soil' style='margin-top: 5px;margin-left: 0px;'>
+Is a soil with <span class='atb'>OCR>1</span>. Or a soil in which \(\sigma'_c>\sigma'_{vo}\)
+</div>
+</section>
+
+<section >
+	<h1>Idealized consolidation curve</h1>
+<div class="container">
+	<div class="col" style="width: 35%;">
+            <figure>
+              <img src="FiguresGeneral/uloading_reloading.svg" style="width:100%" data-preload/>
+              <footer style="margin-top:-60px;"><small></small></footer>
+            </figure>
+	</div>
+	<div class="col" style="width: 65%;">
+	<div class='defBox' name='compression index' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(C_c\):</strong> slope of the <strong style="color:blue"> virgin compression line</strong> in <strong style='color:black'>log-space</strong>.
+	<div class='equationBox'>
+	\(C_c= -\Delta e/ \log (\sigma'_f/\sigma'_0)\)
+	</div>
+	</div>
+
+	<div class='defBox' name='recompression index' style='margin-top: 15px;margin-left: 0px;'>
+		<strong style='color:green'>\(C_r\):</strong> slope of the <strong style="color:red"> unloading-reloading line</strong> in <strong style='color:black'>log-space</strong>.
+		<div class='equationBox'>
+		\(C_r= -\Delta e/ \log (\sigma'_f/\sigma'_0)\)
+		</div>
+		</div>		
+	</div>
+</div>
+<div class='findingBox fragment' style='margin-top: 15px;margin-left: 0px;'>
+<strong style='color:green'>Note:</strong> \(C_r\) and \(C_c\) are soil properties. However, \(\sigma'_c\) and \(OCR\) are <span class='atb'>state</span> parameters.
+</div>
+</section>
+
+<section >
+	<div class='container'>
+	<div class='col' style='width: 40%;'>
+		<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+			<span class='atb'>Typical</span> values of \(C_c\) and \(C_r\). Modified from Bardet (1997), Table 1 pg.305.
+		</div>
+	
+	</div>
+	<div class='col' style='width: 60%;'>
+		<table style="font-size: 0.9em; background-color: antiquewhite;">
+			<tr>
+				<th>Soil type</th>
+				<th>\(C_c\) (intact)</th>
+				<th>\(C_r\)</th>
+			</tr>
+			<tr>
+				<td>Boston Blue clay</td>
+				<td>0.32</td>
+				<td>0.07</td>
+			</tr>
+			<tr>
+				<td>Chicago clay</td>
+				<td>0.42</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Louisiana clay</td>
+				<td>0.33</td>
+				<td>0.05</td>
+			</tr>
+			<tr>
+				<td>New Orleans clay</td>
+				<td>0.29</td>
+				<td>0.04</td>
+			</tr>
+	
+		</table>
+	</div>
+	</div>
+	
+	
+	
+	
+	<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+		The following <span class='atb'>empirical</span> relationships are useful for data <strong style='color:green'>validation</strong>:
+	
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		\(C_c= 0.009 (LL-10)\) <br>
+		\(C_c= PI/74\) <br>
+		\(C_r=PI/370\)
+		</div>
+		<div class='col' style='width: 50%;'>
+		Terzagui and Peck (1967) <br>
+		Wroth and Wood (1978) <br>
+		Wroth and Wood (1978)
+		</div>
+		</div>
+	
+		</div>	
+				
+	</section>
+
+<section >
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How does <strong style='color:green'>\(\sigma'_c\)</strong> and <strong style='color:green'>\(OCR\)</strong> change with state of stress?
+</div>
+<img src="FiguresGeneral/Example_consol.svg" style="width:100%"/>
+</section>
+
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+The following observations can be drawn from observed soil behavior:
+</div>
+	<div class='textBox' style='margin-top: 100px;margin-left: 0px;'>
+		<ul style="margin-top: 0px;">
+			<li class="fragment">Soils (clay) are a <span class='atb'>history dependent</span> material \(\longrightarrow\) "have memory"</li>
+			<li class="fragment">The \(OCR\) give us information about the <span class='atb'>loading geological history</span> of the soil</li>
+			<li class="fragment">If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
+		</ul>
+		</div>
+</section>
+	
+
+
+
+<!-- <section >
+	<h1>Example 5.1</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Find \(C_c\), \(C_r\), and \(\sigma'_c\) for the consolidation test results shown in the figure below</p>
+	</div>
+
+	<div class="container">
+		<div class="col">
+			<figure>
+				<img src="FiguresGeneral/example1.PNG" style="width:90%" data-preload/>
+				<footer style="margin-top:-30px;"><small>From Ishibashi and Hazarika (2010)</small></footer>
+			</figure>
+		</div>
+		<div class="col">
+
+		</div>
+	</div>
+
+</section> -->
+
+
+
+<section >
+<h1>Participation question 7.3</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the Figure below, what statement is true?
+</div>
+
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure>
+<img src='./FiguresGeneral/consol_1.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'  style="width: 50%;">
+<ol class='iClicker' >
+<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
+<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
+</ol>
+</div>
+</div>
+</section>
+
+<section >
+	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+		Settlement in <strong style="color:green">normally consolidated soils</strong>
+	</div>	
+	<div class="container">
+		<div class="col" style="width: 50%;">
+	            <figure>
+	              <img src="FiguresGeneral/normally_pcsettle.svg" style="width:100%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="width: 50%;">
+			<ul>
+				<li>Stress path moves along <strong style="color:blue">virgin curve</strong></li>
+				<li>Then: <br>
+					\( \begin{align}
+					\delta_{pc}&= - \cfrac{H_0 \Delta e}{1+e_0} \\
+				
+					\end{align} \)
+
+				<div class='equationBox'>
+				\(\delta_{pc}= C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
+				</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section >
+	<h1>Example 7.1</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p style="margin-top:0px;font-size:1em">Estimate the primary consolidation settlement for the clay in the profile below. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The increase of vertical stress is estimated to be 200 kPa at the middle of the clay layer. Assume the soil above the water table to be saturated, \(C_c=0.3\), and \(G_s=2.7\).</p>
+		
+	</div>
+	<div class="container">
+		<div class="col" style="width: 30%;">
+<figure>
+  <img src="FiguresGeneral/Profile_ex61.svg" style="width:100%" data-preload/>
+  <footer style="margin-top:-60px;"><small></small></footer>
+</figure>
+		</div>
+		<div class="col" style="width: 70%;">
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral/EX610.svg" style="width:100%"/>
+</div>
+
+		</div>
+	</div>
+
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral/EX611.svg" style="width:100%"/>
+</div>
+
+</section>
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	Settlement in <strong style="color:green">overconsolidated soils. <br>
+	Case a:</strong> \(\sigma'_f<\sigma'_c\)  
+</div>
+
+	<div class="container">
+		<div class="col" style="width: 50%;">			
+	            <figure>
+	              <img src="FiguresGeneral/pc_overconsol.svg" style="width:80%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="width: 50%;">
+			<ul>
+				<li>Stress path moves along <strong style="color:red">recompression curve</strong></li>
+				<li>Then:
+				<div class='equationBox'>
+				\(\delta_{pc}= C_r \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
+				</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section >
+	<h1>Example 7.2</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Solve problem 7.1 but assuming the clay has \(OCR=4\), \(w=38\%\), and \(C_r=0.05\). All other values from Example 7.1 are unchanged.</p>		
+	</div>
+
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX620.svg" style="width:100%"/>
+	</div>
+</section>
+
+<section >
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+		Settlement in <strong style="color:green">overconsolidated soils. <br>
+		Case b:</strong> \(\sigma'_f>\sigma'_c\)
+	</div>
+	<div class="container">
+		<div class="col" style="width: 50%;">			
+	            <figure>
+	              <img src="FiguresGeneral/pc_complexoverconsol.svg" style="width:100%" data-preload/>
+	              <footer style="margin-top:-60px;"><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="width: 50%;">
+
+				<p style="margin-top: 100px;">Stress path moves along <strong style="color:red">recompression curve</strong> and <strong style="color:blue">virgin curve</strong></p>
+
+
+		</div>
+	</div>
+
+	<div class='equationBox'>
+		\(\delta_{pc} = C_r \cfrac{H_o}{1+e_o} \log \left(OCR\right)+ C_c \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_c}\right)\)
+		</div>
+</section>
+
+<section >
+	<h1>Example 7.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<p>Solve problem 7.2 assuming \(OCR=1.2\). Determine the primary consolidation settlement.</p>
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral/EX630.svg" style="width:100%"/>
+</div>
+
+</section>
+
+
+<section >
+	<h1 style="margin-top:0px;font-size:55px">Primary consolidation in layered soils</h1>
+    <figure>
+		<img src="FiguresGeneral/multiple_consol.svg" style="width:60%" data-preload/>
+		<footer style="margin-top:-60px;"><small></small></footer>
+	  </figure>
+</section>
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Follow the steps below to calculate \(\delta_{pc}\) in multilayered soils:
+</div>
+<ol style="margin-top:0px;font-size:0.95em">
+	<li class="fragment"> Determine initial vertical effective stresses (\(\sigma'_{vo}\)) at the center of soil layers of concern. If thick layers, divide and find \(\sigma'_{vo}\) for centers of sub-layers.
+ </li>
+ <li class="fragment"> Extract sample at the center of each layer or sub-layer and run consolidation tests.
+ </li>
+ <li class="fragment"> Determine \(\sigma'_c\) and initial void ratio \(e_0=G_s w_0\) for layers of concern.</li>
+	 <li class="fragment"> Determine \(C_c\) and \(C_r\) for layers of concern.
+
+ </li>
+ <li class="fragment">Determine \(\Delta \sigma\) due to external load at the center of each layer of concern.
+  </li>
+	<li class="fragment">Compute settlement \(\delta_{pc,i}\) for each individual layer of concern considering initial high of each layer \(H_o\).
+  </li>
+	<li class="fragment"> Total settlement \(=\sum \delta_{pc,i}\)
+ </li>
+</ol>
+
+
+</section>
+
+<section >
+	<h1>Example 7.4</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Calculate the settlement due to primary consolidation for the soil profile shown in the figure below. Use: (a) a single layer assumption, and (b) 10 sub-layers.
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/complex_problem.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral/EX640.svg" style="width:100%"/>
+</div>
+</div>
+</div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral/EX641.svg" style="width:100%"/>
+</div>
+
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/10ysVO6AwzHXl0tUE0H2_9ywlf7HcIFPXsYjuI828FG4/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
+</div>
+
+</section>
+
+<section >
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How many layers do I need to refine the results?
+</div>
+<figure>
+<img src='FiguresGeneral/settlement.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>
