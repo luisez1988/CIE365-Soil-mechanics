@@ -1,0 +1,861 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Induced Stress</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	</head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+				<style>
+				.container{
+						display: flex;
+				}
+				.col{
+						flex: wrap;
+				}
+				</style>
+
+				<div class='footer'>
+					CE 342
+					Spring 2026
+				</div>
+
+				<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							/* color: #000; */
+							margin-top:0px;
+					}
+	
+	
+				</style>
+				<!-- <section> -->
+        <section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1Gyon5dFTZI8dCRemp3rTOg7lrNGOMvPp/view?usp=sharing"> </div>
+			</div>
+
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 6: Induced stress">
+						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+						<p style="color:#faffff; font-size:35px">Spring 2026</p>
+						<!-- <p style="color:#faffff; font-size:35px">March 9, 2022</p> -->
+						<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+					</div>
+        </section>
+
+				<section >
+				    <h1>Recap</h1>
+						<ul>
+							<li class='fragment'>We learned general aspects of <strong style='color:black'>flow nets</strong>. </li>
+
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							We learned how to <strong style='color:black'>calculate the maximum and critical hydraulic gradient</strong> to asses <strong style='color:black'>internal erosion and piping</strong>.
+							</div>								
+							</li>
+	
+						</ul>
+				</section>
+
+				<!-- <section  >
+				    <h1>Homework assignment 4</h1>
+						<div class="container">
+							<div class="col">
+								<ul>
+									<li>Due on 03/04/2022.</li>
+									<li>50 points total.</li>
+									<li>Start ASAP.</li>
+								</ul>
+							</div>
+							<div class="col">
+				         <iframe src="FiguresGeneral/HMA3v1.pdf" height="600px" style="margin-top:0px; width:100%" data-preload></iframe>
+							</div>
+						</div>
+				</section> -->
+
+
+        <section >
+					<h1>Contents</h1>
+					<div class='container'>
+					<div class='col' style='width: 50%;'>
+						<ul class="contentStyle">
+							<li class="l1">Increment of stress due to an infinitely loaded area.</li>
+							<li class="l1">Increment of stress due to a point load (Boussinesq equation).</li>
+							<li class="l1">Use of charts and analytical solutions.</li>
+							<li class='l1'>Use of numerical approximation.</li>							
+						</ul>
+					</div>
+					<div class='col' style='width: 50%;'>
+						<div class='container'>
+							<div class='col' style="width: 50%;">
+								<div class="stickynote" style="margin-top: 100px;margin-left: 20px; height: 300px;">
+									<p style="margin-top: -10px;"> Objectives covered in this lecture</p>
+									<ul>
+										<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="width: 50%;">
+							<div class='stickynote' style='margin-top: 100px;margin-left: 20px; height: 300px;'>
+								<p style="margin-top: -20px;">After this lecture we will able to:</p>
+								<ul style="margin-top: -15px;">
+									<li>Calculate the increment of stress produced by infinitely loaded soils.</li>					
+									<li>Calculate the increment of stress for arbitrarily shaped areas.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>			
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+		<section >
+		<h1>Induced stresses</h1>
+
+		<div class='defBox' name=':' style='margin-top: 0px;margin-left: 0px;'>
+			Is the <strong style="color:green">increment of stress</strong> produced by an <strong style='color:green'>external</strong> load.
+		</div>
+
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<figure>
+				  <img src="FiguresGeneral/induced_stress.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+			<div class='equationBox fragment' style="margin-top: 50px;">
+			\(  \sigma'_f=\underbrace{\color{blue}{\sigma'_0}}_{\substack{\text{In-situ} \\ \text{stress}}}+\underbrace{\color{green}{\Delta \sigma}}_{\substack{\text{Increment of} \\ \text{stress}}}\)
+			</div>
+	
+			</div>
+		</div>
+
+		<div class='findingBox fragment' style='margin-top: 20px;margin-left: 0px;'>
+			These stresses are absorbed either by <strong style="color:blue">the water as excess water pressure</strong> or by <strong style="color:green">the soil skeleton as effective stresses</strong>.
+			With enough <strong style="color:red">time</strong>, the soil skeleton will carry the generated stress.
+		</div>
+		
+
+		</section>
+
+
+		<section >
+			<h1>Infinitely loaded area</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			If the <strong style='color:#000'>width</strong> of the loaded area is considerably larger than the thickness of the compressible layer, it can be assumed as <strong style="color:black">infinitely loaded area</strong>.
+		</div>
+
+			<figure style="margin-top:-5px;">
+			  <img src="FiguresGeneral/infinite.svg" style="width:100%" data-preload/>
+			  <footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+
+			<p style="margin-top:-30px;">The increment of stress for the idealized model <strong style="color:black">is independent of position and depth</strong>. <br>
+				<div class='equationBox' style="margin-left: 280px;">
+				\( \Delta \sigma (x,z)= q \)
+				</div>
+					
+			</p>
+		</section>
+
+		<section >
+		<h1>Example 6.1</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		A landfill is designed to contain waste up to a height of 30 ft over a thick clay as shown in the figure. The landfill wide in comparison to the thickness of the soil layer. Calculate the increment of stress, and final total and effective vertical stresses at a depth of 5 ft.
+		</div>
+		<div class='container'>
+		<div class='col' style='width: 25%;'>
+		<figure>
+		<img src='FiguresGeneral/landfill.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 75%;'>
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX510.svg" style="width:100%"/>
+		</div>
+		</div>
+		</div>
+		</section>
+
+		<section >
+		<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+		What is the increment of stress when the applied load is finite?
+		</div>	
+			<p>In many cases, loads at the surface are not infinitely extended or uniformly distributed. Other models are needed.</p>
+			<figure>
+			  <img src="FiguresGeneral/need.svg" style="width:100%" data-preload/>
+			  <footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+			<p>What is the relationship between \(\Delta \sigma_1\), \(\Delta \sigma_2\), and \(\Delta \sigma_3\)?</p>
+		</section>
+
+		<!-- <section  >
+		    <h1>Boussinesq equation</h1>
+				<div class="container">
+					<div class="col">
+		           <ul style="margin-top:0px;font-size:35px">
+		           	<li>French mathematician and physicist who made contributions to the theory of hydrodynamics, vibration, light, and heat.</li>
+								<li>He derived an equation to find the stress distribution in a semi-infinite elastic medium due to a point load acting on its surface.</li>
+								<li>These equations are closed form solutions derived using continuum mechanics principles and its derivation is not straighfordward.</li>
+		           </ul>
+					</div>
+					<div class="col">
+		            <figure>
+		              <img src="https://mathshistory.st-andrews.ac.uk/Biographies/Boussinesq/Boussinesq.jpeg" style="width:70%" data-preload/>
+		              <footer style="margin-top:-30px;"><small>Joseph Boussinesq (1842-1929)</small></footer>
+		            </figure>
+					</div>
+				</div>
+		</section> -->
+
+<section>
+<h1>The 2:1 Method</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+This is an <span class='atb'>empirical approach</span> for calculation of <strong style='color:#000'>stress distribution</strong>
+</div>
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<strong style='color:#000'>Rectangular Spread footing</strong>
+<figure>
+<img src='FiguresGeneral/21_rec.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+<div class='equationBox'>
+\( \Delta \sigma=  \cfrac{P}{(B + z)(L + z)}\)
+</div>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<strong style='color:#000'>Strip footing (Infinitely long foundation)</strong>
+<figure>
+<img src='FiguresGeneral/21_strip.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+<div class='equationBox'>
+\( \Delta \sigma=  \cfrac{P}{(B + z)}\)
+</div>
+</div>
+</section>
+
+<section  >
+<h1 style="margin-top:0px;font-size:55px">Stress distribution due to a point load</h1>
+				<div class="container">
+					<div class="col" style="width: 50%;">
+						<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							Boussinesq's equation for the <strong style="color:black">stress distribution</strong> in a <strong style="color:black">elastic semi-infinite</strong> medium is:
+						</div>
+						<p style="margin-top:0px;">
+							<div class='equationBox'>
+							\( \Delta \sigma_z=\cfrac{3 Q}{2 \pi z^2 \left[1+(r/z)^2\right]^{5/2}} \)
+							</div> <br>
+						
+							$$\Delta \sigma_z=QI$$
+						</p>
+						<p>\(I=\) influence factor</p>
+					</div>
+					<div class="col" style="width: 50%;">
+						<div class='findingBox' style='margin-top: 0px;margin-left: 5px;'>
+							Assumptions:
+							<ul style="margin-top:-20px;">
+								<li>Continuous material</li>
+								<li>Isotropic</li>
+								<li>Uniform</li>
+								<li>Linear elastic</li>
+							</ul>
+						</div>						
+				                <figure>
+				                  <img src="FiguresGeneral/point.svg.2022_03_06_20_01_31.0.svg" style="width:100%" data-preload/>
+				                  <footer style="margin-top:-60px;"><small></small></footer>
+				                </figure>
+
+					</div>
+
+				</div>
+
+		</section>
+
+		<section  >
+		    <h1 style="margin-top:0px;font-size:45px">Superposition and numerical approximation</h1>
+				<div class="container">
+					<div class="col" style="width: 40%;">
+		         <figure>
+		           <img src="FiguresGeneral/generalization.svg" style="width:100%" data-preload/>
+		           <footer style="margin-top:-60px;"><small></small></footer>
+		         </figure>
+						 <ul>
+						 	<li>\(A_i=\) discretized area.</li>
+						 </ul>
+					</div>
+					<div class="col"  style="width: 60%;">
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						The <strong style="color:black">principle of superposition</strong> implies that the <span class='atb'>total</span> induced stress of multiple loads is the <strong style='color:black'>addition</strong> of all individual induced stresses. <br>
+						$$\Delta \sigma_z= \int_{A} I(x,y) q(x,y) dA$$
+					</div>
+					</div>
+				</div>
+				We can use a numerical approximation instead:
+				<div class='equationBox' style="margin-left:380px;">
+				\(  \Delta \sigma_z=\sum_{i=1}^n q_i A_i I_i\)
+				</div>
+		</section>
+
+		<section >
+		<h1>Example 6.2</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		A square footing of 2.5 m of width is placed at the surface of the soil as shown in in the figure. Structural analysis indicates that the footing will carry a load of 100 kN. Calculate the increment of stress at a depth of 2 m at the centerline and the mid edge of the footing. Use a discretization of two elements in each direction. How does solution compares with the point load solution?
+		</div>
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<figure>
+		<img src='FiguresGeneral/footing.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 50%;'>
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX520.svg" style="width:100%"/>
+		</div>
+		</div>
+		</div>
+		
+		</section>
+
+		<section >
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX521.svg" style="width:100%"/>
+		</div>		
+		</section>
+
+		<section >
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<figure>
+		<img src='FiguresGeneral/stress_increment.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		
+		</section>
+
+		<section >
+		<figure>
+		<img src='FiguresGeneral/stress_increment_profile.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		
+		</section>
+
+		<section >
+		<h1>Analytical and chart solutions</h1>
+
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Analytical solutions are available for <span class='atb'>special cases</span>. These solutions are also available in charts and tables.
+		</div>
+
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<p>In general, the solutions are of the form: <br>
+		<div class='equationBox' style="margin-left: 220px;">
+		\( \Delta \sigma_z= q I' \) 
+		</div><br>
+		\( I'=\) <strong style='color:black'>dimensionless</strong> influence factor. <br>
+		\(q=\) Surcharge load.</p>
+		</div>
+		<div class='col' style='width: 50%;'>
+		<div class='findingBox fragment' style='margin-top: 5px;margin-left: 5px;'>
+			<strong style='color:green'>Note:</strong> You need to take special care to make sure you are using the same: <br>
+			<ul>		
+			<li>Coordinate system</li>
+			<li>Reference point</li>
+			</ul>
+		</div>
+		<div class='stickynote fragment' style='margin-top: 20px;margin-left: 200px;'>
+		These solutions are obtained by analytical integration of the point load equation over defined areas.
+		</div>
+		</div>
+		</div>
+		
+		</section>
+
+		<section >
+		<h1>Line load</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:black'>Continuous</strong> loading extending infinitely in <span class='atb'>one</span> direction.
+		</div>
+
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<figure>
+		<img src='FiguresGeneral/cont_load.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 50%;'>
+		Example:
+		<figure>
+		<img src='FiguresGeneral/Line_load.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		</div>
+
+		<div class='equationBox' style="margin-left: 400px;">
+		\( I[1/L]= \cfrac{2 z^3}{\pi (x^2+z^2)^2} \)
+		</div>
+
+
+		</section>
+
+
+		<section >
+		<h1>Strip load</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:black'>Cross-sectional</strong> load that extends infinitely in <span class='atb'>one</span> direction.
+		</div>
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<figure style="margin-top: -20px;">
+		<img src='FiguresGeneral/cross_load.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		<figure style="margin-top: -20px;">
+			<img src='FiguresGeneral/cross_load_exa.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+		</div>
+		<div class='col' style='width: 50%;'>
+			<h4 style="margin-top: 50px;"> Uniform load</h4>
+			<div class='equationBox' style="font-size: 0.9em;">
+			\( I'[-]= \frac{1}{\pi}[\alpha + \sin \alpha \cos(\alpha + 2 \beta)] \)
+			</div>
+
+			<h4 style="margin-top: 50px;">Linear load</h4>
+			<div class='equationBox'>
+			\( I'[-]=\frac{1}{\pi} \left[ \frac{x}{B} \alpha - \frac{1}{2} \sin (2 \beta)\right] \)
+			</div>
+		</div>
+		</div>		
+		</section>
+
+		<section >
+		<div class='container'>
+		<div class='col' style='width: 45%;'>
+			<figure>
+				<img src='https://www.geoengineer.org/storage/education/2431/editor_photos/25170/Technical_figures_2_separate-12_NO_CAPTION.jpg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+
+		</div>
+		<div class='col' style='width: 55%;'>
+			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+				This chart is for the combined action of linear and uniform load at the <span class='atb'>centerline</span> of the embankment.
+				</div>
+
+		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+		<h4>Instructions to use charts:</h4>
+		<ol style="margin-top: -30px;">
+			<li class='fragment'>Check definitions in the figure.</li>
+			<li class='fragment'>Inspect labels in curves and axis.</li>
+			<li class='fragment'>Determine if problem can be adjusted using the plot definitions.</li>
+			<li class='fragment'>If yes, calculate normalized values.</li>
+			<li class='fragment'>Search your curve and find the influence factor.</li>
+		</ol>
+		</div>
+		</div>
+		</div>
+		
+		</section>
+
+
+		<section >
+		<h1>Circularly loaded area</h1>
+		<div class='container'>
+		<div class='col' style='width: 55%;'>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			The following equation is for the stress along the <strong style='color:black'>axis of symmetry</strong>.
+		</div>	
+		
+
+		
+
+		<div class='equationBox' style="margin-top: 50px;">
+		\( I'[-]= 1- \left[\frac{1}{1+ (r_o/z)^2} \right]^{3/2} \)
+		</div>
+
+		<p style="margin-top: 80px;">
+			\(r_o=\) Radius of the loaded area. <br>
+			\(z=\) Depth of interest.
+		</p>
+		
+
+
+	</div>
+		<div class='col' style='width: 45%;'>
+			Example
+			<figure>
+				<img src='https://img1.wsimg.com/isteam/ip/926e83a7-8147-42db-9ae8-45b726918023/tanks.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,cg:true' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+
+		<figure>
+		<img src='FiguresGeneral/circle.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		</div>
+		
+		</section>
+
+		<section >
+		<h1>Rectangular loaded area</h1>
+
+
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				The influence factor at the <span class='atb'>corner</span> of a <strong style='color:black'>uniformly</strong> loaded rectangular area is:
+			</div>
+			
+			<div class='equationBox' style="font-size: 0.8em; margin-top: 25px;">
+			\( I'[-]= \frac{1}{2\pi} \left[\tan^{-1} \left( \frac{LB}{zR_3} \right)+ \frac{LBz}{R_3} \left( \frac{1}{R_1^2}+\frac{1}{R_2^2}\right) \right] \)
+			</div>
+	
+			<p style="margin-top: 0px;">
+				\(L=\) Length of the loaded area. <br>
+				\(B=\) Width of the loaded area. <br>
+				\(R_1= \sqrt{L^2+ z^2}\)  <br>
+				\(R_2= \sqrt{B^2 + z^2}\) <br>
+				\(R_3= \sqrt{B^2+L^2+z^2}\)
+			</p>
+		</div>
+		<div class='col' style='width: 50%;'>
+			<figure style="margin-top: 0px;">
+			<img src='FiguresGeneral/rect_def.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+		</div>
+		</div>
+		</section>
+
+		<section >
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+			<figure>
+				<img src='FiguresGeneral/circular_chart.svg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+		</div>
+		<div class='col' style='width: 50%;'>
+			<figure>
+				<img src='FiguresGeneral/rectangular.svg' width='80%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+		</div>
+		</div>		
+		
+		</section>
+
+		<section >
+		<h1>Example 6.3</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Solve problem 6.2 using the analytical and chart solution for a rectangular loaded area. Compare with the approximation.
+		</div>
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX530.svg" style="width:100%"/>
+		</div>
+		
+		</section>
+
+		<section >
+		<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+		<img src="FiguresGeneral/EX531.svg" style="width:100%"/>
+		</div>
+		
+		</section>
+
+		<section >
+			<h1>Participation question 5.1</h1>
+		<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+		For the foundation below: What is the stress increment at 2 m depth at point A if \(q=16\) kPa?
+		</div>
+
+		<div class='container'>
+		<div class='col' style='width: 30%;'>
+		<figure>
+		<img src='FiguresGeneral/quiz.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 70%;'>
+		<ol class='iClicker' >
+		<li class='l2'>7.18 kPa</li>
+		<li class='l2'>4.83 kPa</li>
+		<li class='l2'>12 kPa</li>
+		<li class='l2'>3 kPa</li>
+		<li class='l2'>1.76 kPa</li>
+		</ol>
+		</div>
+		</div>
+		
+		</section>
+
+		<section >
+			<h1>Advanced numerical models</h1>
+			<video style="margin-top: 0px" width="100%" loop src="FiguresGeneral\Video4.mp4"  autoplay type="video/mp4"> </video>
+		
+
+		</section>
+		</section>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>
