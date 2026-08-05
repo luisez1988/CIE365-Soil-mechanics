@@ -522,6 +522,82 @@ table td, table th { padding: 0.25em 0.6em; border-bottom: 1px solid #bbb; text-
 }
 
 /* --------------------------------------------------------------------------
+   Student Q&A (Google Sheet backend)
+   -------------------------------------------------------------------------- */
+
+.qa-block { margin: 3rem 0 0; }
+.qa-note { font-size: 0.9rem; color: #666; }
+#qa-status { font-size: 0.95rem; color: #666; margin: 0.8rem 0; }
+
+.qa-item { margin: 1.2rem 0; }
+.qa-item .qa-q { margin-bottom: 0.3rem; }
+.qa-item .qa-a { margin-top: 0; }
+.qa-date { font-size: 0.78rem; color: #999; text-align: right; margin-top: 0.15rem; }
+
+/* honeypot — visually gone, still in the DOM for bots */
+#qa-website { position: absolute; left: -5000px; top: 0; height: 1px; width: 1px; opacity: 0; }
+
+.qa-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.qa-panel {
+  background: #fffdf6;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  padding: 1.2rem 1.4rem 1.1rem;
+  width: min(560px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.qa-panel h3 { margin: 0 0 0.4rem; font-family: var(--serif); color: var(--brand); }
+.qa-privacy { font-size: 0.85rem; color: #555; margin: 0.2rem 0 0.8rem; }
+.qa-panel label { display: block; font-weight: 700; font-size: 0.9rem; margin: 0.6rem 0 0.2rem; }
+.qa-panel input[type="text"], .qa-panel textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.45rem 0.6rem;
+  border: 1.5px solid #999;
+  border-radius: 6px;
+  background: #fff;
+}
+.qa-panel input:focus, .qa-panel textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+}
+
+.qa-msg {
+  margin: 0.7rem 0 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: #e8f4e2;
+  color: #2c5e2c;
+}
+.qa-msg.error { background: #fdeaea; color: #8f1f1f; }
+
+.qa-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.9rem; }
+.qa-actions button {
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  border: 1.5px solid #444;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+.qa-actions button.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+.qa-actions button.primary:hover { background: var(--brand-dark); }
+.qa-actions button:disabled { opacity: 0.6; cursor: default; }
+
+/* --------------------------------------------------------------------------
    TOC chapter list
    -------------------------------------------------------------------------- */
 
@@ -585,4 +661,5 @@ table td, table th { padding: 0.25em 0.6em; border-bottom: 1px solid #bbb; text-
   .fnote { position: static !important; width: auto; margin: 0.6rem 0; transform: none; break-inside: avoid; }
   .fnote-bar { display: none; }
   .fnote:has(.fnote-body:empty) { display: none; }
+  .qa-block, .qa-overlay { display: none !important; }
 }

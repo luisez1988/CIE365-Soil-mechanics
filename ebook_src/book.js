@@ -318,6 +318,161 @@
         });
       });
 
+    /* ---------------- student Q&A ---------------- */
+
+    (function initQA() {
+      var endpoint = document.body.getAttribute('data-qa-endpoint');
+      if (!endpoint) return; // feature disabled — everything stays hidden
+
+      var qaBlock = document.getElementById('qa-block');
+      var qaList = document.getElementById('qa-list');
+      var qaStatus = document.getElementById('qa-status');
+      var overlay = document.getElementById('qa-overlay');
+      var idInput = document.getElementById('qa-id');
+      var textInput = document.getElementById('qa-text');
+      var honeypot = document.getElementById('qa-website');
+      var msg = document.getElementById('qa-msg');
+      var btnAsk = document.getElementById('btn-ask');
+      var btnSend = document.getElementById('qa-send');
+      var btnCancel = document.getElementById('qa-cancel');
+
+      var ERRORS = {
+        unknown_id: 'That ID isn’t on the class roster — check for typos (no spaces).',
+        empty_question: 'Please write a question before sending.',
+        question_too_long: 'Your question is too long — please keep it under 1000 characters.',
+        too_fast: 'Please wait a minute between questions.',
+        bad_request: 'Something was wrong with the submission — please try again.',
+        server_error: 'The Q&A service had a problem — please try again later.'
+      };
+      var UNREACHABLE = 'Could not reach the Q&A service — check your connection. ' +
+        'If this keeps happening the service may be misconfigured; tell your instructor.';
+      var BAD_RESPONSE = 'The Q&A service returned an unexpected response (it may be ' +
+        'misconfigured) — tell your instructor.';
+
+      qaBlock.hidden = false;
+      btnAsk.hidden = false;
+      if (LS && LS.getItem('ebook:studentid')) {
+        idInput.value = LS.getItem('ebook:studentid');
+      }
+
+      function showMsg(text, isError) {
+        msg.textContent = text;
+        msg.classList.toggle('error', !!isError);
+        msg.hidden = false;
+      }
+
+      function parseResponse(text) {
+        try {
+          return JSON.parse(text);
+        } catch (e) {
+          return null;
+        }
+      }
+
+      /* feed */
+      fetch(endpoint + '?chapter=' + encodeURIComponent(chapter))
+        .then(function (r) { return r.text(); })
+        .then(function (text) {
+          var data = parseResponse(text);
+          if (!data || data.ok !== true || !data.items) {
+            qaStatus.textContent = 'The Q&A feed is unavailable right now.';
+            return;
+          }
+          if (!data.items.length) {
+            qaStatus.textContent = 'No answered questions yet — be the first to ask!';
+            return;
+          }
+          qaStatus.hidden = true;
+          data.items.forEach(function (item) {
+            var wrap = document.createElement('div');
+            wrap.className = 'qa-item';
+            var q = document.createElement('div');
+            q.className = 'InquiryBox qa-q';
+            q.textContent = item.q;
+            var a = document.createElement('div');
+            a.className = 'findingBox qa-a';
+            a.textContent = item.a;
+            var d = document.createElement('div');
+            d.className = 'qa-date';
+            d.textContent = item.date || '';
+            wrap.appendChild(q);
+            wrap.appendChild(a);
+            wrap.appendChild(d);
+            qaList.appendChild(wrap);
+          });
+          if (window.MathJax && MathJax.typesetPromise) {
+            MathJax.typesetPromise([qaList]).catch(function () {});
+          }
+        })
+        .catch(function () {
+          qaStatus.textContent = 'The Q&A feed is unavailable right now.';
+        });
+
+      /* panel open/close */
+      function openPanel() {
+        msg.hidden = true;
+        overlay.hidden = false;
+        (idInput.value ? textInput : idInput).focus();
+      }
+      function closePanel() {
+        overlay.hidden = true;
+      }
+      btnAsk.addEventListener('click', openPanel);
+      btnCancel.addEventListener('click', closePanel);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePanel();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !overlay.hidden) closePanel();
+      });
+
+      /* submit */
+      btnSend.addEventListener('click', function () {
+        var id = idInput.value.replace(/\s+/g, '');
+        var question = textInput.value.trim();
+        if (!id) { showMsg('Please enter your student ID.', true); return; }
+        if (!question) { showMsg(ERRORS.empty_question, true); return; }
+        var last = LS ? parseInt(LS.getItem('ebook:qa:last') || '0', 10) : 0;
+        if (Date.now() - last < 60000) { showMsg(ERRORS.too_fast, true); return; }
+
+        btnSend.disabled = true;
+        showMsg('Sending…', false);
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            id: id,
+            chapter: chapter,
+            question: question,
+            website: honeypot.value
+          })
+        })
+          .then(function (r) { return r.text(); })
+          .then(function (text) {
+            btnSend.disabled = false;
+            var data = parseResponse(text);
+            if (!data) {
+              showMsg(text.charAt(0) === '<' ? BAD_RESPONSE : UNREACHABLE, true);
+              return;
+            }
+            if (data.ok === true) {
+              if (LS) {
+                LS.setItem('ebook:studentid', id);
+                LS.setItem('ebook:qa:last', String(Date.now()));
+              }
+              textInput.value = '';
+              showMsg('Question sent! It will appear here once your instructor answers it.', false);
+            } else {
+              showMsg(ERRORS[data.error] || ERRORS.server_error, true);
+            }
+          })
+          .catch(function () {
+            btnSend.disabled = false;
+            showMsg(UNREACHABLE, true);
+          });
+      });
+    })();
+
     /* ---------------- toolbar ---------------- */
 
     var fileInput = document.getElementById('file-import');

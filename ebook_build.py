@@ -419,6 +419,7 @@ def build_chapter(ch_cfg, config):
             .replace('{{COURSE}}', config['course'])
             .replace('{{AUTHOR}}', config.get('author', ''))
             .replace('{{ATTRIBUTION}}', config.get('attribution', ''))
+            .replace('{{QA_ENDPOINT}}', config.get('qa_endpoint', ''))
             .replace('{{TITLE}}', title)
             .replace('{{CHAPTER_ID}}', deck)
             .replace('{{TOTAL_BLANKS}}', str(len(answers)))

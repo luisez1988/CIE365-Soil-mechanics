@@ -1,9 +1,20 @@
 {
-  "course": "CIE 365 · Soil Mechanics",
+  "course": "CIE 365 \u00b7 Soil Mechanics",
   "author": "Luis Zambrano-Cruzatty",
   "attribution": "These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.",
-  "global_skip_titles": ["Announcements", "For next class"],
+  "qa_endpoint": "",
+  "global_skip_titles": [
+    "Announcements",
+    "For next class"
+  ],
   "chapters": [
-    { "dir": "1D_flow", "title": "", "skip_titles": [], "skip_indices": [1] }
+    {
+      "dir": "1D_flow",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": [
+        1
+      ]
+    }
   ]
 }
