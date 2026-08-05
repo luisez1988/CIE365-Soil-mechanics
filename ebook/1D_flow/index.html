@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 5: 1D seepage · CIE 365 · Soil Mechanics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="1D_flow" data-total="20">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CIE 365 · Soil Mechanics</div>
+  <h1>Module 5: 1D seepage</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">20</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+  <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+  <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+  <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+  <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Hydraulics review</a></li>
+<li><a href="#s3">True seepage velocity</a></li>
+<li><a href="#s4">Total head</a></li>
+<li><a href="#s5">Example 5.1</a></li>
+<li><a href="#s6">Water in movement</a></li>
+<li><a href="#s7">Participation question 5.1</a></li>
+<li><a href="#s8">Hydraulic gradient</a></li>
+<li><a href="#s9">Example 5.2</a></li>
+<li><a href="#s10">Darcy experiments</a></li>
+<li><a href="#s11">Participation question 5.2</a></li>
+<li><a href="#s13">Constant head permeability test</a></li>
+<li><a href="#s14">Falling head permeability test</a></li>
+<li><a href="#s15">Empirical correlations</a></li>
+<li><a href="#s16">Example 5.3</a></li>
+<li><a href="#s17">Example 5.4</a></li>
+<li><a href="#s18">Example 5.5</a></li>
+<li><a href="#s19">Example 5.6</a></li>
+<li><a href="#s20">Example 5.7</a></li>
+<li><a href="#s21">Anisotropy/Heterogeneity</a></li>
+<li><a href="#s22">Directional variability</a></li>
+<li><a href="#s23">Equivalent permeability</a></li>
+<li><a href="#s24">Case I: Flow perpendicular to layers</a></li>
+<li><a href="#s25">Example 5.8</a></li>
+<li><a href="#s26">Case II: Flow parallel to layers</a></li>
+<li><a href="#s27">Example 5.9</a></li>
+<li><a href="#s28">Example 5.10</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+									
+							<li > <div class='textBox' >
+								We learned the <strong style='color:green'>principle of effective stresses</strong>.
+							</div>
+								
+							</li>
+							<li > We learned how to calculate <strong style='color:black'>hydrostatic pore pressures</strong>.</li>
+							<li > <div class='textBox' >
+								We learned how to calculate <strong style='color:black'>vertical in-situ total and effective stresses</strong>.
+							</div>
+								</li>
+							<li >We learned how to calculate <strong style='color:black'>horizontal in-situ total and effective stresses</strong>.</li>
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+
+					<div class='container'>
+					<div class='col' style="--colw:50%">
+						<ul class="contentStyle">
+							<li class="l1">Total head Hydraulic gradient.</li>							
+							<li class="l1">Darcy's law.</li>							
+							<li class="l1">Hydraulic conductivity and permeability of soils.</li>							
+							<li class="l1">Flow in series and parallel.</li>
+						</ul>
+					</div>
+					<div class='col' style="--colw:50%">
+						<div class='container'>
+							<div class='col' style="--colw:50%">
+								<div class="stickynote" >
+									<p> Objectives covered in this lecture</p>
+									<ul>
+										<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating effective stress in soils  </li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="--colw:50%">
+							<div class='stickynote' >
+								<p >After this lecture we will able to:</p>
+								<ul >
+									<li>Calculate total head and hydraulic gradients.</li>
+									<li>Calculate seepage flows for 1D problems.</li>
+									<li>Calculate the permeability of uniform and composite soils.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+
+
+					
+        
+</section>
+
+<section class="block" id="s2" data-anchor="hydraulics-review">
+<h2 class="block-title">Hydraulics review</h2>
+
+
+<div class='container'>
+<div class='col' style='--colw:40%'>
+<h4>Flow in an <span class="blank" data-bid="1D_flow.1607b338-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> pipe</h4>
+\( \begin{align}
+q=v A
+\end{align} \) <br>
+\(q=\) rate of fluid volume flow [L\(^3\)/T] 
+</div>
+<div class='col' style='--colw:60%'>
+<h4>Flow Through soils</h4>
+\( \begin{align}
+q= v_s A_V
+\end{align} \) <br>
+\(v_s=\) seepage velocity [L/T]
+</div>
+</div>
+
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/flow_definitions.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+
+
+</section>
+
+<section class="block" id="s3" data-anchor="true-seepage-velocity">
+<h2 class="block-title">True seepage velocity</h2>
+
+    
+		<div class="container">
+			<div class="col" style="--colw:50%">
+        <figure >
+          <img loading="lazy" src="../../1D_flow/FiguresGeneral/true velocity.svg" style="width:100%" data-preload/>
+          <footer ><small></small></footer>
+        </figure>
+			</div>
+			<div class="col"  style="--colw:50%">
+			
+			Using the principle of <strong style='color:#000'>mass conservation</strong>: <br>
+			\( \begin{align}
+			\rho_w v A & = \rho_w v_s A_v \\
+			v & = \cfrac{A_v L}{A L} v_s \\
+			v &= \cfrac{V_v}{V_t} v_s
+			\end{align} \) <br>
+
+			<div class='equationBox' >
+				\( \begin{align}
+				v= n v_s
+				\end{align} \)			
+			</div>
+
+			<br>
+			\(v=\) Darcy velocity [L/T] <br>
+			\(v_s=\) Seepage velocity [L/T] 
+
+			</div>
+		</div>
+
+</section>
+
+<section class="block" id="s4" data-anchor="total-head">
+<h2 class="block-title">Total head</h2>
+
+    
+	<div class='textBox' style='text-align: left'>
+	Bernoulli's equation describes the <span class="blank" data-bid="1D_flow.efd2b9f2-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> of an incompressible flow in terms of its <strong style='color:green'>potential</strong>, <strong style='color:red'>kinetic</strong>, and <strong style='color:blue'>pressure</strong> energy. <br>
+	<div class='container'>
+	<div class='col' style='--colw:60%'>
+		<div class='equationBox'>
+			\(E= \underbrace{z \rho g}_{\textcolor{green}{\text{Potential e.}}} 
+			+ \underbrace{\rho \cfrac{v^2}{2g}}_{\textcolor{red}{\text{Kinetic e.}}} 
+			+ \underbrace{P}_{\textcolor{blue}{\text{Pressure e.}}}\)
+			</div>
+	</div>
+	<div class='col' style='--colw:40%'>
+		<ul  >
+			<li> \(z=\) Elevation from datum</li>
+			<li> \(v=\) velocity</li>
+			<li> \(P=\) pressure</li>
+		</ul>
+	</div>
+	</div>	
+	</div>
+
+	<div class='defBox' name='Total head' >
+		<strong style='color:green'>\(h\): </strong> Is the total energy per unit weight of water.
+		<div class='equationBox'>
+			\( 
+			h= \cfrac{E}{\gamma_w} = z+\textcolor{blue} {\underbrace{ \cfrac{u}{\gamma_w}}_{\substack{h_w=\text{Pressure}\\ \text{head}}}}
+			 = z + \textcolor{blue}{h_w}\)
+					</div>
+	</div>
+
+
+
+</section>
+
+<section class="block" id="s5" data-anchor="example-5-1">
+<h2 class="block-title">Example 5.1</h2>
+
+
+<div class='textBox' >
+For the points in the figure below determine the total head, the pressure head, and the location of the <strong style='color:blue'>piezometric line</strong>.
+</div>
+<div class='container'>
+<div class='col' style="--colw:50%">
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/Pressure_heaed.svg' width='90%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="--colw:50%">
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX470.svg" style="width: 100%" alt=""/>
+</div>
+</div>
+</div>
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX471.svg" style="width: 100%" alt=""/>
+</div>
+
+
+</section>
+
+<section class="block" id="s6" data-anchor="water-in-movement">
+<h2 class="block-title">Water in movement</h2>
+
+	
+	<div class='textBox' >
+	Water flows <strong style='color:black'>if and only if</strong> there is a <span class="blank" data-bid="1D_flow.6ad9479f-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> (i.e., <span class="blank" data-bid="1D_flow.7d7acfe5-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> in total head <strong style='color:green'>\(\Delta h \neq 0 \)</strong> ). If the flow moves from point A to B, then <strong style='color:green'> \(h_a>h_b\)</strong>
+	</div>
+	<img loading="lazy" src="figures/cup_of_water.svg" style="width: 100%" alt=""/>
+	
+
+</section>
+
+<section class="block check-yourself" id="s7" data-anchor="participation-question-5-1">
+<h2 class="block-title">Participation question 5.1</h2>
+
+
+<div class='InquiryBox' >
+	Base on the figure below: what option is accurate regarding the water movement?
+</div>
+
+<div class='container'>
+<div class='col' style="--colw:50%">
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/extrange_1D_noflow.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="--colw:50%">
+<ol class='iClicker' >
+<li class='l2'>Water moves from B to A</li>
+<li class='l2'>Water moves from A to B</li>
+<li class='l2'>The water doesn't move</li>
+</ol>
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s8" data-anchor="hydraulic-gradient">
+<h2 class="block-title">Hydraulic gradient</h2>
+
+	
+	<div class='defBox' name='Hydraulic gradient' >
+	<strong style='color:green'>\(i\):</strong> Is the <strong style='color:black'>gradient</strong> of total head, or change of <span class="blank" data-bid="1D_flow.531f1530-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>  (<strong style='color:green'>\(\Delta h\)</strong>) over the <span class="blank" data-bid="1D_flow.03964174-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> of <strong style='color:black'>flow path (<strong style='color:green'> \(L\)</strong>)</strong>.
+	<div class='equationBox'>
+	\(i=\cfrac{\Delta h}{L}=\cfrac{h_a-h_b}{L_{ab}}  \)
+	</div>
+	<p>Although the hydraulic gradient could be negative we usually calculate it using \(h_a>h_b\)</p>
+	</div>
+	
+
+	<ul >
+	 <li > \(i=0\) \(\longrightarrow\) <span class="blank" data-bid="1D_flow.52fc10f1-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> </li>
+	 <li > \(i \neq 0\) \(\longrightarrow\) <span class="blank" data-bid="1D_flow.d7315992-0" style="min-width:30ch" contenteditable="plaintext-only" spellcheck="false"></span> </li>
+	</ul>
+
+
+</section>
+
+<section class="block" id="s9" data-anchor="example-5-2">
+<h2 class="block-title">Example 5.2</h2>
+
+
+<div class='textBox' >
+Calculate the hydraulic gradient between points A and B in the figure bellow and plot the piezometric line between points C and D.
+
+</div>
+<div class='container'>
+<div class='col' style="--colw:50%">
+<figure >
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/artisian_condition.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style="--colw:50%">
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX480.svg" style="width: 100%" alt=""/>
+</div>
+</div>
+</div>
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX481.svg" style="width: 100%" alt=""/>
+</div>
+
+
+</section>
+
+<section class="block" id="s10" data-anchor="darcy-experiments">
+<h2 class="block-title">Darcy experiments</h2>
+
+
+<div class='container'>
+<div class='col' style='--colw:45%'>
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/darcy_experiment.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:55%'>
+<div class='textBox' >
+<ol>
+	<li ><strong style='color:#000'>Background:</strong> Henry Darcy managed the water supply for Dijon, France (1830s and 1840s)</li>
+	<li ><strong style='color:#000'>Goal:</strong> Understand how water flows through sand filters used for water treatment</li>
+	<li ><strong style='color:#000'>Experiment:</strong> Measured water flow and pressure change.</li>
+	<li ><strong style='color:#000'>Control variables:</strong> Kept the sand column's area (\(A\)) and length (\(L\)) constant.</li>
+</ol>
+</div>
+</div>
+</div>
+
+</section>
+
+<section class="block check-yourself" id="s11" data-anchor="participation-question-5-2">
+<h2 class="block-title">Participation question 5.2</h2>
+
+
+<div class='InquiryBox' >
+What do you think is the influence of <strong style='color:orange'>\(\Delta H= H_1 - H_2\)</strong> on <strong style='color:orange'>\(q\)?</strong>
+
+
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>\(q\) is independent of \(\Delta h\)</li>
+<li class='l2'>\(q\) is directly proportional to \(\Delta h\)</li>
+<li class='l2'>\(q\) is inversely proportional to \(\Delta h\)</li>
+</ol>
+
+</section>
+
+<section class="block" id="s12" data-anchor="s12">
+
+<div class='findingBox' >
+Note that \(\Delta h\) is <span class="blank" data-bid="1D_flow.629508e6-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> from point 1 to 2.
+</div>
+
+<div class='textBox' >
+We can associate energy loss in with heat loss in a pipe assuming the velocity in on the <span class="blank" data-bid="1D_flow.90786db3-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span>
+</div>
+
+<div class='container'>
+<div class='col bordered' style='--colw:50%'>
+<span >
+\( \begin{align}
+\Delta h = - h_f &= - \cfrac{32 L v^2}{R_e d_m g} \\
+R_e & = \cfrac{\rho v d_m}{\mu}
+\end{align} \)</span> <br>
+<span >
+\( \begin{align}
+\Delta h = - \cfrac{32 \mu L q}{\gamma d_m^2 A}
+\end{align} \) </span>
+</div>
+<div class='col bordered' style='--colw:50%'>
+<span >\( \begin{align}
+q = - \left(\cfrac{C \gamma}{\mu} \ d_m^2 \right) \times \cfrac{\Delta h}{L} \times A
+\end{align} \) </span> <br>
+<span >Thus: <br>
+<div class='equationBox' >
+
+\( \begin{align}
+q= -k i A 
+\end{align} \) 
+</div> </span> <br>
+<span >
+\(k\) is termed the <span class="blank" data-bid="1D_flow.b5ba5ae9-0" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> </span>
+<div class='textBox' >
+This is the so-called <strong style='color:#000'>Darcy's law</strong>
+</div>
+</div>
+</div>
+
+
+
+
+<div class='defBox' name='Hydraulic conductivity/permeability' >
+<strong style='color:green'>\(k\) [L/T]: </strong> Is a property of the soil related to <strong style='color:black'>how fast</strong> <span class="blank" data-bid="1D_flow.47f0aca5-0" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span> through the soil matrix. 
+</div>
+
+Examining the the equation for \(k\) we can conclude that:
+
+<div class='equationBox' >
+\( k= C \color{blue} \underbrace{\cfrac{\gamma}{\mu}}_{\substack{\text{Fluid}\\\text{properties}}} \ \color{red} \underbrace{d_m^2}_{\substack{\text{porous}\\\text{media}\\\text{properties}}} \)
+</div> 
+
+<div class='textBox' >
+	Soil permeability depends on two main factors:
+<ol>
+	<li >Properties of the <span class="blank" data-bid="1D_flow.2d37f5ed-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span></li>
+	<li >Properties of the porous media (soil)</li>
+</ol>
+</div>
+
+
+
+
+<div class='findingBox' >
+<strong style='color:#000'>Note</strong>: Soil permeability varies <span class="blank" data-bid="1D_flow.a2734581-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> based on media
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>	
+	<table style="background-color: antiquewhite">
+		<tr>				
+			<td><strong style='color:black'>Soil type</strong></td>
+			<td>Permeability \(k\) [cm/s]</td>
+		</tr>
+		<tr>				
+			<td>Gravel</td>
+			<td> \(> 10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Clean sands</td>
+			<td> \(10^{-3}\) to \(10^{-1}\)</td>
+		</tr>
+		<tr>				
+			<td>Dirty gravels and sands</td>
+			<td> \(10^{-5}\) to \(10^{-3}\)</td>
+		</tr>
+		<tr>				
+			<td>Silt</td>
+			<td> \(10^{-7}\) to \(10^{-5}\)</td>
+		</tr>
+		<tr>				
+			<td>Clay</td>
+			<td> \(< 10^{-7}\)</td>
+		</tr>
+	</table>
+<div class='textBox' >
+<strong style='color:#000'>Context:</strong> \(10^{-7}\) cm/s is about 1.25 in/year
+</div>
+
+</div>
+<div class='col' style='--colw:50%'>
+<ol>
+	<li >Fine-grained materials have lower \(k\) because they have smaller pores</li>
+	<li >As water moves it dissipates mechanical energy due to its viscosity. Since fine-grained soils like clay have larger \(SSA\), the energy dissipated by viscous drag is orders of magnitude larger than for coarse-grained materials</li>
+</ol>
+</div>
+</div>
+
+
+
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/soil_permeability.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em>Modified from Casagrande (1938)</em> </footer>
+</figure>
+
+
+</section>
+
+<section class="block" id="s13" data-anchor="constant-head-permeability-test">
+<h2 class="block-title">Constant head permeability test</h2>
+
+    
+		<div class="container">
+			<div class="col" style="--colw:50%">
+				<figure>
+				  <img loading="lazy" src="../../1D_flow/FiguresGeneral/darcy_experiment.svg" style="width:80%" data-preload/>
+				  <footer ><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="--colw:50%">
+				<div class='textBox' >
+					<p > With \(\Delta h=\)cnt. the permeability is calculated measuring the total volume of water collected (<strong style='color:green'>\(Q\)</strong>) in a time period (<strong style='color:green'>\(\Delta t\)</strong>)</p>
+					<p> <div class='equationBox'>
+						\(k=\cfrac{QL}{A \Delta h \Delta t}\)
+						</div>
+					</p>
+				</div>
+			<ul>
+				<li >Better for coarse soils.</li>
+				<li >Shorter testing times.</li>
+				<li >Samples with large cross-sectional areas.</li>
+			</ul>		
+
+			</div>
+		</div>
+
+</section>
+
+<section class="block" id="s14" data-anchor="falling-head-permeability-test">
+<h2 class="block-title">Falling head permeability test</h2>
+
+    
+
+		<div class="container">
+			<div class="col" style="--colw:50%">
+				<figure>
+				  <img loading="lazy" src="../../1D_flow/FiguresGeneral/falling_head.svg" style="width:75%" data-preload/>
+				  <footer ><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="--colw:50%">
+				<div class='textBox' >
+				Permeability is calculated measuring the head fall <strong style='color:green'>\(\Delta H\)</strong> in time <strong style='color:green'>\(\Delta t\)</strong>. The head <strong style='color:black'> is not constant</strong>.
+				<p><div class='equationBox'>
+				\(k=\cfrac{a}{A}\cfrac{L}{\Delta t} \ln \left(\cfrac{H_1}{H_1-\Delta H}\right)\)
+				</div> </p>
+				</div>
+				<ul>
+					<li >Better suited for <strong style='color:black'>low permeability soils</strong></li>
+					<li >Longer testing times</li>
+					<li >Soil samples with smaller cross-sectional areas.</li>
+				</ul>
+			</div>
+		</div>
+
+</section>
+
+<section class="block" id="s15" data-anchor="empirical-correlations">
+<h2 class="block-title">Empirical correlations</h2>
+
+	
+
+		<div class="container">
+			<div class="col" style="--colw:50%">
+				<ul>
+				 <li >Shepard (1989) formula:
+					<p><div class='equationBox'>
+					\(k[cm/s]=C d_{50}^j\)
+					</div></p>
+					 
+					 <ul style="font-size:25px">
+						 <li>\(d_{50}\) in mm</li>
+						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
+						 <li>\(j=\) empirical exponent between 1.5-2.5</li>
+					 </ul>
+				 </li>
+				 <li >Kozeny-Carman's from Bear (1972) formula
+					<p><div class='equationBox' style="font-size: 0.9em">
+					\(k[m/s]= \left( \cfrac{\rho g}{\mu} \right)  \cfrac{n^3}{(1-n)^2}   \cfrac{d_{50}^2}{180}\)
+					</div></p>					 
+					 <ul style="font-size:25px">
+						 <li>\(d_{50}\) in m</li>
+					 </ul>
+				 </li>
+			 </ul>
+			</div>
+			<div class="col" style="--colw:50%">
+				<div class='textBox' >
+				<strong style='color:#000'>Notes on empirical equations:</strong> 
+				<ul>
+					<li> Recall that hydraulic conductivity varies <strong style='color:#000'>widely</strong>, therefore, you can expect high uncertainty associated with these equations</li>
+					<li>Use with caution and validate against field data when possible</li>
+					<li>Tend to work better for clean coarse-grained soils</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+
+</section>
+
+<section class="block" id="s16" data-anchor="example-5-3">
+<h2 class="block-title">Example 5.3</h2>
+
+
+<div class='textBox' >
+A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a constant-head permeability apparatus. A constant head of 85 cm is maintained during the test. After 2 min of testing, a total of 1054 g of water was collected. The temperature was 20<sup>o</sup>C. Calculate the permeability of the soil sample.
+</div>
+
+<div class='ProblemBox' style='height: 300px'>
+<img loading="lazy" src="figures/EX530.svg" style="width:100%" alt=""/>
+</div>
+
+</section>
+
+<section class="block" id="s17" data-anchor="example-5-4">
+<h2 class="block-title">Example 5.4</h2>
+
+
+<div class='textBox' >
+A laboratory falling-head permeability test is performed on a light-gray gravelly sand (SW), and the following data is obtained:
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<ol>
+	<li>\(a=7.25\) cm<sup>2</sup></li>
+	<li>\(A=11.43\) cm<sup>2</sup></li>
+	<li>\(L=11.62\) cm</li>
+
+</ol>
+</div>
+<div class='col' style='--colw:50%'>
+<ol>
+	<li>\(H_1=171.4\) cm</li>
+	<li>\(H_2=79.3\) cm</li>
+	<li>\(\Delta t=110\) sec for the head to fall from \(H_1\) to \(H_2\)</li>
+</ol>
+</div>
+</div>
+Calculate the permeability of the soil sample in cm/s.
+</div>
+
+<div class='ProblemBox' style='height: 220px'>
+<img loading="lazy" src="figures/EX540.svg" style="width:100%" alt=""/>
+</div>
+
+
+
+<div class='findingBox' >
+Recall that Darcy velocity (\(v\)) is the velocity of water if it could flow trough all the area \(A\) of the cross section
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/true velocity.svg' width='80%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:50%'>
+<div class='textBox' >
+The <span class="blank" data-bid="1D_flow.77644efe-0" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(v_s\) is the velocity needed for travel time calculations
+</div>
+
+<div class='equationBox' >
+\( v_s = \cfrac{v}{n_e} = \cfrac{q}{A n_e} \)
+</div>
+
+<br>
+\(n_e=\) is the effective porosity. \(n_e \leq n\) because some pores may be isolated and not contribute to flow.
+</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s18" data-anchor="example-5-5">
+<h2 class="block-title">Example 5.5</h2>
+
+
+<div class='textBox' >
+The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of breakthrough at well B using a tracer introduced at A is 167 hours. Calculate (a) the horizontal hydraulic gradient, (b) the average linear velocity, and (c) the hydraulic conductivity
+</div>
+<div class='container'>
+<div class='col' style='--colw:35%'>
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_field_perm.png' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:65%'>
+<div class='ProblemBox' style='height: 370px'>
+<img loading="lazy" src="figures/EX550.svg" style="width:100%" alt=""/>
+</div>
+</div>
+</div>
+
+
+<div class='ProblemBox' style='height: 660px'>
+<img loading="lazy" src="figures/EX551.svg" style="width:100%" alt=""/>
+</div>
+
+
+</section>
+
+<section class="block" id="s19" data-anchor="example-5-6">
+<h2 class="block-title">Example 5.6</h2>
+
+	
+	<div class='textBox' style='font-size: 0.85em'>
+		The figure shows water flow through the soil specimen in a cylinder. The specimen's \(k\) is \(3.4 \times 10^{-4}\) cm/s.
+			<ol>
+				<li>Calculate total head, pressure head, and pore pressure at point A and B.</li>
+				<li>Draw the levels of water in standpipes.</li>
+				<li>Compute the amount of water flow \(q\) through the specimen.</li>
+			</ol>		
+	</div>
+	<div class="container">
+  	<div class="col" style="--colw:50%">
+	<img loading="lazy" src="figures/Example_tubes.svg" style="width: 100%" alt=""/>
+  	</div>
+  	<div class="col" style="--colw:50%">
+		<div class='ProblemBox' >
+		<img loading="lazy" src="figures/EX490.svg" style="width: 100%" alt=""/>
+		</div>
+  	</div>
+  </div>
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX491.svg" style="width: 100%" alt=""/>
+
+</div>
+
+
+</section>
+
+<section class="block" id="s20" data-anchor="example-5-7">
+<h2 class="block-title">Example 5.7</h2>
+
+
+<div class='textBox' >
+The test setup has the dimensions shown below. Calculate: (a) the pressure head, (b) elevation head, (c) total head, and (d) head loss at points B, C, D, and F in cm of water.
+</div>
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_new.png' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:50%'>
+<div class='ProblemBox' style='height: 400px'>
+<img loading="lazy" src="figures/ex570.svg" style="width:100%" alt=""/>
+</div>
+</div>
+</div>
+
+
+<div class='ProblemBox' style='height: 680px'>
+<div class="embed-placeholder" data-src="https://docs.google.com/spreadsheets/d/1859BThbITjdQO3eMNJqM7CbagsPY6Q6rMa1KVaNkpzw/edit?usp=sharing" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s21" data-anchor="anisotropy-heterogeneity">
+<h2 class="block-title">Anisotropy/Heterogeneity</h2>
+
+
+<div class='textBox' >
+The distribution of hydraulic conductivity within an aquifer (\(k(x, y, z)\)) is <span class="blank" data-bid="1D_flow.e016f10f-0" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+</div>
+
+we classify this variability in two categories:
+
+<ul >
+	<li ><strong style='color:#000'>Homogeneous:</strong> Permeability is a constant WRT space.</li>
+	<li ><strong style='color:#000'>Heterogeneous:</strong> Permeability <span class="blank" data-bid="1D_flow.b6f2bdae-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> with position in space.</li>
+</ul>
+
+<div class='findingBox' >
+In practice, every aquifer is heterogeneous. We use statistical measure such as the <span class="blank" data-bid="1D_flow.9d89a0cb-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> but knowing the ranges is usefull
+</div>
+
+</section>
+
+<section class="block" id="s22" data-anchor="directional-variability">
+<h2 class="block-title">Directional variability</h2>
+
+
+<div class='textBox' >
+An ideal media would have well packed spherical particles, but in reality, grains can be irregular.
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:60%'>
+We use two temrs to define this property:
+<ol >
+	<li ><strong style='color:#000'>Isotropic:</strong> Permeability is <span class="blank" data-bid="1D_flow.9b45b832-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> in all directions.</li>
+	<li ><strong style='color:#000'>Anisotropic:</strong> Permeability is <span class="blank" data-bid="1D_flow.16c8ee2c-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> on direction</li>
+</ol>
+<div class='findingBox' >
+Note: \(k_x > k_y\) due to natural sedimentation processes and gravitational action
+</div>
+</div>
+<div class='col' style='--colw:40%'>
+<figure>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/directional_permeability.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+
+
+<div class='InquiryBox' >
+How does \(k\) varies directionoally and spatially in a soil?
+</div>
+<img loading="lazy" src="figures/overall_directionality.svg" style="width:100%" alt=""/>
+
+</section>
+
+<section class="block" id="s23" data-anchor="equivalent-permeability">
+<h2 class="block-title">Equivalent permeability</h2>
+
+	
+	<div class='textBox' >
+		If the soil is conformed of layers with different permeability, we need to calculate an <strong style="color:black">equivalent permeability</strong> in order to apply Darcy's law.
+	</div>
+	<p></p>
+	<div class="container">
+		<div class="col" style="--colw:50%">
+			<p>We will study two cases:
+			 <ol>
+				 <li > Flow is <strong style="color:black">perpendicular</strong> to the layering. </li>
+				 <li > Flow is <strong style="color:black">parallel</strong> to the layering. </li>
+			 </ol>
+		 </p>
+		</div>
+		<div class="col" style="--colw:50%">
+			<figure >
+				<img loading="lazy" src="../../1D_flow/FiguresGeneral/equivalent.svg" style="width:100%" data-preload/>
+				<footer ><small></small></footer>
+			</figure>
+		</div>
+	</div>
+
+
+
+</section>
+
+<section class="block" id="s24" data-anchor="case-i-flow-perpendicular-to-layers">
+<h2 class="block-title">Case I: Flow perpendicular to layers</h2>
+
+    
+	<div class='container'>
+	<div class='col' style="--colw:50%">
+		<figure>
+            <img loading="lazy" src="../../1D_flow/FiguresGeneral/perpendicular.svg" style="width:81%" data-preload/>
+            <footer ><small></small></footer>
+          </figure>
+	</div>
+	<div class='col' style="--colw:50%">
+		<div class='textBox' >
+			\( \begin{align}
+			q &=q_1=q_2=q_3 \\
+			q &= k_{eq} \frac{\Delta h}{L} A \\
+			&= k_{eq} \frac{\Delta h_1 + \Delta h_2 + \Delta h_3}{L} A\\
+			q &= k_{eq} \frac{\frac{q L_1}{k_1 A} + \frac{q L_2}{k_2 A} + \frac{q L_3}{k_3 A}}{L} A\\
+			\end{align} \)
+		</div>
+		<div  > 		<div class='equationBox'>
+			\( k_{eq}=\cfrac{L}{\sum_{i=1}^n L_i/k_i} \)
+		</div></div>
+
+	</div>
+	</div>
+
+</section>
+
+<section class="block" id="s25" data-anchor="example-5-8">
+<h2 class="block-title">Example 5.8</h2>
+
+
+<div class='textBox' >
+A constant head permeability test was conducted on a chamber of 6 inches of diameter by 12 inches heigh. The soil was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s each. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
+
+</div>
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX4140.svg" style="width: 100%" alt=""/>
+</div>
+
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX4141.svg" style="width: 100%" alt=""/>
+</div>
+
+
+</section>
+
+<section class="block" id="s26" data-anchor="case-ii-flow-parallel-to-layers">
+<h2 class="block-title">Case II: Flow parallel to layers</h2>
+
+    
+		<div class="container">
+			<div class="col" style="--colw:50%">
+          <figure>
+            <img loading="lazy" src="../../1D_flow/FiguresGeneral/parallel.svg" style="width:73%" data-preload/>
+            <footer ><small></small></footer>
+          </figure>
+			</div>
+			<div class="col" style="--colw:50%">
+				<div class='textBox' style='font-size: 1em'>
+				\( \begin{align}
+				q & = q_1 + q_2 + q_3 \\
+				k_{eq} \frac{\Delta h}{L} A & = k_1 \frac{\Delta h}{L} A_1 + \\
+				&k_2 \frac{\Delta h}{L} A_2 + k_3 \frac{\Delta h}{L} A_3 \\
+
+				k_{eq} A &= k_1 A_1 + k_2 A_2 \\
+				& + k_3 A_3
+				\end{align} \)
+				</div>
+
+				
+					<div class='equationBox' >
+						\(k_{eq}=\cfrac{\sum_{i=1}^n k_i A_i}{A}\)
+					</div>
+				
+			</div>
+		</div>
+
+</section>
+
+<section class="block" id="s27" data-anchor="example-5-9">
+<h2 class="block-title">Example 5.9</h2>
+
+
+<div class='textBox' style='font-size: 0.85em'>
+A permeable water channel will be constructed as shown in the figure. Three layers of sand with \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length.
+
+</div>
+<div class='container'>
+<div class='col' style='--colw:50%'>
+	<figure>
+		<img loading="lazy" src='../../1D_flow/FiguresGeneral/channels.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+</div>
+<div class='col' style='--colw:50%'>
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX4150.svg" style="width: 100%" alt=""/>
+</div>
+</div>
+</div>
+
+
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/EX4151.svg" style="width: 100%" alt=""/>
+</div>
+
+</section>
+
+<section class="block" id="s28" data-anchor="example-5-10">
+<h2 class="block-title">Example 5.10</h2>
+
+
+<div class='textBox' style='font-size: 0.8em'>
+Consider an aquifer with three horizontal layers as listed in the table. The head at the top of the top layer is 101.3 m and the head at the bottom of the bottom layer is 96.2 m. <br>
+<ol>
+	<li>Sketch the system</li>
+	<li>Calculate the equivalent horizontal and vertical hydraulic conductivities for the composite aquifer</li>
+	<li>Calculate the vertical component of the flow rate</li>
+	<li>Use Darcy's law to calculate the total head a the top, middle, and bottom of each individual layer</li>
+</ol>
+</div>
+
+<table style="font-size: 0.9em">
+	<tr>
+		<th></th>
+		<th>Thickness (m)</th>
+		<th>\(k_x\)(m/d)</th>
+		<th>\(k_y\)(m/d)</th>
+	</tr>
+	<tr>
+		<td>Layer 1</td>
+		<td>1.5</td>
+		<td>6</td>
+		<td>0.1</td>
+	</tr>
+	<tr>
+		<td>Layer 2</td>
+		<td>3.9</td>
+		<td>0.5</td>
+		<td>0.02</td>
+	</tr>
+	<tr>
+		<td>Layer 3</td>
+		<td>2.75</td>
+		<td>2.5</td>
+		<td>0.05</td>
+	</tr>
+</table>
+
+
+
+<div class='ProblemBox' style='height: 680px'>
+<img loading="lazy" src="figures/EX51000.svg" style="width:100%" alt=""/>
+</div>
+
+
+
+<div class='ProblemBox' >
+<div class="embed-placeholder" data-src="https://docs.google.com/spreadsheets/d/1p7Vu99lvH4tH7IU8LDUBt92TDjYmRtwz8LTjfwKUuvo/edit?usp=sharing" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+</div>
+
+
+</section>
+</article>
+</main>
+
+<footer class="book-footer">
+  <p>CIE 365 · Soil Mechanics — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

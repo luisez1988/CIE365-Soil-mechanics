@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} · {{COURSE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="{{CHAPTER_ID}}" data-total="{{TOTAL_BLANKS}}">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">{{COURSE}}</div>
+  <h1>{{TITLE}}</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">{{TOTAL_BLANKS}}</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+  <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+  <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+  <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+  <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+{{NAV}}
+  </ol>
+</nav>
+
+<article class="chapter">
+{{BODY}}
+</article>
+</main>
+
+<footer class="book-footer">
+  <p>{{COURSE}} — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By {{AUTHOR}} ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · {{ATTRIBUTION}}</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
