@@ -104,3 +104,8 @@ Deploy**. The URL stays the same, so nothing else needs updating.
 `http://localhost:8765` (accepted ID: `200123456`; `--broken` simulates a
 misconfigured deployment). Point `qa_endpoint` at it, rebuild, and serve the repo
 with `python -m http.server 8000`.
+
+## Data about the deployment
+Deployment ID: AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9
+
+Web app: https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec
