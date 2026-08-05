@@ -7,6 +7,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* The hidden attribute must always win, even over classes that set display */
+[hidden] { display: none !important; }
+
 :root {
   --brand: #cc0000;               /* NCSU red — headings, accents            */
   --brand-dark: #990000;          /* handwriting / answer color              */
