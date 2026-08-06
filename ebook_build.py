@@ -182,10 +182,13 @@ def colwidth_to_var(html: str) -> str:
 
 
 def strip_position_margins(html: str) -> str:
-    """Drop margin/margin-top/-left/-right from inline styles (slide positioning)."""
+    """Drop slide-positioning declarations from inline styles: margins and
+    absolute/fixed positioning are 1280x720 layout hacks that break a
+    scrollable document (elements escape their block and overlap)."""
     def repl(m):
         quote, css = m.group(1), m.group(2)
         css = re.sub(r'margin(?:-top|-left|-right)?\s*:\s*[^;"\']*;?', '', css)
+        css = re.sub(r'position\s*:\s*(?:absolute|fixed)\s*;?', '', css)
         css = css.strip().strip(';').strip()
         return 'style=%s%s%s' % (quote, css, quote) if css else ''
     return re.sub(r'style=(["\'])(.*?)\1', repl, html)
@@ -207,6 +210,9 @@ def transform_body(body: str, deck: str, anim_svgs: set) -> str:
     body = strip_position_margins(body)
     body = re.sub(r'\sclass=(["\'])\s*\1', '', body)  # empty class leftovers
     body = re.sub(r'<img\b(?![^>]*\bloading=)', '<img loading="lazy"', body)
+    # slides autoplay videos silently; in the book give students controls, and
+    # muted keeps autoplay working under browser media policies
+    body = re.sub(r'<video\b(?![^>]*\bcontrols\b)', '<video controls muted', body)
     # third-party embeds (Google Sheets etc.) become click-to-load placeholders:
     # they make the page heavy/janky and can stall rendering entirely
     body = re.sub(r'<iframe\b[^>]*\bsrc=(["\'])(https?://[^"\']+)\1[^>]*>.*?</iframe>',

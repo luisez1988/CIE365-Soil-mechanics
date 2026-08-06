@@ -318,6 +318,31 @@
         });
       });
 
+    /* ---------------- toolbar collapse toggle ---------------- */
+
+    (function initToolbarToggle() {
+      var toolbar = document.getElementById('toolbar');
+      var btn = document.getElementById('btn-tools');
+      if (!toolbar || !btn) return;
+
+      function apply(collapsed, persist) {
+        toolbar.classList.toggle('collapsed', collapsed);
+        btn.innerHTML = collapsed ? '&#9881; Tools' : '&#9650; Hide tools';
+        btn.setAttribute('aria-expanded', String(!collapsed));
+        if (persist && LS) {
+          LS.setItem('ebook:toolbar', collapsed ? 'collapsed' : 'open');
+        }
+      }
+
+      var stored = LS ? LS.getItem('ebook:toolbar') : null;
+      // no saved preference: start collapsed on phone-sized screens
+      apply(stored ? stored === 'collapsed' : window.innerWidth < 700, false);
+
+      btn.addEventListener('click', function () {
+        apply(!toolbar.classList.contains('collapsed'), true);
+      });
+    })();
+
     /* ---------------- student Q&A ---------------- */
 
     (function initQA() {

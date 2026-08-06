@@ -34,14 +34,18 @@ window.MathJax = {
   <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">{{TOTAL_BLANKS}}</span> blanks filled</span>
   <span class="progress-bar"><span id="prog-fill"></span></span>
   <span class="toolbar-spacer"></span>
-  <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
-  <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
-  <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
-  <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
-  <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
-  <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
   <input type="file" id="file-import" accept=".json,application/json" hidden>
 </div>
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
 
 <main>
 <nav class="chapter-nav">

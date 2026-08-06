@@ -141,6 +141,33 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1.2rem 3rem; }
 
 .toolbar-spacer { flex: 1; }
 
+.toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* Collapsed: the whole bar goes away, only the floating toggle remains */
+.toolbar.collapsed { display: none !important; }
+
+.toolbar-toggle {
+  position: fixed;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 60;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--brand);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand);
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+.toolbar-toggle:hover { background: #ffecec; }
+
 .toolbar button {
   font: inherit;
   padding: 0.3rem 0.7rem;
@@ -646,7 +673,7 @@ table td, table th { padding: 0.25em 0.6em; border-bottom: 1px solid #bbb; text-
    -------------------------------------------------------------------------- */
 
 @media print {
-  .toolbar, .chapter-nav, .back-link, .book-footer { display: none !important; }
+  .toolbar, .toolbar-toggle, .chapter-nav, .back-link, .book-footer { display: none !important; }
   .book-header { background: none; color: var(--ink); padding: 0 0 0.5rem; }
   .book-header .course-tag { color: #555; }
   body { background: #fff; font-size: 11pt; }
