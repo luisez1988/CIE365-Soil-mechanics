@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Builds the CIE365 interactive ebook from the reveal.js lecture decks.
+Builds the interactive course ebook from the reveal.js lecture decks.
+The course name shown to students lives in ebook_src/config.json ("course");
+nothing else writes it.
 
     python ebook_build.py                # build every chapter in ebook_src/config.json + TOC
     python ebook_build.py 1D_flow        # build one chapter + refresh TOC
@@ -316,6 +318,13 @@ def extract_chapter_title(body: str):
     return name_m.group(2).strip() if name_m else None
 
 
+def esc(text) -> str:
+    """Escape a config/title string for use in HTML text or attribute values
+    (course names contain '&', which must not be emitted raw)."""
+    return (str(text).replace('&', '&amp;').replace('<', '&lt;')
+            .replace('>', '&gt;').replace('"', '&quot;'))
+
+
 def slugify(text: str) -> str:
     return re.sub(r'[^a-z0-9]+', '-', (text or '').lower()).strip('-')[:40]
 
@@ -422,11 +431,12 @@ def build_chapter(ch_cfg, config):
 
     template = (SRC / 'chapter_template.html').read_text(encoding='utf-8')
     page = (template
-            .replace('{{COURSE}}', config['course'])
-            .replace('{{AUTHOR}}', config.get('author', ''))
-            .replace('{{ATTRIBUTION}}', config.get('attribution', ''))
-            .replace('{{QA_ENDPOINT}}', config.get('qa_endpoint', ''))
-            .replace('{{TITLE}}', title)
+            .replace('{{COURSE}}', esc(config['course']))
+            .replace('{{COURSE_CODE}}', esc(config.get('course_code', 'course')))
+            .replace('{{AUTHOR}}', esc(config.get('author', '')))
+            .replace('{{ATTRIBUTION}}', esc(config.get('attribution', '')))
+            .replace('{{QA_ENDPOINT}}', esc(config.get('qa_endpoint', '')))
+            .replace('{{TITLE}}', esc(title))
             .replace('{{CHAPTER_ID}}', deck)
             .replace('{{TOTAL_BLANKS}}', str(len(answers)))
             .replace('{{NAV}}', '\n'.join(nav_items))
@@ -503,9 +513,10 @@ def build_toc(config):
             % (meta['dir'], meta['dir'], meta['blanks'], meta['title'], meta['dir']))
     template = (SRC / 'toc_template.html').read_text(encoding='utf-8')
     page = (template
-            .replace('{{COURSE}}', config['course'])
-            .replace('{{AUTHOR}}', config.get('author', ''))
-            .replace('{{ATTRIBUTION}}', config.get('attribution', ''))
+            .replace('{{COURSE}}', esc(config['course']))
+            .replace('{{COURSE_CODE}}', esc(config.get('course_code', 'course')))
+            .replace('{{AUTHOR}}', esc(config.get('author', '')))
+            .replace('{{ATTRIBUTION}}', esc(config.get('attribution', '')))
             .replace('{{CHAPTERS}}', '\n'.join(items)))
     (OUT / 'index.html').write_text(page, encoding='utf-8')
     print('[OK] TOC with %d chapter(s) -> ebook/index.html' % len(items))

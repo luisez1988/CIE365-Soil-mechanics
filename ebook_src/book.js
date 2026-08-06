@@ -1,4 +1,4 @@
-/* CIE 365 interactive ebook — blanks + sticky-notes runtime.
+/* Interactive course ebook — blanks + sticky-notes runtime.
    Everything is stored per-chapter in localStorage:
      "ebook:answers:<dir>"  -> { blankId: text }
      "ebook:notes:<dir>"    -> [ {id, anchor, x, y, text} ]
@@ -9,6 +9,7 @@
   var APREFIX = 'ebook:answers:';
   var NPREFIX = 'ebook:notes:';
   var page = document.body.getAttribute('data-page');
+  var CODE = document.body.getAttribute('data-course-code') || 'course';
 
   function store() {
     try {
@@ -503,7 +504,7 @@
     var fileInput = document.getElementById('file-import');
 
     document.getElementById('btn-export').addEventListener('click', function () {
-      download('CIE365-' + chapter + '-answers-' + today() + '.json', {
+      download(CODE + '-' + chapter + '-answers-' + today() + '.json', {
         version: 1,
         kind: 'chapter',
         chapter: chapter,
@@ -618,7 +619,7 @@
           }
         }
       }
-      download('CIE365-all-answers-' + today() + '.json', {
+      download(CODE + '-all-answers-' + today() + '.json', {
         version: 1,
         kind: 'all',
         exported: new Date().toISOString(),

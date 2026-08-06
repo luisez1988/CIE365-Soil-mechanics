@@ -7,7 +7,7 @@ about 15 minutes. You only do this once.
 ## 1. Create the Sheet
 
 1. Go to [sheets.new](https://sheets.new) and name the spreadsheet something like
-   `CIE365 Q&A` (the name doesn't matter).
+   `CE342 Q&A` (the name doesn't matter).
 2. Rename the first tab (bottom left) to exactly **`Questions`** and put these
    headers in row 1:
 

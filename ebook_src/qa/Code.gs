@@ -1,5 +1,5 @@
 /**
- * CIE 365 ebook — student Q&A backend (Google Apps Script web app).
+ * Course ebook — student Q&A backend (Google Apps Script web app).
  *
  * Paste this whole file into Extensions → Apps Script of the Q&A Google Sheet,
  * then deploy as a Web app (Execute as: Me, Who has access: Anyone).
