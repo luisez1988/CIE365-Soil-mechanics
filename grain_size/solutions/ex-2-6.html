@@ -1,0 +1,44 @@
+<!-- Example 2.6 (renumbered from 2.7) — reading D50, Cu and Cc off the GSD the
+     student plotted in Example 2.5 (FiguresGeneral/EX270.svg, shown on the slide).
+     Replaces the four inline .fragment answers that used to sit in the ProblemBox.
+     All values are graph reads to three significant figures; the exact
+     log-interpolation cross-check lives in ex-2-6.md and is deliberately NOT
+     shown here. -->
+<div class="sol" data-id="ex-2-6">
+
+  <div class="step">
+    <span class="lead">Read the four sizes off the curve</span>
+    <table class="sol-table">
+      <tr>
+        <th>\(x\) (% finer)</th><th>10</th><th>30</th><th>50</th><th>60</th>
+      </tr>
+      <tr>
+        <td class="lbl">\(D_x\) (mm)</td>
+        <td><span class="fill" data-step="d">0.440</span></td>
+        <td><span class="fill" data-step="d">1.00</span></td>
+        <td><span class="ans" data-step="d">1.90</span></td>
+        <td><span class="fill" data-step="d">2.20</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <span class="lead">Coefficient of uniformity</span>
+    \(C_u=\dfrac{D_{60}}{D_{10}}=\) <span class="fill">\(\dfrac{2.20}{0.440}\)</span> \(=\)
+    <span class="ans">5.00</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Coefficient of curvature</span>
+    \(C_c=\dfrac{D_{30}^{2}}{D_{10}\,D_{60}}=\)
+    <span class="fill">\(\dfrac{(1.00)^{2}}{0.440\times2.20}\)</span> \(=\)
+    <span class="ans">1.03</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Classify the gradation</span>
+    From Example 2.5, soil is <span class="fill">97.35</span> % sand, so the sand limits apply:
+    \(C_u=5.00\le\) <span class="fill">6</span>, and the soil is <span class="ans">uniform</span>
+    <!-- <span class="note"> The threshold is \(C_u\le6\) for a sand but \(C_u\le4\) for a gravel, and this soil&rsquo;s \(C_u\) falls between the two. So the classification cannot be made from this slide alone &mdash; you need the fractions from Example 2.5. Always identify the coarse fraction before quoting a limit.</span> -->
+  </div>
+</div>

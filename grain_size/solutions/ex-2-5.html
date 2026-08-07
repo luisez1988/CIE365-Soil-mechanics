@@ -1,0 +1,39 @@
+<!-- Example 2.5 (renumbered from 2.6) — sieve analysis: retained weights,
+     percentages, soil fractions, and the grain size distribution.
+     Replaces the inline handwritten EX26_0.svg animation that used to sit in
+     this slide's ProblemBox. The GSD in step 7 is FiguresGeneral/EX270.svg —
+     the ANSWER to part (v), which Example 2.6 then reads its D-values from. -->
+<div class="sol" data-id="ex-2-5">
+
+  <div class="step" data-part="1">
+    <span class="lead">Total dry weight</span>
+    \(W_{td}=\sum_i W_i=\) <span class="fill">509.86</span> \(\unit{g}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Work one row &mdash; the 2 mm sieve</span>
+    \(W_{ri}=\sum_{k=1}^{i}W_k=\) <span class="fill" >\(12.5+233.67\)</span> \(=\)
+    <span class="fill" >246.17</span> \(\unit{g}\)
+    <br>
+    \(P_{Ri}=\dfrac{W_{ri}}{W_{td}}\times100=\) <span class="fill">\(\dfrac{246.17}{509.86}\times100\)</span> \(=\) <span class="ans">48.28</span> %
+    <br>
+    \(P_{Pi}=100-P_{Ri}=\) <span class="fill">\(100-48.28\)</span> \(=\)
+    <span class="ans">51.72</span> % <span class="note">Cumulate <em>downwards</em>, coarse to fine </span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Gravel fraction</span>
+    Coarser than 4.75 mm: \(G_F=P_{R,\#4}=\) <span class="ans">2.45</span> %
+    <span class="note">Gravel comes from the <em>retained</em> column</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Fine fraction</span>
+    Finer than 0.075 mm: \(F_F=P_{P,\#200}=\) <span class="ans">0.20</span> %
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Sand fraction</span>
+    Between 4.75 mm and 0.075 mm: \(S_F=100-G_F-F_F=\) <span class="fill">\(100-2.45-0.20\)</span> \(=\) <span class="ans">97.35</span> %
+  </div>
+</div>

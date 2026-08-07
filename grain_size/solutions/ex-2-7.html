@@ -1,0 +1,61 @@
+<!-- Example 2.7 (renumbered from 2.8) — full GSD workup from percent passing.
+     Three parts: 1 on the statement slide, 2 beside FiguresGeneral/GSD_plot.svg,
+     3 on the slide freed by deleting participation question 2.5.
+     The sieve openings are now printed in the slide's own table header, so
+     converting sieve numbers is no longer a step. -->
+<div class="sol" data-id="ex-2-7">
+
+  <div class="step" data-part="1">
+    <span class="lead">Plot the grain size distribution</span>
+    Percent passing on a linear vertical axis against opening on a <strong>logarithmic</strong> horizontal axis
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Soil fractions</span>
+    Gravel is what sieve No.&nbsp;4 retains:
+    \(G_F=100-P_{P,\#4}=\) <span class="fill">\(100-27\)</span> \(=\)
+    <span class="ans">73</span> %
+    <br>
+    Fines are what sieve No.&nbsp;200 passes: \(F_F=P_{P,\#200}=\)
+    <span class="ans">4</span> %
+    <br>
+    Sand is the remainder: \(S_F=100-G_F-F_F=\)
+    <span class="fill">\(100-73-4\)</span> \(=\) <span class="ans">23</span> %
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Find particle sizes from the GSD</span>
+    <table>
+      <tr>
+        <th>\(x\) (% finer)</th><th>10</th><th>30</th><th>50</th><th>60</th>
+      </tr>
+      <tr>
+        <td class="lbl">\(D_x\) (mm)</td>
+        <td><span class="fill" >0.550</span></td>
+        <td><span class="fill" >5.98</span></td>
+        <td><span class="ans" >19.6</span></td>
+        <td><span class="fill" >27.3</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Coefficient of uniformity</span>
+    \(C_u=\dfrac{D_{60}}{D_{10}}=\) <span class="fill">\(\dfrac{27.3}{0.550}\)</span> \(=\)
+    <span class="ans">49.7</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Coefficient of curvature</span>    
+    \(C_c=\dfrac{D_{30}^{2}}{D_{10}\,D_{60}}=\) <span class="fill">\(\dfrac{(5.98)^{2}}{0.550\times27.3}\)</span> \(=\) <span class="ans">2.38</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Classify the gradation</span>
+    The coarse fraction is gravel (<span class="fill">73</span> % against 23 % sand), so the gravel limits apply: \(C_u=49.7>4\) <strong>and</strong> \(1&lt;C_c=2.38&lt;3\).
+    <br>
+    The soil is a <span class="ans">well-graded gravel</span>.
+    <span class="note">Both tests have to pass, and the thresholds are the gravel ones
+    (\(C_u>4\)) &mdash; a sand would need \(C_u>6\).</span>
+  </div>
+</div>
