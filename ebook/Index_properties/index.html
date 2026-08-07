@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2: Phase relationships · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Index_properties" data-total="88" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 2: Phase relationships</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">88</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Unit systems</a></li>
+<li><a href="#s3">Density and unit weight</a></li>
+<li><a href="#s4">Specific gravity of common minerals</a></li>
+<li><a href="#s5">Soil phases</a></li>
+<li><a href="#s6">Measuring water content</a></li>
+<li><a href="#s7">Participation question 2.1</a></li>
+<li><a href="#s8">Measuring porosity</a></li>
+<li><a href="#s9">Example 2.1</a></li>
+<li><a href="#s10">Unit weight of soils</a></li>
+<li><a href="#s11">Example 2.2</a></li>
+<li><a href="#s12">Useful relationships</a></li>
+<li><a href="#s13">Example 2.3</a></li>
+<li><a href="#s14">Example 2.4</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+			
+				<ul>
+					<li >
+						<div class='textBox' >
+							We learned a brief history of the <strong style='color:black'>pioneers</strong> of soil mechanics.
+						</div>
+					</li>
+					<li >We learned that soil is <strong style='color:black'>disintegrated</strong> rock. The process of disintegration is called <strong style='color:black'>weathering</strong>.  </li>
+					<li >
+					<div class='textBox' >
+						We learned about <strong style='color:black'>different soil deposits</strong> including: alluvial, coastal, marine, lacustrine, glacial, eolian, colluvial, and residual soils.
+					</div>	
+					</li>
+					
+
+				</ul>
+		
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+
+					<div class='container'>
+					<div class='col' style="--colw:50%">
+						<ol class="contentStyle">
+							<li class="l1">Soil phases</li>
+							<li class="l1">Density and unit weight</li>
+							<li class="l1">Phase diagram</li>
+							<li class="l1">Volume and weight relations</li>							
+						</ol>
+					</div>
+					<div class="col" style="--colw:50%">
+						<div class="container">
+							<div class="col" style="--colw:50%">
+								<div class="stickynote" style="height: 300px">
+									<p>Objectives covered in this lecture</p>
+									<ul>
+										<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="--colw:50%">
+									<div class="stickynote" style="height: 300px">
+										<p>After this lecture we will be able to:</p>
+										<ul>
+											<li>Calculate the bulk, dry, saturated, and buoyant unit weight of soil. </li>
+											<li>Calculate water content and the saturation ratio.</li>
+											<li>Calculate void ratio and porosity of soils.</li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					</div>				
+
+        
+</section>
+
+<section class="block" id="s2" data-anchor="unit-systems">
+<h2 class="block-title">Unit systems</h2>
+
+	
+
+	<table>
+		<thead>
+			<tr>
+				<th>Dimension</th>
+				<th>SI</th>
+				<th>Imperial</th>
+				<th>Conversion factor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>Length</td><td>cm/m</td><td>in/ft</td><td>0.394/3.281</td></tr>
+			<tr><td>Mass</td><td>kg</td><td>slug</td><td>0.0685</td></tr>
+			<tr><td>Force</td><td>N</td><td>lb</td><td>0.225</td></tr>
+			<tr><td>Gravity</td><td>9.81 m/\(\text{s}^2\)</td><td>32.17 ft/\(\text{s}^2\)</td><td>-</td></tr>
+			<tr><td>Unit weight of water</td><td>9.81 kN/\(\text{m}^3\)</td><td>62.4 pcf</td><td>-</td></tr>
+		</tbody>
+	</table>
+
+</section>
+
+<section class="block" id="s3" data-anchor="density-and-unit-weight">
+<h2 class="block-title">Density and unit weight</h2>
+
+
+<table style="width: 100%; text-align: center; font-size: 0.85em; background-color:antiquewhite">
+<tr>
+   <th style="width: 30%">Variable</th>
+   <th style="width: 50%">Definition</th>
+   <th style="width: 20%">Formula </th>
+</tr>
+<tr>
+   <td >Density <span style='color:green'>(\(\rho\))</span></td>
+   <td >Ratio of <span class="blank" data-bid="Index_properties.e245396c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(m\))</span> to the <span class="blank" data-bid="Index_properties.5bc15eff-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(V\))</span> it occupies.</td>
+   <td >\(\rho=m/V\)</td>
+</tr>
+
+<tr>
+   <td >Unit weight <span style='color:green'>(\(\gamma\))</span></td>
+   <td >Ratio of <span class="blank" data-bid="Index_properties.9b76808e-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(W\))</span> to <span class="blank" data-bid="Index_properties.d30cadab-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(V\))</span> it occupies.</td>
+   <td >\(\gamma=W/V\)</td>
+</tr>
+
+<tr>
+   <td >Specific gravity <span style='color:green'>(\(G_s\))</span></td>
+   <td >Ratio of <span class="blank" data-bid="Index_properties.7e91ec15-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(\rho\))</span> to the <span class="blank" data-bid="Index_properties.258cb5d4-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> <span style='color:green'>(\(\rho_w\))</span>.</td>
+   <td >\(G_s=\rho/\rho_w\)</td>
+</tr>
+</table>
+
+<div class='textBox' >
+<strong style='color:#000'>Note:</strong> Weight is mass times gravity. Therefore, unit weight \(\gamma\) is related to density \(\rho\) by the equation: <br>
+<div class='equationBox' >
+\( \gamma= g \rho \)
+</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s4" data-anchor="specific-gravity-of-common-minerals">
+<h2 class="block-title">Specific gravity of common minerals</h2>
+
+	
+
+	<table >
+		<thead>
+			<tr>
+				<th>Mineral</th>
+				<th>Formula</th>
+				<th>\(G_s\)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>Calcite</td><td>CaCO\(_3\)</td><td>2.71</td></tr>
+			<tr><td>Feldspar</td><td>-</td><td>2.6</td></tr>
+			<tr><td>Hematite</td><td>Fe\(_2\)O\(_3\)</td><td>5.2</td></tr>
+			<tr><td>Kaolinite</td><td>Al\(_2\)Si\(_2\)O\(_5\)(OH)\(_4\)</td><td>2.61-2.66</td></tr>
+			<tr><td>Mica</td><td>-</td><td>2.9</td></tr>
+			<tr><td>Quartz</td><td>SiO\(_2\)</td><td>2.65</td></tr>
+		</tbody>
+	</table>
+
+
+	<div class='InquiryBox' >
+	What are the <strong style='color:orange'>most common</strong> minerals in sand?
+	</div>
+<img loading="lazy" src="../../Index_properties/FiguresGeneral/Sands.png" style="width:100%">
+
+<div class='findingBox' >
+Assuming \(G_s=2.65\) is not far away from reality!
+</div>
+
+</section>
+
+<section class="block" id="s5" data-anchor="soil-phases">
+<h2 class="block-title">Soil phases</h2>
+
+     
+	 <div class="textBox"> Soils are a collection of particles (<span class="blank" data-bid="Index_properties.94686211-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>) and <span class="blank" data-bid="Index_properties.c33385c5-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>. The voids in a soil can be filled with <span class="blank" data-bid="Index_properties.1d365047-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span>.</div>
+	 <div class='container'>
+	 <div class='col'>
+		<img loading="lazy"  src="../../Index_properties/FiguresGeneral/phases.svg" width="90%"></img>
+	 </div>
+	 <div class='col'>
+		<div >
+			<div class="defBox" name="Fully dry soil:"  > A soil with <span class="blank" data-bid="Index_properties.5c6cb10c-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>.</div>	 
+		</div>
+		<div >
+			<div class="defBox" name="partially saturated soil:" > A soil with <span class="blank" data-bid="Index_properties.fd90784c-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>.</div>
+		</div>
+		<div >
+			<div class="defBox" name="Fully saturated soil" > A soil without <span class="blank" data-bid="Index_properties.d896b2cc-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>.</div>
+		</div>
+	</div>
+	</div>
+		 
+ 
+
+ <div class='findingBox' >
+ Let's simplify the complexity of the assembly by constructing a <span class="blank" data-bid="Index_properties.2f67bb38-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>
+ </div>
+ <img loading="lazy" src="../../Index_properties/FiguresGeneral/phase-diagram.svg" style="width:100%">
+ 
+
+<div class='container'>
+<div class='col' style="--colw:60%">
+<p ><span class="blank" data-bid="Index_properties.fb5b11ba-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> </p>
+</div>
+<div class='col' style="--colw:40%">
+<p  ><span class="blank" data-bid="Index_properties.ca9b94aa-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> </p>
+</div>
+</div>
+<img loading="lazy" src="figures/phase-diagram_animated.svg" style="width: 100%" alt=""/>
+
+
+
+
+
+
+
+
+	<div class="textBox" style="text-align: left;font-size: 1 em"> From the previous slide we can construct our first relationships: <br> 
+	
+		<div class='equationBox'>
+			\( W_t=W_s+ W_w \)
+		</div> <br> <br>
+	   Similarly for the total volume: <br>
+		<div class='equationBox'>
+		\( V_t=V_s+V_w+V_a=V_s+V_v \)
+		</div> <br> <br>
+	
+	 With the <span class="blank" data-bid="Index_properties.148776bf-0" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> equal to: <br>
+	<div class='equationBox'>
+	\( V_v=V_w+V_a \)
+	</div>
+	
+	</div>
+
+
+	
+
+
+
+
+
+</section>
+
+<section class="block" id="s6" data-anchor="measuring-water-content">
+<h2 class="block-title">Measuring water content</h2>
+
+
+
+<table style="background-color: antiquewhite">
+   <tr>
+      <th>Variable</th>
+      <th>Definition</th>
+      <th>Equation</th>
+   </tr>
+   <tr>
+      <td>Gravimetric water content <strong style='color:green'>\(w\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>weight of </strong><span class="blank" data-bid="Index_properties.a1794b01-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> to the weight of <strong style='color:#000'>solids</strong></td>
+      <td>\( w[\%]= \frac{W_w}{W_s} \times 100 \)</td>
+
+   </tr>
+
+   <tr>
+      <td>Volumetric water content <strong style='color:green'>\(\Theta\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>volume of <span class="blank" data-bid="Index_properties.976a23e5-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> to the total volume</strong></td>
+      <td>\( \Theta=\frac{V_w}{V_t} \)</td>
+   </tr>
+
+   <tr>
+      <td>Saturation ratio<strong style='color:green'>\(S_r\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>volume of <span class="blank" data-bid="Index_properties.9835bf90-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> to the volume of <span class="blank" data-bid="Index_properties.efb67773-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span></strong></td>
+      <td>\( S_r=\frac{V_w}{V_v} \)</td>
+   </tr>
+</table>
+
+</section>
+
+<section class="block check-yourself" id="s7" data-anchor="participation-question-2-1">
+<h2 class="block-title">Participation question 2.1</h2>
+
+
+		
+		<div class='InquiryBox' >
+			What is the saturation of a <strong style='color:orange'>fully saturated</strong> soil?
+		</div>
+		
+		
+		<ol class="iClicker">
+		<li class="l2">25%</li>
+		<li class="l2">0%</li>
+		<li class="l2">100%</li>
+		<li class="l2">50%</li>
+		</ol>
+
+
+</section>
+
+<section class="block" id="s8" data-anchor="measuring-porosity">
+<h2 class="block-title">Measuring porosity</h2>
+
+
+
+<table style="width: 100%; background-color: antiquewhite">
+<tr>
+<th>Variable</th>
+<th>Definition</th>
+<th>Equation</th>
+</tr>
+
+<tr>
+   <td>Void ratio <strong style='color:green'>\(e\)</strong></td>
+   <td>Ratio of volume of <span class="blank" data-bid="Index_properties.57eacbd4-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> to volume of <span class="blank" data-bid="Index_properties.62e4e396-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td>\( e=V_v/V_s \)</td>   
+</tr>
+
+<tr>
+   <td>Porosity <strong style='color:green'>\(n\)</strong></td>
+   <td>Ratio of volume of <span class="blank" data-bid="Index_properties.2eaa7cbe-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> to <span class="blank" data-bid="Index_properties.bc647c1c-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td>\( n= V_v/V_t \)</td>  
+</tr>
+
+<tr>
+   <td>Solid fraction <strong style='color:green'>\(c\)</strong></td>
+   <td>Ratio of volume of <span class="blank" data-bid="Index_properties.985b54b8-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> to <span class="blank" data-bid="Index_properties.982c5477-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td>\( c= V_s/V_t \)</td>
+</tr>
+
+</table>
+
+
+<div class='textBox' >
+<strong style='color:#000'>Note:</strong> All these variables are related to each other, since they measure the same thing: Voids!
+</div>
+
+
+
+
+
+</section>
+
+<section class="block" id="s9" data-anchor="example-2-1">
+<h2 class="block-title">Example 2.1</h2>
+
+
+
+<div class="textBox"> Show that \(n=e/(1+e)\).</div>
+
+<div class='ProblemBox' >
+<div class="sol" data-id="ex-2-1">
+  <div class="step">
+    <span class="lead">Start with definition of porosity</span>
+    \(n=\)<span class="blank math" data-bid="Index_properties.1362364b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+<div class="step">
+    <span class="lead">Invert the equation</span>
+    \(\cfrac{1}{n}=\)<span class="blank math" data-bid="Index_properties.7543f0cb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+  <div class="step">
+    <span class="lead">Decompose total volume:</span>
+    \(\cfrac{1}{n}=\)<span class="blank math" data-bid="Index_properties.0641026b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span><span class="blank math" data-bid="Index_properties.e5291d26-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+  <div class="step">
+    <span class="lead">Use the definition of void ratio</span>
+    \(\cfrac{1}{n}=\)<span class="blank math" data-bid="Index_properties.375fbd88-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span><span class="blank math" data-bid="Index_properties.cdfc950e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+  <div class="step result">
+    <span class="lead">take the reciprocal on both sides</span>
+    \(n=\)<span class="blank math ans" data-bid="Index_properties.641f26cc-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies \ e= \) <span class="blank math ans" data-bid="Index_properties.4e18d943-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+</div>
+</div>
+
+
+
+</section>
+
+<section class="block" id="s10" data-anchor="unit-weight-of-soils">
+<h2 class="block-title">Unit weight of soils</h2>
+
+
+
+<table style="width: 100%; background-color: antiquewhite">
+<tr>
+   <th style="font-size: 0.85em">Variable</th>
+   <th style="font-size: 0.85em">Definition</th>
+   <th style="font-size: 0.85em">Unit weight</th>
+   <th style="font-size: 0.85em">Density</th>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em">Total unit weight/density <strong style='color:green'>(\(\gamma_t\))</strong>/ <strong style='color:green'>(\(\rho_t\))</strong></td>
+   <td style="font-size: 0.85em">Ratio of <span class="blank" data-bid="Index_properties.de034ca0-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> to <span class="blank" data-bid="Index_properties.0d1e3229-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td style="font-size: 0.85em">\( \gamma_t=W_t/V_t \)</td>
+   <td style="font-size: 0.85em">\(\rho_t= m_t/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em">Dry unit weight/density <strong style='color:green'>(\(\gamma_d\))</strong>/ <strong style='color:green'>(\(\rho_d\))</strong></td>
+   <td style="font-size: 0.85em">Ratio of <span class="blank" data-bid="Index_properties.82597ff6-0" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> to <span class="blank" data-bid="Index_properties.0d3b1447-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td style="font-size: 0.85em">\( \gamma_d=W_s/V_t \)</td>
+   <td style="font-size: 0.85em">\(\rho_d= m_s/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em">Saturated unit weight/density <strong style='color:green'>(\(\gamma_{sat}\))</strong>/ <strong style='color:green'>(\(\rho_{sat}\))</strong></td>
+   <td style="font-size: 0.85em">Unit weight/density when <strong style='color:green'>\(S=100\%\)</strong> or <strong style='color:green'>\(V_v=V_w\)</strong></td>
+   <td style="font-size: 0.85em">\( \gamma_{sat}=W_{sat}/V_t \)</td>
+   <td style="font-size: 0.85em">\(\rho_{sat}= m_{sat}/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em">Buoyant unit weight/density <strong style='color:green'>(\(\gamma'\))</strong>/ <strong style='color:green'>(\(\rho'\))</strong></td>
+   <td style="font-size: 0.85em">Also known as <span class="blank" data-bid="Index_properties.820e3eec-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> or <span class="blank" data-bid="Index_properties.b805c2bf-0" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+   <td style="font-size: 0.85em">\( \gamma'=\gamma_{sat}-\gamma_w \)</td>
+   <td style="font-size: 0.85em">\(\rho'=\rho_{sat}-\rho_w \)</td>
+</tr>
+</table>
+
+
+
+
+
+
+   <div class='findingBox' >
+   Use this table to validate your calculations!
+   </div>
+
+   
+   <table class="typical-uw" style="border-collapse: collapse; width: 100%">
+      <caption style="font-size: 28px; margin-bottom: 10px">Typical soil unit weights. Modified from Holtz et al. 2023</caption>
+      <thead>
+         <tr>
+            <th rowspan="2">Soil type</th>
+            <th colspan="2">\(\gamma_{sat}\)</th>
+            <th colspan="2">\(\gamma_d\)</th>
+            <th colspan="2">\(\gamma'\)</th>
+         </tr>
+         <tr>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Sands and gravels</td>
+            <td>19-24</td>
+            <td>119-150</td>
+            <td>15-23</td>
+            <td>94-144</td>
+            <td>9-14</td>
+            <td>62-81</td>
+         </tr>
+         <tr>
+            <td>Silts and clay</td>
+            <td>14-21</td>
+            <td>87-131</td>
+            <td>6-18</td>
+            <td>37-112</td>
+            <td>4-11</td>
+            <td>25-69</td>
+         </tr>
+         <tr>
+            <td>Glacial tills</td>
+            <td>21-24</td>
+            <td>131-150</td>
+            <td>17-23</td>
+            <td>106-144</td>
+            <td>11-14</td>
+            <td>69-87</td>
+         </tr>
+         <tr>
+            <td>Crushed rock</td>
+            <td>19-22</td>
+            <td>119-137</td>
+            <td>15-20</td>
+            <td>94-125</td>
+            <td>9-12</td>
+            <td>56-75</td>
+         </tr>
+         <tr>
+            <td>Peats</td>
+            <td>10-11</td>
+            <td>60-69</td>
+            <td>1-3</td>
+            <td>6-19</td>
+            <td>0-1</td>
+            <td>0-6</td>
+         </tr>
+         <tr>
+            <td>Organics silt and clay</td>
+            <td>13-18</td>
+            <td>81-112</td>
+            <td>5-15</td>
+            <td>31-94</td>
+            <td>3-8</td>
+            <td>19-50</td>
+         </tr>
+      </tbody>
+   </table>
+ 
+</section>
+
+<section class="block" id="s11" data-anchor="example-2-2">
+<h2 class="block-title">Example 2.2</h2>
+
+
+<div class="textBox">Unit weight is the connector between the <span class="blank" data-bid="Index_properties.b439e090-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> and the <span class="blank" data-bid="Index_properties.c4b9c352-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span>. Using phase diagrams <strong style='color:black'>find an expression for the total unit weight \(\gamma_t\)</strong> and <strong style='color:black'>show that \(S e= w G_s\)</strong>.</div>
+
+<div class='ProblemBox' >
+<figure  >
+<img loading="lazy" src='../../Index_properties/FiguresGeneral/phase_diagram_handwritten.svg' width='50%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+<div class="sol" data-id="ex-2-2">
+
+  <div class="step">
+    <span class="lead">Set the volume of solids</span>
+    Take \(V_s=\) <span class="blank" data-bid="Index_properties.3d8e6d7a-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">Rule 4 of steps</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Fill the volume column</span>
+    <table class="sol-table">
+      <tr><th>Phase</th><th>From the definitions</th><th>Volume</th></tr>
+      <tr>
+        <td class="lbl">Solids</td>
+        <td>chosen in step 1</td>
+        <td>\(V_s=1\)</td>
+      </tr>
+      <tr>
+        <td class="lbl">Voids</td>
+        <td>\(V_v=e\,V_s\)</td>
+        <td>\(=\) <span class="blank math" data-bid="Index_properties.53264874-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Water</td>
+        <td>\(V_w=S\,V_v\)</td>
+        <td>\(=\) <span class="blank math" data-bid="Index_properties.4d3e4944-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Air</td>
+        <td>\(V_a=V_v-V_w\)</td>
+        <td>=<span class="blank math" data-bid="Index_properties.30ed0cf0-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Total</td>
+        <td>\(V_t=V_s+V_v\)</td>
+        <td>\(=\) <span class="blank math" data-bid="Index_properties.419ccd99-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <span class="lead">Cross over to the weight column</span>
+    \(W_s=\gamma_s V_s=\Gs\gw V_s=\) <span class="blank math" data-bid="Index_properties.852f37fd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">\(\Gs\gw\) is the unit weight of the <em>solids</em>, not of the
+    bulk granular assembly</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Weight of water, then total weight</span>
+    \(W_w=\gw V_w=\) <span class="blank math" data-bid="Index_properties.a043a7f6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>, so
+    \(W_t=W_s+W_w=\) <span class="blank math" data-bid="Index_properties.f0248129-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Total unit weight</span>
+    \(\gamma_t=\dfrac{W_t}{V_t}=\)
+    <span class="blank math ans" data-bid="Index_properties.167810e4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+     If \(S=0\) (dry), <span class="blank math ans" data-bid="Index_properties.0fc456ed-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span>, and if \(S=1\) (saturated),
+    <span class="blank math ans" data-bid="Index_properties.e8d5951d-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Water content, off the same diagram</span>
+    \(w=\dfrac{W_w}{W_s}=\) <span class="blank math" data-bid="Index_properties.9cb32afd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\dfrac{Se}{\Gs}\), &nbsp;so &nbsp;<span class="blank math ans" data-bid="Index_properties.78e0f591-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">The same \(\gamma_t\), written in terms of \(w\)</span>
+    Substituting \(Se=w\Gs\) into step 5 gives the form to use when \(w\) is measured
+    and \(S\) is not: &nbsp;\(\gamma_t=\)
+    <span class="blank math" data-bid="Index_properties.93a124f3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:33ch" contenteditable="plaintext-only" spellcheck="false"></span> <span class="blank math ans" data-bid="Index_properties.39f311ba-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+<div class='ProblemBox' >
+
+
+</div>
+
+
+</section>
+
+<section class="block" id="s12" data-anchor="useful-relationships">
+<h2 class="block-title">Useful relationships</h2>
+
+
+<div class='container'>
+<div class='col' style="--colw:50%">
+<p >For unit weight:</p>
+<div class="equationBox" >
+	<p>\(\gamma_t=\cfrac{\gamma_w (G_s+S e)}{1+e} \)</p>
+	<p>\(\gamma_d=\cfrac{\gamma_w G_s}{1+e} \)</p>
+	<p>\(\gamma_{sat}=\cfrac{\gamma_w (G_s+ e)}{1+e} \)</p>
+	<p>\( \gamma_t=\gamma_d (1+w[-])\)</p>
+</div>
+
+</div>
+<div class='col' style="--colw:50%">
+	<p>Relationship between saturation, void ratio, specific gravity, and water content:</p>
+
+<div class='equationBox' >
+\( S e= w G_s \)
+</div>
+
+<div class='findingBox' >
+	Useful to remember: <strong style='color:green'>s</strong>tructural <strong style='color:green'>e</strong>ngineers are <strong style='color:green'>w</strong>acky <strong style='color:green'>g</strong>uys 😂
+</div>
+
+		
+	
+</div>
+</div>
+
+
+ <div class='findingBox' >
+ Useful steps to solve phase relationship problems
+ </div>
+
+ <ol style="font-size: 0.9em">
+   <li >List known information in terms of elementary masses and volumes: <br>
+   For example \(e= V_v/V_s=0.6\) instead of \(e=0.6\)
+   </li>
+   <li >Draw a phase diagram</li>
+   <li >It is always okay to set \(\rho_w=1000\) kg/m<sup>3</sup> or \(\gamma_w= 9.81\) kN/m<sup>3</sup> </li>
+   <li >The values of the individual phase ratios (e.g., densities, volume ratios, and mass ratios) are independent of the size of the soil sample. Therefore, it is always okay to fix a value of any single mass or volume <strong style='color:#000'>if (and only if)</strong> no mass or volume is given </li>
+   <li >Fill in one side of the diagram until you get stuck or completely solve it, then "cross over" the other side of the phase diagram using one of the densities or the specific gravity</li>
+
+   <li ><strong style='color:#000'>Validate</strong> your answer. You can use tables of typical soil properties to do this.</li>
+ </ol>
+ 
+ 
+</section>
+
+<section class="block" id="s13" data-anchor="example-2-3">
+<h2 class="block-title">Example 2.3</h2>
+
+	 
+
+	 <div class="textBox"><p>In the natural state, a moist soil has a volume of 0.0093 m<sup>3</sup> and weighs 177.6 N. The oven dry weight of the soil is 153.6 N. If \(G_s=2.71\), calculate: (1) Gravimetric water content, (2) Total unit weight, (3) Void ratio and porosity, (4) Saturation ratio.</p>
+		
+
+
+	</div>
+
+	<div class='ProblemBox' >
+	
+<div class="sol" data-id="ex-2-3">
+
+  <div class="step">
+    <span class="lead">Weight of water</span>
+    \(W_w=W_t-W_s=\) <span class="blank math" data-bid="Index_properties.5f12ccfc-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.b66704fe-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{N}\)
+    <span class="note">"Oven dry weight" is the weight of the <em>solids</em> because all the
+    water is gone</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Gravimetric water content</span>
+    \(w=\dfrac{W_w}{W_s}=\) <span class="blank math" data-bid="Index_properties.24198322-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Index_properties.31797450-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <span class="note">Divide by the weight of <em>solids</em>, never the total weight, which
+    is why \(w> 100\%\)</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Total unit weight</span>
+    \(\gamma_t=\dfrac{W_t}{V_t}=\) <span class="blank math" data-bid="Index_properties.167810e4-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math" data-bid="Index_properties.56afe6ae-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{N/m^3}=\)
+    <span class="blank ans" data-bid="Index_properties.28431923-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Cross over to volumes</span>    
+    \(V_s=\dfrac{W_s}{\Gs\gw}=\)
+    <span class="blank math" data-bid="Index_properties.14312833-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.0aa08402-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m^3}\)    
+  </div>
+
+  <div class="step">
+    <span class="lead">Volume of voids</span>
+    \(V_v=V_t-V_s=\) <span class="blank math" data-bid="Index_properties.dbe63dc7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.06f004c4-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m^3}\)
+    <span class="note">Keep \(V_s\) to four significant figures: \(V_v\) is a small
+    difference of two similar numbers.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Void ratio and porosity</span>
+    \(e=\dfrac{V_v}{V_s}=\) <span class="blank math" data-bid="Index_properties.2f9d3e07-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Index_properties.f71fb0cb-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(n=\dfrac{e}{1+e}=\) <span class="blank math" data-bid="Index_properties.336c591d-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Index_properties.4d426221-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <span class="note">Same \(V_v\) in both, only the denominator changes, \(V_s\) for
+    \(e\) and \(V_t\) for \(n\).</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Volume of water</span>
+    \(V_w=\dfrac{W_w}{\gw}=\) <span class="blank math" data-bid="Index_properties.0a8d8030-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.b34a45b7-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m^3}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Saturation ratio</span>
+    \(S=\dfrac{V_w}{V_v}=\) <span class="blank math" data-bid="Index_properties.3bcd8183-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Index_properties.974ca362-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+  </div>
+
+  <div class="step">
+    <span class="lead">Validate</span>
+    The identity proved in Example 2.2 has to hold on real data:
+    \(Se=\) <span class="blank math" data-bid="Index_properties.183950aa-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:30ch" contenteditable="plaintext-only" spellcheck="false"></span> &nbsp;and&nbsp;
+    \(w\Gs=\) <span class="blank math" data-bid="Index_properties.cd6d7087-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:30ch" contenteditable="plaintext-only" spellcheck="false"></span>. &#10003;
+    <span class="note">A check worth doing!</span>
+  </div>
+</div>
+
+	</div>
+ 
+
+	<div class='ProblemBox' >
+	
+	</div>
+ 
+</section>
+
+<section class="block" id="s14" data-anchor="example-2-4">
+<h2 class="block-title">Example 2.4</h2>
+
+ 
+ <div class='textBox' >
+  The void ratio of a clay is 0.5 and the saturation ratio is 70%. Assuming the density of solids is 2750 kg/m <sup>3</sup>, calculate: (1) The water content, (2) The dry unit weight, and (3) The total unit weight.
+ </div>
+
+ <div class='ProblemBox' >
+ 
+<div class="sol" data-id="ex-2-4">
+
+  <div class="step">
+    <span class="lead">Specific gravity of the solids</span>
+    \(\Gs=\dfrac{\rho_s}{\rho_w}=\) <span class="blank math" data-bid="Index_properties.7dca6d4a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="Index_properties.9f73214e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Water content</span>
+    From \(Se=w\Gs\) (Example 2.2), &nbsp;\(w=\dfrac{Se}{\Gs}=\)
+    <span class="blank math" data-bid="Index_properties.949211ad-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:33ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Index_properties.b31d1b69-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+  </div>
+
+  <div class="step">
+    <span class="lead">Dry unit weight</span>
+    \(\gd=\dfrac{\Gs\gw}{1+e}=\) <span class="blank math" data-bid="Index_properties.65e07a51-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:33ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.a2d5e22e-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{N/m^3}=\)
+    <span class="blank ans" data-bid="Index_properties.25c1885a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Total unit weight</span>
+    \(\gamma_t=\cfrac{\gw(G_s+Se)}{1+e}=\) <span class="blank math" data-bid="Index_properties.071e2135-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Index_properties.88a470cc-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{N/m^3}=\)
+    <span class="blank ans" data-bid="Index_properties.1ff5a64f-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Validate</span>
+    Both unit weights land at the dense end of the silt-and-clay band in the
+    typical-values table. Validated.
+  </div>
+
+</div>
+
+ </div>
+
+ 
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

@@ -232,6 +232,28 @@ def strip_position_margins(html: str) -> str:
     return re.sub(r'style=(["\'])(.*?)\1', repl, html)
 
 
+def balance_divs(html: str) -> str:
+    """Close (or drop) unbalanced <div>s so a slide cannot leak layout into the
+    next one. The decks rely on </section> to auto-close stray divs, which is
+    fine in reveal.js but not here: the book flattens sections away, so an
+    unclosed .container would swallow every block that follows it."""
+    depth = 0
+    out = []
+    pos = 0
+    for m in re.finditer(r'<(/?)div\b[^>]*?(/?)>', html, re.IGNORECASE):
+        if m.group(2):  # <div/> — self-closing, ignore
+            continue
+        if not m.group(1):
+            depth += 1
+        elif depth:
+            depth -= 1
+        else:  # </div> with nothing open: would close our own <section>
+            out.append(html[pos:m.start()])
+            pos = m.end()
+    out.append(html[pos:])
+    return ''.join(out) + '</div>' * depth
+
+
 def transform_body(body: str, deck: str, anim_svgs: set, sol_state: dict) -> str:
     # first: pull worked solutions in from solutions/*.html, so everything below
     # (fragment stripping, blank conversion) sees them as ordinary slide markup
@@ -261,7 +283,7 @@ def transform_body(body: str, deck: str, anim_svgs: set, sol_state: dict) -> str
                              'tabindex="0">\U0001f4ca Interactive worksheet — click to load'
                              '</div>' % m.group(2)),
                   body, flags=re.DOTALL | re.IGNORECASE)
-    return body
+    return balance_divs(body)
 
 
 # ---------------------------------------------------------------------------
@@ -672,7 +694,10 @@ def list_sections(deck: str, config):
             flags.append('TITLE-SLIDE: %s' % extract_chapter_title(body))
         if 'iClicker' in body:
             flags.append('iClicker')
-        n_blanks = len(BLANK_RE.findall(body))
+        # Counts the .atb/.fill/.ans opening tags. This runs on the raw deck, so
+        # `.Solution` hosts are still unexpanded — solution blanks are not in the
+        # count. It is a listing aid, not the build's own tally.
+        n_blanks = len(BLANK_OPEN.findall(body))
         if n_blanks:
             flags.append('%d blank(s)' % n_blanks)
         print('  [%2d] %-45s %s' % (i, title or '(untitled)', ' | '.join(flags)))
