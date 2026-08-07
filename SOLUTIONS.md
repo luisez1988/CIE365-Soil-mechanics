@@ -1,5 +1,10 @@
 # Authoring worked examples
 
+> This file is the **format reference** — the roles, the classes, the maths rules, the
+> machinery. For the *procedure* to follow when writing a new example (where the statement
+> comes from, how to verify the numbers, and the companion `.md` record each example must
+> have), see **[WRITING_EXAMPLE_SOLUTIONS.md](WRITING_EXAMPLE_SOLUTIONS.md)**.
+
 One file per example produces both renderings:
 
 | | |

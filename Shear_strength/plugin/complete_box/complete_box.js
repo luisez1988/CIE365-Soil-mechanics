@@ -3,7 +3,7 @@ var caption = '';
 var writingVelocity = 500; // milliseconds per character (1 seconds/character)
 var currentBoxIndex = 0; // Track which box to animate next
 var orderedBoxes = []; // Will store boxes sorted by their order attribute
-const audio_src= new Audio("https://cdn.pixabay.com/download/audio/2022/03/10/audio_7eef141153.mp3?filename=chalk-on-chalkboard-32542.mp3")
+const audio_src= new Audio("plugin/complete_box/chalk-on-chalkboard-32542.mp3")
 const boxes = document.getElementsByClassName("atb");
 
 const boxpressed = e => {
