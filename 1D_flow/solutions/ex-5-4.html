@@ -1,0 +1,59 @@
+<!-- Example 5.4 — falling-head permeability test. Legacy figure: FiguresGeneral/EX540.svg -->
+<div class="sol" data-id="ex-5-4">
+
+  <div class="step">
+    <span class="lead">Pick the right test equation</span>
+    Nothing maintains the head here — the water in the standpipe <em>falls</em> from
+    \(H_1\) to \(H_2\), so \(q\) changes continuously. Integrating Darcy's law over
+    \(\Delta t\) gives the falling-head equation
+    \(k=\dfrac{a\,L}{A\,\Delta t}\,\ln\!\dfrac{H_1}{H_2}\).
+    <span class="note">What makes it falling-head is the <em>apparatus</em>, not the
+    soil: nothing resupplies the standpipe.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Sort out the two areas</span>
+    <table class="sol-table">
+      <tr><th>Symbol</th><th>Cross-section of&hellip;</th><th>Value</th></tr>
+      <tr>
+        <td class="lbl">\(a\)</td>
+        <td>the standpipe — the water that <em>falls</em></td>
+        <td>7.25 \(\unit{cm^2}\)</td>
+      </tr>
+      <tr>
+        <td class="lbl">\(A\)</td>
+        <td>the specimen — the soil water flows <em>through</em></td>
+        <td>11.43 \(\unit{cm^2}\)</td>
+      </tr>
+    </table>
+    <span class="note">Swapping \(a\) and \(A\) is the classic error here. They differ
+    by only 1.6&times;, so a swapped answer still <em>looks</em> plausible.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Head-ratio term</span>
+    \(\ln\!\dfrac{H_1}{H_2}=\) <span class="fill">\(\ln\dfrac{171.4}{79.3}\)</span>
+    \(=\ln\) <span class="fill">2.161</span> \(=\) <span class="fill">0.771</span>
+    <span class="note">A <em>ratio</em>, so it is dimensionless — any consistent length
+    unit works.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Geometric / time factor</span>
+    \(\dfrac{a\,L}{A\,\Delta t}=\)
+    <span class="fill">\(\dfrac{7.25\times11.62}{11.43\times110}\)</span>
+    \(=\) <span class="fill">0.0670</span> \(\unit{cm/s}\)
+    <span class="note">This term carries all the units. \(\Delta t\) is already in
+    seconds, so \(k\) comes out in cm/s.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Permeability</span>
+    \(k=\dfrac{a\,L}{A\,\Delta t}\ln\!\dfrac{H_1}{H_2}=\)
+    <span class="fill">\(0.0670\times0.771\)</span>
+    \(=\) <span class="ans">\(5.16\times10^{-2}\)</span> \(\unit{cm/s}\)
+    <span class="note">Same order as Example 5.3 — reasonable for the gravelly sand
+    (SW) described in the statement.</span>
+  </div>
+
+</div>

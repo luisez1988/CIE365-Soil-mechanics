@@ -14,8 +14,40 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
 		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
-	
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
 	</head>
 	  <body>
 	
@@ -693,18 +725,18 @@ Examining the the equation for \(k\) we can conclude that:
 
 <section>
 <h1>Example 5.3</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='textBox' style='font-size: 0.8em;margin-top: 0px;margin-left: 0px;'>
 A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a constant-head permeability apparatus. A constant head of 85 cm is maintained during the test. After 2 min of testing, a total of 1054 g of water was collected. The temperature was 20<sup>o</sup>C. Calculate the permeability of the soil sample.
 </div>
 
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 300px;'>
-<object style='width:100%; margin-top: -50px;'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX530.svg'></object>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-5-3.html'></div>
 </div>
 </section>
 
 <section>
 <h1>Example 5.4</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='textBox' style='font-size: 0.8em;margin-top: 0px;margin-left: 0px;'>
 A laboratory falling-head permeability test is performed on a light-gray gravelly sand (SW), and the following data is obtained:
 <div class='container'>
 <div class='col' style='width: 50%;'>
@@ -726,8 +758,8 @@ A laboratory falling-head permeability test is performed on a light-gray gravell
 Calculate the permeability of the soil sample in cm/s.
 </div>
 
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 220px;'>
-<object style='width:100%; margin-top: -30px;'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX540.svg'></object>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-5-4.html'></div>
 </div>
 
 </section>
@@ -1033,20 +1065,20 @@ How does \(k\) varies directionoally and spatially in a soil?
 
 <section >
 <h1>Example 5.8</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='textBox' style='font-size: 0.8em;margin-top: 0px;margin-left: 0px;'>
 A constant head permeability test was conducted on a chamber of 6 inches of diameter by 12 inches heigh. The soil was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s each. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
 
 </div>
 
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<object style="width: 100%" class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4140.svg'></object>
+<div class='Solution' data-src='solutions/ex-5-8.html' data-part='1'></div>
 </div>
 
 </section>
 
 <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<object style="width: 100%" class='Animation' type='image/svg+xml' data='FiguresGeneral/EX4141.svg'></object>
+<div class='Solution' data-src='solutions/ex-5-8.html' data-part='2'></div>
 </div>
 
 </section>
@@ -1221,11 +1253,14 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
-<script src="plugin/Animated_lines/animate_svg.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but every figure here is an
+     <object>, so External_svg.js does all the real work. It also threw a
+     TypeError on load and on every hashchange (it looks up <section> ids that
+     do not exist in this deck). -->
 <script src="plugin/Animated_lines/External_svg.js"></script>
+<script src="../assets/solution-plugin.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
@@ -1249,21 +1284,12 @@ Reveal.initialize({
    autoPlayMedia: true,
    width: 1280,
    height: 720,
-   math: {
-	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-	   config: 'TeX-AMS_HTML-full',
-	   tex2jax: {
-		   inlineMath: [['\\(','\\)']],
-		   displayMath: [['\\[','\\]']],
-		   balanceBraces: true,
-		   processEscapes: false,
-		   processRefs: true,
-		   processEnvironments: true,
-		   preview: 'TeX',
-		   skipTags: ['script','noscript','style','textarea','pre','code'],
-		   ignoreClass: 'tex2jax_ignore',
-		   processClass: 'tex2jax_process'
-	   },
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 5,    // typing speed — the one dial. Lower is slower.
    },
 
    spotlight: {
@@ -1388,7 +1414,7 @@ Reveal.initialize({
 	   // ...
    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    // Learn about plugins: https://revealjs.com/plugins/
-   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+   plugins: [ RevealCustomControls, RevealSolution, RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
 					   ],
 						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
 	   });

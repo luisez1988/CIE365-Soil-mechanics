@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Worked-example solutions — shared by the reveal.js decks and the ebook.
+
+   One authoring format, two renderings:
+     slides -> steps revealed one at a time (reveal.js fragments)
+     ebook  -> .fill/.ans become fill-in blanks, everything else pre-printed
+
+   The four roles ARE the course colour code:
+     (unwrapped)  black  given / pre-printed scaffolding
+     .fill        blue   values the student fills in
+     .ans         green  the answer the problem asked for
+     .note        red    annotations - the thing you say out loud
+
+   Loaded as ../assets/solutions.css from a deck, and copied into
+   ebook/assets/ by ebook_build.py.
+   ========================================================================== */
+
+:root {
+  --sol-given: #000000;
+  --sol-fill:  #000080;
+  --sol-ans:   #008000;
+  --sol-note:  #ff0000;
+  --sol-hand:  "Caveat", "Segoe Print", "Bradley Hand", cursive;
+}
+
+/* --------------------------------------------------------------------------
+   The handwriting face — self-hosted on purpose.
+
+   The old SVG figures were lettered in `Gunny Rewritten`, which has no
+   @font-face anywhere in this repo, so they only ever looked right on the
+   author's machine. Shipping the woff2 next to the CSS means the solutions
+   look the same on a lecture-hall PC, a student's laptop, and offline.
+
+   Caveat (SIL Open Font License 1.1) is already this project's handwriting
+   face — `.atb` blanks in the deck theme and `--hand` in book.css both use it —
+   so solutions now match the fill-in-the-blank styling instead of introducing
+   a second hand. One file per subset: Caveat is a variable font, and Google
+   serves the same woff2 for 400 and 700.
+
+   Paths are relative to this stylesheet, so they resolve from both
+   assets/solutions.css and ebook/assets/solutions.css.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/caveat-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/caveat-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+
+.sol {
+  counter-reset: solstep;
+  text-align: left;
+  color: var(--sol-given);
+  line-height: 1.4;
+  font-family: var(--sol-hand);
+}
+
+/* Caveat has a small x-height for its em, so it reads a size smaller than an
+   upright face at the same font-size. (The deck sets its own size below.) */
+.sol { font-size: 1.15em; }
+
+/* Handwriting for the maths too.
+
+   MathJax CHTML draws each glyph with its own TeX face, and its advance widths
+   come from that face's metrics — so swapping the family leaves the spacing a
+   little loose. It is a fair trade: the alternative is handwritten prose next
+   to typeset equations, which reads worse than slightly airy handwriting.
+
+   Greek is the one gap. No handwriting font on Google Fonts ships a Greek
+   subset, Caveat included, so π/γ/σ/Δ fall through to MathJax's own face —
+   which is why MJXZERO/MJXTEX stay in the stack rather than a generic cursive.
+   Mixed, but only on Greek letters, and it beats losing them.
+
+   !important because MathJax injects its own font-family rules at runtime. */
+.sol mjx-c,
+.sol mjx-math {
+  font-family: var(--sol-hand), MJXZERO, MJXTEX !important;
+}
+
+/* The deck is authored at 1280x720 with --r-main-font-size: 40px. A solution
+   carries far more lines than a normal slide, so it is set well down from that
+   — a six-step solution plus a problem statement has to fit in 720px. */
+.reveal .sol { font-size: 0.44em; }
+
+/* --------------------------------------------------------------------------
+   Steps: one .step = one physical quantity obtained
+   -------------------------------------------------------------------------- */
+
+.sol .step {
+  counter-increment: solstep;
+  position: relative;
+  padding: 0.1em 0 0.1em 1.9em;
+  margin: 0.25em 0;
+}
+
+.sol .step::before {
+  content: counter(solstep) ")";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+/* .lead names what is being found, so the route is visible before solving */
+.sol .lead { font-weight: 700; }
+.sol .lead::after { content: ":"; padding-right: 0.35em; }
+
+/* The final line: what the problem actually asked for */
+.sol .step.result {
+  border: 2px solid var(--sol-ans);
+  border-radius: 6px;
+  background: rgba(0, 128, 0, 0.06);
+  padding: 0.3em 0.6em 0.3em 1.9em;
+  margin-top: 0.5em;
+}
+.sol .step.result::before { left: 0.5em; }
+
+/* --------------------------------------------------------------------------
+   The four roles
+   -------------------------------------------------------------------------- */
+
+/* MathJax CHTML inherits `color`, so wrapping math in one of these colours it
+   without any macro. See assets/mathjax-macros.js for colouring only PART of
+   an expression. */
+.sol .fill { color: var(--sol-fill); }
+.sol .ans  { color: var(--sol-ans); font-weight: 700; }
+
+.sol .note {
+  display: block;
+  position: relative;
+  margin-top: 0.12em;
+  padding-left: 1.15em;
+  font-size: 0.82em;
+  color: var(--sol-note);
+}
+.sol .note::before {
+  content: "\21B3";                 /* down-then-right arrow */
+  position: absolute;
+  left: 0;
+  font-style: normal;
+}
+
+/* A note that annotates the whole example rather than one step */
+.sol > .note { margin: 0.4em 0 0.4em 1.9em; }
+
+/* Underline annotation */
+.sol .u {
+  text-decoration: underline;
+  text-decoration-color: var(--sol-note);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+/* --------------------------------------------------------------------------
+   Structure: tables, figures, columns
+   -------------------------------------------------------------------------- */
+
+/* An HTML table, not a LaTeX array: .fill/.ans only become ebook blanks when
+   they are real spans, and a LaTeX array renders as one opaque unit. */
+.sol .sol-table {
+  border-collapse: collapse;
+  margin: 0.4em 0;
+  font-size: 0.92em;
+}
+.sol .sol-table th,
+.sol .sol-table td {
+  border: 1px solid #9a9a9a;
+  padding: 0.15em 0.55em;
+  text-align: center;
+}
+.sol .sol-table th {
+  background: rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+}
+.sol .sol-table td.lbl { text-align: left; font-weight: 700; }
+
+/* Escape hatch: genuine drawings stay drawings. Only the algebra becomes text. */
+.sol .sol-fig { display: block; margin: 0.35em auto; text-align: center; }
+.sol .sol-fig img,
+.sol .sol-fig svg { max-width: 100%; height: auto; }
+.sol .sol-fig figcaption { font-size: 0.78em; opacity: 0.75; }
+
+/* Figure beside algebra. Set a width with inline `style="flex: 0 0 42%"`. */
+.sol .sol-cols { display: flex; gap: 1.1em; align-items: flex-start; }
+.sol .sol-col  { flex: 1 1 0; min-width: 0; }
+
+/* --------------------------------------------------------------------------
+   Slide-only behaviour
+   -------------------------------------------------------------------------- */
+
+/* reveal.js hides fragments with `visibility: hidden`, which keeps their layout
+   box. Two consequences we rely on:
+
+   1. The solution box is already the right size while still empty, so it
+      populates in place and nothing below it ever shifts.
+   2. An inline blank holds its gap open, so the equation does not jump
+      sideways when the value appears.
+
+   NOTES sit beside the step they belong to, and all of them persist.
+   Deliberately IN FLOW as an inline-block rather than absolutely positioned:
+   a note is often taller than the one-line step it annotates, and absolute
+   positioning lets consecutive notes overlap each other. In flow the browser
+   wraps them, so overlap is structurally impossible.
+
+   The cost is height, which makes note length a hard constraint — roughly 110
+   visible characters. Longer explanations go in `data-slide` (short form for
+   the slide, full text for the book). See SOLUTIONS.md. */
+.reveal .sol .step > .note {
+  display: inline-block;
+  max-width: 38%;
+  vertical-align: top;
+  margin: 0 0 0 0.8em;
+}
+.reveal .sol .note { font-size: 0.76em; }
+
+/* --------------------------------------------------------------------------
+   The typewriter (slides only)
+
+   Characters are revealed one at a time, in reading order, by
+   solution-plugin.js. A CSS clip cannot do this: a clip sweeps a vertical band
+   across the whole element, so on a line that wraps it uncovers the second line
+   at the same moment as the first. Revealing real characters follows the text
+   flow, wrapping included.
+
+   Plain text is split one span per character; MathJax needs no splitting
+   because CHTML already emits one <mjx-c> per glyph. Both end up as .sol-atom.
+   -------------------------------------------------------------------------- */
+
+/* `visibility`, not `display`: the layout box stays, so the line does not
+   reflow as it is typed and the solution box is correctly sized while empty. */
+.reveal .sol .sol-atom.pending { visibility: hidden; }
+
+.reveal .sol .writing.fragment {
+  position: relative;              /* anchor for the pencil */
+}
+
+/* Once the plugin is driving, the step label's colon is a real character in the
+   typewriter stream (see buildAtoms), so the CSS one has to go — otherwise it
+   would show twice. The padding stays. The book, where nothing types, keeps the
+   CSS colon. */
+.reveal .sol.typing .lead::after { content: ""; }
+
+/* Once written, an element is done — permanently.
+
+   `opacity`/`visibility` are forced because reveal's own fragment rule would
+   otherwise fade it back out the moment you step backwards. Written work should
+   stay on the board; stepping back should not un-write it. The plugin also
+   marks the element `disabled`, which takes it out of reveal's stepping
+   altogether, but reveal's Fragments.update() re-queries `.fragment` WITHOUT
+   the :not(.disabled) filter, so the class alone is not enough to keep it on
+   screen. Hence both. */
+.reveal .sol .writing.written {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+/* The pencil is placed on the character currently being written, so it tracks
+   the text across line wraps and disappears the moment the characters run out
+   — the plugin removes it. It is not tied to the width of the block. */
+.reveal .sol .sol-pencil {
+  position: absolute;
+  font-size: 1.0em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  animation: pencil-bounce 0.5s ease-in-out infinite;
+}
+
+@keyframes pencil-bounce {
+  0%, 100% { transform: translateY(0)     rotate(-15deg); }
+  50%      { transform: translateY(-3px)  rotate(-15deg); }
+}
+
+/* Respect a reduced-motion preference: keep the reveal, drop the motion. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal .sol .sol-atom.pending { visibility: visible; }
+  .reveal .sol .sol-pencil { display: none; }
+}
+
+/* Injection failed (e.g. the deck was opened over file:// instead of http). */
+.sol-error {
+  color: var(--sol-note);
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+/* --------------------------------------------------------------------------
+   Print (decks export to PDF via the browser; the ebook adds its own rules
+   in book.css)
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .sol .step        { break-inside: avoid; }
+  .sol .step.result { background: none; }
+  /* PDF export shows every fragment at once — every character must be on the
+     page, not mid-typing. */
+  .reveal .sol .sol-atom.pending { visibility: visible !important; }
+  .reveal .sol .sol-pencil { display: none !important; }
+}

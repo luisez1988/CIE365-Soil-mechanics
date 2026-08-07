@@ -8,11 +8,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
 <script>
 window.MathJax = {
   tex: {
     inlineMath: [['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    macros: window.SOL_MACROS
   },
   options: {
     ignoreHtmlClass: 'blank',
@@ -22,7 +25,7 @@ window.MathJax = {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
 </head>
-<body data-page="chapter" data-chapter="1D_flow" data-total="20" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+<body data-page="chapter" data-chapter="1D_flow" data-total="51" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
 
 <header class="book-header">
   <a class="back-link" href="../index.html">&larr; Contents</a>
@@ -31,7 +34,7 @@ window.MathJax = {
 </header>
 
 <div class="toolbar" id="toolbar">
-  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">20</span> blanks filled</span>
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">51</span> blanks filled</span>
   <span class="progress-bar"><span id="prog-fill"></span></span>
   <span class="toolbar-spacer"></span>
   <span class="toolbar-actions">
@@ -264,7 +267,7 @@ For the points in the figure below determine the total head, the pressure head, 
 </div>
 <div class='col' style="--colw:50%">
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX470.svg" style="width: 100%" alt=""/>
+
 </div>
 </div>
 </div>
@@ -353,7 +356,7 @@ Calculate the hydraulic gradient between points A and B in the figure bellow and
 </div>
 <div class='col' style="--colw:50%">
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX480.svg" style="width: 100%" alt=""/>
+
 </div>
 </div>
 </div>
@@ -635,12 +638,62 @@ Examining the the equation for \(k\) we can conclude that:
 <h2 class="block-title">Example 5.3</h2>
 
 
-<div class='textBox' >
+<div class='textBox' style='font-size: 0.8em'>
 A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a constant-head permeability apparatus. A constant head of 85 cm is maintained during the test. After 2 min of testing, a total of 1054 g of water was collected. The temperature was 20<sup>o</sup>C. Calculate the permeability of the soil sample.
 </div>
 
-<div class='ProblemBox' style='height: 300px'>
-<img loading="lazy" src="figures/EX530.svg" style="width:100%" alt=""/>
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-5-3">
+
+  <div class="step">
+    <span class="lead">Pick the right test equation</span>
+    The head is <em>held constant</em>, so Darcy's law applies unchanged for the whole
+    test: \(V=q\,t=k\,i\,A\,t\), with \(i=\dfrac{h}{L}\).
+    <span class="note">\(T=20^{\circ}\)C is the reference temperature for \(k\) — no
+    viscosity correction. That is the only reason it is given.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Cross-sectional area</span>
+    \(A=\dfrac{\pi d^{2}}{4}=\)
+    <span class="blank math" data-bid="1D_flow.3a1a8b40-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.d9a39c56-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^2}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Volume collected</span>
+    \(V=\) <span class="blank" data-bid="1D_flow.c4a1c6b6-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3}\)
+    <span class="note">A <em>mass</em> was measured; Darcy's law needs a volume. At
+    \(20^{\circ}\)C, \(\rho=1\unit{g/cm^3}\) — same number, different unit.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Flow rate</span>
+    \(q=\dfrac{V}{t}=\) <span class="blank math" data-bid="1D_flow.03767d3c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.b9dfef9c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3/s}\)
+    <span class="note">\(t=2\) min \(=120\) s. Convert <em>before</em> substituting.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Hydraulic gradient</span>
+    \(i=\dfrac{h}{L}=\) <span class="blank math" data-bid="1D_flow.5d3ad1fe-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.0ca530a8-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">Dimensionless: head lost <em>per unit length of flow path</em>.
+    The denominator is \(L\), never the head.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Permeability</span>
+    \(k=\dfrac{q}{i\,A}=\)
+    <span class="blank math" data-bid="1D_flow.f0db7475-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:34ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.4e4d7448-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note">Sanity check: a constant-head test only gives measurable flow in
+    a fairly permeable soil, so expect the clean-sand range.</span>
+  </div>
+
+</div>
+
 </div>
 
 </section>
@@ -649,7 +702,7 @@ A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a c
 <h2 class="block-title">Example 5.4</h2>
 
 
-<div class='textBox' >
+<div class='textBox' style='font-size: 0.8em'>
 A laboratory falling-head permeability test is performed on a light-gray gravelly sand (SW), and the following data is obtained:
 <div class='container'>
 <div class='col' style='--colw:50%'>
@@ -671,8 +724,67 @@ A laboratory falling-head permeability test is performed on a light-gray gravell
 Calculate the permeability of the soil sample in cm/s.
 </div>
 
-<div class='ProblemBox' style='height: 220px'>
-<img loading="lazy" src="figures/EX540.svg" style="width:100%" alt=""/>
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-5-4">
+
+  <div class="step">
+    <span class="lead">Pick the right test equation</span>
+    Nothing maintains the head here — the water in the standpipe <em>falls</em> from
+    \(H_1\) to \(H_2\), so \(q\) changes continuously. Integrating Darcy's law over
+    \(\Delta t\) gives the falling-head equation
+    \(k=\dfrac{a\,L}{A\,\Delta t}\,\ln\!\dfrac{H_1}{H_2}\).
+    <span class="note">What makes it falling-head is the <em>apparatus</em>, not the
+    soil: nothing resupplies the standpipe.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Sort out the two areas</span>
+    <table class="sol-table">
+      <tr><th>Symbol</th><th>Cross-section of&hellip;</th><th>Value</th></tr>
+      <tr>
+        <td class="lbl">\(a\)</td>
+        <td>the standpipe — the water that <em>falls</em></td>
+        <td>7.25 \(\unit{cm^2}\)</td>
+      </tr>
+      <tr>
+        <td class="lbl">\(A\)</td>
+        <td>the specimen — the soil water flows <em>through</em></td>
+        <td>11.43 \(\unit{cm^2}\)</td>
+      </tr>
+    </table>
+    <span class="note">Swapping \(a\) and \(A\) is the classic error here. They differ
+    by only 1.6&times;, so a swapped answer still <em>looks</em> plausible.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Head-ratio term</span>
+    \(\ln\!\dfrac{H_1}{H_2}=\) <span class="blank math" data-bid="1D_flow.6f6ba7cd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\ln\) <span class="blank" data-bid="1D_flow.8e3009a2-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="1D_flow.b4e8cf4a-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">A <em>ratio</em>, so it is dimensionless — any consistent length
+    unit works.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Geometric / time factor</span>
+    \(\dfrac{a\,L}{A\,\Delta t}=\)
+    <span class="blank math" data-bid="1D_flow.29948372-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.62f83c15-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note">This term carries all the units. \(\Delta t\) is already in
+    seconds, so \(k\) comes out in cm/s.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Permeability</span>
+    \(k=\dfrac{a\,L}{A\,\Delta t}\ln\!\dfrac{H_1}{H_2}=\)
+    <span class="blank math" data-bid="1D_flow.9bfa53f6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.f72d5272-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note">Same order as Example 5.3 — reasonable for the gravelly sand
+    (SW) described in the statement.</span>
+  </div>
+
+</div>
+
 </div>
 
 
@@ -721,14 +833,14 @@ The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of 
 </div>
 <div class='col' style='--colw:65%'>
 <div class='ProblemBox' style='height: 370px'>
-<img loading="lazy" src="figures/EX550.svg" style="width:100%" alt=""/>
+
 </div>
 </div>
 </div>
 
 
 <div class='ProblemBox' style='height: 660px'>
-<img loading="lazy" src="figures/EX551.svg" style="width:100%" alt=""/>
+
 </div>
 
 
@@ -752,7 +864,7 @@ The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of 
   	</div>
   	<div class="col" style="--colw:50%">
 		<div class='ProblemBox' >
-		<img loading="lazy" src="figures/EX490.svg" style="width: 100%" alt=""/>
+		
 		</div>
   	</div>
   </div>
@@ -782,7 +894,7 @@ The test setup has the dimensions shown below. Calculate: (a) the pressure head,
 </div>
 <div class='col' style='--colw:50%'>
 <div class='ProblemBox' style='height: 400px'>
-<img loading="lazy" src="figures/ex570.svg" style="width:100%" alt=""/>
+
 </div>
 </div>
 </div>
@@ -914,19 +1026,106 @@ How does \(k\) varies directionoally and spatially in a soil?
 <h2 class="block-title">Example 5.8</h2>
 
 
-<div class='textBox' >
+<div class='textBox' style='font-size: 0.8em'>
 A constant head permeability test was conducted on a chamber of 6 inches of diameter by 12 inches heigh. The soil was placed between two porous stones of 1/2 inches of diameter with a permeability of \(k=1 \times 10^{-3}\) cm/s each. The test lasted 1.5 hr and 2 lt. of water were collected. The total head difference was 1 m. Find the permeability of the sand considering the effect of the porous stones.
 
 </div>
 
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX4140.svg" style="width: 100%" alt=""/>
+
+<div class="sol" data-id="ex-5-8">
+
+  <div class="step">
+    <span class="lead">See the system for what it is</span>
+    Water crosses <em>three</em> materials in a row: stone, soil, stone. They are in
+    <strong>series</strong>, so each carries the same \(q\) but loses a different share
+    of the head. Resistances add:
+    \(\dfrac{L_{tot}}{k_{eq}}=\displaystyle\sum_i\dfrac{L_i}{k_i}\).
+    <span class="note"
+     >Define
+    \(R=L/k\) (units of s) and the problem becomes
+    arithmetic: \(R_{tot}=2R_{stone}+R_{soil}\). Only <em>series</em> layers add this
+    way — parallel layers add \(k_iL_i\) instead.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Geometry, in consistent units</span>
+    \(D=6''=\) <span class="blank" data-bid="1D_flow.3d26e5e2-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm, &nbsp;
+    \(L_{tot}=12''=\) <span class="blank" data-bid="1D_flow.71329fea-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm, &nbsp;
+    \(t_{stone}=\tfrac12''=\) <span class="blank" data-bid="1D_flow.b08f6b66-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> cm
+    <br>
+    \(L_{soil}=L_{tot}-2\,t_{stone}=\)
+    <span class="blank math" data-bid="1D_flow.7f0edfa4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="1D_flow.74c50c2c-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm
+    <span class="note"
+     ><strong>Two
+    readings of the statement have to be pinned down.</strong>
+    A stone "of 1/2 inch" must be its <em>thickness</em> — it has to span the full
+    6&Prime; chamber to seal against the wall. And the 12&Prime; chamber height is taken
+    as the whole stack, so the soil is what is left after both stones. State
+    assumptions like these before you compute; they change the answer.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Cross-sectional area</span>
+    \(A=\dfrac{\pi D^{2}}{4}=\)
+    <span class="blank math" data-bid="1D_flow.3a1a8b40-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.d9a39c56-1" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^2}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">What the test actually measures</span>
+    The test sees the <em>whole stack</em>, so it returns \(k_{eq}\), not the soil:
+    \(k_{eq}=\dfrac{V\,L_{tot}}{A\,\Delta h\,t}=\)
+    <span class="blank math" data-bid="1D_flow.9e099dfe-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math" data-bid="1D_flow.05a165f5-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note"
+     >\(V=2\unit{L}=2000\unit{cm^3}\),
+    \(\Delta h=1\unit{m}=100\unit{cm}\),
+    \(t=1.5\unit{hr}=5400\unit{s}\). This is the number you would report if you forgot
+    the stones — hold on to it for comparison.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Total resistance measured</span>
+    \(R_{tot}=\dfrac{L_{tot}}{k_{eq}}=\)
+    <span class="blank math" data-bid="1D_flow.3f20c73a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:38ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.2815c5ce-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Resistance the stones are responsible for</span>
+    \(2R_{stone}=\dfrac{2\,t_{stone}}{k_{stone}}=\)
+    <span class="blank math" data-bid="1D_flow.3a9397cd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:37ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.70e8f18c-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
+    <span class="note"
+     >The
+    stones are far thinner than the soil but only ten times more
+    permeable, so they are not negligible — thickness and permeability both matter,
+    only the <em>ratio</em> \(L/k\) counts.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Permeability of the sand</span>
+    \(k_{soil}=\dfrac{L_{soil}}{R_{tot}-2R_{stone}}=\)
+    <span class="blank math" data-bid="1D_flow.4d0f79da-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.7b5efa2c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+  </div>
+
+  <div class="note">Worth the effort? The stones turn out to carry 5.2% of
+  the total resistance, so ignoring them overestimates the sand's permeability by about
+  3.5%. Small here — but the error grows quickly as the soil becomes more permeable
+  relative to the stones, which is exactly when you are most tempted to skip the
+  correction.</div>
+
+</div>
+
 </div>
 
 
 
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX4141.svg" style="width: 100%" alt=""/>
+
 </div>
 
 
@@ -982,7 +1181,7 @@ A permeable water channel will be constructed as shown in the figure. Three laye
 </div>
 <div class='col' style='--colw:50%'>
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX4150.svg" style="width: 100%" alt=""/>
+
 </div>
 </div>
 </div>
@@ -991,7 +1190,7 @@ A permeable water channel will be constructed as shown in the figure. Three laye
 
 
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX4151.svg" style="width: 100%" alt=""/>
+
 </div>
 
 </section>

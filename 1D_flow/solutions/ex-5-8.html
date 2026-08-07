@@ -1,0 +1,88 @@
+<!-- Example 5.8 — constant-head test corrected for porous stones.
+     Legacy figures: FiguresGeneral/EX4140.svg (part 1) + EX4141.svg (part 2) -->
+<div class="sol" data-id="ex-5-8">
+
+  <div class="step" data-part="1">
+    <span class="lead">See the system for what it is</span>
+    Water crosses <em>three</em> materials in a row: stone, soil, stone. They are in
+    <strong>series</strong>, so each carries the same \(q\) but loses a different share
+    of the head. Resistances add:
+    \(\dfrac{L_{tot}}{k_{eq}}=\displaystyle\sum_i\dfrac{L_i}{k_i}\).
+    <span class="note"
+      data-slide="Define \(R=L/k\): then \(R_{tot}=2R_{stone}+R_{soil}\). <em>Series</em> only.">Define
+    \(R=L/k\) (units of s) and the problem becomes
+    arithmetic: \(R_{tot}=2R_{stone}+R_{soil}\). Only <em>series</em> layers add this
+    way — parallel layers add \(k_iL_i\) instead.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Geometry, in consistent units</span>
+    \(D=6''=\) <span class="fill">15.24</span> cm, &nbsp;
+    \(L_{tot}=12''=\) <span class="fill">30.48</span> cm, &nbsp;
+    \(t_{stone}=\tfrac12''=\) <span class="fill">1.27</span> cm
+    <br>
+    \(L_{soil}=L_{tot}-2\,t_{stone}=\)
+    <span class="fill">\(30.48-2(1.27)\)</span> \(=\)
+    <span class="fill">27.94</span> cm
+    <span class="note"
+      data-slide="<strong>Assumed:</strong> the stone&rsquo;s 1/2&Prime; is its <em>thickness</em> (it must seal the 6&Prime; chamber), and the 12&Prime; is the whole stack."><strong>Two
+    readings of the statement have to be pinned down.</strong>
+    A stone "of 1/2 inch" must be its <em>thickness</em> — it has to span the full
+    6&Prime; chamber to seal against the wall. And the 12&Prime; chamber height is taken
+    as the whole stack, so the soil is what is left after both stones. State
+    assumptions like these before you compute; they change the answer.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Cross-sectional area</span>
+    \(A=\dfrac{\pi D^{2}}{4}=\)
+    <span class="fill">\(\dfrac{\pi(15.24)^{2}}{4}\)</span>
+    \(=\) <span class="fill">182.4</span> \(\unit{cm^2}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">What the test actually measures</span>
+    The test sees the <em>whole stack</em>, so it returns \(k_{eq}\), not the soil:
+    \(k_{eq}=\dfrac{V\,L_{tot}}{A\,\Delta h\,t}=\)
+    <span class="fill">\(\dfrac{2000\times30.48}{182.4\times100\times5400}\)</span>
+    \(=\) <span class="fill">\(6.19\times10^{-4}\)</span> \(\unit{cm/s}\)
+    <span class="note"
+      data-slide="\(V=2000\unit{cm^3}\), \(\Delta h=100\unit{cm}\), \(t=5400\unit{s}\). What you would report if you forgot the stones.">\(V=2\unit{L}=2000\unit{cm^3}\),
+    \(\Delta h=1\unit{m}=100\unit{cm}\),
+    \(t=1.5\unit{hr}=5400\unit{s}\). This is the number you would report if you forgot
+    the stones — hold on to it for comparison.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Total resistance measured</span>
+    \(R_{tot}=\dfrac{L_{tot}}{k_{eq}}=\)
+    <span class="fill">\(\dfrac{30.48}{6.19\times10^{-4}}\)</span>
+    \(=\) <span class="fill">49\,250</span> \(\unit{s}\)
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Resistance the stones are responsible for</span>
+    \(2R_{stone}=\dfrac{2\,t_{stone}}{k_{stone}}=\)
+    <span class="fill">\(\dfrac{2(1.27)}{1\times10^{-3}}\)</span>
+    \(=\) <span class="fill">2\,540</span> \(\unit{s}\)
+    <span class="note"
+      data-slide="Thin, but only 10&times; more permeable — not negligible. Only the <em>ratio</em> \(L/k\) counts.">The
+    stones are far thinner than the soil but only ten times more
+    permeable, so they are not negligible — thickness and permeability both matter,
+    only the <em>ratio</em> \(L/k\) counts.</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Permeability of the sand</span>
+    \(k_{soil}=\dfrac{L_{soil}}{R_{tot}-2R_{stone}}=\)
+    <span class="fill">\(\dfrac{27.94}{49\,250-2\,540}\)</span>
+    \(=\) <span class="ans">\(5.98\times10^{-4}\)</span> \(\unit{cm/s}\)
+  </div>
+
+  <div class="note" data-part="2">Worth the effort? The stones turn out to carry 5.2% of
+  the total resistance, so ignoring them overestimates the sand's permeability by about
+  3.5%. Small here — but the error grows quickly as the soil becomes more permeable
+  relative to the stones, which is exactly when you are most tempted to skip the
+  correction.</div>
+
+</div>

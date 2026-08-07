@@ -474,6 +474,21 @@ table td, table th { padding: 0.25em 0.6em; border-bottom: 1px solid #bbb; text-
 
 .InquiryBox .blank { border-color: #fff; }
 
+/* The blank that holds what the problem actually asked for. Structural styling
+   for the surrounding solution lives in assets/solutions.css, shared with the
+   decks; only the blank itself is book-specific. */
+.blank.ans {
+  border-color: var(--sol-ans);
+  border-width: 3px;
+  background: rgba(0, 128, 0, 0.07);
+}
+.blank.ans:focus { box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.25); }
+
+/* A solution sits inside the ProblemBox, which already carries the
+   "📝 Solution:" heading and the cream background. */
+.ProblemBox .sol { margin-top: 0.3em; }
+.ProblemBox .sol .step.result { background: rgba(0, 128, 0, 0.05); }
+
 .blank.math { position: relative; }
 .blank.math::after {
   content: "ƒ";
@@ -687,6 +702,11 @@ table td, table th { padding: 0.25em 0.6em; border-bottom: 1px solid #bbb; text-
     border-radius: 0;
   }
   .blank.math::after { display: none; }
+  /* keep the answer distinguishable on paper, where colour may not survive */
+  .blank.ans { border-bottom: 3px double #000; }
+  .sol .step { break-inside: avoid; }
+  .sol .step.result { background: none; }
+  .sol .note { color: #333; }
   iframe, .embed-placeholder { display: none; }
   .fnote { position: static !important; width: auto; margin: 0.6rem 0; transform: none; break-inside: avoid; }
   .fnote-bar { display: none; }

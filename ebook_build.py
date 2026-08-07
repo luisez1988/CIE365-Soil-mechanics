@@ -165,6 +165,42 @@ def convert_animation_objects(html: str, collected: set) -> str:
         repl, html, flags=re.IGNORECASE | re.DOTALL)
 
 
+SOLUTION_DIV = re.compile(
+    r'<div\b[^>]*class=["\'][^"\']*\bSolution\b[^"\']*["\'][^>]*>\s*</div>',
+    re.IGNORECASE | re.DOTALL)
+
+
+def expand_solutions(html: str, deck: str, state: dict) -> str:
+    """Inline <div class='Solution' data-src='solutions/x.html'></div>.
+
+    The slides split a long solution across two slides with data-part; the book
+    is a scrollable page, so it takes the whole file at once. Each data-src is
+    therefore inlined only ONCE per chapter -- collect_blocks already merges the
+    untitled continuation slide into its parent block, so without this the
+    solution would appear twice."""
+    def repl(m):
+        tag = m.group(0)
+        src_m = re.search(r'data-src=["\']([^"\']+)["\']', tag)
+        if not src_m:
+            return ''
+        src = src_m.group(1)
+        if src in state['seen']:
+            return ''                      # continuation slide: already inlined
+        state['seen'].add(src)
+        path = REPO / deck / src
+        if not path.exists():
+            state['missing'].append(src)
+            return ''
+        body = strip_comments(path.read_text(encoding='utf-8', errors='replace'))
+        # data-part splits a solution across two slides; data-slide carries the
+        # short form of a note for the slide's tight vertical budget. Both are
+        # slide-only hints -- a scrolling page takes the whole thing at full
+        # length, so strip them and keep the element's own (full) text.
+        return re.sub(r'\sdata-(?:part|slide)=(["\']).*?\1', '', body,
+                      flags=re.DOTALL)
+    return SOLUTION_DIV.sub(repl, html)
+
+
 def rewrite_figure_paths(html: str, deck: str) -> str:
     # case-insensitive: sources contain typos like "Figuresgeneral/"; normalize
     # to the real folder case so links work on case-sensitive GitHub Pages
@@ -196,7 +232,10 @@ def strip_position_margins(html: str) -> str:
     return re.sub(r'style=(["\'])(.*?)\1', repl, html)
 
 
-def transform_body(body: str, deck: str, anim_svgs: set) -> str:
+def transform_body(body: str, deck: str, anim_svgs: set, sol_state: dict) -> str:
+    # first: pull worked solutions in from solutions/*.html, so everything below
+    # (fragment stripping, blank conversion) sees them as ordinary slide markup
+    body = expand_solutions(body, deck, sol_state)
     body = re.sub(r'<script\b.*?</script>', '', body, flags=re.DOTALL | re.IGNORECASE)
     body = re.sub(r'<style\b.*?</style>', '', body, flags=re.DOTALL | re.IGNORECASE)
     body = re.sub(r'<aside\b[^>]*class=["\'][^"\']*\bnotes\b[^"\']*["\'].*?</aside>', '',
@@ -229,26 +268,47 @@ def transform_body(body: str, deck: str, anim_svgs: set) -> str:
 # Blanks
 # ---------------------------------------------------------------------------
 
-BLANK_RE = re.compile(
-    r'<span\b[^>]*class=(["\'])[^"\']*\batb\b[^"\']*\1[^>]*>(.*?)</span>',
-    re.IGNORECASE | re.DOTALL)
+# Three markers become blanks:
+#   .atb   prose fill-in-the-blank, used throughout the decks
+#   .fill  a value the student works out inside a solution (blue)
+#   .ans   the answer the problem asked for (green)
+BLANK_OPEN = re.compile(
+    r'<span\b[^>]*class=(["\'])[^"\']*\b(?:atb|fill|ans)\b[^"\']*\1[^>]*>',
+    re.IGNORECASE)
 BLANK_MARK = re.compile(r'<span class="blank[^"]*"[^>]*>\s*</span>')
+CLOSE_SPAN = re.compile(r'</span\s*>\s*$', re.IGNORECASE)
 
 
 def convert_blanks(article: str, deck: str):
-    """Replace every .atb span with an empty typed blank. Returns (html, answers).
-    Blank IDs hash the ~48 visible characters preceding the blank, so they survive
-    slide insertion/reordering and leak nothing about the answer."""
+    """Replace every .atb/.fill/.ans span with an empty typed blank.
+    Returns (html, answers).
+
+    Blank IDs hash the ~48 visible characters preceding the blank, so they
+    survive slide insertion/reordering and leak nothing about the answer.
+
+    The closing tag is found by balanced scan rather than a non-greedy `.*?`:
+    solution blanks wrap MathJax delimiters and inline markup, and the decks
+    contain mismatched spans (1D_flow/index.html:397) that stop a lazy match at
+    the wrong tag."""
     out = []
     last = 0
+    pos = 0
     counts = {}
     answers = []
-    for m in BLANK_RE.finditer(article):
+    while True:
+        m = BLANK_OPEN.search(article, pos)
+        if not m:
+            break
+        end = find_balanced_end(article, m.end(), 'span')
+        if end == -1:                       # unbalanced: leave the markup alone
+            pos = m.end()
+            continue
+        ans_html = CLOSE_SPAN.sub('', article[m.end():end])
         out.append(article[last:m.start()])
-        ans_html = m.group(2)
         ans = visible_text(ans_html)
         answers.append(ans)
         is_math = ('\\(' in ans_html) or ('$' in ans_html)
+        is_ans = re.search(r'class=["\'][^"\']*\bans\b', m.group(0), re.IGNORECASE)
         width = max(4, min(40, len(ans) + 2))
         ctx_html = BLANK_MARK.sub(' ___ ', ''.join(out))
         ctx = visible_text(ctx_html).lower()[-48:]
@@ -256,16 +316,23 @@ def convert_blanks(article: str, deck: str):
         k = counts.get(base, 0)
         counts[base] = k + 1
         bid = '%s-%d' % (base, k)
+        cls = ['blank']
+        extra = ''
         if is_math:
-            extra = ' data-math="1" title="Math answer — type it in words or LaTeX"'
-            cls = 'blank math'
-        else:
-            extra = ''
-            cls = 'blank'
+            cls.append('math')
+            # Blanks are deliberately excluded from MathJax (ignoreHtmlClass:
+            # 'blank' in chapter_template.html) and are plaintext-only, so
+            # whatever is typed stays literal. The tooltip must not imply that
+            # typing LaTeX will render it.
+            extra = (' data-math="1" '
+                     'title="Math answer — plain text is fine, e.g. pi*7.6^2/4"')
+        if is_ans:
+            cls.append('ans')               # book.css boxes the final answer
         out.append('<span class="%s" data-bid="%s"%s style="min-width:%dch" '
                    'contenteditable="plaintext-only" spellcheck="false"></span>'
-                   % (cls, bid, extra, width))
-        last = m.end()
+                   % (' '.join(cls), bid, extra, width))
+        last = end
+        pos = end
     out.append(article[last:])
     return ''.join(out), answers
 
@@ -274,12 +341,26 @@ def convert_blanks(article: str, deck: str):
 # SVG sanitizing (Animation figures: DELETE answer strokes, never comment them)
 # ---------------------------------------------------------------------------
 
+# Both step channels are stripped. In the decks `.fragment` was meant for the
+# problem setup and `.Animate` for the worked answer, but the convention was not
+# applied consistently -- EX4140.svg carries its entire solution in `.fragment`
+# groups and has no `.Animate` at all. Since the two cannot be told apart
+# reliably, everything that is revealed step-by-step is treated as answer work.
+#
+# Consequence: for a handwritten figure that is *entirely* built up in steps,
+# nothing drawable survives. build_chapter drops those figures and names them,
+# rather than shipping a blank image -- converting the example to
+# solutions/*.html is the real fix.
 ANIM_EL = re.compile(
-    r'<(\w[\w\-\.]*)\b[^>]*class=["\'][^"\']*\bAnimate(?:Group)?\b[^"\']*["\'][^>]*?(/?)>',
+    r'<(\w[\w\-\.]*)\b[^>]*class=["\'][^"\']*\b(?:Animate(?:Group)?|fragment)\b[^"\']*["\']'
+    r'[^>]*?(/?)>',
     re.DOTALL)
 
+DRAWABLE = re.compile(r'<(?:path|text|image|circle|rect|line|polyline|polygon|ellipse)\b',
+                      re.IGNORECASE)
 
-def sanitize_svg(svg_path: Path) -> int:
+
+def sanitize_svg(svg_path: Path):
     content = svg_path.read_text(encoding='utf-8', errors='replace')
     content = re.sub(r'<!--.*?-->', '', content, flags=re.DOTALL)
     out = []
@@ -302,8 +383,9 @@ def sanitize_svg(svg_path: Path) -> int:
         else:
             pos = end
             count += 1
-    svg_path.write_text(''.join(out), encoding='utf-8')
-    return count
+    cleaned = ''.join(out)
+    svg_path.write_text(cleaned, encoding='utf-8')
+    return count, len(DRAWABLE.findall(cleaned))
 
 
 # ---------------------------------------------------------------------------
@@ -394,11 +476,12 @@ def build_chapter(ch_cfg, config):
     (out_dir / 'figures').mkdir(parents=True)
 
     anim_svgs = set()
+    sol_state = {'seen': set(), 'missing': []}
     nav_items = []
     rendered = []
     used_anchors = set()
     for i, b in enumerate(blocks):
-        parts = [transform_body(p, deck, anim_svgs) for p in b['parts']]
+        parts = [transform_body(p, deck, anim_svgs, sol_state) for p in b['parts']]
         cls = 'block check-yourself' if b['iclicker'] else 'block'
         # stable anchor for student sticky notes: title slug, falling back to index
         anchor = slugify(b['title']) if b['title'] else ''
@@ -418,6 +501,7 @@ def build_chapter(ch_cfg, config):
     article, answers = convert_blanks(article, deck)
 
     # copy + sanitize the Animation SVGs
+    emptied = []
     for rel in sorted(anim_svgs):
         src_svg = REPO / deck / rel
         if not src_svg.exists():
@@ -425,9 +509,25 @@ def build_chapter(ch_cfg, config):
             continue
         dst_svg = out_dir / 'figures' / src_svg.name
         shutil.copy2(src_svg, dst_svg)
-        n = sanitize_svg(dst_svg)
-        if n:
+        n, remaining = sanitize_svg(dst_svg)
+        if remaining == 0:
+            # the whole figure was step-by-step solution work; there is no
+            # problem sketch underneath to keep
+            dst_svg.unlink()
+            emptied.append(src_svg.name)
+        elif n:
             print('  [SVG] %s: removed %d answer element(s)' % (dst_svg.name, n))
+
+    for name in emptied:
+        article = re.sub(r'<img\b[^>]*src="figures/%s"[^>]*>' % re.escape(name),
+                         '', article)
+    if emptied:
+        print('  [WARN] %d figure(s) were entirely solution work and are omitted '
+              'from the book (the ProblemBox is left as writing space). Convert '
+              'these to solutions/*.html next: %s' % (len(emptied), ', '.join(emptied)))
+    if sol_state['missing']:
+        print('  [FAIL] solution partial(s) not found: %s'
+              % ', '.join(sol_state['missing']))
 
     template = (SRC / 'chapter_template.html').read_text(encoding='utf-8')
     page = (template
@@ -462,6 +562,18 @@ def validate_chapter(page: str, answers, deck: str, out_dir: Path):
     problems = []
     if re.search(r'class=["\'][^"\']*\batb\b', page):
         problems.append('residual .atb class in output')
+    # an unconverted .fill/.ans means a solution value is printed in the book.
+    # `blank ans` is our own output (the boxed answer blank), so skip blanks.
+    for m in re.finditer(r'class=(["\'])([^"\']*)\1', page):
+        toks = m.group(2).split()
+        if 'blank' in toks:
+            continue
+        for token in ('fill', 'ans'):
+            if token in toks:
+                problems.append(
+                    'residual .%s span in output (answer would be visible)' % token)
+    if re.search(r'class=["\'][^"\']*\bSolution\b', page):
+        problems.append('unexpanded .Solution placeholder in output')
     if 'data-original-text' in page:
         problems.append('residual data-original-text in output')
     bids = re.findall(r'data-bid="([^"]+)"', page)
@@ -478,8 +590,10 @@ def validate_chapter(page: str, answers, deck: str, out_dir: Path):
             problems.append('missing figure: %s' % path)
 
     for svg in (out_dir / 'figures').glob('*.svg'):
-        if re.search(r'class=["\'][^"\']*\bAnimate', svg.read_text(encoding='utf-8', errors='replace')):
-            problems.append('unsanitized Animate element in %s' % svg.name)
+        text = svg.read_text(encoding='utf-8', errors='replace')
+        for token in ('Animate', 'fragment'):
+            if re.search(r'class=["\'][^"\']*\b%s' % token, text):
+                problems.append('unsanitized %s element in %s' % (token, svg.name))
 
     plain = visible_text(page).lower()
     leaks = sorted({a.lower() for a in answers if len(a) > 3 and a.lower() in plain})
@@ -527,6 +641,18 @@ def copy_assets():
     assets.mkdir(parents=True, exist_ok=True)
     for name in ('book.css', 'book.js'):
         shutil.copy2(SRC / name, assets / name)
+    # solution styling and MathJax macros are shared with the decks, so they
+    # live at the repo root and are copied in rather than duplicated
+    for name in ('solutions.css', 'mathjax-macros.js'):
+        shutil.copy2(REPO / 'assets' / name, assets / name)
+    # the handwriting webfont is self-hosted so the book renders the same
+    # offline and on any machine; solutions.css refers to it relatively
+    src_fonts = REPO / 'assets' / 'fonts'
+    if src_fonts.is_dir():
+        dst_fonts = assets / 'fonts'
+        if dst_fonts.exists():
+            force_rmtree(dst_fonts)
+        shutil.copytree(src_fonts, dst_fonts)
     print('[OK] assets copied')
 
 
