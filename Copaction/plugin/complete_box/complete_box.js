@@ -9,7 +9,12 @@ const boxpressed = e => {
     caption=e.target.textContent; 
     widthEl=getComputedStyle(e.target).width;
     heightEl=getComputedStyle(e.target).height;
-    e.target.textContent="";//clean box      
+    // \u200b (zero-width space), not "": .atb is display:inline-flex and takes its
+    // baseline from its first flex item. A truly empty box has no flex item, so the
+    // browser synthesises the baseline from the border box and the whole line jumps
+    // down until the first character arrives. The ZWSP keeps a text baseline
+    // throughout, so the line stays put.
+    e.target.textContent="\u200b";//clean box      
     e.target.style.width=widthEl;
     e.target.style.height=heightEl ;   
     e.target.style.color = "#001d51";  // changes color of font     
@@ -37,7 +42,7 @@ async function typeSentence(sentence, eleRef, delay = 10) {
     let i = 0;
     while(i < letters.length+1) {
       await waitForMs(delay);
-      eleRef.target.textContent=sentence.substr(0, i);
+      eleRef.target.textContent="\u200b"+sentence.substr(0, i);
       i++
     }
     audio_src.pause();

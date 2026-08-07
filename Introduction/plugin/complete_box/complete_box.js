@@ -88,8 +88,17 @@ async function typeSentence(sentence, eleRef, delay = 10) {
     const letters = sentence.split("");
     let i = 0;
     
-    // Wrap content in a span for character-level opacity control
-    eleRef.innerHTML = '<span style="display: inline;"></span>';
+    // Wrap content in a span for character-level opacity control.
+    //
+    // The \u200b (zero-width space) is load-bearing, not decoration. .atb is
+    // display:inline-flex, and a flex container takes its baseline from its FIRST
+    // flex item - this container span. While that span is empty it has no line box,
+    // so the browser synthesises the baseline from the border box instead: the box's
+    // whole height sits above the baseline rather than just its text ascent, the line
+    // box grows to fit, and every word after the blank drops ~14px until the first
+    // character lands. The ZWSP gives the span a line box from the start, so the
+    // baseline is the text baseline throughout and the line never moves.
+    eleRef.innerHTML = '<span style="display: inline;">\u200b</span>';
     const container = eleRef.querySelector('span');
     
     // Create pencil cursor icon

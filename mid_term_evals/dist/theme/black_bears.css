@@ -666,7 +666,7 @@ li.l2:nth-child(even){
   border: 5px solid rgb(1, 36, 194);
   border-radius:  5px 5px 5px 5px;
   font-family: "Caveat";
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.2em;
   overflow: hidden;  
   display: inline-flex; 

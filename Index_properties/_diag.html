@@ -7325,7 +7325,64 @@ A saturated soil has water content of 46% and \(G_s=2.7\). Evaluate the followin
 
       </div>
     </div>
-  </body>
+  
+<script>
+(function(){
+  if(!/diag/.test(location.search)) return;
+  function run(){
+    var sec=document.getElementById('ex23');
+    var i=Reveal.getIndices(sec); Reveal.slide(i.h,i.v);
+    setTimeout(start,1500);
+
+    function start(){
+      var box   = sec.querySelector('.atb');          // first blank: "weights"
+      var line  = box.parentElement;                  // the <div class=textBox>
+      var log   = [];
+      // a marker pinned right after the box, to detect line-level movement
+      var mark  = document.createElement('span');
+      mark.textContent='\u200b'; box.after(mark);
+
+      function snap(tag){
+        var b=box.getBoundingClientRect(), m=mark.getBoundingClientRect(),
+            l=line.getBoundingClientRect(), cs=getComputedStyle(box);
+        log.push(
+          tag.padEnd(16)+
+          ' box.top='+b.top.toFixed(1).padStart(7)+
+          ' box.h='  +b.height.toFixed(1).padStart(6)+
+          ' mark.top='+m.top.toFixed(1).padStart(7)+
+          ' line.h=' +l.height.toFixed(1).padStart(6)+
+          ' valign='+cs.verticalAlign+
+          ' disp='+cs.display+
+          ' kids='+box.childNodes.length);
+      }
+
+      snap('BEFORE');
+      box.click();
+      var t=0;
+      var iv=setInterval(function(){
+        t+=250;
+        snap('t='+t+'ms');
+        if(t>=4500){
+          clearInterval(iv);
+          setTimeout(function(){
+            snap('AFTER');
+            var pre=document.createElement('pre');
+            pre.style.cssText='position:fixed;z-index:99999;inset:0;margin:0;padding:10px;'+
+              'background:#111;color:#0f0;font:13px/1.35 monospace;white-space:pre;overflow:hidden';
+            pre.textContent='.atb writing animation — geometry samples\n\n'+log.join('\n');
+            document.body.appendChild(pre);
+            document.title='READY';
+          },600);
+        }
+      },250);
+    }
+  }
+  if(window.Reveal&&Reveal.isReady&&Reveal.isReady()) run();
+  else document.addEventListener('DOMContentLoaded',function(){
+    var t=setInterval(function(){ if(window.Reveal&&Reveal.isReady&&Reveal.isReady()){clearInterval(t);run();} },200);});
+})();
+</script>
+</body>
 
 
 
