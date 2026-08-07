@@ -359,3 +359,40 @@
   .reveal .sol .sol-atom.pending { visibility: visible !important; }
   .reveal .sol .sol-pencil { display: none !important; }
 }
+
+/* --------------------------------------------------------------------------
+   Student PDF export — the answers stay off the page
+
+   Two classes have to be on <html> at once for this to fire:
+     `student`    put there by make_student_version.py, so it marks the build
+     `print-pdf`  put there by reveal's own PDF export (js/controllers/print.js)
+
+   So the deck on screen is untouched, the professor build is untouched, and
+   only `index_student.html?print-pdf` loses its blue and green.
+
+   Keyed to the CLASS rather than wrapped in `@media print`, deliberately: the
+   class is applied the moment `?print-pdf` loads, so the blanked version is
+   what you see on screen in the export preview. You can check what the students
+   will get before reaching for Ctrl+P.
+
+   `visibility`, not `display`: the layout box survives, so each value leaves a
+   gap of exactly its own width to write the answer into and no line reflows.
+   It also keeps the answers out of the PDF's text layer — a hidden element is
+   never painted, so nothing is recoverable by selecting or extracting text.
+   (The solutions/*.html files are still fetched at runtime and readable by
+   anyone who opens them; this hides the render, it is not access control.)
+
+   The descendant selectors are load-bearing. `visibility` inherits, but a child
+   may set it back, and two rules above do exactly that with `!important`:
+   `.sol-atom.pending` in the print block, and `.writing.written` on retired
+   fragments. Matching the descendants too, at higher specificity, is what
+   overrides them — which is also why `html` stays in the selector. It buys
+   (0,5,1) against their (0,4,0). Do not "simplify" it away.
+   -------------------------------------------------------------------------- */
+
+html.print-pdf.student .reveal .sol .fill,
+html.print-pdf.student .reveal .sol .ans,
+html.print-pdf.student .reveal .sol .fill *,
+html.print-pdf.student .reveal .sol .ans * {
+  visibility: hidden !important;
+}

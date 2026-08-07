@@ -1,0 +1,1051 @@
+<!doctype html>
+<html class="student">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>Phase relationships</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>					
+					.container{
+							display: flex;
+					}
+					.col{
+							display: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE-342
+						Fall 2026
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+      <!-- <section>
+      <h1>Announcements</h1>
+
+      <ol>
+         <li>Homework 1 (Syllabus quiz) <strong style='color:#000'>due on Jan 20.</strong> Please complete promptly.</li>
+         
+         <li>Homework 2 is available. <strong style='color:#000'>due on Jan 26</strong>.  </li>
+
+         <li>TENTATIVE QUIZ DATE: <strong style='color:#000'>Jan 28</strong></li>        
+
+      </ol>
+      
+      </section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1Q7W9xJuuFaePSp9jaIFyojoC6_9gvUFN/view?usp=sharing"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Phase relationships">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Fall 2026</p>
+				<!-- <p style="color:#faffff; font-size:35px"> January 20, 2024</p> -->
+				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+			</div>
+
+
+		</section>
+
+				<!-- <section >
+					<h1>Course contents and schedule</h1>
+					<object data="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+				</section> -->
+
+		<section  >
+			<h1>Recap</h1>
+				<ul>
+					<li class="fragment">
+						<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							We learned a brief history of the <strong style='color:black'>pioneers</strong> of soil mechanics.
+						</div>
+					</li>
+					<li class="fragment">We learned that soil is <strong style='color:black'>disintegrated</strong> rock. The process of disintegration is called <strong style='color:black'>weathering</strong>.  </li>
+					<li class="fragment">
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						We learned about <strong style='color:black'>different soil deposits</strong> including: alluvial, coastal, marine, lacustrine, glacial, eolian, colluvial, and residual soils.
+					</div>	
+					</li>
+					<!-- <li class='fragment'>
+						We briefly talk about the goals and complexities of <strong style='color:black'>site investigation</strong>.
+					</li> -->
+
+				</ul>
+		</section>
+
+		<!-- <section >
+		<h1>Participation question 1.2</h1>
+			<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+				Which of the following type of soil deposit is formed by the deposition of sediments in offshore oceans?
+			</div>
+
+		
+
+		<ol class="iClicker">
+			<li class="l2">Alluvial soils</li>
+			<li class="l2">Lacustrine soils</li>
+			<li class="l2">Beaches</li>
+			<li class="l2">Marine soils</li>
+			<li class="l2">Estuarine soils</li>
+		</ol>
+		
+		</section> -->
+
+
+        <section >
+					<h1>Contents</h1>
+
+					<div class='container'>
+					<div class='col' style="width: 50%;">
+						<ol class="contentStyle">
+							<li class="l1">Soil phases</li>
+							<li class="l1">Density and unit weight</li>
+							<li class="l1">Phase diagram</li>
+							<li class="l1">Volume and weight relations</li>							
+						</ol>
+					</div>
+					<div class="col" style="width: 50%;">
+						<div class="container">
+							<div class="col" style="width: 50%;">
+								<div class="stickynote" style="margin-top:50px; margin-left: 10px; height: 300px;">
+									<p>Objectives covered in this lecture</p>
+									<ul>
+										<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="width: 50%;">
+									<div class="stickynote" style="margin-top:50px; margin-left: 0px; height: 300px;">
+										<p>After this lecture we will be able to:</p>
+										<ul>
+											<li>Calculate the bulk, dry, saturated, and buoyant unit weight of soil. </li>
+											<li>Calculate water content and the saturation ratio.</li>
+											<li>Calculate void ratio and porosity of soils.</li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</div>
+					
+					</div>				
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+<!-- Plain HTML rather than data-markdown. A markdown slide keeps its source in a
+     <textarea>, which MathJax skips (see skipHtmlTags in the head); the table only
+     exists after RevealMarkdown converts it during initialize(). If MathJax's
+     startup pass happens to run before that conversion, nothing ever typesets this
+     table and it renders verbatim. Authored as HTML it is in the DOM from the
+     start, so there is no race. Delimiters are single-backslash \( \) here — the
+     \( \) form was markdown escaping. -->
+<section id="unitsys">
+	<h1>Unit systems</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Dimension</th>
+				<th>SI</th>
+				<th>Imperial</th>
+				<th>Conversion factor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>Length</td><td>cm/m</td><td>in/ft</td><td>0.394/3.281</td></tr>
+			<tr><td>Mass</td><td>kg</td><td>slug</td><td>0.0685</td></tr>
+			<tr><td>Force</td><td>N</td><td>lb</td><td>0.225</td></tr>
+			<tr><td>Gravity</td><td>9.81 m/\(\text{s}^2\)</td><td>32.17 ft/\(\text{s}^2\)</td><td>-</td></tr>
+			<tr><td>Unit weight of water</td><td>9.81 kN/\(\text{m}^3\)</td><td>62.4 pcf</td><td>-</td></tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+<h1>Density and unit weight</h1>
+<table style="width: 100%; text-align: center; font-size: 0.85em; background-color:antiquewhite;">
+<tr>
+   <th style="width: 30%;">Variable</th>
+   <th style="width: 50%;">Definition</th>
+   <th style="width: 20%;">Formula </th>
+</tr>
+<tr>
+   <td >Density <span style='color:green;'>(\(\rho\))</span></td>
+   <td >Ratio of <span class='atb'>mass</span> <span style='color:green;'>(\(m\))</span> to the <span class='atb'>volume</span> <span style='color:green;'>(\(V\))</span> it occupies.</td>
+   <td >\(\rho=m/V\)</td>
+</tr>
+
+<tr>
+   <td >Unit weight <span style='color:green;'>(\(\gamma\))</span></td>
+   <td >Ratio of <span class='atb'>weight</span> <span style='color:green;'>(\(W\))</span> to <span class='atb'>volume</span> <span style='color:green;'>(\(V\))</span> it occupies.</td>
+   <td >\(\gamma=W/V\)</td>
+</tr>
+
+<tr>
+   <td >Specific gravity <span style='color:green;'>(\(G_s\))</span></td>
+   <td >Ratio of <span class='atb'>density of solid</span> <span style='color:green;'>(\(\rho\))</span> to the <span class='atb'>density of water</span> <span style='color:green;'>(\(\rho_w\))</span>.</td>
+   <td >\(G_s=\rho/\rho_w\)</td>
+</tr>
+</table>
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Note:</strong> Weight is mass times gravity. Therefore, unit weight \(\gamma\) is related to density \(\rho\) by the equation: <br>
+<div class='equationBox' style="margin-left: 150px;">
+\( \gamma= g \rho \)
+</div>
+</div>
+
+</section>
+
+
+<!-- Plain HTML rather than data-markdown. A markdown slide keeps its source in a
+     <textarea>, which MathJax skips (see skipHtmlTags in the head); the table only
+     exists after RevealMarkdown converts it during initialize(). If MathJax's
+     startup pass happens to run before that conversion, nothing ever typesets this
+     table and it renders verbatim. Authored as HTML it is in the DOM from the
+     start, so there is no race. Note the delimiters are single-backslash \( \)
+     here — the \\( \\) form was markdown escaping. -->
+<section id="mingrav">
+	<h1>Specific gravity of common minerals</h1>
+
+	<table style="margin-top: 40px;">
+		<thead>
+			<tr>
+				<th>Mineral</th>
+				<th>Formula</th>
+				<th>\(G_s\)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>Calcite</td><td>CaCO\(_3\)</td><td>2.71</td></tr>
+			<tr><td>Feldspar</td><td>-</td><td>2.6</td></tr>
+			<tr><td>Hematite</td><td>Fe\(_2\)O\(_3\)</td><td>5.2</td></tr>
+			<tr><td>Kaolinite</td><td>Al\(_2\)Si\(_2\)O\(_5\)(OH)\(_4\)</td><td>2.61-2.66</td></tr>
+			<tr><td>Mica</td><td>-</td><td>2.9</td></tr>
+			<tr><td>Quartz</td><td>SiO\(_2\)</td><td>2.65</td></tr>
+		</tbody>
+	</table>
+</section>
+
+<section >
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	What are the <strong style='color:orange'>most common</strong> minerals in sand?
+	</div>
+<img src="FiguresGeneral/Sands.png" style="margin-top:80px;width:100%">
+
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Assuming \(G_s=2.65\) is not far away from reality!
+</div>
+</section>
+
+
+ <section  >
+     <h1>Soil phases</h1>
+	 <div class="textBox"> Soils are a collection of particles (<span class='atb'>solids</span>) and <span class='atb'>voids</span>. The voids in a soil can be filled with <span class='atb'>gas or water</span>.</div>
+	 <div class='container'>
+	 <div class='col'>
+		<img class="fragment" src="FiguresGeneral/phases.svg" width="90%" data-preload></img>
+	 </div>
+	 <div class='col'>
+		<div class="fragment">
+			<div class="defBox" name="Fully dry soil:" style="margin-top: 5px;" > A soil with <span class='atb'>zero water content</span>.</div>	 
+		</div>
+		<div class="fragment">
+			<div class="defBox" name="partially saturated soil:" style="margin-top: 5px;"> A soil with <span class='atb'>water and gas</span>.</div>
+		</div>
+		<div class="fragment">
+			<div class="defBox" name="Fully saturated soil" style="margin-top: 5px;"> A soil without <span class='atb'>gas</span>.</div>
+		</div>
+	</div>
+		 
+ </section>
+
+ <section >
+ <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+ Let's simplify the complexity of the assembly by constructing a <span class='atb'>phase diagram</span>
+ </div>
+ <img src="FiguresGeneral/phase-diagram.svg" style="margin-top:-50px;width:100%;">
+ </section>
+
+<section id="phase_diagram" >
+<div class='container'>
+<div class='col' style="width: 60%;">
+<p style="margin-top: 0px;"><span class='atb'>VOLUME </span> </p>
+</div>
+<div class='col' style="width: 40%;">
+<p  style="margin-top: 0px;"><span class='atb'>WEIGHT</span> </p>
+</div>
+</div>
+<img src="FiguresGeneral_student/phase-diagram_animated.svg" style="width: 100%;margin-top: 0px;"/>
+
+<!-- <div class='container' style="font-size: 0.8em;margin-top: -65px;">
+<div class='col'>
+	<div class="fragment"> <div class="textBox"><p>Volumes are <span class='atb'>difficult to measure</span>. Typically, only the <span class='atb'>total volume</span> \(V_t\) can be measured using a control volume technique. </p> </div></div>
+</div>
+<div class='col'>
+	<div class="fragment"> <div class="textBox"><p>Measuring weights is <span class='atb'>simple</span>. First, the total weight (<span class='atb'>\(W_t\)</span>) is determined, followed by the dry weight, which is measured after drying the sample in an oven.</p>
+	</div></div>
+</div>
+</div> -->
+
+
+</section>
+
+<section >
+
+
+	<div class="textBox" style="text-align: left;font-size: 1 em; margin-top: 80px;"> From the previous slide we can construct our first relationships: <br> 
+	
+		<div class='equationBox fragment'>
+			\( W_t=W_s+ W_w \)
+		</div> <br> <br>
+	   Similarly for the total volume: <br>
+		<div class='equationBox fragment'>
+		\( V_t=V_s+V_w+V_a=V_s+V_v \)
+		</div> <br> <br>
+	
+	 With the <span class='atb'>volume of voids</span> equal to: <br>
+	<div class='equationBox fragment'>
+	\( V_v=V_w+V_a \)
+	</div>
+	
+	</div>
+
+
+	<!-- <div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:green'>Note:</strong> The following applies to phase diagram problems: <br>
+		<ol>
+			<li>If you know <strong style='color:green'>volumes and density</strong> \(\implies\) you can calculate <strong style='color:blue'> weights</strong>.</li>
+			<li>If you know <strong style='color:green'>weights and density</strong> \(\implies\) you can calculate <strong style='color:blue'> volumes</strong>. </li>
+			<li>If you know <strong style='color:green'>volumes and weights</strong> \(\implies\) you can calculate <strong style='color:blue'> densities</strong>.</li>
+			
+		</ol>
+		</div> -->
+
+
+
+
+</section>
+
+<section >
+<h1>Measuring water content</h1>
+
+<table style="background-color: antiquewhite;">
+   <tr>
+      <th>Variable</th>
+      <th>Definition</th>
+      <th>Equation</th>
+   </tr>
+   <tr>
+      <td>Gravimetric water content <strong style='color:green'>\(w\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>weight of </strong><span class='atb'>water</span> to the weight of <strong style='color:#000'>solids</strong></td>
+      <td>\( w[\%]= \frac{W_w}{W_s} \times 100 \)</td>
+
+   </tr>
+
+   <tr>
+      <td>Volumetric water content <strong style='color:green'>\(\Theta\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>volume of <span class='atb'>water</span> to the total volume</strong></td>
+      <td>\( \Theta=\frac{V_w}{V_t} \)</td>
+   </tr>
+
+   <tr>
+      <td>Saturation ratio<strong style='color:green'>\(S_r\)</strong></td>
+      <td>Ratio of the <strong style='color:#000'>volume of <span class='atb'>water</span> to the volume of <span class='atb'>voids</span></strong></td>
+      <td>\( S_r=\frac{V_w}{V_v} \)</td>
+   </tr>
+</table>
+</section>
+
+<section  style="font-size: 1em;">
+
+		<h1>Participation question 2.1</h1>
+		<div class='InquiryBox' style='margin-top: 0px;margin-left: 5px;'>
+			What is the saturation of a <strong style='color:orange'>fully saturated</strong> soil?
+		</div>
+		
+		
+		<ol class="iClicker">
+		<li class="l2">25%</li>
+		<li class="l2">0%</li>
+		<li class="l2">100%</li>
+		<li class="l2">50%</li>
+		</ol>
+
+</section>
+
+
+
+<!-- <section >
+	<h1>Participation question 2.2</h1>
+	<p>What is the saturation of a <strong style='color:black'>fully saturated</strong> soil?</p>
+	
+	<ol class="iClicker">
+	<li class="l2">25%</li>
+	<li class="l2">0%</li>
+	<li class="l2">100%</li>
+	<li class="l2">50%</li>
+	</ol>
+	</section> -->
+
+<section >
+<h1>Measuring porosity</h1>
+
+<table style="width: 100%; background-color: antiquewhite;">
+<tr>
+<th>Variable</th>
+<th>Definition</th>
+<th>Equation</th>
+</tr>
+
+<tr>
+   <td>Void ratio <strong style='color:green'>\(e\)</strong></td>
+   <td>Ratio of volume of <span class='atb'>voids</span> to volume of <span class='atb'>solids</span></td>
+   <td>\( e=V_v/V_s \)</td>   
+</tr>
+
+<tr>
+   <td>Porosity <strong style='color:green'>\(n\)</strong></td>
+   <td>Ratio of volume of <span class='atb'>voids</span> to <span class='atb'>total volume</span></td>
+   <td>\( n= V_v/V_t \)</td>  
+</tr>
+
+<tr>
+   <td>Solid fraction <strong style='color:green'>\(c\)</strong></td>
+   <td>Ratio of volume of <span class='atb'>solids</span> to <span class='atb'>total volume</span></td>
+   <td>\( c= V_s/V_t \)</td>
+</tr>
+
+</table>
+
+
+<div class='textBox' style='margin-top: 30px;margin-left: 0px;'>
+<strong style='color:#000'>Note:</strong> All these variables are related to each other, since they measure the same thing: Voids!
+</div>
+
+
+
+
+</section>
+
+<section >
+<h1>Example 2.1</h1>
+
+<div class="textBox"> Show that \(n=e/(1+e)\).</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-1.html' data-part='1'></div>
+</div>
+
+
+</section>
+
+<section style="font-size: 0.88em;">
+<h1>Unit weight of soils</h1>
+
+<table style="width: 100%; background-color: antiquewhite;">
+<tr>
+   <th style="font-size: 0.85em;">Variable</th>
+   <th style="font-size: 0.85em;">Definition</th>
+   <th style="font-size: 0.85em;">Unit weight</th>
+   <th style="font-size: 0.85em;">Density</th>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em;">Total unit weight/density <strong style='color:green;'>(\(\gamma_t\))</strong>/ <strong style='color:green;'>(\(\rho_t\))</strong></td>
+   <td style="font-size: 0.85em;">Ratio of <span class='atb'>total weight/mass</span> to <span class='atb'>total volume</span></td>
+   <td style="font-size: 0.85em;">\( \gamma_t=W_t/V_t \)</td>
+   <td style="font-size: 0.85em;">\(\rho_t= m_t/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em;">Dry unit weight/density <strong style='color:green;'>(\(\gamma_d\))</strong>/ <strong style='color:green;'>(\(\rho_d\))</strong></td>
+   <td style="font-size: 0.85em;">Ratio of <span class='atb'>weight/mass of solids</span> to <span class='atb'>total volume</span></td>
+   <td style="font-size: 0.85em;">\( \gamma_d=W_s/V_t \)</td>
+   <td style="font-size: 0.85em;">\(\rho_d= m_s/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em;">Saturated unit weight/density <strong style='color:green;'>(\(\gamma_{sat}\))</strong>/ <strong style='color:green;'>(\(\rho_{sat}\))</strong></td>
+   <td style="font-size: 0.85em;">Unit weight/density when <strong style='color:green;'>\(S=100\%\)</strong> or <strong style='color:green;'>\(V_v=V_w\)</strong></td>
+   <td style="font-size: 0.85em;">\( \gamma_{sat}=W_{sat}/V_t \)</td>
+   <td style="font-size: 0.85em;">\(\rho_{sat}= m_{sat}/V_t \)</td>
+</tr>
+
+<tr>
+   <td style="font-size: 0.85em;">Buoyant unit weight/density <strong style='color:green;'>(\(\gamma'\))</strong>/ <strong style='color:green;'>(\(\rho'\))</strong></td>
+   <td style="font-size: 0.85em;">Also known as <span class='atb'>submerged</span> or <span class='atb'>effective unit weight/density</span></td>
+   <td style="font-size: 0.85em;">\( \gamma'=\gamma_{sat}-\gamma_w \)</td>
+   <td style="font-size: 0.85em;">\(\rho'=\rho_{sat}-\rho_w \)</td>
+</tr>
+</table>
+
+
+
+</section>
+
+<section>
+
+   <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+   Use this table to validate your calculations!
+   </div>
+
+   <style>
+      /* Scoped to this one table. A <style> element is global wherever it sits in
+         the document, so a bare `td, th` rule here would restyle every cell in the
+         deck — including the .sol-table cells inside worked solutions. */
+      .typical-uw td,
+      .typical-uw th {
+         font-size: 34px;
+         background-color: antiquewhite;
+         border: 1px solid #999;
+         padding: 8px;
+         text-align: center;
+      }
+      .typical-uw th {
+         font-weight: bold;
+      }
+   </style>
+   <table class="typical-uw" style="margin-top:50px; border-collapse: collapse; width: 100%;">
+      <caption style="font-size: 28px; margin-bottom: 10px;">Typical soil unit weights. Modified from Holtz et al. 2023</caption>
+      <thead>
+         <tr>
+            <th rowspan="2">Soil type</th>
+            <th colspan="2">\(\gamma_{sat}\)</th>
+            <th colspan="2">\(\gamma_d\)</th>
+            <th colspan="2">\(\gamma'\)</th>
+         </tr>
+         <tr>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+            <th>kN/m<sup>3</sup></th>
+            <th>pcf</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Sands and gravels</td>
+            <td>19-24</td>
+            <td>119-150</td>
+            <td>15-23</td>
+            <td>94-144</td>
+            <td>9-14</td>
+            <td>62-81</td>
+         </tr>
+         <tr>
+            <td>Silts and clay</td>
+            <td>14-21</td>
+            <td>87-131</td>
+            <td>6-18</td>
+            <td>37-112</td>
+            <td>4-11</td>
+            <td>25-69</td>
+         </tr>
+         <tr>
+            <td>Glacial tills</td>
+            <td>21-24</td>
+            <td>131-150</td>
+            <td>17-23</td>
+            <td>106-144</td>
+            <td>11-14</td>
+            <td>69-87</td>
+         </tr>
+         <tr>
+            <td>Crushed rock</td>
+            <td>19-22</td>
+            <td>119-137</td>
+            <td>15-20</td>
+            <td>94-125</td>
+            <td>9-12</td>
+            <td>56-75</td>
+         </tr>
+         <tr>
+            <td>Peats</td>
+            <td>10-11</td>
+            <td>60-69</td>
+            <td>1-3</td>
+            <td>6-19</td>
+            <td>0-1</td>
+            <td>0-6</td>
+         </tr>
+         <tr>
+            <td>Organics silt and clay</td>
+            <td>13-18</td>
+            <td>81-112</td>
+            <td>5-15</td>
+            <td>31-94</td>
+            <td>3-8</td>
+            <td>19-50</td>
+         </tr>
+      </tbody>
+   </table>
+ </section>
+
+<section id="ex23" >
+<h1>Example 2.2</h1>
+<div class="textBox">Unit weight is the connector between the <span class='atb'>weights</span> and the <span class='atb'>volumes</span>. Using phase diagrams <strong style='color:black'>find an expression for the total unit weight \(\gamma_t\)</strong> and <strong style='color:black'>show that \(S e= w G_s\)</strong>.</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure class="fragment" style='margin-top: 20px;margin-left: 0px;'>
+<img src='FiguresGeneral/phase_diagram_handwritten.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='Solution' data-src='solutions/ex-2-2.html' data-part='1'></div>
+</div>
+</div>
+
+
+
+</div>
+</section>
+
+<section id="ex23_1" >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-2.html' data-part='2'></div>
+
+</div>
+
+</section>
+
+
+<section >
+<h1>Useful relationships</h1>
+<div class='container'>
+<div class='col' style="width: 50%;">
+<p style="margin-top: -20px;">For unit weight:</p>
+<div class="equationBox" >
+	<p>\(\gamma_t=\cfrac{\gamma_w (G_s+S e)}{1+e} \)</p>
+	<p>\(\gamma_d=\cfrac{\gamma_w G_s}{1+e} \)</p>
+	<p>\(\gamma_{sat}=\cfrac{\gamma_w (G_s+ e)}{1+e} \)</p>
+	<p>\( \gamma_t=\gamma_d (1+w[-])\)</p>
+</div>
+
+</div>
+<div class='col' style="width: 50%;">
+	<p>Relationship between saturation, void ratio, specific gravity, and water content:</p>
+
+<div class='equationBox' style="margin-left: 240px;">
+\( S e= w G_s \)
+</div>
+
+<div class='findingBox fragment' style='margin-top: 30px;margin-left: 0px;'>
+	Useful to remember: <strong style='color:green'>s</strong>tructural <strong style='color:green'>e</strong>ngineers are <strong style='color:green'>w</strong>acky <strong style='color:green'>g</strong>uys 😂
+</div>
+
+		
+	
+</div>
+</div>
+</section>
+
+ <!-- <section >
+	 <p style="margin-top:0px;">Porosity of uniform spherical particles.</p>
+	 <figure>
+	   <img src="FiguresGeneral/grains.png" style="margin-top:30px;width:100%;">
+	   <footer style="margin-top:0px;"><small>leeds.ac.uk Petrophysics course notes</small></footer>
+	 </figure>
+
+
+ </section> -->
+
+ <!-- <section >
+ 	<h1>Relative density</h1>
+	<p style="margin-top:0px;">The relative density can be used to partially describe the arrangement of coarse soils:
+		\(D_r [\%]=\cfrac{e_{max}-e}{e_{max}-e_{min}}\times 100\(
+	</p>
+	<ul>
+		<li>\( e= e_{min} \longrightarrow \) Densest state</li>
+		<li>\( e= e_{max} \longrightarrow \) Loosest state</li>
+	</ul>
+ </section> -->
+
+
+ <section>
+ <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+ Useful steps to solve phase relationship problems
+ </div>
+
+ <ol style="font-size: 0.9em;">
+   <li class='fragment'>List known information in terms of elementary masses and volumes: <br>
+   For example \(e= V_v/V_s=0.6\) instead of \(e=0.6\)
+   </li>
+   <li class='fragment'>Draw a phase diagram</li>
+   <li class='fragment'>It is always okay to set \(\rho_w=1000\) kg/m<sup>3</sup> or \(\gamma_w= 9.81\) kN/m<sup>3</sup> </li>
+   <li class='fragment'>The values of the individual phase ratios (e.g., densities, volume ratios, and mass ratios) are independent of the size of the soil sample. Therefore, it is always okay to fix a value of any single mass or volume <strong style='color:#000'>if (and only if)</strong> no mass or volume is given </li>
+   <li class='fragment'>Fill in one side of the diagram until you get stuck or completely solve it, then "cross over" the other side of the phase diagram using one of the densities or the specific gravity</li>
+
+   <li class='fragment'><strong style='color:#000'>Validate</strong> your answer. You can use tables of typical soil properties to do this.</li>
+ </ol>
+ 
+ </section>
+
+ <section id="ex_2_3" >
+	 <h1>Example 2.3</h1>
+
+	 <div class="textBox"><p>In the natural state, a moist soil has a volume of 0.0093 m<sup>3</sup> and weighs 177.6 N. The oven dry weight of the soil is 153.6 N. If \(G_s=2.71\), calculate: (1) Gravimetric water content, (2) Total unit weight, (3) Void ratio and porosity, (4) Saturation ratio.</p>
+		<!-- <p> <a href="#/15">Go to the Jupyter Notebook</a></p> -->
+
+
+	</div>
+
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-2-3.html' data-part='1'></div>
+	</div>
+ </section>
+
+ <section id="ex_2_3b" >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-2-3.html' data-part='2'></div>
+	</div>
+ </section>
+
+  <section id="ex_2_4">
+ <h1>Example 2.4</h1>
+ <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+  The void ratio of a clay is 0.5 and the saturation ratio is 70%. Assuming the density of solids is 2750 kg/m <sup>3</sup>, calculate: (1) The water content, (2) The dry unit weight, and (3) The total unit weight.
+ </div>
+
+ <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+ <div class='Solution' data-src='solutions/ex-2-4.html'></div>
+ </div>
+
+ </section>
+
+ <!-- <section>
+ <h1>Example 2.4</h1>
+ <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+ A soil sample has \(m_s=1.6\) Mg, \(\rho_s=2.7\) Mg/m<sup>3</sup>, and \(w=10\%\). Determine: <br>
+ <ol>
+   <li>The volume of solids \(V_s\)</li>
+   <li>The volume of water \(V_w\)</li>
+   <li>The void ratio and saturation given \(\rho_t=1.76\) Mg/m<sup>3</sup> </li>
+ </ol>
+ </div>
+ </section>
+
+
+
+ <section>
+ <h1>Example 2.6</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+A saturated soil has water content of 46% and \(G_s=2.7\). Evaluate the following: <br>
+<ol>
+   <li>The void ratio</li>
+   <li>The dry unit weight in pcf</li>
+   <li>The total unit weight in pcf</li>
+   <li>The submerged density</li>
+</ol>
+</div>
+ 
+ </section> -->
+ 
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="../assets/solution-plugin.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but the animated figures here
+     are <object>s now, so External_svg.js does the work. -->
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealSolution,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>

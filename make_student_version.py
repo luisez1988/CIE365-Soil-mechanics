@@ -13,13 +13,45 @@ def force_rmtree(path: Path):
     shutil.rmtree(path, onerror=remove_readonly)
 
 
+def mark_as_student(content: str) -> str:
+    """
+    Adds `class="student"` to the <html> element, marking the file as the
+    student build so stylesheets can target it.
+
+    reveal.js puts its own `print-pdf` class on <html> during PDF export, so the
+    pair `html.print-pdf.student` identifies "student build, exporting to PDF" —
+    which is what assets/solutions.css uses to blank the .fill/.ans answers.
+    Nothing changes on screen or in the professor build.
+    """
+    m = re.search(r'<html\b([^>]*)>', content, re.IGNORECASE)
+    if not m:
+        print("  [WARN] No <html> tag found — student marker NOT added, "
+              "answers will show in the PDF export")
+        return content
+
+    attrs = m.group(1)
+    cls   = re.search(r'class=(["\'])(.*?)\1', attrs, re.IGNORECASE)
+
+    if cls:
+        if 'student' in cls.group(2).split():
+            return content
+        attrs = attrs[:cls.start()] + f'class="{cls.group(2)} student"' + attrs[cls.end():]
+    else:
+        attrs = attrs + ' class="student"'
+
+    print("  [HTML] Marked <html class=\"student\"> (hides answers in ?print-pdf)")
+    return content[:m.start()] + f'<html{attrs}>' + content[m.end():]
+
+
 def transform_html(input_path: Path, output_path: Path,
                    figures_folder: str = "FiguresGeneral",
-                   figures_dst_folder: str = None):
+                   figures_dst_folder: str = None,
+                   student: bool = False):
     """
     Transforms <object class='Animation' ... data='FiguresGeneral/x.svg'>
     into <img src='{figures_dst_folder}/x.svg'> in the HTML file.
     If figures_dst_folder is None, the original figures_folder name is kept.
+    If student is True, also marks the file as the student build.
     """
     with open(input_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -45,10 +77,13 @@ def transform_html(input_path: Path, output_path: Path,
 
     modified, count = re.subn(pattern, to_img_tag, content, flags=re.DOTALL | re.IGNORECASE)
 
+    print(f"  [HTML] Converted {count} Animation objects → <img> tags")
+
+    if student:
+        modified = mark_as_student(modified)
+
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(modified)
-
-    print(f"  [HTML] Converted {count} Animation objects → <img> tags")
 
 
 def comment_animate_elements_in_svg(svg_path: Path):
@@ -186,7 +221,8 @@ def process_presentation(folder: Path):
 
     # ── Step 1a: Student HTML ────────────────────────────────────────────────
     # Same folder as original so all css/, js/, plugin/ paths remain valid
-    transform_html(html_input, html_output, figures_dst_folder="FiguresGeneral_student")
+    transform_html(html_input, html_output, figures_dst_folder="FiguresGeneral_student",
+                   student=True)
 
     # ── Step 1b: Professor HTML ──────────────────────────────────────────────
     # object → img, but keep pointing at the original FiguresGeneral/
@@ -227,12 +263,13 @@ def list_presentations(repo_root: Path) -> list[Path]:
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    repo_root = Path(r"c:\Users\zamcr\OneDrive\Documents\GitHub\CIE365-Soil-mechanics")
+    # Repo root = folder containing this script, so it works wherever the repo is cloned
+    repo_root = Path(__file__).resolve().parent
 
     presentations = list_presentations(repo_root)
 
     if not presentations:
-        print("No presentations found.")
+        print(f"No presentations found under {repo_root}")
         exit()
 
     print("Available presentations:\n")
