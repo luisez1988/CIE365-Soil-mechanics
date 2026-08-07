@@ -6,8 +6,6 @@
     <span class="lead">Specific gravity of the solids</span>
     \(\Gs=\dfrac{\rho_s}{\rho_w}=\) <span class="fill">\(\dfrac{2750}{1000}\)</span>
     \(=\) <span class="fill">2.75</span>
-    <span class="note">\(\Gs\) is dimensionless — dividing by \(\rho_w\) is what strips
-    the units off \(\rho_s\).</span>
   </div>
 
   <div class="step">
@@ -15,61 +13,26 @@
     From \(Se=w\Gs\) (Example 2.2), &nbsp;\(w=\dfrac{Se}{\Gs}=\)
     <span class="fill">\(\dfrac{0.70\times0.5}{2.75}\)</span> \(=\)
     <span class="ans">12.7</span> %
-    <span class="note">\(\Gs\) goes in the <em>denominator</em>. On top it still
-    returns a plausible-looking number.</span>
-  </div>
-
-  <div class="step">
-    <span class="lead">Dry density</span>
-    <table class="sol-table">
-      <tr><th>Take</th><th>Then</th><th>Value</th></tr>
-      <tr>
-        <td class="lbl">\(V_s=1\ \unit{m^3}\)</td>
-        <td>\(V_t=1+e\)</td>
-        <td>\(=\) <span class="fill">1.5</span> \(\unit{m^3}\)</td>
-      </tr>
-      <tr>
-        <td class="lbl">\(\rho_s=2750\)</td>
-        <td>\(m_s=\rho_s V_s\)</td>
-        <td>\(=\) <span class="fill">2750</span> \(\unit{kg}\)</td>
-      </tr>
-    </table>
-    \(\rho_d=\dfrac{m_s}{V_t}=\) <span class="fill">\(\dfrac{2750}{1.5}\)</span> \(=\)
-    <span class="fill">1833</span> \(\unit{kg/m^3}\)
-    <span class="note">Setting \(V_s=1\) is free here: no mass or volume is given, so no
-    answer can depend on it.</span>
   </div>
 
   <div class="step">
     <span class="lead">Dry unit weight</span>
-    \(\gd=\rho_d\,g=\) <span class="fill">\(1833\times9.81\)</span> \(=\)
-    <span class="fill">\(17\,985\)</span> \(\unit{N/m^3}=\)
+    \(\gd=\dfrac{\Gs\gw}{1+e}=\) <span class="fill">\(\dfrac{2.75\times9810}{1.5}\)</span> \(=\)
+    <span class="fill">17,985</span> \(\unit{N/m^3}=\)
     <span class="ans">18.0</span> \(\unit{kN/m^3}\)
-    <span class="note">Density \(\times\,g\) = unit weight. An answer left in
-    \(\unit{kg/m^3}\) is not a unit weight.</span>
   </div>
 
   <div class="step">
-    <span class="lead">Total density</span>
-    \(\rho_t=\rho_d(1+w)=\) <span class="fill">\(1833\times1.1273\)</span> \(=\)
-    <span class="fill">2067</span> \(\unit{kg/m^3}\)
-    <span class="note">Water adds weight but no volume — it sits in voids that \(V_t\)
-    already counts, so only the numerator grows.</span>
-  </div>
-
-  <div class="step result">
     <span class="lead">Total unit weight</span>
-    \(\gamma_t=\rho_t\,g=\) <span class="fill">\(2067\times9.81\)</span> \(=\)
-    <span class="fill">\(20\,274\)</span> \(\unit{N/m^3}=\)
+    \(\gamma_t=\cfrac{\gw(G_s+Se)}{1+e}=\) <span class="fill">\(\cfrac{9810 (2.75+0.7\times 0.5)}{1.5}\)</span> \(=\)
+    <span class="fill">20,274</span> \(\unit{N/m^3}=\)
     <span class="ans">20.3</span> \(\unit{kN/m^3}\)
   </div>
 
   <div class="step">
     <span class="lead">Validate</span>
     Both unit weights land at the dense end of the silt-and-clay band in the
-    typical-values table — which is what \(e=0.5\) describes. Validated.
-    <span class="note">Those bands are indicative, not limits: landing at the edge of
-    one is a pass, not a red flag.</span>
+    typical-values table. Validated.
   </div>
 
 </div>

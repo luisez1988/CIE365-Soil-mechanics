@@ -6,16 +6,16 @@
     <span class="lead">Weight of water</span>
     \(W_w=W_t-W_s=\) <span class="fill">\(177.6-153.6\)</span> \(=\)
     <span class="fill">24.0</span> \(\unit{N}\)
-    <span class="note">"Oven dry weight" is the weight of the <em>solids</em> — all the
-    water is gone, the grains are unchanged.</span>
+    <span class="note">"Oven dry weight" is the weight of the <em>solids</em> because all the
+    water is gone</span>
   </div>
 
   <div class="step" data-part="1">
     <span class="lead">Gravimetric water content</span>
     \(w=\dfrac{W_w}{W_s}=\) <span class="fill">\(\dfrac{24.0}{153.6}\)</span> \(=\)
     <span class="ans">15.6</span> %
-    <span class="note">Divide by the weight of <em>solids</em>, never the total — which
-    is why \(w\) can legitimately exceed 100%.</span>
+    <span class="note">Divide by the weight of <em>solids</em>, never the total weight, which
+    is why \(w> 100\%\)</span>
   </div>
 
   <div class="step" data-part="1">
@@ -25,16 +25,14 @@
     <span class="ans">19.10</span> \(\unit{kN/m^3}\)
   </div>
 
-  <div class="step" data-part="1">
-    <span class="lead">Volume of solids — the cross-over</span>
+  <div class="step" data-part="2">
+    <span class="lead">Cross over to volumes</span>    
     \(V_s=\dfrac{W_s}{\Gs\gw}=\)
     <span class="fill">\(\dfrac{153.6}{2.71\times9810}\)</span> \(=\)
-    <span class="fill">0.005778</span> \(\unit{m^3}\)
-    <span class="note">\(\Gs\gw\) is the unit weight of the grains — the only bridge
-    from the weight column to the volume column.</span>
+    <span class="fill">0.005778</span> \(\unit{m^3}\)    
   </div>
 
-  <div class="step" data-part="1">
+  <div class="step" data-part="2">
     <span class="lead">Volume of voids</span>
     \(V_v=V_t-V_s=\) <span class="fill">\(0.0093-0.005778\)</span> \(=\)
     <span class="fill">0.003522</span> \(\unit{m^3}\)
@@ -49,7 +47,7 @@
     <br>
     \(n=\dfrac{e}{1+e}=\) <span class="fill">\(\dfrac{0.610}{1.610}\)</span> \(=\)
     <span class="ans">37.9</span> %
-    <span class="note">Same \(V_v\) in both — only the denominator changes, \(V_s\) for
+    <span class="note">Same \(V_v\) in both, only the denominator changes, \(V_s\) for
     \(e\) and \(V_t\) for \(n\).</span>
   </div>
 
@@ -57,11 +55,9 @@
     <span class="lead">Volume of water</span>
     \(V_w=\dfrac{W_w}{\gw}=\) <span class="fill">\(\dfrac{24.0}{9810}\)</span> \(=\)
     <span class="fill">0.002446</span> \(\unit{m^3}\)
-    <span class="note">Divide by \(\gw\) alone, not \(\Gs\gw\) — water's specific
-    gravity is 1.</span>
   </div>
 
-  <div class="step result" data-part="2">
+  <div class="step" data-part="2">
     <span class="lead">Saturation ratio</span>
     \(S=\dfrac{V_w}{V_v}=\) <span class="fill">\(\dfrac{0.002446}{0.003522}\)</span>
     \(=\) <span class="ans">69.5</span> %
@@ -70,14 +66,8 @@
   <div class="step" data-part="2">
     <span class="lead">Validate</span>
     The identity proved in Example 2.2 has to hold on real data:
-    \(Se=\) <span class="fill">\(0.695\times0.610\)</span> \(=0.4234\) &nbsp;and&nbsp;
-    \(w\Gs=\) <span class="fill">\(0.1563\times2.71\)</span> \(=0.4234\). &#10003;
-    <span class="note">A check worth doing every time: it uses all four answers at
-    once, so one wrong value breaks it.</span>
+    \(Se=\) <span class="fill">\(0.695\times0.610 =0.4234\)</span> &nbsp;and&nbsp;
+    \(w\Gs=\) <span class="fill">\(0.1563\times2.71 =0.4234\)</span>. &#10003;
+    <span class="note">A check worth doing!</span>
   </div>
-
-  <div class="note" data-part="2">The soil is <em>moist</em>, not saturated — roughly
-  a third of the void volume is air. That air carries volume into \(V_t\) and \(e\), but
-  no weight into \(W_t\), which is exactly why \(S\) came out below 100%.</div>
-
 </div>
