@@ -101,7 +101,7 @@
 /* The deck is authored at 1280x720 with --r-main-font-size: 40px. A solution
    carries far more lines than a normal slide, so it is set well down from that
    — a six-step solution plus a problem statement has to fit in 720px. */
-.reveal .sol { font-size: 0.44em; }
+.reveal .sol { font-size: 0.55em; }
 
 /* --------------------------------------------------------------------------
    Steps: one .step = one physical quantity obtained
@@ -184,11 +184,28 @@
   margin: 0.4em 0;
   font-size: 0.92em;
 }
+/* `font-size` and `background` are declared here on purpose, even though the
+   values are what a cell would inherit anyway.
+
+   Decks are hand-authored, and a slide that needs a styled table tends to carry
+   its own <style> block. CSS in a <style> element is global no matter where it
+   sits in the document, so one deck's `td, th { font-size: 34px }` lands on
+   every cell in that deck — solution tables included. Any property this rule
+   does not declare has no `.sol`-scoped value to win with, and an absolute
+   font-size also defeats the 0.92em set on .sol-table above, because that is
+   inherited rather than applied to the cell.
+
+   Declaring them makes the block immune: `.sol .sol-table td` (0,2,1) outranks
+   a bare `td` (0,0,1). Keep any future cell property here for the same reason.
+   The offender this was written for was Index_properties, now scoped to
+   `.typical-uw`. */
 .sol .sol-table th,
 .sol .sol-table td {
   border: 1px solid #9a9a9a;
   padding: 0.15em 0.55em;
   text-align: center;
+  font-size: inherit;          /* from .sol-table's 0.92em, not from the deck */
+  background: transparent;
 }
 .sol .sol-table th {
   background: rgba(0, 0, 0, 0.06);
@@ -231,9 +248,9 @@
   display: inline-block;
   max-width: 38%;
   vertical-align: top;
-  margin: 0 0 0 0.8em;
+  margin: 0 0 0 1.3em;
 }
-.reveal .sol .note { font-size: 0.76em; }
+.reveal .sol .note { font-size: 0.9em; }
 
 /* --------------------------------------------------------------------------
    The typewriter (slides only)
@@ -282,7 +299,7 @@
    — the plugin removes it. It is not tied to the width of the block. */
 .reveal .sol .sol-pencil {
   position: absolute;
-  font-size: 1.0em;
+  font-size: 1.1em;
   line-height: 1;
   pointer-events: none;
   user-select: none;

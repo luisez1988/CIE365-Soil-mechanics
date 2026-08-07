@@ -1,0 +1,106 @@
+<!-- Example 2.2 — total unit weight from a phase diagram, and the identity Se = wGs.
+     Legacy figures: inline EX23.svg (part 1) + EX23_1.svg (part 2), both hand-drawn
+     directly in index.html rather than referenced as files. -->
+<div class="sol" data-id="ex-2-2">
+
+  <div class="step" data-part="1">
+    <span class="lead">Fix the size of the sample</span>
+    Nothing in the statement is a mass or a volume, so the diagram can be scaled
+    freely. Take \(V_s=\) <span class="fill">1</span>.
+    <span class="note">Legal only because no mass or volume is given — every answer
+    is a ratio. (Rule 4 of the procedure slide.)</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Fill the volume column</span>
+    <table class="sol-table">
+      <tr><th>Phase</th><th>From the definitions</th><th>Volume</th></tr>
+      <tr>
+        <td class="lbl">Solids</td>
+        <td>chosen in step 1</td>
+        <td>\(V_s=1\)</td>
+      </tr>
+      <tr>
+        <td class="lbl">Voids</td>
+        <td>\(V_v=e\,V_s\)</td>
+        <td>\(=\) <span class="fill">\(e\)</span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Water</td>
+        <td>\(V_w=S\,V_v\)</td>
+        <td>\(=\) <span class="fill">\(Se\)</span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Air</td>
+        <td>\(V_a=V_v-V_w\)</td>
+        <td>\(=(1-S)\,e\)</td>
+      </tr>
+      <tr>
+        <td class="lbl">Total</td>
+        <td>\(V_t=V_s+V_v\)</td>
+        <td>\(=\) <span class="fill">\(1+e\)</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Cross over to the weight column</span>
+    \(W_s=\gamma_s V_s=\Gs\gw V_s=\) <span class="fill">\(\Gs\gw\)</span>
+    <span class="note">\(\Gs\gw\) is the unit weight of the <em>grains</em>, not of the
+    soil. It is the only bridge between the two columns.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Weight of water, then total weight</span>
+    \(W_w=\gw V_w=\) <span class="fill">\(Se\,\gw\)</span>, so
+    \(W_t=W_s+W_w=\) <span class="fill">\((\Gs+Se)\,\gw\)</span>
+    <span class="note">Air has no weight but real volume: it leaves the top of the
+    fraction, never the bottom.</span>
+  </div>
+
+  <div class="step result" data-part="1">
+    <span class="lead">Total unit weight</span>
+    \(\gamma_t=\dfrac{W_t}{V_t}=\)
+    <span class="ans">\(\dfrac{(\Gs+Se)\,\gw}{1+e}\)</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Water content, off the same diagram</span>
+    \(w=\dfrac{W_w}{W_s}=\) <span class="fill">\(\dfrac{Se\,\gw}{\Gs\gw}\)</span>
+    \(=\dfrac{Se}{\Gs}\), &nbsp;so &nbsp;<span class="ans">\(Se=w\Gs\)</span>
+    <span class="note">\(S\) and \(w\) both measure water — one by volume, one by
+    weight. \(e\) and \(\Gs\) convert between them.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">The same \(\gamma_t\), written in terms of \(w\)</span>
+    Substituting \(Se=w\Gs\) into step 5 gives the form to use when \(w\) is measured
+    and \(S\) is not: &nbsp;\(\gamma_t=\)
+    <span class="fill">\(\dfrac{\Gs(1+w)\,\gw}{1+e}\)</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Check it against what you already know</span>
+    <table class="sol-table">
+      <tr><th>Case</th><th>\(S\)</th><th>Step 5 becomes</th></tr>
+      <tr>
+        <td class="lbl">Dry</td>
+        <td>\(0\)</td>
+        <td>\(\gd=\) <span class="fill">\(\dfrac{\Gs\gw}{1+e}\)</span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Saturated</td>
+        <td>\(1\)</td>
+        <td>\(\gsat=\) <span class="fill">\(\dfrac{(\Gs+e)\,\gw}{1+e}\)</span></td>
+      </tr>
+    </table>
+    <span class="note">One expression contains all three unit weights from the
+    table two slides back.</span>
+  </div>
+
+  <div class="note" data-part="2">Every relation here holds with <em>densities</em> in
+  place of unit weights — \(\rho_t=\dfrac{(\Gs+Se)\,\rho_w}{1+e}\), and likewise
+  \(\rho_d\) and \(\rho_{sat}\). The \(g\) in \(\gamma=\rho g\) sits on both sides and
+  cancels, so the algebra is untouched. Example 2.4 is worked this way.</div>
+
+</div>
