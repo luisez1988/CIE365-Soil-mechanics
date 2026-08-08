@@ -1,0 +1,175 @@
+<!-- Example 2.8 (renumbered from 2.9) — USCS group symbol and group name for three soils.
+     Three parts, one per soil, matching the deck's three ProblemBox slides:
+     part 1 = Soil 1, part 2 = Soil 2 (after the live GSD plot), part 3 = Soil 3.
+     Step numbering runs 1-15 continuously; the plugin carries the counter across parts.
+     Soil 2's D values are read to two significant figures off the curve plotted on
+     FiguresGeneral/Modeule2_GSD_plot.svg, whose labels carry the same values. -->
+<div class="sol" data-id="ex-2-8">
+
+  <!-- ===================== Soil 1 ===================== -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Soil fractions</span>
+     \(G_F=100-P_{P,\#4}=\)
+    <span class="fill">\(100-99\)</span> \(=\) <span class="fill">1</span> %
+    <br>
+    \(F_F=P_{P,\#200}=\)
+    <span class="fill">60</span> %
+    <br>
+    \(S_F=100-G_F-F_F=\)
+    <span class="fill">\(100-1-60\)</span> \(=\) <span class="fill">39</span> %
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Coarse or fine?</span>
+    \(F_F=\) <span class="fill">60 \(\%\ > 50\ \%\)</span> \( \implies\) the soil is
+    <span class="fill">fine-grained, so symbol is determined by the plasticity chart</span>
+    <span class="note">The important part is: For fine-grained soils, the plasticity chart determines the symbol.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Group symbol from the plasticity chart</span>
+     <span class="fill">\( LL=20 \%\ > 50\ \%\ \)</span> \(\implies\)   <span class="fill">low plasticity (L)</span>
+    <br>
+    \(4\leq PI\leq7\) puts it in the hatched band \(\implies\) <span class="ans">CL-ML</span>
+  </div>
+
+  <div class="step result" data-part="1">
+    <span class="lead">Group name</span>
+    Coarse material: \(G_F+S_F=\) <span class="fill">\(1+39\)</span> \(=\)
+    <span class="fill">40 \(\%\ > 30\ \%\)</span> \(\implies\) <span class="fill">secondary descriptor is required</span>
+    <br>
+    \(S_F&gt;G_F\implies\) <span class="fill">sandy</span>; and
+    \(G_F=1\ \%\ &lt;15\ \%\) \(\implies\) <span class="fill">no tertiary descriptor</span>
+    <br>
+    \(\implies\) <span class="ans">CL-ML, sandy silty clay</span> 
+  </div>
+
+  <!-- ===================== Soil 2 ===================== -->
+
+  <div class="step" data-part="2">
+    <span class="lead">Soil fractions</span>
+    \(G_F=100-P_{P,\#4}=\) <span class="fill">\(100-97\)</span> \(=\)
+    <span class="fill">3</span> %,&nbsp;
+    \(F_F=P_{P,\#200}=\) <span class="fill">5</span> %
+    <br>
+    \(S_F=100-G_F-F_F=\) <span class="fill">\(100-3-5\)</span> \(=\)
+    <span class="fill">92</span> %
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Coarse or fine, and which coarse?</span>
+    \(F_F=5 \%\) <span class="fill">\(>50\ \%\)</span> \(\implies\) the soil is
+    <span class="fill">coarse-grained</span>
+    <br>
+    \(S_F=92\ \%\ &gt;G_F=3\ \%\ \implies\) first letter is <span class="ans">S</span>
+  </div>
+
+    <div class="step" data-part="2">
+    <span class="lead">Does it need a dual symbol?</span>
+    \(5\ \%\ \leq F_F=\) <span class="fill">5</span> \(\%\ \leq 12\ \%\ \implies\)
+    <span class="fill">two letters are needed</span>
+
+  </div>
+
+  <div class='container'>
+  <div class='col' style='width: 35%;'>
+    <div class="step" data-part="2">
+    <span class="lead">Particle sizes from the GSD</span>
+    <table class="sol-table">
+      <tr>
+        <th>\(x\) (% finer)</th><th>60</th><th>30</th><th>10</th>
+      </tr>
+      <tr>
+        <td class="lbl">\(D_x\) (mm)</td>
+        <td><span class="fill" data-step="8">0.79</span></td>
+        <td><span class="fill" data-step="8">0.31</span></td>
+        <td><span class="fill" data-step="8">0.16</span></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  <div class='col' style='width: 65%;'>
+    <div class="step" data-part="2">
+    <span class="lead">Gradation coefficients</span>
+    \(C_u=\dfrac{D_{60}}{D_{10}}=\) <span class="fill">\(\dfrac{0.79}{0.16}\)</span> \(=\)
+    <span class="fill">4.9</span>
+    <br>
+    \(C_c=\dfrac{D_{30}^{2}}{D_{10}\,D_{60}}=\)
+    <span class="fill">\(\dfrac{(0.31)^{2}}{0.16\times0.79}\)</span> \(=\)
+    <span class="fill">0.76</span>
+    <br>
+    A well-graded sand needs \(C_u\geq6\) <strong>and</strong> \(1\leq C_c\leq3\); both fail
+    \(\implies\) <span class="ans">P</span>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="step" data-part="2">
+    <span class="lead">Fines letter, and the dual symbol</span>
+    The fines are non-plastic, so they classify as ML \(\implies\) fines letter is
+    <span class="fill">M</span> \(\implies\) <span class="ans">SP-SM</span>
+    <span class="note">Non-plastic fines are still fines, and they are silt</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Group name</span>
+    \(G_F=\) <span class="fill">3</span> \(\%\ &lt;15\ \%\)
+    \(\implies\) <span class="ans">SP-SM, poorly graded sand with silt</span>
+  </div>
+
+  <!-- ===================== Soil 3 ===================== -->
+
+  <div class="step" data-part="3">
+    <span class="lead">Soil fractions</span>
+    \(G_F=100-P_{P,\#4}=\) <span class="fill">\(100-100\)</span> \(=\)
+    <span class="fill">0</span> %,&nbsp;
+    \(F_F=P_{P,\#200}=\) <span class="fill">97</span> %
+    <br>
+    \(S_F=100-G_F-F_F=\) <span class="fill">\(100-0-97\)</span> \(=\)
+    <span class="fill">3</span> %
+  </div>
+
+  <div class="step" data-part="3">
+    <span class="lead">Coarse or fine?</span>
+    \(F_F=\) <span class="fill">\(97 \%\ \geq 50\ \%\ \)</span> \(\implies\) the soil is
+    <span class="fill">fine-grained, use plasticity chart</span>
+  </div>
+
+  <div class="step" data-part="3">
+    <span class="lead">Group symbol from the plasticity chart</span>
+    <span class="fill">\(LL=124\ \%\ \geq 50\ \%\)</span> \( \implies\) <span class="fill">high plasticity (H)</span>    
+    <br>
+    A-line: \(PI_A=0.73(LL-20)=\)
+    <span class="fill">\(0.73(124-20)\)</span> \(=\) <span class="fill">76</span>
+    <br>
+    <span class="fill">\(PI=77&gt;PI_A\), so the point sits above the A-line </span> \(\implies\)
+    <span class="ans">CH</span>
+    <br>
+
+    <span class="note"
+      data-slide="Off this chart on both axes: use the equation"><strong>This
+    soil does not fit on the printed chart.</strong> The figure stops at \(LL=110\) and
+    \(PI=60\), so there is nowhere to plot \(LL=124\), \(PI=77\) and the A-line equation is
+    the only route. Take care with it: dropping the \(-20\) and writing \(0.73\times124\)
+    lands the point below the A-line and returns the wrong symbol, with nothing in the
+    arithmetic to warn you. The U-line is the companion check — no real soil plots above
+    it, so a point that does means the test, not the soil, is wrong.</span>
+  </div>
+  <div class="step" data-part="3">
+    <span class="lead">U-line check</span>
+    \(PI_U=0.9(LL-8)=0.9(124-8)=104\), and \(77&lt;104\), so these limits are
+    physically possible
+  </div>
+
+  <div class="step result" data-part="3">
+    <span class="lead">Group name</span>
+    Coarse material: \(G_F+S_F=\) <span class="fill">\(0+3\)</span> \(=\)
+    <span class="fill">3</span> \(\%\ &lt;15\ \%\), so no descriptor of any kind is added
+    <br>
+    \(\implies\) <span class="ans">CH, fat clay</span>
+  </div>
+
+</div>

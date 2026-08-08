@@ -82,7 +82,7 @@
 						}
 					.reveal .slides section .fragment.fade-down,
 					.reveal .slides section .fragment.current-fragment {
-							/* color: #000; */
+							color: #000;
 							margin-top:0px;
 					}
 	
@@ -1028,7 +1028,40 @@ Classify the soil of Example 2.7 using the USCS and the AASHTO classification sy
 
       </div>
     </div>
-  </body>
+  
+<script>
+(function(){
+  function go(){
+    var n = parseInt((location.hash.match(/#\/(\d+)/)||[])[1]||0,10);
+    Reveal.slide(n);
+    var guard = 0;
+    var t = setInterval(function(){
+      var a = Reveal.availableFragments();
+      if (!a.next || ++guard > 400) {
+        clearInterval(t);
+        // report the real content height vs the slide box
+        var sol = document.querySelector('.present .sol');
+        var sec = document.querySelector('section.present');
+        if (sol) {
+          var r = sol.getBoundingClientRect(), sr = sec.getBoundingClientRect();
+          var tag = document.createElement('div');
+          tag.style.cssText='position:fixed;left:0;bottom:0;z-index:9999;background:#000;color:#0f0;font:12px monospace;padding:2px 6px';
+          tag.textContent='sol '+Math.round(r.height)+'px  bottom '+Math.round(r.bottom)+
+                          '  section bottom '+Math.round(sr.bottom)+
+                          (r.bottom > sr.bottom ? '  *** OVERFLOW ***' : '  fits');
+          document.body.appendChild(tag);
+        }
+        return;
+      }
+      Reveal.next();
+    }, 8);
+  }
+  if (window.Reveal && Reveal.isReady && Reveal.isReady()) go();
+  else document.addEventListener('DOMContentLoaded', function(){ setTimeout(go, 1500); });
+})();
+</script>
+
+</body>
 
 
 
@@ -1103,8 +1136,8 @@ Reveal.initialize({
 
    // Worked-example solutions (see SOLUTIONS.md).
    solution: {
-	   sound: true,           // chalk while typing, solution fragments only
-	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
+	   sound: false,           // chalk while typing, solution fragments only
+	   charsPerSecond: 100000,    // typing speed — the one dial. Lower is slower.
    },
 
    spotlight: {
