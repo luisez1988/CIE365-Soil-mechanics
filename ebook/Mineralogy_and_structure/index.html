@@ -40,6 +40,8 @@ window.MathJax = {
   <span class="toolbar-actions">
     <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
     <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
     <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
     <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
     <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
@@ -47,6 +49,37 @@ window.MathJax = {
   </span>
   <input type="file" id="file-import" accept=".json,application/json" hidden>
 </div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
 <button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
         aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
 
@@ -193,14 +226,14 @@ This is the portion of the rock that turns into <span class="blank" data-bid="Mi
 
 <div class='container'>
 <div class='col bordered' style='--colw:50%'>
-<iframe src='../../Mineralogy_and_structure/molecules/tetrahedral_model.html'
+<iframe src='molecules/tetrahedral_model.html' 
 			width='100%' 
 			height='400px' 
 			frameborder='0'
 		></iframe>
 </div>
 <div class='col bordered' style='--colw:50%'>
-<iframe src='../../Mineralogy_and_structure/molecules/octahedral_model.html'
+<iframe src='molecules/octahedral_model.html' 
 			width='100%' 
 			height='400px' 
 			frameborder='0'
