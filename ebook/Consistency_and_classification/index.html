@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2: Atterberg Limits and Classification · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Consistency_and_classification" data-total="79" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 2: Atterberg Limits and Classification</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">79</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Consistency of fine-grained soils</a></li>
+<li><a href="#s3">Plasticity</a></li>
+<li><a href="#s4">Atterberg limits</a></li>
+<li><a href="#s5">Consistency indices</a></li>
+<li><a href="#s6">Participation question 2.5</a></li>
+<li><a href="#s7">Participation question 2.6</a></li>
+<li><a href="#s9">Liquid limit (ASTM D4318)</a></li>
+<li><a href="#s10">Plastic limit (ASTM D4318)</a></li>
+<li><a href="#s11">Soil classification</a></li>
+<li><a href="#s12">USCS Symbols</a></li>
+<li><a href="#s13">Plasticity chart</a></li>
+<li><a href="#s14">USCS flow diagram for fines \(F_F \geq 50\%\)</a></li>
+<li><a href="#s15">USCS flow diagram for \(F_F < 50\%\)</a></li>
+<li><a href="#s16">Example 2.8</a></li>
+<li><a href="#s17">Soil 1</a></li>
+<li><a href="#s18">Soil 2</a></li>
+<li><a href="#s19">Soil 3</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+			
+				<ul>
+				<li > 
+					<div class='textBox' >
+						We learned how to plot and read <strong style='color:#000'>GSD curves</strong>.
+					</div>
+					</li>
+				<li > 
+					We learned how to determine the <strong style='color:#000'>soil fractions</strong>. </li>
+				<li > 
+					<div class='textBox' >
+						We learned how to calculate <strong style='color:#000'>particle sizes and gradation coefficients</strong>.
+					</div>
+					</li>	
+			</ul>
+		
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle" >
+							<li class="l1">Atterberg limits</li>
+							<li class="l1">USCS classification</li>
+							<li class="l1">AASHTO classification</li>
+						</ul>	
+					</div>
+					<div class='col'>
+					<div class='container'>
+					<div class='col'>
+					<div class="stickynote" style="height: 300px">
+						<p> imgives covered in this lecture</p>
+						<ul>
+							<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+						</ul>
+					</div>
+					</div>
+					<div class='col'>
+					<div class='stickynote' style='height: 300px'>
+					<p >After this lecture we will able to:</p>
+					<ul >
+
+						<li>Calculate Atterberg limits.</li>
+            <li>Calculate the activity of clays.</li>
+						<li>Classify soils according to the USCS and AASHTO.</li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+					
+
+        
+</section>
+
+<section class="block" id="s2" data-anchor="consistency-of-fine-grained-soils">
+<h2 class="block-title">Consistency of fine-grained soils</h2>
+
+
+<div class='textBox' >
+<strong style='color:#000'>Atterberg limits</strong> are used to describe the <strong style='color:#000'>behavior</strong> (<span class="blank" data-bid="Consistency_and_classification.ee9a3c94-0" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span>) of the fine fraction in the soil.
+</div>
+
+<ul >
+<li >If you keep adding water to the soil, it will eventually behave as a <span class="blank" data-bid="Consistency_and_classification.d5eaf3ca-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></li>
+
+<li >Water content is important, but not all soils behave the same at same water content.</li>
+
+<li >We need to map the water content to <span class="blank" data-bid="Consistency_and_classification.ca2971b0-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> and <span class="blank" data-bid="Consistency_and_classification.2da4a33f-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> </li>
+
+</ul>
+
+
+</section>
+
+<section class="block" id="s3" data-anchor="plasticity">
+<h2 class="block-title">Plasticity</h2>
+
+
+
+<div class='textBox' >
+Is the degree of a soil to be <span class="blank" data-bid="Consistency_and_classification.671f1fe7-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> without noticeable elastic rebound or volume change and without <strong style='color:#000'>cracking or crumbling</strong>.
+
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='../../Consistency_and_classification/FiguresGeneral/Soil_pottery.png' style='height:400px; width:auto' alt="A close-up view of a large pair of adult hands guiding a smaller pair of child's hands as they shape wet, reddish-brown clay on a spinning pottery wheel. In the soft-focus background, there are shelves filled with finished terra cotta pots, dried plants, and bags of materials. The text 'SOIL PLASTICITY' is printed in white capital letters at the bottom center of the image."/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:50%'>
+We use plasticity to:
+<ol>
+  <li ><span class="blank" data-bid="Consistency_and_classification.9a829967-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> between <strong style='color:red'>plastic</strong> (e.g., <strong style='color:red'>clay</strong>) and <strong style='color:blue'>non-plastic</strong> (e.g., <strong style='color:blue'>silt</strong>) fines.</li>
+
+  <li >Further <strong style='color:#000'>classify</strong> soils by <span class="blank" data-bid="Consistency_and_classification.5ae103e0-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+</ol>
+</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s4" data-anchor="atterberg-limits">
+<h2 class="block-title">Atterberg limits</h2>
+
+    
+	<div class='textBox' >
+	Named after soil scientist who proposed them (Albert Atterberg). The Atterberg limits are <span class="blank" data-bid="Consistency_and_classification.1465c2a8-0" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span> at which the behavior of soils changes.
+	</div>
+
+	<img loading="lazy" src="figures/Atterberg_limits.svg" style="width:100%" alt=""/>
+
+	<p    ><span class="blank" data-bid="Consistency_and_classification.fb46cfd2-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+	<p    ><span class="blank" data-bid="Consistency_and_classification.ecc7c4b7-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+	<p    ><span class="blank" data-bid="Consistency_and_classification.af07a268-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+	<p    ><span class="blank" data-bid="Consistency_and_classification.18ab4773-0" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+
+	<p    ><span class="blank" data-bid="Consistency_and_classification.4e90a45e-0" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+	<p    ><span class="blank" data-bid="Consistency_and_classification.a9985507-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+	<p    ><span class="blank" data-bid="Consistency_and_classification.f9aced5e-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span>  </p>
+
+
+</section>
+
+<section class="block" id="s5" data-anchor="consistency-indices">
+<h2 class="block-title">Consistency indices</h2>
+
+    
+
+	<div class='defBox' name='Plasticity index' >
+	<strong style='color:red'>\(PI\): </strong> Is the range of water content in which the fine fraction of soils behaves as a plastic material.
+
+	<div class='equationBox'>
+		\( \begin{align}
+		PI=LL-PL
+		\end{align} \)	
+	</div>
+	</div>
+
+	<div class='defBox' name='Liquidity index' >
+	<strong style='color:red'> \(LI\): </strong> is a scaling parameter that maps the natural water content to the consistency limits. it indicates how close a soil's natural water content is to its liquid limit, <strong style='color:#000'>relative</strong> to its plasticity index
+
+	<div class='equationBox'>
+		\( \begin{align}
+		LI=\cfrac{w_n-PL}{PI}
+		\end{align} \)	
+	</div> <br>
+	Where \(w_n\) is the natural water content of the soil.
+
+
+	</div>
+
+</section>
+
+<section class="block check-yourself" id="s6" data-anchor="participation-question-2-5">
+<h2 class="block-title">Participation question 2.5</h2>
+
+
+<div class='InquiryBox' >
+  What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=PL\)?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>0</li>
+<li class='l2'>-1</li>
+<li class='l2'>2</li>
+<li class='l2'>0.5</li>
+<li class='l2'>inf.</li>
+</ol>
+
+</section>
+
+<section class="block check-yourself" id="s7" data-anchor="participation-question-2-6">
+<h2 class="block-title">Participation question 2.6</h2>
+
+	
+	<div class='InquiryBox' >
+    What is the value of the <strong style='color:orange'>liquidity index</strong> \(LI\) when \(w_n=LL\)?
+  </div>
+	<ol class='iClicker' >
+	<li class='l2'>0</li>
+	<li class='l2'>-1</li>
+	<li class='l2'>2</li>
+	<li class='l2'>0.5</li>
+	<li class='l2'>1</li>
+	</ol>
+
+</section>
+
+<section class="block" id="s8" data-anchor="s8">
+
+<figure>
+  <img loading="lazy" src="../../Consistency_and_classification/FiguresGeneral/limits.svg.2022_01_29_17_52_10.0.svg" style="width:100%" alt="A technical diagram correlating soil states with water content and stress-strain behavior.
+
+Top Section: A horizontal axis represents increasing 'Water content' (w) from left to right, divided into four states: 'Brittle', 'Semi-solid', 'Plastic', and 'Liquid'. The boundaries between these states are marked by limits:
+
+    'SL' (Shrinkage Limit) between Brittle/Semi-solid.
+
+    'PL' (Plastic Limit) between Semi-solid/Plastic.
+
+    'LL' (Liquid Limit) between Plastic/Liquid. Values for 'Liquidity index' (LI) are shown below the axis: LI<0 (left of PL), LI=0 (at PL), 0<LI<1 (Plastic zone), LI=1 (at LL), and LI>1 (Liquid zone). A red bracket labeled 'PI' (Plasticity Index) spans the Plastic zone.
+
+Bottom Section: Three graphs show 'Stress-strain' curves (τ versus γ) for different water contents:
+
+    Left Graph (w<SL): A steep red curve rising linearly and terminating abruptly with a red 'X', indicating brittle fracture.
+
+    Center Graph: Shows plastic behavior with two curves. A red curve (w≈PL) rises to a peak and declines slightly (ductile). A blue curve (w≈LL) rises gradually to a plateau.
+
+    Right Graph (w>LL): A flat blue line along the horizontal axis, indicating negligible shear strength (liquid behavior)."/>
+  <footer ><small></small></footer>
+</figure>
+
+</section>
+
+<section class="block" id="s9" data-anchor="liquid-limit-astm-d4318">
+<h2 class="block-title">Liquid limit (ASTM D4318)</h2>
+
+    
+	<div class='defBox' name='' >
+	<strong style='color:red'>\(LL\):</strong> Is the <strong style='color:#000'>water content</strong> at which a standard groove cut in the soil will close <span class="blank" data-bid="Consistency_and_classification.7ba1624d-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+
+	<div class='container'>
+	<div class='col' style="--colw:50%">
+	<ul >
+		<li >Arthur Casagrande refined the method to measure \(LL\) so that is operator independent.</li>
+		<li >This method is known as the <span class="blank" data-bid="Consistency_and_classification.52e0b988-0" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>		
+	</ul>
+	</div>
+	<div class='col' style="--colw:50%">
+	<figure >
+	<img loading="lazy" src='../../Consistency_and_classification/FiguresGeneral/casagrande_cup.svg' width='100%' alt="Two side-by-side photographs of a Casagrande cup device used for determining the liquid limit of soil. The left image shows the brass cup containing a soil paste with a clear vertical groove cut through the center, separating the sample. The right image shows the same sample after being subjected to shocks, where the two halves of the soil have flowed together at the bottom of the groove. A yellow label points to this closed section, indicating a closure length of '13 mm'"/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+
+
+
+<h2>Casagrande's LL determination procedure</h2>
+<div class='container'>
+<div class='col' style='--colw:55%'>
+<ol style="font-size: 0.95em">
+	<li >Take only dry soil passing <strong style='color:#000'>sieve 40</strong>. These are fine sands + fines.</li>
+	<li ><strong style='color:#000'>Rehydrate</strong> the soil and put it into the brass cup.</li>
+	<li ><strong style='color:#000'>Carve a grove</strong> through the soil paste using a standard grooving tool.</li>
+	<li ><strong style='color:#000'>Turn handle at 2 rpm</strong> to close gap.</li>
+	<li ><strong style='color:#000'>Stop</strong> when contact length is 13 mm</li>
+	<li ><strong style='color:#000'>Determine water content</strong> at this point</li>
+	<li ><strong style='color:#000'>Repat for different water contents</strong> so that the number of blows range from 10 to 40.</li>
+</ol>
+</div>
+<div class='col' style='--colw:45%'>
+
+<img loading="lazy" src="figures/flow_curve.svg" style="width:100%" alt=""/>
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s10" data-anchor="plastic-limit-astm-d4318">
+<h2 class="block-title">Plastic limit (ASTM D4318)</h2>
+
+    
+	<div class='defBox' name='' >
+	<strong style='color:red'>\(PL\): </strong> Is the <strong style='color:#000'>water content</strong> at which soil crumbles when <span class="blank" data-bid="Consistency_and_classification.b19deb43-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> to a diameter of <span class="blank" data-bid="Consistency_and_classification.ecff1f37-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+	<div class='container'>
+	<div class='col' style="--colw:50%">
+	<ul >
+		<li >Determined by rolling clay snakes</li>
+		<li > Results are operator dependent. </li>
+		<li >Repeat at least three times.</li>
+		<li >\(PL\) is the <strong style='color:#000'>average</strong> water content of the total number of tests performed.</li>
+		
+	</ul>
+	</div>
+	<div class='col' style="--colw:50%">
+	<div class='container'>
+	<div class='col' style="--colw:50%">
+		<figure >
+			<img loading="lazy" src="https://www.humboldtmfg.com/product-originals/H-4253.png" style="height:300px" data-preload/>
+			<footer ><small></small></footer>
+		  </figure>
+
+	</div>
+	<div class='col' style="--colw:50%">
+		<figure >
+			<img loading="lazy" src="https://4.bp.blogspot.com/-QaWSi_ZzWT8/WWIX1qaZKOI/AAAAAAAAIaM/UHNXqEmcFwsc-47aYHaGd1YDroBXYw70gCLcBGAs/s1600/.51.jpg" style="height:300px" alt="A photograph showing a hand rolling a small sample of brown soil into a thin, cylindrical thread on a smooth, light-colored surface. The hand is positioned palm-down with fingers extended, gently pressing the soil to form a filament, illustrating the manual procedure used to determine the 'Plastic Limit' of the soil."/>
+			<footer ><small></small></footer>
+		  </figure>
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+<div class='findingBox' >
+Notes on Atterberg Limits
+</div>
+
+<ul>
+	<li >Typical range of <strong style='color:green'>\(LL\)</strong> can be from <strong style='color:#000'>0 to 1,000</strong>, but most soils have \(LL < 100\)%.</li>
+	<li >The <strong style='color:green'>\(PL\)</strong> can range from <strong style='color:#000'>0 to more than 100</strong>, with most soils having \(PL < 40\)%.</li>
+	<li >These tests are performed in <span class="blank" data-bid="Consistency_and_classification.cfd22f86-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>. This is well-mixed/blended; not the same state as in the ground.</li>
+	<li >These tests are very arbitrary and simple</li>
+	<li >Why do they work to categorize <strong style='color:#000'>soil behavior</strong>? <br>
+	<span >Like many things in geotechnical engineering, they work <span class="blank" data-bid="Consistency_and_classification.6d93a714-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>. That is, they correlate with engineering properties because both are <strong style='color:#000'>affected by the same things</strong>. </span>
+	</li>
+</ul>
+
+
+</section>
+
+<section class="block" id="s11" data-anchor="soil-classification">
+<h2 class="block-title">Soil classification</h2>
+
+	
+	<div class='textBox' >
+    Geotechnical Engineers <strong style='color:black'>classify</strong> soils using the <span class="blank" data-bid="Consistency_and_classification.693aca4e-0" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span> (USCS) for <span class="blank" data-bid="Consistency_and_classification.8f134b6d-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+  </div>
+<p>Important concepts for USCS soil classification: <br>
+<ol>
+<li ><strong style='color:#000'>Coarse-grained soils</strong> are classified by <span class="blank" data-bid="Consistency_and_classification.721a4c2a-0" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+<li ><strong style='color:#000'>Fine-grained soils</strong> are classified by engineering behavior e.g., <span class="blank" data-bid="Consistency_and_classification.ed9ee99f-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+
+<li >Only sieve analysis and Atterberg Limits are used to classify soils</li>
+
+</ol>
+
+</p>
+  
+	
+	
+
+
+<img loading="lazy"  src="../../Consistency_and_classification/FiguresGeneral/classification.svg" width="100%" alt="A flowchart diagram illustrating the Unified Soil Classification System (USCS) process.
+
+Top Section (Workflow):
+
+    Input parameters (Red Box): Lists necessary data: 'GSD (Gr​,Sr​,Fr​)', 'Gradation coeffs. (Cc​,Cu​)', 'PI and LL', and 'Plasticity chart'.
+
+    Process (Yellow Box): Labeled 'USCS', representing the classification logic.
+
+    Output (Grey Box): Shows the results: 'Group symbol' and 'Soil name'.
+
+Bottom Section (Example): An annotated example breaks down the classification 'SM' and name 'Silty sand with gravel':
+
+    Group Symbol 'SM':
+
+        'S' (First letter) is labeled 'First letter is for dominant fraction'.
+
+        'M' (Second letter) is labeled 'Secondary descriptor'.
+
+    Soil Name 'Silty sand with gravel':
+
+        'Silty' matches the secondary descriptor.
+
+        'Sand' is labeled 'dominant fraction'.
+
+        'with gravel' is labeled 'Tertiary descriptor'.">
+
+
+</section>
+
+<section class="block" id="s12" data-anchor="uscs-symbols">
+<h2 class="block-title">USCS Symbols</h2>
+
+
+<div class='container'>
+<div class='col bordered' style='--colw:50%'>
+	Primary soil symbols:
+<table style="font-size: 0.9em">
+	<tr>
+		<th>Symbol</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>G</td>
+		<td>Gravel</td>
+	</tr>
+	<tr>
+		<td>S</td>
+		<td>Sand</td>
+	</tr>
+	<tr>
+		<td>M</td>
+		<td>Silt</td>
+	</tr>
+	<tr>
+		<td>C</td>
+		<td>Clay</td>
+	</tr>
+	<tr>
+		<td>O</td>
+		<td>Organic soil</td>
+	</tr>
+</table>
+
+<div class='stickynote' >
+Note: The M is from Swedish terms mo (very fine sand) and mjäla (silt)
+</div>
+</div>
+<div class='col bordered' style='--colw:50%'>
+Secondary soil symbols:
+<table style="font-size: 0.9em">
+	<tr>
+		<th>Symbol</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>W</td>
+		<td>Well graded</td>
+	</tr>
+	<tr>
+		<td>P</td>
+		<td>Poorly graded</td>
+	</tr>
+	<tr>
+		<td>H</td>
+		<td>High plasticity</td>
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>Low plasticity</td>
+	</tr>
+	<tr>
+		<td>G</td>
+		<td>Gravelly</td>
+	</tr>
+	<tr>
+		<td>S</td>
+		<td>Sandy</td>
+	</tr>
+	<tr>
+		<td>M</td>
+		<td>Silty</td>
+	</tr>
+	<tr>
+		<td>C</td>
+		<td>Clayey</td>
+	</tr>
+
+
+</table>
+</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s13" data-anchor="plasticity-chart">
+<h2 class="block-title">Plasticity chart</h2>
+
+	
+<figure >
+  <img loading="lazy" src="../../Consistency_and_classification/FiguresGeneral/soil_consistency_classification_chart.svg" width="100%" alt="A 'Plasticity Chart' used for classifying fine-grained soils, plotting 'PLASTICITY INDEX (PI)' on the vertical axis against 'LIQUID LIMIT (LL)' on the horizontal axis. The chart is divided into distinct regions by two key lines: a solid diagonal 'A-LINE' and a vertical line at 'LL = 50'.
+
+The specific classification zones are:
+
+    'CH or OH': Located above the A-line and to the right of LL=50 (High plasticity).
+
+    'MH or OH': Located below the A-line and to the right of LL=50 (High plasticity).
+
+    'CL or OL': Located above the A-line and to the left of LL=50 (Low plasticity).
+
+    'ML or OL': Located below the A-line and to the left of LL=50 (Low plasticity).
+
+    'CL-ML': A hatched zone near the bottom left corner (where PI is between 4 and 7) indicating a dual classification.
+
+A dashed line labeled 'U-LINE' marks the upper boundary of the chart. Text annotations provide the equations for the 'A-line' (PI=0.73(LL−20)) and the 'U-line'."/>
+  <footer ><small></small></footer>
+</figure>
+
+</section>
+
+<section class="block" id="s14" data-anchor="uscs-flow-diagram-for-fines-f-f-geq-50">
+<h2 class="block-title">USCS flow diagram for fines \(F_F \geq 50\%\)</h2>
+
+    
+    
+    <img loading="lazy" src="../../Consistency_and_classification/FiguresGeneral/finesflow.svg" style="width:70%" alt="USCS flow diagram classification for fines with fine content greater or equal to 50% obtained from the ASTM standard">
+
+</section>
+
+<section class="block" id="s15" data-anchor="uscs-flow-diagram-for-f-f-50">
+<h2 class="block-title">USCS flow diagram for \(F_F < 50\%\)</h2>
+
+  
+    <img loading="lazy" src="../../Consistency_and_classification/FiguresGeneral/coarseflow.svg" style="width:70%" alt="USCS flow diagram classification for coarse-grained materials with fine content less than 50% obtained from the ASTM standard">
+
+</section>
+
+<section class="block" id="s16" data-anchor="example-2-8">
+<h2 class="block-title">Example 2.8</h2>
+
+
+<div class='textBox' >
+Given the sieve analysis and plasticity data for the following three soils, classify each soil according to the USCS and provide a group name.
+</div>
+
+<table style="font-size: 0.8em">
+	<tr>
+		<th>Sieve Size</th>
+		<th>Opening (mm)</th>
+		<th>Soil 1 (% finer)</th>
+		<th>Soil 2 (% finer)</th>
+		<th>Soil 3 (% finer)</th>
+	</tr>
+	<tr>
+		<td>No. 4</td>
+		<td>4.75</td>
+		<td>99</td>
+		<td>97</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 10</td>
+		<td>2.00</td>
+		<td>92</td>
+		<td>90</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 40</td>
+		<td>0.425</td>
+		<td>86</td>
+		<td>40</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>No. 100</td>
+		<td>0.150</td>
+		<td>78</td>
+		<td>8</td>
+		<td>99</td>
+	</tr>
+	<tr>
+		<td>No. 200</td>
+		<td>0.075</td>
+		<td>60</td>
+		<td>5</td>
+		<td>97</td>
+	</tr>
+	<tr>
+		<td>\(LL\) (%)</td>
+		<td></td>
+		<td>20</td>
+		<td>-</td>
+		<td>124</td>
+	</tr>
+	<tr>
+		<td>\(PL\) (%)</td>
+		<td></td>
+		<td>15</td>
+		<td>-</td>
+		<td>47</td>
+	</tr>
+	<tr>
+		<td>\(PI\) (%)</td>
+		<td></td>
+		<td>5</td>
+		<td>NP</td>
+		<td>77</td>
+	</tr>
+</table>
+
+
+</section>
+
+<section class="block" id="s17" data-anchor="soil-1">
+<h2 class="block-title">Soil 1</h2>
+
+
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-2-8">
+
+  
+
+  <div class="step">
+    <span class="lead">Soil fractions</span>
+     \(G_F=100-P_{P,\#4}=\)
+    <span class="blank math" data-bid="Consistency_and_classification.bc2e5226-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Consistency_and_classification.ebce348d-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <br>
+    \(F_F=P_{P,\#200}=\)
+    <span class="blank" data-bid="Consistency_and_classification.88c2230d-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <br>
+    \(S_F=100-G_F-F_F=\)
+    <span class="blank math" data-bid="Consistency_and_classification.2c66260f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Consistency_and_classification.e2281bdd-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+  </div>
+
+  <div class="step">
+    <span class="lead">Coarse or fine?</span>
+    \(F_F=\) <span class="blank math" data-bid="Consistency_and_classification.4602a553-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> \( \implies\) the soil is
+    <span class="blank" data-bid="Consistency_and_classification.01ab4f9d-0" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">The important part is: For fine-grained soils, the plasticity chart determines the symbol.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Group symbol from the plasticity chart</span>
+     <span class="blank math" data-bid="Consistency_and_classification.c317c8bb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\)   <span class="blank" data-bid="Consistency_and_classification.fe01e865-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(4\leq PI\leq7\) puts it in the hatched band \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.4ddfbf01-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Group name</span>
+    Coarse material: \(G_F+S_F=\) <span class="blank math" data-bid="Consistency_and_classification.b8b3bb61-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math" data-bid="Consistency_and_classification.17d0655f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) <span class="blank" data-bid="Consistency_and_classification.e82f3998-0" style="min-width:34ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(S_F&gt;G_F\implies\) <span class="blank" data-bid="Consistency_and_classification.d66f3047-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>; and
+    \(G_F=1\ \%\ &lt;15\ \%\) \(\implies\) <span class="blank" data-bid="Consistency_and_classification.e62f4efd-0" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.21d23aed-0" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span> 
+  </div>
+
+  
+
+  <div class="step">
+    <span class="lead">Soil fractions</span>
+    \(G_F=100-P_{P,\#4}=\) <span class="blank math" data-bid="Consistency_and_classification.a1604f14-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.ebce348d-1" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %,&nbsp;
+    \(F_F=P_{P,\#200}=\) <span class="blank" data-bid="Consistency_and_classification.f2c4fb65-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <br>
+    \(S_F=100-G_F-F_F=\) <span class="blank math" data-bid="Consistency_and_classification.2c66260f-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.e2281bdd-1" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+  </div>
+
+  <div class="step">
+    <span class="lead">Coarse or fine, and which coarse?</span>
+    \(F_F=5 \%\) <span class="blank math" data-bid="Consistency_and_classification.481352d7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) the soil is
+    <span class="blank" data-bid="Consistency_and_classification.5c3da354-0" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(S_F=92\ \%\ &gt;G_F=3\ \%\ \implies\) first letter is <span class="blank ans" data-bid="Consistency_and_classification.36c77271-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+    <div class="step">
+    <span class="lead">Does it need a dual symbol?</span>
+    \(5\ \%\ \leq F_F=\) <span class="blank" data-bid="Consistency_and_classification.f18f544f-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\%\ \leq 12\ \%\ \implies\)
+    <span class="blank" data-bid="Consistency_and_classification.00b25eb4-0" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span>
+
+  </div>
+
+  <div class='container'>
+  <div class='col' style='--colw:35%'>
+    <div class="step">
+    <span class="lead">Particle sizes from the GSD</span>
+    <table class="sol-table">
+      <tr>
+        <th>\(x\) (% finer)</th><th>60</th><th>30</th><th>10</th>
+      </tr>
+      <tr>
+        <td class="lbl">\(D_x\) (mm)</td>
+        <td><span class="blank" data-bid="Consistency_and_classification.e47c6f40-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+        <td><span class="blank" data-bid="Consistency_and_classification.9f865c9c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+        <td><span class="blank" data-bid="Consistency_and_classification.0a7b3601-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  <div class='col' style='--colw:65%'>
+    <div class="step">
+    <span class="lead">Gradation coefficients</span>
+    \(C_u=\dfrac{D_{60}}{D_{10}}=\) <span class="blank math" data-bid="Consistency_and_classification.a19c710e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.b104d60b-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    \(C_c=\dfrac{D_{30}^{2}}{D_{10}\,D_{60}}=\)
+    <span class="blank math" data-bid="Consistency_and_classification.ff1e7480-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.d89a1d8a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    A well-graded sand needs \(C_u\geq6\) <strong>and</strong> \(1\leq C_c\leq3\); both fail
+    \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.d167608e-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="step">
+    <span class="lead">Fines letter, and the dual symbol</span>
+    The fines are non-plastic, so they classify as ML \(\implies\) fines letter is
+    <span class="blank" data-bid="Consistency_and_classification.6fc58e83-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.9b8b1428-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">Non-plastic fines are still fines, and they are silt</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Group name</span>
+    \(G_F=\) <span class="blank" data-bid="Consistency_and_classification.bfa4d363-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\%\ &lt;15\ \%\)
+    \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.d4489abb-0" style="min-width:37ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  
+
+  <div class="step">
+    <span class="lead">Soil fractions</span>
+    \(G_F=100-P_{P,\#4}=\) <span class="blank math" data-bid="Consistency_and_classification.a1604f14-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.ebce348d-2" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %,&nbsp;
+    \(F_F=P_{P,\#200}=\) <span class="blank" data-bid="Consistency_and_classification.f2c4fb65-1" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+    <br>
+    \(S_F=100-G_F-F_F=\) <span class="blank math" data-bid="Consistency_and_classification.2c66260f-2" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.e2281bdd-2" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> %
+  </div>
+
+  <div class="step">
+    <span class="lead">Coarse or fine?</span>
+    \(F_F=\) <span class="blank math" data-bid="Consistency_and_classification.4602a553-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) the soil is
+    <span class="blank" data-bid="Consistency_and_classification.9aac334f-0" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Group symbol from the plasticity chart</span>
+    <span class="blank math" data-bid="Consistency_and_classification.5c530134-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span> \( \implies\) <span class="blank" data-bid="Consistency_and_classification.214bb9cf-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span>    
+    <br>
+    A-line: \(PI_A=0.73(LL-20)=\)
+    <span class="blank math" data-bid="Consistency_and_classification.de0d555f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Consistency_and_classification.49d3c1fb-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+    <span class="blank math" data-bid="Consistency_and_classification.3c50fd4b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\)
+    <span class="blank ans" data-bid="Consistency_and_classification.55842844-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <br>
+
+    <span class="note"
+     ><strong>This
+    soil does not fit on the printed chart.</strong> The figure stops at \(LL=110\) and
+    \(PI=60\), so there is nowhere to plot \(LL=124\), \(PI=77\) and the A-line equation is
+    the only route. Take care with it: dropping the \(-20\) and writing \(0.73\times124\)
+    lands the point below the A-line and returns the wrong symbol, with nothing in the
+    arithmetic to warn you. The U-line is the companion check — no real soil plots above
+    it, so a point that does means the test, not the soil, is wrong.</span>
+  </div>
+  <div class="step">
+    <span class="lead">U-line check</span>
+    \(PI_U=0.9(LL-8)=0.9(124-8)=104\), and \(77&lt;104\), so these limits are
+    physically possible
+  </div>
+
+  <div class="step result">
+    <span class="lead">Group name</span>
+    Coarse material: \(G_F+S_F=\) <span class="blank math" data-bid="Consistency_and_classification.eb5a953b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consistency_and_classification.17d0655f-1" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\%\ &lt;15\ \%\), so no descriptor of any kind is added
+    <br>
+    \(\implies\) <span class="blank ans" data-bid="Consistency_and_classification.47860fc7-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+</div>
+
+</div>
+
+
+
+<img loading="lazy" src="figures/Modeule2_GSD_plot.svg" style="width:100%" alt=""/>
+
+</section>
+
+<section class="block" id="s18" data-anchor="soil-2">
+<h2 class="block-title">Soil 2</h2>
+
+
+<div class='ProblemBox' >
+
+</div>
+
+
+</section>
+
+<section class="block" id="s19" data-anchor="soil-3">
+<h2 class="block-title">Soil 3</h2>
+
+
+<div class='ProblemBox' >
+
+</div>
+
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
