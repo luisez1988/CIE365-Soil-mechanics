@@ -1,0 +1,1086 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>Mineralogy and structure</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE 342
+						Fall 2026| Notes modified from Course pack by Drs. Rahman, Montoya, Cabas, and Martinez
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+
+		<!-- <section>
+		<h1>Announcements</h1>
+		<ul>
+			<li>Quiz 2 next week: Monday Feb 23.</li>
+		</ul>
+		</section> -->
+				<!-- <section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
+
+			<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1vJETGYEPPp6wyCfSnGhiu1DQZM1XayAp/view?usp=sharing"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Soil Mineralogy and Structure">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Fall 2026</p>
+				<!-- <p style="color:#faffff; font-size:35px"> February 1, 2024</p> -->
+				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+			</div>
+
+
+		</section>
+
+		<section  >
+			<h1>Recap</h1>
+				<ul>
+				<li class="fragment"> 
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						We learned how to calculate the <strong style='color:#000'>Atterberg Limits</strong>
+					</div>
+					</li>
+				<li class="fragment"> 
+					We learned how to calculate the <strong style='color:#000'>Plasticity Index</strong> and the <strong style='color:#000'>Liquidity Index</strong> </li>
+				<li class="fragment"> 
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						We learned how to <strong style='color:#000'>classify soils</strong> according to the <strong style='color:#000'>USCS</strong>.
+					</div>
+					</li>	
+			</ul>
+		</section>
+
+		<section>
+		<figure>
+		<img src='FiguresGeneral/Course_structure.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		
+		</section>
+
+        <section >
+					<h1>Contents</h1>
+					<div class='container'>
+					<div class='col'>
+						<ul class="contentStyle" style="margin-top: 55px;">
+							<li class="l1">Clay mineralogy</li>
+							<li class="l1">Clay activity</li>
+							<li class="l1">Water-clay interaction</li>
+							<li class="l1">Soil fabric</li>
+							<li class="l1">Swelling potential</li>
+						</ul>	
+					</div>
+					<div class='col'>
+					<div class='container'>
+					<div class='col'>
+					<div class="stickynote" style="margin-top: 100px;margin-left: 75px; height: 300px;">
+						<p> Objectives covered in this lecture</p>
+						<ul>
+							<li>[O1]: Develop an understanding of soil phase relations, index properties, and their application to soil classification and compaction </li>
+						</ul>
+					</div>
+					</div>
+					<div class='col'>
+					<div class='stickynote' style='margin-top: 100px;margin-left: 50px; height: 300px;'>
+					<p style="margin-top: -20px;">After this lecture we will able to:</p>
+					<ul style="margin-top: -15px;">
+
+						<li>Describe the mineralogy of soils and its importance for soil behavior.</li>
+            			<li>Calculate the activity and specific surface of clays.</li>
+						<li>Estimate the swelling potential of soils.</li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+					
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+
+<section>
+<h1>Soil mineral sources</h1>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Igneous Rock Composition:
+<ul>
+	<li>60% Feldspars </li>
+	<li>17% Amphiboles</li>
+	<li>12% Quartz</li>
+	<li>4% Micas</li>
+	<li>6% Others</li>
+</ul>
+</div>
+</div>
+<div class='col' style='width: 50%;'>
+Sand Composition:
+
+<ul>
+	<li>95% Quartz </li>
+	<li>5% Mica and others</li>	
+</ul>	
+
+</div>
+</div>
+
+<div class='InquiryBox fragment' style='margin-top: 20px;margin-left: 0px;'>
+What happen to the other part of the rock mass?
+</div>
+
+<div class='textBox fragment' style='margin-top: 20px;margin-left: 0px;'>
+This is the portion of the rock that turns into <span class='atb'>clay minerals</span> trough <span class='atb'>chemical</span> weathering.
+</div>
+
+</section>
+
+<section>
+<h1>Clay Minerals</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<span class='atb'>Crystalline structure</span> (plate-like) that dictates clay particle behavior such as how sheets stack together, bonding, and metallic ions in crystal lattice.
+</div>
+
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<iframe src='molecules/tetrahedral_model.html' 
+			width='100%' 
+			height='400px' 
+			frameborder='0'
+			data-preload></iframe>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<iframe src='molecules/octahedral_model.html' 
+			width='100%' 
+			height='400px' 
+			frameborder='0'
+			data-preload></iframe>
+</div>
+</div>
+
+</section>
+
+<section>
+<figure>
+<img src='FiguresGeneral/Silica_sheet.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</section>
+
+
+<section>
+<figure>
+<img src='FiguresGeneral/Alumina_sheet.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Alumina and silica sheets are the <span class='atb'>building blocks</span> of clay particles
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<h2>1:1 clay minerals</h2>
+
+<strong style='color:#000'>Kaolinite:</strong>
+	<ul>
+		<li class='fragment'>1 silica sheet + 1 alumina sheet</li>
+<li class='fragment'><span class='atb'>hydrogen bonds</span> form between the hydroxils of the alumina sheet and the oxygen of the silica sheet</li>
+<li class='fragment'>Kaolinite results from <strong style='color:#000'>weathering</strong> (hydrolisis and acid leaching) of feldspar and mica in granite rocks</li>
+	</ul>
+</div>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/kaolinite.svg" style="width:100%"/>
+
+</div>
+</div>
+
+</section>
+
+<section>
+<h2>2:1 clay minerals</h2>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<strong style='color:#000;'>Smectites</strong>
+<ul>
+	<li class='fragment'>Most important and common member: <span class='atb'>montmorillonite</span></li>
+	<li class='fragment'>Small crystal with <strong style='color:#000'>high attraction to water</strong>:
+	<ul><li class='fragment'>High <span class='atb'>swelling potential</span></li>
+	<li class='fragment'>Can <strong style='color:red'>damage light structures</strong></li></ul>
+	</li>
+	<li class='fragment'>Form where silica is abundant, pH and electrolyte content are high, and where there are more Mg<sup>+2</sup> & Ca<sup>+2</sup> than Na<sup>+</sup> and K<sup>+</sup> </li>
+</ul>
+</div>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/smectites.svg" style="width:100%"/>
+</div>
+</div>
+
+</section>
+
+<section>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<strong style='color:#000'>Illite</strong>
+<ul>
+	<li class='fragment'>Most <strong style='color:#000'>commonly</strong> found clay mineral</li>
+	<li class='fragment'>2 silica shees, 1 alumina sheet</li>
+	<li class='fragment'><strong style='color:#000'>Ioninc bond</strong> between layers (K<sup>+</sup> ion)</li>
+	<li class='fragment'>Similar conditions as smectites required for formation, except K<sup>+</sup> must be present.</li>
+	<li class='fragment'>Potassium does not allow water to take its place \(\implies\) <span class='atb'>more stability</span></li>
+</ul>
+</div>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/Illite.svg" style="width:100%"/>
+</div>
+</div>
+
+</section>
+
+<section>
+<div class='container'>
+<div class='col' style='width: 33%;'>
+<span class='atb' style="margin-top: 50px;">Kaolinite clay</span>
+<figure>
+<img src='https://live.staticflickr.com/65535/49987099447_e2e64fe446_b.jpg' style='width: 100%; height: 300px; object-fit: cover;'/>
+<footer style='margin-top: px;font-size: 0.5em;'> <em>Credits: D. Nishio-Hamane</em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 34%;'>
+<span class='atb' style="margin-top: 50px;">Montmorillonite clay</span>
+<figure>
+<img src='https://structville.com/wp-content/uploads/2024/01/image-1.png' style='width: 100%; height: 300px; object-fit: cover;'/>
+<footer style='margin-top: px;font-size: 0.5em;'> <em>Credits: Ubani Obinna</em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 33%;'>
+<span class='atb' style="margin-top: 50px;">Illite clay</span>
+<figure>
+<img src='https://lh3.googleusercontent.com/proxy/NaiEoqZvMFm6gZyeX5XuuDbhTCiC6v9jiE1QxMsgfLzZ0X5gw4zL4P_M16UfQVBjfE_FzY8CYFj7J4eV-g3OiHUrMwI' style='width: 100%; height: 300px; object-fit: cover;'/>
+<footer style='margin-top: px;font-size: 0.5em;'> <em>OMNI Laboratories, Inc</em> </footer>
+</figure>
+</div>
+</div>
+
+<div class='findingBox' style='margin-top: 10px;margin-left: 0px;'>
+Since clay particles are very small, <strong style='color:#000'>Scanning Electron Microscopy (SEM)</strong> needs to be used to visualize them.
+</div>
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How can we asses the mineral content of a clay?
+</div>
+<p><ol>
+	<li class='fragment'>Plasticity chart</li>
+	<li class='fragment'>Calculate the <span class='atb'>Activity</span> of soils</li>
+</ol> </p>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure style="margin-top: -40px;" class="fragment">
+<img src='FiguresGeneral/plasticity_chart.jpg' width='100%'/>
+<footer style='margin-top: -40px;font-size: 0.5em;'> <em>Data from Mitchell & Soga (2005)</em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<ol style="margin-top: 30px;">
+	<li class='fragment'><strong style='color:#000'>Montmorillonites</strong> tend to plot just below the U-line</li>
+	<li class='fragment'><strong style='color:#000'>Illites</strong> tend to plot just above the A-line</li>
+	<li class='fragment'><strong style='color:#000'>Kaolinites</strong> tend to plot just below the A-line</li>
+</ol>
+</div>
+</div>
+</section>
+
+<section>
+<h1>Activity of clay minerals</h1>
+<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+Is the ratio of the plasticity index \(PI\) to the percentage of clay-sized particles (\(< 0.002\) mm) in a soil sample (\(C_F\)).
+<div class='equationBox'>
+\( A= PI/ C_F \)
+</div>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 60%;'>
+<ul style="margin-top: 5px;">
+	<li class='fragment'>Measures water <span class='atb'>holding capacity</span> in the soil, wihich depends of <strong style='color:#000'>amount of clay</strong> and <strong style='color:#000'>type of mineral</strong></li>
+	<li class='fragment'><strong style='color:#000'>Kaolinite</strong> absorbs <span class='atb'>less water</span> than <strong style='color:#000'>montmorillonite</strong> \(\implies\) Kaolinite is <span class='atb'>less active</span> than montmorillonite </li>
+
+</ul>
+</div>
+<div class='col' style='width: 40%;'>
+<table style="background-color: antiquewhite; margin-top: 5px;" class="fragment">
+	<tr>
+		<th>Activity</th>
+		<th>Activity classification</th>
+	</tr>
+	<tr>
+		<td>\(< 0.75\)</td>
+		<td>Inactive</td>
+	</tr>
+	<tr>
+		<td>0.75 - 1.25</td>
+		<td>Normal</td>
+	</tr>
+	<tr>
+		<td>\(> 1.25\)</td>
+		<td>Active</td>
+	</tr>
+</table>
+</div>
+</div>
+
+</section>
+
+<section>
+<h1>Participation question 2.7</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How does the activity of <strong style='color:orange'>Illite</strong> compares with the activity of <strong style='color:orange'>montmorillonite</strong>?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'>Illite's activity > Montmorillonite's activity</li>
+<li class='l2'>Illite's activity = Montmorillonite's activity</li>
+<li class='l2'>Illite's activity < Montmorillonite's activity</li>
+</ol>
+</section>
+
+<section>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Typical <strong style='color:#000'>activity</strong> levels of common clay minerals
+</div>
+<table style="font-size: 0.68em; width: 100%;">
+	<tr>
+		<th>Mineral</th>
+		<th>Activity</th>
+	</tr>
+	<tr>
+		<td>Na-Montmorillonite</td>
+		<td>4-7</td>
+	</tr>
+	<tr>
+		<td>Ca-Montmorillonite</td>
+		<td>1.5</td>
+	</tr>
+	<tr>
+		<td>Illite</td>
+		<td>0.5-1.3</td>
+	</tr>
+	<tr>
+		<td>Kaolinite</td>
+		<td>0.3-0.5</td>
+	</tr>
+	<tr>
+		<td>Dehydrated Halloysite</td>
+		<td>0.5</td>
+	</tr>
+	<tr>
+		<td>Hydrated Halloysite</td>
+		<td>0.1</td>
+	</tr>
+	<tr>
+		<td>Attapulgite</td>
+		<td>0.5-1.2</td>
+	</tr>
+	<tr>
+		<td>Allophane</td>
+		<td>0.5-1.2</td>
+	</tr>
+	<tr>
+		<td>Mica (Muscovite)</td>
+		<td>0.2</td>
+	</tr>
+	<tr>
+		<td>Calcite</td>
+		<td>0.2</td>
+	</tr>
+	<tr>
+		<td>Quartz</td>
+		<td>0</td>
+	</tr>
+
+</table>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+<strong style='color:#000'>Higher activity</strong> means <span class='atb'>high volume change</span> in soil. This means <span class='atb'>high compressibility</span> and <strong style='color:#000'>swelling</strong>.</div>
+
+<p style="margin-top: 40px;">Soil containing <span class='atb'>montmorillonite</span> exhibit high <span class='atb'>shrinkage and swelling</span> characteristics, which can cause significant damage to structures built on such soils.</p>
+
+</div>
+</div>
+
+</section>
+
+
+
+<section>
+<h1>Specific surface</h1>
+<div class='container'>
+<div class='col' style='width: 40%;'>
+<figure>
+<img src='FiguresGeneral/specific_surface.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 60%;'>
+<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+Ratio of the <strong style='color:#000'>area</strong> of a particle, to its <strong style='color:#000'>mass</strong>: <br>
+<div class='equationBox'>
+\( SSA= \cfrac{A}{V \rho} \)
+</div>
+</div>
+<h2>Example 2.9</h2>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+How much does the specific surface of a cubic particle of side \(L\) changes when its side is reduced by half?
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-9.html'></div>
+</div>
+
+<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+The <strong style='color:green'>smaller</strong> the particle size, the <span class='atb'>higher</span> the specific surface.
+</div>
+
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How does <strong style='color:orange'>specific surface</strong> influence the <strong style='color:orange'>water content</strong> in the soil?
+</div>
+
+<ul style="margin-top: 50px;">
+	<li class='fragment'>
+		Larger <strong style='color:#000'>water contents</strong> are expected for <strong style='color:#000'>fine-grained</strong> soils than for <strong style='color:#000'>coarse-grained</strong> soils, all other things such as void ratio and soil structure being equal.
+	</li>
+	<li class='fragment'>Specific surface is important in <strong style='color:#000'>concrete and asphalt mix design</strong> so you can ensure your are providing sufficient cement paste or asphalt to coat the particles. </li>
+	<li class='fragment'>Finer particles offer <strong style='color:#000'>more surface for physical and chemical interactions</strong>.</li>
+</ul>
+
+</section>
+
+
+
+
+<section>
+<h1>Water-clay particle interaction</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+<span class='atb'>Unbalanced force fields</span> at the surface of clay, water polarity, and dissolved ions create <span class='atb'>electrical double layers</span> around clay particles.
+</div>
+
+<div class='container'>
+<div class='col' style='width: 40%;'>
+<div class='defBox' name='Adsorbed water' style='margin-top: 50px;margin-left: 0px;'>
+Water that is <strong style='color:#000'>tightly bound</strong> to the surface of clay particles due to <span class='atb'>electrostatic attraction</span>.
+</div>
+</div>
+<div class='col' style='width: 60%;'>
+<figure>
+<img src='FiguresGeneral/tigh-water.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+Why do water molecules <strong style='color:orange'>adsorb</strong> to the clay?
+</div>
+<ol style="margin-top: 50px;">
+	<li class='fragment'>The <strong style='color:red'>negative charge</strong> of clay particles attracts the <strong style='color:blue'>positive end</strong> of water molecules. This is because water is <span class='atb'>dipolar</span></li>
+
+	<li class='fragment'>Water is held to the clay surface by <span class='atb'>hydrogen bonding</span>. This is a <strong style='color:#000'>very strong bond</strong>. </li>
+</ol>
+
+<div class='findingBox fragment' style='margin-top: 50px;margin-left: 0px;'>
+Adsorbed water is a <span class='atb'>molecular component</span> of the clay particle. This water <strong style='color:red'>can not</strong> removed by <span class='atb'>oven-drying</span>.
+</div>
+</section>
+
+
+<section>
+<h1>The diffuse double layer</h1>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Is a <strong style='color:#000'>structure</strong> formed around negatively charged clay particles where <span class='atb'>mobile</span> ions in the surrounding soil solution are attracted tot he surface, <strong style='color:#000'>balancing the negative charge</strong>.
+</div>
+
+<div class='findingBox' style='margin-top: 10px;margin-left: 0px;'>
+Note: <strong style='color:#000'>Adsorbed water</strong> is a component of the <strong style='color:#000'>diffuse double layer</strong>. 
+</div>
+</div>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/diffuse_double_layer.svg" style="width:95%; margin-top: -10px;"/>
+</div>
+</div>
+
+
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How does <strong style='color:orange'>water</strong> affects the <strong style='color:orange'>macroscopic</strong> behavior of clay?
+</div>
+
+<ul style="margin-top: 50px;">
+	<li class='fragment'> Adsorbed water increases the <strong style='color:#000'>effective</strong> volume of clay particles, leading to <span class='atb'>swelling or expansion</span>.</li>
+
+	<li class='fragment'>Kaolinite has less potential to absorb water than montmorillonite, as a result it exhibits less swelling. <strong style='color:#000'>Montmorillonite are</strong>  <span class='atb'>expansive soils</span>.</li>
+
+	<li class='fragment'>
+		The charge of clay particles and the thickness of the diffuse double layer influence the <span class='atb'>inter-particle forces</span>, affecting the <span class='atb'>structural organization</span> of clay particles.
+	</li>
+</ul>
+
+</section>
+
+<section>
+<h1>Soil fabric</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Refers to the <span class='atb'>structural arrangement</span> of soil particles and pores, including their orientation, distribution, and connectivity. For clay particles, fabric is influenced by mineralogy, water content, and inter-particle forces.
+</div>
+
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<span class='atb'>Flocculated structure</span>
+<figure>
+<img src='FiguresGeneral/flocculated.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<span class='atb'>Dispersed structure</span>
+<figure>
+<img src='FiguresGeneral/dispersse.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</div>
+</div>
+
+
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Additional notes on the influence of clay fabric on soil behavior
+</div>
+
+<table width="100%" style="margin-top: 0px; background-color: antiquewhite;">
+	<colgroup>
+		<col style="width: 33.33%;">
+		<col style="width: 33.33%;">
+		<col style="width: 33.33%;">
+	</colgroup>
+	<tr>
+		<th>Structure</th>
+		<th>Flocculated</th>
+		<th>Dispersed</th>
+	</tr>
+	<tr>
+		<th>Concept</th>
+		<td><span class='atb'>Flocs, groups</span></td>
+		<td><span class='atb'>Continuous</span></td>
+	</tr>
+	<tr>
+		<th>Orientation</th>
+		<td>Edge to face</td>
+		<td>Parallel</td>
+	</tr>
+	<tr>
+		<th>Permeability</th>
+		<td><span class='atb'>Higher</span></td>
+		<td><span class='atb'>Lower</span></td>
+	</tr>
+	<tr>
+		<th>Shear strength</th>
+		<td><span class='atb'>Higher</span></td>
+		<td><span class='atb'>Lower</span></td>
+	</tr>
+	<tr>
+		<th>Sketch </th>
+		<td>
+			<img src="FiguresGeneral/flocculated_sketch.svg" style="width:100%"/>
+		</td>
+		<td>
+<img src="FiguresGeneral/dispersed_sketch.svg" style="width:100%"/>
+		</td>
+	</tr>
+</table>
+
+</section>
+
+<section>
+<h1>Measuring the swelling potential of soils</h1>
+	<div class='container'>
+	<div class='col' style="width: 45%; margin-top: -25px;">
+	<img src="./FiguresGeneral/consol_cell.svg" width="80%">
+	</div>
+	<div class='col' style="width: 55%;">
+
+	<div class='textBox' style='margin-top: 30px;margin-left: 0px;'>
+		Swelling can be measured as a potential for <span class='atb'>volume expansion</span> or as the <strong style='color:#000'>stress</strong> required to <span class='atb'>prevent the expansion</span>.
+	</div>	
+	
+	</div>
+	</div>
+
+	<div class='defBox fragment' name='Swelling potential:' style='margin-top: 0px;margin-left: 0px;'>
+	Is the capacity of the soil to <strong style='color:green'>swell freely</strong>. Is the ratio of the change of volume of the soil over its initial value before water is added. <br>
+<div class='equationBox'>
+\( S_P= \cfrac{\Delta V}{V_0} \times 100 \)
+</div>
+	</div>
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Swelling potential is <strong style='color:#000'>strongly correlated</strong> to activity
+</div>
+	<figure style="margin-top:-20px;">
+		<img src="FiguresGeneral/correlations.svg" style="width:80%" data-preload/>
+		<footer style="margin-top:-620px;"><small>Modified from Holtz et al. (2013) after Seed et al. (1962)</small></footer>
+	</figure>
+</section>
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+When is expansion/swelling <strong style='color:orange'>problematic</strong>?
+</div>
+
+<ul style="margin-top: 50px;">
+	<li>Sites with thick layers of expansive soils, where soil replacement or improvement is costly. </li>
+
+	<li>Sites with fluctuating moisture conditions, leading to repeated swelling and shrinkage cycles. </li>
+
+	<li>Under light-weight structure/infrastructure such as pavements or 1-2 story buildings. </li>	
+
+	<li>For brittle or rigid structures that cannot accommodate soil movement. </li>
+</ul>
+
+</section>
+
+<section>
+<h1>Example 2.10</h1>
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The plot below shows the full grain size distribution of a soil with \(PL=12\%\) and \(LL=43\%\). Estimate: (a) the clay fraction of the soil, (b) the activity of the soil, (c) the swelling potential of the soil, and (d) asses the likely mineral content in this soil.
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/EX211.svg" style="width:100%"/>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-10.html' data-part='1'></div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-10.html' data-part='2'></div>
+</div>
+
+</section>
+
+
+<section>
+<h1>Example 2.11</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The plot below shows the full grain size distribution of a soil with \(PI=20\%\) and \(LL=59\%\). Estimate: (a) the clay fraction of the soil, (b) the activity of the soil, (c) the swelling potential of the soil, and (d) asses the likely mineral content of this soil.
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral/EX212.svg" style="width:100%"/>
+</div>
+<div class='col' style='width: 50%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-11.html' data-part='1'></div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-2-11.html' data-part='2'></div>
+</div>
+
+</section>
+
+<section>
+<h1>Participation question 2.8</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the <strong style='color:orange'>dominant mineral</strong> of the soil in Example 2.11?
+</div>
+
+<ol class='iClicker'  style="margin-top: 50px;">
+<li class='l2'>Kaolinite</li>
+<li class='l2'>Illite</li>
+<li class='l2'>Montmorillonite</li>
+</ol>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 230px;margin-left: 0px;'>
+Watch the Youtube video in the Qr-code for a fun demonstration of soil expansion. 
+</div>
+</div>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/Qr.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+</section>
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but every figure here is an
+     <object>, so External_svg.js does all the real work. It also threw a
+     TypeError on load and on every hashchange (it looks up <section> ids that
+     do not exist in this deck). -->
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<script src="../assets/solution-plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealSolution,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+</html>
