@@ -38,6 +38,12 @@
       "title": "",
       "skip_titles": [],
       "skip_indices": []
+    },
+    {
+      "dir": "Site_investigation",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": []
     }
   ]
 }
