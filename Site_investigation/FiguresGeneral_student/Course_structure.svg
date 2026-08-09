@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4in"
+   height="2.0555205in"
+   viewBox="0 0 101.6 52.210222"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="Course_structure.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.2609848"
+     inkscape:cx="129.14726"
+     inkscape:cy="28.085107"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2870"
+     inkscape:window-y="6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker32"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path32" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker28"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path28" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-0.47604478)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect18"
+       width="19.132978"
+       height="4.8856382"
+       x="41.345093"
+       y="19.328077"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <rect
+       style="fill:#ff8080;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect12"
+       width="19.132978"
+       height="4.8856382"
+       x="1.1428483"
+       y="3.4322565"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:25.7095;display:inline;fill:#f9f9f9;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="14.385101"
+       y="5.7586617"
+       id="text1"
+       transform="translate(-3.7160076,-0.28981351)"><tspan
+         x="14.385101"
+         y="5.7586617"
+         id="tspan2"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan1">Soil Formation and</tspan><tspan
+   y="5.7586617"
+   id="tspan4"> </tspan></tspan><tspan
+         x="14.385101"
+         y="7.6914641"
+         id="tspan8"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan7">Deposition</tspan></tspan></text>
+    <rect
+       style="fill:#ff8080;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect13"
+       width="19.132978"
+       height="4.8856382"
+       x="41.345093"
+       y="3.4322565"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:19.4111;display:inline;fill:#ffffff;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="45.53891"
+       y="5.7586617"
+       id="text2"
+       transform="translate(5.3652878,-0.30273276)"><tspan
+         x="45.53891"
+         y="5.7586617"
+         id="tspan11"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan10">Engineering</tspan><tspan
+   y="5.7586617"
+   id="tspan13"> </tspan></tspan><tspan
+         x="45.53891"
+         y="7.6914641"
+         id="tspan15"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan14">Description of Soil</tspan></tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect14"
+       width="19.132978"
+       height="4.8856382"
+       x="81.54734"
+       y="3.4322565"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="82.712517"
+       y="6.4099293"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="82.712517"
+         y="6.4099293"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#ffffff;stroke:none;stroke-width:0.15">Field Investigation</tspan></text>
+    <rect
+       style="fill:#ff8080;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect16"
+       width="19.132978"
+       height="4.8856382"
+       x="21.243971"
+       y="11.510544"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:18.2075;display:inline;fill:#ffffff;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="26.698757"
+       y="12.309417"
+       id="text4"
+       transform="translate(4.0716365,1.4351223)"><tspan
+         x="26.698757"
+         y="12.309417"
+         id="tspan17"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan16">Soil Mineralogy</tspan><tspan
+   y="12.309417"
+   id="tspan18"> </tspan></tspan><tspan
+         x="26.698757"
+         y="14.242219"
+         id="tspan20"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan19">and Structure</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;fill:#ff0000;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="0.4768118"
+       y="1.9912001"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         x="0.4768118"
+         y="1.9912001"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ff0000;stroke:none;stroke-width:0.15">Engineering Properties</tspan></text>
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       d="M 0.6308078,2.3550532 23.329654,2.3696808"
+       id="path5" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:0.30000001,0.60000003;stroke-dashoffset:0"
+       d="M 0,17.294026 H 101.6"
+       id="path6" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;fill:#ff0000;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="0.4768118"
+       y="19.370192"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         x="0.4768118"
+         y="19.370192"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ff0000;stroke:none;stroke-width:0.15">Soil Mechanics</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       d="M 0.6308078,19.748674 H 15.460231"
+       id="path7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:19.0368;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="43.614059"
+       y="21.364668"
+       id="text7"
+       transform="translate(7.2215463)"><tspan
+         x="43.614059"
+         y="21.364668"
+         id="tspan22"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan21">Effective Stress</tspan><tspan
+   y="21.364668"
+   id="tspan23"> </tspan></tspan><tspan
+         x="43.614059"
+         y="23.29747"
+         id="tspan25"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan24">Principle</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect19"
+       width="19.132978"
+       height="4.8856382"
+       x="1.1428483"
+       y="27.145611"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:17.5203;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="11.590698"
+       y="27.736151"
+       id="text8"
+       transform="translate(-0.98276846,1.4336495)"><tspan
+         x="11.590698"
+         y="27.736151"
+         id="tspan27"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan26">Flow of water</tspan><tspan
+   y="27.736151"
+   id="tspan28"> </tspan></tspan><tspan
+         x="11.590698"
+         y="29.668953"
+         id="tspan30"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan29">through Soil</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect20"
+       width="19.132978"
+       height="4.8856382"
+       x="41.345093"
+       y="27.145611"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="41.790596"
+       y="30.136202"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         x="41.790596"
+         y="30.136202"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#808080;stroke:none;stroke-width:0.15">Soil Compressibility</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect21"
+       width="19.132978"
+       height="4.8856382"
+       x="81.54734"
+       y="27.145611"
+       rx="0.92790866"
+       ry="1.0232801" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:15.574;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="75.099167"
+       y="27.736151"
+       id="text10"
+       transform="translate(15.974613,1.6434559)"><tspan
+         x="75.099167"
+         y="27.736151"
+         id="tspan32"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan31">Shear Strength</tspan><tspan
+   y="27.736151"
+   id="tspan33"> </tspan></tspan><tspan
+         x="75.099167"
+         y="29.668953"
+         id="tspan35"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan34">of Soils</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect23"
+       width="19.132978"
+       height="6.1682096"
+       x="41.345093"
+       y="35.027218"
+       rx="0.92790866"
+       ry="0.898866" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:21.4247;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="49.930458"
+       y="34.852352"
+       id="text11"
+       transform="translate(0.90720661,1.8863397)"><tspan
+         x="49.930458"
+         y="34.852352"
+         id="tspan37"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan36">Construction</tspan><tspan
+   y="34.852352"
+   id="tspan38"> </tspan></tspan><tspan
+         x="49.930458"
+         y="36.785156"
+         id="tspan40"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan39">Procedures and</tspan><tspan
+   y="36.785156"
+   id="tspan41"> </tspan></tspan><tspan
+         x="49.930458"
+         y="38.71796"
+         id="tspan43"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan42">Compaction</tspan></tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:0.30000001,0.60000003;stroke-dashoffset:0"
+       d="M 0,41.763584 H 101.6"
+       id="path11" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;fill:#ff0000;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="0.4768118"
+       y="44.127422"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="0.4768118"
+         y="44.127422"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ff0000;stroke:none;stroke-width:0.15">Application of Principles</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       d="m 0.6308078,44.505903 24.1777452,0.04137"
+       id="path12"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.149999;stroke-miterlimit:4.1"
+       id="rect24"
+       width="19.132978"
+       height="6.8184385"
+       x="21.189716"
+       y="45.792828"
+       rx="0.92790866"
+       ry="0.7454378" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:19.3358;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="11.590698"
+       y="27.736151"
+       id="text24"
+       transform="translate(19.064099,20.080865)"><tspan
+         x="11.590698"
+         y="27.736151"
+         id="tspan45"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan44">Bearing Capacity</tspan><tspan
+   y="27.736151"
+   id="tspan46"> </tspan></tspan><tspan
+         x="11.590698"
+         y="29.668953"
+         id="tspan48"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan47">and Foundation</tspan><tspan
+   y="29.668953"
+   id="tspan49"> </tspan></tspan><tspan
+         x="11.590698"
+         y="31.601755"
+         id="tspan51"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan50">Design</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1"
+       id="rect25"
+       width="19.132978"
+       height="6.4700513"
+       x="63.012115"
+       y="45.967022"
+       rx="0.92790866"
+       ry="0.71883589" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:0.9;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';font-variant-ligatures:none;text-align:center;letter-spacing:-0.015875px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:15.574;display:inline;fill:#808080;stroke:none;stroke-width:0.15;stroke-miterlimit:4.1"
+       x="75.099167"
+       y="27.736151"
+       id="text25"
+       transform="translate(-2.596783,20.067946)"><tspan
+         x="75.099167"
+         y="27.736151"
+         id="tspan53"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan52">Earth Pressure</tspan><tspan
+   y="27.736151"
+   id="tspan54"> </tspan></tspan><tspan
+         x="75.099167"
+         y="29.668953"
+         id="tspan56"><tspan
+   style="font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan55">and Retaining</tspan><tspan
+   y="29.668953"
+   id="tspan57"> </tspan></tspan><tspan
+         x="75.099167"
+         y="31.601755"
+         id="tspan59"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial"
+           id="tspan58">Wall Design</tspan></tspan></text>
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#ArrowWide)"
+       d="m 20.275827,5.8750756 7.423576,5.6354674"
+       id="path25" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#ArrowWide)"
+       d="M 41.224745,5.8750756 33.801169,11.510543"
+       id="path26" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#marker28)"
+       d="M 60.478074,5.8750753 H 81.547337"
+       id="path27" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#marker28)"
+       d="m 40.376948,13.953362 c 21.949396,0 21.137983,-6.0340765 41.09539,-6.6921013"
+       id="path29"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#marker28)"
+       d="M 91.113828,8.3178949 V 27.145611"
+       id="path30" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;marker-end:url(#marker32)"
+       d="m 40.45195,14.75264 c 6.710336,0 7.924887,0.67758 7.924887,4.575437"
+       id="path31"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 25.832447,16.471182 c 0,5.299714 -10.67443,4.723929 -10.67443,10.674429"
+       id="path33"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 41.345093,21.770896 c -10.621573,0 -7.658274,7.817536 -21.069267,7.817536"
+       id="path34"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 50.911582,24.213714 v 2.931897"
+       id="path35" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 50.911582,32.03125 v 2.995967"
+       id="path36" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 60.478071,21.770896 c 12.777248,0.04465 10.606418,7.817536 21.069266,7.817536"
+       id="path37"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 20.275826,29.588432 c 12.052985,0.243979 12.167575,8.52289 21.069267,8.52289"
+       id="path38"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker32)"
+       d="m 81.547337,29.588432 c -13.376187,0 -8.968732,8.52289 -21.069266,8.52289"
+       id="path39"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.45;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Triangle)"
+       d="M 31.361702,39.328102 V 43.23459"
+       id="path40" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.45;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Triangle)"
+       d="M 73.255319,39.328102 V 43.23459"
+       id="path41" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffff00;stroke:#000000;stroke-width:0.723883;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path42"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="-7.9436679"
+       sodipodi:cy="-16.486996"
+       sodipodi:r1="3.7608385"
+       sodipodi:r2="1.4502065"
+       sodipodi:arg1="0.94813177"
+       sodipodi:arg2="1.5709719"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -5.7503404,-13.431964 -2.1935821,-1.604825 -2.2274785,1.579829 0.8484261,-2.582139 -2.1908351,-1.630264 2.7179381,0.009 0.8734676,-2.587387 0.8313524,2.587686 2.7306676,0.03117 -2.2041339,1.590302 z"
+       inkscape:transform-center-x="-0.06316037"
+       inkscape:transform-center-y="-0.12562876"
+       transform="matrix(0.62164862,0,0,0.62164862,86.548276,18.344975)" />
+  </g>
+</svg>
