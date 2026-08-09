@@ -1,0 +1,64 @@
+<!-- Example 2.11 (renumbered from 2.12) — clay fraction, activity, swelling potential
+     and mineralogy of an inactive clay.  PI = 20 %, LL = 59 %.
+     Deliberately the mirror of Example 2.10: same four questions, opposite soil.
+     Two parts, matching the deck's two slides:
+       part 1 = statement slide, questions (a) and (b), beside FiguresGeneral/EX212.svg
+       part 2 = the two-column slide, questions (c) and (d), one figure per column
+     Step numbering runs 1-5 continuously; the plugin carries the counter across parts.
+     One step fewer than Example 2.10 because PI is given, not PL.
+     C_F is read off EX212.svg, whose construction line sits ON the curve at d = 0.002 mm.
+     Legacy figure: none — EX212.svg is the STATEMENT figure and stays. -->
+<div class="sol" data-id="ex-2-11">
+
+  <!-- ============ part 1 — (a) clay fraction, (b) activity ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">(a) Clay fraction, off the GSD</span>
+    Clay-size boundary: \(d=\) <span class="fill">0.002</span> \(\unit{mm}\); 
+    Percent finer there: \(C_F=\) <span class="ans">49</span> \(\%\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">(b) Activity</span>
+    \(PI=20\ \%\) is <em>given</em>, so no subtraction is needed:
+    <br>
+    \(A=\dfrac{PI}{C_F}=\) <span class="fill">\(\dfrac{20}{49}\)</span> \(=\)
+    <span class="ans">0.41</span>
+    <br>
+    \(0.41&lt;0.75\ \implies\) the soil is <span class="fill">inactive</span>
+    <span class="note"
+      data-slide="\(PI\) is <strong>given</strong> here "></span>
+  </div>
+
+  <!-- ==== part 2 — (c) swelling potential, (d) mineral: one column each ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col bordered">
+
+      <figure class="sol-fig">
+        <img src="FiguresGeneral/correlations.svg" alt="Seed et al. (1962) swelling potential chart">        
+      </figure>
+
+      <div class="step result">
+        <span class="lead">(c) Swelling potential</span>
+        Enter the chart at \(C_F=49\ \%\), \(A=0.41\) \(\implies\)
+        <span class="ans">Medium</span>
+      </div>
+
+    </div>
+    <div class="sol-col bordered">
+
+      <figure class="sol-fig">
+        <img src="FiguresGeneral/plasticity_chart.jpg" alt="Plasticity chart with mineral fields">
+      </figure>
+
+      <div class="step result">
+        <span class="lead">Using Mitchell & Soga (2005)</span>
+        With \(PI=20\) and \(LL=59\), the point sits <span class="fill">below</span> the A-line
+        <br>
+        Below the A-line \(\implies\) <span class="ans">kaolinite</span>
+      </div>
+    </div>
+  </div>
+
+</div>

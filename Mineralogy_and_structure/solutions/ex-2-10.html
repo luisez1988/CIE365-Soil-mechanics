@@ -1,0 +1,62 @@
+<!-- Example 2.10 (renumbered from 2.11) — clay fraction, activity, swelling potential
+     and mineralogy from a GSD.  PL = 12 %, LL = 43 %.
+     Two parts, matching the deck's two slides:
+       part 1 = statement slide, questions (a) and (b), beside FiguresGeneral/EX211.svg
+       part 2 = the two-column slide, questions (c) and (d), one figure per column
+     Step numbering runs 1-6 continuously; the plugin carries the counter across parts.
+     C_F is read off EX211.svg, whose own construction line is drawn at d = 0.002 mm
+     and 20 % finer.  Legacy figure: none — EX211.svg is the STATEMENT figure and stays. -->
+<div class="sol" data-id="ex-2-10">
+
+  <!-- ============ part 1 — (a) clay fraction, (b) activity ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">(a) Clay fraction, off the GSD</span>
+    Clay-size boundary: \(d=\) <span class="fill">0.002</span> \(\unit{mm}\); 
+    Percent finer there: \(C_F=\) <span class="ans">20</span> \(\%\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Plasticity index</span>
+    \(PI=LL-PL=\) <span class="fill">\(43-12\)</span> \(=\)
+    <span class="fill">31</span> \(\%\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">(b) Activity</span>
+    \(A=\dfrac{PI}{C_F}=\) <span class="fill">\(\dfrac{31}{20}\)</span> \(=\)
+    <span class="ans">1.55</span>
+    <br>
+    Search in activity table:\(1.55&gt;1.25\ \implies\) soil is <span class="fill">active</span>
+  </div>
+
+  <!-- ==== part 2 — (c) swelling potential, (d) mineral: one column each ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col bordered">
+
+      <figure class="sol-fig" style="margin-top: 0px;margin-left: 0px;">
+        <img src="FiguresGeneral/correlations.svg" alt="Seed et al. (1962) swelling potential chart">
+      </figure>
+      <div class="step result">cc
+        <span class="lead">(c) Swelling potential</span>
+        Enter the chart at \(C_F=20\ \%\), \(A=1.55\) \(\implies\)
+        <span class="ans">Medium</span>
+      </div>
+
+    </div>
+    <div class="sol-col bordered">
+
+      <figure class="sol-fig" style="margin-top: 0px;margin-left: 0px;">
+        <img src="FiguresGeneral/plasticity_chart.jpg" alt="Plasticity chart with mineral fields">
+      </figure>
+
+      <div class="step result">
+        <span class="lead">Using Mitchel and Soga (2005)</span>
+        (d) With \(PI=31\) and \(LL=43\), the point sits in the <span class="ans">montmorillonite</span> field
+      </div>
+
+    </div>
+  </div>
+
+</div>
