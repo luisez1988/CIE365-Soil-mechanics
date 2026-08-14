@@ -75,6 +75,19 @@
     return Object.keys(byId).map(function (k) { return byId[k]; });
   }
 
+  /* Mobile Safari/Chrome bug: a `position: sticky` element that was
+     `display:none` while the page was scrolled past its normal spot does not
+     always reposition itself when it becomes visible again -- it renders
+     wherever it would sit in normal flow (off-screen, above the fold) until
+     the next scroll event forces a recompute. That is what made the toolbar
+     and draw palette seem to "vanish" until scrolling back up. A same-frame
+     1px scroll nudge forces the recompute without a visible jump. */
+  function nudgeSticky() {
+    var y = window.scrollY;
+    window.scrollTo(0, y + 1);
+    window.scrollTo(0, y);
+  }
+
   function download(filename, obj) {
     var blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
     var a = document.createElement('a');
@@ -913,6 +926,7 @@
         bar.hidden = !on;
         btn.setAttribute('aria-pressed', String(on));
         if (on) alignBar();
+        if (on) nudgeSticky();
         if (on) {
           // preventDefault blocks NEW focus, but a blank that already has focus
           // would keep taking keystrokes
@@ -1018,7 +1032,11 @@
       apply(stored ? stored === 'collapsed' : window.innerWidth < 700, false);
 
       btn.addEventListener('click', function () {
-        apply(!toolbar.classList.contains('collapsed'), true);
+        var collapsed = toolbar.classList.contains('collapsed');
+        apply(!collapsed, true);
+        // only a real un-collapse (mid-scroll tap) needs the sticky nudge --
+        // skip it on the initial apply() above, which never toggled display
+        if (collapsed) nudgeSticky();
       });
     })();
 
