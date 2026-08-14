@@ -363,18 +363,24 @@ def convert_blanks(article: str, deck: str):
 # SVG sanitizing (Animation figures: DELETE answer strokes, never comment them)
 # ---------------------------------------------------------------------------
 
-# Both step channels are stripped. In the decks `.fragment` was meant for the
-# problem setup and `.Animate` for the worked answer, but the convention was not
-# applied consistently -- EX4140.svg carries its entire solution in `.fragment`
-# groups and has no `.Animate` at all. Since the two cannot be told apart
-# reliably, everything that is revealed step-by-step is treated as answer work.
+# Only the `.Animate`/`.AnimateGroup` channel is stripped: in the decks that
+# marks the worked answer, drawn in over the static figure step by step.
+# `.fragment` marks the problem setup being built up progressively and is kept
+# -- the book is a static page, so those groups should simply render as part
+# of the final figure rather than disappear.
 #
-# Consequence: for a handwritten figure that is *entirely* built up in steps,
-# nothing drawable survives. build_chapter drops those figures and names them,
-# rather than shipping a blank image -- converting the example to
+# Consequence: for a handwritten figure whose answer was authored entirely
+# under `.fragment` instead of `.Animate` (inconsistent in older decks --
+# EX4140.svg is one), that answer now survives sanitizing and is visible in
+# the book. Re-tag such figures' answer strokes as `.Animate`/`.AnimateGroup`
+# in the source deck if they should stay hidden.
+#
+# Consequence: for a handwritten figure that is *entirely* built up under
+# `.Animate`, nothing drawable survives. build_chapter drops those figures and
+# names them, rather than shipping a blank image -- converting the example to
 # solutions/*.html is the real fix.
 ANIM_EL = re.compile(
-    r'<(\w[\w\-\.]*)\b[^>]*class=["\'][^"\']*\b(?:Animate(?:Group)?|fragment)\b[^"\']*["\']'
+    r'<(\w[\w\-\.]*)\b[^>]*class=["\'][^"\']*\bAnimate(?:Group)?\b[^"\']*["\']'
     r'[^>]*?(/?)>',
     re.DOTALL)
 
@@ -613,9 +619,10 @@ def validate_chapter(page: str, answers, deck: str, out_dir: Path):
 
     for svg in (out_dir / 'figures').glob('*.svg'):
         text = svg.read_text(encoding='utf-8', errors='replace')
-        for token in ('Animate', 'fragment'):
-            if re.search(r'class=["\'][^"\']*\b%s' % token, text):
-                problems.append('unsanitized %s element in %s' % (token, svg.name))
+        # `.fragment` groups are intentionally kept (see ANIM_EL) -- only a
+        # residual `.Animate`/`.AnimateGroup` means sanitizing missed something.
+        if re.search(r'class=["\'][^"\']*\bAnimate', text):
+            problems.append('unsanitized Animate element in %s' % svg.name)
 
     plain = visible_text(page).lower()
     leaks = sorted({a.lower() for a in answers if len(a) > 3 and a.lower() in plain})
