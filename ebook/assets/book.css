@@ -284,7 +284,7 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1.2rem 3rem; }
 
 .col {
   flex: 1 1 calc(var(--colw, 50%) - 1.2rem);
-  min-width: min(100%, 280px);
+  min-width: min(100%, 180px);
 }
 
 .col.bordered {
@@ -789,6 +789,11 @@ body.draw-mode.finger-draw .block { touch-action: none; }
   .book-header { background: none; color: var(--ink); padding: 0 0 0.5rem; }
   .book-header .course-tag { color: #555; }
   body { background: #fff; font-size: 11pt; }
+  /* printable page width (and its margins) is usually narrower than the
+     on-screen 920px reading column, so the 180px-per-column floor used
+     on screen can still force an image row to wrap; drop the floor so
+     columns fall back to pure percentage widths and never overflow */
+  .col { min-width: 0; }
   .block { break-inside: auto; }
   .block-title { break-after: avoid; }
   figure, .defBox, .equationBox, .InquiryBox, .findingBox, .stickynote { break-inside: avoid; }
