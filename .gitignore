@@ -10,3 +10,6 @@ tmp/**
 node_modules/
 .sass-cache
 dist/*.map
+
+# Spotify client secret + refresh token written by spotify_setup.py -- never commit
+.spotify_auth.json

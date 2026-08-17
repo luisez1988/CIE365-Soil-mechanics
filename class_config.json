@@ -1,0 +1,13 @@
+{
+  "_comment": "Settings for start_class.bat / start_class.ps1. Safe to commit -- no secrets live here (those go in .spotify_auth.json, which is gitignored). Any value can be overridden on the command line, e.g. start_class.bat -Deck 1D_flow -BellTime 14:05",
+  "_playlist_help": "Either a Spotify URI (spotify:playlist:ID) or a pasted share link (https://open.spotify.com/playlist/ID?si=...) works -- the script normalizes it.",
+
+  "playlist_uri": "https://open.spotify.com/playlist/2VV5iiwckUpL7u8ND4fVMu?si=b311516b57c042f6",
+  "bell_time": "08:30",
+  "port": 8000,
+  "music_volume": 45,
+  "fade_seconds": 8,
+  "shuffle": true,
+  "default_deck": "Introduction",
+  "bell_sound": "assets/sounds/bell.mp3"
+}
