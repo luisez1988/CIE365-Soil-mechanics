@@ -7,7 +7,12 @@
  *
  * The Sheet must contain two tabs:
  *   "Questions": Timestamp | Chapter | StudentID | Name | Question | Answer | Hide
- *   "Roster":    StudentID | Name        (column A formatted as Plain text)
+ *   "Roster":    StudentID | Name | Questions asked  (column A formatted as Plain text)
+ *
+ * Column C of Roster is a running per-student total, incremented on every
+ * question a student submits (regardless of chapter). Because it lives on
+ * Roster rather than Questions, it survives clearing or replacing the
+ * Questions tab between modules.
  *
  * Privacy: the public endpoints below return ONLY question text, answer text,
  * and date. Student IDs and names are written to the Sheet but are never
@@ -80,8 +85,9 @@ function doPost(e) {
     if (!question) return json_({ ok: false, error: 'empty_question' });
     if (question.length > MAX_QUESTION) return json_({ ok: false, error: 'question_too_long' });
 
-    var name = lookupRoster_(id);
-    if (name === null) return json_({ ok: false, error: 'unknown_id' });
+    var roster = lookupRoster_(id);
+    if (roster === null) return json_({ ok: false, error: 'unknown_id' });
+    var name = roster.name;
 
     // Per-student cooldown.
     var cache = CacheService.getScriptCache();
@@ -95,6 +101,9 @@ function doPost(e) {
       var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_QUESTIONS);
       if (!sheet) return json_({ ok: false, error: 'server_error' });
       sheet.appendRow([new Date(), chapter, id, name, question, '', false]);
+      // best-effort: a failure here should not make the client think the
+      // question itself (already appended above) was lost
+      try { bumpRosterCount_(roster.row); } catch (bumpErr) { /* ignore */ }
     } finally {
       lock.releaseLock();
     }
@@ -108,7 +117,17 @@ function doPost(e) {
 
 /* ------------------------------------------------------------------ */
 
-/** Returns the roster name for a student ID, or null if not registered. */
+/** Increments a student's running question count in Roster column C. `row`
+ *  is the 1-based sheet row, as returned by lookupRoster_. */
+function bumpRosterCount_(row) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_ROSTER);
+  if (!sheet) return;
+  var cell = sheet.getRange(row, 3);
+  cell.setValue((Number(cell.getValue()) || 0) + 1);
+}
+
+/** Returns { name, row } for a student ID (row is 1-based, for
+ *  bumpRosterCount_), or null if not registered. */
 function lookupRoster_(id) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_ROSTER);
   if (!sheet) return null;
@@ -117,11 +136,12 @@ function lookupRoster_(id) {
   for (var i = 1; i < rows.length; i++) {
     var cell = String(rows[i][0]).replace(/\s+/g, '');
     if (!cell) continue;
-    if (cell === id) return String(rows[i][1] || '').trim();
     // Fallback for Sheets coercing a numeric ID column: compare without
     // leading zeros when both sides are purely numeric.
-    if (idNoZeros !== null && /^\d+$/.test(cell) && cell.replace(/^0+/, '') === idNoZeros) {
-      return String(rows[i][1] || '').trim();
+    var match = cell === id ||
+      (idNoZeros !== null && /^\d+$/.test(cell) && cell.replace(/^0+/, '') === idNoZeros);
+    if (match) {
+      return { name: String(rows[i][1] || '').trim(), row: i + 1 };
     }
   }
   return null;

@@ -18,9 +18,9 @@ about 15 minutes. You only do this once.
 3. Select column **G**, then **Insert → Checkbox** (so hiding a question is one click).
 4. Add a second tab (＋ at bottom left) named exactly **`Roster`** with headers:
 
-   | A | B |
-   |---|---|
-   | StudentID | Name |
+   | A | B | C |
+   |---|---|---|
+   | StudentID | Name | Questions asked |
 
 5. Select column **A** of Roster → **Format → Number → Plain text** (prevents Sheets
    from mangling IDs), then paste your class roster below the headers.
@@ -28,6 +28,11 @@ about 15 minutes. You only do this once.
 
 **Keep this Sheet private** (don't share it). The web app never reveals names or IDs;
 they exist only in this Sheet.
+
+Column **C** (`Questions asked`) is a running per-student total, incremented by the
+script every time that student submits a question (across all chapters). Because it
+lives on Roster rather than Questions, it survives clearing or replacing the
+Questions tab between modules — leave it at 0 for new students, the script fills it in.
 
 ## 2. Add the script
 
@@ -82,6 +87,8 @@ they exist only in this Sheet.
 - **Hide a question**: check the box in column **G** (works even if answered).
 - **See who asked**: columns C–D — visible only to you, never published.
 - Unanswered questions are never shown to students.
+- **See how many questions a student has asked (all-time, all chapters)**: Roster
+  column **C**.
 
 ## If you edit Code.gs later (important gotcha)
 
