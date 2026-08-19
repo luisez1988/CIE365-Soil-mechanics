@@ -14,6 +14,7 @@
      solution: {
        sound:           true,   // chalk while typing (solution fragments only)
        charsPerSecond:  30,     // typing speed — the one dial
+       mathSpeed:       0.4,    // math runs at this fraction of that speed
        soundSrc:        'plugin/complete_box/chalk-on-chalkboard-32542.mp3'
      }
 
@@ -27,9 +28,16 @@ window.RevealSolution = function () {
      values fill in afterwards. */
   var ROLES = '.step, .fill, .ans, .note';
 
+  /* mathSpeed: a symbol is not a letter. Prose carries several characters per
+     idea, so 30 chars/s reads as a comfortable hand; an expression carries one
+     idea per glyph, so the same rate flashes past and — coming straight after a
+     sentence — reads as the animation accelerating. Typing math at a fraction
+     of the prose rate keeps the *ideas* per second roughly constant, which is
+     what the eye actually calibrates on. */
   var DEFAULTS = {
     sound: true,
     charsPerSecond: 30,
+    mathSpeed: 0.4,
     soundSrc: 'plugin/complete_box/chalk-on-chalkboard-32542.mp3'
   };
 
@@ -160,12 +168,18 @@ window.RevealSolution = function () {
      bar), so those elements are the characters. mjx-assistive-mml is skipped —
      it is a hidden duplicate of the whole expression for screen readers, and
      walking into it would type every symbol twice.
+
+     Every atom below a MathJax element is marked `data-math`, so the typewriter
+     can charge it more time than a letter (see DEFAULTS.mathSpeed). The flag is
+     inherited on the way down rather than tested per atom, because the text
+     inside <mjx-utext> is math too even though the node is a plain text node.
      ------------------------------------------------------------------------ */
 
   var SKIP_TAGS = /^(MJX-ASSISTIVE-MML|SCRIPT|STYLE)$/;
   var GLYPH_TAGS = /^(MJX-C|MJX-LINE|IMG|BR)$/;
+  var MATH_TAGS = /^MJX-/;
 
-  function collectAtoms(node, out) {
+  function collectAtoms(node, out, inMath) {
     Array.prototype.slice.call(node.childNodes).forEach(function (n) {
       if (n.nodeType === 3) {                                   // text node
         var txt = n.nodeValue;
@@ -177,6 +191,7 @@ window.RevealSolution = function () {
           s.textContent = txt[i];
           // spaces cost no time, so words are not padded out by their gaps
           if (!/\S/.test(txt[i])) s.setAttribute('data-free', '');
+          else if (inMath) s.setAttribute('data-math', '');
           frag.appendChild(s);
           out.push(s);
         }
@@ -191,12 +206,14 @@ window.RevealSolution = function () {
          at its own click. Descending into them would make the step type its own
          answers in along with the scaffolding. */
       if (n.classList && n.classList.contains('writing')) return;
+      var math = inMath || MATH_TAGS.test(tag);
       if (GLYPH_TAGS.test(tag)) {
         n.classList.add('sol-atom', 'pending');
+        if (math) n.setAttribute('data-math', '');
         out.push(n);
         return;
       }
-      collectAtoms(n, out);
+      collectAtoms(n, out, math);
     });
   }
 
@@ -217,10 +234,16 @@ window.RevealSolution = function () {
       if (el.__atoms) return;                     // already built
       var atoms = [];
       collectAtoms(el, atoms);
+      /* Cost is measured in character-equivalents, not characters: a math glyph
+         is charged 1/mathSpeed of them, which is what slows the expression down
+         without touching the one speed dial. __chars is the line's total in
+         those units, so its duration is still __chars / charsPerSecond. */
+      var mathCost = 1 / (cfg.mathSpeed || 1);
       var cost = [];
       var total = 0;
       atoms.forEach(function (a) {
-        if (!(a.hasAttribute && a.hasAttribute('data-free'))) total++;
+        var free = a.hasAttribute && a.hasAttribute('data-free');
+        if (!free) total += (a.hasAttribute && a.hasAttribute('data-math')) ? mathCost : 1;
         cost.push(total);
       });
       el.__atoms = atoms;
@@ -234,6 +257,7 @@ window.RevealSolution = function () {
     if (el.__raf) { window.cancelAnimationFrame(el.__raf); el.__raf = 0; }
     (el.__atoms || []).forEach(function (a) { a.classList.remove('pending'); });
     dropPencil(el);
+    typingEnded(el);
   }
 
   /* The pencil sits at the character being written, so it tracks the text
@@ -290,9 +314,11 @@ window.RevealSolution = function () {
       } else {
         el.__raf = 0;
         dropPencil(el);
+        typingEnded(el);
         onDone();
       }
     }
+    typingStarted(el);
     el.__raf = window.requestAnimationFrame(frame);
   }
 
@@ -329,19 +355,45 @@ window.RevealSolution = function () {
      The clip is loaded from the deck's own plugin folder rather than a CDN, so
      a lecture with no internet still has sound. Advancing a fragment is a user
      gesture, so autoplay policy is satisfied; the catch is for the cases where
-     it is not (e.g. fragment restored from the URL hash on load). */
-  function playChalk(ms) {
-    if (!chalk || restoring || instant || ms <= 0) return;
+     it is not (e.g. fragment restored from the URL hash on load).
+
+     The clip is a few seconds long and a step can take longer than that, so it
+     loops; what ends it is the writing, not the length of the recording. `typing`
+     is the set of elements with a frame loop running — grouped data-step lines
+     type together, and the chalk has to outlast the slowest of them, so the
+     sound stops when that set empties rather than when any one line finishes. */
+  var typing = [];
+
+  function startChalk() {
+    if (!chalk || restoring || instant) return;
+    if (!chalk.paused) return;          // already scratching for this step
     try {
+      chalk.loop = true;
       chalk.currentTime = 0;
       var p = chalk.play();
       if (p && p.catch) p.catch(function () {});
     } catch (e) { /* no sound is never worth breaking a lecture over */ }
-    window.clearTimeout(chalk.__stop);
-    chalk.__stop = window.setTimeout(function () {
+  }
+
+  function stopChalk() {
+    if (!chalk || chalk.paused) return;
+    try {
       chalk.pause();
       chalk.currentTime = 0;
-    }, ms);
+    } catch (e) { /* ditto */ }
+  }
+
+  function typingStarted(el) {
+    if (typing.indexOf(el) === -1) typing.push(el);
+    startChalk();
+  }
+
+  /* Called from showAll too, so a line cut short by `retire` releases the sound
+     exactly like one that ran to the end. */
+  function typingEnded(el) {
+    var i = typing.indexOf(el);
+    if (i !== -1) typing.splice(i, 1);
+    if (!typing.length) stopChalk();
   }
 
   function slideKey(deck) {
@@ -365,10 +417,6 @@ window.RevealSolution = function () {
         deck.getCurrentSlide().querySelectorAll('.writing'), function (el) {
           if (el.__raf && mine.indexOf(el) === -1) retire(el);
         });
-
-      var chars = 0;
-      mine.forEach(function (el) { chars = Math.max(chars, el.__chars || 0); });
-      playChalk((chars / cfg.charsPerSecond) * 1000);
 
       mine.forEach(function (el) {
         typeIn(el, deck, function () { retire(el); });
@@ -399,6 +447,7 @@ window.RevealSolution = function () {
       cfg = {
         sound: user.sound !== undefined ? user.sound : DEFAULTS.sound,
         charsPerSecond: user.charsPerSecond || DEFAULTS.charsPerSecond,
+        mathSpeed: user.mathSpeed || DEFAULTS.mathSpeed,
         soundSrc: user.soundSrc || DEFAULTS.soundSrc
       };
 
