@@ -1091,6 +1091,22 @@
         }
       }
 
+      /* MathJax is loaded async, so the feed can land before it is ready.
+         Wait for its startup promise rather than silently skipping typeset. */
+      function typesetQA(node) {
+        var tries = 0;
+        (function attempt() {
+          var mj = window.MathJax;
+          if (mj && mj.startup && mj.startup.promise) {
+            mj.startup.promise
+              .then(function () { return mj.typesetPromise([node]); })
+              .catch(function () {});
+            return;
+          }
+          if (++tries < 100) setTimeout(attempt, 100);
+        })();
+      }
+
       /* feed */
       fetch(endpoint + '?chapter=' + encodeURIComponent(chapter))
         .then(function (r) { return r.text(); })
@@ -1122,9 +1138,7 @@
             wrap.appendChild(d);
             qaList.appendChild(wrap);
           });
-          if (window.MathJax && MathJax.typesetPromise) {
-            MathJax.typesetPromise([qaList]).catch(function () {});
-          }
+          typesetQA(qaList);
         })
         .catch(function () {
           qaStatus.textContent = 'The Q&A feed is unavailable right now.';

@@ -13,8 +13,9 @@
 <script>
 window.MathJax = {
   tex: {
-    inlineMath: [['\\(', '\\)']],
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
     macros: window.SOL_MACROS
   },
   options: {
