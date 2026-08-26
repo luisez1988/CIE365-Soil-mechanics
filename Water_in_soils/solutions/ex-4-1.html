@@ -1,0 +1,50 @@
+<!-- Example 4.1 — total and effective vertical stress at a point.
+     Legacy figure: FiguresGeneral/EX440.svg. Profile geometry read from FiguresGeneral/dexample_stress.svg. -->
+<div class="sol" data-id="ex-4-1">
+
+  <div class="step">
+    <span class="lead">Total vertical stress at A</span>
+    \(\sigma_{v,A}= \sum_{i=1}^{3} \gamma_{i}h_{i}=\)
+    <span class="fill">\(\underbrace{115(10)+120(10)+135(3.5)}_{\text{Total vertical stress}}\)</span>
+    \(=\) <span class="ans">2822.5</span> \(\unit{psf}\)
+    <span class="note">CL sits above the water table, so it uses \(\gamma_t\), not \(\gamma_{sat}\).</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Depth of A below the water table</span>
+    \(h_w=z_A-z_{GWT}=\)
+    <span class="fill">\(23.5-10\)</span>
+    \(=\) <span class="fill">13.5</span> \(\unit{ft}\)
+    <span class="note">Measured from the water table, not from the ground surface.</span>
+  </div>
+
+
+
+  <div class="step">
+    <span class="lead">Pore pressure at A</span>
+    \(u_A=h_w\gw=\)
+    <span class="fill">\(13.5\times62.4\)</span>
+    \(=\) <span class="fill">842.4</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A}=\sigma_{v,A}-u_A=\)
+    <span class="fill">\(2822.5-842.4\)</span>
+    \(=\) <span class="ans">1980.1</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Profile for the plot</span>
+    <table class="sol-table">
+      <tr><th>\(z\) (ft)</th><th>\(\sigma_v\) (psf)</th><th>\(u\) (psf)</th><th>\(\sigma'_v\) (psf)</th></tr>
+      <tr><td class="lbl">0</td><td class="fill">0.0</td><td class="fill">0.0</td><td class="fill">0.0</td></tr>
+      <tr><td class="lbl">10</td><td class="fill">1150.0</td><td class="fill">0.0</td><td class="fill">1150.0</td></tr>
+      <tr><td class="lbl">20</td><td class="fill">2350.0</td><td class="fill">624.0</td><td class="fill">1726.0</td></tr>
+      <tr><td class="lbl">23.5 (A)</td><td class="ans">2822.5</td><td class="fill">842.4</td><td class="ans">1980.1</td></tr>
+      <tr><td class="lbl">30</td><td class="fill">3700.0</td><td class="fill">1248.0</td><td class="fill">2452.0</td></tr>
+    </table>
+    <span class="note">Plot the three columns against \(z\): straight segments, a kink at every layer boundary.</span>
+  </div>
+
+</div>

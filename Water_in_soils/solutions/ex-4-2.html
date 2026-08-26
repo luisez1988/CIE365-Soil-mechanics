@@ -1,0 +1,51 @@
+<!-- Example 4.2 — total and effective horizontal stress at a point.
+     Legacy figure: FiguresGeneral/EX450.svg. Profile geometry read from FiguresGeneral/horizontal_example.svg.
+     Reuses sigma'_v,A and u_A from Example 4.1 (same soil profile and point A). -->
+<div class="sol" data-id="ex-4-2">
+
+  <div class="step">
+    <span class="lead">Layer containing point A</span>
+    \(z_A=23.5\unit{ft}\) falls inside the SM layer (\(20\)&ndash;\(30\unit{ft}\)), so
+    \(K_0=\) <span class="fill">0.60</span> applies at A.
+    <span class="note">\(K_0\) is layer-specific &mdash; use the layer that A sits in, not the top layer.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Effective vertical stress at A, from Example 4.1</span>
+    \(\sigma'_{v,A}=\) <span class="fill">1980.1</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Effective horizontal stress at A</span>
+    \(\sigma'_{h,A}=K_0\,\sigma'_{v,A}=\)
+    <span class="fill">\(0.60\times1980.1\)</span>
+    \(=\) <span class="ans">1188.1</span> \(\unit{psf}\)
+    <span class="note">\(K_0\) multiplies the effective vertical stress, never the total.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Pore pressure at A, from Example 4.1</span>
+    \(u_A=\) <span class="fill">842.4</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Total horizontal stress at A</span>
+    \(\sigma_{h,A}=\sigma'_{h,A}+u_A=\)
+    <span class="fill">\(1188.1+842.4\)</span>
+    \(=\) <span class="ans">2030.5</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Profile for the plot</span>
+    <table class="sol-table">
+      <tr><th>\(z\) (ft)</th><th>\(K_0\)</th><th>\(\sigma'_v\) (psf)</th><th>\(\sigma'_h\) (psf)</th><th>\(u\) (psf)</th><th>\(\sigma_h\) (psf)</th></tr>
+      <tr><td class="lbl">0</td><td class="lbl">0.50</td><td class="fill">0.0</td><td class="fill">0.0</td><td class="fill">0.0</td><td class="fill">0.0</td></tr>
+      <tr><td class="lbl">10</td><td class="lbl">0.50</td><td class="fill">1150.0</td><td class="fill">575.0</td><td class="fill">0.0</td><td class="fill">575.0</td></tr>
+      <tr><td class="lbl">20</td><td class="lbl">0.40</td><td class="fill">1726.0</td><td class="fill">690.4</td><td class="fill">624.0</td><td class="fill">1314.4</td></tr>
+      <tr><td class="lbl">23.5 (A)</td><td class="lbl">0.60</td><td class="fill">1980.1</td><td class="ans">1188.1</td><td class="fill">842.4</td><td class="ans">2030.5</td></tr>
+      <tr><td class="lbl">30</td><td class="lbl">0.60</td><td class="fill">2452.0</td><td class="fill">1471.2</td><td class="fill">1248.0</td><td class="fill">2719.2</td></tr>
+    </table>
+    <span class="note">Each layer uses its own \(K_0\) on \(\sigma'_v\) &mdash; the kink repeats \(\sigma_v\)'s pattern.</span>
+  </div>
+
+</div>

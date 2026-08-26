@@ -41,6 +41,8 @@ Units belong inside the maths: `$45.4\ \mathrm{cm^2}$`. Symbols in prose are sti
 
 **Fill in every heading** in the template below. Write "None" rather than deleting a section.
 
+**Avoid AI writing styles** Do not use parenthical dashing (e.g., Sentence 1 - Aside not- conclusion sentence 1). Avoid words and euphemisms typically used by AI such as "critically" or "This is not just X, it is Y", or "this is where X lives". You can read a junior level geotechnical book to benchmark your language use. 
+
 ---
 
 ## Procedure for Phase 1
@@ -53,7 +55,7 @@ Check what the statement depends on:
 
 - **Self-contained** — all data in the text or an HTML table. Proceed.
 - **Cross-referenced** — "for the soil in Example 2.7". Find that example first, in whichever deck it lives, and record where you got the values.
-- **Figure-dependent** — "in the figure below". The geometry lives *only* inside the handwritten SVG and cannot be read from path data. **Stop and ask** for the dimensions, or render the SVG to PNG and read them off. Do not guess elevations or datums.
+- **Figure-dependent** — "in the figure below". The geometry lives *only* inside the handwritten SVG and cannot be read from path data. If the user provides the pdf of the slides, you can get the figure from that file. **Stop and ask** for the dimensions, or render the SVG to PNG and read them off. Do not guess elevations or datums.
 
 ### 2. Solve it and verify the numbers
 

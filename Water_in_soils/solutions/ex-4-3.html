@@ -1,0 +1,73 @@
+<!-- Example 4.3 — effect of a water table change on effective vertical stress.
+     Legacy figure: FiguresGeneral/EX460.svg. Reuses the Example 4.1 soil profile and point A. -->
+<div class="sol" data-id="ex-4-3">
+
+  <div class="note"
+    data-slide="Assumed \(\gamma_t\approx\gamma_{sat}\) near the GWT (capillary rise), so \(\sigma_{v,A}\) stays fixed &mdash; check before reusing elsewhere.">
+  Holding \(\sigma_{v,A}\) fixed while the water table moves assumes
+  \(\gamma_t\approx\gamma_{sat}\) for the soil right above the table, reasonable because
+  capillary rise keeps it nearly saturated even without submergence. That is not automatic:
+  capillary rise only reaches so far above the table, a coarse sand may stay wet for a few
+  inches while a fine silt or clay can stay wet for several feet. If the drop in the water
+  table is large next to that height, the soil really does dry out, \(\gamma_t\) falls below
+  \(\gamma_{sat}\), and this shortcut should be replaced with a real drained unit weight.
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">New water table depth &mdash; lowered 3 ft</span>
+    \(h_{w,1}=z_A-(z_{GWT}+3)=\)
+    <span class="fill">\(23.5-(10+3)\)</span>
+    \(=\) <span class="fill">10.5</span> \(\unit{ft}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Pore pressure at A</span>
+    \(u_{A,1}=h_{w,1}\gw=\)
+    <span class="fill">\(10.5\times62.4\)</span>
+    \(=\) <span class="fill">655.2</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result" data-part="1">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A,1}=\sigma_{v,A}-u_{A,1}=\)
+    <span class="fill">\(2822.5-655.2\)</span>
+    \(=\) <span class="ans">2167.3</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Effect</span>
+    \(\Delta\sigma'_v=2167.3-1980.1=+187.2\unit{psf}\), an
+    <span class="ans">increase</span>: equivalent to <span class="ans">loading</span> the
+    soil at A, so it will <span class="ans">settle</span>.
+    <span class="note">A falling water table always raises \(\sigma'_v\) &mdash; the sign is known before computing.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">New water table depth &mdash; at the surface</span>
+    \(h_{w,2}=z_A-0=\)
+    <span class="fill">23.5</span> \(\unit{ft}\)
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Pore pressure at A</span>
+    \(u_{A,2}=h_{w,2}\gw=\)
+    <span class="fill">\(23.5\times62.4\)</span>
+    \(=\) <span class="fill">1466.4</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A,2}=\sigma_{v,A}-u_{A,2}=\)
+    <span class="fill">\(2822.5-1466.4\)</span>
+    \(=\) <span class="ans">1356.1</span> \(\unit{psf}\)
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Effect</span>
+    \(\Delta\sigma'_v=1356.1-1980.1=-624.0\unit{psf}\), a
+    <span class="ans">decrease</span>: equivalent to <span class="ans">unloading</span> the
+    soil at A, so it will <span class="ans">heave</span>.
+    <span class="note">A rising water table always lowers \(\sigma'_v\) &mdash; the opposite sign from case 1.</span>
+  </div>
+
+</div>
