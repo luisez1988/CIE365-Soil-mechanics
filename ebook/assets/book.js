@@ -88,6 +88,229 @@
     window.scrollTo(0, y);
   }
 
+  /* MathJax is loaded async, so a caller can land before it is ready. Wait for
+     its startup promise rather than silently skipping typeset. Module-level
+     because both the Q&A feed and the symbol-bar preview need it -- it used to
+     live inside initQA, which returns early when Q&A is switched off. */
+  function typesetMath(node) {
+    return new Promise(function (resolve) {
+      var tries = 0;
+      (function attempt() {
+        var mj = window.MathJax;
+        if (mj && mj.startup && mj.startup.promise) {
+          resolve(mj.startup.promise.then(function () {
+            return mj.typesetPromise([node]);
+          }));
+          return;
+        }
+        if (++tries < 100) { setTimeout(attempt, 100); } else { resolve(); }
+      })();
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Friendly math -> TeX, for the symbol bar's preview ONLY.            */
+  /*                                                                     */
+  /* What a student types stays exactly as typed: blanks are plaintext   */
+  /* and MathJax is told to skip them (ignoreHtmlClass:'blank'). This    */
+  /* converts a COPY into TeX so the preview can show what it means.     */
+  /* Nothing here is ever written back into a blank.                     */
+  /* ------------------------------------------------------------------ */
+
+  var TEX_UNI = {
+    'α': '\\alpha', 'β': '\\beta', 'γ': '\\gamma', 'δ': '\\delta',
+    'ε': '\\epsilon', 'ζ': '\\zeta', 'η': '\\eta', 'θ': '\\theta',
+    'λ': '\\lambda', 'μ': '\\mu', 'µ': '\\mu', 'ν': '\\nu', 'ξ': '\\xi',
+    'π': '\\pi', 'ρ': '\\rho', 'σ': '\\sigma', 'τ': '\\tau', 'φ': '\\phi',
+    'χ': '\\chi', 'ψ': '\\psi', 'ω': '\\omega',
+    'Δ': '\\Delta', 'Γ': '\\Gamma', 'Σ': '\\Sigma', 'Ω': '\\Omega',
+    'Φ': '\\Phi', 'Θ': '\\Theta', 'Λ': '\\Lambda',
+    '×': '\\times', '·': '\\cdot', '÷': '\\div', '≈': '\\approx',
+    '≤': '\\le', '≥': '\\ge', '±': '\\pm', '≠': '\\neq', '∞': '\\infty',
+    '°': '^\\circ', '′': "'", '√': '\\surd'
+  };
+
+  var TEX_WORDS = [
+    'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
+    'lambda', 'mu', 'nu', 'xi', 'pi', 'rho', 'sigma', 'tau', 'phi', 'chi',
+    'psi', 'omega',
+    'Delta', 'Gamma', 'Sigma', 'Omega', 'Phi', 'Theta', 'Lambda',
+    'sinh', 'cosh', 'tanh', 'sin', 'cos', 'tan', 'log', 'ln', 'exp',
+    'max', 'min'
+  ];
+
+  /* Multi-character units only. A bare "m" is a variable at least as often as
+     it is a metre, so single-letter units are never detected. */
+  var TEX_UNITS = ['kN/m^3', 'kN/m3', 'g/cm^3', 'kg/m^3', 'cm/s^2', 'cm/s',
+                   'm/s', 'kPa', 'MPa', 'kN', 'mm'];
+
+  var SUP_CHARS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+  var SUB_CHARS = '₀₁₂₃₄₅₆₇₈₉';
+
+  function reEscape(s) { return s.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&'); }
+
+  /* One combined left-to-right pass over Unicode symbols AND ASCII words.
+     It must be a single pass: replacing them in sequence would let a later
+     rule re-match an earlier rule's output (`\mu` -> `\\mu`, since `\` counts
+     as a word boundary). String.replace never rescans what it just wrote. */
+  var TOKEN_RE = (function () {
+    var parts = Object.keys(TEX_UNI).map(reEscape);
+    parts = parts.concat(TEX_WORDS.slice().sort(function (a, b) {
+      return b.length - a.length;             // "sinh" must beat "sin"
+    }).map(function (w) { return '\\b' + w + '\\b'; }));
+    return new RegExp(parts.join('|'), 'g');
+  })();
+
+  function texToken(m) {
+    return Object.prototype.hasOwnProperty.call(TEX_UNI, m) ? TEX_UNI[m] : '\\' + m;
+  }
+
+  /* Index of the ')' matching the '(' at i, or -1. */
+  function matchParen(s, i) {
+    var depth = 0;
+    for (var j = i; j < s.length; j++) {
+      if (s.charAt(j) === '(') depth++;
+      else if (s.charAt(j) === ')') { depth--; if (!depth) return j; }
+    }
+    return -1;
+  }
+
+  function sqrtify(s) {
+    var k = s.indexOf('sqrt(');
+    if (k < 0) return s;
+    var end = matchParen(s, k + 4);
+    if (end < 0) return s;
+    return s.slice(0, k) + '\\sqrt{' + sqrtify(s.slice(k + 5, end)) + '}' +
+           sqrtify(s.slice(end + 1));
+  }
+
+  /* Only an explicit (...)/(...) becomes a fraction. A general a/b rule would
+     wreck "kN/m^3" and silently turn "1/2*3" into 1/(2*3). The a/b key on the
+     palette inserts the parentheses, which teaches the convention in one tap. */
+  function fracify(s) {
+    for (var i = 0; i < s.length; i++) {
+      if (s.charAt(i) !== '(') continue;
+      var a = matchParen(s, i);
+      if (a < 0) return s;
+      if (s.charAt(a + 1) !== '/' || s.charAt(a + 2) !== '(') { i = a; continue; }
+      var b = matchParen(s, a + 2);
+      if (b < 0) return s;
+      return s.slice(0, i) +
+             '\\frac{' + fracify(s.slice(i + 1, a)) + '}' +
+             '{' + fracify(s.slice(a + 3, b)) + '}' +
+             fracify(s.slice(b + 1));
+    }
+    return s;
+  }
+
+  function balanced(s, open, close) {
+    var d = 0;
+    for (var i = 0; i < s.length; i++) {
+      if (s.charAt(i) === open) d++;
+      else if (s.charAt(i) === close) { if (--d < 0) return false; }
+    }
+    return d === 0;
+  }
+
+  function texAllowed(s) {
+    var allow = {};
+    TEX_WORDS.concat(['frac', 'sqrt', 'surd', 'cdot', 'times', 'div', 'approx',
+      'le', 'ge', 'pm', 'neq', 'infty', 'circ', 'mathrm', 'text',
+      'left', 'right']).forEach(function (w) { allow[w] = true; });
+    Object.keys(window.SOL_MACROS || {}).forEach(function (w) { allow[w] = true; });
+    var m, re = /\\([A-Za-z]+)/g;
+    while ((m = re.exec(s))) { if (!allow[m[1]]) return false; }
+    return true;
+  }
+
+  /* True when there is something worth rendering. A bare number or a one-word
+     answer gets no preview -- an empty bar row is quieter than a pointless one. */
+  function isMathy(src) {
+    return /[_^*\\√]/.test(src) ||
+           /[Ͱ-Ͽ°±µ×÷′≈≤≥≠∞]/.test(src) ||
+           new RegExp('[' + SUP_CHARS + SUB_CHARS + ']').test(src) ||
+           /\b(sqrt|sin|cos|tan|log|ln|exp)\b/.test(src) ||
+           /\)\s*\/\s*\(/.test(src) ||            // the explicit (a)/(b) fraction
+           /\d\s*\/\s*[(\d]/.test(src);
+  }
+
+  /* Returns TeX, or null meaning "show nothing". Never throws, and never
+     returns something that would make MathJax draw a red error box. */
+  function friendlyTeX(src) {
+    var s = (src || '').trim();
+    if (!s || /^[\d.,\s%+-]*$/.test(s)) return null;   // plain number: no preview
+    if (!isMathy(s)) return null;
+
+    if (s.indexOf('\\') >= 0) {
+      // Already LaTeX -- a student who knows it keeps working, macros included.
+      s = s.replace(/^\\\(([\s\S]*)\\\)$/, '$1')
+           .replace(/^\$\$?([\s\S]*?)\$\$?$/, '$1').trim();
+    } else {
+      // Unicode scripts pasted from a PDF: collapse runs so D₆₀ is one group.
+      s = s.replace(new RegExp('[' + SUB_CHARS + ']+', 'g'), function (run) {
+        return '_{' + run.replace(/./g, function (c) { return String(SUB_CHARS.indexOf(c)); }) + '}';
+      }).replace(new RegExp('[' + SUP_CHARS + ']+', 'g'), function (run) {
+        return '^{' + run.replace(/./g, function (c) { return String(SUP_CHARS.indexOf(c)); }) + '}';
+      });
+
+      s = s.replace(TOKEN_RE, texToken);
+      s = sqrtify(s);
+      s = fracify(s);
+
+      TEX_UNITS.forEach(function (u) {
+        s = s.replace(new RegExp('(^|[\\d}\\s])' + reEscape(u) + '\\b', 'g'),
+                      '$1\\,\\mathrm{' + u + '}');
+      });
+
+      // Multi-character scripts need braces; single characters do not.
+      s = s.replace(/_([+-][A-Za-z0-9.]+|[A-Za-z0-9.]{2,})/g, '_{$1}')
+           .replace(/\^([+-][A-Za-z0-9.]+|[A-Za-z0-9.]{2,})/g, '^{$1}');
+
+      s = s.replace(/\*/g, '\\cdot ').replace(/(^|[^\\])%/g, '$1\\%');
+    }
+
+    if (!balanced(s, '{', '}') || !balanced(s, '(', ')')) return null;
+    if (/\\$/.test(s)) return null;
+    if (!texAllowed(s)) return null;
+    return s;
+  }
+
+  /* Insert at the caret of a contenteditable host, optionally backing the caret
+     up `back` characters so a key like "sqrt()" lands you inside the brackets. */
+  function insertAtCaret(host, text, back) {
+    var ok = false;
+    try { ok = document.execCommand('insertText', false, text); } catch (e) { ok = false; }
+    if (!ok) {
+      var sel = window.getSelection();
+      if (sel && sel.rangeCount && host.contains(sel.getRangeAt(0).startContainer)) {
+        var r = sel.getRangeAt(0);
+        r.deleteContents();
+        var node = document.createTextNode(text);
+        r.insertNode(node);
+        r.setStartAfter(node);
+        r.collapse(true);
+        sel.removeAllRanges();
+        sel.addRange(r);
+      } else {
+        host.textContent += text;
+      }
+    }
+    if (back > 0) {
+      var s2 = window.getSelection();
+      if (s2 && s2.rangeCount) {
+        var r2 = s2.getRangeAt(0);
+        try {
+          r2.setStart(r2.startContainer, Math.max(0, r2.startOffset - back));
+          r2.collapse(true);
+          s2.removeAllRanges();
+          s2.addRange(r2);
+        } catch (e) { /* caret stays put; not fatal */ }
+      }
+    }
+    // execCommand does not always fire `input`, and the fallbacks never do.
+    host.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
   function download(filename, obj) {
     var blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
     var a = document.createElement('a');
@@ -166,13 +389,35 @@
 
     applyAnswers(loadJSON(APREFIX + chapter, {}));
 
+    /* Move focus to the neighbouring blank in document order. In a sieve-analysis
+       table that is 40+ cells, so blurring on Enter (what this used to do) meant
+       re-tapping a ~20px target for every value. `blanks` is a static snapshot,
+       which is exactly the stable document-order index this wants. */
+    function focusNeighbour(b, step) {
+      var next = blanks[blanks.indexOf(b) + step];
+      if (!next) { b.blur(); return; }
+      next.focus();
+      if (next.scrollIntoView) next.scrollIntoView({ block: 'center' });
+    }
+
     blanks.forEach(function (b) {
+      /* iOS otherwise capitalises and autocorrects short answers -- it turns
+         "gamma" into "Gamma" and mangles unit tokens. Set at runtime rather than
+         in the build so every already-generated chapter gets it too. */
+      b.setAttribute('autocapitalize', 'off');
+      b.setAttribute('autocorrect', 'off');
+      b.setAttribute('autocomplete', 'off');
+      b.setAttribute('enterkeyhint', 'next');
+
       b.addEventListener('input', function () {
         updateProgress();
         scheduleSave();
       });
       b.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') { e.preventDefault(); b.blur(); }
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          focusNeighbour(b, e.shiftKey ? -1 : 1);
+        }
       });
       // plain-text paste fallback for browsers without contenteditable="plaintext-only"
       b.addEventListener('paste', function (e) {
@@ -751,7 +996,7 @@
        meant for one of our own controls. */
     function resolveHost(target) {
       if (!target || !target.closest) return null;
-      if (target.closest('.toolbar, .toolbar-toggle, .draw-bar, .qa-overlay, .fnote')) {
+      if (target.closest('.toolbar, .toolbar-toggle, .draw-bar, .qa-overlay, .fnote, #sym-bar')) {
         return null;
       }
       var block = target.closest('.block');
@@ -851,6 +1096,23 @@
       host.addEventListener('pointerup', onUp);
       host.addEventListener('pointercancel', onCancel);
     }
+
+    /* Sieve worksheets are 5-6 columns wide and the chapters set them at
+       font-size 0.6em with width:100%, so on a phone they overflow the viewport
+       and the student types into a cell that is half off-screen. Wrapping is
+       done here rather than in the build so already-generated chapters get it.
+       Runs before renderAllDrawings() below: drawing anchors key off .block and
+       <figure>, neither of which this wrapper sits between. */
+    (function wrapWideTables() {
+      var main = document.querySelector('main') || document.body;
+      Array.prototype.forEach.call(main.querySelectorAll('table'), function (t) {
+        if (t.parentNode.classList.contains('table-scroll')) return;
+        var wrap = document.createElement('div');
+        wrap.className = 'table-scroll';
+        t.parentNode.insertBefore(wrap, t);
+        wrap.appendChild(t);
+      });
+    })();
 
     /* Rendered unconditionally, outside initDrawing, so saved marks still show
        on a chapter page built before the palette existed. */
@@ -1040,6 +1302,296 @@
       });
     })();
 
+    /* ---------------- symbol bar ---------------- */
+
+    /* A keyboard-accessory strip for math blanks: the keycap shows the finished
+       form, the key inserts plain readable text, and the row above renders it.
+       Students never type or see a backslash.
+
+       Built here in JS rather than in chapter_template.html so it reaches every
+       already-generated chapter -- regenerating them would destroy hand edits. */
+    (function initSymbolBar() {
+      var SYMKEY = 'ebook:sym';
+      var HINT = 'Type it how you say it: γ_w, D_60, m^3, sqrt(2). ' +
+                 'The line above shows how it will look.';
+
+      /* ins defaults to cap; back = characters to move the caret left after. */
+      var GROUPS = [
+        ['Structure', [
+          { cap: 'x_n', ins: '_' }, { cap: 'x^n', ins: '^' },
+          { cap: '√', ins: 'sqrt()', back: 1 }, { cap: '( )', ins: '()', back: 1 },
+          { cap: 'a/b', ins: '()/()', back: 4 },
+          { cap: '×', ins: '*' }, { cap: '÷', ins: '/' },
+          { cap: '%' }, { cap: '=' }
+        ]],
+        ['Greek', [
+          { cap: 'γ' }, { cap: 'γ_w' }, { cap: 'γ_d' }, { cap: 'γ_sat' },
+          { cap: 'γ′' }, { cap: 'σ' }, { cap: 'σ′' }, { cap: 'σ_v' },
+          { cap: 'τ' }, { cap: 'φ' }, { cap: 'ρ' }, { cap: 'Δ' },
+          { cap: 'π' }, { cap: 'θ' }, { cap: 'ε' }, { cap: 'µ' }
+        ]],
+        ['Properties', [
+          { cap: 'G_s' }, { cap: 'D_10' }, { cap: 'D_30' }, { cap: 'D_60' },
+          { cap: 'C_u' }, { cap: 'C_c' }, { cap: 'e_max' }, { cap: 'e_min' },
+          { cap: 'w_L' }, { cap: 'w_P' }, { cap: 'PI' }, { cap: 'k_eq' }
+        ]],
+        ['Units', [
+          { cap: 'kN/m^3' }, { cap: 'kPa' }, { cap: 'g/cm^3' }, { cap: 'kg/m^3' },
+          { cap: 'cm/s' }, { cap: 'm/s' }, { cap: 'mm' }, { cap: '°' },
+          { cap: '≈' }, { cap: '≤' }, { cap: '≥' }
+        ]]
+      ];
+
+      /* Render _x / ^x in a keycap as real <sub>/<sup>, so the button looks
+         like the finished symbol rather than like its source. */
+      function keycap(btn, label) {
+        var re = /([_^])([A-Za-z0-9]+)|([\s\S]?[^_^]*)/g, m;
+        while ((m = re.exec(label)) && m[0]) {
+          if (m[3]) {
+            btn.appendChild(document.createTextNode(m[3]));
+          } else {
+            var e = document.createElement(m[1] === '_' ? 'sub' : 'sup');
+            e.textContent = m[2];
+            btn.appendChild(e);
+          }
+        }
+      }
+
+      var bar = document.createElement('div');
+      bar.className = 'sym-bar';
+      bar.id = 'sym-bar';
+      bar.hidden = true;
+
+      var preview = document.createElement('div');
+      preview.className = 'sym-preview';
+      preview.id = 'sym-preview';
+      preview.hidden = true;
+      bar.appendChild(preview);
+
+      /* The keys scroll horizontally; the controls sit outside that scroller so
+         "Done" is always reachable instead of being stranded at the far end. */
+      var row = document.createElement('div');
+      row.className = 'sym-row';
+      bar.appendChild(row);
+
+      var keys = document.createElement('div');
+      keys.className = 'sym-keys';
+      row.appendChild(keys);
+
+      GROUPS.forEach(function (g) {
+        var grp = document.createElement('span');
+        grp.className = 'sym-group';
+        grp.setAttribute('role', 'group');
+        grp.setAttribute('aria-label', g[0]);
+        g[1].forEach(function (k) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'sym-key';
+          b.setAttribute('data-ins', k.ins || k.cap);
+          if (k.back) b.setAttribute('data-back', String(k.back));
+          b.title = 'Insert ' + (k.ins || k.cap);
+          keycap(b, k.cap);
+          grp.appendChild(b);
+        });
+        keys.appendChild(grp);
+      });
+
+      var ctrl = document.createElement('span');
+      ctrl.className = 'sym-group sym-ctrl';
+      var btnHint = document.createElement('button');
+      btnHint.type = 'button';
+      btnHint.className = 'sym-key';
+      btnHint.setAttribute('data-act', 'hint');
+      btnHint.textContent = '?';
+      btnHint.title = 'How do I write this?';
+      var btnDone = document.createElement('button');
+      btnDone.type = 'button';
+      btnDone.className = 'sym-key sym-done';
+      btnDone.setAttribute('data-act', 'done');
+      btnDone.textContent = '✓ Done';
+      ctrl.appendChild(btnHint);
+      ctrl.appendChild(btnDone);
+      row.appendChild(ctrl);
+
+      document.body.appendChild(bar);
+
+      var host = null;
+      var lastRange = null;
+      var previewTimer = null;
+      var enabled = LS ? LS.getItem(SYMKEY) !== 'off' : true;
+
+      function isMathBlank(el) {
+        return !!(el && el.classList && el.classList.contains('blank') &&
+                  el.getAttribute('data-math') === '1');
+      }
+
+      /* vv.height + vv.offsetTop is the bottom edge of the VISUAL viewport
+         inside the layout viewport. iOS does not shrink innerHeight when the
+         soft keyboard opens, so that difference is the keyboard; Android
+         Chrome shrinks the layout viewport, the difference is ~0, and bottom:0
+         is already correct. */
+      function place() {
+        var vv = window.visualViewport;
+        bar.style.bottom = vv
+          ? Math.max(0, window.innerHeight - (vv.height + vv.offsetTop)) + 'px'
+          : '0px';
+      }
+
+      function renderPreview() {
+        if (!host) return;
+        var tex = friendlyTeX(host.textContent);
+        if (!tex) {
+          preview.textContent = '';
+          preview.hidden = true;
+          return;
+        }
+        preview.hidden = false;
+        try {
+          if (window.MathJax && MathJax.typesetClear) MathJax.typesetClear([preview]);
+        } catch (e) { /* first run, nothing to clear */ }
+        preview.textContent = '\\(' + tex + '\\)';
+        typesetMath(preview).then(function () {
+          // MathJax 3 does not throw on bad TeX, it draws a red error box.
+          // Showing nothing is better than showing the student an error.
+          if (preview.querySelector('mjx-merror')) {
+            preview.textContent = '';
+            preview.hidden = true;
+          }
+        }).catch(function () {
+          preview.textContent = '';
+          preview.hidden = true;
+        });
+      }
+
+      function schedulePreview() {
+        if (previewTimer) clearTimeout(previewTimer);
+        previewTimer = setTimeout(renderPreview, 250);
+      }
+
+      function open() {
+        if (!enabled) return;
+        /* Deliberately no nudgeSticky() here. That workaround is for
+           position:sticky; this bar is fixed, and a 1px scroll while the soft
+           keyboard is up moves the visual viewport and can pull the caret
+           off-screen. */
+        bar.hidden = false;
+        document.body.classList.add('symbar-open');
+        place();
+        renderPreview();
+      }
+
+      function close() {
+        bar.hidden = true;
+        preview.hidden = true;
+        document.body.classList.remove('symbar-open');
+        host = null;
+        lastRange = null;
+      }
+
+      document.addEventListener('focusin', function (e) {
+        var t = e.target;
+        if (t && t.closest && t.closest('#sym-bar')) return;   // stay open
+        if (isMathBlank(t)) { host = t; open(); } else { close(); }
+      });
+
+      /* focusin does not fire when focus lands on nothing (a tap on the page
+         background), so catch that case too. */
+      document.addEventListener('focusout', function (e) {
+        if (!isMathBlank(e.target)) return;
+        setTimeout(function () {
+          var a = document.activeElement;
+          if (a && a.closest && a.closest('#sym-bar')) return;
+          if (isMathBlank(a)) return;
+          close();
+        }, 0);
+      });
+
+      document.addEventListener('selectionchange', function () {
+        if (!host || document.activeElement !== host) return;
+        var sel = window.getSelection();
+        if (sel && sel.rangeCount &&
+            host.contains(sel.getRangeAt(0).startContainer)) {
+          lastRange = sel.getRangeAt(0).cloneRange();
+        }
+      });
+
+      document.addEventListener('input', function (e) {
+        if (host && e.target === host) schedulePreview();
+      });
+
+      /* Keep the caret in the blank when a key is pressed. pointerdown alone is
+         not enough -- WebKit only honours mousedown for focus suppression -- so
+         both are prevented, and the saved Range is a last-resort restore. */
+      function keepFocus(e) {
+        if (e.target.closest && e.target.closest('.sym-key')) e.preventDefault();
+      }
+      bar.addEventListener('pointerdown', keepFocus);
+      bar.addEventListener('mousedown', keepFocus);
+
+      bar.addEventListener('click', function (e) {
+        var t = e.target.closest ? e.target.closest('button') : null;
+        if (!t) return;
+
+        var act = t.getAttribute('data-act');
+        if (act === 'done') { if (host) host.blur(); close(); return; }
+        if (act === 'hint') {
+          preview.hidden = false;
+          preview.textContent = HINT;
+          return;
+        }
+
+        var ins = t.getAttribute('data-ins');
+        if (ins === null || !host) return;
+
+        if (document.activeElement !== host) {
+          host.focus();
+          if (lastRange) {
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(lastRange);
+          }
+        }
+        insertAtCaret(host, ins, parseInt(t.getAttribute('data-back') || '0', 10));
+        renderPreview();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape' || bar.hidden) return;
+        var ov = document.getElementById('qa-overlay');
+        if (ov && !ov.hidden) return;      // the Q&A panel gets the key first
+        if (host) host.blur();
+        close();
+      });
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', place);
+        window.visualViewport.addEventListener('scroll', place);
+      }
+      window.addEventListener('resize', place);
+
+      /* Toolbar toggle, so the bar is discoverable and can be switched off. */
+      var actions = document.querySelector('.toolbar-actions');
+      if (actions) {
+        var toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.id = 'btn-sym';
+        toggle.textContent = 'Σ Symbols';
+        toggle.title = 'Show a symbol keyboard when typing a math answer';
+        toggle.setAttribute('aria-pressed', String(enabled));
+        toggle.addEventListener('click', function () {
+          enabled = !enabled;
+          toggle.setAttribute('aria-pressed', String(enabled));
+          if (LS) LS.setItem(SYMKEY, enabled ? 'on' : 'off');
+          if (!enabled) { close(); } else if (isMathBlank(document.activeElement)) {
+            host = document.activeElement;
+            open();
+          }
+        });
+        var clearBtn = document.getElementById('btn-clear');
+        actions.insertBefore(toggle, clearBtn || null);
+      }
+    })();
+
     /* ---------------- student Q&A ---------------- */
 
     (function initQA() {
@@ -1091,22 +1643,6 @@
         }
       }
 
-      /* MathJax is loaded async, so the feed can land before it is ready.
-         Wait for its startup promise rather than silently skipping typeset. */
-      function typesetQA(node) {
-        var tries = 0;
-        (function attempt() {
-          var mj = window.MathJax;
-          if (mj && mj.startup && mj.startup.promise) {
-            mj.startup.promise
-              .then(function () { return mj.typesetPromise([node]); })
-              .catch(function () {});
-            return;
-          }
-          if (++tries < 100) setTimeout(attempt, 100);
-        })();
-      }
-
       /* feed */
       fetch(endpoint + '?chapter=' + encodeURIComponent(chapter))
         .then(function (r) { return r.text(); })
@@ -1138,7 +1674,7 @@
             wrap.appendChild(d);
             qaList.appendChild(wrap);
           });
-          typesetQA(qaList);
+          typesetMath(qaList).catch(function () {});
         })
         .catch(function () {
           qaStatus.textContent = 'The Q&A feed is unavailable right now.';
