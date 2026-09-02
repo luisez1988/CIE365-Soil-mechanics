@@ -608,7 +608,11 @@ td .blank, th .blank {
 body.draw-mode main { user-select: none; -webkit-user-select: none; }
 body.draw-mode .block { cursor: crosshair; }
 body.draw-mode.tool-erase .block { cursor: cell; }
-body.draw-mode .embed-frame { pointer-events: none; }
+/* A stroke that starts inside an embed never reaches the page, so in draw
+   mode every frame — click-to-load embeds and the local 3-D models alike —
+   stops swallowing the pointer. */
+body.draw-mode .embed-frame,
+body.draw-mode iframe { pointer-events: none; }
 
 /* Only when the student opts into finger drawing do we take the touch gesture
    away from the page; by default a finger scrolls and a stylus draws. */

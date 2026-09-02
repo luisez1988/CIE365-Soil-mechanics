@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Octahedral aluminate structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="molecule-viewer.css">
+</head>
+<body>
+
+<div id="viewer">
+  <div id="legend" class="panel">
+    <b>Al(OH)<sub>6</sub><sup>3&minus;</sup> octahedron</b><br>
+    <span class="swatch" style="background:#9370DB"></span>Aluminum (Al)<br>
+    <span class="swatch" style="background:#FF4444"></span>Hydroxyl (OH)
+  </div>
+
+  <div id="controls" class="panel">
+    <button id="resetBtn" type="button">Reset view</button>
+    <button id="bondsBtn" type="button" aria-pressed="true">Al&ndash;OH bonds</button>
+    <button id="edgesBtn" type="button" aria-pressed="true">Edges</button>
+    <button id="labelsBtn" type="button" aria-pressed="false">Labels</button>
+    <button id="rotateBtn" type="button" aria-pressed="false">Auto rotate</button>
+    <span id="hint">Drag to rotate &middot; Ctrl/&#8679; + scroll to zoom</span>
+  </div>
+
+  <div id="fallback">
+    <b>Al(OH)<sub>6</sub><sup>3&minus;</sup> octahedron</b>
+    <span>This browser could not start the 3-D viewer (WebGL unavailable).
+      An aluminum atom sits at the centre of six hydroxyls placed at the
+      corners of an octahedron.</span>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="molecule-viewer.js"></script>
+<script>
+initMoleculeViewer({
+  title: 'Al(OH)6 octahedron',
+  center: { label: 'Al', color: 0x9370DB, radius: 0.6 },
+  vertex: { label: 'OH', color: 0xFF4444, radius: 0.3 },
+  // six vertices of an octahedron, one along each axis
+  positions: [
+    [ 2.5,  0,    0  ],   // 0  +X
+    [-2.5,  0,    0  ],   // 1  -X
+    [ 0,    2.5,  0  ],   // 2  +Y
+    [ 0,   -2.5,  0  ],   // 3  -Y
+    [ 0,    0,    2.5],   // 4  +Z
+    [ 0,    0,   -2.5]    // 5  -Z
+  ],
+  edges: [
+    [2, 0], [2, 4], [2, 1], [2, 5],   // top pyramid
+    [3, 0], [3, 4], [3, 1], [3, 5],   // bottom pyramid
+    [0, 4], [4, 1], [1, 5], [5, 0]    // equatorial square
+  ]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Interactive 3-D molecule viewers embedded in the ebook chapters.
+   Light theme so the iframe blends into the page (--paper in book.css).
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --paper: #fdfdfb;
+  --ink: #1d1d1f;
+  --rule: #d9d5cc;
+  --brand: #cc0000;
+  --sans: Roboto, "Segoe UI", Arial, sans-serif;
+}
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
+#viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* pan-y lets a vertical swipe scroll the ebook page underneath, while a
+   horizontal drag still reaches the viewer as a pointer event. */
+#viewer canvas {
+  display: block;
+  touch-action: pan-y;
+  cursor: grab;
+}
+#viewer.dragging canvas { cursor: grabbing; }
+
+.panel {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+
+#legend {
+  top: 8px;
+  left: 8px;
+  padding: 6px 9px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  max-width: calc(100% - 16px);
+}
+#legend b { font-size: 0.84rem; }
+#legend .swatch {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  margin-right: 0.35em;
+  border-radius: 50%;
+  vertical-align: baseline;
+}
+
+#controls {
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  padding: 5px 6px 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+button {
+  font: inherit;
+  font-size: 0.72rem;
+  line-height: 1.1;
+  padding: 4px 7px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: #f3efe2; }
+button:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+button[aria-pressed="true"] {
+  background: #fdeaea;
+  border-color: var(--brand);
+  color: var(--brand);
+  font-weight: 700;
+}
+button[aria-pressed="true"]:hover { background: #f9dede; }
+
+#hint {
+  flex-basis: 100%;
+  margin: 1px 0 0 1px;
+  font-size: 0.68rem;
+  color: #6b6b6b;
+}
+
+#fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+body.no-webgl #fallback { display: flex; }
+body.no-webgl #controls,
+body.no-webgl #legend { display: none; }
+
+@media (max-width: 380px) {
+  #legend { font-size: 0.72rem; }
+  button { font-size: 0.68rem; padding: 3px 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* auto-rotation stays available, but it is never started automatically */
+}

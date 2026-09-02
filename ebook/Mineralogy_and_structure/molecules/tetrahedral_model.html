@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tetrahedral silicate structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="molecule-viewer.css">
+</head>
+<body>
+
+<div id="viewer">
+  <div id="legend" class="panel">
+    <b>SiO<sub>4</sub><sup>4&minus;</sup> tetrahedron</b><br>
+    <span class="swatch" style="background:#4DA6FF"></span>Silicon (Si)<br>
+    <span class="swatch" style="background:#FF4444"></span>Oxygen (O)
+  </div>
+
+  <div id="controls" class="panel">
+    <button id="resetBtn" type="button">Reset view</button>
+    <button id="bondsBtn" type="button" aria-pressed="true">Si&ndash;O bonds</button>
+    <button id="edgesBtn" type="button" aria-pressed="true">Edges</button>
+    <button id="labelsBtn" type="button" aria-pressed="false">Labels</button>
+    <button id="rotateBtn" type="button" aria-pressed="false">Auto rotate</button>
+    <span id="hint">Drag to rotate &middot; Ctrl/&#8679; + scroll to zoom</span>
+  </div>
+
+  <div id="fallback">
+    <b>SiO<sub>4</sub><sup>4&minus;</sup> tetrahedron</b>
+    <span>This browser could not start the 3-D viewer (WebGL unavailable).
+      A silicon atom sits at the centre of four oxygen atoms placed at the
+      corners of a tetrahedron.</span>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="molecule-viewer.js"></script>
+<script>
+initMoleculeViewer({
+  title: 'SiO4 tetrahedron',
+  center: { label: 'Si', color: 0x4DA6FF, radius: 0.6 },
+  vertex: { label: 'O',  color: 0xFF4444, radius: 0.3 },
+  // four corners of a tetrahedron inscribed in a cube of half-side 2.8868
+  positions: [
+    [ 2.886751345948129,  2.886751345948129,  2.886751345948129],
+    [ 2.886751345948129, -2.886751345948129, -2.886751345948129],
+    [-2.886751345948129,  2.886751345948129, -2.886751345948129],
+    [-2.886751345948129, -2.886751345948129,  2.886751345948129]
+  ],
+  edges: [[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]]
+});
+</script>
+</body>
+</html>
