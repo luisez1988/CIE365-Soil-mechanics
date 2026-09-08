@@ -1,0 +1,1226 @@
+<!doctype html>
+<html class="student">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>Geostatic stresses</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+	
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
+	</head>
+	  <body>
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+							display: flex;
+					}
+					.col{
+							flex: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CE-342
+						Fall 2026
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							/* color: #000; */
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+		<!-- <section>
+		<h1>Announcements</h1>
+		<ul>
+			<li>HM5 will be posted today</li>
+			<li>Midterm exam next week</li>
+			<li>Will announce details soon</li>			
+		</ul>
+		
+		</section> -->
+				<!-- <section> -->
+		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
+
+			<div style="margin-top:360px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+				<div class="qrCode" name="https://drive.google.com/file/d/1Kb0Bl-OTB5LNvNMy-rcS6E1axwxDWa-i/view?usp=sharing"> </div>
+			</div>
+
+			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Geostatic stresses">
+				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+				<p style="color:#faffff; font-size:35px">Fall 2026</p>
+				<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+			</div>
+		</section>		
+
+<!-- 
+				<section >
+					<h1>Course contents and schedule</h1>
+					<img src="FiguresGeneral/Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></img>
+				</section> -->
+
+				<section  >
+				    <h1>Recap</h1>
+						<ul>
+							<li class="fragment"> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								We learned about the importance and the steps of <strong style='color:#000'>site investigation</strong>
+							</div>
+								
+								</li>
+							<li class="fragment"> We learned about the <strong style='color:#000'>strengths and limitations</strong> of <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> </li>
+							<li class="fragment">
+							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							We learned how <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> can be used to determine <strong style='color:#000'>soil properties</strong>
+							</div>	
+							</li>
+							<li class="fragment"> We learned how in-situ tests and geophysics can be used to <strong style='color:#000'>draw a geotechnical soil profile</strong></li>
+						</ul>
+				</section>
+
+        <section >
+					<h1>Contents</h1>
+					<div class='container' >
+					<div class='col' style="width: 50%;">					
+						<ul class="contentStyle" style="margin-top: 80px;">
+							<li class="l1">Hydrostatic pore pressure</li>
+							<li class="l1">Interparticle effective stress.</li>
+							<li class="l1">Effective stress principle</li>
+							<li class="l1">At-rest horizontal stresses</li>
+						</ul>
+					</div>
+					<div class='col' style="width: 50%;">
+					<div class='container'>
+					<div class='col' style="width: 50%;">
+						<div class="stickynote" style="margin-top: 100px;margin-left: 40px; height: 300px;">
+							<p> Objective covered in this lecture</p>
+							<ul>
+								<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating the effective stress in soils  </li>
+							</ul>
+						</div>
+					</div>
+					<div class='col' style="width: 50%;">
+					<div class='stickynote' style='margin-top: 100px;margin-left: 40px; height: 300px;'>
+						<p style="margin-top: 0px;">After this lecture we will able to:</p>
+						<ul style="margin-top: -15px;">							
+							<li>Calculate the hydrostatic pore pressure.</li>
+							<li>Calculate geostatic vertical total and effective stresses.</li>
+							<li>Calculate geostatic horizontal total and effective stresses.</li>
+						</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+
+
+        </section>
+
+<!--
+ #####  ####### #     # ####### ####### #     # #######  #####
+#     # #     # ##    #    #    #       ##    #    #    #     #
+#       #     # # #   #    #    #       # #   #    #    #
+#       #     # #  #  #    #    #####   #  #  #    #     #####
+#       #     # #   # #    #    #       #   # #    #          #
+#     # #     # #    ##    #    #       #    ##    #    #     #
+ #####  ####### #     #    #    ####### #     #    #     #####
+-->
+
+<section>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What are <strong style='color:orange'>geostatic stresses</strong>?
+</div>
+
+<div class='defBox' name='' style='margin-top: 10px;margin-left: 0px;'>
+Is a field of stress generated by the soil's <span class='atb'>own weight</span> and influenced by <span class='atb'>intersticial pore water pressure</span>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+<strong style='color:#000'>Recall:</strong> Stress is defined as the force per unit area applied on a material. 
+</div>
+
+Since <strong style='color:#000'>force</strong> is a <span class='atb'>vectorial</span> entity, stress is also a <strong style='color:#000'>multi-dimensional</strong> value
+</div>
+<div class='col' style='width: 50%;'>
+<img src="FiguresGeneral_student/stress_definition.svg" style="width:100%"/>
+</div>
+</div>
+
+
+
+
+</section>
+
+<section  >
+    <h1>Water in hydrostatic conditions</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	In <span class='atb'>hydrostatic</span> conditions, pore water pressure (<strong style='color:green'>\(u\)</strong> ) is controlled by the <span class='atb'>ground water table</span> (GWT) elevation.
+	</div>
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+		<img src="FiguresGeneral/phases.svg" style="margin-left: 0px;" width="90%" data-preload></img>
+	</div>
+	<div class='col' style="width: 50%;">
+		<div class="fragment">		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+			If the soil is <strong style='color:black'>fully dry</strong> \(u=0\)
+		</div></div>
+		<div class="fragment"> 		<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+			If the soil is <strong style='color:black'>partially saturated</strong> \(u<0\). <span class='atb'>Suction is generated</span> by the water surface tension and pore size.
+			</div></div>
+		<div class="fragment">		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+			Below the GWT \(u \geq 0\).
+			</div></div>
+	</div>
+	</div>
+		
+
+
+</section>
+
+<section>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Pore pressure is calculated based on <span class='atb'>depth</span> measured <span class='atb'>from the water table</span>. 
+</div>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/pore_water.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+	<br> <br>
+The <strong style='color:#000'>hydrostatic</strong> pore water pressure is then calculated as: <br>
+<div class='equationBox'>
+\( u= h_w \gamma_w = h_w g \rho_w \)
+</div> <br>
+Where: <br>
+\(h_w\) is the depth below the GWT<br>
+</div>
+</div>
+</section>
+
+
+
+<!-- <section  >
+    <h1>Capillary rise</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:black'>Capillarity</strong> arises from <span class='atb'>surface tension</span> <strong style='color:green'>\(T\)</strong> that occurs at the interface between water and soil particles.
+	</div>
+
+	<div class="container">
+		<div class="col" style="width: 50%;">
+			<div class="fragment"> <img src="FiguresGeneral/meniscus.svg" style="margin-top:0px;width:80%"></div>	
+		</div>
+		<div class="col" style="width: 50%;">
+  <ul>
+	  <li class="fragment"> Surface tension will form a <span class='atb'>water meniscus</span>.  </li>
+			<li class="fragment"> Inter-particle <strong style="color:black">contact force</strong> increases. </li>
+			<li class="fragment"> The meniscus radii is function of the shape and size of the pore space which is empirically equal to 20% of \(D_{10}\) </li>
+  </ul>
+		</div>
+	</div>
+		
+</section> -->
+
+<!-- <section >
+
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Simplifying the soil's pore structure as <span class='atb'>tubes</span> will help us to obtain mathematical expressions to <strong style='color:black'>understand capillarity</strong>.
+
+</div>
+<div class='container'>
+<div class='col' style="width: 50%;">
+	<div class="fragment"> 	<img src="FiguresGeneral/suctionplot.svg.2022_02_08_21_49_35.0.svg" style="margin-top:0x;width:85%"></div>
+
+</div>
+<div class='col' style="width: 50%;">
+<div class="fragment"><div class='defBox' name='Capillary rise' style='margin-top: 25px;margin-left: 0px;'>
+	<strong style='color:green'> \(h_c\):</strong> Is the height of the water column that rises in a tube of diameter \(d\) above the GWT because of water surface tension \(T\).
+	<div class='equationBox'>
+	\( h_c=\cfrac{4T}{\gamma_w d_t} \)
+	</div>
+</div></div>
+
+</div>
+</div>
+
+
+</section> -->
+
+<!-- <section >
+<h1>Participation question 4.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	In which of the soils below will the capillary rise be <strong style='color:green'>greater</strong> ?
+</div>
+
+
+<ol class='iClicker' >
+<li class='l2'>A loose poorly graded gravel</li>
+<li class='l2'>A loose well graded gravel</li>
+<li class='l2'>A dense well graded gravel</li>
+<li class='l2'>A dense poorly graded gravel</li>
+</ol>
+</section> -->
+
+<!-- <section id="EX410" >
+<h1>Example 4.1</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Using the tube analogy what will be the capillary rise in a uniform loose sand with \(d=0.15\)mm and in a clay with \(D_{10}=1.5 \mu\)m. Assume the pore size is 20% of \(D_{10}\).
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/EX410.svg" style=""/>
+</div>
+
+</section> -->
+
+<!-- <section >
+<iframe src='https://luisez1988.github.io/soilved/lab/index.html?kernel=python&toolbar=1' width='100%'  height='680px' ></iframe>
+</section> -->
+
+<!-- <section  >
+    <h1>Suction pressure</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Due to the surface tension and capillary rise, the water column <span class='atb'>above the GWT</span> must be in tension. This generates the <span class='atb'>suction</span> that <strong style='color:black'>helps</strong> holding particles together.
+	</div>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<div class="fragment">				<p> <strong style='color:black'>Negative pore water pressure</strong></p>
+					<div class='equationBox'>
+					\(u_c= -h_c \gamma_w=\cfrac{-2T}{r_m}\)
+					</div>
+					<p>\(r_m=\) radius of water meniscus</p></div>
+			</div>
+			<div class="col" style="width: 50%;">
+          <img src="FiguresGeneral/suctionplot_full.svg" style="margin-top:0px;width:100%">
+			</div>
+		</div>
+</section> -->
+
+<!-- <section >
+<h1>Participation question 4.2</h1>
+
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>Select </strong> the zone in the beach profile with excellent bearing capacity.</div>
+
+
+<img src="./FiguresGeneral/beach_profile.svg" width="100%" style="margin-top: -0px;">
+
+</section> -->
+
+<!-- <section id="EX420" >
+<h1>Example 4.2</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<p>Calculate the capillarity water pressure for the same soils of Example 4.1. 		
+	</p>	
+</div>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+
+<img src="FiguresGeneral_student/EX420.svg" style="width: 100%;"/>		
+	
+</div>
+
+</section> -->
+
+<!-- <section  >
+    <h1>Capillarity explains shrinkage</h1>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+					<ul style="margin-top:0px;">
+						<li class="fragment"> Recall that the menisci radii and pressure are related as \(u_c \ \alpha \ 1/r\). </li>
+						<li class="fragment"> Thus, reducing the water content should make the space between particles <span class='atb'>shrink</span> and \(r_m\) decrease. </li>
+						<li class="fragment"> Menisci tension and wall rigidity balance. No further shrinkage of pore space occurs. </li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col" style="width: 50%;">
+			 <figure>
+			   <img src="FiguresGeneral/shrinkage_tubes.svg" style="width:100%" data-preload/>
+			   <footer style="margin-top:-30px;"><small>After Terzaghi (1972) and Holtz (2013)</small></footer>
+			 </figure>
+			</div>
+		</div>
+</section> -->
+
+<!-- <section >
+	<iframe class="stretch" src="https://www.youtube.com/embed/SW-NoiM726U?autoplay=0" data-preload></iframe>
+</section> -->
+
+<!-- <section >
+<h1>Swelling potential</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	When water is added back to the soil, water meniscus are <span class='atb'>broken</span> and the soil <span class='atb'>swells</span>. Clay <span class='atb'>mineralogy</span> plays a significant role on how much a soil will expand.
+	</div>
+	<div class='container'>
+	<div class='col' style="width: 50%;">
+	<img src="./FiguresGeneral/consol_cell.svg" width="80%">
+	</div>
+	<div class='col' style="width: 50%;">
+
+	<div class='findingBox' style='margin-top: 50px;margin-left: 0px;'>
+		Swelling can be measured as a potential for <span class='atb'>volume expansion</span> or as the <strong style='color:black'>stress</strong> required to <span class='atb'>prevent the expansion</span>.
+	</div>	
+	
+	</div>
+	</div>
+</section> -->
+
+<!-- <section >
+<h1>Swelling potential</h1>
+
+
+<div class='defBox' name='Swelling potential' style='margin-top: 15px;margin-left: 0px;'>
+: Measures the capacity of the soil to <strong style='color:green'>swell freely</strong>. Is the ratio of the change of volume of the soil over its initial state before water is added.
+<div class='equationBox'>
+\( S_P= \cfrac{\Delta V}{V_0} \times 100 \)
+</div>
+</div>
+
+<div class='defBox' name='Swelling pressure' style='margin-top: 15px;margin-left: 0px;'>
+: Measures how much pressure a soil can produce when <strong style='color:red'>it can not swell</strong> due to a imposed load.
+<div class='equationBox'>
+\(\sigma_S= F/A_c\)
+</div>
+</div>
+</section> -->
+
+<!-- <section >
+	<h1>swelling and activity relationship</h1>
+	<figure style="margin-top:-25px;">
+		<img src="FiguresGeneral/correlations.svg" style="width:80%" data-preload/>
+		<footer style="margin-top:-620px;"><small>Modified from Holtz et al. (2013) after Seed et al. (1962)</small></footer>
+	  </figure>
+</section> -->
+
+<!-- <section >
+<h1>Participation question 4.3</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the data of example 2.7 (\(C_F=5.5\%\) and \(A=1.81\)) what is its estimated swelling potential?
+</div>
+
+<ol class='iClicker' >
+<li class='l2'> \(S_P<1.5\%\) Low </li>
+<li class='l2'> \(1.5 \leq S_P<5\%\) Medium </li>
+<li class='l2'> \(5 \leq S_P<25\%\) High</li>
+<li class='l2'> \(S_P \geq 25\%\) Very high</li>
+</ol>
+</section> -->
+
+
+
+<!-- <section data-auto-animate >
+	<h1>Frost action</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Anytime the ambient temperature falls below 0\(^o\) C (32 \(^o\)F) the pore water can <span class='atb'>freeze</span>. <strong style='color:black'>Frost action</strong> can have important consequences such as <span class='atb'>uneven heaving</span> that can affect light-weight structures.
+	</div>
+	<div class="container">
+		<div class="col" style="width: 50%;">
+			<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+				Three <strong style='color:black'>ingredients</strong> are needed for frost action action to occur: <br>
+				<ol>
+					<li class="fragment"> <span class='atb'>Temperatures below freezing</span>. </li>
+					<li class="fragment">High <span class='atb'>water table.</span> </li>
+					<li class="fragment"><span class='atb'>Frost susceptible</span> soils. </li>
+				</ol>
+			</div>
+			
+	 </li>
+		</div>
+		<div class="col"  style="width: 50%;">
+			<figure>
+			  <img src="FiguresGeneral/icelenses.svg.2023_02_12_11_59_51.0.svg" style="width:95%" data-preload/>
+			  <footer style="margin-top:-30px;"><small></small></footer>
+			</figure>
+		</div>
+	</div>
+</section> -->
+
+<!-- <section data-auto-animate >
+<h1>Frost action</h1>
+<figure>
+	<img src="FiguresGeneral/icelenses.svg.2023_02_12_11_59_51.0.svg" style="width:75%" data-preload/>
+	<footer style="margin-top:-30px;"><small></small></footer>
+  </figure>
+</section> -->
+
+<!-- <section >
+
+	<iframe class="stretch" src="https://www.youtube.com/embed/uFdf8mmo0pc?start=400&end=500&autoplay=0" data-preload></iframe>
+
+</section> -->
+
+<!-- <section data-auto-animate >
+<h1>Frost susceptible soils</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	There are several tools to determine soil's <span class='atb'>frost susceptibility</span>. For example, the Canadian Department of Transport had use the limits proposed by Armstrong and Csathy (1963).
+	</div>
+<div class='container'>
+<div class='col' style="width: 50%;">
+
+<figure>
+<img src='./FiguresGeneral/frost_limits.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'>  </footer>
+</figure>
+</div>
+<div class='col' style="width: 50%;">
+	<table style="font-size: 0.75em; background-color: antiquewhite; margin-top: 5px;">
+		<tr>
+			<td><strong>Group</strong> </td>
+			<td><strong>Frost susceptibility</strong> </td>
+			<td><strong>Soils</strong> </td>
+		</tr>
+		<tr>
+			<td>I</td>
+			<td>None</td>
+			<td>Gravel, sand, gravelly tills</td>
+		</tr>
+		<tr>
+			<td>II</td>
+			<td>Moderate</td>
+			<td>Fine clay ( \(C_F>40\%\))</td>
+		</tr>
+		<tr>
+			<td>III</td>
+			<td>Strong</td>
+			<td>Silt, coarse clay (\(C_F\) 15-25%), silty tills</td>
+		</tr>
+	</table>
+</div>
+</div>
+</section> -->
+
+<!-- <section data-auto-animate >	
+	<img src="./FiguresGeneral/frost_limits.svg" width="90%" >
+</section> -->
+
+<!-- <section >
+<h1>Frost penetration depth</h1>
+<figure style="margin-top: -25px;">
+<img src='https://www.brickwood.info/uploads/db5988/original/2X/9/9f3f5a45db1a90b4c924defa2d24ff9c96b6e41d.jpg' width='80%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</section> -->
+
+<!-- <section >
+<h1>Example 4.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Determine the frost susceptibility of the soil in Example 2.7.
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='container'>
+<div class='col' style='width: 67.5%;'>
+	<img src="FiguresGeneral_student/EX430.svg" style="width: 100%"/>
+</div>
+<div class='col' style='width: 32.5%;'>
+<p class="fragment"> The soil is <span class='atb'>some to frost susceptible</span></p>
+</div>
+</div>
+
+
+</div>
+</section> -->
+
+<section >
+	<h1>Principle of effective stress</h1>
+	<div class='container'>
+	<div class='col' style='width: 65%;'>
+		<img src="FiguresGeneral_student/effective stress.svg.2022_02_10_22_01_41.0.svg" style="width: 100%"/>
+	</div>
+	<div class='col' style='width: 35%;'>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Consider a fully saturated soil. At the grain level the sum of pore pressure and inter-particle forces must balance the total stress applied to the soil element.
+	</div>
+	</div>
+	</div>
+
+	<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+	Thus, 
+	<div class='equationBox' style="margin-left: 180px;">
+	\( \sigma= \sigma' + u \)
+	</div> <br>
+	 This called the <span class='atb'>principle of effective stress</span>
+	</div>
+
+</section>
+
+<section >
+	
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<ul>
+		<li class='fragment'>
+<strong style='color:green'>\(\sigma'\)</strong> is called the <span class='atb'>intergranular or effective stress</span> and is the stress that is transmitted through the <span class='atb'>particle contacts</span>
+		</li>
+
+		<li class='fragment'>
+	<strong style='color:red'>\(\sigma\)</strong> is the <span class='atb'>total stress</span> applied to the soil element and is the sum of the intergranular stress and the pore water pressure.
+		</li>
+	</ul>
+
+	</div>
+
+	<div class="container">
+
+
+		<div class="col" style="width: 75%;">
+		
+		<div class='findingBox' style='margin-top: 100px;margin-left: 0px;'>
+		Thus, <strong style='color:red'>soil deformations</strong> is caused by <span class='atb'>changes</span> of <strong style='color:green'>effective stress</strong>
+		</div>
+
+		</div>
+		<div class="col" style="width: 25%;">
+			<div class='stickynote' style='margin-top: 75px;margin-left: 25px;'>
+			Note: The principle of effective stresses only applies for dry and fully saturated soils. For partially saturated soils the pressure of the gases entrapped in the soil must be considered.
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section >
+	<h1 style="margin-top:0px;">In-situ total vertical stresses</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(\sigma_v\): </strong> Is the <strong style='color:black'>sum of all</strong> vertical stresses above a depth of interest in the subsurface.	
+	</div>
+
+<div class="container">
+	<div class="col" style="width: 50%;">
+		
+	<p>We can calculate this total weight by adding <strong style='color:#000'>all weights</strong> above the depth of interest: <br>
+	<br>
+
+	\( \begin{align}
+	\sigma_v= \int_{z=0}^{z=h} \gamma(z) dz  
+	\end{align} \)
+	</p>
+
+	</div>
+	<div class="col" style="width: 50%;">
+		<figure style="margin-top: 50px;">
+		  <img src="FiguresGeneral/vert_profile.svg" style="width:100%" data-preload/>
+		  <footer style="margin-top:-60px;"><small></small></footer>
+		</figure>
+	</div>
+</div>
+</section>
+
+<section >
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	In a multilayered system (i.e., the typical scenario) you can add the individual weight of each layer above the point of interest.
+	</div>
+	<div class="container">
+		<div class="col" style="width: 50%;">
+			<figure>
+			  <img src="FiguresGeneral/multilayer.svg" style="width:100%" data-preload/>
+			  <footer style="margin-top:-60px;"><small></small></footer>
+			</figure>
+		</div>
+		<div class="col" style="width: 50%;">
+			<p>The <strong style="color:black">total vertical stress</strong> at depth \(z\) is:
+				<div class='equationBox'>
+				\( \begin{align}
+				\sigma_v=\sum_{i=1}^n \gamma_i h_i
+				\end{align} \)
+				
+				</div>				
+			</p>
+			<p>\(n=\) number of interfaces below the ground surface including the water table.</p>
+
+		</div>
+	</div>
+</section>
+
+
+<section >
+	<h1>Example 4.1</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Compute the total and effective vertical stresses at point A. Plot the vertical total and effective stresses with the pore pressure profile in the same graph.</p>
+		
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width:30%'>
+		<figure>
+			<img src="FiguresGeneral/dexample_stress.svg" style="width:100%; margin-left:0px; margin-top: 5px;" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		  </figure>
+	</div>
+	<div class='col' style='width:70%'>
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-4-1.html'></div>
+	</div>
+	</div>
+	</div>
+ 
+
+</section>
+
+<!-- For student use -->
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<table style="width: 100%; margin-top: 0px; margin-left: 0px;">
+	<tr>	<th>Depth (ft)</th>
+	<th>Unit Weight (pcf)</th>
+	<th>Water height (ft)</th>
+	<th>Total Vertical Stress (psf)</th>
+	<th>Pore Pressure (psf)</th>
+	<th>Effective Vertical Stress (psf)</th></tr>
+	<tr>
+		<td>0</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class='atb'>1150</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>20</td>
+		<td>120</td>
+		<td>10</td>
+		<td> <span class='atb'>2350</span></td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+	</tr>
+		</tr>
+		</tr>
+		<tr>
+		<td>30</td>
+		<td>135</td>
+		<td>20</td>
+		<td> <span class='atb'>3700</span></td>
+		<td><span class='atb'>1248</span></td>
+		<td><span class='atb'>2452</span></td>
+	</tr>
+
+
+
+</table>
+
+</div>
+
+</section>
+
+<!-- in-class activity -->
+<!-- <section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/1W5okT6fkv0thCi60CyD8aMQ1heyxQR4rf2G7D31X8mU/edit?usp=drive_link'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
+</div>
+</section> -->
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<img src="FiguresGeneral_student/Profile.svg" style="margin-top: 0px;" width="100%"/>
+
+</div>
+
+</section>
+
+<section >
+	<h1>Participation question 4.4</h1>
+	<div class='InquiryBox' style='margin-top: -10px;margin-left: 0px;'>
+		For the soil profile shown below, select the correct stress profile?
+	</div>
+	
+	<img src="FiguresGeneral/Quiz_stresses.svg" width="100%" style="margin-top: -0px;">
+</section>
+
+<section >
+<h1>Horizontal stresses</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Horizontal effective stresses are calculated based on the capacity of the soil to <span class='atb'>deform laterally</span>. When the soil <strong style='color:black'>doesn't</strong> deform laterally it is in <span class='atb'>at-rest conditions</span>.
+</div>
+<div class="fragment"><div class='defBox' name='Coefficient of lateral earth pressure at-rest' style='margin-top: 15px;margin-left: 0px;'>
+	<strong style='color:green'> \(K_0\):</strong> Is the ratio of the <strong style='color:black'>effective</strong> <span class='atb'>horizontal stress</span> <strong style='color:green'> \(\sigma'_h\)</strong> to the <strong style='color:black'>effective</strong> vertical stress <strong style='color:green'>\(\sigma'_v\)</strong>.	
+	<p><div class='equationBox' style="margin-top: 0px;">
+		\(K_0=\cfrac{\sigma'_h}{\sigma'_v}\)
+		</div></p>
+	
+	</div> </div>
+</section>
+
+<section >
+
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>\(K_0\) </strong> is only valid for horizontal surface conditions and <strong style='color:green'>only to</strong> <span class='atb'>effective stresses</span>
+</div>
+
+<div class='container'>
+<div class='col' style='width: 40%;'>
+	<img class="fragment" src="FiguresGeneral/non_horizontal_profile.svg" width="100%">
+</div>
+<div class='col' style='width: 60%;'>
+<div class='defBox' name='Total horizontal stress' style='margin-top: 100px;margin-left: 0px;'>
+<strong style='color:green'>\(\sigma_h\):</strong> The total horizontal stress can be calculated using the <strong style='color:black'>effective stress principle</strong>.
+<div class='equationBox'>
+\(\sigma_h= \sigma'_h+ u\)
+</div>
+</div>
+</div>
+
+</div>
+</section>
+	
+<section >
+	<h1>Example 4.2</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<p>Compute the total and effective horizontal stress at point A. Plot the horizontal total and effective stresses with the pore pressure profile in the same graph.</p>		
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 30%;'>
+		<figure>
+			<img src="FiguresGeneral/horizontal_example.svg" style="width:100%; margin-left:0px; margin-top: 0px;" data-preload/>
+			<footer style="margin-top:-60px;"><small></small></footer>
+		</figure>
+	</div>
+	<div class='col' style='width: 70%;'>
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-4-2.html'></div>
+	</div>
+	</div>
+	</div>
+ 
+
+</section>
+
+<!-- Student version only -->
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<table style="width: 100%; table-layout: fixed; font-size: 0.5em;">
+	<tr>
+		<th style="overflow-wrap: anywhere;">Layer</th>
+	<th style="overflow-wrap: anywhere;">Depth (ft)</th>
+	<th style="overflow-wrap: anywhere;">Unit Weight (pcf)</th>
+	<th style="overflow-wrap: anywhere;">\(K_o\)</th>
+	<th style="overflow-wrap: anywhere;">Water depth (ft)</th>
+	<th style="overflow-wrap: anywhere;">Total vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Pore Pressure (psf)</th>
+	<th style="overflow-wrap: anywhere;">Effective vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Horizontal Effective Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Total horizontal Stress (psf)</th>
+
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>0</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class='atb'>0.0</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>10\(^-\)</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class='atb'>1150</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+		<td><span class='atb'>575</span></td>
+		<td><span class='atb'>575</span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>10\(^+\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>0</td>
+		<td><span class='atb'>1150</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+		<td><span class='atb'>460</span></td>
+		<td><span class='atb'>460</span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>20\(^-\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>10</td>
+		<td><span class='atb'>2350</span> </td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+		<td><span class='atb'>690.4</span></td>
+		<td><span class='atb'>1314.4</span></td>
+	</tr>
+		<tr>
+		<td>SM</td>
+		<td>20\(^+\)</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>10</td>
+		<td><span class='atb'>2350</span> </td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+		<td><span class='atb'>1035.6</span></td>
+		<td><span class='atb'>1659.6</span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>SM</td>
+		<td>30</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>20</td>
+		<td><span class='atb'>3700</span> </td>
+		<td><span class='atb'>1248</span></td>
+		<td><span class='atb'>2452</span></td>
+		<td><span class='atb'>1471.2</span></td>
+		<td><span class='atb'>2719.2</span></td>
+	</tr>
+</table>
+</div>
+
+</section>
+
+<!-- in-class activity -->
+<!-- <section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<iframe src='https://docs.google.com/spreadsheets/d/1M5T4b2Fnet8IKmDIgjrYi9kC5bxsROXXb3GON1pCBB8/edit?usp=sharing'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
+</div>
+
+</section> -->
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+
+<img src="FiguresGeneral_student/K0stresses.svg" style="width: 100%"/>
+
+</div>
+
+</section>
+
+
+
+<section >
+<h1>Example 4.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the effect of lowering the GWT 3 ft on the effective vertical stresses for the soil in Example 4.1. What if the GWT is at the surface?
+
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-4-3.html'></div>
+</div>
+</section>
+
+<section >
+<h1>Participation question 4.2</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	What is the effect of lowering the ground water table on the effective vertical stresses?
+</div>
+
+
+<ol class='iClicker' >
+<li class='l2'>It is similar to loading the soil</li>
+<li class='l2'>It is similar to unloading the soil</li>
+<li class='l2'>It doesn't affect the soil</li>
+</ol>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but every figure here is an
+     <object>, so External_svg.js does all the real work. It also threw a
+     TypeError on load and on every hashchange (it looks up <section> ids that
+     do not exist in this deck). -->
+<script src="plugin/Animated_lines/External_svg.js"></script>
+<script src="../assets/solution-plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   width: 1280,
+   height: 720,
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealSolution,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+
+</html>
