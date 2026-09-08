@@ -67,7 +67,7 @@
 	
 					<div class='footer'>
 						CE-342
-						Spring 2026
+						Fall 2026
 					</div>
 	
 					<style>
@@ -100,7 +100,7 @@
 			border: 10px solid #296B64;
 		  }
 		</style>
-		<section>
+		<!-- <section>
 		<h1>Announcements</h1>
 		<ul>
 			<li>HM5 will be posted today</li>
@@ -108,7 +108,7 @@
 			<li>Will announce details soon</li>			
 		</ul>
 		
-		</section>
+		</section> -->
 				<!-- <section> -->
 		<section data-background-image="FiguresGeneral/Main_slide_Maine.png">
 
@@ -118,7 +118,7 @@
 
 			<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Geostatic stresses">
 				<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-				<p style="color:#faffff; font-size:35px">Spring 2026</p>
+				<p style="color:#faffff; font-size:35px">Fall 2026</p>
 				<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 				<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 			</div>
@@ -735,11 +735,66 @@ Determine the frost susceptibility of the soil in Example 2.7.
 
 </section>
 
-<section >
+<!-- For student use -->
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<table style="width: 100%; margin-top: 0px; margin-left: 0px;">
+	<tr>	<th>Depth (ft)</th>
+	<th>Unit Weight (pcf)</th>
+	<th>Water height (ft)</th>
+	<th>Total Vertical Stress (psf)</th>
+	<th>Pore Pressure (psf)</th>
+	<th>Effective Vertical Stress (psf)</th></tr>
+	<tr>
+		<td>0</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class='atb'>1150</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>20</td>
+		<td>120</td>
+		<td>10</td>
+		<td> <span class='atb'>2350</span></td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+	</tr>
+		</tr>
+		</tr>
+		<tr>
+		<td>30</td>
+		<td>135</td>
+		<td>20</td>
+		<td> <span class='atb'>3700</span></td>
+		<td><span class='atb'>1248</span></td>
+		<td><span class='atb'>2452</span></td>
+	</tr>
+
+
+
+</table>
+
+</div>
+
+</section>
+
+<!-- in-class activity -->
+<!-- <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/1W5okT6fkv0thCi60CyD8aMQ1heyxQR4rf2G7D31X8mU/edit?usp=drive_link'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
-</section>
+</section> -->
 
 <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -817,12 +872,108 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 
 </section>
 
-<section >
+<!-- Student version only -->
+<section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<table style="width: 100%; table-layout: fixed; font-size: 0.5em;">
+	<tr>
+		<th style="overflow-wrap: anywhere;">Layer</th>
+	<th style="overflow-wrap: anywhere;">Depth (ft)</th>
+	<th style="overflow-wrap: anywhere;">Unit Weight (pcf)</th>
+	<th style="overflow-wrap: anywhere;">\(K_o\)</th>
+	<th style="overflow-wrap: anywhere;">Water depth (ft)</th>
+	<th style="overflow-wrap: anywhere;">Total vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Pore Pressure (psf)</th>
+	<th style="overflow-wrap: anywhere;">Effective vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Horizontal Effective Stress (psf)</th>
+	<th style="overflow-wrap: anywhere;">Total horizontal Stress (psf)</th>
+
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>0</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class='atb'>0.0</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>0.0</span></td>
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>10\(^-\)</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class='atb'>1150</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+		<td><span class='atb'>575</span></td>
+		<td><span class='atb'>575</span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>10\(^+\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>0</td>
+		<td><span class='atb'>1150</span> </td>
+		<td><span class='atb'>0.0</span></td>
+		<td><span class='atb'>1150</span></td>
+		<td><span class='atb'>460</span></td>
+		<td><span class='atb'>460</span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>20\(^-\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>10</td>
+		<td><span class='atb'>2350</span> </td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+		<td><span class='atb'>690.4</span></td>
+		<td><span class='atb'>1314.4</span></td>
+	</tr>
+		<tr>
+		<td>SM</td>
+		<td>20\(^+\)</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>10</td>
+		<td><span class='atb'>2350</span> </td>
+		<td><span class='atb'>624</span></td>
+		<td><span class='atb'>1726</span></td>
+		<td><span class='atb'>1035.6</span></td>
+		<td><span class='atb'>1659.6</span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>SM</td>
+		<td>30</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>20</td>
+		<td><span class='atb'>3700</span> </td>
+		<td><span class='atb'>1248</span></td>
+		<td><span class='atb'>2452</span></td>
+		<td><span class='atb'>1471.2</span></td>
+		<td><span class='atb'>2719.2</span></td>
+	</tr>
+</table>
+</div>
+
+</section>
+
+<!-- in-class activity -->
+<!-- <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/1M5T4b2Fnet8IKmDIgjrYi9kC5bxsROXXb3GON1pCBB8/edit?usp=sharing'width='100%' height='670' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
 
-</section>
+</section> -->
 
 <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -831,6 +982,21 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 
 </div>
 
+</section>
+
+
+
+<section >
+<h1>Example 4.3</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+What is the effect of lowering the GWT 3 ft on the effective vertical stresses for the soil in Example 4.1. What if the GWT is at the surface?
+
+
+</div>
+
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-4-3.html'></div>
+</div>
 </section>
 
 <section >
@@ -845,19 +1011,6 @@ Horizontal effective stresses are calculated based on the capacity of the soil t
 <li class='l2'>It is similar to unloading the soil</li>
 <li class='l2'>It doesn't affect the soil</li>
 </ol>
-</section>
-
-<section >
-<h1>Example 4.3</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-What is the effect of lowering the GWT 3 ft on the effective vertical stresses for the soil profile in Example 4.1. What if the GWT is at the surface?
-
-
-</div>
-
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<div class='Solution' data-src='solutions/ex-4-3.html'></div>
-</div>
 </section>
 
 

@@ -7,7 +7,7 @@
    viewBox="0 0 38.1 45.720001"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="non_horizontal_profile.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -31,14 +31,16 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
      inkscape:zoom="3.4066218"
-     inkscape:cx="127.10539"
-     inkscape:cy="100.68626"
-     inkscape:window-width="2400"
-     inkscape:window-height="1280"
-     inkscape:window-x="2391"
-     inkscape:window-y="-9"
+     inkscape:cx="61.057556"
+     inkscape:cy="123.43607"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2870"
+     inkscape:window-y="6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2">
     <marker
@@ -86,7 +88,8 @@
        x="15.921809"
        y="29.979601" />
     <g
-       id="path1018">
+       id="path1018"
+       transform="translate(0,-0.71570267)">
       <path
          style="color:#000000;fill:#000000;-inkscape-stroke:none"
          d="m 16.71875,26.150391 v 3.144531 h 0.265625 v -3.144531 z"
@@ -107,7 +110,8 @@
       </g>
     </g>
     <g
-       id="path1020">
+       id="path1020"
+       transform="translate(1.1423169)">
       <path
          style="color:#000000;fill:#000000;-inkscape-stroke:none"
          d="m 17.980469,31.708984 v 0.263672 h 2.523437 v -0.263672 z"
@@ -470,5 +474,55 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 13.203452,11.805439 5.792615,2.703797"
        id="path3686" />
+    <g
+       id="g5"
+       transform="matrix(0,-1,-1,0,44.451957,45.964125)"
+       style="fill:#ff0000">
+      <path
+         style="color:#000000;fill:#ff0000;-inkscape-stroke:none"
+         d="m 16.71875,26.150391 v 3.144531 h 0.265625 v -3.144531 z"
+         id="path1" />
+      <g
+         id="g4"
+         style="fill:#ff0000">
+        <g
+           id="g3"
+           style="fill:#ff0000">
+          <path
+             style="color:#000000;fill:#ff0000;fill-rule:evenodd;stroke-width:0.0992186;stroke-linejoin:round;-inkscape-stroke:none"
+             d="m 17.49163,27.911026 -0.637813,1.734481 -0.637812,-1.734481 c 0.376564,0.277097 0.891769,0.275501 1.275625,0 z"
+             id="path2" />
+          <path
+             style="color:#000000;fill:#ff0000;fill-rule:evenodd;stroke-linejoin:round;-inkscape-stroke:none"
+             d="m 17.501953,27.863281 a 0.04961426,0.04961426 0 0 0 -0.03906,0.0078 c -0.366847,0.263293 -0.857705,0.26424 -1.216797,0 a 0.04961426,0.04961426 0 0 0 -0.07617,0.05664 l 0.636719,1.734375 a 0.04961426,0.04961426 0 0 0 0.09375,0 l 0.638671,-1.734375 a 0.04961426,0.04961426 0 0 0 -0.03711,-0.06445 z m -1.21875,0.08789 c 0.353465,0.212145 0.781863,0.210197 1.140625,0 l -0.570312,1.550781 z"
+             id="path3" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g9"
+       transform="matrix(-1,0,0,1,35.432555,4.4132587)"
+       style="fill:#ff0000">
+      <path
+         style="color:#000000;fill:#ff0000;-inkscape-stroke:none"
+         d="m 16.71875,26.150391 v 3.144531 h 0.265625 v -3.144531 z"
+         id="path5" />
+      <g
+         id="g8"
+         style="fill:#ff0000">
+        <g
+           id="g7"
+           style="fill:#ff0000">
+          <path
+             style="color:#000000;fill:#ff0000;fill-rule:evenodd;stroke-width:0.0992186;stroke-linejoin:round;-inkscape-stroke:none"
+             d="m 17.49163,27.911026 -0.637813,1.734481 -0.637812,-1.734481 c 0.376564,0.277097 0.891769,0.275501 1.275625,0 z"
+             id="path6" />
+          <path
+             style="color:#000000;fill:#ff0000;fill-rule:evenodd;stroke-linejoin:round;-inkscape-stroke:none"
+             d="m 17.501953,27.863281 a 0.04961426,0.04961426 0 0 0 -0.03906,0.0078 c -0.366847,0.263293 -0.857705,0.26424 -1.216797,0 a 0.04961426,0.04961426 0 0 0 -0.07617,0.05664 l 0.636719,1.734375 a 0.04961426,0.04961426 0 0 0 0.09375,0 l 0.638671,-1.734375 a 0.04961426,0.04961426 0 0 0 -0.03711,-0.06445 z m -1.21875,0.08789 c 0.353465,0.212145 0.781863,0.210197 1.140625,0 l -0.570312,1.550781 z"
+             id="path7" />
+        </g>
+      </g>
+    </g>
   </g>
 </svg>
