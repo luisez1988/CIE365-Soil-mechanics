@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 4: Geostatic stresses · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Water_in_soils" data-total="93" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 4: Geostatic stresses</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">93</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Water in hydrostatic conditions</a></li>
+<li><a href="#s3">Principle of effective stress</a></li>
+<li><a href="#s4">In-situ total vertical stresses</a></li>
+<li><a href="#s5">Example 4.1</a></li>
+<li><a href="#s6">Participation question 4.4</a></li>
+<li><a href="#s7">Horizontal stresses</a></li>
+<li><a href="#s8">Example 4.2</a></li>
+<li><a href="#s9">Example 4.3</a></li>
+<li><a href="#s10">Participation question 4.2</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+							<li > <div class='textBox' >
+								We learned about the importance and the steps of <strong style='color:#000'>site investigation</strong>
+							</div>
+								
+								</li>
+							<li > We learned about the <strong style='color:#000'>strengths and limitations</strong> of <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> </li>
+							<li >
+							<div class='textBox' >
+							We learned how <strong style='color:#000'>SPT</strong> and <strong style='color:#000'>CPT</strong> can be used to determine <strong style='color:#000'>soil properties</strong>
+							</div>	
+							</li>
+							<li > We learned how in-situ tests and geophysics can be used to <strong style='color:#000'>draw a geotechnical soil profile</strong></li>
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+					<div class='container' >
+					<div class='col' style="--colw:50%">					
+						<ul class="contentStyle" >
+							<li class="l1">Hydrostatic pore pressure</li>
+							<li class="l1">Interparticle effective stress.</li>
+							<li class="l1">Effective stress principle</li>
+							<li class="l1">At-rest horizontal stresses</li>
+						</ul>
+					</div>
+					<div class='col' style="--colw:50%">
+					<div class='container'>
+					<div class='col' style="--colw:50%">
+						<div class="stickynote" style="height: 300px">
+							<p> Objective covered in this lecture</p>
+							<ul>
+								<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating the effective stress in soils  </li>
+							</ul>
+						</div>
+					</div>
+					<div class='col' style="--colw:50%">
+					<div class='stickynote' style='height: 300px'>
+						<p >After this lecture we will able to:</p>
+						<ul >							
+							<li>Calculate the hydrostatic pore pressure.</li>
+							<li>Calculate geostatic vertical total and effective stresses.</li>
+							<li>Calculate geostatic horizontal total and effective stresses.</li>
+						</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+
+
+
+        
+
+<div class='InquiryBox' >
+What are <strong style='color:orange'>geostatic stresses</strong>?
+</div>
+
+<div class='defBox' name='' >
+Is a field of stress generated by the soil's <span class="blank" data-bid="Water_in_soils.be4eab4c-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> and influenced by <span class="blank" data-bid="Water_in_soils.4932936d-0" style="min-width:34ch" contenteditable="plaintext-only" spellcheck="false"></span>
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<div class='textBox' >
+<strong style='color:#000'>Recall:</strong> Stress is defined as the force per unit area applied on a material. 
+</div>
+
+Since <strong style='color:#000'>force</strong> is a <span class="blank" data-bid="Water_in_soils.ad177a89-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> entity, stress is also a <strong style='color:#000'>multi-dimensional</strong> value
+</div>
+<div class='col' style='--colw:50%'>
+<img loading="lazy" src="figures/stress_definition.svg" style="width:100%" alt=""/>
+</div>
+</div>
+
+
+
+
+
+</section>
+
+<section class="block" id="s2" data-anchor="water-in-hydrostatic-conditions">
+<h2 class="block-title">Water in hydrostatic conditions</h2>
+
+    
+	<div class='textBox' >
+	In <span class="blank" data-bid="Water_in_soils.6f8c8c28-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> conditions, pore water pressure (<strong style='color:green'>\(u\)</strong> ) is controlled by the <span class="blank" data-bid="Water_in_soils.cdfb2e35-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> (GWT) elevation.
+	</div>
+	<div class='container'>
+	<div class='col' style="--colw:50%">
+		<img loading="lazy" src="../../Water_in_soils/FiguresGeneral/phases.svg"  width="90%"></img>
+	</div>
+	<div class='col' style="--colw:50%">
+		<div >		<div class='textBox' >
+			If the soil is <strong style='color:black'>fully dry</strong> \(u=0\)
+		</div></div>
+		<div > 		<div class='textBox' >
+			If the soil is <strong style='color:black'>partially saturated</strong> \(u<0\). <span class="blank" data-bid="Water_in_soils.fde6f95b-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> by the water surface tension and pore size.
+			</div></div>
+		<div >		<div class='textBox' >
+			Below the GWT \(u \geq 0\).
+			</div></div>
+	</div>
+	</div>
+		
+
+
+
+
+<div class='findingBox' >
+Pore pressure is calculated based on <span class="blank" data-bid="Water_in_soils.bbed126d-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> measured <span class="blank" data-bid="Water_in_soils.ff9db661-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>. 
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='../../Water_in_soils/FiguresGeneral/pore_water.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:50%'>
+	<br> <br>
+The <strong style='color:#000'>hydrostatic</strong> pore water pressure is then calculated as: <br>
+<div class='equationBox'>
+\( u= h_w \gamma_w = h_w g \rho_w \)
+</div> <br>
+Where: <br>
+\(h_w\) is the depth below the GWT<br>
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s3" data-anchor="principle-of-effective-stress">
+<h2 class="block-title">Principle of effective stress</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:65%'>
+		<img loading="lazy" src="figures/effective stress.svg.2022_02_10_22_01_41.0.svg" style="width: 100%" alt=""/>
+	</div>
+	<div class='col' style='--colw:35%'>
+	<div class='textBox' >
+	Consider a fully saturated soil. At the grain level the sum of pore pressure and inter-particle forces must balance the total stress applied to the soil element.
+	</div>
+	</div>
+	</div>
+
+	<div class='findingBox' >
+	Thus, 
+	<div class='equationBox' >
+	\( \sigma= \sigma' + u \)
+	</div> <br>
+	 This called the <span class="blank" data-bid="Water_in_soils.f8016512-0" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span>
+	</div>
+
+
+
+	
+		<div class='textBox' >
+	<ul>
+		<li >
+<strong style='color:green'>\(\sigma'\)</strong> is called the <span class="blank" data-bid="Water_in_soils.bf18b1eb-0" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> and is the stress that is transmitted through the <span class="blank" data-bid="Water_in_soils.f7794b3f-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>
+		</li>
+
+		<li >
+	<strong style='color:red'>\(\sigma\)</strong> is the <span class="blank" data-bid="Water_in_soils.dd3ffa54-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> applied to the soil element and is the sum of the intergranular stress and the pore water pressure.
+		</li>
+	</ul>
+
+	</div>
+
+	<div class="container">
+
+
+		<div class="col" style="--colw:75%">
+		
+		<div class='findingBox' >
+		Thus, <strong style='color:red'>soil deformations</strong> is caused by <span class="blank" data-bid="Water_in_soils.e4b42a1c-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> of <strong style='color:green'>effective stress</strong>
+		</div>
+
+		</div>
+		<div class="col" style="--colw:25%">
+			<div class='stickynote' >
+			Note: The principle of effective stresses only applies for dry and fully saturated soils. For partially saturated soils the pressure of the gases entrapped in the soil must be considered.
+			</div>
+
+		</div>
+	</div>
+
+</section>
+
+<section class="block" id="s4" data-anchor="in-situ-total-vertical-stresses">
+<h2 class="block-title">In-situ total vertical stresses</h2>
+
+	
+	<div class='textBox' >
+	<strong style='color:green'>\(\sigma_v\): </strong> Is the <strong style='color:black'>sum of all</strong> vertical stresses above a depth of interest in the subsurface.	
+	</div>
+
+<div class="container">
+	<div class="col" style="--colw:50%">
+		
+	<p>We can calculate this total weight by adding <strong style='color:#000'>all weights</strong> above the depth of interest: <br>
+	<br>
+
+	\( \begin{align}
+	\sigma_v= \int_{z=0}^{z=h} \gamma(z) dz  
+	\end{align} \)
+	</p>
+
+	</div>
+	<div class="col" style="--colw:50%">
+		<figure >
+		  <img loading="lazy" src="../../Water_in_soils/FiguresGeneral/vert_profile.svg" style="width:100%" data-preload/>
+		  <footer ><small></small></footer>
+		</figure>
+	</div>
+</div>
+
+
+	<div class='findingBox' >
+	In a multilayered system (i.e., the typical scenario) you can add the individual weight of each layer above the point of interest.
+	</div>
+	<div class="container">
+		<div class="col" style="--colw:50%">
+			<figure>
+			  <img loading="lazy" src="../../Water_in_soils/FiguresGeneral/multilayer.svg" style="width:100%" data-preload/>
+			  <footer ><small></small></footer>
+			</figure>
+		</div>
+		<div class="col" style="--colw:50%">
+			<p>The <strong style="color:black">total vertical stress</strong> at depth \(z\) is:
+				<div class='equationBox'>
+				\( \begin{align}
+				\sigma_v=\sum_{i=1}^n \gamma_i h_i
+				\end{align} \)
+				
+				</div>				
+			</p>
+			<p>\(n=\) number of interfaces below the ground surface including the water table.</p>
+
+		</div>
+	</div>
+
+</section>
+
+<section class="block" id="s5" data-anchor="example-4-1">
+<h2 class="block-title">Example 4.1</h2>
+
+	
+	<div class='textBox' >
+		<p>Compute the total and effective vertical stresses at point A. Plot the vertical total and effective stresses with the pore pressure profile in the same graph.</p>
+		
+	</div>
+
+	<div class='container'>
+	<div class='col' style='--colw:30%'>
+		<figure>
+			<img loading="lazy" src="../../Water_in_soils/FiguresGeneral/dexample_stress.svg" style="width:100%" data-preload/>
+			<footer ><small></small></footer>
+		  </figure>
+	</div>
+	<div class='col' style='--colw:70%'>
+	<div class='ProblemBox' >
+	
+<div class="sol" data-id="ex-4-1">
+
+  <div class="step">
+    <span class="lead">Total vertical stress at A</span>
+    \(\sigma_{v,A}= \sum_{i=1}^{3} \gamma_{i}h_{i}=\)
+    <span class="blank math" data-bid="Water_in_soils.a198e837-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.1057ebfc-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+    
+  </div>
+
+  <div class="step">
+    <span class="lead">Depth of A below the water table</span>
+    \(h_w=z_A-z_{GWT}=\)
+    <span class="blank math" data-bid="Water_in_soils.3edfcf26-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="Water_in_soils.110f2f3c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+    <span class="note">Measured from the water table, not from the ground surface</span>
+  </div>
+
+
+
+  <div class="step">
+    <span class="lead">Pore pressure at A</span>
+    \(u_A=h_w\gw=\)
+    <span class="blank math" data-bid="Water_in_soils.2cb941d4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.9e5b24b6-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A}=\sigma_{v,A}-u_A=\)
+    <span class="blank math" data-bid="Water_in_soils.d8e4aa34-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.36dd0cc2-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  
+
+</div>
+
+	</div>
+	</div>
+	</div>
+ 
+
+
+
+<div class='ProblemBox' >
+<table style="width: 100%">
+	<tr>	<th>Depth (ft)</th>
+	<th>Unit Weight (pcf)</th>
+	<th>Water height (ft)</th>
+	<th>Total Vertical Stress (psf)</th>
+	<th>Pore Pressure (psf)</th>
+	<th>Effective Vertical Stress (psf)</th></tr>
+	<tr>
+		<td>0</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class="blank" data-bid="Water_in_soils.d46bb8f1-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.779b8360-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.64d8c6ef-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>115</td>
+		<td>0</td>
+		<td> <span class="blank" data-bid="Water_in_soils.b7cdec1f-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.63f7f444-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.48fb9755-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>20</td>
+		<td>120</td>
+		<td>10</td>
+		<td> <span class="blank" data-bid="Water_in_soils.8418affd-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.b9f22ba3-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.dd629199-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+		</tr>
+		</tr>
+		<tr>
+		<td>30</td>
+		<td>135</td>
+		<td>20</td>
+		<td> <span class="blank" data-bid="Water_in_soils.eb494175-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.5d3d8c57-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.073c8cd8-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+
+
+
+</table>
+
+</div>
+
+
+
+<div class='ProblemBox' >
+<img loading="lazy" src="figures/Profile.svg"  alt="" width="100%"/>
+
+</div>
+
+
+</section>
+
+<section class="block" id="s6" data-anchor="participation-question-4-4">
+<h2 class="block-title">Participation question 4.4</h2>
+
+	
+	<div class='InquiryBox' >
+		For the soil profile shown below, select the correct stress profile?
+	</div>
+	
+	<img loading="lazy" src="../../Water_in_soils/FiguresGeneral/Quiz_stresses.svg" width="100%" >
+
+</section>
+
+<section class="block" id="s7" data-anchor="horizontal-stresses">
+<h2 class="block-title">Horizontal stresses</h2>
+
+
+<div class='textBox' >
+Horizontal effective stresses are calculated based on the capacity of the soil to <span class="blank" data-bid="Water_in_soils.3b209b2b-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>. When the soil <strong style='color:black'>doesn't</strong> deform laterally it is in <span class="blank" data-bid="Water_in_soils.07319341-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+</div>
+<div ><div class='defBox' name='Coefficient of lateral earth pressure at-rest' >
+	<strong style='color:green'> \(K_0\):</strong> Is the ratio of the <strong style='color:black'>effective</strong> <span class="blank" data-bid="Water_in_soils.639b5ab3-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> <strong style='color:green'> \(\sigma'_h\)</strong> to the <strong style='color:black'>effective</strong> vertical stress <strong style='color:green'>\(\sigma'_v\)</strong>.	
+	<p><div class='equationBox' >
+		\(K_0=\cfrac{\sigma'_h}{\sigma'_v}\)
+		</div></p>
+	
+	</div> </div>
+
+
+
+<div class='findingBox' >
+	<strong style='color:green'>\(K_0\) </strong> is only valid for horizontal surface conditions and <strong style='color:green'>only to</strong> <span class="blank" data-bid="Water_in_soils.23a16b26-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:40%'>
+	<img loading="lazy"  src="../../Water_in_soils/FiguresGeneral/non_horizontal_profile.svg" width="100%">
+</div>
+<div class='col' style='--colw:60%'>
+<div class='defBox' name='Total horizontal stress' >
+<strong style='color:green'>\(\sigma_h\):</strong> The total horizontal stress can be calculated using the <strong style='color:black'>effective stress principle</strong>.
+<div class='equationBox'>
+\(\sigma_h= \sigma'_h+ u\)
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="block" id="s8" data-anchor="example-4-2">
+<h2 class="block-title">Example 4.2</h2>
+
+	
+	<div class='textBox' >
+		<p>Compute the total and effective horizontal stress at point A. Plot the horizontal total and effective stresses with the pore pressure profile in the same graph.</p>		
+	</div>
+
+	<div class='container'>
+	<div class='col' style='--colw:30%'>
+		<figure>
+			<img loading="lazy" src="../../Water_in_soils/FiguresGeneral/horizontal_example.svg" style="width:100%" data-preload/>
+			<footer ><small></small></footer>
+		</figure>
+	</div>
+	<div class='col' style='--colw:70%'>
+	<div class='ProblemBox' >
+	
+<div class="sol" data-id="ex-4-2">
+
+  <div class="step">
+    <span class="lead">Layer containing point A</span>
+    \(z_A=23.5\unit{ft}\) falls inside the SM layer, so
+    \(K_0=\) <span class="blank" data-bid="Water_in_soils.64b210f0-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">\(K_0\) is material or layer-specific</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Effective vertical stress at A, from Example 4.1</span>
+    \(\sigma'_{v,A}=\) <span class="blank" data-bid="Water_in_soils.a88a3a95-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Effective horizontal stress at A</span>
+    \(\sigma'_{h,A}=K_0\,\sigma'_{v,A}=\)
+    <span class="blank math" data-bid="Water_in_soils.db1c9715-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.f810504c-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+    <span class="note">\(K_0\) multiplies the effective vertical stress, never the total.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Pore pressure at A, from Example 4.1</span>
+    \(u_A=\) <span class="blank" data-bid="Water_in_soils.fdb42231-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Total horizontal stress at A</span>
+    \(\sigma_{h,A}=\sigma'_{h,A}+u_A=\)
+    <span class="blank math" data-bid="Water_in_soils.fac65dd7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.20f46318-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  
+
+</div>
+
+	</div>
+	</div>
+	</div>
+ 
+
+
+
+<div class='ProblemBox' >
+<table style="width: 100%; table-layout: fixed; font-size: 0.5em">
+	<tr>
+		<th style="overflow-wrap: anywhere">Layer</th>
+	<th style="overflow-wrap: anywhere">Depth (ft)</th>
+	<th style="overflow-wrap: anywhere">Unit Weight (pcf)</th>
+	<th style="overflow-wrap: anywhere">\(K_o\)</th>
+	<th style="overflow-wrap: anywhere">Water depth (ft)</th>
+	<th style="overflow-wrap: anywhere">Total vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere">Pore Pressure (psf)</th>
+	<th style="overflow-wrap: anywhere">Effective vertical Stress (psf)</th>
+	<th style="overflow-wrap: anywhere">Horizontal Effective Stress (psf)</th>
+	<th style="overflow-wrap: anywhere">Total horizontal Stress (psf)</th>
+
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>0</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class="blank" data-bid="Water_in_soils.daa874f2-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.946da465-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.9bc159b1-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.08fb7e38-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.bb8cb515-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+	<tr>
+		<td>CL</td>
+		<td>10\(^-\)</td>
+		<td>115</td>
+		<td>0.5</td>
+		<td>0</td>
+		<td><span class="blank" data-bid="Water_in_soils.f05e4d22-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.0f358bf3-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.b4bdcb9c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.6d0d37c6-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.c9183d14-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>10\(^+\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>0</td>
+		<td><span class="blank" data-bid="Water_in_soils.12629cad-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.9e4eaddb-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.e6bab771-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.fd02548b-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.29e63a14-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+	<tr>
+		<td>MH</td>
+		<td>20\(^-\)</td>
+		<td>120</td>
+		<td>0.4</td>
+		<td>10</td>
+		<td><span class="blank" data-bid="Water_in_soils.3b699af0-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.fc903ad8-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.d52bdcac-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.bcda1dd6-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.c4aec773-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+		<tr>
+		<td>SM</td>
+		<td>20\(^+\)</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>10</td>
+		<td><span class="blank" data-bid="Water_in_soils.85fab383-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.9f9ac4e8-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.7c6db18e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.a99cfa41-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.85b213cd-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+		</tr>
+		<tr>
+		<td>SM</td>
+		<td>30</td>
+		<td>135</td>
+		<td>0.6</td>
+		<td>20</td>
+		<td><span class="blank" data-bid="Water_in_soils.1b017493-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> </td>
+		<td><span class="blank" data-bid="Water_in_soils.08fe40b3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.08517c2f-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.3726a4b2-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+		<td><span class="blank" data-bid="Water_in_soils.32f8f28f-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+	</tr>
+</table>
+</div>
+
+
+
+<div class='ProblemBox' >
+
+<img loading="lazy" src="figures/K0stresses.svg" style="width: 100%" alt=""/>
+
+</div>
+
+
+</section>
+
+<section class="block" id="s9" data-anchor="example-4-3">
+<h2 class="block-title">Example 4.3</h2>
+
+
+<div class='textBox' >
+What is the effect of lowering the GWT 3 ft on the effective vertical stresses for the soil in Example 4.1. What if the GWT is at the surface?
+
+
+</div>
+
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-4-3">
+
+  <div class="note"
+   > 
+  </div>
+
+  <div class="step">
+    <span class="lead">New water table depth lowered 3 ft</span>
+    \(h_{w,1}=z_A-(z_{GWT}+3)=\)
+    <span class="blank math" data-bid="Water_in_soils.b9fae20b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="Water_in_soils.a92ed3ed-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Pore pressure at A</span>
+    \(u_{A,1}=h_{w,1}\gw=\)
+    <span class="blank math" data-bid="Water_in_soils.c251adf6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="Water_in_soils.3e9c7526-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A,1}=\sigma_{v,A}-u_{A,1}=\)
+    <span class="blank math" data-bid="Water_in_soils.c36af063-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.75f77427-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Effect</span>
+    \(\Delta\sigma'_v=\) <span class="blank" data-bid="Water_in_soils.999d7655-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\), an
+    <span class="blank ans" data-bid="Water_in_soils.8fc1138d-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) <span class="blank ans" data-bid="Water_in_soils.046c31d7-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> the
+    soil at A \(\implies\) <span class="blank ans" data-bid="Water_in_soils.8a7a31de-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    
+  </div>
+
+  <div class="step">
+    <span class="lead">New water table depth at the surface</span>
+    \(h_{w,2}=z_A-0=\)
+    <span class="blank" data-bid="Water_in_soils.449c8248-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Pore pressure at A</span>
+    \(u_{A,2}=h_{w,2}\gw=\)
+    <span class="blank math" data-bid="Water_in_soils.7ad0943b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="Water_in_soils.c7202a47-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Effective vertical stress at A</span>
+    \(\sigma'_{v,A,2}=\sigma_{v,A}-u_{A,2}=\)
+    <span class="blank math" data-bid="Water_in_soils.1b547d4b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Water_in_soils.b71aaa87-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Effect</span>
+    \(\Delta\sigma'_v=\) <span><span class="blank" data-bid="Water_in_soils.999d7655-1" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span></span> \(\unit{psf}\), a
+    <span class="blank ans" data-bid="Water_in_soils.7ee0fe64-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies\) <span class="blank ans" data-bid="Water_in_soils.fc64f38e-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> the
+    soil at A \(\implies\) <span class="blank ans" data-bid="Water_in_soils.8a7a31de-1" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="block check-yourself" id="s10" data-anchor="participation-question-4-2">
+<h2 class="block-title">Participation question 4.2</h2>
+
+
+<div class='InquiryBox' >
+	What is the effect of lowering the ground water table on the effective vertical stresses?
+</div>
+
+
+<ol class='iClicker' >
+<li class='l2'>It is similar to loading the soil</li>
+<li class='l2'>It is similar to unloading the soil</li>
+<li class='l2'>It doesn't affect the soil</li>
+</ol>
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

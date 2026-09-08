@@ -112,6 +112,20 @@
   font-family: var(--sol-hand), MJXZERO, MJXTEX !important;
 }
 
+/* Stretchy assemblies (underbrace, overbrace, big delimiters, \xrightarrow, ...)
+   are built from several mjx-c pieces whose glyphs live in MathJax's own Size/AMS
+   fonts, not in MJXTEX. MathJax ships its own rule for this
+   (`mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: ... !important }`),
+   but a class selector always outranks type selectors, so the rule above
+   (`.sol mjx-c`) was winning and handing Caveat glyphs that do not exist there —
+   the brace fell apart into disconnected boxes instead of one curved piece.
+   Re-declaring MathJax's own font list at higher specificity restores it; the
+   numbers and letters inside the brace are untouched, only the brace itself. */
+.sol mjx-stretchy-v mjx-c,
+.sol mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important;
+}
+
 /* The deck is authored at 1280x720 with --r-main-font-size: 40px. A solution
    carries far more lines than a normal slide, so it is set well down from that
    — a six-step solution plus a problem statement has to fit in 720px. */
@@ -263,12 +277,20 @@
    positioning lets consecutive notes overlap each other. In flow the browser
    wraps them, so overlap is structurally impossible.
 
-   The cost is height, which makes note length a hard constraint — roughly 110
-   visible characters. Longer explanations go in `data-slide` (short form for
-   the slide, full text for the book). See SOLUTIONS.md. */
+   max-width used to be 38% (a narrow column to the right of the step), which
+   read as a margin note but wasted the slide's width and cost height instead
+   — every note past a few words wrapped to two or three short lines. Almost
+   the full step width reads as one wrapped paragraph instead, using far less
+   vertical space for the same text. The `- 1.3em` matches the note's own
+   left margin below, so it cannot overflow past the step's right edge.
+
+   The cost is still height, so note length is still a soft budget — roughly
+   180-200 visible characters now fits on one wrapped line instead of ~110.
+   Longer explanations go in `data-slide` (short form for the slide, full text
+   for the book). See SOLUTIONS.md. */
 .reveal .sol .step > .note {
   display: inline-block;
-  max-width: 38%;
+  max-width: calc(100% - 1.3em);
   vertical-align: top;
   margin: 0 0 0 1.3em;
 }
