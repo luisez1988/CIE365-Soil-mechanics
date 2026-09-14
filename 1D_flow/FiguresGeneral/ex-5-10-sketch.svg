@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example 5.10, part 1: sketch of the composite aquifer.
+     Three horizontal layers, head fixed on the top and bottom faces, flow downward. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" width="560" height="330"
+     font-family="'Times New Roman', Times, serif"
+     role="img"
+     aria-label="Three horizontal soil layers. The head is fixed at 101.3 m on the top face and 96.2 m on the bottom face, so the flow is vertically downward. Layer 1 is 1.5 m thick with kx 6 and ky 0.1 m per day, Layer 2 is 3.9 m thick with kx 0.5 and ky 0.02, Layer 3 is 2.75 m thick with kx 2.5 and ky 0.05. Total thickness 8.15 m.">
+
+  <defs>
+    <marker id="ah10" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0a5ad6"/>
+    </marker>
+    <marker id="dim10" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <!-- the three layers, drawn to scale: 8.15 m spans 210 px -->
+  <rect x="150" y="62"  width="270" height="39"  fill="#e6d9ab" stroke="#333333" stroke-width="1.6"/>
+  <rect x="150" y="101" width="270" height="100" fill="#c2b184" stroke="#333333" stroke-width="1.6"/>
+  <rect x="150" y="201" width="270" height="71"  fill="#dbc99e" stroke="#333333" stroke-width="1.6"/>
+
+  <!-- boundary conditions on the two faces -->
+  <line x1="140" y1="62"  x2="430" y2="62"  stroke="#0a5ad6" stroke-width="3"/>
+  <line x1="140" y1="272" x2="430" y2="272" stroke="#0a5ad6" stroke-width="3"/>
+  <text x="285" y="50"  text-anchor="middle" font-size="16" fill="#0a5ad6">h = 101.3 m</text>
+  <text x="285" y="292" text-anchor="middle" font-size="16" fill="#0a5ad6">h = 96.2 m</text>
+
+  <!-- downward flow -->
+  <line x1="172" y1="74" x2="172" y2="260" stroke="#0a5ad6" stroke-width="2.2" marker-end="url(#ah10)"/>
+  <line x1="402" y1="74" x2="402" y2="260" stroke="#0a5ad6" stroke-width="2.2" marker-end="url(#ah10)"/>
+
+  <text x="287" y="87" text-anchor="middle" font-size="15">Layer 1 &#160;&#160; k<tspan font-size="11" dy="4">x</tspan><tspan dy="-4"> = 6,&#160; </tspan>k<tspan font-size="11" dy="4">y</tspan><tspan dy="-4"> = 0.1 &#160;m/d</tspan></text>
+  <text x="287" y="157" text-anchor="middle" font-size="15">Layer 2 &#160;&#160; k<tspan font-size="11" dy="4">x</tspan><tspan dy="-4"> = 0.5,&#160; </tspan>k<tspan font-size="11" dy="4">y</tspan><tspan dy="-4"> = 0.02 &#160;m/d</tspan></text>
+  <text x="287" y="242" text-anchor="middle" font-size="15">Layer 3 &#160;&#160; k<tspan font-size="11" dy="4">x</tspan><tspan dy="-4"> = 2.5,&#160; </tspan>k<tspan font-size="11" dy="4">y</tspan><tspan dy="-4"> = 0.05 &#160;m/d</tspan></text>
+
+  <!-- layer thicknesses -->
+  <line x1="445" y1="62"  x2="445" y2="101" stroke="#333333" marker-start="url(#dim10)" marker-end="url(#dim10)"/>
+  <line x1="445" y1="101" x2="445" y2="201" stroke="#333333" marker-start="url(#dim10)" marker-end="url(#dim10)"/>
+  <line x1="445" y1="201" x2="445" y2="272" stroke="#333333" marker-start="url(#dim10)" marker-end="url(#dim10)"/>
+  <text x="453" y="87"  font-size="15">1.5 m</text>
+  <text x="453" y="157" font-size="15">3.9 m</text>
+  <text x="453" y="242" font-size="15">2.75 m</text>
+
+  <!-- total thickness -->
+  <line x1="128" y1="62" x2="128" y2="272" stroke="#333333" marker-start="url(#dim10)" marker-end="url(#dim10)"/>
+  <text x="118" y="167" text-anchor="middle" font-size="15" transform="rotate(-90 118 167)">L = 8.15 m</text>
+</svg>

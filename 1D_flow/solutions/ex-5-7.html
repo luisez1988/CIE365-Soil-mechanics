@@ -1,0 +1,76 @@
+<!-- Example 5.7 — heads and head loss in a downward-flow permeameter.
+     Legacy figure: FiguresGeneral/ex570.svg
+     Part 1 sits in a half-width column beside the figure: two steps is its ceiling. -->
+<div class="sol" data-id="ex-5-7">
+
+  <div class="step" data-part="1">
+    <span class="lead">Elevation heads, from the datum at E</span>
+    <table class="sol-table">
+      <tr><th>Point</th><th>A</th><th>B</th><th>C</th><th>D</th><th>F</th></tr>
+      <tr><td class="lbl">\(\hz\) (cm)</td>
+          <td><span class="fill">40</span></td>
+          <td><span class="fill">35</span></td>
+          <td><span class="fill">20</span></td>
+          <td><span class="fill">7.5</span></td>
+          <td><span class="fill">&minus;5</span></td></tr>
+    </table>
+    <span class="note"
+      data-slide="F lies below the datum, so \(\hz_F\) is <strong>negative</strong>.">F
+    lies <em>below</em> the datum, so its elevation head is <strong>negative</strong>. The
+    datum can go anywhere, but it must then be used everywhere: moving it shifts every
+    \(\hz\) and every \(h\) by the same constant and leaves every head <em>loss</em>
+    untouched. Losses are what the apparatus actually measures.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Heads at the two ends</span>
+    Top free surface: \(h=\hz+0=\) <span class="fill">40</span> \(\unit{cm}\). &nbsp;
+    The downstream surface sits on the datum, so the head at the exit is
+    <span class="fill">0</span> \(\unit{cm}\).
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Above the soil, nothing is lost</span>
+    Standing water loses no head, so \(h_B=h_C=\) <span class="fill">40</span>
+    \(\unit{cm}\) and the loss down to C is <span class="fill">0</span>.
+    <span class="note">The first 20 cm is free water. It changes \(\hp\) from point to
+    point, but never \(h\).</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Gradient through the soil</span>
+    \(L_{soil}=\) <span class="fill">25</span> \(\unit{cm}\) (C down to F), so
+    \(i=\dfrac{\Delta h}{L_{soil}}=\) <span class="fill">\(\dfrac{40-0}{25}\)</span>
+    \(=\) <span class="ans">1.6</span>
+    <span class="note">The flow path is the <em>thickness of the soil</em>, not the
+    distance between the two water surfaces.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Total head at D, then at F</span>
+    \(h_D=40-i\,(12.5)=\) <span class="fill">\(40-1.6(12.5)\)</span> \(=\)
+    <span class="ans">20</span> \(\unit{cm}\); &nbsp;
+    \(h_F=40-i\,(25)=\) <span class="ans">0</span> \(\unit{cm}\)
+    <span class="note">\(h_F\) returns the exit condition, which was never used to find
+    \(i\). That is the check, not a fourth answer.</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Summary — \(\hp=h-\hz\), and the losses</span>
+    <table class="sol-table">
+      <tr><th>Point</th><th>\(\hp\) (cm)</th><th>\(\hz\) (cm)</th><th>\(h\) (cm)</th><th>\(\Delta h\) from previous</th><th>\(\Delta h\) cumulative</th></tr>
+      <tr><td class="lbl">B</td><td><span class="ans">5</span></td><td>35</td><td><span class="ans">40</span></td><td><span class="fill">0</span></td><td><span class="fill">0</span></td></tr>
+      <tr><td class="lbl">C</td><td><span class="ans">20</span></td><td>20</td><td><span class="ans">40</span></td><td><span class="fill">0</span></td><td><span class="fill">0</span></td></tr>
+      <tr><td class="lbl">D</td><td><span class="ans">12.5</span></td><td>7.5</td><td><span class="ans">20</span></td><td><span class="fill">20</span></td><td><span class="fill">20</span></td></tr>
+      <tr><td class="lbl">F</td><td><span class="ans">5</span></td><td>&minus;5</td><td><span class="ans">0</span></td><td><span class="fill">20</span></td><td><span class="fill">40</span></td></tr>
+    </table>
+    <span class="note"
+      data-slide="E has zero <em>elevation</em> head, but sits in the soil — so its total head is not zero.">Every
+    \(\hp\) here is the height its standpipe stands above its own tapping point; read them
+    off the figure and check. E is worth a second look too: the datum passes through it,
+    so its <em>elevation</em> head is zero, but E is inside the soil rather than in the
+    free water below, so its total head is not. A point can sit on the datum and still
+    have head left to lose.</span>
+  </div>
+
+</div>

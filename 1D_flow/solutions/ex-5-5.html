@@ -1,0 +1,58 @@
+<!-- Example 5.5 — field permeability from a tracer breakthrough test.
+     Legacy figures: FiguresGeneral/EX550.svg (part 1) + EX551.svg (part 2) -->
+<div class="sol" data-id="ex-5-5">
+
+  <div class="step" data-part="1">
+    <span class="lead">What the well levels are</span>
+    The water level standing in an open well <em>is</em> the total head there, so
+    \(h_A=18.4\unit{m}\) and \(h_B=17.1\unit{m}\) are used as they stand.
+    <span class="note"
+      data-slide="Do not subtract elevations from these — they are already total heads.">Do
+    not subtract elevations from these. They are already total heads, with no need to
+    separate \(\hz\) from \(\hp\), which is the whole convenience of an open well.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Hydraulic gradient</span>
+    \(i=\dfrac{h_A-h_B}{L}=\) <span class="fill">\(\dfrac{18.4-17.1}{20}\)</span>
+    \(=\) <span class="ans">0.065</span>
+    <span class="note">Dimensionless. Answer (a).</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Average linear velocity</span>
+    The tracer travels through the pores, so it measures \(\vs\) directly:
+    \(\vs=\dfrac{L}{\Delta t}=\) <span class="fill">\(\dfrac{20}{167}\)</span> \(=\)
+    <span class="fill">0.120</span> \(\unit{m/hr}=\)
+    <span class="ans">\(\ee{3.33}{-3}\)</span> \(\unit{cm/s}\)
+    <span class="note"
+      data-slide="\(\times100\unit{cm/m}\div3600\unit{s/hr}\). Answer (b) — &ldquo;average linear velocity&rdquo; is \(\vs\).">Convert
+    with \(\times100\unit{cm/m}\) then \(\div3600\unit{s/hr}\). Answer (b): "average
+    linear velocity" is the hydrogeologist's name for the true seepage velocity \(\vs\)
+    introduced on the previous slide. The straight line between the holes is the shortest
+    path a tracer could take, so this is a lower bound.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Darcy velocity</span>
+    Darcy's law is written in \(\vD\), not \(\vs\), so convert first:
+    \(\vD=n_e\,\vs=\) <span class="fill">\(0.25\times\ee{3.33}{-3}\)</span> \(=\)
+    <span class="fill">\(\ee{8.32}{-4}\)</span> \(\unit{cm/s}\)
+    <span class="note"
+      data-slide="\(n_e=0.25\) is on the <em>figure</em>, not in the text. Multiply, so \(\vD<\vs\).">\(n_e=0.25\)
+    is printed on the <em>figure</em>, not in the statement — without it part (c) cannot
+    be answered. Multiply, do not divide: water squeezing through the pores moves faster
+    than the fictitious velocity spread over the whole face, so \(\vD<\vs\). And
+    \(n_e\le n\), because dead-end pores carry no flow.</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Hydraulic conductivity</span>
+    From \(\vD=k\,i\): &nbsp; \(k=\dfrac{\vD}{i}=\)
+    <span class="fill">\(\dfrac{\ee{8.32}{-4}}{0.065}\)</span> \(=\)
+    <span class="ans">\(\ee{1.28}{-2}\)</span> \(\unit{cm/s}\)
+    <span class="note">Answer (c), and about 11 m/day. Check it against the permeability
+    table: clean sand, which fits a productive aquifer.</span>
+  </div>
+
+</div>

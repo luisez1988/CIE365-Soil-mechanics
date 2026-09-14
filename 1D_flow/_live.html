@@ -1433,4 +1433,51 @@ Reveal.initialize({
 
 </script>
 
+
+<script>
+/* TEMPORARY probe harness - delete this file when done. */
+(function(){
+  var p=new URLSearchParams(location.search), n=+p.get('s');
+  if(isNaN(n)) return;
+  function report(){
+    var sec=Reveal.getCurrentSlide();
+    var sol=sec.querySelector('.sol');
+    var d=document.createElement('div');
+    d.id='probe-out';
+    if(sol){
+      var b=sol.getBoundingClientRect(), r=sec.getBoundingClientRect();
+      var scale=(Reveal.getScale&&Reveal.getScale())||1;
+      var sc=(Reveal.getScale&&Reveal.getScale())||1;
+      var pb=sol.closest('.ProblemBox');
+      var pbr=pb?pb.getBoundingClientRect():null;
+      d.textContent='slide '+n
+        +' | revealScale='+(Reveal.getScale?Reveal.getScale().toFixed(4):'?')
+        +' | secH='+Math.round(r.height)+' secTop='+Math.round(r.top)
+        +' | solH='+Math.round(b.height/scale)
+        +' | solTopInSec='+Math.round((b.top-r.top)/scale)
+        +' | solBottomInSec='+Math.round((b.bottom-r.top)/scale)
+        +' | pbH='+(pbr?Math.round(pbr.height/scale):'-')
+        +' | pbOverflow='+(pb?getComputedStyle(pb).overflow:'-')
+        +' | secOverflow='+getComputedStyle(sec).overflow
+        +' | fragsLeft='+sec.querySelectorAll('.fragment:not(.visible)').length;
+    } else { d.textContent='slide '+n+' NO .sol FOUND'; }
+    d.style.cssText='position:fixed;left:0;bottom:0;z-index:99999;background:#fff;color:#000;font:12px monospace';
+    document.body.appendChild(d);
+    document.title='PROBE-DONE';
+  }
+  function go(){
+    Reveal.slide(n);
+    var tries=0;
+    (function stepOn(){
+      var more = Reveal.nextFragment();
+      if(more !== false && ++tries < 400){ setTimeout(stepOn, 4); return; }
+      setTimeout(report, 2500);
+    })();
+  }
+  var t=0, poll=setInterval(function(){
+    if(window.Reveal && Reveal.isReady && Reveal.isReady()){ clearInterval(poll); setTimeout(go,1500); }
+    else if(++t>300){ clearInterval(poll); document.title='PROBE-NO-REVEAL'; }
+  },50);
+})();
+</script>
 </html>

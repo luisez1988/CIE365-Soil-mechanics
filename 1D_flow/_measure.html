@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="dist/reset.css">
+<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+<link rel="stylesheet" href="plugin/customcontrols/style.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax={tex:{inlineMath:[['\(','\)']],displayMath:[['\[','\]']],macros:window.SOL_MACROS},
+options:{ignoreHtmlClass:'blank',skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+<style>
+ body{margin:0}
+ .container{display:flex}
+ .col{flex:wrap}
+ /* a real slide box: reveal's unscaled 1280x720 coordinate space */
+ #stage{position:absolute;left:-4000px;top:0;width:1280px;height:720px;overflow:visible}
+ #stage .slides{position:static;width:1280px;height:720px;left:0;top:0;transform:none;zoom:1}
+ #stage .slides > section{display:block!important;position:static!important;width:1280px;
+   height:720px;top:0;opacity:1!important;visibility:visible!important;overflow:visible}
+</style>
+</head>
+<body>
+<div id="stage" class="reveal"><div class="slides"></div></div>
+<pre id="out" style="font:13px monospace;white-space:pre"></pre>
+<script>
+function selectPart(root,part){
+  if(!part) return;
+  root.querySelectorAll('[data-part]').forEach(function(el){
+    if(el.getAttribute('data-part')!==part) el.remove();});
+}
+function useSlideText(root){
+  root.querySelectorAll('.note[data-slide]').forEach(function(el){
+    el.innerHTML=el.getAttribute('data-slide');});
+}
+(async function(){
+  await MathJax.startup.promise;
+  var slides=await (await fetch('_slides.json')).json();
+  var stage=document.querySelector('#stage .slides'), out=document.getElementById('out');
+  var rows=[];
+  for(const s of slides){
+    stage.innerHTML=s.html;
+    var host=stage.querySelector('.Solution');
+    var html=await (await fetch('solutions/'+s.id+'.html')).text();
+    host.innerHTML=html;
+    selectPart(host,s.part); useSlideText(host);
+    await MathJax.typesetPromise([host]);
+    var sec=stage.querySelector('section');
+    var secTop=sec.getBoundingClientRect().top;
+    var sol=host.querySelector('.sol');
+    var bottom=sol.getBoundingClientRect().bottom-secTop;
+    // the cream ProblemBox the solution sits in
+    var pb=host.closest('.ProblemBox');
+    var pbTop=pb?Math.round(pb.getBoundingClientRect().top-secTop):-1;
+    var over=bottom-720;
+    rows.push(('slide '+s.idx+'  '+s.id+' p'+(s.part||'-')).padEnd(26)
+      +'boxTop='+String(pbTop).padStart(4)
+      +'  solBottom='+String(Math.round(bottom)).padStart(4)
+      +'  '+(over>0?'*** OVERFLOWS by '+Math.round(over)+'px':'fits, '+Math.round(-over)+'px spare'));
+  }
+  out.textContent=rows.join('\n');
+})();
+</script>
+</body></html>

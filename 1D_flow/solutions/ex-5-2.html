@@ -1,0 +1,65 @@
+<!-- Example 5.2 — hydraulic gradient across an aquitard, piezometric line of a confined aquifer.
+     Legacy figures: FiguresGeneral/EX480.svg (part 1) + EX481.svg (part 2)
+     Part 1 sits in a half-width column beside the figure: two steps is its ceiling. -->
+<div class="sol" data-id="ex-5-2">
+
+  <div class="step" data-part="1">
+    <span class="lead">Which water controls which point</span>
+    A sits <em>above</em> the CH clay, in the shallow system held up by the Elv. 100 m
+    surface. B sits <em>below</em> it, in the sand that daylights under the lake at
+    Elv. 200 m.
+    <span class="note"
+      data-slide="A point takes the head of the water body it is <em>connected</em> to.">The
+    head at a point is set by the water body it is <em>connected</em> to, not by the
+    nearest water surface drawn on the page. The clay separates the two systems, so which
+    side of it a point lies on decides everything that follows.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Head at A</span>
+    \(\hp=\) <span class="fill">\(100-65\)</span> \(=\) <span class="fill">35</span>
+    \(\unit{m}\), so \(h_A=z_A+\hp=\) <span class="fill">\(65+35\)</span> \(=\)
+    <span class="ans">100</span> \(\unit{m}\)
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Head at B</span>
+    \(\hp=\) <span class="fill">\(200-56\)</span> \(=\) <span class="fill">144</span>
+    \(\unit{m}\), so \(h_B=z_B+\hp=\) <span class="fill">\(56+144\)</span> \(=\)
+    <span class="ans">200</span> \(\unit{m}\)
+    <span class="note">B is artesian: its pressure head is far larger than its depth below
+    ground. Drill into it and the water rises.</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Gradient across the clay</span>
+    \(h_B>h_A\), so flow is <strong>upward</strong>, B to A, through
+    \(L_{AB}=\) <span class="fill">9</span> \(\unit{m}\):
+    \(i=\dfrac{h_B-h_A}{L_{AB}}=\) <span class="fill">\(\dfrac{200-100}{9}\)</span>
+    \(=\) <span class="ans">11.1</span>
+    <span class="note"
+      data-slide="A regional aquifer runs at \(i\approx0.01\). Thin clays are where the steep gradients live.">A
+    regional aquifer runs at \(i\approx0.01\). A thin clay separating two reservoirs with
+    very different heads is where the steep gradients live, and an upward one through an
+    aquitard is the condition behind the heave problems dealt with later in the
+    course.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Heads at C and D</span>
+    Both lie in the same confined sand, so both take that unit's head:
+    \(h_C=h_D=\) <span class="fill">200</span> \(\unit{m}\), with
+    \(\hp=\) <span class="fill">\(200-45\)</span> \(=\) <span class="fill">155</span>
+    \(\unit{m}\) at each.
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Gradient C to D, and the line</span>
+    \(i_{CD}=\) <span class="fill">\(\dfrac{200-200}{500}\)</span> \(=\)
+    <span class="ans">0</span>, so the piezometric line from C to D is
+    <strong>horizontal</strong> at <span class="ans">Elv. 200 m</span> and there is
+    <strong>no horizontal flow</strong> between them.
+    <span class="note">Zero gradient means no flow. It does not mean no water pressure.</span>
+  </div>
+
+</div>

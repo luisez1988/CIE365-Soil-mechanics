@@ -1,0 +1,95 @@
+<!-- Example 5.10 — equivalent horizontal and vertical conductivity of a layered aquifer.
+     Legacy figure: FiguresGeneral/EX51000.svg
+     Sketch (part 1) drawn for this solution: FiguresGeneral/ex-5-10-sketch.svg
+     Part 1 puts the sketch beside its algebra so the drawing costs no vertical space. -->
+<div class="sol" data-id="ex-5-10">
+
+  <div class="sol-cols" data-part="1">
+    <div class="sol-col" style="flex: 0 0 38%">
+      <span class="sol-fig">
+        <img src="FiguresGeneral/ex-5-10-sketch.svg" width="440"
+             alt="Three horizontal layers with the head fixed on the top and bottom faces and the flow directed downward."/>
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step" data-part="1">
+        <span class="lead">Sketch the system</span>
+        Layer 1 on top, head fixed on both faces, so the flow is <strong>vertically
+        downward</strong>: \(L=1.5+3.9+2.75=\) <span class="fill">8.15</span> \(\unit{m}\)
+        <span class="note">Draw it first — and note \(k_y\) here is the <em>vertical</em>
+        conductivity.</span>
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Horizontal conductivity — parallel</span>
+        Along the bedding the layers share \(i\) and their discharges add:
+        \(k_{x,eq}=\dfrac{\sum k_{x,i}L_i}{L}=\)
+        <span class="fill">\(\dfrac{(6)(1.5)+(0.5)(3.9)+(2.5)(2.75)}{8.15}\)</span>
+        \(=\) <span class="ans">2.19</span> \(\unit{m/d}\)
+        <span class="note">A thickness-weighted average, so the <em>most</em> permeable
+        layer pulls it up.</span>
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Vertical conductivity — series</span>
+        Across the bedding the layers share \(q\) and their head losses add:
+        \(\displaystyle\sum\dfrac{L_i}{k_{y,i}}=\)
+        <span class="fill">\(\dfrac{1.5}{0.1}+\dfrac{3.9}{0.02}+\dfrac{2.75}{0.05}\)</span>
+        \(=\) <span class="fill">265</span> \(\unit{d}\), so \(k_{y,eq}=\dfrac{L}{\sum L_i/k_{y,i}}=\)
+        <span class="fill">\(\dfrac{8.15}{265}\)</span> \(=\)
+        <span class="ans">\(\ee{3.08}{-2}\)</span> \(\unit{m/d}\)
+        <span class="note"
+          data-slide="Same layers, two formulas: <em>vertical</em> is series, <em>horizontal</em> is parallel.">Same
+        three layers, two different formulas, and the direction of flow picks between
+        them: crossing the layers is <em>series</em> and adds \(L_i/k_i\); running along
+        them is <em>parallel</em> and adds \(k_iL_i\). Series is dragged down by the
+        <em>least</em> permeable layer, which is why it is so much the smaller of the
+        two — about seventy times smaller here, and nothing in the data said
+        "anisotropic". The layering manufactures it.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Vertical gradient</span>
+    \(i_y=\dfrac{\Delta h}{L}=\) <span class="fill">\(\dfrac{101.3-96.2}{8.15}\)</span>
+    \(=\) <span class="fill">0.626</span>
+    <span class="note">The head is fixed on the two outer faces, so this is the average
+    across the whole stack, not the gradient in any one layer.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Vertical flow rate</span>
+    \(q=k_{y,eq}\,i_y=\) <span class="fill">\((\ee{3.08}{-2})(0.626)\)</span> \(=\)
+    <span class="ans">\(\ee{1.92}{-2}\)</span> \(\unit{m^3/d}\) per \(\unit{m^2}\)
+    <span class="note">No plan area is given, so this is a discharge <em>per unit plan
+    area</em> — which is why it carries units of m/d.</span>
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Head loss across each layer</span>
+    The same \(q\) crosses all three, so \(\Delta h_i=\dfrac{q\,L_i}{k_{y,i}}\): &nbsp;
+    \(\Delta h_1=\) <span class="fill">\(\dfrac{(\ee{1.92}{-2})(1.5)}{0.1}\)</span>
+    \(=\) <span class="fill">0.289</span>, &nbsp;
+    \(\Delta h_2=\) <span class="fill">3.753</span>, &nbsp;
+    \(\Delta h_3=\) <span class="fill">1.058</span> \(\unit{m}\)
+    <span class="note">Layer 2 is under half the thickness and takes nearly three quarters
+    of the loss. The tightest layer runs the problem.</span>
+  </div>
+
+  <div class="step result" data-part="2">
+    <span class="lead">Total head through the profile</span>
+    <table class="sol-table">
+      <tr><th>Layer</th><th>\(h\) top (m)</th><th>\(h\) middle (m)</th><th>\(h\) base (m)</th></tr>
+      <tr><td class="lbl">1</td><td>101.300</td><td><span class="ans">101.156</span></td><td><span class="ans">101.011</span></td></tr>
+      <tr><td class="lbl">2</td><td><span class="fill">101.011</span></td><td><span class="ans">99.135</span></td><td><span class="ans">97.258</span></td></tr>
+      <tr><td class="lbl">3</td><td><span class="fill">97.258</span></td><td><span class="ans">96.729</span></td><td><span class="ans">96.200</span></td></tr>
+    </table>
+    <span class="note">Subtract each loss in turn; the middle of a layer is half its loss
+    below its top. The profile must land on the head given at the base — that is the
+    check.</span>
+  </div>
+
+</div>
