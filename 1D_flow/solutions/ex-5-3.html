@@ -3,11 +3,8 @@
 
   <div class="step">
     <span class="lead">Pick the right test equation</span>
-    The head is <em>held constant</em>, so Darcy's law applies unchanged for the whole
-    test: \(V=q\,t=k\,i\,A\,t\), with \(i=\dfrac{h}{L}\).
-    <span class="note">\(T=20^{\circ}\)C is the reference temperature for \(k\) — no
-    viscosity correction. That is the only reason it is given.</span>
-  </div>
+    The head is <em>held constant</em> \(implies\): \(\boxed{k= \dfrac{Q \ L}{A \Delta h \Delta t}}\).
+    </div>
 
   <div class="step">
     <span class="lead">Cross-sectional area</span>
@@ -18,33 +15,16 @@
 
   <div class="step">
     <span class="lead">Volume collected</span>
-    \(V=\) <span class="fill">1054</span> \(\unit{cm^3}\)
-    <span class="note">A <em>mass</em> was measured; Darcy's law needs a volume. At
-    \(20^{\circ}\)C, \(\rho=1\unit{g/cm^3}\) — same number, different unit.</span>
+    \(Q=\) <span class="fill">1054</span> \(\unit{cm^3} \) 
+    <span class="note">Beacause at \(20^{\circ}\)C, \(\rho=1\unit{g/cm^3}\) </span>
   </div>
 
-  <div class="step">
-    <span class="lead">Flow rate</span>
-    \(q=\dfrac{V}{t}=\) <span class="fill">\(\dfrac{1054}{120}\)</span>
-    \(=\) <span class="fill">8.78</span> \(\unit{cm^3/s}\)
-    <span class="note">\(t=2\) min \(=120\) s. Convert <em>before</em> substituting.</span>
-  </div>
 
-  <div class="step">
-    <span class="lead">Hydraulic gradient</span>
-    \(i=\dfrac{h}{L}=\) <span class="fill">\(\dfrac{85}{17.8}\)</span>
-    \(=\) <span class="fill">4.78</span>
-    <span class="note">Dimensionless: head lost <em>per unit length of flow path</em>.
-    The denominator is \(L\), never the head.</span>
-  </div>
 
   <div class="step result">
     <span class="lead">Permeability</span>
-    \(k=\dfrac{q}{i\,A}=\)
-    <span class="fill">\(\dfrac{8.78}{4.78\times45.4}\)</span>
-    \(=\) <span class="ans">\(4.05\times10^{-2}\)</span> \(\unit{cm/s}\)
-    <span class="note">Sanity check: a constant-head test only gives measurable flow in
-    a fairly permeable soil, so expect the clean-sand range.</span>
-  </div>
+    \(k=\dfrac{Q \ L}{A \Delta h \Delta t}=\)
+    <span class="fill">\(\dfrac{1054 \times 17.8}{45.4 \times 85 \times \underbrace{120}_{\text{time in sec}}}\)</span>
+    \(=\) <span class="ans">\(4.05\times10^{-2}\)</span> \(\unit{cm/s}\)   
 
 </div>

@@ -5,59 +5,36 @@
 
   <div class="step" data-part="1">
     <span class="lead">Read the datum</span>
-    All elevations share one survey datum, so \(z\) comes straight off the figure:
+    \(z\) comes from the figure:
     \(z_A=\) <span class="fill">1450</span> \(\unit{ft}\), water surface
     \(\text{WS}=\) <span class="fill">1490</span> \(\unit{ft}\)
     <span class="note"
-      data-slide="Pick a datum once and keep it.">Pick a datum once and keep it. Any
-    other choice shifts every \(z\) and every \(h\) by the same constant, and leaves
-    every head <em>difference</em> untouched.</span>
+      data-slide="Pick a datum once and keep it. In this example it is given"></span>
   </div>
 
   <div class="step" data-part="1">
     <span class="lead">Pressure head at A</span>
-    \(\hp=\text{WS}-z_A=\) <span class="fill">\(1490-1450\)</span> \(=\)
+    \(h_{w,A}=\text{WS}-z_A=\) <span class="fill">\(1490-1450\)</span> \(=\)
     <span class="fill">40</span> \(\unit{ft}\)
     <span class="note"
-      data-slide="\(\hp\) is the water standing <em>above</em> the point.">\(\hp\) is the
-    height of water standing <em>above</em> the point, not its depth below the ground
-    surface.</span>
+      data-slide="\(h_{w,A}\) is the water standing <em>above</em> the point."></span>
   </div>
 
-  <div class="step" data-part="2">
+  <div class="step" data-part="1">
     <span class="lead">Total head at A</span>
-    \(h=z+\hp=\) <span class="fill">\(1450+40\)</span> \(=\)
-    <span class="fill">1490</span> \(\unit{ft}\)
-    <span class="note">Two lines, and they are the only two. The rest of the table is the
-    same pair at a different elevation.</span>
+    \(h=z+h_{w,A}=\) <span class="fill">\(1450+40\)</span> \(=\)
+    <span class="ans">1490</span> \(\unit{ft}\)    
   </div>
 
   <div class="step" data-part="2">
     <span class="lead">The other three points</span>
     <table class="sol-table">
-      <tr><th>Point</th><th>\(z\) (ft)</th><th>\(\hp\) (ft)</th><th>\(h=z+\hp\) (ft)</th></tr>
+      <tr><th>Point</th><th>\(z\) (ft)</th><th>\(h_{w}\) (ft)</th><th>\(h=z+h_{w}\) (ft)</th></tr>
       <tr><td class="lbl">A</td><td>1450</td><td><span class="fill">40</span></td><td><span class="ans">1490</span></td></tr>
       <tr><td class="lbl">B</td><td>1450</td><td><span class="fill">40</span></td><td><span class="ans">1490</span></td></tr>
       <tr><td class="lbl">C</td><td>1470</td><td><span class="fill">20</span></td><td><span class="ans">1490</span></td></tr>
       <tr><td class="lbl">D</td><td>1490</td><td><span class="fill">0</span></td><td><span class="ans">1490</span></td></tr>
     </table>
-    <span class="note">D sits <em>on</em> the water surface: a zero to write down, not a
-    cell to leave empty.</span>
+    <span class="note">D sits <em>on</em> the water surface, therefore \(h_{w,D}=0\).</span>
   </div>
-
-  <div class="step" data-part="2">
-    <span class="lead">Piezometric line</span>
-    It is the plot of \(h\) against position, so here a <strong>horizontal line</strong>
-    at elevation <span class="ans">1490</span> \(\unit{ft}\) — it lands on the reservoir
-    surface.
-  </div>
-
-  <div class="step result" data-part="2">
-    <span class="lead">Is there flow?</span>
-    \(\Delta h=0\) between every pair, so \(i=\dfrac{\Delta h}{L}=\)
-    <span class="ans">0</span> and the water <strong>does not move</strong>.
-    <span class="note">Four points, three elevations, one total head. That is what
-    hydrostatics requires, and it is the check.</span>
-  </div>
-
 </div>
