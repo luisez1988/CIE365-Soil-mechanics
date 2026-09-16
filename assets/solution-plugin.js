@@ -214,6 +214,17 @@ window.RevealSolution = function () {
         return;
       }
       collectAtoms(n, out, math);
+      /* \boxed / \fbox: CHTML draws the frame as an inline border on the element
+         wrapping the expression, so there is no glyph to reveal and it would sit
+         on screen before its contents. Make the frame an atom of its own, pushed
+         after its children — the expression is written first, then boxed.
+         It cannot hide with `visibility` (that would hide the contents too);
+         solutions.css makes a pending frame's border transparent instead. */
+      if (math && /border/i.test(n.getAttribute('style') || '')) {
+        n.classList.add('sol-atom', 'sol-frame', 'pending');
+        n.setAttribute('data-math', '');
+        out.push(n);
+      }
     });
   }
 

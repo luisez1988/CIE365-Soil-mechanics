@@ -311,7 +311,15 @@
 
 /* `visibility`, not `display`: the layout box stays, so the line does not
    reflow as it is typed and the solution box is correctly sized while empty. */
-.reveal .sol .sol-atom.pending { visibility: hidden; }
+.reveal .sol .sol-atom.pending:not(.sol-frame) { visibility: hidden; }
+
+/* A \boxed frame is a border on the element that wraps the boxed expression,
+   so hiding it with `visibility` would hide the expression too. Only the
+   border waits. Screen-only and motion-only, so PDF export and reduced motion
+   show the box straight away, like every other atom. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .reveal .sol .sol-frame.pending { border-color: transparent !important; }
+}
 
 .reveal .sol .writing.fragment {
   position: relative;              /* anchor for the pencil */
