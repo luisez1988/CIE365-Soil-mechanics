@@ -5,15 +5,9 @@
 
   <div class="step" data-part="1">
     <span class="lead">Start at the boundaries</span>
-    The standpipes at the ends read their own reservoirs, so both heads are given:
-    \(h_A=280\unit{mm}=\) <span class="fill">28</span> \(\unit{cm}\),
-    \(h_D=200\unit{mm}=\) <span class="fill">20</span> \(\unit{cm}\).
-    <span class="note"
-      data-slide="<strong>Assumed:</strong> the pipework loses no head, so all 80 mm is lost <em>inside</em> the soil."><strong>Assumed:</strong>
-    the connecting pipework and the end fittings are frictionless, so the whole 80 mm
-    difference between the two reservoirs is lost inside the specimen. That is what lets
-    the reservoir levels be used as the boundary heads at A and D with no calculation, and
-    the 80 mm dimension on the figure is exactly that difference.</span>
+    The standpipes at the ends read their own reservoirs, hence: <br>
+    \(h_A=280\unit{mm}=\) <span class="fill">28</span> \(\unit{cm}\) <br>
+    \(h_D=200\unit{mm}=\) <span class="fill">20</span> \(\unit{cm}\)    
   </div>
 
   <div class="step" data-part="1">
@@ -22,40 +16,30 @@
     \(i=\dfrac{h_A-h_D}{L_{AD}}=\) <span class="fill">\(\dfrac{28-20}{18}\)</span>
     \(=\) <span class="ans">0.444</span>
     <span class="note"
-      data-slide="Tilted cylinder: \(L\) runs <em>along the axis</em>, \(z\) is vertical.">The
-    cylinder is tilted, so \(L\) runs <em>along the axis</em> while \(z\) is measured
-    vertically. Never mix the two.</span>
+      data-slide="Tilted cylinder: \(L\) runs <em>along the axis</em>"></span>
   </div>
 
   <div class="step" data-part="2">
-    <span class="lead">Heads at the interior points</span>
-    Uniform soil and equal spacing, so the drop repeats: \(i\times6=\)
-    <span class="fill">2.67</span> \(\unit{cm}\) per interval, giving
-    \(h_B=\) <span class="fill">25.3</span> \(\unit{cm}\) and
-    \(h_C=\) <span class="fill">22.7</span> \(\unit{cm}\)
-  </div>
-
-  <div class="step" data-part="2">
-    <span class="lead">Pressure head and pore pressure</span>
-    \(\hp=h-z\) &nbsp;and&nbsp; \(u=\hp\,\gw\)
+    <span class="lead">Heads and pressure at the interior points</span>
+    The loss of head per interval is \(\Delta h= i\times\Delta L=\) <span class="fill">\(0.444 \times 6\)</span> \(=\)
+    <span class="fill">2.67</span> \(\unit{cm}\) <br>
+    Using  \(h_w=h-z\) &nbsp;and&nbsp; \(u=\hp\,\gw\) <br>
     <table class="sol-table">
-      <tr><th>Point</th><th>\(z\) (cm)</th><th>\(h\) (cm)</th><th>\(\hp=h-z\) (cm)</th><th>\(u=\hp\gw\) (kPa)</th></tr>
+      <tr><th>Point</th><th>\(z\) (cm)</th><th>\(h\) (cm)</th><th>\(h_w=h-z\) (cm)</th><th>\(u=\hp\gw\) (kPa)</th></tr>
       <tr><td class="lbl">A</td><td>5.0</td><td>28.0</td><td><span class="fill">23.0</span></td><td><span class="ans">2.26</span></td></tr>
       <tr><td class="lbl">B</td><td>7.5</td><td><span class="fill">25.3</span></td><td><span class="fill">17.8</span></td><td><span class="ans">1.75</span></td></tr>
       <tr><td class="lbl">C</td><td>10.0</td><td><span class="fill">22.7</span></td><td><span class="fill">12.7</span></td><td><span class="ans">1.24</span></td></tr>
       <tr><td class="lbl">D</td><td>12.5</td><td>20.0</td><td><span class="fill">7.5</span></td><td><span class="ans">0.74</span></td></tr>
     </table>
-    <span class="note">\(\hp\) goes to <em>metres</em> before it meets
-    \(\gw=9.81\unit{kN/m^3}\), or \(u\) comes out 100&times; too big.</span>
+    <span class="note">\(h_w\) goes to <em>metres</em> before multiplying by
+    \(\gw=9.81\unit{kN/m^3}\)</span>
   </div>
 
   <div class="step" data-part="2">
     <span class="lead">Levels in the standpipes</span>
-    Each rises to the <em>total head</em> of the point it taps, above the datum:
+    Each rises to the <em>total head</em> above the datum:
     <span class="ans">28.0</span>, <span class="ans">25.3</span>,
-    <span class="ans">22.7</span>, <span class="ans">20.0</span> \(\unit{cm}\).
-    <span class="note">A standpipe reads \(h\), never \(\hp\). The four tops fall on a
-    straight line only because the soil is uniform.</span>
+    <span class="ans">22.7</span>, <span class="ans">20.0</span> \(\unit{cm}\)    
   </div>
 
   <div class="step" data-part="2">
@@ -69,8 +53,7 @@
     \(q=k\,i\,A=\)
     <span class="fill">\(\ee{3.4}{-4}\times0.444\times28.3\)</span> \(=\)
     <span class="ans">\(\ee{4.27}{-3}\)</span> \(\unit{cm^3/s}\)
-    <span class="note">Darcy's law uses the gross area, not the area of the voids. A
-    silty-sand \(k\) gives a few cubic centimetres per quarter hour.</span>
+    <span class="note">Darcy's law uses the gross area, not the area of the voids</span>
   </div>
 
 </div>
