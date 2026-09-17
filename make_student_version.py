@@ -97,14 +97,42 @@ def comment_animate_elements_in_svg(svg_path: Path):
     result      = []
     pos         = 0
     count       = 0
+    skipped     = 0
     tag_pattern = re.compile(
         r'<(\w[\w\-\.]*)([^>]*?class=["\']Animate["\'][^>]*?)(/?)>',
         re.DOTALL
     )
 
+    # Spans of the comments the drawing already contains. Inkscape files often
+    # carry hand-commented alternatives, and an Animate element parked inside
+    # one is hidden already. Commenting it again nests a comment inside a
+    # comment, which XML forbids: the inner `-->` closes the OUTER one, the
+    # tail of the file is then read as text, and the browser throws the whole
+    # figure out with a parse error. That is what stopped EX471 and EX481 from
+    # rendering, so elements already inside a comment are left alone.
+    comment_spans = []
+    scan = 0
+    while True:
+        open_at = content.find('<!--', scan)
+        if open_at == -1:
+            break
+        close_at = content.find('-->', open_at + 4)
+        if close_at == -1:
+            comment_spans.append((open_at, len(content)))
+            break
+        comment_spans.append((open_at, close_at + 3))
+        scan = close_at + 3
+
+    def already_commented(index):
+        return any(start <= index < end for start, end in comment_spans)
+
     for m in tag_pattern.finditer(content):
         tag_name   = m.group(1)
         self_close = m.group(3)
+
+        if already_commented(m.start()):
+            skipped += 1
+            continue
 
         result.append(content[pos:m.start()])
 
@@ -141,9 +169,18 @@ def comment_animate_elements_in_svg(svg_path: Path):
             if depth == 0 and next_close != -1:
                 end_pos = next_close + len(close_tag)
                 block   = content[m.start():end_pos]
-                result.append(f'<!-- STUDENT_HIDDEN\n{block}\n-->')
+                # `--` cannot appear inside an XML comment either, so a block
+                # carrying one cannot be hidden this way. No drawing does today;
+                # say so loudly rather than write a file the browser will refuse.
+                if '--' in block:
+                    print(f"    [WARN] {svg_path.name}: <{tag_name}> at offset "
+                          f"{m.start()} contains '--' and cannot be commented out "
+                          f"— it STAYS VISIBLE in the student figure")
+                    result.append(block)
+                else:
+                    result.append(f'<!-- STUDENT_HIDDEN\n{block}\n-->')
+                    count += 1
                 pos   = end_pos
-                count += 1
 
     result.append(content[pos:])
     modified = ''.join(result)
@@ -151,10 +188,11 @@ def comment_animate_elements_in_svg(svg_path: Path):
     with open(svg_path, 'w', encoding='utf-8') as f:
         f.write(modified)
 
+    note = f" ({skipped} already inside a comment, left as is)" if skipped else ""
     if count:
-        print(f"    [SVG] {svg_path.name}: commented out {count} Animate element(s)")
+        print(f"    [SVG] {svg_path.name}: commented out {count} Animate element(s){note}")
     else:
-        print(f"    [SVG] {svg_path.name}: no Animate elements found")
+        print(f"    [SVG] {svg_path.name}: no Animate elements found{note}")
 
 
 def get_animation_svg_paths(html_path: Path, figures_src: Path) -> list[Path]:
