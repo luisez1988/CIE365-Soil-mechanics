@@ -213,6 +213,21 @@ window.RevealSolution = function () {
         out.push(n);
         return;
       }
+      /* \sqrt: the radical's bar is the border-top of its <mjx-box>, and that
+         border comes from MathJax's own stylesheet (`mjx-sqrt > mjx-box`), not
+         from an inline style — so the \boxed test below never saw it and the
+         bar sat on screen ahead of the expression underneath it. Treat it as a
+         frame like \boxed, but push it BEFORE its children: the bar belongs to
+         the radical hook just written, and the expression then fills in under
+         it. */
+      var sqrtBar = math && tag === 'MJX-BOX' && n.parentNode &&
+                    n.parentNode.tagName &&
+                    n.parentNode.tagName.toUpperCase() === 'MJX-SQRT';
+      if (sqrtBar) {
+        n.classList.add('sol-atom', 'sol-frame', 'pending');
+        n.setAttribute('data-math', '');
+        out.push(n);
+      }
       collectAtoms(n, out, math);
       /* \boxed / \fbox: CHTML draws the frame as an inline border on the element
          wrapping the expression, so there is no glyph to reveal and it would sit
@@ -220,7 +235,7 @@ window.RevealSolution = function () {
          after its children — the expression is written first, then boxed.
          It cannot hide with `visibility` (that would hide the contents too);
          solutions.css makes a pending frame's border transparent instead. */
-      if (math && /border/i.test(n.getAttribute('style') || '')) {
+      if (!sqrtBar && math && /border/i.test(n.getAttribute('style') || '')) {
         n.classList.add('sol-atom', 'sol-frame', 'pending');
         n.setAttribute('data-math', '');
         out.push(n);

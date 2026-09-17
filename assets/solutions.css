@@ -315,7 +315,8 @@
 
 /* A \boxed frame is a border on the element that wraps the boxed expression,
    so hiding it with `visibility` would hide the expression too. Only the
-   border waits. Screen-only and motion-only, so PDF export and reduced motion
+   border waits. A \sqrt bar is the same case — MathJax draws it as the
+   border-top of the <mjx-box> holding the radicand — so it is a frame too. Screen-only and motion-only, so PDF export and reduced motion
    show the box straight away, like every other atom. */
 @media screen and (prefers-reduced-motion: no-preference) {
   .reveal .sol .sol-frame.pending { border-color: transparent !important; }

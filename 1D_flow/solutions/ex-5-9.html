@@ -4,15 +4,10 @@
 <div class="sol" data-id="ex-5-9">
 
   <div class="step" data-part="1">
-    <span class="lead">See the system for what it is</span>
-    The water crosses the three sands <em>side by side</em>. Layers in
-    <strong>parallel</strong> share \(\Delta h\) and \(L\), so their discharges add:
-    \(\keq=\dfrac{\sum k_iA_i}{A}\).
-    <span class="note"
-      data-slide="Parallel layers share the head; series layers share the discharge.">Parallel
-    layers share the head difference and split the discharge; series layers share the
-    discharge and split the head. That fork is the whole decision here, and it is the
-    opposite of the stone-and-soil stack in Example 5.8.</span>
+    <span class="lead">Identify system</span>
+    The water crosses the three sands <em>side by side</em> \(implies\) Layers in
+    <span class="fill">parallel</span>: <br>
+    \(\keq=\dfrac{\sum k_iA_i}{A}\)
   </div>
 
   <div class="step" data-part="1">
@@ -20,57 +15,52 @@
     \(\Delta h=\) <span class="fill">\(137.23-125.5\)</span> \(=\)
     <span class="fill">11.73</span> \(\unit{ft}\)
     <span class="note"
-      data-slide="Of the four elevations, only the two water surfaces set \(\Delta h\).">Four
-    elevations appear on the figure: two are water surfaces and two are the base of the
-    sand package. Only the water surfaces set \(\Delta h\).</span>
+      data-slide="only the two water surfaces define \(\Delta h\)"></span>
   </div>
 
   <div class="step" data-part="2">
-    <span class="lead">Flow path, then gradient</span>
-    The layers drop \(128.5-115.5=13\unit{ft}\) over \(1255.6\unit{ft}\), so
-    \(L=\sqrt{1255.6^{2}+13^{2}}=\) <span class="fill">1255.7</span> \(\unit{ft}\) and
+    <span class="lead">Flow path length</span>
+    The layers drop \(13\unit{ft}\) over \(1255.6\unit{ft} \implies\)
+    \(L=\) <span class="fill"> \(\sqrt{1255.6^{2}+13^{2}}=\) </span> <span class="fill">1255.7</span> \(\unit{ft}\) 
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Hydraulic gradient</span>
     \(i=\dfrac{\Delta h}{L}=\) <span class="fill">\(\dfrac{11.73}{1255.7}\)</span>
-    \(=\) <span class="ans">\(\ee{9.34}{-3}\)</span>
-    <span class="note">The path follows the layers, not the horizontal. Here that is worth
-    0.005% — but say it.</span>
+    \(=\) <span class="ans">\(\ee{9.34}{-3}\)</span>  
   </div>
 
   <div class="step" data-part="2">
     <span class="lead">Equivalent permeability</span>
     Unit width, so areas go as thicknesses:
     \(\keq=\dfrac{\sum k_ib_i}{\sum b_i}=\)
-    <span class="fill">\(\dfrac{(\ee{1.5}{-5})(3)+(\ee{7.89}{-3})(3)+(\ee{1.2}{-4})(4)}{10}\)</span>
+    <span class="fill">\(\dfrac{\textcolor{red}{\overbrace{\textcolor{navy}{(\ee{1.5}{-5})(3)}}^{\text{SC layer}}}+\textcolor{red}{\overbrace{\textcolor{navy}{(\ee{7.89}{-3})(3)}}^{\text{SP layer}}}+\textcolor{red}{\overbrace{\textcolor{navy}{(\ee{1.2}{-4})(4)}}^{\text{SM layer}}}}{10}\)</span>
     \(=\) <span class="ans">\(\ee{2.42}{-3}\)</span> \(\unit{cm/s}\)
-    <span class="note"
-      data-slide="A thickness-weighted <em>average</em>: the SC layer is 0.2% of the total.">A
-    thickness-weighted <em>average</em>, so the most permeable layer dominates — the SC
-    contributes 0.2% of the total and could be dropped without moving the answer. In the
-    series case the <em>least</em> permeable layer runs the result instead. That is the
-    argument for spending the investigation budget on the SP.</span>
   </div>
 
-  <div class="step" data-part="2">
+  <!-- <div class="step" data-part="2">
     <span class="lead">Flow area, per unit length of channel</span>
     The full package carries the flow: \(A=10\unit{ft}\times1=\)
     <span class="fill">304.8</span> \(\unit{cm}\) of face per cm of channel
     <span class="note">\(\keq\) is in cm/s, so the area must be in cm before the two
     meet.</span>
-  </div>
+  </div> -->
 
   <div class="step result" data-part="2">
-    <span class="lead">Seepage per unit length of channel</span>
+    <span class="lead">Seepage per unit length of channel</span> <br>
     \(q=\keq\,i\,A=\)
-    <span class="fill">\((\ee{2.42}{-3})(\ee{9.34}{-3})(304.8)\)</span> \(=\)
-    <span class="fill">\(\ee{6.89}{-3}\)</span> \(\unit{cm^3/s}\) per cm
-    \(=\) <span class="ans">\(\ee{6.89}{-4}\)</span> \(\unit{L/s}\) per m
-    \(=\) <span class="ans">59.5</span> \(\unit{L/day}\) per m
-    <span class="note"
-      data-slide="\(\mathrm{cm^3/s}\) per cm to \(\mathrm{L/s}\) per m is \(\times100\div1000=\times0.1\).">Going
-    from \(\unit{cm^3/s}\) per cm to \(\unit{L/s}\) per m looks like a typo but is not:
-    the volume shrinks by 1000 while the length grows by 100, so the net factor is
-    \(\times0.1\) and only the exponent moves. Then \(\times86\,400\) for the day. The
-    answer is per unit length <em>along</em> the channel, so multiply by the length of
-    channel in this ground to get the loss the scheme has to carry.</span>
+    <span class="fill">\((\ee{2.42}{-3})(\ee{9.34}{-3}) \textcolor{red}{\underbrace{\textcolor{navy}{(304.8)}}_{\text{ft to cm}}} \textcolor{red}{\underbrace{\textcolor{navy}{\times 1}}_{\substack{\text{implicit}\\ \text{unit length}}}} \)</span> \(=\)
+    <span class="ans">\(\ee{6.89}{-3}\)</span> \(\unit{cm^3/s}\) per cm
+  </div>
+
+  <div class="step" data-part="2">
+    <span class="lead">Transform units</span> 
+    Once done, transform to \(\unit{Lt/day}\) per \(\unit{ft}\) of channel: <br>
+    \(q=\ee{6.89}{-3}\dfrac{\unit{cm^3}}{\unit{s}\cdot\unit{cm}}\times\)
+    <span class="fill">\(\dfrac{1\unit{Lt}}{1000\unit{cm^3}}\)</span> \(\times\)
+    <span class="fill">\(\dfrac{30.48\unit{cm}}{1\unit{ft}}\)</span> \(\times\)
+    <span class="fill">\(\dfrac{86\,400\unit{s}}{1\unit{day}}\)</span> \(=\)
+    <span class="ans">18.1</span> \(\unit{Lt/day/ft}\) of channel
   </div>
 
 </div>
