@@ -813,8 +813,7 @@
            id="path112" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g268"
        style="stroke:#ff0000"
        transform="translate(1.9367468,2.441985)">
@@ -875,7 +874,6 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g269">
       <g
@@ -927,8 +925,7 @@
            id="path189" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g270"
        style="stroke:#0000ff">
       <g
@@ -1688,6 +1685,5 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
   </g>
 </svg>

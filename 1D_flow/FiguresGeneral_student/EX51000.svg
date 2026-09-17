@@ -146,8 +146,7 @@
        style="fill:none;fill-opacity:0.682353;stroke:#000000;stroke-width:0.264583"
        d="M 50.8,-1.055832e-7 V 45.719999"
        id="path1" />
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g12"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <rect
@@ -388,9 +387,7 @@
         </g>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g13"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <g
@@ -634,9 +631,7 @@
            id="path52" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g14"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <g
@@ -792,9 +787,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g224"
        style="stroke:#0000ff"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
@@ -939,9 +932,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g223"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <g
@@ -1075,9 +1066,7 @@
         </g>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g225"
        style="stroke:#0000ff"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
@@ -1208,9 +1197,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g226"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <g
@@ -1250,9 +1237,7 @@
            id="path96" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g230"
        style="stroke:#0000ff"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
@@ -1555,9 +1540,7 @@
         </g>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g228"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
       <g
@@ -1617,9 +1600,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g229"
        style="stroke:#ff0000"
        transform="matrix(0.84373402,0,0,0.84373402,0.48213038,-0.11357933)">
@@ -1890,7 +1871,6 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g231"
        style="stroke:#008000"
@@ -4634,8 +4614,7 @@
            id="path372" />
       </g>
     </g>
-        <!-- STUDENT_HIDDEN
-<g class="Animate"
+        <g class="Animate"
        id="g472"
        style="stroke:#0000ff"
        transform="translate(0,-4.747282)">
@@ -5256,7 +5235,6 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g471"
        transform="translate(0,-4.747282)">
@@ -5549,8 +5527,7 @@
            id="path384" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g473"
        style="stroke:#ff0000"
        transform="translate(0,-4.747282)">
@@ -5639,9 +5616,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g474"
        style="stroke:#ff0000"
        transform="translate(0,-4.747282)">
@@ -5716,9 +5691,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g475"
        style="stroke:#ff0000"
        transform="translate(0,-4.747282)">
@@ -5779,7 +5752,6 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
 
     <g class="fragment"
        id="g476"
@@ -5833,8 +5805,7 @@
            id="path447" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g477"
        style="stroke:#0000ff"
        transform="translate(0,-4.747282)">
@@ -6021,7 +5992,6 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
     <g class="fragment"
       id="g597"
       transform="matrix(0.9478842,0,0,0.9478842,2.3793516,-3.7553727)">
@@ -6302,8 +6272,7 @@
            id="path491" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g478"
        style="stroke:#008000"
        transform="translate(0,-4.747282)">
@@ -6420,22 +6389,13 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate">    <rect class="Animate"
+    <g class="Animate">    <rect class="Animate"
        style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.264583"
        id="rect478"
        width="10.989639"
        height="4.3958554"
        x="82.082619"
        y="10.238589" /></g>
---><!-- STUDENT_HIDDEN <rect class="Animate"
-       style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.264583"
-       id="rect478"
-       width="10.989639"
-       height="4.3958554"
-       x="82.082619"
-       y="10.238589" /> --></g>
 
 
     <g class="fragment"
@@ -6730,8 +6690,7 @@
            id="path515" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g600"
        style="stroke:#0000ff"
        transform="translate(0,-7.5165298)">
@@ -7286,9 +7245,7 @@
         </g>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g602"
        style="stroke:#0000ff"
        transform="translate(0,-7.5165298)">
@@ -7461,9 +7418,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g603"
        style="stroke:#ff0000">
       <g
@@ -7635,9 +7590,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g604">
       <g
          id="g581"
@@ -7664,9 +7617,7 @@
            id="path582" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g605"
        style="stroke:#008000">
       <g
@@ -7894,9 +7845,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate">
+    <g class="Animate">
         <rect
        style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.264583"
        id="rect605"
@@ -7905,7 +7854,6 @@
        x="66.857552"
        y="27.579447" />
     </g>
--->
 
     <g class="fragment"
        id="g726">
@@ -8126,8 +8074,7 @@
            id="path614" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g731"
        style="stroke:#ff0000">
       <g
@@ -8443,7 +8390,6 @@
         </g>
       </g>
     </g>
--->
     <g class="fragment"
        id="g728">
       <g
@@ -8675,8 +8621,7 @@
            id="path655" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g729"
        style="stroke:#0000ff">
       <g
@@ -8932,9 +8877,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g730"
        style="stroke:#0000ff">
       <g
@@ -9008,7 +8951,6 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g732">
       <g
@@ -9072,8 +9014,7 @@
            id="path683" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g733"
        style="stroke:#0000ff">
       <g
@@ -9427,9 +9368,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g734"
        style="stroke:#008000">
       <g
@@ -9671,9 +9610,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate">
+    <g class="Animate">
         <rect
        style="fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.264583"
        id="rect734"
@@ -9682,7 +9619,6 @@
        x="84.998955"
        y="41.199623" />
     </g>
--->
 
   </g>
 </svg>

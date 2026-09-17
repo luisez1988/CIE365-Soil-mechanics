@@ -3,8 +3,8 @@
 
 <svg
    width="4in"
-   height="1.9in"
-   viewBox="0 0 101.6 48.259999"
+   height="2.621in"
+   viewBox="59.8 9.6 41.2 27"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
@@ -70,7 +70,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g class="fragment"
+    <!-- <g class="fragment"
        id="g1">
       <g
          id="g200"
@@ -1693,8 +1693,8 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
-    <g class="fragment"
+--> -->
+    <!-- <g class="fragment"
        id="g11">
       <g
          id="g317"
@@ -2326,7 +2326,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
+--> -->
     <g class="fragment"
        id="g14"
        transform="matrix(0.60684314,0,0,0.60684314,23.118995,8.027211)">

@@ -1735,8 +1735,7 @@
            id="path151" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g8"
        style="stroke:#008000"
        transform="translate(-4.5293927,1.0845025)">
@@ -1825,9 +1824,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g9"
        style="stroke:#008000"
        transform="translate(-4.5293927,1.0845025)">
@@ -1944,7 +1941,6 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g10"
        transform="translate(-4.5293927,1.0845025)">
@@ -2009,8 +2005,7 @@
            id="path170" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g11"
        style="stroke:#008000"
        transform="translate(-4.5293927,1.0845025)">
@@ -2071,9 +2066,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g12"
        style="stroke:#008000"
        transform="translate(-4.5293927,1.0845025)">
@@ -2162,9 +2155,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g181"
        transform="matrix(0.03934277,0,0,0.03934277,19.070108,-1.5087701)"
        style="stroke:#ff0000">
@@ -2178,9 +2169,7 @@
          id="path181"
          style="stroke:#ff0000" />
     </g>
--->
 
-<!-- STUDENT_HIDDEN
 <g class="Animate"> 
     <g
        id="g182"
@@ -2407,7 +2396,6 @@
          style="stroke:#ff0000" />
     </g>
     </g>
--->
 
   </g>
 </svg>

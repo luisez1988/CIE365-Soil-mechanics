@@ -3,8 +3,8 @@
 
 <svg
    width="4in"
-   height="1.9in"
-   viewBox="0 0 101.6 48.259999"
+   height="1.893in"
+   viewBox="18.5 22.5 56 26.5"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
@@ -80,7 +80,7 @@
      inkscape:groupmode="layer"
      id="layer1">
 
-   <g class="fragment"
+   <!-- <g 
        id="g22"
        transform="matrix(0.66921217,0,0,0.66921217,13.36976,-2.9045288)">
       <g
@@ -510,8 +510,8 @@
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 50.333674,10.143288 V 31.004012"
          id="path21" />
-    </g>
-    <g class="fragment"
+    </g> -->
+    <!-- <g class="fragment"
        id="g20"
        transform="matrix(0.66921217,0,0,0.66921217,13.36976,-2.9045288)">
       <g
@@ -550,8 +550,8 @@
            d="m -270.432,962.74 -0.592,0.034 -1.021,-1.142 0.405,0.068 0.987,-1.221 -0.404,0.024 0.433,0.303 -0.173,-0.356 -0.401,0.118 -0.09,0.561 -2.134,-0.167 -1.981,1.265 -1.034,1.308 -1.231,0.868 -1.195,4.04 -0.292,2.401 0.752,2.605 1.502,1.643 1.147,0.134 0.61,0.839 0.878,0.467 1.103,-0.125 1.085,0.793 2.913,0.924 2.246,-0.108 0.458,-0.474 2.471,-1.021 1.861,-1.359 0.699,-0.763 -0.128,-0.433 0.311,-0.41 0.732,-0.335 1.39,-1.409 0.76,-1.398 0.608,-5.886 -1.265,-5.505 -1.748,-1.035 -1.031,-1.325 -1.34,0.325 -1.988,-0.312 -1.476,1.051 -1.585,-0.47 -3.476,0.235 -2.36,2.183 -0.618,2.004 0.729,2.152"
            id="path299" />
       </g>
-    </g>
-    <g class="fragment"
+    </g> -->
+    <!-- <g class="fragment"
        id="g21"
        transform="matrix(0.66921217,0,0,0.66921217,13.36976,-2.9045288)">
       <g
@@ -1117,8 +1117,8 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
+--> -->
+    <!-- <!-- STUDENT_HIDDEN
 <g class="Animate"
        id="g31"
        style="stroke:#000080"
@@ -1271,8 +1271,8 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
+--> -->
+    <!-- <!-- STUDENT_HIDDEN
 <g class="Animate"
        id="g33"
        style="stroke:#ff0000"
@@ -2244,7 +2244,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
+--> -->
 
     <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#DartArrow);marker-end:url(#DartArrow)"

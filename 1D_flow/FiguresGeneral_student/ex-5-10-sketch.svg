@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Example 5.10, part 1: sketch of the composite aquifer.
+     Three horizontal layers, head fixed on the top and bottom faces, flow downward. -->
+
+<svg
+   viewBox="0 0 386.73828 253.32812"
+   width="386.73828"
+   height="253.32812"
+   font-family="'Times New Roman', Times, serif"
+   role="img"
+   aria-label="Three horizontal soil layers. The head is fixed at 101.3 m on the top face and 96.2 m on the bottom face, so the flow is vertically downward. Layer 1 is 1.5 m thick with kx 6 and ky 0.1 m per day, Layer 2 is 3.9 m thick with kx 0.5 and ky 0.02, Layer 3 is 2.75 m thick with kx 2.5 and ky 0.05. Total thickness 8.15 m."
+   version="1.1"
+   id="svg23"
+   sodipodi:docname="ex-5-10-sketch.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview23"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.96136364"
+     inkscape:cx="173.71158"
+     inkscape:cy="320.89834"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="2870"
+     inkscape:window-y="6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg23" />
+  <defs
+     id="defs2">
+    <marker
+       id="ah10"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#0a5ad6"
+         id="path1" />
+    </marker>
+    <marker
+       id="dim10"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#333333"
+         id="path2" />
+    </marker>
+  </defs>
+  <!-- the three layers, drawn to scale: 8.15 m spans 210 px -->
+  <rect
+     x="42.136719"
+     y="23.109375"
+     width="270"
+     height="39"
+     fill="#e6d9ab"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="rect2" />
+  <rect
+     x="42.136719"
+     y="62.109375"
+     width="270"
+     height="100"
+     fill="#c2b184"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="rect3" />
+  <rect
+     x="42.136719"
+     y="162.10938"
+     width="270"
+     height="71"
+     fill="#dbc99e"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="rect4" />
+  <!-- boundary conditions on the two faces -->
+  <line
+     x1="32.136719"
+     y1="23.109375"
+     x2="322.13672"
+     y2="23.109375"
+     stroke="#0a5ad6"
+     stroke-width="3"
+     id="line4" />
+  <line
+     x1="32.136719"
+     y1="233.10938"
+     x2="322.13672"
+     y2="233.10938"
+     stroke="#0a5ad6"
+     stroke-width="3"
+     id="line5" />
+  <text
+     x="177.13672"
+     y="11.109375"
+     text-anchor="middle"
+     font-size="16px"
+     fill="#0a5ad6"
+     id="text5">h = 101.3 m</text>
+  <text
+     x="177.13672"
+     y="253.10938"
+     text-anchor="middle"
+     font-size="16px"
+     fill="#0a5ad6"
+     id="text6">h = 96.2 m</text>
+  <!-- downward flow -->
+  <line
+     x1="64.136719"
+     y1="35.109375"
+     x2="64.136719"
+     y2="221.10938"
+     stroke="#0a5ad6"
+     stroke-width="2.2"
+     marker-end="url(#ah10)"
+     id="line6" />
+  <line
+     x1="294.13672"
+     y1="35.109375"
+     x2="294.13672"
+     y2="221.10938"
+     stroke="#0a5ad6"
+     stroke-width="2.2"
+     marker-end="url(#ah10)"
+     id="line7" />
+  <text
+     x="179.13672"
+     y="48.109375"
+     text-anchor="middle"
+     font-size="15px"
+     id="text10">Layer 1    k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan7">x</tspan><tspan
+   dy="-4"
+   id="tspan8">= 6, </tspan>k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan9">y</tspan><tspan
+   dy="-4"
+   id="tspan10">= 0.1  m/d</tspan></text>
+  <text
+     x="179.13672"
+     y="118.10938"
+     text-anchor="middle"
+     font-size="15px"
+     id="text14">Layer 2    k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan11">x</tspan><tspan
+   dy="-4"
+   id="tspan12">= 0.5, </tspan>k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan13">y</tspan><tspan
+   dy="-4"
+   id="tspan14">= 0.02  m/d</tspan></text>
+  <text
+     x="179.13672"
+     y="203.10938"
+     text-anchor="middle"
+     font-size="15px"
+     id="text18">Layer 3    k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan15">x</tspan><tspan
+   dy="-4"
+   id="tspan16">= 2.5, </tspan>k<tspan
+   font-size="11px"
+   dy="4"
+   id="tspan17">y</tspan><tspan
+   dy="-4"
+   id="tspan18">= 0.05  m/d</tspan></text>
+  <!-- layer thicknesses -->
+  <line
+     x1="337.13672"
+     y1="23.109375"
+     x2="337.13672"
+     y2="62.109375"
+     stroke="#333333"
+     marker-start="url(#dim10)"
+     marker-end="url(#dim10)"
+     id="line18" />
+  <line
+     x1="337.13672"
+     y1="62.109375"
+     x2="337.13672"
+     y2="162.10938"
+     stroke="#333333"
+     marker-start="url(#dim10)"
+     marker-end="url(#dim10)"
+     id="line19" />
+  <line
+     x1="337.13672"
+     y1="162.10938"
+     x2="337.13672"
+     y2="233.10938"
+     stroke="#333333"
+     marker-start="url(#dim10)"
+     marker-end="url(#dim10)"
+     id="line20" />
+  <text
+     x="345.13672"
+     y="48.109375"
+     font-size="15px"
+     id="text20">1.5 m</text>
+  <text
+     x="345.13672"
+     y="118.10938"
+     font-size="15px"
+     id="text21">3.9 m</text>
+  <text
+     x="345.13672"
+     y="203.10938"
+     font-size="15px"
+     id="text22">2.75 m</text>
+  <!-- total thickness -->
+  <line
+     x1="20.136719"
+     y1="23.109375"
+     x2="20.136719"
+     y2="233.10938"
+     stroke="#333333"
+     marker-start="url(#dim10)"
+     marker-end="url(#dim10)"
+     id="line22" />
+  <text
+     x="-128.10938"
+     y="10.136719"
+     text-anchor="middle"
+     font-size="15px"
+     transform="rotate(-90)"
+     id="text23">L = 8.15 m</text>
+</svg>

@@ -125,8 +125,7 @@
            id="path212" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g2"
        style="stroke:#000080">
       <g
@@ -326,7 +325,6 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g3">
       <g
@@ -562,8 +560,7 @@
       </g>
     </g>
 
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g5"
        style="stroke:#000080">
       <g
@@ -1421,10 +1418,8 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
 
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g6"
        style="stroke:#ff0000">
       <g
@@ -1470,9 +1465,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g7"
        style="stroke:#ff0000">
       <g
@@ -1504,7 +1497,6 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
 
     <g class="fragment"
        id="g8">
@@ -1851,8 +1843,7 @@
            id="path341" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g11"
        style="stroke:#000080">
       <g
@@ -2066,9 +2057,7 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g12"
        style="stroke:#ff0000">
       <g
@@ -2156,7 +2145,6 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g13">
       <g
@@ -2208,8 +2196,7 @@
            id="path366" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g14"
        style="stroke:#008000">
       <g
@@ -2423,7 +2410,6 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g15">
       <g
@@ -2451,8 +2437,7 @@
            id="path383" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g16"
        style="stroke:#008000">
       <g
@@ -2694,7 +2679,6 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g17">
       <g
@@ -2722,8 +2706,7 @@
            id="path402" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g18"
        style="stroke:#008000">
       <g
@@ -2923,6 +2906,5 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
   </g>
 </svg>

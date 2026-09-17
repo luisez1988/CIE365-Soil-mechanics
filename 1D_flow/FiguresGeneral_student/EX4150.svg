@@ -1633,8 +1633,7 @@
            id="path143" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g7"
        style="stroke:#000080">
       <g
@@ -2310,9 +2309,7 @@
            style="stroke:#000080" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g8"
        style="stroke:#ff0000">
       <g
@@ -2456,9 +2453,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g9"
        style="stroke:#ff0000">
       <g
@@ -2518,6 +2513,5 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
   </g>
 </svg>

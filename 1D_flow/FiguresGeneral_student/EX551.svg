@@ -440,8 +440,7 @@
            id="path263" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g12"
        style="stroke:#0000ff">
       <g
@@ -585,9 +584,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g13"
        style="stroke:#0000ff">
       <g
@@ -661,9 +658,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g17"
        style="stroke:#ff0000">
       <g
@@ -881,9 +876,7 @@
         </g>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g16"
        style="stroke:#ff0000">
       <g
@@ -1167,9 +1160,7 @@
            style="stroke:#ff0000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g15"
        style="stroke:#0000ff">
       <g
@@ -1285,7 +1276,6 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
     <g class="fragment"
        id="g19">
       <g
@@ -1910,8 +1900,7 @@
            id="path374" />
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g18"
        style="stroke:#008000">
       <g
@@ -2125,9 +2114,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g23"
        style="stroke:#0000ff">
       <g
@@ -2509,9 +2496,7 @@
            style="stroke:#0000ff" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g24"
        style="stroke:#008000">
       <g
@@ -2725,9 +2710,7 @@
            style="stroke:#008000" />
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate">    <rect
+    <g class="Animate">    <rect
        style="fill:none;fill-opacity:0.682353;stroke:#008000;stroke-width:0.264583"
        id="rect18"
        width="22.409573"
@@ -2741,7 +2724,6 @@
        height="7.4893618"
        x="76.648941"
        y="30.835106" /></g>
--->
 
   </g>
 </svg>
