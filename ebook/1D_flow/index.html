@@ -26,7 +26,7 @@ window.MathJax = {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
 </head>
-<body data-page="chapter" data-chapter="1D_flow" data-total="51" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+<body data-page="chapter" data-chapter="1D_flow" data-total="172" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
 
 <header class="book-header">
   <a class="back-link" href="../index.html">&larr; Contents</a>
@@ -35,12 +35,14 @@ window.MathJax = {
 </header>
 
 <div class="toolbar" id="toolbar">
-  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">51</span> blanks filled</span>
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">172</span> blanks filled</span>
   <span class="progress-bar"><span id="prog-fill"></span></span>
   <span class="toolbar-spacer"></span>
   <span class="toolbar-actions">
     <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
     <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
     <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
     <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
     <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
@@ -48,6 +50,37 @@ window.MathJax = {
   </span>
   <input type="file" id="file-import" accept=".json,application/json" hidden>
 </div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
 <button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
         aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
 
@@ -259,24 +292,56 @@ q= v_s A_V
 <div class='textBox' >
 For the points in the figure below determine the total head, the pressure head, and the location of the <strong style='color:blue'>piezometric line</strong>.
 </div>
-<div class='container'>
-<div class='col' style="--colw:50%">
 <figure>
-<img loading="lazy" src='../../1D_flow/FiguresGeneral/Pressure_heaed.svg' width='90%'/>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/Pressure_heaed.svg' width='60%'/>
 <footer style='font-size: 0.8em'> <em></em> </footer>
 </figure>
-</div>
-<div class='col' style="--colw:50%">
 <div class='ProblemBox' >
+<div class='col' style='--colw:55%'>
+<div class="sol" data-id="ex-5-1">
 
+  <div class="step">
+    <span class="lead">Read the datum</span>
+    \(z\) comes from the figure: <br>
+    \(z_A=\) <span class="blank" data-bid="1D_flow.4023891a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\), water surface
+    \(\text{WS}=\) <span class="blank" data-bid="1D_flow.ad066e76-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Pressure head at A</span> <br>
+    \(h_{w,A}=\text{WS}-z_A=\) <span class="blank math" data-bid="1D_flow.384f681e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="1D_flow.bb00da12-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Total head at A</span> <br>
+    \(h=z+h_{w,A}=\) <span class="blank math" data-bid="1D_flow.61012a1e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="1D_flow.f85974d3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)    
+  </div>
+
+  <div class="step">
+    <span class="lead">The other three points</span>
+    <table class="sol-table">
+      <tr><th>Point</th><th>\(z\) (ft)</th><th>\(h_{w}\) (ft)</th><th>\(h=z+h_{w}\) (ft)</th></tr>
+      <tr><td class="lbl">A</td><td>1450</td><td><span class="blank" data-bid="1D_flow.7e2e3150-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.4504d541-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">B</td><td>1450</td><td><span class="blank" data-bid="1D_flow.b120ca44-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.4bd27a9e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">C</td><td>1470</td><td><span class="blank" data-bid="1D_flow.1d9aa5ae-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.3475a4d6-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">D</td><td>1490</td><td><span class="blank" data-bid="1D_flow.fecbcc7a-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.b4c7a56b-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+    <span class="note">D sits <em>on</em> the water surface, therefore \(h_{w,D}=0\).</span>
+  </div>
+</div>
+</div>
+<div class='col' style='--colw:45%'>
+<img loading="lazy" src="figures/EX471.svg" style="width:60%" alt=""/>
 </div>
 </div>
 </div>
 
-
-<div class='ProblemBox' >
-<img loading="lazy" src="figures/EX471.svg" style="width: 100%" alt=""/>
-</div>
 
 
 </section>
@@ -348,25 +413,63 @@ For the points in the figure below determine the total head, the pressure head, 
 Calculate the hydraulic gradient between points A and B in the figure bellow and plot the piezometric line between points C and D.
 
 </div>
-<div class='container'>
-<div class='col' style="--colw:50%">
+
 <figure >
-<img loading="lazy" src='../../1D_flow/FiguresGeneral/artisian_condition.svg' width='100%'/>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/artisian_condition.svg' width='60%'/>
 <footer style='font-size: 0.8em'> <em></em> </footer>
 </figure>
-</div>
-<div class='col' style="--colw:50%">
-<div class='ProblemBox' >
-
-</div>
-</div>
-</div>
 
 
 <div class='ProblemBox' >
-<img loading="lazy" src="figures/EX481.svg" style="width: 100%" alt=""/>
-</div>
+<div class="sol" data-id="ex-5-2">
 
+  <div class="step">
+    <span class="lead">Which water controls which point</span>
+    A sits <em>above</em> the CH clay, held up by the Elv. 100 m
+    surface. <br>
+    B sits <em>below</em> is in the perched aquifer that daylights under the lake at
+    Elv. 200 m.
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Head at A</span>
+    \(h_{w,A}=\) <span class="blank math" data-bid="1D_flow.91a4971a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="1D_flow.eb4b5783-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(\unit{m}\) <br>
+     \(h_A=z_A+h_{w,A}=\) <span class="blank math" data-bid="1D_flow.50861f0a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="1D_flow.8651224b-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Head at B</span>
+    \(h_{w,B}=\) <span class="blank math" data-bid="1D_flow.27976a0f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="1D_flow.4911f9a6-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(\unit{m}\) <br>
+     \(h_B=z_B+h_{w,B}=\) <span class="blank math" data-bid="1D_flow.c4d5eb4c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="1D_flow.cf21d6d7-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+    <span class="note">B is artesian: its pressure head is far larger than its depth below
+    ground. If you drill into it, water will rise</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Gradient across the clay</span>
+    \(h_B>h_A \ \implies \) <strong>upward flow</strong>, B to A, through
+    \(L_{AB}=\) <span class="blank" data-bid="1D_flow.009f49dd-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+    \(i=\dfrac{h_B-h_A}{L_{AB}}=\) <span class="blank math" data-bid="1D_flow.a88e0dc9-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="1D_flow.fe0c0f15-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Heads at C and D</span>
+    Both are in the same confined aquifer: <br>
+    \(h_C=h_D=\) <span class="blank" data-bid="1D_flow.f73d4c5a-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\), with
+    \(h_w=\) <span class="blank math" data-bid="1D_flow.6ad24eb2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="1D_flow.aa73ab3c-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(\unit{m}\) at each
+  </div>
+</div>
+</div>
 
 </section>
 
@@ -605,7 +708,7 @@ Examining the the equation for \(k\) we can conclude that:
 					\(k[cm/s]=C d_{50}^j\)
 					</div></p>
 					 
-					 <ul style="font-size:25px">
+					 <ul style="font-size:1em">
 						 <li>\(d_{50}\) in mm</li>
 						 <li>\(C=\) empirical coefficient between 0.4-10.0. 1 is a good value for clean poorly graded sands.</li>
 						 <li>\(j=\) empirical exponent between 1.5-2.5</li>
@@ -615,7 +718,7 @@ Examining the the equation for \(k\) we can conclude that:
 					<p><div class='equationBox' style="font-size: 0.9em">
 					\(k[m/s]= \left( \cfrac{\rho g}{\mu} \right)  \cfrac{n^3}{(1-n)^2}   \cfrac{d_{50}^2}{180}\)
 					</div></p>					 
-					 <ul style="font-size:25px">
+					 <ul style="font-size:1em">
 						 <li>\(d_{50}\) in m</li>
 					 </ul>
 				 </li>
@@ -649,11 +752,8 @@ A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a c
 
   <div class="step">
     <span class="lead">Pick the right test equation</span>
-    The head is <em>held constant</em>, so Darcy's law applies unchanged for the whole
-    test: \(V=q\,t=k\,i\,A\,t\), with \(i=\dfrac{h}{L}\).
-    <span class="note">\(T=20^{\circ}\)C is the reference temperature for \(k\) — no
-    viscosity correction. That is the only reason it is given.</span>
-  </div>
+    The head is <em>held constant</em> \(\implies\) \(\boxed{k= \dfrac{Q \ L}{A \Delta h \Delta t}}\).
+    </div>
 
   <div class="step">
     <span class="lead">Cross-sectional area</span>
@@ -664,33 +764,17 @@ A cylindrical soil sample, 7.6 cm in diameter and 17.8 cm long, is tested in a c
 
   <div class="step">
     <span class="lead">Volume collected</span>
-    \(V=\) <span class="blank" data-bid="1D_flow.c4a1c6b6-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3}\)
-    <span class="note">A <em>mass</em> was measured; Darcy's law needs a volume. At
-    \(20^{\circ}\)C, \(\rho=1\unit{g/cm^3}\) — same number, different unit.</span>
+    \(Q=\) <span class="blank" data-bid="1D_flow.f2120806-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3} \) 
+    <span class="note">Beacause at \(20^{\circ}\)C, \(\rho=1\unit{g/cm^3}\) </span>
   </div>
 
-  <div class="step">
-    <span class="lead">Flow rate</span>
-    \(q=\dfrac{V}{t}=\) <span class="blank math" data-bid="1D_flow.03767d3c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank" data-bid="1D_flow.b9dfef9c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3/s}\)
-    <span class="note">\(t=2\) min \(=120\) s. Convert <em>before</em> substituting.</span>
-  </div>
 
-  <div class="step">
-    <span class="lead">Hydraulic gradient</span>
-    \(i=\dfrac{h}{L}=\) <span class="blank math" data-bid="1D_flow.5d3ad1fe-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank" data-bid="1D_flow.0ca530a8-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    <span class="note">Dimensionless: head lost <em>per unit length of flow path</em>.
-    The denominator is \(L\), never the head.</span>
-  </div>
 
   <div class="step result">
     <span class="lead">Permeability</span>
-    \(k=\dfrac{q}{i\,A}=\)
-    <span class="blank math" data-bid="1D_flow.f0db7475-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:34ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank math ans" data-bid="1D_flow.4e4d7448-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
-    <span class="note">Sanity check: a constant-head test only gives measurable flow in
-    a fairly permeable soil, so expect the clean-sand range.</span>
+    \(k=\dfrac{Q \ L}{A \Delta h \Delta t}=\)
+    <span class="blank math" data-bid="1D_flow.086eda5a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.1d016267-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
   </div>
 
 </div>
@@ -731,57 +815,17 @@ Calculate the permeability of the soil sample in cm/s.
 
   <div class="step">
     <span class="lead">Pick the right test equation</span>
-    Nothing maintains the head here — the water in the standpipe <em>falls</em> from
-    \(H_1\) to \(H_2\), so \(q\) changes continuously. Integrating Darcy's law over
-    \(\Delta t\) gives the falling-head equation
-    \(k=\dfrac{a\,L}{A\,\Delta t}\,\ln\!\dfrac{H_1}{H_2}\).
-    <span class="note">What makes it falling-head is the <em>apparatus</em>, not the
-    soil: nothing resupplies the standpipe.</span>
+    the water in the standpipe <em>falls</em> from
+    \(H_1\) to \(H_2 \ \implies\) \(k=\dfrac{a\,L}{A\,\Delta t}\,\ln\!\dfrac{H_1}{H_2}\)    
   </div>
 
-  <div class="step">
-    <span class="lead">Sort out the two areas</span>
-    <table class="sol-table">
-      <tr><th>Symbol</th><th>Cross-section of&hellip;</th><th>Value</th></tr>
-      <tr>
-        <td class="lbl">\(a\)</td>
-        <td>the standpipe — the water that <em>falls</em></td>
-        <td>7.25 \(\unit{cm^2}\)</td>
-      </tr>
-      <tr>
-        <td class="lbl">\(A\)</td>
-        <td>the specimen — the soil water flows <em>through</em></td>
-        <td>11.43 \(\unit{cm^2}\)</td>
-      </tr>
-    </table>
-    <span class="note">Swapping \(a\) and \(A\) is the classic error here. They differ
-    by only 1.6&times;, so a swapped answer still <em>looks</em> plausible.</span>
-  </div>
-
-  <div class="step">
-    <span class="lead">Head-ratio term</span>
-    \(\ln\!\dfrac{H_1}{H_2}=\) <span class="blank math" data-bid="1D_flow.6f6ba7cd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\ln\) <span class="blank" data-bid="1D_flow.8e3009a2-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="1D_flow.b4e8cf4a-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    <span class="note">A <em>ratio</em>, so it is dimensionless — any consistent length
-    unit works.</span>
-  </div>
-
-  <div class="step">
-    <span class="lead">Geometric / time factor</span>
-    \(\dfrac{a\,L}{A\,\Delta t}=\)
-    <span class="blank math" data-bid="1D_flow.29948372-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank" data-bid="1D_flow.62f83c15-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
-    <span class="note">This term carries all the units. \(\Delta t\) is already in
-    seconds, so \(k\) comes out in cm/s.</span>
-  </div>
+  
 
   <div class="step result">
     <span class="lead">Permeability</span>
     \(k=\dfrac{a\,L}{A\,\Delta t}\ln\!\dfrac{H_1}{H_2}=\)
-    <span class="blank math" data-bid="1D_flow.9bfa53f6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank math ans" data-bid="1D_flow.f72d5272-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
-    <span class="note">Same order as Example 5.3 — reasonable for the gravelly sand
-    (SW) described in the statement.</span>
+    <span class="blank math" data-bid="1D_flow.9bfa53f6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.f72d5272-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)    
   </div>
 
 </div>
@@ -825,26 +869,55 @@ The <span class="blank" data-bid="1D_flow.77644efe-0" style="min-width:23ch" con
 <div class='textBox' >
 The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of breakthrough at well B using a tracer introduced at A is 167 hours. Calculate (a) the horizontal hydraulic gradient, (b) the average linear velocity, and (c) the hydraulic conductivity
 </div>
-<div class='container'>
-<div class='col' style='--colw:35%'>
 <figure>
-<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_field_perm.png' width='100%'/>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_field_perm.png' width='60%'/>
 <footer style='font-size: 0.8em'> <em></em> </footer>
 </figure>
-</div>
-<div class='col' style='--colw:65%'>
-<div class='ProblemBox' style='height: 370px'>
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-5-5">
+
+  <div class="step">
+    <span class="lead">Well levels interpretation</span>
+    The water level in an open well <em>is</em> total head \(\implies\)
+    \(h_A=18.4\unit{m}\) and \(h_B=17.1\unit{m}\) 
+  </div>
+
+  <div class="step">
+    <span class="lead">Hydraulic gradient</span>
+    \(i=\dfrac{h_A-h_B}{L}=\) <span class="blank math" data-bid="1D_flow.76717db6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="1D_flow.940afc30-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>    
+  </div>
+
+  <div class="step">
+    <span class="lead">Average linear velocity</span>    
+    \(\vs=\dfrac{L}{\Delta t}=\) <span class="blank math" data-bid="1D_flow.451f13e8-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)    
+    <span class="blank math ans" data-bid="1D_flow.1f4f973f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Darcy velocity</span>
+    Darcy's velocity is measure in the bulk, not the pores, so it is smaller than \(\vs\): <br>
+    \(\vD=n_e\,\vs=\) <span class="blank math" data-bid="1D_flow.894efd37-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math" data-bid="1D_flow.1d640ac7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note"
+     ></span>
+      <br>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Hydraulic conductivity</span>
+    From \(\vD=k\,i\): &nbsp; \(k=\dfrac{\vD}{i}=\)
+    <span class="blank math" data-bid="1D_flow.8408ce0a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:34ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math ans" data-bid="1D_flow.9144f5a7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+    <span class="note">about 11 m/day</span>
+  </div>
 
 </div>
-</div>
-</div>
-
-
-<div class='ProblemBox' style='height: 660px'>
 
 </div>
-
-
 </section>
 
 <section class="block" id="s19" data-anchor="example-5-6">
@@ -859,22 +932,68 @@ The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of 
 				<li>Compute the amount of water flow \(q\) through the specimen.</li>
 			</ol>		
 	</div>
-	<div class="container">
-  	<div class="col" style="--colw:50%">
-	<img loading="lazy" src="figures/Example_tubes.svg" style="width: 100%" alt=""/>
-  	</div>
-  	<div class="col" style="--colw:50%">
+  <figure> <img loading="lazy" src="figures/Example_tubes.svg" style="width: 60%" alt=""/> </figure>
 		<div class='ProblemBox' >
 		
-		</div>
-  	</div>
+<div class="sol" data-id="ex-5-6">
+
+  <div class="step">
+    <span class="lead">Start at the boundaries</span>
+    The standpipes at the ends read their own reservoirs, hence: <br>
+    \(h_A=280\unit{mm}=\) <span class="blank" data-bid="1D_flow.a622c1f0-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\) <br>
+    \(h_D=200\unit{mm}=\) <span class="blank" data-bid="1D_flow.9d0150c9-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\)    
   </div>
 
+  <div class="step">
+    <span class="lead">Hydraulic gradient</span>
+    \(L_{AD}=3\times60=\) <span class="blank" data-bid="1D_flow.53221ba6-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\), so
+    \(i=\dfrac{h_A-h_D}{L_{AD}}=\) <span class="blank math" data-bid="1D_flow.ce02a749-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="1D_flow.54441b43-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note"
+     ></span>
+  </div>
 
-<div class='ProblemBox' >
-<img loading="lazy" src="figures/EX491.svg" style="width: 100%" alt=""/>
+  <div class="step">
+    <span class="lead">Heads and pressure at the interior points</span>
+    The loss of head per interval is \(\Delta h= i\times\Delta L=\) <span class="blank math" data-bid="1D_flow.64030b8a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="1D_flow.fbf0e5c2-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\) <br>
+    Using  \(h_w=h-z\) &nbsp;and&nbsp; \(u=\hp\,\gw\) <br>
+    <table class="sol-table">
+      <tr><th>Point</th><th>\(z\) (cm)</th><th>\(h\) (cm)</th><th>\(h_w=h-z\) (cm)</th><th>\(u=\hp\gw\) (kPa)</th></tr>
+      <tr><td class="lbl">A</td><td>5.0</td><td>28.0</td><td><span class="blank" data-bid="1D_flow.d2aa1231-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.c177771e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">B</td><td>7.5</td><td><span class="blank" data-bid="1D_flow.37f47bb5-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.f2b6e6e2-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.cc8c7aef-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">C</td><td>10.0</td><td><span class="blank" data-bid="1D_flow.9a37eee2-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.e8946b8a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.4892fd0a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">D</td><td>12.5</td><td>20.0</td><td><span class="blank" data-bid="1D_flow.8e7a047c-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.71e37c21-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+    <span class="note">\(h_w\) goes to <em>metres</em> before multiplying by
+    \(\gw=9.81\unit{kN/m^3}\)</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Levels in the standpipes</span>
+    Each rises to the <em>total head</em> above the datum:
+    <span class="blank ans" data-bid="1D_flow.2771a426-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>, <span class="blank ans" data-bid="1D_flow.92381c9e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>,
+    <span class="blank ans" data-bid="1D_flow.6270ec3e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>, <span class="blank ans" data-bid="1D_flow.a93b7fcb-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\)    
+  </div>
+
+  <div class="step">
+    <span class="lead">Cross-sectional area</span>
+    \(A=\dfrac{\pi\phi^{2}}{4}=\) <span class="blank math" data-bid="1D_flow.05919542-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.42bb6b2d-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^2}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Flow through the specimen</span>
+    \(q=k\,i\,A=\)
+    <span class="blank math" data-bid="1D_flow.4d59f8bb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:39ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math ans" data-bid="1D_flow.dc67f615-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3/s}\)
+    <span class="note">Darcy's law uses the gross area, not the area of the voids</span>
+  </div>
 
 </div>
+
+</div>
+
 
 
 </section>
@@ -886,25 +1005,69 @@ The water levels in the two wells 20 m apart are 18.4 m and 17.1 m. The time of 
 <div class='textBox' >
 The test setup has the dimensions shown below. Calculate: (a) the pressure head, (b) elevation head, (c) total head, and (d) head loss at points B, C, D, and F in cm of water.
 </div>
-<div class='container'>
-<div class='col' style='--colw:50%'>
+
 <figure>
-<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_new.png' width='100%'/>
+<img loading="lazy" src='../../1D_flow/FiguresGeneral/example_new.png' width='60%'/>
 <footer style='font-size: 0.8em'> <em></em> </footer>
 </figure>
-</div>
-<div class='col' style='--colw:50%'>
-<div class='ProblemBox' style='height: 400px'>
+
+<div class='ProblemBox'>
+
+<div class="sol" data-id="ex-5-7">
+
+  <div class="step">
+    <span class="lead">Elevation heads, from the datum at E</span>
+    <table class="sol-table">
+      <tr><th>Point</th><th>A</th><th>B</th><th>C</th><th>D</th><th>F</th></tr>
+      <tr><td class="lbl">\(\hz\) (cm)</td>
+          <td><span class="blank" data-bid="1D_flow.dea5e735-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+          <td><span class="blank" data-bid="1D_flow.ccc1c629-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+          <td><span class="blank" data-bid="1D_flow.969bdb0f-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+          <td><span class="blank" data-bid="1D_flow.a34cc1fd-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td>
+          <td><span class="blank" data-bid="1D_flow.41d7240c-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Heads at the two ends</span> <br>
+    Top free surface: \(h=\hz+0=\) <span class="blank" data-bid="1D_flow.c893a6f0-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\) <br>
+    Bottom free surface: \(h=\hz+0=\) <span class="blank" data-bid="1D_flow.2215d3f6-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\)   
+  </div>
+
+  <div class="step">
+    <span class="lead">No loss in standing water</span>
+    \(h_B=h_C=\) <span class="blank" data-bid="1D_flow.59c6b746-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(\unit{cm}\) 
+    <span class="note">In free water,\(h_w\) changes from point to
+    point, but never \(h\)</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Gradient through the soil</span>
+    \(L_{soil}=\) <span class="blank" data-bid="1D_flow.7a6789cb-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm}\) (C down to F) <br>
+    \(i=\dfrac{\Delta h}{L_{soil}}=\) <span class="blank math" data-bid="1D_flow.660e9497-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="1D_flow.41783be7-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">In this case the flow path is the <em>thickness of the soil</em></span>
+  </div>
+
+  
+
+  <div class="step result">
+    <span class="lead">\(h_w=h-\hz\) and head losses</span>
+    <table class="sol-table">
+      <tr><th>Point</th><th>\(h_w\) (cm)</th><th>\(\hz\) (cm)</th><th>\(h\) (cm)</th><th>\(\Delta h\) from previous</th><th>\(\Delta h\) cumulative</th></tr>
+      <tr><td class="lbl">B</td><td><span class="blank ans" data-bid="1D_flow.53366d2a-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td>35</td><td><span class="blank ans" data-bid="1D_flow.d22e4949-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.95101320-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.db5d1817-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">C</td><td><span class="blank ans" data-bid="1D_flow.9dd8b28f-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td>20</td><td><span class="blank ans" data-bid="1D_flow.ed332a78-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.b11f89a5-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.634452ff-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">D</td><td><span class="blank ans" data-bid="1D_flow.c09e4825-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td>7.5</td><td><span class="blank ans" data-bid="1D_flow.4ea658be-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.c72244bf-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.68b7aa64-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">F</td><td><span class="blank ans" data-bid="1D_flow.c662154e-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td>&minus;5</td><td><span class="blank ans" data-bid="1D_flow.e55b3a5b-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.f8874089-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="1D_flow.564be678-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+  </div>
 
 </div>
-</div>
-</div>
 
-
-<div class='ProblemBox' style='height: 680px'>
-<div class="embed-placeholder" data-src="https://docs.google.com/spreadsheets/d/1859BThbITjdQO3eMNJqM7CbagsPY6Q6rMa1KVaNkpzw/edit?usp=sharing" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
 </div>
-
 
 </section>
 
@@ -1037,21 +1200,22 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
 <div class="sol" data-id="ex-5-8">
 
   <div class="step">
-    <span class="lead">See the system for what it is</span>
-    Water crosses <em>three</em> materials in a row: stone, soil, stone. They are in
-    <strong>series</strong>, so each carries the same \(q\) but loses a different share
-    of the head. Resistances add:
-    \(\dfrac{L_{tot}}{k_{eq}}=\displaystyle\sum_i\dfrac{L_i}{k_i}\).
+    <span class="lead">Identify system</span>
+    Water crosses <em>three</em> materials in a row: stone, soil, stone \(\implies\) flow in <span class="blank" data-bid="1D_flow.e868b531-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span><br>
+    \(\boxed{\dfrac{L_{tot}}{k_{eq}}=\displaystyle\sum_i\dfrac{L_i}{k_i}}\).
     <span class="note"
-     >Define
-    \(R=L/k\) (units of s) and the problem becomes
-    arithmetic: \(R_{tot}=2R_{stone}+R_{soil}\). Only <em>series</em> layers add this
-    way — parallel layers add \(k_iL_i\) instead.</span>
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Simplify to "resistance" terms</span>
+    Define \(R=L/k \ \implies\)  \(R_{tot}=\)  <span class="blank math" data-bid="1D_flow.ae2e0bf9-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span>
+
   </div>
 
   <div class="step">
     <span class="lead">Geometry, in consistent units</span>
-    \(D=6''=\) <span class="blank" data-bid="1D_flow.3d26e5e2-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm, &nbsp;
+    \(D=6''=\) <span class="blank" data-bid="1D_flow.7bcb8a81-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm, &nbsp;
     \(L_{tot}=12''=\) <span class="blank" data-bid="1D_flow.71329fea-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm, &nbsp;
     \(t_{stone}=\tfrac12''=\) <span class="blank" data-bid="1D_flow.b08f6b66-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> cm
     <br>
@@ -1059,12 +1223,7 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
     <span class="blank math" data-bid="1D_flow.7f0edfa4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
     <span class="blank" data-bid="1D_flow.74c50c2c-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> cm
     <span class="note"
-     ><strong>Two
-    readings of the statement have to be pinned down.</strong>
-    A stone "of 1/2 inch" must be its <em>thickness</em> — it has to span the full
-    6&Prime; chamber to seal against the wall. And the 12&Prime; chamber height is taken
-    as the whole stack, so the soil is what is left after both stones. State
-    assumptions like these before you compute; they change the answer.</span>
+     ><strong></span>
   </div>
 
   <div class="step">
@@ -1075,35 +1234,27 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
   </div>
 
   <div class="step">
-    <span class="lead">What the test actually measures</span>
-    The test sees the <em>whole stack</em>, so it returns \(k_{eq}\), not the soil:
+    <span class="lead">Calculate \(k_{eq}\)</span>
+    The test measures the permenability of the whole system, so it returns \(k_{eq}\): <br>
     \(k_{eq}=\dfrac{V\,L_{tot}}{A\,\Delta h\,t}=\)
     <span class="blank math" data-bid="1D_flow.9e099dfe-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
     \(=\) <span class="blank math" data-bid="1D_flow.05a165f5-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
-    <span class="note"
-     >\(V=2\unit{L}=2000\unit{cm^3}\),
-    \(\Delta h=1\unit{m}=100\unit{cm}\),
-    \(t=1.5\unit{hr}=5400\unit{s}\). This is the number you would report if you forgot
-    the stones — hold on to it for comparison.</span>
+
   </div>
 
   <div class="step">
     <span class="lead">Total resistance measured</span>
     \(R_{tot}=\dfrac{L_{tot}}{k_{eq}}=\)
     <span class="blank math" data-bid="1D_flow.3f20c73a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:38ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank" data-bid="1D_flow.2815c5ce-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
+    \(=\) <span class="blank math" data-bid="1D_flow.2815c5ce-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
   </div>
 
   <div class="step">
     <span class="lead">Resistance the stones are responsible for</span>
     \(2R_{stone}=\dfrac{2\,t_{stone}}{k_{stone}}=\)
-    <span class="blank math" data-bid="1D_flow.3a9397cd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:37ch" contenteditable="plaintext-only" spellcheck="false"></span>
-    \(=\) <span class="blank" data-bid="1D_flow.70e8f18c-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
-    <span class="note"
-     >The
-    stones are far thinner than the soil but only ten times more
-    permeable, so they are not negligible — thickness and permeability both matter,
-    only the <em>ratio</em> \(L/k\) counts.</span>
+    <span class="blank math" data-bid="1D_flow.3a9397cd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math" data-bid="1D_flow.70e8f18c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{s}\)
+
   </div>
 
   <div class="step result">
@@ -1113,22 +1264,15 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
     \(=\) <span class="blank math ans" data-bid="1D_flow.7b5efa2c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
   </div>
 
-  <div class="note">Worth the effort? The stones turn out to carry 5.2% of
-  the total resistance, so ignoring them overestimates the sand's permeability by about
-  3.5%. Small here — but the error grows quickly as the soil becomes more permeable
-  relative to the stones, which is exactly when you are most tempted to skip the
-  correction.</div>
+  <div class="note">Worth the effort? The stones carry 5.2% of
+  the total resistance. Ignoring them overestimates the sand's permeability by
+  3.5%. Error grows quickly as the soil becomes more permeable
+  relative to the stones, which is when you are most tempted to skip the
+  correction</div>
 
 </div>
 
 </div>
-
-
-
-<div class='ProblemBox' >
-
-</div>
-
 
 </section>
 
@@ -1173,24 +1317,71 @@ A constant head permeability test was conducted on a chamber of 6 inches of diam
 A permeable water channel will be constructed as shown in the figure. Three layers of sand with \(k_1=1.5 \times 10^{-5}\) cm/s, \(k_2=7.89 \times 10^{-3}\) cm/s, and \(k_3=1.2 \times 10^{-4}\) cm/s connects a river and the proposed channel as illustrated. Calculate the hydraulic gradient between the river and the channel, the equivalent permeability of the layers, and the flow per unit of length.
 
 </div>
-<div class='container'>
-<div class='col' style='--colw:50%'>
+
 	<figure>
-		<img loading="lazy" src='../../1D_flow/FiguresGeneral/channels.svg' width='100%'/>
+		<img loading="lazy" src='../../1D_flow/FiguresGeneral/channels.svg' width='60%'/>
 		<footer style='font-size: 0.8em'> <em></em> </footer>
 	</figure>
-</div>
-<div class='col' style='--colw:50%'>
-<div class='ProblemBox' >
-
-</div>
-</div>
-</div>
-
-
-
 
 <div class='ProblemBox' >
+
+<div class="sol" data-id="ex-5-9">
+
+  <div class="step">
+    <span class="lead">Identify system</span>
+    The water crosses the three sands <em>side by side</em> \(implies\) Layers in
+    <span class="blank" data-bid="1D_flow.b0bd4abc-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span>: <br>
+    \(\keq=\dfrac{\sum k_iA_i}{A}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Head difference</span>
+    \(\Delta h=\) <span class="blank math" data-bid="1D_flow.e0d29877-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="1D_flow.c9927041-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+    <span class="note"
+     ></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Flow path length</span>
+    The layers drop \(13\unit{ft}\) over \(1255.6\unit{ft} \implies\)
+    \(L=\) <span class="blank math" data-bid="1D_flow.f8a2ecf2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span> <span class="blank" data-bid="1D_flow.383ba61d-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\) 
+  </div>
+
+  <div class="step">
+    <span class="lead">Hydraulic gradient</span>
+    \(i=\dfrac{\Delta h}{L}=\) <span class="blank math" data-bid="1D_flow.fde01613-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.14ccb801-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>  
+  </div>
+
+  <div class="step">
+    <span class="lead">Equivalent permeability</span>
+    Unit width, so areas go as thicknesses:
+    \(\keq=\dfrac{\sum k_ib_i}{\sum b_i}=\)
+    <span class="blank math" data-bid="1D_flow.34328918-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank math ans" data-bid="1D_flow.54581a2b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm/s}\)
+  </div>
+
+  
+
+  <div class="step result">
+    <span class="lead">Seepage per unit length of channel</span> <br>
+    \(q=\keq\,i\,A=\)
+    <span class="blank math" data-bid="1D_flow.48bb16b0-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math ans" data-bid="1D_flow.23c2ffcc-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{cm^3/s}\) per cm
+  </div>
+
+  <div class="step">
+    <span class="lead">Transform units</span> 
+    Once done, transform to \(\unit{Lt/day}\) per \(\unit{ft}\) of channel: <br>
+    \(q=\ee{6.89}{-3}\dfrac{\unit{cm^3}}{\unit{s}\cdot\unit{cm}}\times\)
+    <span class="blank math" data-bid="1D_flow.f6b6dde4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\times\)
+    <span class="blank math" data-bid="1D_flow.ba336ab3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\times\)
+    <span class="blank math" data-bid="1D_flow.f6017439-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="1D_flow.aa1499b5-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{Lt/day/ft}\) of channel
+  </div>
+
+</div>
 
 </div>
 
@@ -1239,15 +1430,90 @@ Consider an aquifer with three horizontal layers as listed in the table. The hea
 
 
 
-<div class='ProblemBox' style='height: 680px'>
-<img loading="lazy" src="figures/EX51000.svg" style="width:100%" alt=""/>
-</div>
-
-
-
 <div class='ProblemBox' >
-<div class="embed-placeholder" data-src="https://docs.google.com/spreadsheets/d/1p7Vu99lvH4tH7IU8LDUBt92TDjYmRtwz8LTjfwKUuvo/edit?usp=sharing" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+
+<div class="sol" data-id="ex-5-10">
+
+  <div class="sol-cols">
+    <div class="sol-col" style="flex: 0 0 25%">
+      <span class="sol-fig">
+        <img loading="lazy" src="../../1D_flow/FiguresGeneral/ex-5-10-sketch.svg" width="100%"
+             alt="Three horizontal layers with the head fixed on the top and bottom faces and the flow directed downward."/>
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Sketch the system</span>
+        \(L=1.5+3.9+2.75=\) <span class="blank" data-bid="1D_flow.b6c8d6bc-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">\(k_{x,eq}\) — parallel</span> <br>
+        \(k_{x,eq}=\dfrac{\sum k_{x,i}L_i}{L}=\)
+        <span class="blank math" data-bid="1D_flow.c42b1fe7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank ans" data-bid="1D_flow.bc409652-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m/d}\)
+      </div>
+
+
+
+    </div>
+  </div>
+      <div class="step">
+        <span class="lead">\(k_{y,eq}\) — series</span>
+        
+        \(\sum\dfrac{L_i}{k_{y,i}}=\)
+        <span class="blank math" data-bid="1D_flow.cc6a08eb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="1D_flow.6bc97d31-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{d}\) <br>
+        \(k_{y,eq}=\dfrac{L}{\sum L_i/k_{y,i}}=\)
+        <span class="blank math" data-bid="1D_flow.0a25148e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank math ans" data-bid="1D_flow.003e1416-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m/d}\)
+      </div>
+
+  <div class="step">
+    <span class="lead">Vertical gradient</span>
+    \(i_y=\dfrac{\Delta h}{L}=\) <span class="blank math" data-bid="1D_flow.93af4eeb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:30ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.f0f255ea-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">The head is fixed on the two outer faces, so this is the average
+    across the whole system, not the gradient associated with a single layer</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Vertical flow rate</span>
+    \(q=k_{y,eq}\,i_y=\) <span class="blank math" data-bid="1D_flow.4c87a198-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math ans" data-bid="1D_flow.b4357072-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m^3/d}\) per \(\unit{m^2}\)
+    <span class="note">No plan area is given, so this is a discharge <em>per unit plan
+    area</em></span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Head loss across each layer</span>
+    Same \(q\) crosses all three: <br>
+    \(\Delta h_i=\dfrac{q\,L_i}{k_{y,i}}\): &nbsp;
+    \(\Delta h_1=\) <span class="blank math" data-bid="1D_flow.6008d6ac-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:39ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.1f85f033-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+    \(\Delta h_2=\) <span class="blank math" data-bid="1D_flow.d2a61409-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.c1f85817-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>, &nbsp;
+    \(\Delta h_3=\) <span class="blank math" data-bid="1D_flow.dd2a41eb-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank" data-bid="1D_flow.850a5295-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+  </div>
+
+  <div class="step result">
+    <span class="lead">Total head through the profile</span>
+    <table class="sol-table">
+      <tr><th>Layer</th><th>\(h\) top (m)</th><th>\(h\) middle (m)</th><th>\(h\) base (m)</th></tr>
+      <tr><td class="lbl">1</td><td>101.300</td><td><span class="blank ans" data-bid="1D_flow.ffc47ba5-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.c2fe8992-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">2</td><td><span class="blank" data-bid="1D_flow.a6caf162-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.4701c47f-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.fe7667bb-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td class="lbl">3</td><td><span class="blank" data-bid="1D_flow.55211305-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.525ba189-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank ans" data-bid="1D_flow.f5a3898c-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+  </div>
+
 </div>
+
+</div>
+
+
+
 
 
 </section>
