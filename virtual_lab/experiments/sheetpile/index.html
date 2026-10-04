@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheet Pile Seepage</title>
+  <link rel="stylesheet" href="../../core/vlab.css">
+</head>
+<body>
+  <div class="vl-app">
+    <header class="vl-head">
+      <h1>Seepage under a sheet pile</h1>
+      <p>Steady 2D flow, &part;²h/&part;x² + &part;²h/&part;z² = 0, solved live by finite differences. Change the
+        boundary conditions, read the flow net, and drop standpipes to see total, elevation and pressure head.</p>
+    </header>
+    <div class="vl-main">
+      <div class="vl-stage"><canvas id="cv" aria-label="Total head field and flow net"></canvas></div>
+      <aside class="vl-panel" id="panel"></aside>
+    </div>
+  </div>
+  <script src="../../core/grid.js"></script>
+  <script src="../../core/laplace.js"></script>
+  <script src="../../core/colormap.js"></script>
+  <script src="../../core/contour.js"></script>
+  <script src="../../core/view.js"></script>
+  <script src="../../core/controls.js"></script>
+  <script src="../../core/probes.js"></script>
+  <script src="sheetpile.js"></script>
+</body>
+</html>

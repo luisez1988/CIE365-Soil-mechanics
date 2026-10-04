@@ -1,0 +1,104 @@
+<!-- Example 5.11 — maximum depth of a cut in clay over artesian sand.
+     Two parts, matching the deck's two slides:
+       part 1 = statement slide, beside FiguresGeneral/EX511.png: data, find, principles
+       part 2 = the two-column slide: approach 1 (sigma' = 0) | second approach (i_crit = i_max)
+     Datum at A, the clay-sand contact under the cut; gamma_w = 9.81 kN/m3.
+     Legacy figures: FiguresGeneral/EX5110.svg (part 1) + EX5111.svg (part 2) -->
+<div class="sol" data-id="ex-5-11" style="--sol-line: 1.25;">
+
+  <!-- ============ part 1 — data, find, principles ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    Figure
+    <!-- <span class="note">The sand&rsquo;s \(\gamma_{sat}\) and its 2.5 m are not needed: failure starts at \(A\), the top of the sand.</span> -->
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Find</span>
+    \(H_{max}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span>
+    \(FS_p=\dfrac{i_{crit}}{i_{max}}=\) <span class="fill">1</span>,
+    &nbsp; \(i_{crit}=\) <span class="fill">\(\dfrac{\gamma'}{\gamma_w}\)</span>,
+    &nbsp; \(i=\dfrac{\Delta h}{L}\)
+    <span class="note">Use \(\gamma'\), the submerged unit weight, not \(\gamma_{sat}\).</span>
+  </div>
+
+  <!-- ==== part 2 — the two approaches, one per column ==== -->
+
+  <div class="sol-cols" data-part="2" style="margin-top: -0.5em;">
+    <div class="sol-col bordered">
+
+      <div class="step">
+        <span class="lead">Recall</span>
+        quick condition happens if \(\sigma'_{vA}=\) <span class="fill">0</span>;
+        \(\ \sigma'_{vA}=\sigma_{vA}-u_A\)
+        <span class="note">Sand is more susceptible to liquefaction. If this happens, it can make the cut unstable</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Total stress at \(A\)</span>
+        \(\sigma_{vA}=\) <span class="fill">\((10-H)\,\gamma_{sat,clay}\)</span>
+        <span class="note">Only \(10-H\) is left above \(A\).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Pore pressure at \(A\)</span>
+        \(u_A=\) <span class="fill">\(6\,\gamma_w\)</span>
+        <span class="note">\(u_A\) set by piezometer level</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Solve \(\sigma'_{vA}=0\)</span>
+        <span class="fill">\((10-H)\,\gamma_{sat,clay}-6\,\gamma_w=0\)</span> <br>
+         \(H=\)  <span class="fill">\(\dfrac{10\,\gamma_{sat,clay}-6\,\gamma_w}{\gamma_{sat,clay}}\)</span>  <br>
+        \(H=\) <span class="fill">\(\dfrac{10(19)-6(9.81)}{19}\)</span>
+        \(=\) <span class="ans">6.90</span> \(\unit{m}\)
+      </div>
+
+    </div>
+    <div class="sol-col bordered">
+
+      <div class="step">
+        <span class="lead">Second approach</span>
+        \(i_{crit}=i_{max}\) because \(FS_p=\) <span class="fill">1</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Total heads, datum at \(A\)</span>
+        \(h_A=\) <span class="fill">6</span> \(\unit{m}\),
+        &nbsp; \(h_B=\) <span class="fill">\(10-H\)</span>
+        <span class="note">The cut is kept dry, so\(h_{w,B=0}\) </span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Maximum gradient</span> 
+        \(i_{max}=\dfrac{h_A-h_B}{10-H}=\)
+        <span class="fill">\(\dfrac{6-10+H}{10-H}\)</span> \(=\)
+        <span class="fill">\(\dfrac{H-4}{10-H}\)</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Critical gradient</span>
+        \(i_{crit}=\dfrac{\gamma_{sat}-\gamma_w}{\gamma_w}=\)
+        <span class="fill">\(\dfrac{19-9.81}{9.81}\)</span> \(=\)
+        <span class="fill">0.937</span>
+        <!-- <span class="note">\(\gamma'\) is of the clay, the soil being lifted</span> -->
+      </div>
+
+      <div class="step result">
+        <span class="lead">Solve \(i_{max}=i_{crit}\)</span>
+        \(\tfrac{H-4}{10-H}=0.937\implies H-4=\) <span class="fill">\(9.37-0.937H\)</span><br>
+        \(1.937H=\) <span class="fill">13.37</span>
+        \(\implies H=\) <span class="ans">6.90</span> \(\unit{m}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="note" data-part="2">Both routes must agree: for upward flow, \(i=i_{crit}\) and \(\sigma'=0\) are the same condition.</div> -->
+
+</div>
