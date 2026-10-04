@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 5: Aspects of 2D/3D Seepage · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Aspects_of_2D3D_flow" data-total="31" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 5: Aspects of 2D/3D Seepage</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">31</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Seepage 2D/3D: Governing Equation</a></li>
+<li><a href="#s3">Erosion due to seepage</a></li>
+<li><a href="#s4">Example 5.11</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+							<li > <div class='textBox' >
+								We learned how to calculate <strong style='color:black'>total head and hydraulic gradient</strong> in soils.
+							</div>
+								</li>
+							<li > We learned to calculate <strong style='color:black'>1D seepage</strong>. </li>
+							<li > <div class='textBox' >
+								We learned how to calculate the <strong style='color:black'>permeability</strong> of uniforms and layered soils.
+							</div>
+								</li>
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+		
+		<div class='container'>
+		<div class='col'>
+			<ul class="contentStyle">
+				<li class="l1">Mass balance and Laplace equation.</li>
+				<li class="l1">Intro to flow nets.</li>				
+				<li class="l1">Seepage erosion and piping</li>
+				<li class="l1">Solutions if erosion is a potential problem.</li>
+			</ul>
+		</div>
+		<div class='col'>
+		<div class='container'>
+			<div class='col'>
+				<div class="stickynote" style="height: 300px">
+					<p> Objectives covered in this lecture</p>
+					<ul>
+						<li>[O2]: Develop an understanding of the importance of groundwater and seepage and its role in evaluating the effective stress in soils  </li>
+					</ul>
+				</div>
+			</div>
+			<div class='col'>
+			<div class='stickynote' style='height: 300px'>
+				<p >After this lecture we will able to:</p>
+				<ul >
+					<li>Describe aspects of 2D/3D seepage.</li>					
+					<li>Describe a flow net.</li>
+					<li>Determine factor of safety against internal erosion.</li>
+				</ul>
+			</div>
+			</div>
+			</div>
+	</div>
+		</div>
+        
+
+
+	<div class="embed-placeholder" data-src="https://www.youtube.com/embed/h1H5QQwoGiw?si=mdTD1HlIZXWZQKGC&amp;controls=0&amp;start=16&amp;end=90" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+
+
+</section>
+
+<section class="block" id="s2" data-anchor="seepage-2d-3d-governing-equation">
+<h2 class="block-title">Seepage 2D/3D: Governing Equation</h2>
+
+
+<div class='container'>
+    <div class='col' style='--colw:30%'>
+        <figure>
+            <img loading="lazy" src='../../Aspects_of_2D3D_flow/FiguresGeneral/3Dflow.svg' 
+                 alt='A three-dimensional infinitesimal soil element illustrating water flux entering and exiting through its faces in the x, y, and z directions to demonstrate the principle of mass conservation.' 
+                 width='100%'/>
+            <footer style='font-size: 0.8em'><em></em></footer>
+        </figure>
+    </div>
+    <div class='col' style='--colw:70%'>
+        <div class='textBox' >
+            Analyzing multi-dimensional flow in porous media requires applying 
+            <span class="blank" data-bid="Aspects_of_2D3D_flow.584779e3-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> through differential calculus. 
+            This derivation yields the <span class="blank" data-bid="Aspects_of_2D3D_flow.689a8033-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>, 
+            the fundamental governing expression for steady-state seepage in soils.
+        </div>
+    </div>
+</div>
+	<div class='equationBox' >
+		\(k_x\cfrac{\partial^2 h}{\partial x^2}+k_y\cfrac{\partial^2 h}{\partial y^2}+k_z\cfrac{\partial^2 h}{\partial z^2}=0\)
+		</div> 
+	<div  ><ul>
+		<li>\(h=\) Total head field </li>
+		<li>\(x\), \(y\), and \(z\) are the spatial coordinates.</li>
+	</ul></div>	
+
+
+
+	
+
+
+	
+	<div class='textBox' >
+		Solution of the <strong style="color:black">Laplace equation:</strong> \(\cfrac{\partial^2 h}{\partial x^2}+\cfrac{\partial^2 h}{\partial y^2}=0\) \(\longrightarrow\) \(h(x,y)\)
+	</div>
+	<p  > For 1D flow: \(\cfrac{\partial^2 h}{\partial x^2}=0\) \(\longrightarrow\) \(h(x)=ax+b\)
+		<figure  >
+		  <img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/Example1D.svg" style="width:80%" data-preload/>
+		  <footer ><small></small></footer>
+		</figure> </p>
+
+	<div class='findingBox' >
+		For 2D/3D flow solve <strong style="color:green">numerically</strong> or using <strong style="color:green">FLOW NETS</strong>
+	</div>
+
+
+
+<iframe src='../../virtual_lab/experiments/sheetpile/index.html?embed=1&theme=light' width='100%'  height='680px' style='border:0' ></iframe>
+
+
+
+		<div class="embed-placeholder" data-src="https://www.youtube.com/embed/0EzoHXEzdwY?autoplay=0&start=55&end=204" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+
+
+
+	
+	Examples
+	<figure>
+		<img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/Examples.svg" style="width:70%" data-preload/>
+		<footer ><small></small></footer>
+		</figure>
+	
+
+
+</section>
+
+<section class="block" id="s3" data-anchor="erosion-due-to-seepage">
+<h2 class="block-title">Erosion due to seepage</h2>
+
+	
+	<div class='textBox' >
+		<strong style='color:black'>Recall:</strong>  We learned that <strong style="color:black">soil strength</strong> depends directly on the <span class="blank" data-bid="Aspects_of_2D3D_flow.4bbff44a-0" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span>. <strong style="color:black">If solid particles <span class="blank" data-bid="Aspects_of_2D3D_flow.98c1fb02-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>, soil becomes a fluid with no shear resistance.</strong>
+			The <span class="blank" data-bid="Aspects_of_2D3D_flow.ba21a77b-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> quantifies contact forces. 
+	</div>
+
+	<p >If <strong style='color:red'>\(\sigma'=0\)</strong>, there is <strong style='color:red'>no contact</strong> between solid grains, soil becomes <span class="blank" data-bid="Aspects_of_2D3D_flow.daed7b1e-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span>, and grains can be dragged away.</p>
+	<div class='textBox' >
+	<div class="container">		
+			<div class="col" style="--colw:50%">
+				<p ><span class="blank" data-bid="Aspects_of_2D3D_flow.147c9580-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>: <strong style='color:green'>\(\sigma'>0\)</strong></p>
+			   </div>
+			<div class="col" style="--colw:50%">
+				<p ><span class="blank" data-bid="Aspects_of_2D3D_flow.ad2cb656-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span>: <strong style='color:red'> \(\sigma'=0\)</strong></p>
+			</div>
+		</div>
+	</div>
+
+
+
+		<div class="embed-placeholder" data-src="https://www.youtube.com/embed/eImtYyuQCZ8?autoplay=0&start=93&end=261" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+
+
+
+	
+	<div class="container">
+		<div class="col" style="--colw:50%">
+	       <ul>
+	       	<li>Scenario A: <strong style='color:black'>No flow</strong> </li>
+					<li>Scenario B: <strong style='color:green'>Downward flow</strong> </li>
+					<li>Scenario C: <strong style='color:red'>Upward flow</strong> </li>
+	       </ul>
+		</div>
+		<div class="col" style="--colw:50%">
+	     <p >Assumptions:
+				 <ul>
+				 	<li><span class="blank" data-bid="Aspects_of_2D3D_flow.04697525-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span></li>
+					<li>Horizontal direction is <span class="blank" data-bid="Aspects_of_2D3D_flow.ae5afc04-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span></li>
+				 </ul>
+			 </p>
+		</div>
+	</div>
+	<figure>
+	  <img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/erosion_1.svg" style="width:80%" data-preload/>
+	  <footer ><small></small></footer>
+	</figure>
+
+
+	
+	<div class="container">
+		<div class="col" style="--colw:50%">
+	      <figure >
+	        <img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/erosion_2.svg" style="width:40%" data-preload/>
+	        <footer ><small></small></footer>
+	      </figure>
+		</div>
+		<div class="col" style="--colw:50%">
+			<h4>No Flow</h4>
+			<img loading="lazy" src="figures/NoFlow.svg" style="width:100%" alt=""/>
+		</div>
+	</div>
+
+	
+	<div class="container">
+		<div class="col" style="--colw:50%">
+	      <figure >
+	        <img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/erosion_3.svg" style="width:50%" data-preload/>
+	        <footer ><small></small></footer>
+	      </figure>
+		</div>
+		<div class="col" style="--colw:50%">
+			<h4>Downward flow</h4>			
+			<img loading="lazy" src="figures/DownwardFlow.svg" style="width:100%" alt=""/>
+
+		</div>
+	</div>
+
+
+	
+	<div class="container">
+		<div class="col"  style="--colw:50%">
+	      <figure >
+	        <img loading="lazy" src="../../Aspects_of_2D3D_flow/FiguresGeneral/erosion_4.svg" style="width:50%" data-preload/>
+	        <footer ><small></small></footer>
+	      </figure>
+		</div>
+		<div class="col"  style="--colw:50%">
+			<h4>Upward flow</h4>
+			<img loading="lazy" src="figures/UpwardFlow.svg" style="width:100%" alt=""/>
+		</div>
+	</div>
+
+
+	
+	<div class='defBox' name='Critical hydraulic gradient' >
+	<strong style='color:green'>\(i_{crit}:\)</strong> Is the maximum hydraulic gradient in the <strong style='color:red'>exit zone</strong> that a soil can experience before it erodes due to seepage forces.
+	<div class='equationBox'>
+	\(i_{crit}=\cfrac{\gamma'}{\gamma_w}=\cfrac{G_s-1}{1+e}\)
+	</div>
+	</div>
+	<div class='defBox' name='Factor of safety against piping' >
+	<strong style='color:green'>\(FS_p:\)</strong> Is the ratio of the critical hydraulic gradient to the actual maximum hydraulic gradient at the exit zone. <br>
+	<div class='equationBox'>
+	\(FS_p=\cfrac{i_{crit}}{i_{max}}\)
+	</div>
+	</div>
+
+
+
+
+
+	<ul >
+		<li >Erosion will <strong style="color:red"> begin if</strong> <span class="blank" data-bid="Aspects_of_2D3D_flow.a760f5cd-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> . </li>
+		<li > It is important to <strong style="color:green">identify</strong> what "element" in a flow net has the <strong style="color:red">maximum hydraulic gradient</strong> \(i_{max}\). </li>
+		<li ><strong style="color:red">Piping</strong> usually begins at <strong style="color:black">downstream side</strong> (upward flow).</li>
+		<li > Because the total head drop is constant between equipotential lines, the <strong style='color:black'>size</strong> of elements control the hydraulic gradient \(\longrightarrow\) <strong style="color:red">Smaller elements</strong> will have <span class="blank" data-bid="Aspects_of_2D3D_flow.f21add4b-0" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span>.  </li>
+	</ul>
+
+
+</section>
+
+<section class="block" id="s4" data-anchor="example-5-11">
+<h2 class="block-title">Example 5.11</h2>
+
+	
+	<div class='textBox' >
+		A 10-m-thick layer of stiff saturated clay is underlain by a layer of sand. The sand is under artesian pressure. Calculate the maximum depth of cut, H, that can be made in the clay before the quicksand condition happens.	
+	</div>
+
+	
+			<figure >
+			<img loading="lazy" src='../../Aspects_of_2D3D_flow/FiguresGeneral/EX511.png' style="width:70%"/>
+			<footer style='font-size: 0.8em'> <em></em> </footer>
+			</figure>
+			<div class='ProblemBox' >
+			
+<div class="sol" data-id="ex-5-11" style="--sol-line: 1.25">
+
+  
+
+  <div class="step">
+    <span class="lead">Data</span>
+    Figure
+    
+  </div>
+
+  <div class="step">
+    <span class="lead">Find</span>
+    \(H_{max}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(FS_p=\dfrac{i_{crit}}{i_{max}}=\) <span class="blank" data-bid="Aspects_of_2D3D_flow.16f5cdde-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>,
+    &nbsp; \(i_{crit}=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.6d665876-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span>,
+    &nbsp; \(i=\dfrac{\Delta h}{L}\)
+    <span class="note">Use \(\gamma'\), the submerged unit weight, not \(\gamma_{sat}\).</span>
+  </div>
+
+  
+
+  <div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Recall</span>
+        quick condition happens if \(\sigma'_{vA}=\) <span class="blank" data-bid="Aspects_of_2D3D_flow.e7c2cdc8-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>;
+        \(\ \sigma'_{vA}=\sigma_{vA}-u_A\)
+        <span class="note">Sand is more susceptible to liquefaction. If this happens, it can make the cut unstable</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Total stress at \(A\)</span>
+        \(\sigma_{vA}=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.a2d622f2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:31ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">Only \(10-H\) is left above \(A\).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Pore pressure at \(A\)</span>
+        \(u_A=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.f9f92d46-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">\(u_A\) set by piezometer level</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Solve \(\sigma'_{vA}=0\)</span>
+        <span class="blank math" data-bid="Aspects_of_2D3D_flow.0c76c76f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+         \(H=\)  <span class="blank math" data-bid="Aspects_of_2D3D_flow.6d1e90b8-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>  <br>
+        \(H=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.1ea7bb55-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank ans" data-bid="Aspects_of_2D3D_flow.7c2d0b97-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-top:2px dashed #555; margin-top:0.8rem; padding-top:0.8rem">
+
+      <div class="step">
+        <span class="lead">Second approach</span>
+        \(i_{crit}=i_{max}\) because \(FS_p=\) <span class="blank" data-bid="Aspects_of_2D3D_flow.a55e251e-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Total heads, datum at \(A\)</span>
+        \(h_A=\) <span class="blank" data-bid="Aspects_of_2D3D_flow.8c33ebd1-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\),
+        &nbsp; \(h_B=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.ae17c626-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">The cut is kept dry, so\(h_{w,B=0}\) </span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Maximum gradient</span> 
+        \(i_{max}=\dfrac{h_A-h_B}{10-H}=\)
+        <span class="blank math" data-bid="Aspects_of_2D3D_flow.5b6e0c2e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank math" data-bid="Aspects_of_2D3D_flow.61d12c16-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Critical gradient</span>
+        \(i_{crit}=\dfrac{\gamma_{sat}-\gamma_w}{\gamma_w}=\)
+        <span class="blank math" data-bid="Aspects_of_2D3D_flow.255b96fa-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Aspects_of_2D3D_flow.3cf31c85-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        
+      </div>
+
+      <div class="step result">
+        <span class="lead">Solve \(i_{max}=i_{crit}\)</span>
+        \(\tfrac{H-4}{10-H}=0.937\implies H-4=\) <span class="blank math" data-bid="Aspects_of_2D3D_flow.e4855098-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span><br>
+        \(1.937H=\) <span class="blank" data-bid="Aspects_of_2D3D_flow.9cfd802e-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(\implies H=\) <span class="blank ans" data-bid="Aspects_of_2D3D_flow.1ddccfba-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+    </div>
+  </div>
+
+  
+
+</div>
+
+			</div>
+
+
+
+	<div class='InquiryBox' >
+		How to reduce the risk of seepage?
+	</div>
+	
+	<ol>
+		<li >Lower the upstream water level.
+			$$\downarrow H_1 \longrightarrow \downarrow \Delta h \longrightarrow \downarrow i$$
+		</li>
+		<li > Place a filter material downstream (increase weight downstream). </li>
+		<li > Increase the length of the flow.
+			$$\uparrow L \longrightarrow \downarrow i$$
+		 </li>
+	</ol>
+
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
