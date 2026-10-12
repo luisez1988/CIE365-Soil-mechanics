@@ -19,8 +19,12 @@ virtual_lab/
     view.js       VLab.View      world<->canvas mapping, raster fill, axes, segments
     controls.js   VLab.Controls  control panel from a schema; VLab.Hash for URL presets
     probes.js     VLab.Standpipes draggable piezometers with h / h_p / u readout
+    boussinesq.js VLab.Boussinesq Δσz under point, line, strip, rectangle, triangular and circular
+                                 surface loads; influence factors; selfTest() in the console
+    plot.js       VLab.Plot      profile line chart; can share an axis with a VLab.View
   experiments/
     sheetpile/                   seepage under a sheet pile (Example 4.18 geometry)
+    stress/                      induced vertical stress (Example 6.2/6.3 default scenario)
 ```
 
 ## Embedding in a deck
@@ -44,6 +48,23 @@ virtual_lab/
   changes. Moving a head slider only needs a back-substitution.
 - Flow lines are contours of the stream function, built from face fluxes. "Square flow net" uses
   Δψ = k·Δh_band, so each band of the colour map and each flow channel form curvilinear squares.
+
+## Model notes (induced stress)
+
+- Plan view (x, y) holds up to 8 loads; a vertical section A–A′ along x or y shows Δσz(s, z) on a
+  161-column node grid. The depth profile and horizontal profile charts borrow the section's
+  axis mapping, so they line up with it.
+- Closed forms: point (Boussinesq), finite and infinite line, rectangle (corner formula, four signed
+  sub-rectangles), infinite strip, infinite triangular strip. Numerical: circle off its axis
+  (polar, ρ exact, θ by 128-point midpoint rule) and the finite triangular load (48 thin rectangles).
+  `VLab.Boussinesq.selfTest()` checks Example 6.3 (7.19 and 4.74 kPa) and the limiting cases.
+- Results belong to the last run. With Auto-run off, changing loads or the section marks them out of
+  date until Run; profiles, points and CSV exports always use the last run.
+- Hash keys: the panel keys (`sax`, `sec`, `sl`, `zl`, `W`, `D`, `field`, `nb`, `cmap`, `rng`, `rmin`,
+  `rmax`, `iso`, `pq`, `contrib`, `auto`), plus
+  `ld` = loads as `type,q,cx,cy,angle,B,L,r,inf` joined by `;` (type p, l, s, r, t, c) and
+  `pt` = points as `s,z` pairs. Example, a negative rotated rectangle and a point load:
+  `#ld=r,-20,0,0,30,3,2,0,0;p,100,2,1,0,0,0,0,0&sax=y&sec=0.5`
 
 ## Adding an experiment
 

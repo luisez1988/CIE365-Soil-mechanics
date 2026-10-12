@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Induced Vertical Stress</title>
+  <link rel="stylesheet" href="../../core/vlab.css">
+</head>
+<body>
+  <div class="vl-app">
+    <header class="vl-head">
+      <h1>Stress beneath surface loads</h1>
+      <p>Boussinesq solutions for an elastic half-space, superposed. Place point, line, strip, rectangular,
+        triangular and circular loads in plan, then read the vertical stress increment &Delta;&sigma;<sub>z</sub>
+        in the cross-section, at points and along profiles.</p>
+    </header>
+    <div class="vl-main">
+      <div class="vs-stage">
+        <div class="vs-top">
+          <div class="vs-plan"><canvas id="plan" tabindex="0" aria-label="Plan view of the surface loads"></canvas></div>
+          <div class="vs-loads" id="loads"></div>
+        </div>
+        <div class="vs-cell vs-sec"><canvas id="sec" aria-label="Cross-section: vertical stress increment"></canvas></div>
+        <div class="vs-cell vs-zp"><canvas id="zprof" aria-label="Profile with depth"></canvas></div>
+        <div class="vs-cell vs-xp"><canvas id="xprof" aria-label="Horizontal profile"></canvas></div>
+        <div class="vs-read" id="readout"></div>
+      </div>
+      <aside class="vl-panel" id="panel"></aside>
+    </div>
+  </div>
+  <script src="../../core/grid.js"></script>
+  <script src="../../core/colormap.js"></script>
+  <script src="../../core/contour.js"></script>
+  <script src="../../core/view.js"></script>
+  <script src="../../core/controls.js"></script>
+  <script src="../../core/plot.js"></script>
+  <script src="../../core/boussinesq.js"></script>
+  <script src="stress.js"></script>
+</body>
+</html>

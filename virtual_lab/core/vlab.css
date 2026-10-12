@@ -102,9 +102,45 @@ body.vl-embed .vl-head { display: none; }
 .vl-table th, .vl-table td { padding: 2px 4px; text-align: right; border-bottom: 1px solid var(--vl-line); }
 .vl-table th:first-child, .vl-table td:first-child { text-align: left; font-weight: 600; }
 
+/* Induced-stress layout: plan + load bar on top, section with aligned profiles below. */
+.vs-stage {
+  min-height: 0; overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(170px, 24%, 270px);
+  grid-template-rows: minmax(170px, 31%) minmax(0, 1fr) 160px;
+  grid-template-areas: "top top" "sec zp" "xp read";
+}
+.vs-top { grid-area: top; display: flex; min-height: 0; border-bottom: 1px solid var(--vl-line); }
+.vs-plan { position: relative; height: 100%; aspect-ratio: 1; flex: none; max-width: 50%; }
+.vs-loads { flex: 1; min-width: 0; padding: 8px 12px; overflow-y: auto; border-left: 1px solid var(--vl-line); }
+.vs-cell { position: relative; min-height: 0; overflow: hidden; }
+.vs-sec { grid-area: sec; }
+.vs-zp { grid-area: zp; border-left: 1px solid var(--vl-line); }
+.vs-xp { grid-area: xp; border-top: 1px solid var(--vl-line); }
+.vs-read { grid-area: read; border-top: 1px solid var(--vl-line); border-left: 1px solid var(--vl-line);
+  padding: 8px 10px; font-size: 12.5px; overflow-y: auto; }
+.vs-plan canvas, .vs-cell canvas { position: absolute; left: 0; top: 0; display: block; touch-action: none; }
+.vs-tools { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.vs-tools .vl-btn { padding: 3px 8px; font-size: 13px; }
+.vs-list { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.vs-list li { display: flex; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 6px; cursor: pointer; }
+.vs-list li:hover { background: var(--vl-bg); }
+.vs-list li.vs-sel { outline: 2px solid var(--vl-accent); background: var(--vl-bg); }
+.vs-swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.vs-badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600;
+  background: var(--vl-accent); color: var(--vl-accent-ink); }
+.vs-hint { color: var(--vl-muted); font-size: 12.5px; margin: 6px 0 0; }
+
 @media (max-width: 760px) {
   .vl-app { height: auto; }
-  .vl-main { grid-template-columns: 1fr; }
+  .vl-main { grid-template-columns: minmax(0, 1fr); }
   .vl-stage { aspect-ratio: 4 / 3; }
   .vl-panel { border-left: 0; border-top: 1px solid var(--vl-line); }
+  /* the depth profile stays beside the section so they keep sharing the z axis */
+  .vs-stage { grid-template-columns: minmax(0, 1fr) 130px; grid-template-rows: auto 300px 190px auto;
+    grid-template-areas: "top top" "sec zp" "xp xp" "read read"; }
+  .vs-top { flex-direction: column; }
+  .vs-plan { width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .vs-loads { border-left: 0; }
+  .vs-read { border-left: 0; }
 }

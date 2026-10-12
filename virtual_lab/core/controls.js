@@ -4,7 +4,7 @@
      {type:'range',  key, label, min, max, step, value, unit, digits}
      {type:'select', key, label, options:[[value,label],...], value}
      {type:'toggle', key, label, value}
-     {type:'number', key, label, value, step}
+     {type:'number', key, label, value, step, min, max}   without min: must be > 0
      {type:'buttons', items:[{label, onClick, id}]}
      {type:'html', id}                     an empty slot the experiment fills
    Labels are trusted HTML from the experiment's own schema (for <sub> etc.).
@@ -103,7 +103,8 @@
         num.type = 'number'; num.step = it.step || 'any'; num.value = state[it.key];
         num.addEventListener('change', function () {
           var v = Number(num.value);
-          if (isFinite(v) && v > 0) { state[it.key] = v; changed(it.key); } else num.value = state[it.key];
+          var ok = isFinite(v) && (it.min == null ? v > 0 : v >= it.min) && (it.max == null || v <= it.max);
+          if (ok) { state[it.key] = v; changed(it.key); } else num.value = state[it.key];
         });
         row.appendChild(num);
         inputs[it.key] = { set: function (v) { num.value = v; } };

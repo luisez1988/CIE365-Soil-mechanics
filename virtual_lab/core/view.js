@@ -96,7 +96,8 @@
     c.rect(a, b, this.sx(x1) - a, this.sy(y0) - b);
   };
 
-  /* Axes along the plotted rectangle [x0,x1] x [y0,y1]. */
+  /* Axes along the plotted rectangle [x0,x1] x [y0,y1].
+     Optional o.xfmt / o.yfmt(value) -> tick label. */
   P.axes = function (c, o) {
     var self = this, ink = o.color || '#333';
     c.save();
@@ -111,13 +112,13 @@
     for (var x = o.x0; x <= o.x1 + 1e-9; x += o.dxTick) {
       var px = self.sx(x);
       c.beginPath(); c.moveTo(px, bx); c.lineTo(px, bx + 4); c.stroke();
-      c.fillText(String(Math.round(x * 100) / 100), px, bx + 6);
+      c.fillText(o.xfmt ? o.xfmt(x) : String(Math.round(x * 100) / 100), px, bx + 6);
     }
     c.textAlign = 'right'; c.textBaseline = 'middle';
     for (var y = o.y0; y <= o.y1 + 1e-9; y += o.dyTick) {
       var py = self.sy(y);
       c.beginPath(); c.moveTo(ly, py); c.lineTo(ly - 4, py); c.stroke();
-      c.fillText(String(Math.round(y * 100) / 100), ly - 6, py);
+      c.fillText(o.yfmt ? o.yfmt(y) : String(Math.round(y * 100) / 100), ly - 6, py);
     }
     if (o.xlabel) {
       c.textAlign = 'center'; c.textBaseline = 'top';
