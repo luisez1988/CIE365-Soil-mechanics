@@ -1,7 +1,9 @@
-const svgObjects = document.querySelectorAll('.Animation');
-
-// Access contents of SVG file
-svgObjects.forEach(svgObject => {
+// Wire one <object class="Animation">. Called for every object on the page at load
+// and, through the observer at the bottom, for objects added later: worked-example
+// solutions (solutions/*.html) are fetched and injected after this script runs.
+function wireSvgAnimation(svgObject) {
+    if (svgObject.__svgWired) return;
+    svgObject.__svgWired = true;
     svgObject.addEventListener('load', () => {
         const svgDoc = svgObject.contentDocument;
         if (svgDoc) {
@@ -181,7 +183,19 @@ svgObjects.forEach(svgObject => {
             console.error('SVG contentDocument is null:', svgObject);
         }
     });
-});
+}
+
+document.querySelectorAll('.Animation').forEach(wireSvgAnimation);
+
+// Objects injected later (solution figures). The observer callback runs before the
+// new <object> finishes loading, so its 'load' listener is in place in time.
+new MutationObserver(mutations => {
+    mutations.forEach(m => m.addedNodes.forEach(node => {
+        if (node.nodeType !== 1) return;
+        if (node.matches('object.Animation')) wireSvgAnimation(node);
+        node.querySelectorAll('object.Animation').forEach(wireSvgAnimation);
+    }));
+}).observe(document.body, { childList: true, subtree: true });
 
 // Function to get the type of tag an element is
 function getTagType(element) {

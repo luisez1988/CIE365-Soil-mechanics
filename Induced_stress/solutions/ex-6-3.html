@@ -1,0 +1,175 @@
+<!-- Example 6.3 — square footing by the rectangular corner solution and the chart.
+     Two parts, matching the deck's two slides:
+       part 1 = point A (four 1.25 x 1.25 m squares)
+       part 2 = point B (two 2.5 x 1.25 m rectangles) | chart
+     Legacy figures: FiguresGeneral/EX530.svg (part 1) + EX531.svg (part 2).
+     The plan views and the annotated chart are lifted from those files into
+     FiguresGeneral/ex-6-3-plan-A.svg, ex-6-3-plan-B.svg and ex-6-3-chart.svg with
+     their fragment/Animate classes intact, so they animate as before.
+     The handwritten point-B work used R1 = 3.02 m; the root is 3.20 m, which moves
+     the answer from 4.83 to 4.74 kPa (see ex-6-3.md). -->
+<div class="sol" data-id="ex-6-3" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <!-- ============ part 1 — point A ============ -->
+
+  <div class="sol-cols" data-part="1">
+    <div class="sol-col">
+
+      <div data-part="1" class="step">
+        <span class="lead">Data</span>
+        \(B=L=2.5\unit{m}\), \(z=2\unit{m}\), \(q=16\unit{kPa}\)
+      </div>
+
+      <div data-part="1" class="step">
+        <span class="lead">Principles</span> <br>
+        \(I'=\dfrac{1}{2\pi}\left[\tan^{-1}\!\left(\dfrac{LB}{zR_3}\right)+\dfrac{LBz}{R_3}\left(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}\right)\right]\)
+        <span class="note">This is the stress under a <em>corner</em>. Split the footing so the point is a corner of every piece.</span>
+      </div>
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 30%">
+          <span class="sol-fig">
+            <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-6-3-plan-A.svg" style="width:100%"
+                    aria-label="Plan view of the 2.5 m square footing with the top-left quarter hatched; point A is its corner at the centre of the footing."></object>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div data-part="1" class="step">
+            <span class="lead">First for point A</span>
+            \(L'=\) <span class="fill">1.25</span> \(\unit{m}\), \(B'=\) <span class="fill">1.25</span> \(\unit{m}\)
+          </div>
+
+          <div data-part="1" class="step">
+            <span class="lead">Distances</span> <br>
+            \(R_1=\) <span class="fill">\(\sqrt{1.25^2+2^2}\)</span> \(=\) <span class="fill">2.36</span> \(\unit{m}\) <br>
+            \(R_2=\) <span class="fill">2.36</span> \(\unit{m}\) <br>
+            \(R_3=\) <span class="fill">\(\sqrt{2(1.25)^2+2^2}\)</span> \(=\) <span class="fill">2.67</span> \(\unit{m}\)
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div data-part="1" class="step">
+        <span class="lead">Terms of \(I'_A\)</span> <br>
+        \(\tan^{-1}\!\left(\dfrac{L'B'}{zR_3}\right)=\) <span class="fill">\(\tan^{-1}\!\left(\dfrac{1.25\times1.25}{2\times2.67}\right)\)</span>
+        \(=\) <span class="fill">0.2847</span>
+        <span class="note">Express in radians</span> <br>
+        \(\dfrac{L'B'z}{R_3}=\) <span class="fill">\(\dfrac{1.25\times1.25\times2}{2.67}\)</span> \(=\) <span class="fill">1.1707</span> <br>
+        \(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}=\) <span class="fill">\(\dfrac{1}{2.36^2}+\dfrac{1}{2.36^2}\)</span> \(=\) <span class="fill">0.3596</span>
+      </div>
+
+      <div data-part="1" class="step">
+        <span class="lead">Influence factor</span>
+        \(I'_A=\) <span class="fill">\(0.159\times[0.2847+1.1707\times0.3596]\)</span> \(=\)
+        <span class="fill">0.1123</span>
+      </div>
+
+      <div data-part="1" class="step result">
+        \(\Delta\sigma_{zA}=\underbrace{4}_{\textcolor{red}{\text{because of symmetry}}}q\,I'_A=\)
+        <span class="fill">\(4\times0.1123\times16\)</span> \(=\)
+        <span class="ans">7.19</span> \(\unit{kPa}\)
+        <span class="note">Exact solution</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==== part 2 — point B | chart ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col">
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 30%">
+          <span class="sol-fig">
+            <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-6-3-plan-B.svg" style="width:100%"
+                    aria-label="Plan view of the 2.5 m square footing with the top half hatched; point B is its corner at the mid edge."></object>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">For point B</span>
+            \(L=\) <span class="fill">2.5</span> \(\unit{m}\), \(B'=\) <span class="fill">1.25</span> \(\unit{m}\)
+          </div>
+
+          <div class="step">
+            <span class="lead">Distances</span> <br>
+            \(R_1=\) <span class="fill">\(\sqrt{2.5^2+2^2}\)</span> \(=\) <span class="fill">3.20</span> \(\unit{m}\) <br>
+            \(R_2=\) <span class="fill">\(\sqrt{1.25^2+2^2}\)</span> \(=\) <span class="fill">2.36</span> \(\unit{m}\) <br>
+            \(R_3=\) <span class="fill">\(\sqrt{1.25^2+2.5^2+2^2}\)</span> \(=\) <span class="fill">3.44</span> \(\unit{m}\)
+            <span class="note">Not square now: \(R_1\ne R_2\), and \(L\) goes with \(R_1\).</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="lead">Terms of \(I'_B\)</span> <br>
+        \(\tan^{-1}\!\left(\dfrac{LB'}{zR_3}\right)=\) <span class="fill">\(\tan^{-1}\!\left(\dfrac{2.5\times1.25}{2\times3.44}\right)\)</span>
+        \(=\) <span class="fill">0.4267</span> <br>
+        \(\dfrac{LB'z}{R_3}=\) <span class="fill">1.8185</span>, &nbsp;
+        \(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}=\) <span class="fill">0.2773</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Influence factor</span>
+        \(I'_B=\) <span class="fill">\(0.159\times[0.4267+1.8185\times0.2773]\)</span> \(=\)
+        <span class="fill">0.1482</span>
+      </div>
+
+      <div class="step result">
+        \(\Delta\sigma_{zB}=2\,q\,I'_B=\)
+        <span class="fill">\(2\times0.1482\times16\)</span> \(=\)
+        <span class="ans">4.74</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 46%">
+          <span class="sol-fig">
+            <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-6-3-chart.svg" style="width:100%"
+                    aria-label="Influence chart for the corner of a rectangle, with the readings for point A (about 0.11) and point B (about 0.15) marked."></object>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">Using the chart, point A</span> <br>
+            \(m=n=\) <span class="fill">\(1.25/2\)</span> \(=\) <span class="fill">0.625</span> <br>
+            \(I'\approx\) <span class="fill">0.11</span>
+          </div>
+
+          <div class="step">
+            <span class="lead">Point B</span> <br>
+            \(m=\) <span class="fill">\(2.5/2\)</span> \(=\) <span class="fill">1.25</span> <br>
+            \(n=\) <span class="fill">\(1.25/2\)</span> \(=\) <span class="fill">0.625</span> <br>
+            \(I'\approx\) <span class="fill">0.15</span>
+            <span class="note">\(m\) and \(n\) are interchangeable</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="lead">Compare</span> (\(\Delta\sigma_z\) in kPa)
+        <table class="sol-table">
+          <tr><th></th><th>A</th><th>B</th></tr>
+          <tr><td class="lbl">Exact</td><td>7.19</td><td>4.74</td></tr>
+          <tr><td class="lbl">Chart</td><td><span class="fill">7.04</span></td><td><span class="fill">4.80</span></td></tr>
+          <tr><td class="lbl">\(2\times2\) approx.</td><td>7.64</td><td>4.90</td></tr>
+          <tr><td class="lbl">Point load</td><td>11.9</td><td>5.23</td></tr>
+        </table>
+        <span class="note">The approximation is 6% high at A and 3% high at B.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
