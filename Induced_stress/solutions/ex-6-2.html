@@ -18,8 +18,8 @@
   <div class="step" data-part="1">
     <span class="lead">Principles</span> <br>
     \(\Delta\sigma_z=\displaystyle\sum_{i=1}^{n} q_i\,A_i\,I_i\), &nbsp;
-    \(I=\dfrac{3}{2\pi z^2\left[1+(r/z)^2\right]^{5/2}}\)
-    <span class="note">Here \(I\) has units of \(1/\mathrm{m^2}\), so \(Q\,I\) is a stress.</span>
+    \(I=\dfrac{3}{2\pi z^2\left[1+(r/z)^2\right]^{ \ 5/2}}\)
+    <span class="note">Here \(I\) has units of \(1/\mathrm{m^2}\), so \(Q\,I\) has units of stress</span>
   </div>
 
   <!-- ==== part 2 — point load | 2 x 2 approximation ==== -->
@@ -27,10 +27,10 @@
   <div class="sol-cols" data-part="2">
     <div class="sol-col">
 
-      <div class="sol-cols">
-        <div class="sol-col" style="flex: 0 0 26%">
-          <span class="sol-fig">
-            <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-6-2-plan.svg" style="width:100%"
+      <div class="sol-cols" style="gap: 0.2em">
+        <div class="sol-col" style="flex: 0 0 23%; padding: 0">
+          <span class="sol-fig" style="margin: 0">
+            <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-6-2-plan.svg" style="display:block; width:100%; margin:0; padding:0"
                     aria-label="Plan view of the 2.5 m square footing split into four blocks, with point A at the centre, point B at the mid edge, and the distances r1 and r2 to the block centres."></object>
           </span>
         </div>
@@ -39,8 +39,8 @@
           <div class="step">
             <span class="lead">Point load at A</span>
             \(r=\) <span class="fill">0</span> \(\unit{m}\), \(z=2\unit{m}\) <br>
-            \(I_A=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(0/2)^2\right]^{5/2}}\)</span>
-            \(=\) <span class="fill">0.119</span> \(\unit{/m^2}\) <br>
+            \(I_A=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(0/2)^2\right]^{ \ 5/2}}\)</span>
+            \(=\) <span class="fill">0.119</span> \(\unit{/m^2}\) <br> <br>
             \(\Delta\sigma_{zA}=Q\,I_A=\) <span class="fill">\(100\times0.119\)</span> \(=\)
             <span class="ans">11.9</span> \(\unit{kPa}\)
           </div>
@@ -51,8 +51,8 @@
       <div class="step">
         <span class="lead">Point load at B</span>
         \(r=\) <span class="fill">\(2.5/2\)</span> \(\unit{m}\), \(z=2\unit{m}\) <br>
-        \(I_B=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(1.25/2)^2\right]^{5/2}}\)</span>
-        \(=\) <span class="fill">0.0523</span> \(\unit{/m^2}\) <br>
+        \(I_B=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(1.25/2)^2\right]^{ \ 5/2}}\)</span>
+        \(=\) <span class="fill">0.0523</span> \(\unit{/m^2}\) <br> <br>
         \(\Delta\sigma_{zB}=Q\,I_B=\) <span class="fill">\(100\times0.0523\)</span> \(=\)
         <span class="ans">5.23</span> \(\unit{kPa}\)
       </div>
@@ -70,14 +70,16 @@
         <span class="fill">0.884</span> \(\unit{m}\)
       </div>
 
+      <div class="step">
+        <span class="lead">Near block</span>
+        \(I_1=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(0.884/2)^2\right]^{ \ 5/2}}\)</span>
+        \(=\) <span class="fill">0.0764</span> \(\unit{/m^2}\)
+      </div>
+
     </div>
     <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
 
-      <div class="step">
-        <span class="lead">Near block</span>
-        \(I_1=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(0.884/2)^2\right]^{5/2}}\)</span>
-        \(=\) <span class="fill">0.0764</span> \(\unit{/m^2}\)
-      </div>
+
 
       <div class="step">
         <span class="lead">Block area</span>
@@ -96,7 +98,7 @@
         <span class="lead">Mid edge (B), far blocks</span> <br>
         \(r_2=\) <span class="fill">\(\sqrt{(2.5/4)^2+(3\times2.5/4)^2}\)</span> \(=\)
         <span class="fill">1.98</span> \(\unit{m}\) <br>
-        \(I_2=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(1.98/2)^2\right]^{5/2}}\)</span>
+        \(I_2=\) <span class="fill">\(\dfrac{3}{2\pi\,2^2\left[1+(1.98/2)^2\right]^{ \ 5/2}}\)</span>
         \(=\) <span class="fill">0.0216</span> \(\unit{/m^2}\)
         <span class="note">From B, two blocks are near (\(r_1\)) and two are far (\(r_2\)).</span>
       </div>
