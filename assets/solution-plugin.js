@@ -61,6 +61,29 @@ window.RevealSolution = function () {
     return cache[src];
   }
 
+  /* Student build only (make_student_version.py puts `student` on <html>).
+     The script turns the deck's own <object class="Animation"> figures into
+     static <img>s from FiguresGeneral_student/, where the class="Animate" parts
+     are commented out. Solutions are fetched at runtime, so the script never
+     sees theirs; this does the same swap on the way in. A <template> is used
+     because parsing into it loads nothing, so the live <object> never fetches. */
+  function studentFigures(html) {
+    if (!document.documentElement.classList.contains('student')) return html;
+    var tpl = document.createElement('template');
+    tpl.innerHTML = html;
+    var objects = tpl.content.querySelectorAll('object.Animation');
+    if (!objects.length) return html;
+    Array.prototype.forEach.call(objects, function (obj) {
+      var img = document.createElement('img');
+      img.setAttribute('src', (obj.getAttribute('data') || '')
+        .replace('FiguresGeneral/', 'FiguresGeneral_student/'));
+      if (obj.getAttribute('style')) img.setAttribute('style', obj.getAttribute('style'));
+      if (obj.getAttribute('aria-label')) img.alt = obj.getAttribute('aria-label');
+      obj.parentNode.replaceChild(img, obj);
+    });
+    return tpl.innerHTML;
+  }
+
   /* Keep only what belongs to this slide's part.
 
      Rule: ONLY elements carrying data-part are filtered. Anything unmarked
@@ -497,7 +520,7 @@ window.RevealSolution = function () {
       return Promise.all(hosts.map(function (host) {
         var src = host.getAttribute('data-src');
         return load(src).then(function (html) {
-          host.innerHTML = html;
+          host.innerHTML = studentFigures(html);
           selectPart(host, host.getAttribute('data-part'));
           useSlideText(host);
           fragmentize(host);

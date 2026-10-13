@@ -231,8 +231,7 @@
            x="12.770723"
            y="10.068509">A</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g3"
        style="fill:#000080">
       <path
@@ -295,10 +294,8 @@
            x="31.620888"
            y="10.374689">5/2</tspan></text>
     </g>
--->
 
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g9">
       <text
          xml:space="preserve"
@@ -323,7 +320,6 @@
            x="41.712891"
            y="9.4385853">2</tspan></text>
     </g>
--->
 
     <g class='fragment'
        id="g6"
@@ -352,8 +348,7 @@
     </g>
 
 
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="21.787819"
@@ -364,9 +359,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="21.787819"
          y="16.318747">100*0.119</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="31.616055"
@@ -377,7 +370,6 @@
          style="stroke-width:0.264583;fill:#008000"
          x="31.616055"
          y="16.121969">=11.9 kPa</tspan></text>
--->
 
     <text class="fragment"
        xml:space="preserve"
@@ -392,8 +384,7 @@
          y="20.312719">For B r=2.5/2 m, z= 2 m</tspan></text>
     
     
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g24"
        style="fill:#000080"
        transform="translate(-11.782295,14.847019)">
@@ -460,7 +451,6 @@
              y="10.374689">5/2</tspan></text>
       </g>
     </g>
--->
     <g class="fragment"
        id="g32">
       <text
@@ -486,8 +476,7 @@
            x="0.98842877"
            y="24.915527">B</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g29"
        transform="translate(-8.0701013,14.847019)">
       <g
@@ -516,7 +505,6 @@
              y="9.4385853">2</tspan></text>
       </g>
     </g>
--->
     <g class="fragment"
        id="g34"
        transform="translate(-10.052963,13.335543)">
@@ -545,8 +533,7 @@
              y="18.173668">Bz</tspan></text>
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="12.058529"
@@ -557,9 +544,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="12.058529"
          y="30.920273">100*0.0523</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="23.197626"
@@ -570,7 +555,6 @@
          style="stroke-width:0.264583;fill:#008000"
          x="23.197626"
          y="30.912004">=5.23 kPa</tspan></text>
--->
     <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 0.7745229,32.027643 48.6857961,0"
@@ -611,8 +595,7 @@
          style="stroke-width:0.264583"
          x="1.2134007"
          y="39.552441">q=</tspan></text>
-    <!-- STUDENT_HIDDEN
-<g  class="Animate"
+    <g  class="Animate"
        id="g41"
        style="fill:#000080"
        transform="translate(-1.3178521)">
@@ -639,9 +622,7 @@
            x="13.112669"
            y="37.880676">2</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="16.120111"
@@ -652,9 +633,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="16.120111"
          y="39.560646">=16 kPa</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82222px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#ff0000;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        x="36.235142"
@@ -662,11 +641,10 @@
        id="text43"><tspan
          sodipodi:role="line"
          id="tspan81">Uniform stress applied by footing</tspan></text>
--->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"
        d="M 21.799096,38.715105 H 19.938335"
-       id="path43" /> -->
+       id="path43" />
     <ellipse
        style="fill:#008000;stroke:none;stroke-width:0.165;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;paint-order:markers fill stroke"
        id="path46"
@@ -674,12 +652,11 @@
        cy="6.3456903"
        rx="0.13229153"
        ry="0.13667011" />
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#008000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Stop);marker-start:url(#Stop)"
        d="M 5.4528264,6.3456901 7.0974687,7.9903327"
-       id="path47" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       id="path47" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="5.7301564"
@@ -692,7 +669,6 @@
          y="8.1546898">r<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan48">1</tspan></tspan></text>
--->
     <text class="fragment"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -704,8 +680,7 @@
          style="stroke-width:0.264583"
          x="5.6623731"
          y="43.061131">From figure:</tspan></text>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g56">
       <text
          xml:space="preserve"
@@ -746,9 +721,7 @@
          id="path53"
          sodipodi:nodetypes="cssscscc" />
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="25.690546"
@@ -759,7 +732,6 @@
          style="stroke-width:0.264583;fill:#000080"
          x="25.690546"
          y="46.597355">=0.884 m</tspan></text>
--->
     <g class="fragment"
        id="g55">
       <text
@@ -785,8 +757,7 @@
            x="2.1282017"
            y="46.522495">r =</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g60"
        style="fill:#000080"
        transform="translate(40.237546,-6.0550433)">
@@ -853,7 +824,6 @@
              y="10.374689">5/2</tspan></text>
       </g>
     </g>
--->
     <g class="fragment"
        id="g62"
        transform="translate(40.237546,-6.0550433)">
@@ -883,8 +853,7 @@
              y="10.11167">A1</tspan></text>
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g65">
       <text
          xml:space="preserve"
@@ -909,7 +878,6 @@
            x="88.665161"
            y="3.1689241">2</tspan></text>
     </g>
--->
     <g class="fragment"
        id="g67"
        transform="translate(-0.16242485,0.30785943)">
@@ -936,8 +904,7 @@
            x="54.046589"
            y="10.227765">1</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g69"
        style="fill:#000080">
       <text
@@ -962,10 +929,8 @@
            style="stroke-width:0.264583;fill:#000080"
            x="63.125492"
            y="7.8658295">2</tspan></text>
-    </g>
---> 
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    </g> 
+    <g class="Animate"
        id="g71">
       <text
          xml:space="preserve"
@@ -990,7 +955,6 @@
            x="71.096031"
            y="8.6843233">2</tspan></text>
     </g>
--->
     <g 
        id="g73"
        transform="translate(41.06422,-2.5237531)">
@@ -1019,8 +983,7 @@
              x="13.576102"
              y="18.173668">Az</tspan></text>
       </g>
-      <!-- STUDENT_HIDDEN
-<text class="Animate"
+      <text class="Animate"
          xml:space="preserve"
          style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
          x="25.363913"
@@ -1031,9 +994,7 @@
            style="stroke-width:0.264583;fill:#000080"
            x="25.363913"
            y="17.048176">4 *1.56 *16*0.0764</tspan></text>
--->
-      <!-- STUDENT_HIDDEN
-<g class="Animate"
+      <g class="Animate"
          id="g75">
         <path
            style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -1055,9 +1016,7 @@
              y="22.797519"
              id="tspan63">symmetry</tspan></text>
       </g>
--->
-      <!-- STUDENT_HIDDEN
-<text class="Animate"
+      <text class="Animate"
          xml:space="preserve"
          style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
          x="40.065434"
@@ -1068,7 +1027,6 @@
            style="stroke-width:0.264583;fill:#008000"
            x="40.065434"
            y="17.048176">=7.63 kPa</tspan></text>
--->
       <path class="fragment"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 10.481545,21.981003 H 60.535779"
@@ -1084,13 +1042,12 @@
            style="stroke-width:0.264583"
            x="32.985291"
            y="24.961033">3) Approximation for mid edge (B) with 4 elements</tspan></text>
-      <!-- STUDENT_HIDDEN <path class="Animate"
+      <path class="Animate"
          style="fill:#800080;stroke:#800080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Stop);marker-start:url(#Stop)"
          d="m -35.611394,8.8694432 4.873802,1.6446428"
-         id="path77" /> -->
+         id="path77" />
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g81">
       <g
          id="g80">
@@ -1118,7 +1075,6 @@
            x="8.4427586"
            y="7.103044">2</tspan></text>
     </g>
--->
     <text class="fragment"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583"
@@ -1159,8 +1115,7 @@
              y="46.522495">r =</tspan></text>
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g87">
       <text
          xml:space="preserve"
@@ -1201,9 +1156,7 @@
          id="path87"
          sodipodi:nodetypes="cssscscc" />
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="75.760231"
@@ -1214,9 +1167,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="75.760231"
          y="29.200087">=1.98 m</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g94"
        style="fill:#000080"
        transform="translate(40.237546,24.094627)">
@@ -1311,7 +1262,6 @@
         </g>
       </g>
     </g>
--->
     <g class="fragment"
        id= "g96"
        transform="translate(40.237546,24.094627)">
@@ -1372,8 +1322,7 @@
              y="18.173668">Bz</tspan></text>
       </g>
     </g>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="65.199684"
@@ -1384,9 +1333,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="65.199684"
          y="40.487915">2*1.56*16*0.0764</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#000080"
        x="84.056168"
@@ -1397,9 +1344,7 @@
          style="stroke-width:0.264583;fill:#000080"
          x="84.056168"
          y="40.519608">+ 2*1.56*16*0.0216</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g105">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1417,9 +1362,7 @@
            x="65.81765"
            y="43.83334">near blocks</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g106">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -1437,9 +1380,7 @@
            x="85.647018"
            y="43.83334">far blocks</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.82223px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="59.724789"
@@ -1450,7 +1391,6 @@
          style="stroke-width:0.264583;fill:#008000"
          x="59.724789"
          y="47.356792">=4.89 kPa</tspan></text>
--->
 
              <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#ArrowWide)"

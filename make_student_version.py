@@ -199,9 +199,29 @@ def get_animation_svg_paths(html_path: Path, figures_src: Path) -> list[Path]:
     """
     Returns resolved paths of all SVGs referenced as Animation objects in the HTML.
     Handles both attribute orderings (class before data, and data before class).
+
+    Worked-example solutions (<div class='Solution' data-src='solutions/x.html'>)
+    are fetched into the deck at runtime, so their Animation figures never appear
+    in index.html itself. Their files are scanned too. The SVG paths inside them
+    are resolved against the DECK folder, because that is the document the
+    injected markup ends up in.
     """
     with open(html_path, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    solution_src = re.compile(
+        r'<div[^>]*?class=["\']Solution["\'][^>]*?data-src=["\']([^"\']+)["\']',
+        re.DOTALL | re.IGNORECASE
+    )
+    sources = [content]
+    for src in dict.fromkeys(m.group(1) for m in solution_src.finditer(content)):
+        sol_path = html_path.parent / src
+        if sol_path.exists():
+            with open(sol_path, 'r', encoding='utf-8') as f:
+                sources.append(f.read())
+        else:
+            print(f"  [WARN] Solution not found: {sol_path}")
+    content = '\n'.join(sources)
 
     pattern1 = re.compile(
         r'<object[^>]*?class=["\']Animation["\'][^>]*?data=["\']([^"\']+)["\']',
