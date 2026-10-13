@@ -62,6 +62,24 @@
       "title": "",
       "skip_titles": [],
       "skip_indices": []
+    },
+    {
+      "dir": "Induced_stress",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": []
+    },
+    {
+      "dir": "Consolidation",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": []
+    },
+    {
+      "dir": "Shear_strength",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": []
     }
   ]
 }

@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 6: Induced stress · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Induced_stress" data-total="93" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 6: Induced stress</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">93</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Induced stresses</a></li>
+<li><a href="#s3">Infinitely loaded area</a></li>
+<li><a href="#s4">Example 6.1</a></li>
+<li><a href="#s5">The 2:1 Method</a></li>
+<li><a href="#s6">Stress distribution due to a point load</a></li>
+<li><a href="#s7">Superposition and numerical approximation</a></li>
+<li><a href="#s8">Example 6.2</a></li>
+<li><a href="#s9">Analytical and chart solutions</a></li>
+<li><a href="#s10">Line load</a></li>
+<li><a href="#s11">Strip load</a></li>
+<li><a href="#s12">Circularly loaded area</a></li>
+<li><a href="#s13">Rectangular loaded area</a></li>
+<li><a href="#s14">Example 6.3</a></li>
+<li><a href="#s15">Participation question 6.1</a></li>
+<li><a href="#s16">Choosing the correct model</a></li>
+<li><a href="#s17">Model choice: retaining wall</a></li>
+<li><a href="#s18">Model choice: concrete mat</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+							<li >We learned general aspects of <strong style='color:black'>flow nets</strong>. </li>
+
+							<li > <div class='textBox' >
+							We learned how to <strong style='color:black'>calculate the maximum and critical hydraulic gradient</strong> to asses <strong style='color:black'>internal erosion and piping</strong>.
+							</div>								
+							</li>
+	
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+					<div class='container'>
+					<div class='col' style='--colw:50%'>
+						<ul class="contentStyle">
+							<li class="l1">Increment of stress due to an infinitely loaded area.</li>
+							<li class="l1">Increment of stress due to a point load (Boussinesq equation).</li>
+							<li class="l1">Use of charts and analytical solutions.</li>
+							<li class='l1'>Use of numerical approximation.</li>							
+						</ul>
+					</div>
+					<div class='col' style='--colw:50%'>
+						<div class='container'>
+							<div class='col' style="--colw:50%">
+								<div class="stickynote" style="height: 300px">
+									<p > Objectives covered in this lecture</p>
+									<ul>
+										<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="--colw:50%">
+							<div class='stickynote' style='height: 300px'>
+								<p >After this lecture we will able to:</p>
+								<ul >
+									<li>Calculate the increment of stress produced by infinitely loaded soils.</li>					
+									<li>Calculate the increment of stress for arbitrarily shaped areas.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>			
+
+        
+</section>
+
+<section class="block" id="s2" data-anchor="induced-stresses">
+<h2 class="block-title">Induced stresses</h2>
+
+		
+
+		<div class='defBox' name=':' >
+			Is the <strong style="color:green">increment of stress</strong> produced by an <strong style='color:green'>external</strong> load.
+		</div>
+
+		<div class="container">
+			<div class="col" style="--colw:50%">
+				<figure>
+				  <img loading="lazy" src="../../Induced_stress/FiguresGeneral/induced_stress.svg" style="width:100%" data-preload/>
+				  <footer ><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="--colw:50%">
+			<div class='equationBox' >
+			\(  \sigma'_f=\underbrace{\color{blue}{\sigma'_0}}_{\substack{\text{In-situ} \\ \text{stress}}}+\underbrace{\color{green}{\Delta \sigma}}_{\substack{\text{Increment of} \\ \text{stress}}}\)
+			</div>
+	
+			</div>
+		</div>
+
+		<div class='findingBox' >
+			These stresses are absorbed either by <strong style="color:blue">the water as excess water pressure</strong> or by <strong style="color:green">the soil skeleton as effective stresses</strong>.
+			With enough <strong style="color:red">time</strong>, the soil skeleton will carry the generated stress.
+		</div>
+		
+
+		
+</section>
+
+<section class="block" id="s3" data-anchor="infinitely-loaded-area">
+<h2 class="block-title">Infinitely loaded area</h2>
+
+			
+		<div class='textBox' >
+			If the <strong style='color:#000'>width</strong> of the loaded area is considerably larger than the thickness of the compressible layer, it can be assumed as <strong style="color:black">infinitely loaded area</strong>.
+		</div>
+
+			<figure >
+			  <img loading="lazy" src="../../Induced_stress/FiguresGeneral/infinite.svg" style="width:100%" data-preload/>
+			  <footer ><small></small></footer>
+			</figure>
+
+			<p >The increment of stress for the idealized model <strong style="color:black">is independent of position and depth</strong>. <br>
+				<div class='equationBox' >
+				\( \Delta \sigma (x,z)= q \)
+				</div>
+					
+			</p>
+		
+</section>
+
+<section class="block" id="s4" data-anchor="example-6-1">
+<h2 class="block-title">Example 6.1</h2>
+
+		
+		<div class='textBox' style='font-size: 0.85em'>
+		A landfill is designed to contain waste (\(\gamma_t=112\) pcf) up to a height of 30 ft over a thick clay (\(\gamma_{sat}=131\) pcf) as shown in the figure. The water table is at the top of the clay. The landfill is wide in comparison to the thickness of the soil layer. Calculate the increment of stress, and the final (long-term) total and effective vertical stresses at a depth of 5 ft.
+		</div>
+		<div class='container'>
+		<div class='col' style='--colw:25%'>
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/landfill.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='--colw:75%'>
+		<div class='ProblemBox' >
+		
+<div class="sol" data-id="ex-6-1" style="--sol-line: 1.2; font-size: 0.6em">
+
+  <div class="step">
+    <span class="lead">Data</span>
+    Given in the statement and figure
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\sigma_v=z\,\gamma_{sat}\), &nbsp; \(\sigma'_v=\sigma_v-u\), &nbsp; \(\Delta\sigma_v=q\)
+  </div>
+
+  <div class="step">
+    \(\sigma_{v0}=z\,\gamma_{sat}=\) <span class="blank math" data-bid="Induced_stress.ee1a1fe4-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Induced_stress.60a6337e-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+    <span class="note">Initial or in-situ total vertical stress</span>
+  </div>
+
+  <div class="step">
+    \(\sigma'_{v0}=z\,(\gamma_{sat}-\gamma_w)=\) <span class="blank math" data-bid="Induced_stress.d299b674-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Induced_stress.20219bbe-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+    <span class="note">Initial or in-situ effective vertical stress</span>
+  </div>
+
+  <div class="step">
+    \(\Delta\sigma_v=q=\gamma_t\,h=\) <span class="blank math" data-bid="Induced_stress.8e39cf93-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Induced_stress.77c2e8e3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}=\) <span class="blank" data-bid="Induced_stress.c5fe1a40-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ksf}\)
+    <span class="note">Surcharge</span>
+  </div>
+
+  <div class="step result">
+    \(\sigma_{vf}=\sigma_{v0}+\Delta\sigma_v=\) <span class="blank math" data-bid="Induced_stress.a3fd5797-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Induced_stress.2d33059f-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}=\) <span class="blank" data-bid="Induced_stress.085924e3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ksf}\)
+    <span class="note">Final vertical total stress</span>
+  </div>
+
+  <div class="step result">
+    \(\sigma'_{vf}=\sigma'_{v0}+\Delta\sigma_v=\) <span class="blank math" data-bid="Induced_stress.726cdf09-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Induced_stress.fe2576ea-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}=\) <span class="blank" data-bid="Induced_stress.085924e3-1" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ksf}\)
+    <span class="note">Final vertical effective stress (long term)</span>
+  </div>
+
+</div>
+
+		</div>
+		</div>
+		</div>
+		
+
+		<div class='InquiryBox' >
+		What is the increment of stress when the applied load is finite?
+		</div>	
+			<p>In many cases, loads at the surface are not infinitely extended or uniformly distributed. Other models are needed.</p>
+			<figure>
+			  <img loading="lazy" src="../../Induced_stress/FiguresGeneral/need.svg" style="width:100%" data-preload/>
+			  <footer ><small></small></footer>
+			</figure>
+			<p>What is the relationship between \(\Delta \sigma_1\), \(\Delta \sigma_2\), and \(\Delta \sigma_3\)?</p>
+		
+</section>
+
+<section class="block" id="s5" data-anchor="the-2-1-method">
+<h2 class="block-title">The 2:1 Method</h2>
+
+
+<div class='textBox' >
+This is an <span class="blank" data-bid="Induced_stress.002808ac-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> for calculation of <strong style='color:#000'>stress distribution</strong>
+</div>
+<div class='container'>
+<div class='col bordered' style='--colw:50%'>
+<strong style='color:#000'>Rectangular Spread footing</strong>
+<figure>
+<img loading="lazy" src='../../Induced_stress/FiguresGeneral/21_rec.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+<div class='equationBox'>
+\( \Delta \sigma=  \cfrac{P}{(B + z)(L + z)}\)
+</div>
+</div>
+<div class='col bordered' style='--colw:50%'>
+<strong style='color:#000'>Strip footing (Infinitely long foundation)</strong>
+<figure>
+<img loading="lazy" src='../../Induced_stress/FiguresGeneral/21_strip.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+<div class='equationBox'>
+\( \Delta \sigma=  \cfrac{P}{(B + z)}\)
+</div>
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s6" data-anchor="stress-distribution-due-to-a-point-load">
+<h2 class="block-title">Stress distribution due to a point load</h2>
+
+
+				<div class="container">
+					<div class="col" style="--colw:50%">
+						<div class='textBox' >
+							Boussinesq's equation for the <strong style="color:black">stress distribution</strong> in a <strong style="color:black">elastic semi-infinite</strong> medium is:
+						</div>
+						<p >
+							<div class='equationBox'>
+							\( \Delta \sigma_z=\cfrac{3 Q}{2 \pi z^2 \left[1+(r/z)^2\right]^{5/2}} \)
+							</div> <br>
+						
+							$$\Delta \sigma_z=QI$$
+						</p>
+						<p>\(I=\) influence factor</p>
+					</div>
+					<div class="col" style="--colw:50%">
+						<div class='findingBox' >
+							Assumptions:
+							<ul >
+								<li>Continuous material</li>
+								<li>Isotropic</li>
+								<li>Uniform</li>
+								<li>Linear elastic</li>
+							</ul>
+						</div>						
+				                <figure>
+				                  <img loading="lazy" src="../../Induced_stress/FiguresGeneral/point.svg.2022_03_06_20_01_31.0.svg" style="width:100%" data-preload/>
+				                  <footer ><small></small></footer>
+				                </figure>
+
+					</div>
+
+				</div>
+
+		
+</section>
+
+<section class="block" id="s7" data-anchor="superposition-and-numerical-approximatio">
+<h2 class="block-title">Superposition and numerical approximation</h2>
+
+		    
+				<div class="container">
+					<div class="col" style="--colw:40%">
+		         <figure>
+		           <img loading="lazy" src="../../Induced_stress/FiguresGeneral/generalization.svg" style="width:100%" data-preload/>
+		           <footer ><small></small></footer>
+		         </figure>
+						 <ul>
+						 	<li>\(A_i=\) discretized area.</li>
+						 </ul>
+					</div>
+					<div class="col"  style="--colw:60%">
+					<div class='textBox' >
+						The <strong style="color:black">principle of superposition</strong> implies that the <span class="blank" data-bid="Induced_stress.d415bb97-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> induced stress of multiple loads is the <strong style='color:black'>addition</strong> of all individual induced stresses. <br>
+						$$\Delta \sigma_z= \int_{A} I(x,y) q(x,y) dA$$
+					</div>
+					</div>
+				</div>
+				We can use a numerical approximation instead:
+				<div class='equationBox' >
+				\(  \Delta \sigma_z=\sum_{i=1}^n q_i A_i I_i\)
+				</div>
+		
+</section>
+
+<section class="block" id="s8" data-anchor="example-6-2">
+<h2 class="block-title">Example 6.2</h2>
+
+		
+		<div class='textBox' >
+		A square footing of 2.5 m of width is placed at the surface of the soil as shown in the figure. Structural analysis indicates that the footing will carry a load of 100 kN. Calculate the increment of stress at a depth of 2 m at the centerline and the mid edge of the footing. Use a discretization of two elements in each direction. How does the solution compare with the point load solution?
+		</div>
+		<figure style='width:50%; margin-left:auto; margin-right:auto'>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/footing.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-6-2">
+
+  
+
+  <div class="step">
+    <span class="lead">Data</span>
+    \(z=2\unit{m}\), &nbsp; \(Q=100\unit{kN}\), &nbsp; \(B=2.5\unit{m}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span> <br>
+    \(\Delta\sigma_z=\displaystyle\sum_{i=1}^{n} q_i\,A_i\,I_i\), &nbsp;
+    \(I=\dfrac{3}{2\pi z^2\left[1+(r/z)^2\right]^{ \ 5/2}}\)
+    <span class="note">Here \(I\) has units of \(1/\mathrm{m^2}\), so \(Q\,I\) has units of stress</span>
+  </div>
+
+  
+
+  <div>
+    <div>
+
+      <div class="sol-cols" style="gap: 0.2em">
+        <div class="sol-col" style="flex: 0 0 23%; padding: 0">
+          <span class="sol-fig" >
+            <img loading="lazy" src="figures/ex-6-2-plan.svg" style="display:block; width:100%;  padding:0" alt=""/>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">Point load at A</span>
+            \(r=\) <span class="blank" data-bid="Induced_stress.c3bb16d1-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\), \(z=2\unit{m}\) <br>
+            \(I_A=\) <span class="blank math" data-bid="Induced_stress.bd9c1da3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+            \(=\) <span class="blank" data-bid="Induced_stress.379972c3-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{/m^2}\) <br> <br>
+            \(\Delta\sigma_{zA}=Q\,I_A=\) <span class="blank math" data-bid="Induced_stress.a822b76b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+            <span class="blank ans" data-bid="Induced_stress.fe5459e4-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+          </div>
+
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="lead">Point load at B</span>
+        \(r=\) <span class="blank math" data-bid="Induced_stress.2727ebc0-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\), \(z=2\unit{m}\) <br>
+        \(I_B=\) <span class="blank math" data-bid="Induced_stress.c2ba7dc3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Induced_stress.265cb71f-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{/m^2}\) <br> <br>
+        \(\Delta\sigma_{zB}=Q\,I_B=\) <span class="blank math" data-bid="Induced_stress.d9b26d7b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Induced_stress.e583c6df-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Approximation with 4 sub-elements</span>
+        \(q=Q/B^2=\) <span class="blank math" data-bid="Induced_stress.2991cd86-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.aac419c4-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+        <span class="note">Uniform stress applied by footing</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">From figure</span>
+        \(r_1=\) <span class="blank math" data-bid="Induced_stress.4f7ab8c7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.9952d66f-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Near block</span>
+        \(I_1=\) <span class="blank math" data-bid="Induced_stress.83e9d5f0-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Induced_stress.cf1184cd-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{/m^2}\)
+      </div>
+
+    </div>
+    <div>
+
+      <div class="step">
+        <span class="lead">Block area</span>
+        \(A_1=\) <span class="blank math" data-bid="Induced_stress.d9ca1807-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.44879762-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m^2}\)
+      </div>
+
+      <div class="step result">
+        <span class="lead">Centerline (A)</span>
+        \(\Delta\sigma_{zA}=\underbrace{4}_{\textcolor{red}{\text{because of symmetry}}}q\,A_1\,I_1=\)
+        <span class="blank math" data-bid="Induced_stress.5db6c728-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:39ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Induced_stress.3261370d-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Mid edge (B), far blocks</span> <br>
+        \(r_2=\) <span class="blank math" data-bid="Induced_stress.b5808bad-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:39ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.3a415500-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+        \(I_2=\) <span class="blank math" data-bid="Induced_stress.18e92a22-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Induced_stress.31058573-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{/m^2}\)
+        <span class="note">From B, two blocks are near (\(r_1\)) and two are far (\(r_2\)).</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Mid edge (B)</span>
+        \(\Delta\sigma_{zB}=\underbrace{2\,q\,A_1 I_1}_{\textcolor{red}{\text{near blocks}}}+\underbrace{2\,q\,A_1 I_2}_{\textcolor{red}{\text{far blocks}}}=\)
+        <span class="blank math" data-bid="Induced_stress.32801b92-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Induced_stress.f0a6b3a2-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Compare with the point load</span>
+        A: \(11.9/7.64=\) <span class="blank" data-bid="Induced_stress.a505dabd-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>, &nbsp;
+        B: \(5.23/4.90=\) <span class="blank" data-bid="Induced_stress.625e6482-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">The point load overestimates the stress, most of all right below it.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+		</div>
+
+
+
+		<div class='ProblemBox' >
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/stress_increment.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		
+		
+
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/stress_increment_profile.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		
+		
+</section>
+
+<section class="block" id="s9" data-anchor="analytical-and-chart-solutions">
+<h2 class="block-title">Analytical and chart solutions</h2>
+
+		
+
+		<div class='textBox' >
+		Analytical solutions are available for <span class="blank" data-bid="Induced_stress.6c5c74d9-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>. These solutions are also available in charts and tables.
+		</div>
+
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+		<p>In general, the solutions are of the form: <br>
+		<div class='equationBox' >
+		\( \Delta \sigma_z= q I' \) 
+		</div><br>
+		\( I'=\) <strong style='color:black'>dimensionless</strong> influence factor. <br>
+		\(q=\) Surcharge load.</p>
+		</div>
+		<div class='col' style='--colw:50%'>
+		<div class='findingBox' >
+			<strong style='color:green'>Note:</strong> You need to take special care to make sure you are using the same: <br>
+			<ul>		
+			<li>Coordinate system</li>
+			<li>Reference point</li>
+			</ul>
+		</div>
+		<div class='stickynote' >
+		These solutions are obtained by analytical integration of the point load equation over defined areas.
+		</div>
+		</div>
+		</div>
+		
+		
+</section>
+
+<section class="block" id="s10" data-anchor="line-load">
+<h2 class="block-title">Line load</h2>
+
+		
+		<div class='textBox' >
+		<strong style='color:black'>Continuous</strong> loading extending infinitely in <span class="blank" data-bid="Induced_stress.0e3d5b9f-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> direction.
+		</div>
+
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/cont_load.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='--colw:50%'>
+		Example:
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/Line_load.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		</div>
+
+		<div class='equationBox' >
+		\( I[1/L]= \cfrac{2 z^3}{\pi (x^2+z^2)^2} \)
+		</div>
+
+
+		
+</section>
+
+<section class="block" id="s11" data-anchor="strip-load">
+<h2 class="block-title">Strip load</h2>
+
+		
+		<div class='textBox' >
+		<strong style='color:black'>Cross-sectional</strong> load that extends infinitely in <span class="blank" data-bid="Induced_stress.528eb61f-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> direction.
+		</div>
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+		<figure >
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/cross_load.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		<figure >
+			<img loading="lazy" src='../../Induced_stress/FiguresGeneral/cross_load_exa.svg' width='100%'/>
+			<footer style='font-size: 0.8em'> <em></em> </footer>
+			</figure>
+		</div>
+		<div class='col' style='--colw:50%'>
+			<h4 > Uniform load</h4>
+			<div class='equationBox' style="font-size: 0.9em">
+			\( I'[-]= \frac{1}{\pi}[\alpha + \sin \alpha \cos(\alpha + 2 \beta)] \)
+			</div>
+
+			<h4 >Linear load</h4>
+			<div class='equationBox'>
+			\( I'[-]=\frac{1}{\pi} \left[ \frac{x}{B} \alpha - \frac{1}{2} \sin (2 \beta)\right] \)
+			</div>
+		</div>
+		</div>		
+		
+
+		<div class='container'>
+		<div class='col' style='--colw:45%'>
+			<figure>
+				<img loading="lazy" src='https://www.geoengineer.org/storage/education/2431/editor_photos/25170/Technical_figures_2_separate-12_NO_CAPTION.jpg' width='100%'/>
+				<footer style='font-size: 0.8em'> <em></em> </footer>
+				</figure>
+
+		</div>
+		<div class='col' style='--colw:55%'>
+			<div class='findingBox' >
+				This chart is for the combined action of linear and uniform load at the <span class="blank" data-bid="Induced_stress.d12769dd-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> of the embankment.
+				</div>
+
+		<div class='textBox' >
+		<h4>Instructions to use charts:</h4>
+		<ol >
+			<li >Check definitions in the figure.</li>
+			<li >Inspect labels in curves and axis.</li>
+			<li >Determine if problem can be adjusted using the plot definitions.</li>
+			<li >If yes, calculate normalized values.</li>
+			<li >Search your curve and find the influence factor.</li>
+		</ol>
+		</div>
+		</div>
+		</div>
+		
+		
+</section>
+
+<section class="block" id="s12" data-anchor="circularly-loaded-area">
+<h2 class="block-title">Circularly loaded area</h2>
+
+		
+		<div class='container'>
+		<div class='col' style='--colw:55%'>
+		<div class='textBox' >
+			The following equation is for the stress along the <strong style='color:black'>axis of symmetry</strong>.
+		</div>	
+		
+
+		
+
+		<div class='equationBox' >
+		\( I'[-]= 1- \left[\frac{1}{1+ (r_o/z)^2} \right]^{3/2} \)
+		</div>
+
+		<p >
+			\(r_o=\) Radius of the loaded area. <br>
+			\(z=\) Depth of interest.
+		</p>
+		
+
+
+	</div>
+		<div class='col' style='--colw:45%'>
+			Example
+			<figure>
+				<img loading="lazy" src='https://img1.wsimg.com/isteam/ip/926e83a7-8147-42db-9ae8-45b726918023/tanks.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,cg:true' width='100%'/>
+				<footer style='font-size: 0.8em'> <em></em> </footer>
+				</figure>
+
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/circle.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		</div>
+		
+		
+</section>
+
+<section class="block" id="s13" data-anchor="rectangular-loaded-area">
+<h2 class="block-title">Rectangular loaded area</h2>
+
+		
+
+
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+			<div class='textBox' >
+				The influence factor at the <span class="blank" data-bid="Induced_stress.263c289f-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> of a <strong style='color:black'>uniformly</strong> loaded rectangular area is:
+			</div>
+			
+			<div class='equationBox' style="font-size: 0.8em">
+			\( I'[-]= \frac{1}{2\pi} \left[\tan^{-1} \left( \frac{LB}{zR_3} \right)+ \frac{LBz}{R_3} \left( \frac{1}{R_1^2}+\frac{1}{R_2^2}\right) \right] \)
+			</div>
+	
+			<p >
+				\(L=\) Length of the loaded area. <br>
+				\(B=\) Width of the loaded area. <br>
+				\(R_1= \sqrt{L^2+ z^2}\)  <br>
+				\(R_2= \sqrt{B^2 + z^2}\) <br>
+				\(R_3= \sqrt{B^2+L^2+z^2}\)
+			</p>
+		</div>
+		<div class='col' style='--colw:50%'>
+			<figure >
+			<img loading="lazy" src='../../Induced_stress/FiguresGeneral/rect_def.svg' width='100%'/>
+			<footer style='font-size: 0.8em'> <em></em> </footer>
+			</figure>
+		</div>
+		</div>
+		
+
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+			<figure>
+				<img loading="lazy" src='../../Induced_stress/FiguresGeneral/circular_chart.svg' width='100%'/>
+				<footer style='font-size: 0.8em'> <em></em> </footer>
+				</figure>
+		</div>
+		<div class='col' style='--colw:50%'>
+			<figure>
+				<img loading="lazy" src='../../Induced_stress/FiguresGeneral/rectangular.svg' width='80%'/>
+				<footer style='font-size: 0.8em'> <em></em> </footer>
+				</figure>
+		</div>
+		</div>		
+		
+		
+</section>
+
+<section class="block" id="s14" data-anchor="example-6-3">
+<h2 class="block-title">Example 6.3</h2>
+
+		
+		<div class='textBox' >
+		Solve Example 6.2 using the analytical and chart solutions for a rectangular loaded area. Compare with the approximation.
+		</div>
+		<div class='ProblemBox' >
+		
+<div class="sol" data-id="ex-6-3">
+
+  <div>
+    <div>
+
+      <div class="step">
+        <span class="lead">Data</span>
+        \(B=L=2.5\unit{m}\), \(z=2\unit{m}\), \(q=16\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span> <br>
+        \(I'=\dfrac{1}{2\pi}\left[\tan^{-1}\!\left(\dfrac{LB}{zR_3}\right)+\dfrac{LBz}{R_3}\left(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}\right)\right]\)
+        <span class="note">This is the stress under a <em>corner</em>. Split the footing so the point is a corner of every piece.</span>
+      </div>
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 20%">
+          <span class="sol-fig">
+            <img loading="lazy" src="figures/ex-6-3-plan-A.svg" style="width:100%" alt=""/>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">First for point A</span>
+            \(L'=\) <span class="blank" data-bid="Induced_stress.9065230d-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\), \(B'=\) <span class="blank" data-bid="Induced_stress.d98c2f84-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+          </div>
+
+          <div class="step">
+            <span class="lead">Distances</span> <br>
+            \(R_1=\) <span class="blank math" data-bid="Induced_stress.354533c1-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.10590c21-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+            \(R_2=\) <span class="blank" data-bid="Induced_stress.440f7f9b-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+            \(R_3=\) <span class="blank math" data-bid="Induced_stress.9c609a47-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.44fe4468-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div>
+
+      <div class="step">
+        <span class="lead">Terms of \(I'_A\)</span> <br>
+        \(\tan^{-1}\!\left(\dfrac{L'B'}{zR_3}\right)=\) <span class="blank math" data-bid="Induced_stress.08d4f257-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Induced_stress.42e6db8b-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">Express in radians</span> <br>
+        \(\dfrac{L'B'z}{R_3}=\) <span class="blank math" data-bid="Induced_stress.6e72e8dc-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.6267c3e4-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}^{2}\) <br>
+        \(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}=\) <span class="blank math" data-bid="Induced_stress.febbede2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.8cc748ab-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(1/\unit{m}^{2}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Influence factor</span>
+        \(I'_A=\) <span class="blank math" data-bid="Induced_stress.41af2a6c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.bb41d81c-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+      <div class="step result">
+        \(\Delta\sigma_{zA}=\underbrace{4}_{\textcolor{red}{\substack{\text{because of}\\\text{symmetry}}}}q\,I'_A=\)
+        <span class="blank math" data-bid="Induced_stress.98234a85-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Induced_stress.aeb04e10-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+        <span class="note">Exact solution</span>
+      </div>
+
+    </div>
+  </div>
+
+  
+
+  <div>
+    <div>
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 20%">
+          <span class="sol-fig">
+            <img loading="lazy" src="figures/ex-6-3-plan-B.svg" style="width:100%" alt=""/>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">For point B</span>
+            \(L=\) <span class="blank" data-bid="Induced_stress.853217e7-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\), \(B'=\) <span class="blank" data-bid="Induced_stress.e48f5226-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+          </div>
+
+          <div class="step">
+            <span class="lead">Distances</span> <br>
+            \(R_1=\) <span class="blank math" data-bid="Induced_stress.354533c1-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.10590c21-1" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+            \(R_2=\) <span class="blank math" data-bid="Induced_stress.440f7f9b-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.8f79ed53-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\) <br>
+            \(R_3=\) <span class="blank math" data-bid="Induced_stress.9c615eac-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.607df52e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+            <span class="note">Not square now: \(R_1\ne R_2\)</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="lead">Terms of \(I'_B\)</span> <br>
+        \(\tan^{-1}\!\left(\dfrac{LB'}{zR_3}\right)=\) <span class="blank math" data-bid="Induced_stress.89715465-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Induced_stress.8ee9409e-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(\dfrac{LB'z}{R_3}=\) <span class="blank" data-bid="Induced_stress.982681a8-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}^{2}\), &nbsp;
+        \(\dfrac{1}{R_1^2}+\dfrac{1}{R_2^2}=\) <span class="blank" data-bid="Induced_stress.ae8dc20b-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(1/\unit{m}^{2}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Influence factor</span>
+        \(I'_B=\) <span class="blank math" data-bid="Induced_stress.6a63b8a6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Induced_stress.d675e428-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+      <div class="step result">
+        \(\Delta\sigma_{zB}=2\,q\,I'_B=\)
+        <span class="blank math" data-bid="Induced_stress.f634c69e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:27ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Induced_stress.3df9b44c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+    <div>
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 35%">
+          <span class="sol-fig">
+            <img loading="lazy" src="figures/ex-6-3-chart.svg" style="width:100%" alt=""/>
+          </span>
+        </div>
+        <div class="sol-col">
+
+          <div class="step">
+            <span class="lead">Using the chart, point A</span> <br>
+            \(m=n=\) <span class="blank math" data-bid="Induced_stress.43dcd2a3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.a20a309e-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+            \(I'\approx\) <span class="blank" data-bid="Induced_stress.cf0a06ea-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+          </div>
+
+          <div class="step">
+            <span class="lead">Point B</span> <br>
+            \(m=\) <span class="blank math" data-bid="Induced_stress.1fb64fc1-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.e5a43028-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+            \(n=\) <span class="blank math" data-bid="Induced_stress.80c82e31-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Induced_stress.881568ad-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+            \(I'\approx\) <span class="blank" data-bid="Induced_stress.18d6c8f3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+            <span class="note">\(m\) and \(n\) are interchangeable</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="lead">Compare</span> (\(\Delta\sigma_z\) in kPa)
+        <table class="sol-table">
+          <tr><th></th><th>A</th><th>B</th></tr>
+          <tr><td class="lbl">Exact</td><td>7.19</td><td>4.74</td></tr>
+          <tr><td class="lbl">Chart</td><td><span class="blank" data-bid="Induced_stress.9bed3f3c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Induced_stress.c2ce9ac2-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+          <tr><td class="lbl">\(2\times2\) approx.</td><td>7.64</td><td>4.90</td></tr>
+          <tr><td class="lbl">Point load</td><td>11.9</td><td>5.23</td></tr>
+        </table>
+        <span class="note">The approximation is 6% high at A and 3% high at B.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+		</div>
+
+
+</section>
+
+<section class="block check-yourself" id="s15" data-anchor="participation-question-6-1">
+<h2 class="block-title">Participation question 6.1</h2>
+
+			
+		<div class='InquiryBox' >
+		For the foundation below: What is the stress increment at 2 m depth at point A if \(q=16\) kPa?
+		</div>
+
+		<div class='container'>
+		<div class='col' style='--colw:30%'>
+		<figure>
+		<img loading="lazy" src='../../Induced_stress/FiguresGeneral/quiz.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='--colw:70%'>
+		<ol class='iClicker' >
+		<li class='l2'>7.18 kPa</li>
+		<li class='l2'>4.74 kPa</li>
+		<li class='l2'>12 kPa</li>
+		<li class='l2'>2.94 kPa</li>
+		<li class='l2'>1.76 kPa</li>
+		</ol>
+		</div>
+		</div>
+		
+		
+</section>
+
+<section class="block" id="s16" data-anchor="choosing-the-correct-model">
+<h2 class="block-title">Choosing the correct model</h2>
+
+		
+		<div class='textBox' style='font-size: 0.85em'>
+		Work in pairs and think of what model you will use to calculate the increment of stress at point A for the loading conditions shown in the figures
+		</div>
+
+		
+		
+		<!-- Shared look for the "model choice" drawings (this block and the two after
+		     it), copied from the deck's <style>, which the build strips. In the slides
+		     .explode pieces start stacked and slide by (--dx, --dy) on a fragment step;
+		     the book is static, so they are drawn at that final, exploded position. -->
+		<style>
+			.mc text { font-family: 'Times New Roman', Times, serif; font-size: 22px; fill: #000; }
+			.mc .sym { font-style: italic; }
+			.mc .ttl { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 22px; }
+			.mc .cap { font-family: Arial, Helvetica, sans-serif; font-size: 17px; fill: #555; }
+			.mc .red { fill: #d40000; }
+			.mc .blu { fill: #000080; }
+			.mc .soil { fill: #fdcfa9; stroke: none; }
+			.mc .gnd { stroke: #000; stroke-width: 2.5; }
+			.mc .conc { fill: #c8c8c8; stroke: #000; stroke-width: 2; }
+			.mc .stem { fill: #8c8c8c; stroke: #000; stroke-width: 2; }
+			.mc .fill { fill: #e3b96b; stroke: #000; stroke-width: 2; }
+			.mc .dim { stroke: #000; stroke-width: 1.5; fill: none; }
+			.mc .dash { stroke: #000; stroke-width: 1.5; stroke-dasharray: 6 5; fill: none; }
+			.mc .ptA { fill: #e00000; stroke: none; }
+			.mc .explode { transform: translate(var(--dx), var(--dy)); }
+		</style>
+		<svg width="0" height="0" style="position:absolute">
+			<defs>
+				<marker id="mcArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+					<path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+				</marker>
+				<marker id="mcLoad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+					<path d="M0,0 L10,5 L0,10 z" fill="#d40000"/>
+				</marker>
+				<pattern id="mcHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+					<rect width="8" height="8" fill="rgba(212,0,0,0.18)"/>
+					<line x1="0" y1="0" x2="0" y2="8" stroke="#d40000" stroke-width="3"/>
+				</pattern>
+				
+				<linearGradient id="mcFade" x1="0" y1="0" x2="1" y2="0">
+					<stop offset="0" stop-color="#e3b96b"/><stop offset="0.6" stop-color="#e3b96b"/>
+					<stop offset="1" stop-color="#e3b96b" stop-opacity="0"/>
+				</linearGradient>
+				<linearGradient id="mcFadeLine" x1="0" y1="0" x2="1" y2="0">
+					<stop offset="0" stop-color="#000"/><stop offset="0.6" stop-color="#000"/>
+					<stop offset="1" stop-color="#000" stop-opacity="0"/>
+				</linearGradient>
+			</defs>
+		</svg>
+
+		<div class='container' >
+		<div class='col' style='--colw:50%'>
+		
+		<svg class="mc" viewBox="0 0 560 480" style="height:480px; width:100%">
+			<text class="ttl" x="280" y="24" text-anchor="middle">Retaining wall and backfill</text>
+			
+			<text class="cap" x="20" y="60">Plan</text>
+			<rect x="135" y="50" width="345" height="180" fill="url(#mcFade)"/>
+			<line x1="135" y1="50" x2="480" y2="50" stroke="url(#mcFadeLine)" stroke-width="2"/>
+			<line x1="135" y1="230" x2="480" y2="230" stroke="url(#mcFadeLine)" stroke-width="2"/>
+			<rect class="conc" x="110" y="50" width="15" height="180"/>
+			<rect x="135" y="50" width="75" height="180" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+			<rect class="stem" x="125" y="50" width="10" height="180"/>
+			<circle class="ptA" cx="160" cy="140" r="5"/>
+			<text class="red" x="166" y="170">A</text>
+			<line class="dash" x1="80" y1="140" x2="490" y2="140"/>
+			<text x="498" y="146" class="sym">a</text><text x="64" y="146" class="sym">a</text>
+			<line class="dim" x1="90" y1="50" x2="90" y2="230" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text class="sym" x="82" y="100" text-anchor="end">L</text>
+			<line class="dim" x1="110" y1="248" x2="210" y2="248" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="160" y="272" text-anchor="middle"><tspan class="sym">B</tspan><tspan font-size="15" dy="5">w</tspan></text>
+			<line class="dim" x1="230" y1="248" x2="480" y2="248" marker-end="url(#mcArrow)"/>
+			<text x="355" y="272" text-anchor="middle"><tspan class="sym">B</tspan><tspan font-size="15" dy="5">f</tspan><tspan dy="-5"> → ∞</tspan></text>
+			<text class="cap" x="330" y="200">backfill</text>
+			<text class="cap" x="130" y="44" text-anchor="middle">wall</text>
+			
+			<text class="cap" x="20" y="315">Section a–a</text>
+			<rect class="soil" x="60" y="400" width="440" height="75"/>
+			<polygon points="135,320 500,320 500,400 210,400 210,388 135,388" fill="url(#mcFade)"/>
+			<line x1="135" y1="320" x2="500" y2="320" stroke="url(#mcFadeLine)" stroke-width="2"/>
+			<rect class="conc" x="110" y="388" width="100" height="12"/>
+			<rect class="stem" x="125" y="290" width="10" height="98"/>
+			<line class="gnd" x1="60" y1="400" x2="500" y2="400"/>
+			<line class="dim" x1="300" y1="320" x2="300" y2="400" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="310" y="366" class="sym">H</text>
+			<text x="245" y="366" text-anchor="middle"><tspan class="sym">γ</tspan><tspan font-size="15" dy="5">f</tspan></text>
+			<text x="440" y="310">→ ∞</text>
+			<text class="cap" x="117" y="420" text-anchor="middle">toe</text>
+			<text class="cap" x="185" y="420" text-anchor="middle">heel</text>
+			<line class="dash" x1="160" y1="400" x2="160" y2="462"/>
+			<circle class="ptA" cx="160" cy="462" r="5"/>
+			<text class="red" x="172" y="470">A</text>
+			<line class="dim" x1="90" y1="400" x2="90" y2="462" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="80" y="438" class="sym" text-anchor="end">z</text>
+		</svg>
+		</div>
+		<div class='col' style='--colw:50%'>
+		
+		<svg class="mc" viewBox="0 0 560 480" style="height:480px; width:100%">
+			<text class="ttl" x="440" y="24" text-anchor="middle">Concrete mat</text>
+			
+			<text class="cap" x="400" y="60">Plan</text>
+			<path class="conc" d="M120,250 L320,250 L320,150 A100,100 0 0 0 220,50 L120,50 Z"/>
+			<circle class="ptA" cx="220" cy="150" r="5"/>
+			<text class="red" x="228" y="172">A (5, 5)</text>
+			<line class="dash" x1="86" y1="150" x2="350" y2="150"/>
+			<text x="358" y="156" class="sym">a</text><text x="72" y="156" class="sym">a</text>
+			
+			<text class="cap" x="116" y="266" text-anchor="end">(0, 0)</text>
+			
+			<line class="dim" x1="120" y1="272" x2="320" y2="272" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="220" y="296" text-anchor="middle">10 m</text>
+			<line class="dim" x1="50" y1="50" x2="50" y2="250" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="44" y="210" text-anchor="end">10 m</text>
+			<line class="dim" x1="120" y1="36" x2="220" y2="36" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="170" y="30" text-anchor="middle">5 m</text>
+			<line class="dim" x1="338" y1="150" x2="338" y2="250" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="346" y="210">5 m</text>
+			<line class="dim" x1="220" y1="150" x2="290.7" y2="79.3" marker-end="url(#mcArrow)"/>
+			<text x="246" y="96" text-anchor="end"><tspan class="sym">r</tspan><tspan font-size="15" dy="5">0</tspan><tspan dy="-5"> = 5 m</tspan></text>
+			
+			<text class="cap" x="20" y="315">Section a–a</text>
+			<rect class="soil" x="60" y="400" width="440" height="75"/>
+			<line class="gnd" x1="60" y1="400" x2="500" y2="400"/>
+			<rect class="conc" x="120" y="385" width="200" height="15"/>
+			<g stroke="#d40000" stroke-width="2" marker-end="url(#mcLoad)">
+				<line x1="130" y1="340" x2="130" y2="382"/><line x1="160" y1="340" x2="160" y2="382"/>
+				<line x1="190" y1="340" x2="190" y2="382"/><line x1="220" y1="340" x2="220" y2="382"/>
+				<line x1="250" y1="340" x2="250" y2="382"/><line x1="280" y1="340" x2="280" y2="382"/>
+				<line x1="310" y1="340" x2="310" y2="382"/>
+			</g>
+			<line x1="130" y1="340" x2="310" y2="340" stroke="#d40000" stroke-width="2"/>
+			<text x="320" y="345" class="sym red">q</text>
+			<line class="dash" x1="220" y1="400" x2="220" y2="462"/>
+			<circle class="ptA" cx="220" cy="462" r="5"/>
+			<text class="red" x="232" y="470">A</text>
+			<line class="dim" x1="100" y1="400" x2="100" y2="462" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+			<text x="90" y="438" class="sym" text-anchor="end">z</text>
+		</svg>
+		</div>
+		</div>
+		
+</section>
+
+<section class="block" id="s17" data-anchor="model-choice-retaining-wall">
+<h2 class="block-title">Model choice: retaining wall</h2>
+
+		
+		
+		<svg class="mc" viewBox="0 0 1200 460" width="100%" >
+			
+			
+			<g class="explode" style="--dx:430px; --dy:0px">
+				<rect class="soil" x="20" y="100" width="300" height="80"/>
+				<rect class="conc" x="80" y="92" width="70" height="8"/>
+				<rect class="stem" x="90" y="30" width="7" height="62"/>
+				<line class="gnd" x1="20" y1="100" x2="320" y2="100"/>
+				<circle class="ptA" cx="115" cy="160" r="5"/><text class="red" x="124" y="168">A</text>
+			</g>
+			
+			<g class="explode" style="--dx:840px; --dy:0px">
+				<rect class="soil" x="20" y="100" width="300" height="80"/>
+				<polygon points="97,45 320,45 320,100 97,100" fill="url(#mcFade)"/>
+				<line x1="97" y1="45" x2="320" y2="45" stroke="url(#mcFadeLine)" stroke-width="2"/>
+				<line class="gnd" x1="20" y1="100" x2="320" y2="100"/>
+				<circle class="ptA" cx="115" cy="160" r="5"/><text class="red" x="124" y="168">A</text>
+			</g>
+			
+			<g>
+				<rect class="soil" x="20" y="100" width="300" height="80"/>
+				<polygon points="97,45 320,45 320,100 150,100 150,92 97,92" fill="url(#mcFade)"/>
+				<line x1="97" y1="45" x2="320" y2="45" stroke="url(#mcFadeLine)" stroke-width="2"/>
+				<rect class="conc" x="80" y="92" width="70" height="8"/>
+				<rect class="stem" x="90" y="30" width="7" height="62"/>
+				<line class="gnd" x1="20" y1="100" x2="320" y2="100"/>
+				<circle class="ptA" cx="115" cy="160" r="5"/><text class="red" x="124" y="168">A</text>
+				<text class="cap" x="170" y="205" text-anchor="middle">Both loads act together</text>
+			</g>
+			<g >
+				<text x="390" y="120" font-size="48" text-anchor="middle">=</text>
+				<ellipse cx="545" cy="128" rx="50" ry="50" fill="rgba(0,0,128,0.10)" stroke="#000080" stroke-width="2" stroke-dasharray="6 4"/>
+				<text class="cap" x="600" y="205" text-anchor="middle">Wall footing (spread footing)</text>
+			</g>
+			<g >
+				<text x="805" y="120" font-size="48" text-anchor="middle">+</text>
+				<ellipse cx="1050" cy="135" rx="110" ry="52" fill="rgba(0,0,128,0.10)" stroke="#000080" stroke-width="2" stroke-dasharray="6 4"/>
+				<text class="cap" x="1010" y="205" text-anchor="middle">Backfill (rectangular load, <tspan font-style="italic">B</tspan><tspan font-size="12" dy="4">f</tspan><tspan dy="-4"> → ∞)</tspan></text>
+			</g>
+
+			
+			<g >
+				<text class="ttl" x="20" y="250" font-size="19">(a) Wall: A is inside the footing</text>
+				<rect x="90" y="265" width="30" height="180" fill="#eee" stroke="#999" stroke-width="1.5" stroke-dasharray="4 4"/>
+			</g>
+			<g >
+				<g class="explode" style="--dx:-14px; --dy:-14px">
+					<rect class="conc" x="90" y="265" width="15" height="90"/><circle class="ptA" cx="105" cy="355" r="4"/></g>
+				<g class="explode" style="--dx:14px; --dy:-14px">
+					<rect class="conc" x="105" y="265" width="15" height="90"/><circle class="ptA" cx="105" cy="355" r="4"/></g>
+				<g class="explode" style="--dx:-14px; --dy:14px">
+					<rect class="conc" x="90" y="355" width="15" height="90"/><circle class="ptA" cx="105" cy="355" r="4"/></g>
+				<g class="explode" style="--dx:14px; --dy:14px">
+					<rect class="conc" x="105" y="355" width="15" height="90"/><circle class="ptA" cx="105" cy="355" r="4"/></g>
+			</g>
+			<g >
+				<text x="250" y="345">4 corner rectangles,</text>
+				<text x="250" y="375"><tspan class="sym">B</tspan><tspan font-size="15" dy="5">w</tspan><tspan dy="-5">/2 × </tspan><tspan class="sym">L</tspan>/2 each:</text>
+				<text x="250" y="415" class="blu">4 <tspan class="sym">I′</tspan>(<tspan class="sym">B</tspan><tspan font-size="15" dy="5">w</tspan><tspan dy="-5">/2, </tspan><tspan class="sym">L</tspan>/2)</text>
+			</g>
+
+			
+			<g >
+				<text class="ttl" x="560" y="250" font-size="19">(b) Backfill: A is under the fill</text>
+				<rect x="647" y="268" width="200" height="160" fill="url(#mcFade)"/>
+				<line x1="647" y1="268" x2="847" y2="268" stroke="url(#mcFadeLine)" stroke-width="2"/>
+				<line x1="647" y1="428" x2="847" y2="428" stroke="url(#mcFadeLine)" stroke-width="2"/>
+				<rect class="conc" x="630" y="268" width="10" height="160" opacity="0.45"/>
+				<rect class="stem" x="640" y="268" width="7" height="160"/>
+				<circle class="ptA" cx="665" cy="348" r="5"/>
+				<text class="red" x="620" y="355" text-anchor="end">A</text>
+				<text x="806" y="452">→ ∞</text>
+			</g>
+			<g >
+				<rect x="665" y="268" width="175" height="80" fill="rgba(0,0,128,0.22)" stroke="#000080" stroke-width="2.5"/>
+				<rect x="665" y="348" width="175" height="80" fill="rgba(0,0,128,0.22)" stroke="#000080" stroke-width="2.5"/>
+				<text x="870" y="318">from A to ∞:</text>
+				<text x="870" y="346" class="blu">2 <tspan class="sym">I′</tspan>(∞, <tspan class="sym">L</tspan>/2)</text>
+			</g>
+			<g >
+				<rect x="647" y="268" width="18" height="80" fill="rgba(0,128,0,0.25)" stroke="#008000" stroke-width="2.5"/>
+				<rect x="647" y="348" width="18" height="80" fill="rgba(0,128,0,0.25)" stroke="#008000" stroke-width="2.5"/>
+				<line class="dim" x1="647" y1="442" x2="665" y2="442" marker-start="url(#mcArrow)" marker-end="url(#mcArrow)"/>
+				<text x="656" y="458" class="sym" text-anchor="middle" font-size="18">e</text>
+				<text x="870" y="388">from A back to the stem:</text>
+				<text x="870" y="416" style="fill:#008000">+ 2 <tspan class="sym">I′</tspan>(<tspan class="sym">e</tspan>, <tspan class="sym">L</tspan>/2)</text>
+				<text class="cap" x="870" y="448">for ∞, use the <tspan font-style="italic">m</tspan> = ∞ curve</text>
+			</g>
+		</svg>
+		<div class='equationBox' style="font-size: 0.75em">
+		\( \Delta\sigma_A = q_w\,4I'\!\left(\tfrac{B_w}{2},\tfrac{L}{2}\right) + q_f\,2\left[I'\!\left(\infty,\tfrac{L}{2}\right) + I'\!\left(e,\tfrac{L}{2}\right)\right],\quad q_w=\tfrac{W}{B_w L},\ q_f=\gamma_f H \)
+		</div>
+		
+</section>
+
+<section class="block" id="s18" data-anchor="model-choice-concrete-mat">
+<h2 class="block-title">Model choice: concrete mat</h2>
+
+		
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+		
+		<svg class="mc" viewBox="40 130 400 380" style="height:560px; width:100%">
+			<path d="M80,470 L380,470 L380,320 A150,150 0 0 0 230,170 L80,170 Z" fill="#ececec" stroke="#999" stroke-width="2" stroke-dasharray="6 5"/>
+			<path class="conc" d="M80,470 L380,470 L380,320 A150,150 0 0 0 230,170 L80,170 Z"/>
+			<g >
+				<g class="explode" style="--dx:-22px; --dy:22px">
+					<rect x="80" y="320" width="150" height="150" fill="#b8c7e6" stroke="#000080" stroke-width="2.5"/>
+					<text x="155" y="405" text-anchor="middle" class="blu" font-size="34">1</text>
+					<circle class="ptA" cx="230" cy="320" r="6"/></g>
+				<g class="explode" style="--dx:22px; --dy:22px">
+					<rect x="230" y="320" width="150" height="150" fill="#b8c7e6" stroke="#000080" stroke-width="2.5"/>
+					<text x="305" y="405" text-anchor="middle" class="blu" font-size="34">2</text>
+					<circle class="ptA" cx="230" cy="320" r="6"/></g>
+				<g class="explode" style="--dx:-22px; --dy:-22px">
+					<rect x="80" y="170" width="150" height="150" fill="#b8c7e6" stroke="#000080" stroke-width="2.5"/>
+					<text x="155" y="255" text-anchor="middle" class="blu" font-size="34">3</text>
+					<circle class="ptA" cx="230" cy="320" r="6"/></g>
+				<g class="explode" style="--dx:22px; --dy:-22px">
+					<path d="M230,320 L380,320 A150,150 0 0 0 230,170 Z" fill="#f6c89a" stroke="#c05000" stroke-width="2.5"/>
+					<circle class="ptA" cx="230" cy="320" r="6"/>
+					
+					<g >
+						<circle cx="230" cy="320" r="150" fill="none" stroke="#c05000" stroke-width="2.5" stroke-dasharray="9 6"/>
+						<text x="300" y="300" fill="#c05000" font-size="24">¼</text>
+					</g>
+				</g>
+			</g>
+			<circle class="ptA" cx="230" cy="320" r="6"/>
+			<text class="red" x="236" y="340">A</text>
+		</svg>
+		</div>
+		<div class='col' style='--colw:50%; font-size: 0.75em; text-align: left'>
+			<div >
+				Split the footprint with lines through A.
+			</div>
+			<div  >
+				<strong style="color:#000080">Rectangle formula</strong>: A must be a <span class="blank" data-bid="Induced_stress.bffb0e0d-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span>.<br>
+				Pieces 1, 2, 3 are the same \(5\times5\) m rectangle: \(3\,I'_{rect}\), with \(m=n=5/z\).
+			</div>
+			<div  >
+				<strong style="color:#c05000">Circle formula</strong>: A must be on the <span class="blank" data-bid="Induced_stress.3689dd16-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>.<br>
+				The quarter is \(\tfrac{1}{4}\) of a full circle with \(r_o=5\) m centred at A.
+			</div>
+			<div class='equationBox' >
+				\( \Delta\sigma_A = q\left[\,3\,I'_{rect} + \tfrac{1}{4}\,I'_{circ}\right] \)<br>
+				\( I'_{circ} = 1-\left[\dfrac{1}{1+(r_o/z)^2}\right]^{3/2} \)
+			</div>
+		</div>
+		</div>
+		
+
+		
+<iframe src='../../virtual_lab/experiments/stress/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0'></iframe>
+
+		
+		
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
