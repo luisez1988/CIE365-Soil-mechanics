@@ -1,0 +1,32 @@
+<!-- Example 7.3 — overconsolidated clay, case b (sigma'_vf > sigma'_c).
+     One slide, replacing the legacy figure FiguresGeneral/EX630.svg.
+     sigma'_vo, sigma'_vf and e_0 are carried over from Example 7.2. -->
+<div class="sol" data-id="ex-7-3" style="--sol-line: 1.2; font-size: 0.6em;">
+
+  <div class="step">
+    <span class="lead">Data</span>
+    \(\sigma'_{vo}=153.4\unit{kPa}\), \(\sigma'_{vf}=353.4\unit{kPa}\), \(OCR=1.2\), \(H_0=10\unit{m}\),
+    \(e_0=1.026\), \(C_c=0.3\), \(C_r=0.05\)
+    <span class="note">Changing \(OCR\) changes only \(\sigma'_c\); the stresses and \(e_0\) are those of 7.2.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=\dfrac{H_0}{1+e_0}\left(C_r\log OCR+C_c\log\dfrac{\sigma'_{vf}}{\sigma'_c}\right)\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Check condition</span>
+    \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="fill">\(1.2\times153.4\)</span> \(=\)
+    <span class="fill">184.0</span> \(\unit{kPa}\) <span class="fill">\(<\sigma'_{vf}\)</span>
+    <span class="note">Implies case b: recompression up to \(\sigma'_c\), then the virgin curve.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Calculate settlement</span>
+    \(\delta_{pc}=\) <span class="fill">\(\dfrac{10}{2.026}\left(0.05\log1.2+0.3\log\dfrac{353.4}{184.0}\right)\)</span> \(=\)
+    <span class="ans">0.439</span> \(\unit{m}\)
+    <span class="note">The answer must fall between the all-\(C_r\) and all-\(C_c\) settlements.</span>
+  </div>
+
+</div>

@@ -1,0 +1,65 @@
+<!-- Example 7.2 — overconsolidated clay, case a (sigma'_vf < sigma'_c).
+     One slide, two columns as in the legacy figure FiguresGeneral/EX620.svg:
+       left  = data, principles, unit weight of the clay
+       right = stresses, case check, settlement
+     Sand and profile are carried over from Example 7.1. -->
+<div class="sol" data-id="ex-7-2" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <div class="sol-cols">
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Data</span>
+        Sand: \(\gamma_{sat}=19.01\unit{kN/m^3}\) <br>
+        Clay: \(G_s=2.7\), \(w=38\%\), \(OCR=4\), \(C_r=0.05\)
+        <span class="note">The sand and the profile are unchanged from Example 7.1.</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span>
+        \(\delta_{pc}=C_r\dfrac{H_0}{1+e_0}\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}\)
+        <span class="note">Valid only while \(\sigma'_{vf}\le\sigma'_c\). Check it before using \(C_r\).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Find unit weight of clay</span> <br>
+        \(e_0=wG_s=\) <span class="fill">\(0.38\times2.7\)</span> \(=\) <span class="fill">1.026</span> <br>
+        \(\gamma_{sat}=\dfrac{\gamma_w(G_s+e_0)}{1+e_0}=\)
+        <span class="fill">\(\dfrac{9.81(2.7+1.026)}{2.026}\)</span> \(=\)
+        <span class="fill">18.04</span> \(\unit{kN/m^3}\)
+        <span class="note">Only \(w\) changed, but that changes \(e_0\) and \(\gamma_{sat}\) of the clay.</span>
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step">
+        <span class="lead">Calculate effective stress at midpoint</span> <br>
+        \(\sigma'_{vo}=\) <span class="fill">\(19.01\times9+18.04\times5-9.81\times11\)</span> \(=\)
+        <span class="fill">153.4</span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Calculate final vert. effective stress</span> <br>
+        \(\sigma'_{vf}=\sigma'_{vo}+\Delta\sigma_v=\) <span class="fill">\(153.4+200\)</span> \(=\)
+        <span class="fill">353.4</span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Check case</span> <br>
+        \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="fill">\(4\times153.4\)</span> \(=\)
+        <span class="fill">613.4</span> \(\unit{kPa}\) <span class="fill">\(>\sigma'_{vf}\)</span>
+        <span class="note">The stress path never reaches \(\sigma'_c\): it stays on the recompression line.</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Calculate settlement</span> <br>
+        \(\delta_{pc}=\) <span class="fill">\(\dfrac{0.05\times10}{2.026}\log\dfrac{353.4}{153.4}\)</span> \(=\)
+        <span class="ans">0.0895</span> \(\unit{m}\)
+        <span class="note">\(C_r\) is much smaller than \(C_c\), so expect a much smaller settlement than 7.1.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>

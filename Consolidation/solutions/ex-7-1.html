@@ -1,0 +1,86 @@
+<!-- Example 7.1 — primary consolidation settlement of a normally consolidated clay.
+     Two parts, matching the deck's two slides:
+       part 1 = statement slide, beside Profile_ex61.svg: data, principles, sand unit weight
+       part 2 = the two-column slide: clay, stresses, settlement | e - log(sigma') path
+     Legacy figures: FiguresGeneral/EX610.svg (part 1) + EX611.svg (part 2).
+     The e - log(sigma') panel of EX611 is redrawn as FiguresGeneral/ex-7-1-elog.svg. -->
+<div class="sol" data-id="ex-7-1" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <!-- ============ part 1 — data, principles, sand ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    Sand: \(e=0.76\), \(S=100\%\), \(G_s=2.65\) <br>
+    Clay: \(w=43\%\), \(S=100\%\), \(C_c=0.3\), \(G_s=2.7\), \(\Delta\sigma_v=200\unit{kPa}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=C_c\dfrac{H_0}{1+e_0}\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}\)
+    <span class="note">No \(OCR\) is given, so the clay is normally consolidated: virgin curve.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Let's find the unit weights first</span> <br>
+    \(\gamma_{sat,sand}=\dfrac{\gamma_w(G_s+e)}{1+e}=\)
+    <span class="fill">\(\dfrac{9.81(2.65+0.76)}{1.76}\)</span> \(=\)
+    <span class="fill">19.01</span> \(\unit{kN/m^3}\)
+    <span class="note">The statement says the sand above the water table is saturated too.</span>
+  </div>
+
+  <!-- ==== part 2 — clay and settlement | e - log(sigma') path ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.25 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">For the clay</span>
+        \(e_0=wG_s=\) <span class="fill">\(0.43\times2.7\)</span> \(=\) <span class="fill">1.161</span> <br>
+        \(\gamma_{sat,clay}=\dfrac{\gamma_w(G_s+e_0)}{1+e_0}=\)
+        <span class="fill">\(\dfrac{9.81(2.7+1.161)}{2.161}\)</span> \(=\)
+        <span class="fill">17.53</span> \(\unit{kN/m^3}\)
+        <span class="note">\(e_0=wG_s\) holds because the clay is saturated (\(S=1\)).</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Now we can calculate \(\sigma'_{vo}\) at mid point of layer</span> <br>
+        \(\sigma'_{vo}=\overbrace{\underbrace{\gamma_{sand}\,z_{sand}}_{\textcolor{red}{\text{sand}}}+\underbrace{\gamma_{clay}\,z_{clay}}_{\textcolor{red}{\text{clay}}}}^{\textcolor{red}{\text{total stress}}}-\underbrace{\gamma_w\,z_w}_{\textcolor{red}{\text{pore pressure}}}=\)
+        <span class="fill">\(9\times19.01+5\times17.53-9.81\times11\)</span> \(=\)
+        <span class="fill">150.8</span> \(\unit{kPa}\)
+        <span class="note">Pore pressure is measured from the water table, not from the ground surface.</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Calculate final effective stress</span>
+        \(\sigma'_{vf}=\sigma'_{vo}+\Delta\sigma_v=\) <span class="fill">\(150.8+200\)</span> \(=\)
+        <span class="fill">350.8</span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step result" data-part="2">
+        <span class="lead">Calculate p.c. settlement</span> <br>
+        \(\delta_{pc}=\) <span class="fill">\(\dfrac{0.3\times10}{2.161}\log\dfrac{350.8}{150.8}\)</span> \(=\)
+        <span class="ans">0.509</span> \(\unit{m}\)
+        <span class="note">Use \(\log_{10}\), not \(\ln\): \(C_c\) is the slope per log cycle.</span>
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="2">
+        <span class="lead">Void ratio after loading</span>
+        <span class="sol-fig" style="margin: 0.1em auto">
+          <img src="FiguresGeneral/ex-7-1-elog.svg" style="width: 78%"
+               alt="e versus log of vertical effective stress: the clay moves down the virgin line of slope Cc from (sigma'vo, e0) to (sigma'vf, ef), dropping by delta e.">
+        </span>
+        \(\Delta e=C_c\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}=\)
+        <span class="fill">\(0.3\log\dfrac{350.8}{150.8}\)</span> \(=\)
+        <span class="fill">0.110</span> <br>
+        \(e_f=e_0-\Delta e=\) <span class="fill">\(1.161-0.110\)</span> \(=\)
+        <span class="fill">1.051</span>
+        <span class="note">We should be able to calculate this void ratio and the new density.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>

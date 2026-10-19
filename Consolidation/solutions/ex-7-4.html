@@ -1,0 +1,144 @@
+<!-- Example 7.4 — primary consolidation under a strip load: (a) one layer, (b) ten sub-layers.
+     Three parts:
+       part 1 = statement slide, beside complex_problem.svg: data, principles, sigma'_vo
+       part 2 = two-column slide: strip load and induced stress | case check, settlement
+       part 3 = new slide: the ten sub-layer table, printed in full
+       part 4 = new slide: stress and OCR profiles (FiguresGeneral/ex-7-4-profiles.svg)
+     Legacy figures: FiguresGeneral/EX640.svg (part 1) + EX641.svg (part 2).
+     The half-strip sketch of EX641 is redrawn as FiguresGeneral/ex-7-4-strip.svg. -->
+<div class="sol" data-id="ex-7-4" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <!-- ============ part 1 — data, principles, (a) sigma'_vo ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    Given in figure
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=\displaystyle\sum_i\delta_{pc,i}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">(a) Single layer. Calculate effective stress at midpoint</span> <br>
+    \(\sigma'_{vo}=\underbrace{(\gamma_{sat}-\gamma_w)}_{\textcolor{red}{\gamma'}}\,\underbrace{z_i}_{\textcolor{red}{\text{mid depth}}}=\)
+    <span class="fill">\((125-62.4)\times12.5\)</span> \(=\)
+    <span class="fill">782.5</span> \(\unit{psf}\)
+    <span class="note">The water table is at the surface, so the whole layer uses \(\gamma'\).</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Calculate induced stress at midpoint</span>
+    Recall \(\Delta\sigma_v=I'q\)
+  </div>
+
+  <!-- ==== part 2 — strip load, induced stress | case, settlement ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col">
+
+      <div class="step" data-part="2">
+        <span class="lead">Modeled as a strip load</span>
+        <div class="sol-cols" style="gap: 0.4em; align-items: center">
+          <div class="sol-col" style="flex: 0 0 42%">
+            <span class="sol-fig" style="margin: 0">
+              <img src="FiguresGeneral/ex-7-4-strip.svg" style="width: 100%"
+                   alt="Half of the strip load, width B over 2 with beta equal to zero, and the angle alpha it subtends at depth z under the centre line.">
+            </span>
+          </div>
+          <div class="sol-col">
+            \(\alpha=\tan^{-1}\left(\dfrac{B}{2z}\right)\) <br>
+            \(I'=\underbrace{\dfrac{2}{\pi}}_{\textcolor{red}{\text{symmetry}}}\left[\alpha+\sin\alpha\cos\alpha\right]\)
+          </div>
+        </div>
+        \(\alpha=\) <span class="fill">\(\tan^{-1}\left(\dfrac{15}{2\times12.5}\right)\)</span> \(=\)
+        <span class="fill">\(31^{\circ}=0.540\)</span> \(\unit{rad}\) <br>
+        \(I'=\) <span class="fill">\((2/\pi)[0.540+\sin31^{\circ}\cos31^{\circ}]\)</span> \(=\)
+        <span class="fill">0.625</span>
+        <span class="note">\(\alpha\) alone must be in rad; two half-strips with \(\beta=0\) give the \(2/\pi\).</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Induced stress</span>
+        \(\Delta\sigma_v=I'q=\) <span class="fill">\(0.625\times6000\)</span> \(=\)
+        <span class="fill">3749</span> \(\unit{psf}\)
+        <span class="note">ksf to psf before multiplying.</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Calculate final effective vert. stress</span>
+        \(\sigma'_{vf}=\) <span class="fill">\(782.5+3749\)</span> \(=\)
+        <span class="fill">4532</span> \(\unit{psf}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="2">
+        <span class="lead">Check case</span>
+        \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="fill">\(1.5\times782.5\)</span> \(=\)
+        <span class="fill">1174</span> \(\unit{psf}\) <br>
+        <span class="fill">\(\sigma'_{vf}>\sigma'_c\)</span>
+        <span class="note">Compare \(\sigma'_{vf}\) with \(\sigma'_c\) to pick the case.</span>
+      </div>
+
+      <div class="step result" data-part="2">
+        <span class="lead">Calculate settlement</span> <br>
+        \(\delta_{pc}=\dfrac{H_0}{1+e_0}\left(C_r\log OCR+C_c\log\dfrac{\sigma'_{vf}}{\sigma'_c}\right)\) <br>
+        \(\delta_{pc}=\) <span class="fill">\(\dfrac{25}{1.95}\left(0.04\log1.5+0.33\log\dfrac{4532}{1174}\right)\)</span> <br>
+        \(\delta_{pc}=\) <span class="ans">2.57</span> \(\unit{ft}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==== part 3 — (b) ten sub-layers: full table ==== -->
+
+  <!-- Printed in full (no blanks), same columns as the professor's Google Sheet.
+       The table sits outside the step so it is on screen at once instead of
+       being typed cell by cell. Elevations are measured down from the surface. -->
+  <div class="step" data-part="3">
+    <span class="lead">(b) Repeat at discretized layers</span>
+    \(h=25/10=2.5\unit{ft}\) replaces \(H_0\) in each sub-layer
+    <span class="note">Each row repeats the single-layer calculation at the midpoint of its sub-layer.</span>
+  </div>
+
+    <table class="sol-table" data-part="3" style="font-size: 0.72em">
+      <tr><th>Layer</th><th>Top elevation (ft)</th><th>Bottom elevation (ft)</th><th>Midpoint elevation (ft)</th><th>Total stress (psf)</th><th>Pore pressure (psf)</th><th>Effective stress \(\sigma'_{vo}\) (psf)</th><th>\(\alpha\) (rad)</th><th>\(I'\)</th><th>Induced stress \(\Delta\sigma_v\) (psf)</th><th>Final vert. effective stress \(\sigma'_{vf}\) (psf)</th><th>Precons. pressure \(\sigma'_c\) (psf)</th><th>Check case</th><th>Partial settlement \(\delta_{pc,i}\) (ft)</th></tr>
+      <tr><td class="lbl">1</td><td>0</td><td>2.5</td><td>1.25</td><td>156.25</td><td>78.0</td><td>78.25</td><td>1.406</td><td>0.998</td><td>5989</td><td>6067</td><td>117.4</td><td>b</td><td>0.734</td></tr>
+      <tr><td class="lbl">2</td><td>2.5</td><td>5</td><td>3.75</td><td>468.75</td><td>234.0</td><td>234.75</td><td>1.107</td><td>0.959</td><td>5757</td><td>5992</td><td>352.1</td><td>b</td><td>0.530</td></tr>
+      <tr><td class="lbl">3</td><td>5</td><td>7.5</td><td>6.25</td><td>781.25</td><td>390.0</td><td>391.25</td><td>0.876</td><td>0.871</td><td>5225</td><td>5616</td><td>586.9</td><td>b</td><td>0.424</td></tr>
+      <tr><td class="lbl">4</td><td>7.5</td><td>10</td><td>8.75</td><td>1093.75</td><td>546.0</td><td>547.75</td><td>0.709</td><td>0.766</td><td>4594</td><td>5142</td><td>821.6</td><td>b</td><td>0.346</td></tr>
+      <tr><td class="lbl">5</td><td>10</td><td>12.5</td><td>11.25</td><td>1406.25</td><td>702.0</td><td>704.25</td><td>0.588</td><td>0.668</td><td>4009</td><td>4713</td><td>1056.4</td><td>b</td><td>0.284</td></tr>
+      <tr><td class="lbl">6</td><td>12.5</td><td>15</td><td>13.75</td><td>1718.75</td><td>858.0</td><td>860.75</td><td>0.499</td><td>0.586</td><td>3513</td><td>4374</td><td>1291.1</td><td>b</td><td>0.233</td></tr>
+      <tr><td class="lbl">7</td><td>15</td><td>17.5</td><td>16.25</td><td>2031.25</td><td>1014.0</td><td>1017.25</td><td>0.432</td><td>0.518</td><td>3105</td><td>4122</td><td>1525.9</td><td>b</td><td>0.192</td></tr>
+      <tr><td class="lbl">8</td><td>17.5</td><td>20</td><td>18.75</td><td>2343.75</td><td>1170.0</td><td>1173.75</td><td>0.381</td><td>0.462</td><td>2771</td><td>3944</td><td>1760.6</td><td>b</td><td>0.157</td></tr>
+      <tr><td class="lbl">9</td><td>20</td><td>22.5</td><td>21.25</td><td>2656.25</td><td>1326.0</td><td>1330.25</td><td>0.339</td><td>0.416</td><td>2495</td><td>3825</td><td>1995.4</td><td>b</td><td>0.129</td></tr>
+      <tr><td class="lbl">10</td><td>22.5</td><td>25</td><td>23.75</td><td>2968.75</td><td>1482.0</td><td>1486.75</td><td>0.306</td><td>0.378</td><td>2265</td><td>3752</td><td>2230.1</td><td>b</td><td>0.105</td></tr>
+    </table>
+
+  <div class="step result" data-part="3">
+    <span class="lead">Total settlement</span>
+    \(\delta_{pc}=\displaystyle\sum_{i=1}^{10}\delta_{pc,i}=\) <span class="ans">3.13</span> \(\unit{ft}\)
+    <span class="note">The single-layer answer of part (a) underestimates this by about 18%.</span>
+  </div>
+
+  <!-- ==== part 4 — stress and OCR profiles ==== -->
+
+  <div class="step" data-part="4">
+    <span class="lead">Stress profiles</span>
+    <span class="sol-fig" style="margin: 0.1em auto">
+      <img src="FiguresGeneral/ex-7-4-profiles.svg" style="width: 66%"
+           alt="Left: initial effective stress, induced stress, preconsolidation pressure and final effective stress versus depth for the 25 ft clay, with the ten sub-layer midpoints marked. Right: OCR versus depth, constant at 1.5, with OCR = 1 dashed for reference.">
+    </span>
+    <span class="note">\(\sigma'_{vf}>\sigma'_c\) at every depth, so every sub-layer is case b.</span>
+  </div>
+
+  <div class="step" data-part="4">
+    <span class="lead">Why sub-layers matter</span>
+    \(\Delta\sigma_v\) is largest near the surface, where \(\sigma'_{vo}\) is smallest
+    <span class="note">Shallow sub-layers dominate the total because settlement follows a log law.</span>
+  </div>
+
+</div>
