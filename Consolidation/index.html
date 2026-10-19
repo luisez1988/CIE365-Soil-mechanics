@@ -423,36 +423,6 @@ The total settlement of a soil can be decomposed into three parts: (i) <strong s
 </figure>
 </section> -->
 
-<section  >
-    <h1>Oedometer/consolidation test</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
-	</div>
-		<div class="container">
-			<div class="col" style="width: 50%;">
-        				<figure>
-				  <img src="FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
-			</div>
-			<div class="col" style="width: 50%;">
-				<p style="margin-top:-0px;">Iterative process:</p>
-				<ol style="margin-top:0px;font-size:0.9em">
-					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
-					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
-					<li class="fragment"> Measure the settlement \(\delta\) or void ratio \(e\). </li>
-					<li class='fragment'> <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
-					<li class='fragment'>Repeat 1-3 for each load increment.</li>
-					<li class="fragment"> <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
-				</ol>
-			</div>
-		</div>
-</section>
-
-<section>
-<iframe src='../virtual_lab/experiments/oedometer/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0;'></iframe>
-</section>
-
 <section >
 <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
 We often use <span class='atb'>void ration</span> for calculations of settlement. Thus, we want to relate \(\delta\) to \(e\).
@@ -488,18 +458,50 @@ Recall: \(\varepsilon_v= \Delta V/ V_o \longrightarrow\) Volumetric strain
 <div class='container'>
 <div class='col' style='width: 50%;'>
 <div class='equationBox'>
-\( \varepsilon_a= -\frac{\Delta e}{ 1+ e_o} \)
+\( \varepsilon_a= -\dfrac{\Delta e}{ 1+ e_o} \)
 </div>
 </div>
 <div class='col' style='width: 50%;'>
 <div class='equationBox' style="margin-left: 200px;">
-\( \delta= -\frac{\Delta e H_o}{1+e_o} \)
+\( \delta= -\dfrac{\Delta e H_o}{1+e_o} =  \varepsilon_a H_o \)
 </div>
 </div>
 </div>
 </div>
 
 </section>
+
+<section  >
+    <h1>Oedometer/consolidation test</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
+	</div>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+        				<figure>
+				  <img src="FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<p style="margin-top:-0px;">Iterative process:</p>
+				<ol style="margin-top:0px;font-size:0.9em">
+					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
+					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
+					<li class="fragment"> Measure the settlement \(\delta\) or void ratio \(e\). </li>
+					<li class='fragment'> <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
+					<li class='fragment'>Repeat 1-3 for each load increment.</li>
+					<li class="fragment"> <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
+				</ol>
+			</div>
+		</div>
+</section>
+
+<section>
+<iframe src='../virtual_lab/experiments/oedometer/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0;'></iframe>
+</section>
+
+
 
 <section >
 <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -547,6 +549,51 @@ Is a soil with <span class='atb'>OCR=1</span>. Or a soil in which \(\sigma'_c=\s
 
 <div class='defBox fragment' name='Overconsolidated (OC) soil' style='margin-top: 5px;margin-left: 0px;'>
 Is a soil with <span class='atb'>OCR>1</span>. Or a soil in which \(\sigma'_c>\sigma'_{vo}\)
+</div>
+</section>
+
+<section >
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How do <strong style='color:orange'>\(\sigma'_c\)</strong> and <strong style='color:orange'>\(OCR\)</strong> change with state of stress?
+</div>
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Example_consol.svg'></object>
+</section>
+
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+The following observations can be drawn from observed soil behavior:
+</div>
+	<div class='textBox' style='margin-top: 100px;margin-left: 0px;'>
+		<ul style="margin-top: 0px;">
+			<li class="fragment">Soils (clay) are a <span class='atb'>history dependent</span> material \(\longrightarrow\) "have memory"</li>
+			<li class="fragment">The \(OCR\) give us information about the <span class='atb'>loading geological history</span> of the soil</li>
+			<li class="fragment">If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
+		</ul>
+		</div>
+</section>
+
+<section >
+<h1>Participation question 7.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the Figure below, what statement is true?
+</div>
+
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure>
+<img src='./FiguresGeneral/consol_1.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'  style="width: 50%;">
+<ol class='iClicker' >
+<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
+<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
+</ol>
+</div>
 </div>
 </section>
 
@@ -643,26 +690,7 @@ Is a soil with <span class='atb'>OCR>1</span>. Or a soil in which \(\sigma'_c>\s
 				
 	</section>
 
-<section >
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-How does <strong style='color:green'>\(\sigma'_c\)</strong> and <strong style='color:green'>\(OCR\)</strong> change with state of stress?
-</div>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Example_consol.svg'></object>
-</section>
 
-
-<section >
-<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-The following observations can be drawn from observed soil behavior:
-</div>
-	<div class='textBox' style='margin-top: 100px;margin-left: 0px;'>
-		<ul style="margin-top: 0px;">
-			<li class="fragment">Soils (clay) are a <span class='atb'>history dependent</span> material \(\longrightarrow\) "have memory"</li>
-			<li class="fragment">The \(OCR\) give us information about the <span class='atb'>loading geological history</span> of the soil</li>
-			<li class="fragment">If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
-		</ul>
-		</div>
-</section>
 	
 
 
@@ -689,29 +717,7 @@ The following observations can be drawn from observed soil behavior:
 
 
 
-<section >
-<h1>Participation question 7.3</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-	For the Figure below, what statement is true?
-</div>
 
-<div class='container'>
-<div class='col' style="width: 50%;">
-<figure>
-<img src='./FiguresGeneral/consol_1.png' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-</div>
-<div class='col'  style="width: 50%;">
-<ol class='iClicker' >
-<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
-<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
-<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
-<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
-</ol>
-</div>
-</div>
-</section>
 
 <section >
 	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
