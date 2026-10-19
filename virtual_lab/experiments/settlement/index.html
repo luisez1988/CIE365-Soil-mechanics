@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layered Soil Settlement</title>
+  <link rel="stylesheet" href="../../core/vlab.css">
+</head>
+<body>
+  <div class="vl-app">
+    <header class="vl-head">
+      <h1>Consolidation settlement of a layered soil</h1>
+      <p>Place surface loads in plan, build the soil profile, and compute the primary-consolidation settlement of every
+        vertical column as a 1D problem: Boussinesq &Delta;&sigma;<sub>z</sub>, sub-layers in the fine-grained layers,
+        C<sub>c</sub>/C<sub>r</sub> with the preconsolidation stress.</p>
+    </header>
+    <div class="vl-main">
+      <div class="vs-stage" id="stage">
+        <div class="vs-top">
+          <div class="vs-plan"><canvas id="plan" tabindex="0" aria-label="Plan view: loads and surface settlement"></canvas></div>
+          <div class="vs-loads" id="loads"></div>
+        </div>
+        <div class="vs-cell vs-sec"><canvas id="sec" aria-label="Cross-section: soil layers and deformed profile"></canvas></div>
+        <div class="vs-cell vs-zp"><canvas id="zprof" aria-label="Vertical stress profiles"></canvas></div>
+        <div class="vs-cell vs-xp"><canvas id="xprof" aria-label="Surface settlement along the section"></canvas></div>
+        <div class="vs-read" id="readout"></div>
+        <div class="st-modal" id="modal" hidden></div>
+      </div>
+      <aside class="vl-panel" id="panel"></aside>
+    </div>
+  </div>
+  <script src="../../core/colormap.js"></script>
+  <script src="../../core/contour.js"></script>
+  <script src="../../core/view.js"></script>
+  <script src="../../core/controls.js"></script>
+  <script src="../../core/plot.js"></script>
+  <script src="../../core/boussinesq.js"></script>
+  <script src="../../core/settlement.js"></script>
+  <script src="settlement.js"></script>
+</body>
+</html>

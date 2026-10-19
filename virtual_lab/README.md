@@ -25,10 +25,13 @@ virtual_lab/
     xyplot.js     VLab.XYPlot    x-y chart: lin/log axes, hoverable points, annotations, crosshair readout
     oedometer.js  VLab.Oedo      random clay generator + 1D elasto-viscoplastic consolidation solver;
                                  selfTest() in the console
+    settlement.js VLab.Settle    layered profile (σv, u0, σ'v0, σ'p) and 1D sub-layer settlement of a column;
+                                 selfTest() checks Example 7.4
   experiments/
     sheetpile/                   seepage under a sheet pile (Example 4.18 geometry)
     stress/                      induced vertical stress (Example 6.2/6.3 default scenario)
     oedometer/                   incremental-loading consolidation test (ASTM D2435)
+    settlement/                  primary-consolidation settlement of a layered profile under surface loads
 ```
 
 ## Embedding in a deck
@@ -99,6 +102,30 @@ virtual_lab/
 - **Hash keys**: `seed`, `meth` (A/B), `seat`, `first`, `lir`, `smax`, `sunl`, `srel`, `uview`, `ipsp`, `ipcc`, `ipcr`,
   `ipmv`, `ipca`, `ipcar`, `auto`, `spd`, `tpY`, `tpX`, `cpY`, `cpX`. Example:
   `experiments/oedometer/index.html#seed=4242&smax=1600&srel=3200`
+
+## Model notes (layered settlement)
+
+- **Loads**: surface loads are edited exactly as in the stress lab; that code is forked into `settlement.js`, and the
+  `ld=` hash format is the same. Δσz comes from `VLab.Boussinesq` (homogeneous half-space, whatever the layering).
+- **Layers**: listed from the top down. A layer is fine-grained or coarse-grained, with γ above the water table and
+  γsat. Only fine layers carry e0, Cc, Cr and a stress history (OCR or POP), and only they settle. The base of the
+  profile is fixed.
+- **Settlement**: each column is split into `nsub` sub-layers per fine layer, and each sub-layer uses the class
+  formulas:
+  - NC;
+  - OC with σ'f ≤ σ'p, and OC with σ'f > σ'p;
+  - Cr for unloading, which gives heave.
+- **What is computed**:
+  - the section: 121 columns, each giving a total settlement and the displacement of every layer interface, which
+    is used to draw the deformed profile;
+  - the plan map: a 41×41 grid of columns.
+- **Units**: the model is stored in the current units, either SI (m, kPa, kN/m³, γw = 9.81) or US (ft, psf, pcf,
+  γw = 62.4). Switching converts every value, rounded to 4 significant figures.
+- **Checks**: `index.html?autotest=1` runs `VLab.Settle.selfTest()` and the default-scenario checks. It also runs a
+  units round trip and Example 7.4 through the lab: 10 sub-layers give 3.13 ft and a single layer 2.5725 ft.
+- **Hash keys**: `u`, `gwt`, `nsub`, `sax`, `sec`, `sl`, `W`, `map`, `def`, `dsc`, `pv0`, `ppc`, `pds`, `pvf`, `ld`,
+  and `ly`. `ly` holds the layers as `name,f|c,H,γ,γsat,e0,Cc,Cr,o|p,OCR,POP` joined by `;`. Example 7.4:
+  `#u=US&gwt=0&W=40&ly=CH clay,f,25,125,125,0.95,0.33,0.04,o,1.5,0&ld=s,6000,0,0,0,15,20,0,1`
 
 ## Adding an experiment
 
