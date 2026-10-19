@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oedometer Test</title>
+  <link rel="stylesheet" href="../../core/vlab.css">
+</head>
+<body>
+  <div class="vl-app">
+    <header class="vl-head">
+      <h1>Incremental-loading consolidation test (oedometer)</h1>
+      <p>A saturated clay specimen is loaded in steps (ASTM D2435). Apply each load, watch the specimen compress while
+        the pore water drains, read the deformation against time, and build the void ratio – stress curve from the
+        end-of-primary points.</p>
+    </header>
+    <div class="vl-main">
+      <div class="oe-stage">
+        <div class="oe-rig"><canvas id="rig" aria-label="Oedometer load frame with clock and gauges"></canvas></div>
+        <div class="oe-sched">
+          <div class="oe-bar"><b>Load schedule</b><span id="schedNote" class="oe-note"></span></div>
+          <div class="oe-tablewrap"><table class="oe-table" id="sched"></table></div>
+        </div>
+        <div class="oe-plot oe-tp">
+          <div class="oe-bar">
+            <b>Time curve</b>
+            <select id="tpInc" aria-label="Load increment"></select>
+            <select id="tpY" aria-label="Quantity">
+              <option value="d">deformation &delta;</option>
+              <option value="s">axial strain εa</option>
+              <option value="e">void ratio e</option>
+            </select>
+            <select id="tpX" aria-label="Time axis">
+              <option value="log">log time</option>
+              <option value="lin">linear time</option>
+            </select>
+          </div>
+          <div class="oe-cv"><canvas id="tplot" aria-label="Deformation against time"></canvas></div>
+        </div>
+        <div class="oe-plot oe-cp">
+          <div class="oe-bar">
+            <b>End-of-primary points</b>
+            <select id="cpY" aria-label="Quantity">
+              <option value="e">void ratio e</option>
+              <option value="s">axial strain εa</option>
+              <option value="d">deformation &delta;</option>
+            </select>
+            <select id="cpX" aria-label="Stress axis">
+              <option value="log">log &sigma;'</option>
+              <option value="lin">linear &sigma;'</option>
+            </select>
+          </div>
+          <div class="oe-cv"><canvas id="cplot" aria-label="Void ratio against effective stress"></canvas></div>
+        </div>
+      </div>
+      <aside class="vl-panel" id="panel"></aside>
+    </div>
+  </div>
+  <script src="../../core/controls.js"></script>
+  <script src="../../core/xyplot.js"></script>
+  <script src="../../core/oedometer.js"></script>
+  <script src="oedometer.js"></script>
+</body>
+</html>

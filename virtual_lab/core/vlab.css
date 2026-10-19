@@ -10,6 +10,7 @@
   --vl-water: #1f6fd1;
   --vl-soil-edge: #3b2f22;
   --vl-wall: #2b2b2b;
+  --vl-green: #1e8a4c;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --vl-water: #5aa2ff;
     --vl-soil-edge: #d8c7b0;
     --vl-wall: #d9d9d9;
+    --vl-green: #5fd08a;
     color-scheme: dark;
   }
 }
@@ -38,6 +40,7 @@
   --vl-water: #5aa2ff;
   --vl-soil-edge: #d8c7b0;
   --vl-wall: #d9d9d9;
+  --vl-green: #5fd08a;
   color-scheme: dark;
 }
 
@@ -143,4 +146,53 @@ body.vl-embed .vl-head { display: none; }
   .vs-plan { width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
   .vs-loads { border-left: 0; }
   .vs-read { border-left: 0; }
+}
+
+/* Oedometer layout: rig + schedule on top, time curve + compressibility curve below. */
+.oe-stage {
+  min-height: 0; overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 47fr) minmax(0, 53fr);
+  grid-template-areas: "rig sched" "tp cp";
+}
+.oe-rig { grid-area: rig; position: relative; min-height: 0; overflow: hidden; border-bottom: 1px solid var(--vl-line); }
+.oe-sched { grid-area: sched; min-height: 0; display: flex; flex-direction: column; border-left: 1px solid var(--vl-line);
+  border-bottom: 1px solid var(--vl-line); }
+.oe-tp { grid-area: tp; }
+.oe-cp { grid-area: cp; border-left: 1px solid var(--vl-line); }
+.oe-plot { min-height: 0; display: flex; flex-direction: column; }
+.oe-bar { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 8px; font-size: 12.5px;
+  border-bottom: 1px solid var(--vl-line); }
+.oe-bar b { margin-right: auto; font-size: 13px; }
+.oe-bar select { font: inherit; font-size: 12px; color: var(--vl-ink); background: var(--vl-bg);
+  border: 1px solid var(--vl-line); border-radius: 5px; padding: 1px 4px; }
+.oe-cv { flex: 1; position: relative; min-height: 0; }
+.oe-rig canvas, .oe-cv canvas { position: absolute; left: 0; top: 0; display: block; touch-action: none; }
+.oe-tablewrap { flex: 1; overflow: auto; min-height: 0; }
+.oe-table { width: 100%; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.oe-table th { position: sticky; top: 0; background: var(--vl-panel); font-weight: 600; z-index: 1; }
+.oe-table th, .oe-table td { padding: 2px 5px; text-align: right; border-bottom: 1px solid var(--vl-line); white-space: nowrap; }
+.oe-table td:nth-child(2), .oe-table th:nth-child(2) { text-align: left; }
+.oe-table tr { cursor: pointer; }
+.oe-table tr.oe-done td { color: var(--vl-ink); }
+.oe-table tr.oe-pend td { color: var(--vl-muted); }
+.oe-table tr.oe-cur td { background: color-mix(in srgb, var(--vl-accent) 10%, transparent); }
+.oe-table tr.oe-hl td { background: color-mix(in srgb, var(--vl-accent) 24%, transparent); }
+.oe-table tr.oe-sel td:first-child { box-shadow: inset 3px 0 0 var(--vl-accent); }
+.oe-table input { width: 58px; font: inherit; text-align: right; color: var(--vl-ink); background: var(--vl-bg);
+  border: 1px solid var(--vl-line); border-radius: 4px; padding: 0 3px; }
+.oe-ph { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+.oe-apply { width: 100%; font-size: 15px; padding: 8px 10px; background: var(--vl-accent); color: var(--vl-accent-ink);
+  border-color: var(--vl-accent); }
+.oe-apply:disabled { opacity: .45; cursor: not-allowed; }
+.oe-status { margin: 6px 0 2px; font-size: 13px; min-height: 2.6em; }
+.oe-status b { color: var(--vl-accent); }
+.oe-note { color: var(--vl-muted); font-size: 12px; margin: 2px 0 6px; }
+.oe-range input:disabled { opacity: .5; }
+
+@media (max-width: 760px) {
+  .oe-stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: 300px 240px 280px 280px;
+    grid-template-areas: "rig" "sched" "tp" "cp"; }
+  .oe-sched, .oe-cp { border-left: 0; }
 }

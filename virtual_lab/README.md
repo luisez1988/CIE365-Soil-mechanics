@@ -22,9 +22,13 @@ virtual_lab/
     boussinesq.js VLab.Boussinesq Δσz under point, line, strip, rectangle, triangular and circular
                                  surface loads; influence factors; selfTest() in the console
     plot.js       VLab.Plot      profile line chart; can share an axis with a VLab.View
+    xyplot.js     VLab.XYPlot    x-y chart: lin/log axes, hoverable points, annotations, crosshair readout
+    oedometer.js  VLab.Oedo      random clay generator + 1D elasto-viscoplastic consolidation solver;
+                                 selfTest() in the console
   experiments/
     sheetpile/                   seepage under a sheet pile (Example 4.18 geometry)
     stress/                      induced vertical stress (Example 6.2/6.3 default scenario)
+    oedometer/                   incremental-loading consolidation test (ASTM D2435)
 ```
 
 ## Embedding in a deck
@@ -65,6 +69,36 @@ virtual_lab/
   `ld` = loads as `type,q,cx,cy,angle,B,L,r,inf` joined by `;` (type p, l, s, r, t, c) and
   `pt` = points as `s,z` pairs. Example, a negative rotated rectangle and a point load:
   `#ld=r,-20,0,0,30,3,2,0,0;p,100,2,1,0,0,0,0,0&sax=y&sec=0.5`
+
+## Model notes (oedometer)
+
+- **Specimen** (`VLab.Oedo.randomSoil(seed)`, seeded so `#seed=` reproduces it):
+  - w = 35–75 %, Gs = 2.68–2.78, S = 1, e0 = w·Gs;
+  - LI = 0.75–1 with PI = a(LL − 20), a = 0.68–0.9, gives LL, PL and PI;
+  - Wroth & Wood Cc = Gs·PI/200; Cr = Cc/10 to Cc/5; Mesri Cα/Cc = 0.03–0.05, the same ratio sets Cα,r = (Cα/Cc)·Cr;
+  - σ'p = OCR·γ'z, with z = 5–15 m and OCR = 1.3–2.5;
+  - k(e) = k0·10^((e − e0)/Ck) with Ck = e0/2; k0 is set from cv = 2–12 m²/yr near σ'p.
+- **Constitutive model** (natural strain), with three parts:
+  - instantaneous elastic κ·ln(σ' + σa), with σa = 0.15σ'p so low-stress increments are not too soft;
+  - a delayed elastic Eyring term (sinh rate law), which gives small secondary compression on reloading and
+    secondary swelling on unloading;
+  - Soft-Soil-Creep isotachs dεc/dt = (μ/τ)(σ'/σ'p)^((λ−κ)/μ) with τ = 1 day, on five sub-elements whose σ'p is
+    spread lognormally (Gauss–Hermite). The spread smears the yield, so the e–log σ' curve bends smoothly.
+- **Coupling**: ∂ε/∂t = ∂/∂z[(k/γw)∂u/∂z] with σ' = σ − u and double drainage. 41 Chebyshev-spaced nodes,
+  backward Euler, Newton on u with the consistent tangent (tridiagonal), each constitutive update solved exactly
+  (Lambert W). Time steps grow geometrically from 0.01 s.
+- **End of primary (EOP)**: max |u| < 5 % of |Δσ|, which is close to Casagrande's t100.
+- **Interpretation** uses the simulated readings, as a student would, so it differs a little from the model
+  parameters (*Show model parameters*):
+  - Casagrande σ'p, from the point of maximum curvature of a monotone cubic through the loading EOP points;
+  - Cc, from the last three loading points;
+  - Cr, from the maximum load and the unloading points;
+  - Cα, the slope of e–log t from 2·t_EOP to the end of the selected increment.
+- **Checks**: `index.html?autotest=1` runs the solver self test (Terzaghi U(Tv), virgin slope, Cα), a full scripted
+  test, the knob and hover-linking interactions and 50 random specimens, and writes the results to `<pre id="selftest">`.
+- **Hash keys**: `seed`, `meth` (A/B), `seat`, `first`, `lir`, `smax`, `sunl`, `srel`, `uview`, `ipsp`, `ipcc`, `ipcr`,
+  `ipmv`, `ipca`, `ipcar`, `auto`, `spd`, `tpY`, `tpX`, `cpY`, `cpX`. Example:
+  `experiments/oedometer/index.html#seed=4242&smax=1600&srel=3200`
 
 ## Adding an experiment
 
