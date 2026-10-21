@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 7: Consolidation settlements · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Consolidation" data-total="73" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 7: Consolidation settlements</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">73</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Case history- Leaning Tower of Pisa</a></li>
+<li><a href="#s3">Other sinking problems</a></li>
+<li><a href="#s4">Deformation of soils</a></li>
+<li><a href="#s5">Consolidation</a></li>
+<li><a href="#s6">Effect of drainage</a></li>
+<li><a href="#s7">Total settlement components</a></li>
+<li><a href="#s8">Oedometer/consolidation test</a></li>
+<li><a href="#s9">Overconsolidation ratio (OCR)</a></li>
+<li><a href="#s10">Participation question 7.1</a></li>
+<li><a href="#s11">Idealized consolidation curve</a></li>
+<li><a href="#s12">Primary consolidation settlement</a></li>
+<li><a href="#s13">Example 7.1</a></li>
+<li><a href="#s14">Example 7.2</a></li>
+<li><a href="#s15">Example 7.3</a></li>
+<li><a href="#s16">Primary consolidation in layered soils</a></li>
+<li><a href="#s17">Example 7.4</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+		
+			<ul>
+				<li > <div class='textBox' >
+				We learned how to calculate <strong style='color:black'>induced stresses</strong> in the ground produced by <strong style='color:black'>external loads</strong>.
+				</div>
+				</li>
+				<li > We learned how to <strong style='color:black'>multiple loads</strong> using the <strong style='color:black'>superposition principle</strong>. </li>				
+			</ul>
+	
+
+	<figure>
+	<img loading="lazy" src='../../Consolidation/FiguresGeneral/Course_structure.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	
+	
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+			
+			<div class='container'>
+			<div class='col' style="--colw:50%">
+				<ul class="contentStyle" >
+					<li class="l1">Definition of consolidation</li>
+					<li class="l1">Primary consolidation</li>
+					<li class="l1">Oedometer/consolidation test</li>
+					<li class="l1">Virgin and reloading compression</li>
+					<li class="l1">Stress history</li>
+					<li class='l1'>Settlement in multilayered systems</li>
+				</ul>
+			</div>
+			<div class='col' style="--colw:50%">
+			<div class='container'>
+				<div class='col' style="--colw:50%">
+					<div class="stickynote" >
+						<p > Objectives covered in this lecture</p>
+						<ul>
+							<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+						</ul>
+					</div>
+				</div>
+				<div class='col' style="--colw:50%">
+				<div class='stickynote' >
+					<p >After this lecture we will able to:</p>
+					<ul >
+						<li>Calculate the coefficients of compressibility and recompression of fine-grained soils.</li>					
+						<li>Calculate the overconsolidation ratio.</li>
+						<li>Estimate settlements due to primary consolidation.</li>
+					</ul>
+				</div>
+				</div>
+				</div>
+		</div>
+			</div>
+
+        
+</section>
+
+<section class="block" id="s2" data-anchor="case-history-leaning-tower-of-pisa">
+<h2 class="block-title">Case history- Leaning Tower of Pisa</h2>
+
+		
+		<div class="container">
+			<div class="col" style="--colw:30%">
+		       <figure>
+		         <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/960px-Italy_-_Pisa_-_Leaning_Tower.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail" style="width:100%" data-preload/>
+		         <footer ><small></small></footer>
+		       </figure>
+			</div>
+			<div class="col" style="--colw:70%">
+				<div class='textBox' >
+				Leaning is due to <strong style='color:red'>uneven settlements</strong>.
+				</div>
+				<figure >
+				  <img loading="lazy" src="../../Consolidation/FiguresGeneral/profile.svg" style="width:100%" data-preload/>
+				  <footer ><small>http://madridengineering.com
+</small></footer>
+				</figure>
+			</div>
+		</div>
+	
+
+		<figure >
+		  <img loading="lazy" src="../../Consolidation/FiguresGeneral/thistory.svg" style="width:100%" data-preload/>
+		  <footer ><small></small></footer>
+		</figure>
+	
+
+		<div class="container">
+			<div class="col" style="--colw:50%">
+			<div class='textBox' >
+				<strong style='color:green'>Remediation:</strong>
+				<ul>
+					<li > Heavy load was put on north side to compensate settlement on the south. </li>
+					<li > Soil extraction mass (38 m\(^3\)) under the north side using angled drilling. </li>
+				</ul>
+			</div>
+
+			<div class='findingBox' >
+			Engineers <strong style='color:green'>could make the tower straight</strong>. For obvious reasons, the tower was stabilized at its current inclination.
+			</div>
+
+			</div>
+			<div class="col" style="--colw:50%">
+				<figure>
+				  <img loading="lazy" src="../../Consolidation/FiguresGeneral/EngSol.svg" style="width:100%" data-preload/>
+				  <footer ><small></small></footer>
+				</figure>
+			</div>
+		</div>
+	
+</section>
+
+<section class="block" id="s3" data-anchor="other-sinking-problems">
+<h2 class="block-title">Other sinking problems</h2>
+
+		
+		<figure >
+		<img loading="lazy" src="https://substackcdn.com/image/fetch/$s_!7wGz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef4c8741-1f92-4076-8554-0c19fb99d529_1000x806.jpeg" style="width:100%; max-height:600px; object-fit:cover" data-preload/>
+		  <footer ><small>Mexico City</small></footer>
+		</figure>
+	
+		
+		<figure>
+			<img loading="lazy" src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/amsterdam-988047_1920-1.jpg" style="width:75%" data-preload/>
+			<footer ><small>Amsterdam</small></footer>
+		</figure>
+	
+</section>
+
+<section class="block" id="s4" data-anchor="deformation-of-soils">
+<h2 class="block-title">Deformation of soils</h2>
+
+		
+	<div class='textBox' style="font-size:1em">
+		Recall: <strong style="color:green">Terzaghi's principle</strong> \(\longrightarrow\) Whenever there is <span class="blank" data-bid="Consolidation.4a1e42b4-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <strong style="color:black"> in effective stress</strong> there is a corresponding <span class="blank" data-bid="Consolidation.f8b1664c-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>. <br>
+			\(\sigma'=\sigma-u\)
+	</div>
+	 
+	 <ul style="font-size:0.9em">
+	 	<li>Large fill <strong style='color:green'>placement</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:blue'>Excavation</strong> \(\longrightarrow\) \(\sigma \downarrow\) \(\longrightarrow\) \(\sigma' \downarrow\) \(\longrightarrow\) heave</li>
+		<li>Structure <strong style='color:green'>load</strong> \(\longrightarrow\) \(\sigma \uparrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+		<li><strong style='color:green'>Lowering</strong> the water table \(\longrightarrow\) \(u \downarrow\) \(\longrightarrow\) \(\sigma' \uparrow\) \(\longrightarrow\) settlement</li>
+	 </ul>
+	 <figure >
+	   <img loading="lazy" src="../../Consolidation/FiguresGeneral/settlements.svg" style="width:90%" data-preload/>
+	   <footer ><small></small></footer>
+	 </figure>
+	
+</section>
+
+<section class="block" id="s5" data-anchor="consolidation">
+<h2 class="block-title">Consolidation</h2>
+
+		
+
+		<div class='defBox' name='Consolidation:' >
+			Process by which soil's bulk volume <span class="blank" data-bid="Consolidation.6de9b740-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> due to water scaping from the soil.
+		</div>
+		<figure >
+			<img loading="lazy" src="../../Consolidation/FiguresGeneral/consol_phase.svg" style="width:90%" data-preload/>
+			<footer ><small></small></footer>
+		  </figure>
+
+		<div class='findingBox' >
+		<strong style='color:red'>Do not confuse</strong> <strong style='color:green'>consolidation</strong> with <strong style='color:red'>compaction</strong>. Compaction is the process by which soil's bulk volume decreases due to air removal <strong style='color:red'>mechanical</strong> means.
+		</div>
+	
+
+		<div class="embed-placeholder" data-src="https://www.youtube.com/embed/c3yY79L1JHc?autoplay=0&rel=0&modestbranding=1" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>	
+	
+
+	
+<figure>
+  <img loading="lazy" src="../../Consolidation/FiguresGeneral/consol_grains.svg" style="width:100%" data-preload/>
+  <footer ><small></small></footer>
+</figure>
+
+
+<div class='InquiryBox' >
+What is the effect of soil permeability on consolidation?
+</div>
+
+<div class='textBox' >
+<p>If we apply a load on...
+	<ul>
+		<li > <strong style="color:red">Fully impermeable soil</strong>: water cannot leave \(\longrightarrow\) no <span class="blank" data-bid="Consolidation.507c03cb-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\longrightarrow\) no <span class="blank" data-bid="Consolidation.fb162591-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+		<li > <strong style="color:green">Perfectly permeable soil</strong>: Water can leave <span class="blank" data-bid="Consolidation.bad3cc63-0" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\longrightarrow\) instantaneous <span class="blank" data-bid="Consolidation.11131583-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>\(\longrightarrow\) instantaneous <span class="blank" data-bid="Consolidation.6a409781-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+	</ul>
+	</p>
+</div>
+
+</section>
+
+<section class="block" id="s6" data-anchor="effect-of-drainage">
+<h2 class="block-title">Effect of drainage</h2>
+
+
+    
+	<img loading="lazy" src="figures/permeability_effect.svg" style="width:100%" alt=""/>
+
+	<div class='stickynote' >
+		In practice, <strong style="color:black">consolidation in clays and silts is the most problematic</strong> because it occurs well after the project has finished.
+	</div>
+
+
+</section>
+
+<section class="block" id="s7" data-anchor="total-settlement-components">
+<h2 class="block-title">Total settlement components</h2>
+
+
+<div class='textBox' >
+The total settlement of a soil can be decomposed into three parts: (i) <strong style='color:green'>elastic</strong> <span class="blank" data-bid="Consolidation.6ee0cfa1-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>, (ii) <strong style='color:blue'>primary consolidation</strong>, and (iii) <strong style='color:red'>secondary consolidation</strong>.
+</div>
+<div class='container'>
+<div class='col' style='--colw:45%'>
+<figure>
+<img loading="lazy" src='../../Consolidation/FiguresGeneral/settlement_types.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:55%'>
+<div class='equationBox' >
+\( \delta_t= \color{green}{\delta_o} + \color{blue}{\delta_{pc}} +\color{red}{\delta_{sc}} \)
+</div>
+
+<div class='defBox' name='' >
+	\(\color{green}\delta_o=\) Instantaneous settlement. <br>
+	\(\color{blue}\delta_{pc}=\) Primary consolidation. Time dependent process. <br>
+	\(\color{red}\delta_{sc}=\) Secondary consolidation. Also known as <span class="blank" data-bid="Consolidation.71fad725-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>. Is a time-dependent process.
+</div>
+</div>
+</div>
+
+
+
+<div class='findingBox' >
+We often use <span class="blank" data-bid="Consolidation.5954d6bc-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> for calculations of settlement. Thus, we want to relate \(\delta\) to \(e\).
+</div>
+<p >
+Recall: \(\varepsilon_v= \Delta V/ V_o \longrightarrow\) Volumetric strain 
+</p>
+<div class='container'>
+<div class='col bordered' style='--colw:50%'>
+	<div >
+		For 1D oedometric deformation: <br>
+			\( \begin{align}
+			\varepsilon_v& = \Delta V/ V_o= \Delta H A /H_o A\\
+			&= \Delta H / H_o= \varepsilon_a
+			\end{align} \)
+	</div>
+</div>
+<div class='col bordered' style='--colw:50%'>
+<div >
+	Recall \(e=V_v/V_s\) <br>
+	\( \begin{align}
+	\Delta e& = -\Delta V_v / V_s\\
+	&=- \Delta H A /[H_o A/(1+e_o)]\\
+	&=- \Delta H (1+e_o)/H_o 
+	\end{align} \)
+</div>
+
+</div>
+</div>
+
+<div class='textBox' >
+	Two main equations are derived:
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<div class='equationBox'>
+\( \varepsilon_a= -\dfrac{\Delta e}{ 1+ e_o} \)
+</div>
+</div>
+<div class='col' style='--colw:50%'>
+<div class='equationBox' >
+\( \delta= -\dfrac{\Delta e H_o}{1+e_o} =  \varepsilon_a H_o \)
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<section class="block" id="s8" data-anchor="oedometer-consolidation-test">
+<h2 class="block-title">Oedometer/consolidation test</h2>
+
+    
+	<div class='textBox' >
+	It is a Laboratory test to determine soil's consolidation <span class="blank" data-bid="Consolidation.d6d7bf7e-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+		<div class="container">
+			<div class="col" style="--colw:50%">
+        				<figure>
+				  <img loading="lazy" src="../../Consolidation/FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
+				  <footer ><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="--colw:50%">
+				<p >Iterative process:</p>
+				<ol style="font-size:0.9em">
+					<li > Increase vertical load \(\Delta \sigma\) </li>
+					<li > Wait until pore pressure is 100% dissipated (about 24 h). </li>
+					<li > Measure the settlement \(\delta\) or void ratio \(e\). </li>
+					<li > <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
+					<li >Repeat 1-3 for each load increment.</li>
+					<li > <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
+				</ol>
+			</div>
+		</div>
+
+
+<iframe src='../../virtual_lab/experiments/oedometer/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0'></iframe>
+
+
+<div class='findingBox' >
+You will obtain <strong style='color:green'>one</strong> <span class="blank" data-bid="Consolidation.1f7b1ace-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> curve for each load increment.
+</div>
+<figure>
+<img loading="lazy" src='../../Consolidation/FiguresGeneral/settlement_time.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+
+<div class='stickynote' >
+<strong style='color:black'>Note:</strong> We will look at detail at this curve in the next part of module 6.
+</div>
+
+
+
+    <div class='findingBox' >
+	You will obtain <strong style='color:green'>one</strong> <span class="blank" data-bid="Consolidation.d5ed544a-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> curve per test/sample.
+	</div>
+<img loading="lazy" src="figures/consol_curves.svg" style="width:100%" alt=""/>
+
+
+
+<div class='findingBox' >
+<span class="blank" data-bid="Consolidation.06fc6634-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> increases the <strong style='color:green'>curvature</strong> of the consolidation curve. <strong style='color:green'>Casagrande's method</strong> suppresses this effect.
+</div>
+<img loading="lazy" src="figures/Casagrandes_method.svg" style="width:100%" alt=""/>
+
+
+</section>
+
+<section class="block" id="s9" data-anchor="overconsolidation-ratio-ocr">
+<h2 class="block-title">Overconsolidation ratio (OCR)</h2>
+
+
+<div class='defBox' name='Overconsolidation ratio' >
+<strong style='color:green'>\(OCR\):</strong> Ratio between the <strong style="color:black">preconsolidation stress \(\sigma'_c\)</strong> and the <span class="blank" data-bid="Consolidation.b23d54ef-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> vertical effective stress <strong style="color:black">\(\sigma'_{vo}\)</strong>. <br>	
+<div class='equationBox'>
+\(OCR=\cfrac{\sigma'_c}{\sigma'_{vo}}\)
+</div>
+</div>
+
+<div class='defBox' name='Normally consolidated (NC) soil' >
+Is a soil with <span class="blank" data-bid="Consolidation.0e98e6aa-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>. Or a soil in which \(\sigma'_c=\sigma'_{vo}\)
+</div>
+
+<div class='defBox' name='Overconsolidated (OC) soil' >
+Is a soil with <span class="blank" data-bid="Consolidation.9910b3c3-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>. Or a soil in which \(\sigma'_c>\sigma'_{vo}\)
+</div>
+
+
+<div class='InquiryBox' >
+How do <strong style='color:orange'>\(\sigma'_c\)</strong> and <strong style='color:orange'>\(OCR\)</strong> change with state of stress?
+</div>
+<img loading="lazy" src="figures/Example_consol.svg" style="width:100%" alt=""/>
+
+
+<div class='findingBox' >
+The following observations can be drawn from observed soil behavior:
+</div>
+	<div class='textBox' >
+		<ul >
+			<li >Soils (clay) are a <span class="blank" data-bid="Consolidation.c7ee26a4-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> material \(\longrightarrow\) "have memory"</li>
+			<li >The \(OCR\) give us information about the <span class="blank" data-bid="Consolidation.72d682e2-0" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span> of the soil</li>
+			<li >If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
+		</ul>
+		</div>
+
+</section>
+
+<section class="block check-yourself" id="s10" data-anchor="participation-question-7-1">
+<h2 class="block-title">Participation question 7.1</h2>
+
+
+<div class='InquiryBox' >
+	For the Figure below, what statement is true?
+</div>
+
+<div class='container'>
+<div class='col' style="--colw:50%">
+<figure>
+<img loading="lazy" src='../../Consolidation/FiguresGeneral/consol_1.png' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'  style="--colw:50%">
+<ol class='iClicker' >
+<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
+<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
+</ol>
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s11" data-anchor="idealized-consolidation-curve">
+<h2 class="block-title">Idealized consolidation curve</h2>
+
+	
+<div class="container">
+	<div class="col" style="--colw:35%">
+            <figure>
+              <img loading="lazy" src="../../Consolidation/FiguresGeneral/uloading_reloading.svg" style="width:100%" data-preload/>
+              <footer ><small></small></footer>
+            </figure>
+	</div>
+	<div class="col" style="--colw:65%">
+	<div class='defBox' name='compression index' >
+	<strong style='color:green'>\(C_c\):</strong> slope of the <strong style="color:blue"> virgin compression line</strong> in <strong style='color:black'>log-space</strong>.
+	<div class='equationBox'>
+	\(C_c= -\Delta e/ \log (\sigma'_f/\sigma'_0)\)
+	</div>
+	</div>
+
+	<div class='defBox' name='recompression index' >
+		<strong style='color:green'>\(C_r\):</strong> slope of the <strong style="color:red"> unloading-reloading line</strong> in <strong style='color:black'>log-space</strong>.
+		<div class='equationBox'>
+		\(C_r= -\Delta e/ \log (\sigma'_f/\sigma'_0)\)
+		</div>
+		</div>		
+	</div>
+</div>
+<div class='findingBox' >
+<strong style='color:green'>Note:</strong> \(C_r\) and \(C_c\) are soil properties. However, \(\sigma'_c\) and \(OCR\) are <span class="blank" data-bid="Consolidation.fe9a1220-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> parameters.
+</div>
+
+
+	<div class='container'>
+	<div class='col' style='--colw:40%'>
+		<div class='findingBox' >
+			<span class="blank" data-bid="Consolidation.c84cdd0c-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> values of \(C_c\) and \(C_r\). Modified from Bardet (1997), Table 1 pg.305.
+		</div>
+	
+	</div>
+	<div class='col' style='--colw:60%'>
+		<table style="font-size: 0.9em; background-color: antiquewhite">
+			<tr>
+				<th>Soil type</th>
+				<th>\(C_c\) (intact)</th>
+				<th>\(C_r\)</th>
+			</tr>
+			<tr>
+				<td>Boston Blue clay</td>
+				<td>0.32</td>
+				<td>0.07</td>
+			</tr>
+			<tr>
+				<td>Chicago clay</td>
+				<td>0.42</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Louisiana clay</td>
+				<td>0.33</td>
+				<td>0.05</td>
+			</tr>
+			<tr>
+				<td>New Orleans clay</td>
+				<td>0.29</td>
+				<td>0.04</td>
+			</tr>
+	
+		</table>
+	</div>
+	</div>
+	
+	
+	
+	
+	<div class='textBox' >
+		The following <span class="blank" data-bid="Consolidation.070b6d85-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> relationships are useful for data <strong style='color:green'>validation</strong>:
+	
+		<div class='container'>
+		<div class='col' style='--colw:50%'>
+		\(C_c= 0.009 (LL-10)\) <br>
+		\(C_c= PI/74\) <br>
+		\(C_r=PI/370\)
+		</div>
+		<div class='col' style='--colw:50%'>
+		Terzagui and Peck (1967) <br>
+		Wroth and Wood (1978) <br>
+		Wroth and Wood (1978)
+		</div>
+		</div>
+	
+		</div>	
+				
+	
+</section>
+
+<section class="block" id="s12" data-anchor="primary-consolidation-settlement">
+<h2 class="block-title">Primary consolidation settlement</h2>
+
+	
+	<div class='findingBox' >
+		Settlement in <strong style="color:green">normally consolidated soils</strong>
+	</div>	
+	<div class="container">
+		<div class="col" style="--colw:50%">
+	            <figure>
+	              <img loading="lazy" src="../../Consolidation/FiguresGeneral/normally_pcsettle.svg" style="width:100%" data-preload/>
+	              <footer ><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="--colw:50%">
+			<ul>
+				<li>Stress path moves along <strong style="color:blue">virgin curve</strong></li>
+				<li>Then: <br>
+					\( \begin{align}
+					\delta_{pc}&= - \cfrac{H_0 \Delta e}{1+e_0} \\
+				
+					\end{align} \)
+
+				<div class='equationBox'>
+				\(\delta_{pc}= C_c \cfrac{H_0}{1+e_0} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
+				</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<section class="block" id="s13" data-anchor="example-7-1">
+<h2 class="block-title">Example 7.1</h2>
+
+	
+	<div class='textBox' >
+		<p style="font-size:0.8em">Estimate the primary consolidation settlement for the clay in the profile below. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The increase of vertical stress is estimated to be 200 kPa at the middle of the clay layer. Assume the soil above the water table to be saturated, \(C_c=0.3\), \(G_s=2.7\) for the clay, and \(G_s=2.65\) for the sand.</p>
+		
+	</div>
+	
+		
+<figure>
+  <img loading="lazy" src="../../Consolidation/FiguresGeneral/Profile_ex61.svg" style="width:45%" data-preload/>
+  <footer ><small></small></footer>
+</figure>
+		
+		
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-7-1" style="--sol-line: 1.2; font-size: 1em">
+
+  
+
+  <div class="step">
+    <span class="lead">Data</span>
+    Sand: \(e=0.76\), \(S=100\%\), \(G_s=2.65\) <br>
+    Clay: \(w=43\%\), \(S=100\%\), \(C_c=0.3\), \(G_s=2.7\), \(\Delta\sigma_v=200\unit{kPa}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=C_c\dfrac{H_0}{1+e_0}\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}\)
+    <span class="note">No \(OCR\) is given, so the clay is normally consolidated: virgin curve.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Let's find the unit weights first</span> <br>
+    \(\gamma_{sat,sand}=\dfrac{\gamma_w(G_s+e)}{1+e}=\)
+    <span class="blank math" data-bid="Consolidation.d69a7ea9-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consolidation.3ea8af19-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+    <span class="note">The statement says the sand above the water table is saturated too.</span>
+  </div>
+
+  
+
+  
+    
+
+      <div class="step">
+        <span class="lead">For the clay</span>
+        \(e_0=wG_s=\) <span class="blank math" data-bid="Consolidation.7bdd0c30-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Consolidation.7b7f66ba-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(\gamma_{sat,clay}=\) <br>
+         \(\dfrac{\gamma_w(G_s+e_0)}{1+e_0}=\)
+        <span class="blank math" data-bid="Consolidation.eb9ddb78-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.31c65fa3-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+        <span class="note">\(e_0=wG_s\) holds because the clay is saturated (\(S=1\)).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Now we can calculate \(\sigma'_{vo}\) at mid point of layer</span> <br>
+        \(\sigma'_{vo}=\overbrace{\underbrace{\gamma_{sand}\,z_{sand}}_{\textcolor{red}{\text{sand}}}+\underbrace{\gamma_{clay}\,z_{clay}}_{\textcolor{red}{\text{clay}}}}^{\textcolor{red}{\text{total stress}}}-\underbrace{\gamma_w\,z_w}_{\textcolor{red}{\text{pore pressure}}}=\)
+        <span class="blank math" data-bid="Consolidation.677ab8c3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.badc9d4e-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+        <span class="note">Pore pressure is measured from the water table, not from the ground surface.</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Calculate final effective stress</span> <br>
+        \(\sigma'_{vf}=\sigma'_{vo}+\Delta\sigma_v=\) <span class="blank math" data-bid="Consolidation.0ce9f69f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.3cd6ee29-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step result">
+        <span class="lead">Calculate p.c. settlement</span> <br>
+        \(\delta_{pc}=\) <span class="blank math" data-bid="Consolidation.d816dd38-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Consolidation.1a05dd36-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+        <span class="note">Use \(\log_{10}\), not \(\ln\): \(C_c\) is the slope per log cycle.</span>
+      </div>
+
+    
+    
+
+      <div class="step">
+        <span class="lead">Void ratio after loading</span>
+        <span class="sol-fig" >
+          <img loading="lazy" src="../../Consolidation/FiguresGeneral/ex-7-1-elog.svg" style="width: 78%"
+               alt="e versus log of vertical effective stress: the clay moves down the virgin line of slope Cc from (sigma'vo, e0) to (sigma'vf, ef), dropping by delta e.">
+        </span>
+        \(\Delta e=C_c\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}=\)
+        <span class="blank math" data-bid="Consolidation.99ae093a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:33ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.44cdd5c8-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(e_f=e_0-\Delta e=\) <span class="blank math" data-bid="Consolidation.5e66afbd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.0fc6b016-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">We should be able to calculate this void ratio and the new density.</span>
+      </div>
+
+    
+  
+
+</div>
+
+</div>
+
+		
+	
+
+<div class='findingBox' >
+	Settlement in <strong style="color:green">overconsolidated soils. <br>
+	Case a:</strong> \(\sigma'_f<\sigma'_c\)  
+</div>
+
+	<div class="container">
+		<div class="col" style="--colw:50%">			
+	            <figure>
+	              <img loading="lazy" src="../../Consolidation/FiguresGeneral/pc_overconsol.svg" style="width:80%" data-preload/>
+	              <footer ><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="--colw:50%">
+			<ul>
+				<li>Stress path moves along <strong style="color:red">recompression curve</strong></li>
+				<li>Then:
+				<div class='equationBox'>
+				\(\delta_{pc}= C_r \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_{vo}}\right)\)
+				</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<section class="block" id="s14" data-anchor="example-7-2">
+<h2 class="block-title">Example 7.2</h2>
+
+	
+	<div class='textBox' >
+		<p>Solve problem 7.1 but assuming the clay has \(OCR=4\), \(w=38\%\), and \(C_r=0.05\). All other values from Example 7.1 are unchanged.</p>		
+	</div>
+
+	<div class='ProblemBox' >
+		
+<div class="sol" data-id="ex-7-2" style="--sol-line: 1.2; font-size: 1em">
+
+  
+    
+
+      <div class="step">
+        <span class="lead">Data</span>
+        Sand: \(\gamma_{sat}=19.01\unit{kN/m^3}\) <br>
+        Clay: \(G_s=2.7\), \(w=38\%\), \(OCR=4\), \(C_r=0.05\)
+        <span class="note">The sand and the profile are unchanged from Example 7.1.</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span>
+        \(\delta_{pc}=C_r\dfrac{H_0}{1+e_0}\log\dfrac{\sigma'_{vf}}{\sigma'_{vo}}\)
+        <span class="note">Valid only while \(\sigma'_{vf}\le\sigma'_c\). Check it before using \(C_r\).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Find unit weight of clay</span> <br>
+        \(e_0=wG_s=\) <span class="blank math" data-bid="Consolidation.18157a52-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Consolidation.494582d4-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(\gamma_{sat}=\dfrac{\gamma_w(G_s+e_0)}{1+e_0}=\)
+        <span class="blank math" data-bid="Consolidation.c0fb0f07-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.5c6f594f-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kN/m^3}\)
+        <span class="note">Only \(w\) changed, but that changes \(e_0\) and \(\gamma_{sat}\) of the clay.</span>
+      </div>
+
+    
+    
+
+      <div class="step">
+        <span class="lead">Calculate effective stress at midpoint</span> <br>
+        \(\sigma'_{vo}=\) <span class="blank math" data-bid="Consolidation.6b172494-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.f710e1a3-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Calculate final vert. effective stress</span> <br>
+        \(\sigma'_{vf}=\sigma'_{vo}+\Delta\sigma_v=\) <span class="blank math" data-bid="Consolidation.0ce9f69f-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.3cd6ee29-1" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Check case</span> <br>
+        \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="blank math" data-bid="Consolidation.369ef0ec-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.e3349643-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <span class="blank math" data-bid="Consolidation.f18a6e86-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">The stress path never reaches \(\sigma'_c\): it stays on the recompression line.</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Calculate settlement</span> <br>
+        \(\delta_{pc}=\) <span class="blank math" data-bid="Consolidation.7ce68d94-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Consolidation.d9454aff-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+        <span class="note">\(C_r\) is much smaller than \(C_c\), so expect a much smaller settlement than 7.1.</span>
+      </div>
+
+    
+  
+
+</div>
+
+	</div>
+
+
+	<div class='findingBox' >
+		Settlement in <strong style="color:green">overconsolidated soils. <br>
+		Case b:</strong> \(\sigma'_f>\sigma'_c\)
+	</div>
+	<div class="container">
+		<div class="col" style="--colw:50%">			
+	            <figure>
+	              <img loading="lazy" src="../../Consolidation/FiguresGeneral/pc_complexoverconsol.svg" style="width:100%" data-preload/>
+	              <footer ><small></small></footer>
+	            </figure>
+		</div>
+		<div class="col" style="--colw:50%">
+
+				<p >Stress path moves along <strong style="color:red">recompression curve</strong> and <strong style="color:blue">virgin curve</strong></p>
+
+
+		</div>
+	</div>
+
+	<div class='equationBox'>
+		\(\delta_{pc} = C_r \cfrac{H_o}{1+e_o} \log \left(OCR\right)+ C_c \cfrac{H_o}{1+e_o} \log \left(\cfrac{\sigma'_{vf}}{\sigma'_c}\right)\)
+		</div>
+
+</section>
+
+<section class="block" id="s15" data-anchor="example-7-3">
+<h2 class="block-title">Example 7.3</h2>
+
+	
+<div class='textBox' >
+<p>Solve problem 7.2 assuming \(OCR=1.2\). Determine the primary consolidation settlement.</p>
+
+</div>
+
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-7-3" style="--sol-line: 1.2; font-size: 1em">
+
+  <div class="step">
+    <span class="lead">Data</span>
+    \(\sigma'_{vo}=153.4\unit{kPa}\), \(\sigma'_{vf}=353.4\unit{kPa}\), \(OCR=1.2\), \(H_0=10\unit{m}\),
+    \(e_0=1.026\), \(C_c=0.3\), \(C_r=0.05\)
+    <span class="note">Changing \(OCR\) changes only \(\sigma'_c\); the stresses and \(e_0\) are those of 7.2.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=\dfrac{H_0}{1+e_0}\left(C_r\log OCR+C_c\log\dfrac{\sigma'_{vf}}{\sigma'_c}\right)\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Check condition</span>
+    \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="blank math" data-bid="Consolidation.745519af-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consolidation.b5e9ed44-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <span class="blank math" data-bid="Consolidation.f18a6e86-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">Implies case b: recompression up to \(\sigma'_c\), then the virgin curve.</span>
+  </div>
+
+  <div class="step result">
+    <span class="lead">Calculate settlement</span>
+    \(\delta_{pc}=\) <span class="blank math" data-bid="Consolidation.efa63cb7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank ans" data-bid="Consolidation.d9454aff-1" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+    <span class="note">The answer must fall between the all-\(C_r\) and all-\(C_c\) settlements.</span>
+  </div>
+
+</div>
+
+</div>
+
+
+</section>
+
+<section class="block" id="s16" data-anchor="primary-consolidation-in-layered-soils">
+<h2 class="block-title">Primary consolidation in layered soils</h2>
+
+	
+    <figure>
+		<img loading="lazy" src="../../Consolidation/FiguresGeneral/multiple_consol.svg" style="width:60%" data-preload/>
+		<footer ><small></small></footer>
+	  </figure>
+
+
+<div class='findingBox' >
+Follow the steps below to calculate \(\delta_{pc}\) in multilayered soils:
+</div>
+<ol style="font-size:0.95em">
+	<li > Determine initial vertical effective stresses (\(\sigma'_{vo}\)) at the center of soil layers of concern. If thick layers, divide and find \(\sigma'_{vo}\) for centers of sub-layers.
+ </li>
+ <li > Extract sample at the center of each layer or sub-layer and run consolidation tests.
+ </li>
+ <li > Determine \(\sigma'_c\) and initial void ratio \(e_0=G_s w_0\) for layers of concern.</li>
+	 <li > Determine \(C_c\) and \(C_r\) for layers of concern.
+
+ </li>
+ <li >Determine \(\Delta \sigma\) due to external load at the center of each layer of concern.
+  </li>
+	<li >Compute settlement \(\delta_{pc,i}\) for each individual layer of concern considering initial high of each layer \(H_o\).
+  </li>
+	<li > Total settlement \(=\sum \delta_{pc,i}\)
+ </li>
+</ol>
+
+
+
+</section>
+
+<section class="block" id="s17" data-anchor="example-7-4">
+<h2 class="block-title">Example 7.4</h2>
+
+	
+<div class='textBox' >
+Calculate the settlement due to primary consolidation for the soil profile shown in the figure below. Use: (a) a single layer assumption, and (b) 10 sub-layers.
+</div>
+
+
+<figure>
+<img loading="lazy" src='../../Consolidation/FiguresGeneral/complex_problem.svg' width='50%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+
+
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-7-4" style="--sol-line: 1.2; font-size: 1em">
+
+  
+
+  <div class="step">
+    <span class="lead">Data</span>
+    Given in figure
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\delta_{pc}=\displaystyle\sum_i\delta_{pc,i}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">(a) Single layer. Calculate effective stress at midpoint</span> <br>
+    \(\sigma'_{vo}=\underbrace{(\gamma_{sat}-\gamma_w)}_{\textcolor{red}{\gamma'}}\,\underbrace{z_i}_{\textcolor{red}{\text{mid depth}}}=\)
+    <span class="blank math" data-bid="Consolidation.24b87bc3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:26ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank" data-bid="Consolidation.fc12177e-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+    <span class="note">The water table is at the surface, so the whole layer uses \(\gamma'\).</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Calculate induced stress at midpoint</span>
+    Recall \(\Delta\sigma_v=I'q\)
+  </div>
+
+  
+
+  
+    
+
+      <div class="step">
+        <span class="lead">Modeled as a strip load</span>
+        
+          
+            <span class="sol-fig" >
+              <img loading="lazy" src="../../Consolidation/FiguresGeneral/ex-7-4-strip.svg" style="width: 35%"
+                   alt="Half of the strip load, width B over 2 with beta equal to zero, and the angle alpha it subtends at depth z under the centre line.">
+            </span>
+          
+          
+            \(\alpha=\tan^{-1}\left(\dfrac{B}{2z}\right)\) <br>
+            \(I'=\underbrace{\dfrac{2}{\pi}}_{\textcolor{red}{\text{symmetry}}}\left[\alpha+\sin\alpha\cos\alpha\right]\)
+          
+        
+        \(\alpha=\) <span class="blank math" data-bid="Consolidation.0dc841b5-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank math" data-bid="Consolidation.531b00f2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{rad}\) <br>
+        \(I'=\) <span class="blank math" data-bid="Consolidation.928da7f8-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.dff95b56-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">\(\alpha\) alone must be in rad; two half-strips with \(\beta=0\) give the \(2/\pi\).</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Induced stress</span> <br>
+        \(\Delta\sigma_v=I'q=\) <span class="blank math" data-bid="Consolidation.cdf06dd7-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.9193e04c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+        <span class="note">ksf to psf before multiplying.</span>
+      </div>
+
+      <div class="step" >
+        <span class="lead">Calculate final effective vert. stress</span> <br>
+        \(\sigma'_{vf}=\) <span class="blank math" data-bid="Consolidation.1556481b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.763e9a52-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\)
+      </div>
+
+    
+    
+
+      <div class="step">
+        <span class="lead">Check case</span>
+        \(\sigma'_c=OCR\cdot\sigma'_{vo}=\) <span class="blank math" data-bid="Consolidation.369ef0ec-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Consolidation.e3349643-1" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{psf}\) <br>
+        <span class="blank math" data-bid="Consolidation.1125f120-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">Compare \(\sigma'_{vf}\) with \(\sigma'_c\) to pick the case.</span>
+      </div>
+
+      <div class="step result" >
+        <span class="lead">Calculate settlement</span> <br>
+        \(\delta_{pc}=\dfrac{H_0}{1+e_0}\left(C_r\log OCR+C_c\log\dfrac{\sigma'_{vf}}{\sigma'_c}\right)\) <br>
+        \(\delta_{pc}=\) <span class="blank math" data-bid="Consolidation.8204fd06-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(\delta_{pc}=\) <span class="blank ans" data-bid="Consolidation.832fc3f5-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+      </div>
+
+    
+  
+
+  
+
+  
+  <div class="step">
+    <span class="lead">(b) Repeat at discretized layers</span>
+    \(h=25/10=2.5\unit{ft}\) replaces \(H_0\) in each sub-layer
+    <span class="note">Each row repeats the single-layer calculation at the midpoint of its sub-layer.</span>
+  </div>
+
+    <table class="sol-table" style="font-size: 0.72em">
+      <tr><th>Layer</th><th>Top elevation (ft)</th><th>Bottom elevation (ft)</th><th>Midpoint elevation (ft)</th><th>Total stress (psf)</th><th>Pore pressure (psf)</th><th>Effective stress \(\sigma'_{vo}\) (psf)</th><th>\(\alpha\) (rad)</th><th>\(I'\)</th><th>Induced stress \(\Delta\sigma_v\) (psf)</th><th>Final vert. effective stress \(\sigma'_{vf}\) (psf)</th><th>Precons. pressure \(\sigma'_c\) (psf)</th><th>Check case</th><th>Partial settlement \(\delta_{pc,i}\) (ft)</th></tr>
+      <tr><td class="lbl">1</td><td>0</td><td>2.5</td><td>1.25</td><td>156.25</td><td>78.0</td><td>78.25</td><td>1.406</td><td>0.998</td><td>5989</td><td>6067</td><td>117.4</td><td>b</td><td>0.734</td></tr>
+      <tr><td class="lbl">2</td><td>2.5</td><td>5</td><td>3.75</td><td>468.75</td><td>234.0</td><td>234.75</td><td>1.107</td><td>0.959</td><td>5757</td><td>5992</td><td>352.1</td><td>b</td><td>0.530</td></tr>
+      <tr><td class="lbl">3</td><td>5</td><td>7.5</td><td>6.25</td><td>781.25</td><td>390.0</td><td>391.25</td><td>0.876</td><td>0.871</td><td>5225</td><td>5616</td><td>586.9</td><td>b</td><td>0.424</td></tr>
+      <tr><td class="lbl">4</td><td>7.5</td><td>10</td><td>8.75</td><td>1093.75</td><td>546.0</td><td>547.75</td><td>0.709</td><td>0.766</td><td>4594</td><td>5142</td><td>821.6</td><td>b</td><td>0.346</td></tr>
+      <tr><td class="lbl">5</td><td>10</td><td>12.5</td><td>11.25</td><td>1406.25</td><td>702.0</td><td>704.25</td><td>0.588</td><td>0.668</td><td>4009</td><td>4713</td><td>1056.4</td><td>b</td><td>0.284</td></tr>
+      <tr><td class="lbl">6</td><td>12.5</td><td>15</td><td>13.75</td><td>1718.75</td><td>858.0</td><td>860.75</td><td>0.499</td><td>0.586</td><td>3513</td><td>4374</td><td>1291.1</td><td>b</td><td>0.233</td></tr>
+      <tr><td class="lbl">7</td><td>15</td><td>17.5</td><td>16.25</td><td>2031.25</td><td>1014.0</td><td>1017.25</td><td>0.432</td><td>0.518</td><td>3105</td><td>4122</td><td>1525.9</td><td>b</td><td>0.192</td></tr>
+      <tr><td class="lbl">8</td><td>17.5</td><td>20</td><td>18.75</td><td>2343.75</td><td>1170.0</td><td>1173.75</td><td>0.381</td><td>0.462</td><td>2771</td><td>3944</td><td>1760.6</td><td>b</td><td>0.157</td></tr>
+      <tr><td class="lbl">9</td><td>20</td><td>22.5</td><td>21.25</td><td>2656.25</td><td>1326.0</td><td>1330.25</td><td>0.339</td><td>0.416</td><td>2495</td><td>3825</td><td>1995.4</td><td>b</td><td>0.129</td></tr>
+      <tr><td class="lbl">10</td><td>22.5</td><td>25</td><td>23.75</td><td>2968.75</td><td>1482.0</td><td>1486.75</td><td>0.306</td><td>0.378</td><td>2265</td><td>3752</td><td>2230.1</td><td>b</td><td>0.105</td></tr>
+    </table>
+
+  <div class="step result" >
+    <span class="lead">Total settlement</span>
+    \(\delta_{pc}=\displaystyle\sum_{i=1}^{10}\delta_{pc,i}=\) <span class="blank ans" data-bid="Consolidation.b14985dd-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{ft}\)
+    <span class="note">The single-layer answer of part (a) underestimates this by about 18%.</span>
+  </div>
+
+  
+
+  <div class="step">
+    <span class="lead">Stress profiles</span>
+    <span class="sol-fig" >
+      <img loading="lazy" src="../../Consolidation/FiguresGeneral/ex-7-4-profiles.svg" style="width: 80%"
+           alt="Left: initial effective stress, induced stress, preconsolidation pressure and final effective stress versus depth for the 25 ft clay, with the ten sub-layer midpoints marked. Right: OCR versus depth, constant at 1.5, with OCR = 1 dashed for reference.">
+    </span>
+    <span class="note">\(\sigma'_{vf}>\sigma'_c\) at every depth, so every sub-layer is case b.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">Why is sub-layering important?</span>
+    \(\Delta\sigma_v\) is largest near the surface, where \(\sigma'_{vo}\) is smallest
+    <span class="note">Shallow sub-layers control the total because settlement follows a log law.</span>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class='InquiryBox' >
+How many layers do I need to refine the results?
+</div>
+<figure>
+<img loading="lazy" src='../../Consolidation/FiguresGeneral/settlement.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+
+
+
+<iframe src='../../virtual_lab/experiments/settlement/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0'></iframe>
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
