@@ -450,8 +450,7 @@
            x="64.011597"
            y="20.139387">vo</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="45.345562"
@@ -462,9 +461,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="45.345562"
          y="16.352335">=1.2*153.1=183.7kPa</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g34">
       <text
          xml:space="preserve"
@@ -499,9 +496,7 @@
            x="70.724876"
            y="16.382521">vf</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="73.534355"
@@ -512,7 +507,6 @@
          style="stroke-width:0.264583;fill:#ff0000"
          x="73.534355"
          y="16.111084">Implies case b</tspan></text>
--->
    <g class="fragment">
     <text 
        xml:space="preserve"
@@ -535,8 +529,7 @@
          style="stroke-width:0.264583"
          x="4.6492949"
          y="25.474701">pc</tspan></text> </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g61">
       <path
          style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -641,9 +634,7 @@
            x="42.662643"
            y="25.93869">183.7</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="51.483288"
@@ -654,6 +645,5 @@
          style="stroke-width:0.264583;fill:#008000"
          x="51.483288"
          y="24.042683">=0.443 m</tspan></text>
--->
   </g>
 </svg>

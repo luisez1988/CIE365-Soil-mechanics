@@ -375,8 +375,7 @@
            x="16.386513"
            y="20.338816">=</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g35"
        style="fill:#000080">
       <path
@@ -418,9 +417,7 @@
            x="36.28125"
            y="20.649672">=</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g34"
        style="fill:#000080">
       <text
@@ -446,6 +443,5 @@
            x="46.872871"
            y="19.275562">3</tspan></text>
     </g>
--->
   </g>
 </svg>

@@ -19,6 +19,39 @@
 		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
 		<!-- Shares the screen -->
 	
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
 	</head>
 	  <body onload="init_api()">
 	
@@ -37,7 +70,7 @@
 	
 					<div class='footer'>
 						CE 342
-						Spring 2026
+						Fall 2026
 					</div>
 	
 					<style>
@@ -70,6 +103,14 @@
 			border: 10px solid #296B64;
 		  }
 		</style>
+
+		<!-- <section>
+		<h1>Announcements</h1>
+		<ul>
+			<li>Quiz 4 (Induced stress and consolidation) next Monday.</li>
+			
+		</ul>
+		</section> -->
 				<!-- <section> -->
 			<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
@@ -103,6 +144,14 @@
 				</li>
 				<li class="fragment"> We learned how to <strong style='color:black'>multiple loads</strong> using the <strong style='color:black'>superposition principle</strong>. </li>				
 			</ul>
+	</section>
+
+	<section>
+	<figure>
+	<img src='FiguresGeneral/Course_structure.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	
 	</section>
 
 				<!-- <section  >
@@ -176,7 +225,7 @@
 		<div class="container">
 			<div class="col" style="width: 30%;">
 		       <figure>
-		         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg/1200px-The_Leaning_Tower_of_Pisa_SB.jpeg" style="width:100%" data-preload/>
+		         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/960px-Italy_-_Pisa_-_Leaning_Tower.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail" style="width:100%" data-preload/>
 		         <footer style="margin-top:-60px;"><small></small></footer>
 		       </figure>
 			</div>
@@ -305,7 +354,7 @@ What is the effect of soil permeability on consolidation?
 </div>
 </section>
 
-<section >
+<!-- <section >
 <h1>Participation question 7.1</h1>
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
 For <strong style='color:orange'>clean sand or gravels</strong> , what of the following statements is true?
@@ -333,7 +382,7 @@ For <strong style='color:orange'>clean sand or gravels</strong> , what of the fo
 	<li class='l2'>Water can leave rapidly \(\longrightarrow\) rapid consolidation \(\longrightarrow\) rapid settlement.</li>
 	
 	</ol>
-	</section>
+	</section> -->
 
 <section  >
 
@@ -382,36 +431,6 @@ The total settlement of a soil can be decomposed into three parts: (i) <strong s
 </figure>
 </section> -->
 
-<section  >
-    <h1>Oedometer/consolidation test</h1>
-	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
-	</div>
-		<div class="container">
-			<div class="col" style="width: 50%;">
-        				<figure>
-				  <img src="FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
-				  <footer style="margin-top:-60px;"><small></small></footer>
-				</figure>
-			</div>
-			<div class="col" style="width: 50%;">
-				<p style="margin-top:-0px;">Iterative process:</p>
-				<ol style="margin-top:0px;font-size:0.9em">
-					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
-					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
-					<li class="fragment"> Measure the settlement \(\delta\) or void ratio \(e\). </li>
-					<li class='fragment'> <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
-					<li class='fragment'>Repeat 1-3 for each load increment.</li>
-					<li class="fragment"> <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
-				</ol>
-			</div>
-		</div>
-</section>
-
-<section>
-<iframe src='../virtual_lab/experiments/oedometer/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0;'></iframe>
-</section>
-
 <section >
 <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
 We often use <span class='atb'>void ration</span> for calculations of settlement. Thus, we want to relate \(\delta\) to \(e\).
@@ -447,18 +466,50 @@ Recall: \(\varepsilon_v= \Delta V/ V_o \longrightarrow\) Volumetric strain
 <div class='container'>
 <div class='col' style='width: 50%;'>
 <div class='equationBox'>
-\( \varepsilon_a= -\frac{\Delta e}{ 1+ e_o} \)
+\( \varepsilon_a= -\dfrac{\Delta e}{ 1+ e_o} \)
 </div>
 </div>
 <div class='col' style='width: 50%;'>
 <div class='equationBox' style="margin-left: 200px;">
-\( \delta= -\frac{\Delta e H_o}{1+e_o} \)
+\( \delta= -\dfrac{\Delta e H_o}{1+e_o} =  \varepsilon_a H_o \)
 </div>
 </div>
 </div>
 </div>
 
 </section>
+
+<section  >
+    <h1>Oedometer/consolidation test</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	It is a Laboratory test to determine soil's consolidation <span class='atb'>properties</span>.
+	</div>
+		<div class="container">
+			<div class="col" style="width: 50%;">
+        				<figure>
+				  <img src="FiguresGeneral/oedometers.svg" style="width:100%" data-preload/>
+				  <footer style="margin-top:-60px;"><small></small></footer>
+				</figure>
+			</div>
+			<div class="col" style="width: 50%;">
+				<p style="margin-top:-0px;">Iterative process:</p>
+				<ol style="margin-top:0px;font-size:0.9em">
+					<li class="fragment"> Increase vertical load \(\Delta \sigma\) </li>
+					<li class="fragment"> Wait until pore pressure is 100% dissipated (about 24 h). </li>
+					<li class="fragment"> Measure the settlement \(\delta\) or void ratio \(e\). </li>
+					<li class='fragment'> <strong style='color:green'>Plot \(\delta\) or \(e\) vs. time.</strong></li>
+					<li class='fragment'>Repeat 1-3 for each load increment.</li>
+					<li class="fragment"> <strong style='color:green'>Plot cumulative stress vs settlement or void ratio.</strong> </li>
+				</ol>
+			</div>
+		</div>
+</section>
+
+<section>
+<iframe src='../virtual_lab/experiments/oedometer/index.html?embed=1&theme=light' width='100%' height='720px' style='border:0;'></iframe>
+</section>
+
+
 
 <section >
 <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -506,6 +557,51 @@ Is a soil with <span class='atb'>OCR=1</span>. Or a soil in which \(\sigma'_c=\s
 
 <div class='defBox fragment' name='Overconsolidated (OC) soil' style='margin-top: 5px;margin-left: 0px;'>
 Is a soil with <span class='atb'>OCR>1</span>. Or a soil in which \(\sigma'_c>\sigma'_{vo}\)
+</div>
+</section>
+
+<section >
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+How do <strong style='color:orange'>\(\sigma'_c\)</strong> and <strong style='color:orange'>\(OCR\)</strong> change with state of stress?
+</div>
+<img src="FiguresGeneral/Example_consol.svg" style="width:100%"/>
+</section>
+
+
+<section >
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+The following observations can be drawn from observed soil behavior:
+</div>
+	<div class='textBox' style='margin-top: 100px;margin-left: 0px;'>
+		<ul style="margin-top: 0px;">
+			<li class="fragment">Soils (clay) are a <span class='atb'>history dependent</span> material \(\longrightarrow\) "have memory"</li>
+			<li class="fragment">The \(OCR\) give us information about the <span class='atb'>loading geological history</span> of the soil</li>
+			<li class="fragment">If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
+		</ul>
+		</div>
+</section>
+
+<section >
+<h1>Participation question 7.1</h1>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	For the Figure below, what statement is true?
+</div>
+
+<div class='container'>
+<div class='col' style="width: 50%;">
+<figure>
+<img src='./FiguresGeneral/consol_1.png' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col'  style="width: 50%;">
+<ol class='iClicker' >
+<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
+<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
+<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
+</ol>
+</div>
 </div>
 </section>
 
@@ -602,26 +698,7 @@ Is a soil with <span class='atb'>OCR>1</span>. Or a soil in which \(\sigma'_c>\s
 				
 	</section>
 
-<section >
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-How does <strong style='color:green'>\(\sigma'_c\)</strong> and <strong style='color:green'>\(OCR\)</strong> change with state of stress?
-</div>
-<img src="FiguresGeneral/Example_consol.svg" style="width:100%"/>
-</section>
 
-
-<section >
-<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-The following observations can be drawn from observed soil behavior:
-</div>
-	<div class='textBox' style='margin-top: 100px;margin-left: 0px;'>
-		<ul style="margin-top: 0px;">
-			<li class="fragment">Soils (clay) are a <span class='atb'>history dependent</span> material \(\longrightarrow\) "have memory"</li>
-			<li class="fragment">The \(OCR\) give us information about the <span class='atb'>loading geological history</span> of the soil</li>
-			<li class="fragment">If we know some details about the geological history we can <strong style="color:black">make sense of OCR values</strong>.</li>
-		</ul>
-		</div>
-</section>
 	
 
 
@@ -648,29 +725,7 @@ The following observations can be drawn from observed soil behavior:
 
 
 
-<section >
-<h1>Participation question 7.3</h1>
-<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-	For the Figure below, what statement is true?
-</div>
 
-<div class='container'>
-<div class='col' style="width: 50%;">
-<figure>
-<img src='./FiguresGeneral/consol_1.png' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-</div>
-<div class='col'  style="width: 50%;">
-<ol class='iClicker' >
-<li class='l2'>Soil a and b are NC at time \(t=t_f\)</li>
-<li class='l2'>Soil a and b are OC at time \(t=t_f\)</li>
-<li class='l2'>Soil a is NC and b is OC at time \(t=t_f\)</li>
-<li class='l2'>Soil a is OC and b is NC at time \(t=t_f\)</li>
-</ol>
-</div>
-</div>
-</section>
 
 <section >
 	<h1 style="margin-top:0px; font-size:55px">Primary consolidation settlement</h1>
@@ -706,7 +761,7 @@ The following observations can be drawn from observed soil behavior:
 <section >
 	<h1>Example 7.1</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		<p style="margin-top:0px;font-size:1em">Estimate the primary consolidation settlement for the clay in the profile below. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The increase of vertical stress is estimated to be 200 kPa at the middle of the clay layer. Assume the soil above the water table to be saturated, \(C_c=0.3\), and \(G_s=2.7\).</p>
+		<p style="margin-top:0px;font-size:0.8em">Estimate the primary consolidation settlement for the clay in the profile below. The void ratio of the sand is 0.76 and the water content of the clay is 43%. The increase of vertical stress is estimated to be 200 kPa at the middle of the clay layer. Assume the soil above the water table to be saturated, \(C_c=0.3\), \(G_s=2.7\) for the clay, and \(G_s=2.65\) for the sand.</p>
 		
 	</div>
 	<div class="container">
@@ -717,8 +772,8 @@ The following observations can be drawn from observed soil behavior:
 </figure>
 		</div>
 		<div class="col" style="width: 70%;">
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<img src="FiguresGeneral/EX610.svg" style="width:100%"/>
+<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-7-1.html' data-part='1'></div>
 </div>
 
 		</div>
@@ -728,7 +783,7 @@ The following observations can be drawn from observed soil behavior:
 
 <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<img src="FiguresGeneral/EX611.svg" style="width:100%"/>
+<div class='Solution' data-src='solutions/ex-7-1.html' data-part='2'></div>
 </div>
 
 </section>
@@ -767,7 +822,7 @@ The following observations can be drawn from observed soil behavior:
 	</div>
 
 	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-		<img src="FiguresGeneral/EX620.svg" style="width:100%"/>
+		<div class='Solution' data-src='solutions/ex-7-2.html'></div>
 	</div>
 </section>
 
@@ -803,8 +858,8 @@ The following observations can be drawn from observed soil behavior:
 
 </div>
 
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<img src="FiguresGeneral/EX630.svg" style="width:100%"/>
+<div class='ProblemBox' style='margin-top: 15px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-7-3.html'></div>
 </div>
 
 </section>
@@ -848,33 +903,47 @@ Follow the steps below to calculate \(\delta_{pc}\) in multilayered soils:
 Calculate the settlement due to primary consolidation for the soil profile shown in the figure below. Use: (a) a single layer assumption, and (b) 10 sub-layers.
 </div>
 <div class='container'>
-<div class='col' style='width: 50%;'>
+<div class='col' style='width: 40%;'>
 <figure>
 <img src='FiguresGeneral/complex_problem.svg' width='100%'/>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
 </div>
-<div class='col' style='width: 50%;'>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<img src="FiguresGeneral/EX640.svg" style="width:100%"/>
+<div class='col' style='width: 60%;'>
+<div class='ProblemBox' style='margin-top: 30px;margin-left: 0px; '>
+<div class='Solution' data-src='solutions/ex-7-4.html' data-part='1'></div>
 </div>
 </div>
 </div>
 </section>
 
 <section >
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<img src="FiguresGeneral/EX641.svg" style="width:100%"/>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 680px !important;'>
+<div class='Solution' data-src='solutions/ex-7-4.html' data-part='2'></div>
 </div>
 
 </section>
 
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 680px !important;'>
+<div class='Solution' data-src='solutions/ex-7-4.html' data-part='3'></div>
+</div>
+</section>
+
+<section >
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-7-4.html' data-part='4'></div>
+</div>
+</section>
+
+<!-- Google Sheet for Example 7.4(b), replaced by the full table in solutions/ex-7-4.html (part 3).
+     Kept for reference; uncomment to show it again.
 <section >
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/10ysVO6AwzHXl0tUE0H2_9ywlf7HcIFPXsYjuI828FG4/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
 
-</section>
+</section> -->
 
 <section >
 <div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
@@ -936,11 +1005,14 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
-<script src="plugin/Animated_lines/animate_svg.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but every figure here is an
+     <object>, so External_svg.js does all the real work. It also threw a
+     TypeError on load and on every hashchange (it looks up <section> ids that
+     do not exist in this deck). -->
 <script src="plugin/Animated_lines/External_svg.js"></script>
+<script src="../assets/solution-plugin.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
@@ -964,21 +1036,12 @@ Reveal.initialize({
    autoPlayMedia: true,
    width: 1280,
    height: 720,
-   math: {
-	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-	   config: 'TeX-AMS_HTML-full',
-	   tex2jax: {
-		   inlineMath: [['\\(','\\)']],
-		   displayMath: [['\\[','\\]']],
-		   balanceBraces: true,
-		   processEscapes: false,
-		   processRefs: true,
-		   processEnvironments: true,
-		   preview: 'TeX',
-		   skipTags: ['script','noscript','style','textarea','pre','code'],
-		   ignoreClass: 'tex2jax_ignore',
-		   processClass: 'tex2jax_process'
-	   },
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
    },
 
    spotlight: {
@@ -1103,7 +1166,7 @@ Reveal.initialize({
 	   // ...
    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    // Learn about plugins: https://revealjs.com/plugins/
-   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+   plugins: [ RevealCustomControls, RevealSolution,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
 					   ],
 						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
 	   });

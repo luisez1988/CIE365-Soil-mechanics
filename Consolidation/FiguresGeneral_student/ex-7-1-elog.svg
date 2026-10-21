@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" width="400" height="270" font-family="'Times New Roman', Times, serif" font-size="20">
+  <!-- Example 7.1: loading path of the NC clay on the e - log(sigma'_v) plane.
+       Symbols only; the numbers are blanks in the solution steps. -->
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="mid" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#0000ff" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <!-- axes -->
+  <line x1="60" y1="230" x2="385" y2="230" stroke="#000" stroke-width="2" marker-end="url(#ax)"/>
+  <line x1="60" y1="230" x2="60" y2="15" stroke="#000" stroke-width="2" marker-end="url(#ax)"/>
+  <text x="330" y="258" font-style="italic">log σ′<tspan font-size="14" dy="5">v</tspan></text>
+  <text x="30" y="30" font-style="italic">e</text>
+
+  <!-- projections -->
+  <g stroke="#777" stroke-width="1.5" stroke-dasharray="6 5" fill="none">
+    <polyline points="60,60 140,60 140,230"/>
+    <polyline points="60,190 300,190 300,230"/>
+  </g>
+
+  <!-- virgin compression path, slope C_c -->
+  <polyline points="140,60 220,125 300,190" fill="none" stroke="#0000ff" stroke-width="2.5" marker-mid="url(#mid)"/>
+  <circle cx="140" cy="60" r="6" fill="#ff0000"/>
+  <circle cx="300" cy="190" r="6" fill="#0000ff"/>
+  <text x="228" y="110" font-style="italic" fill="#0000ff">C<tspan font-size="14" dy="5">c</tspan></text>
+
+  <!-- tick labels -->
+  <text x="120" y="252" font-style="italic">σ′<tspan font-size="14" dy="5">vo</tspan></text>
+  <text x="282" y="252" font-style="italic">σ′<tspan font-size="14" dy="5">vf</tspan></text>
+  <text x="22" y="66" font-style="italic">e<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="8" y="196" font-style="italic">e<tspan font-size="14" dy="5">f</tspan><tspan font-style="normal" dy="-5"> ?</tspan></text>
+
+  <!-- void-ratio change -->
+  <path d="M330,60 h8 v130 h-8" fill="none" stroke="#000" stroke-width="1.5"/>
+  <line x1="300" y1="60" x2="330" y2="60" stroke="#777" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="346" y="132" font-style="italic">Δe</text>
+</svg>
