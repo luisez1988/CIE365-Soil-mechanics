@@ -60,14 +60,14 @@
       </div>
 
       <div class="step" data-part="2">
-        <span class="lead">Induced stress</span>
+        <span class="lead">Induced stress</span> <br>
         \(\Delta\sigma_v=I'q=\) <span class="fill">\(0.625\times6000\)</span> \(=\)
         <span class="fill">3749</span> \(\unit{psf}\)
         <span class="note">ksf to psf before multiplying.</span>
       </div>
 
-      <div class="step" data-part="2">
-        <span class="lead">Calculate final effective vert. stress</span>
+      <div class="step" data-part="2" >
+        <span class="lead">Calculate final effective vert. stress</span> <br>
         \(\sigma'_{vf}=\) <span class="fill">\(782.5+3749\)</span> \(=\)
         <span class="fill">4532</span> \(\unit{psf}\)
       </div>
@@ -83,7 +83,7 @@
         <span class="note">Compare \(\sigma'_{vf}\) with \(\sigma'_c\) to pick the case.</span>
       </div>
 
-      <div class="step result" data-part="2">
+      <div class="step result" data-part="2" >
         <span class="lead">Calculate settlement</span> <br>
         \(\delta_{pc}=\dfrac{H_0}{1+e_0}\left(C_r\log OCR+C_c\log\dfrac{\sigma'_{vf}}{\sigma'_c}\right)\) <br>
         \(\delta_{pc}=\) <span class="fill">\(\dfrac{25}{1.95}\left(0.04\log1.5+0.33\log\dfrac{4532}{1174}\right)\)</span> <br>
@@ -118,7 +118,7 @@
       <tr><td class="lbl">10</td><td>22.5</td><td>25</td><td>23.75</td><td>2968.75</td><td>1482.0</td><td>1486.75</td><td>0.306</td><td>0.378</td><td>2265</td><td>3752</td><td>2230.1</td><td>b</td><td>0.105</td></tr>
     </table>
 
-  <div class="step result" data-part="3">
+  <div class="step result" data-part="3" style="margin-top: 50px; ">
     <span class="lead">Total settlement</span>
     \(\delta_{pc}=\displaystyle\sum_{i=1}^{10}\delta_{pc,i}=\) <span class="ans">3.13</span> \(\unit{ft}\)
     <span class="note">The single-layer answer of part (a) underestimates this by about 18%.</span>
@@ -128,17 +128,17 @@
 
   <div class="step" data-part="4">
     <span class="lead">Stress profiles</span>
-    <span class="sol-fig" style="margin: 0.1em auto">
-      <img src="FiguresGeneral/ex-7-4-profiles.svg" style="width: 66%"
+    <span class="sol-fig" style="margin: 0.0em auto">
+      <img src="FiguresGeneral/ex-7-4-profiles.svg" style="width: 80%"
            alt="Left: initial effective stress, induced stress, preconsolidation pressure and final effective stress versus depth for the 25 ft clay, with the ten sub-layer midpoints marked. Right: OCR versus depth, constant at 1.5, with OCR = 1 dashed for reference.">
     </span>
     <span class="note">\(\sigma'_{vf}>\sigma'_c\) at every depth, so every sub-layer is case b.</span>
   </div>
 
   <div class="step" data-part="4">
-    <span class="lead">Why sub-layers matter</span>
+    <span class="lead">Why is sub-layering important?</span>
     \(\Delta\sigma_v\) is largest near the surface, where \(\sigma'_{vo}\) is smallest
-    <span class="note">Shallow sub-layers dominate the total because settlement follows a log law.</span>
+    <span class="note">Shallow sub-layers control the total because settlement follows a log law.</span>
   </div>
 
 </div>
