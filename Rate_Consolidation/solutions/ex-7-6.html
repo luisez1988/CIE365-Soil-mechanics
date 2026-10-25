@@ -1,0 +1,115 @@
+<!-- Example 7.6 — time for 95% consolidation, and settlement vs. time, for two clays.
+     Three parts, matching the deck's three slides:
+       part 1 = statement slide, beside Profile_ex61.svg: data, principles, Cv = 15
+       part 2 = two-column slide: Cv = 0.4, sample settlement at t = 25 yr
+       part 3 = settlement vs. time table and plot (replaces the Google Sheet slide)
+     Values from the approved Example 7.1 (delta_pc = 0.509 m).
+     Legacy figures: FiguresGeneral/EX660.svg (part 1) + EX661.svg (part 2).
+     The plot is FiguresGeneral/ex-7-6-settlement.svg (matplotlib). -->
+<div class="sol" data-id="ex-7-6" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <!-- ============ part 1 — data, principles, Cv = 15 ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    \(\delta_{pc}=0.509\unit{m}\), \(C_v=15\unit{m^2/yr}\), \(C_v=0.4\unit{m^2/yr}\), \(U=95\%\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span> <br>
+    \(\delta(t)=\delta_{pc}\,U(t)/100\) &emsp; \(T_v=\dfrac{C_v t}{H_{dr}^2}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Assume \(C_v=15\unit{m^2/yr}\)</span> <br>
+    \(T_v=\) <span class="fill">1.129</span>
+    <span class="note">From table for \(U=95\%\).</span> <br>
+    \(t=\dfrac{T_v H_{dr}^2}{C_v}=\)
+    <span class="fill">\(\dfrac{1.129\times\overbrace{(5)^2}^{\textcolor{red}{\substack{\text{Because of}\\\text{double}\\\text{drainage}}}}}{15}\)</span>
+    \(=\) <span class="ans">1.88</span> \(\unit{yrs}\)
+  </div>
+
+  <!-- ==== part 2 — Cv = 0.4 | settlement at t = 25 yr ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.3 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">Assume \(C_v=0.4\unit{m^2/yr}\)</span> <br>
+        \(t=\) <span class="fill">\(\dfrac{1.129\times(5)^2}{0.4}\)</span> \(=\)
+        <span class="ans">70.6</span> \(\unit{yrs}\)
+        <span class="note">Depending on load and material, time can go up to centuries.</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Calculate settlement vs. time</span> <br>
+        Use a list of known times, e.g. \(t=0\) to \(75\unit{yrs}\). <br>
+        Sample calculation for \(t=25\unit{yrs}\) <br>
+        a) for \(C_v=15\unit{m^2/yr}\): \(T_v=\dfrac{C_v t}{H_{dr}^2}=\)
+        <span class="fill">\(\dfrac{15\times25}{25}\)</span> \(=\) <span class="fill">15</span> <br>
+        \(U[\%]=\left[1-\dfrac{8}{\pi^2}\exp(-\pi^2T_v/4)\right]\times100\) <br>
+        \(\phantom{U[\%]}=\) <span class="fill">\([1-0.811\times\exp(-9.87\times15/4)]\times100\)</span>
+        \(=\) <span class="fill">100</span>\(\%\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="2">
+        \(\delta(25\unit{yr})=\) <span class="fill">\(100\times0.509/100\)</span> \(=\)
+        <span class="ans">0.509</span> \(\unit{m}\)
+      </div>
+
+      <div class="step" data-part="2">
+        b) for \(C_v=0.4\unit{m^2/yr}\): <br>
+        \(T_v=\dfrac{C_v t}{H_{dr}^2}=\) <span class="fill">\(\dfrac{0.4\times25}{25}\)</span> \(=\)
+        <span class="fill">0.4</span> <br>
+        From table: \(U[\%]=\) <span class="fill">69.8</span> \(\%\)
+      </div>
+
+      <div class="step result" data-part="2">
+        \(\delta(25\unit{yr})=\) <span class="fill">\(69.8\times0.509/100\)</span> \(=\)
+        <span class="ans">0.355</span> \(\unit{m}\)
+        <span class="note">You can repeat this process in a spreadsheet.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==== part 3 — settlement vs. time, both clays ==== -->
+
+  <!-- Printed in full (no blanks). The table sits outside the steps so it is on
+       screen at once instead of being typed cell by cell. U uses the
+       approximations of the "Solution approximations" slide. -->
+  <div class="step" data-part="3">
+    <span class="lead">Repeat for the list of times</span>
+    \(H_{dr}=5\unit{m}\), \(\delta_{pc}=0.509\unit{m}\)
+  </div>
+
+  <div class="sol-cols" data-part="3" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 46%">
+      <table class="sol-table" style="font-size: 0.78em">
+        <tr><th rowspan="2">\(t\) (yr)</th><th colspan="3">Boston, \(C_v=15\unit{m^2/yr}\)</th><th colspan="3">Mexico City, \(C_v=0.4\unit{m^2/yr}\)</th></tr>
+        <tr><th>\(T_v\)</th><th>\(U\) (%)</th><th>\(\delta\) (m)</th><th>\(T_v\)</th><th>\(U\) (%)</th><th>\(\delta\) (m)</th></tr>
+        <tr><td class="lbl">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="lbl">0.25</td><td>0.150</td><td>43.7</td><td>0.222</td><td>0.004</td><td>7.1</td><td>0.036</td></tr>
+        <tr><td class="lbl">0.5</td><td>0.300</td><td>61.3</td><td>0.312</td><td>0.008</td><td>10.1</td><td>0.051</td></tr>
+        <tr><td class="lbl">1</td><td>0.600</td><td>81.6</td><td>0.415</td><td>0.016</td><td>14.3</td><td>0.073</td></tr>
+        <tr><td class="lbl">1.88</td><td>1.128</td><td>95.0</td><td>0.483</td><td>0.030</td><td>19.6</td><td>0.100</td></tr>
+        <tr><td class="lbl">5</td><td>3.000</td><td>100.0</td><td>0.509</td><td>0.080</td><td>31.9</td><td>0.162</td></tr>
+        <tr><td class="lbl">10</td><td>6.000</td><td>100.0</td><td>0.509</td><td>0.160</td><td>45.1</td><td>0.230</td></tr>
+        <tr><td class="lbl">25</td><td>15.00</td><td>100.0</td><td>0.509</td><td>0.400</td><td>69.8</td><td>0.355</td></tr>
+        <tr><td class="lbl">50</td><td>30.00</td><td>100.0</td><td>0.509</td><td>0.800</td><td>88.7</td><td>0.452</td></tr>
+        <tr><td class="lbl">70.6</td><td>42.36</td><td>100.0</td><td>0.509</td><td>1.130</td><td>95.0</td><td>0.484</td></tr>
+        <tr><td class="lbl">75</td><td>45.00</td><td>100.0</td><td>0.509</td><td>1.200</td><td>95.8</td><td>0.488</td></tr>
+      </table>
+    </div>
+    <div class="sol-col">
+      <span class="sol-fig" style="margin: 0">
+        <img src="FiguresGeneral/ex-7-6-settlement.svg" style="width: 100%"
+             alt="Settlement versus time for 0 to 75 years. The Boston blue clay reaches 95% of the 0.509 m settlement at 1.88 years; the Mexico City clay reaches it at 70.6 years.">
+      </span>
+    </div>
+  </div>
+
+</div>

@@ -70,7 +70,7 @@
 	
 					<div class='footer'>
 						CE 342
-						Spring 2026
+						Fall 2026
 					</div>
 	
 					<style>
@@ -105,7 +105,7 @@
 		</style>
 				<!-- <section> -->
 
-<section>
+<!-- <section>
     <h1>Announcements</h1>
     <div class='container'>
         <div class='col' style='width: 50%;'>
@@ -127,9 +127,9 @@
             </figure>
         </div>
     </div>
-</section>
+</section> -->
 
-<section>
+<!-- <section>
 <h1>Announcements</h1>
 
 <ul>
@@ -139,7 +139,7 @@
 	<li>Bring compass and protractor to class and piece of paper to solve problems. If you want to use your computer, make sure you can draw circles and measure angles.</li>
 </ul>
 
-</section>
+</section> -->
 			<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 				<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
@@ -148,7 +148,7 @@
 	
 				<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 7: Rate of consolidation">
 					<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-					<p style="color:#faffff; font-size:35px">Spring 2026</p>
+					<p style="color:#faffff; font-size:35px">Fall 2026</p>
 					<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 					<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 				</div>
@@ -232,7 +232,10 @@
 </section>
 
 <section>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Derivation_consol.svg'></object>
+<!-- Handwritten derivation, replaced by solutions/derivation-terzaghi.html:
+<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/Derivation_consol.svg'></object> -->
+
+<div class='Solution' data-src='solutions/derivation-terzaghi.html'></div>
 
 </section>
 
@@ -580,8 +583,8 @@ Now we need to link the excess pore pressure to the degree consolidation.
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, and 95% using the approximate solution.
 </div>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX650.svg'></object>
+<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+<div class='Solution' data-src='solutions/ex-7-5.html'></div>
 </div>
 </section>
 
@@ -659,7 +662,7 @@ Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, a
 	</div>
 	
 	<ol style="margin-top:0px;font-size:1em">
-		<li>For a given time \(t\), calculate the corresponding dimensionless time \(T_v\): <br>
+		<li>For a time \(t\), calculate the corresponding dimensionless time \(T_v\): <br>
 			\(T_v=\cfrac{C_v t}{H_{dr}^2}\)
 		
 		</li>
@@ -675,7 +678,7 @@ Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, a
 
 <section >
 	<h1>Example 7.6</h1>
-	<div class='textBox' style='margin-top: 0px;font-size: 1em;'>	<p>For problem 6.1; determine the time required to obtain 95% degree of consolidation if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p> 
+	<div class='textBox' style='margin-top: 0px;font-size: 1em;'>	<p style="margin-top:0px;font-size:0.8em">For Example 7.1, determine the time required to obtain 95% degree of consolidation if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p> 
 
 		
 </div>
@@ -687,8 +690,8 @@ Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, a
 	</figure>
 	</div>
 	<div class='col' style='width: 70%;'>
-	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX660.svg'></object>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-7-6.html' data-part='1'></div>
 	</div>
 	</div>
 	</div>
@@ -696,13 +699,22 @@ Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, a
 </section>
 
 <section>
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX661.svg'></object>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 600px;'>
+	<div class='Solution' data-src='solutions/ex-7-6.html' data-part='2'></div>
 </div>
 
 </section>
 
 <section>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 600px;'>
+	<div class='Solution' data-src='solutions/ex-7-6.html' data-part='3'></div>
+</div>
+
+</section>
+
+<!-- Google Sheet for Example 7.6, replaced by part 3 above. Hidden from the deck
+     (reveal removes data-visibility="hidden" slides); delete the attribute to show it. -->
+<section data-visibility="hidden">
 <div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 <iframe src='https://docs.google.com/spreadsheets/d/15v7TPcyH2tfDUMHYq_FNqYRv-NkJRaMIJnPA9v_M2KM/edit?usp=sharing'width='100%' height='680' frameborder='0' marginheight='0' marginwidth='0' style="margin-left: 25px;">Loading...</iframe>
 </div>
@@ -736,11 +748,11 @@ Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, a
 
 <section>
 <h1>Example 7.7</h1>
-<div class='textBox' style='margin-top: 0px;font-size: 1em;'> <p> If the coefficient of secondary consolidation of the clay layer in problem 6.1 is \(C_\alpha=0.0351\), what would the secondary compression settlements be after 10 yrs of completing primary consolidation settlements? </p> 
+<div class='textBox' style='margin-top: 0px;font-size: 1em;'> <p> The clay of Example 7.1 is Boston blue clay (Example 7.6) with \(C_\alpha=0.0351\). Find the secondary compression settlement 10 yrs after primary consolidation ends. </p>
 </div>
 
-<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX670.svg'></object>
+<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px; height: 350px;'>
+	<div class='Solution' data-src='solutions/ex-7-7.html'></div>
 </div>
 </section>
 

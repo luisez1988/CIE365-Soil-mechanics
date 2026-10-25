@@ -1,0 +1,75 @@
+<!-- Derivation of Terzaghi's 1D consolidation equation (slide 5).
+     Follows the handwritten slide block by block, with compression-positive strain:
+       top-left sketch (soil element) | mass conservation, Darcy's law
+       stress-strain relationship, full width
+       bottom-left sketch (consolidation curve) | effective stress principle, result
+     Legacy figure: FiguresGeneral/Derivation_consol.svg.
+     The two sketches are extracted from it unchanged as
+     FiguresGeneral/derivation-element.svg and FiguresGeneral/derivation-curve.svg. -->
+<div class="sol" data-id="derivation-terzaghi" style="--sol-line: 1.15; font-size: 0.56em;">
+
+  <div class="sol-cols" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 24%">
+      <span class="sol-fig" style="margin: 0">
+        <img src="FiguresGeneral/derivation-element.svg" style="width: 100%"
+             alt="1D consolidation: a saturated soil element of height dz, with flow q in entering at the bottom, q out leaving at the top, and a volume change dV not equal to zero.">
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">By mass conservation</span> <br>
+        \(q_{in}-q_{out}=\dfrac{\partial V}{\partial t}\;\longrightarrow\; q-\Big(\)
+        <span class="fill">\(q+\dfrac{\partial q}{\partial z}dz\)</span>
+        \(\Big)=\dfrac{\partial V}{\partial t}\;\longrightarrow\;-\dfrac{\partial q}{\partial z}dz=\dfrac{\partial V}{\partial t}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Invoking Darcy's law</span>
+        \(q=-k\dfrac{\partial h}{\partial z}\cdot 1\) <br>
+        \(-\dfrac{\partial q}{\partial z}dz=\)
+        <span class="fill">\(k\dfrac{\partial^2 h}{\partial z^2}dz\)</span>
+        \(=k\underbrace{\dfrac{\partial^2 (z+h_w)}{\partial z^2}}_{\textcolor{red}{\text{Use total head definition}}}dz=k\dfrac{\partial^2 h_w}{\partial z^2}dz=\)
+        <span class="fill">\(\dfrac{k}{\gamma_w}\dfrac{\partial^2 u}{\partial z^2}dz\)</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="lead">Invoking stress-strain relationships</span> <br>
+    \(\varepsilon_v=\varepsilon_a=-\dfrac{\Delta V}{V}\;\Longrightarrow\;\)
+    <span class="fill">\(\partial V=-V\,\partial\varepsilon_a\)</span>
+    &emsp; Thus: \(\dfrac{\partial V}{\partial t}=\)
+    <span class="fill">\(-V\dfrac{\partial\varepsilon_a}{\partial t}\)</span> \(=\)
+    <span class="fill">\(-dz\cdot 1\,m_v\dfrac{\partial\sigma'}{\partial t}\)</span>
+  </div>
+
+  <div class="sol-cols" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 24%">
+      <span class="sol-fig" style="margin: 0">
+        <img src="FiguresGeneral/derivation-curve.svg" style="width: 100%"
+             alt="Consolidation curve: axial strain against effective stress, with m v equal to the slope of its tangent, the derivative of axial strain with respect to effective stress.">
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Now invoke effective stress principle</span> <br>
+        \(\dfrac{\partial(\sigma-u)}{\partial t}=\)
+        <span class="fill">\(-\dfrac{\partial u}{\partial t}\)</span>
+        \(\;\longrightarrow\;\dfrac{k}{\gamma_w}\dfrac{\partial^2 u}{\partial z^2}\textcolor{red}{\cancel{\textcolor{black}{dz}}}=\textcolor{red}{\cancel{\textcolor{black}{dz}}}\,m_v\dfrac{\partial u}{\partial t}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="flex: 0 0 30%">
+
+      <div class="step result">
+        <span class="lead">Terzaghi's 1D consolidation equation</span> <br>
+        <span class="ans">\(\dfrac{\partial u}{\partial t}=\dfrac{k}{\gamma_w m_v}\dfrac{\partial^2 u}{\partial z^2}\)</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>

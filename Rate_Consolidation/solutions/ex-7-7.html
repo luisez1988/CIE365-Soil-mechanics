@@ -1,0 +1,39 @@
+<!-- Example 7.7 — secondary compression settlement 10 yr after primary consolidation.
+     Two columns, as on the handwritten slide: data, principles | calculation.
+     Values from the approved Examples 7.1 (e0 = 1.161) and 7.6 (t95 = 1.88 yr).
+     Legacy figure: FiguresGeneral/EX670.svg. -->
+<div class="sol" data-id="ex-7-7" style="--sol-line: 1.2; font-size: 0.6em;">
+
+  <div class="sol-cols">
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Data</span>
+        \(H_0=10\unit{m}\), \(C_\alpha=0.0351\), \(e_0=1.161\) <br>
+        \(t_{95\%}=1.88\unit{yrs}\) (Assuming Boston clay properties)
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span> <br>
+        \(\delta_{sc}=\dfrac{C_\alpha H_0}{1+e_0}\log\left(t_f/t_{EOP}\right)\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step">
+        <span class="lead">Final time</span> <br>
+        \(t_f=\) <span class="fill">\(1.88+10\)</span> \(=\) <span class="fill">11.88</span> \(\unit{yrs}\)
+        <span class="note">Starting calculation at 95% of consolidation.</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Secondary compression settlement</span> <br>
+        \(\delta_{sc}=\) <span class="fill">\(\dfrac{0.0351\times10}{2.161}\log(11.88/1.88)\)</span> \(=\)
+        <span class="ans">0.130</span> \(\unit{m}\)
+      </div>
+
+    </div>
+  </div>
+
+</div>
