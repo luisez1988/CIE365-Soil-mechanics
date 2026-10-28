@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 7: Rate of consolidation · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Rate_Consolidation" data-total="40" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 7: Rate of consolidation</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">40</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Process of consolidation</a></li>
+<li><a href="#s3">Terzaghi's Consolidation Theory</a></li>
+<li><a href="#s4">Drainage length</a></li>
+<li><a href="#s5">Normalized time and depth</a></li>
+<li><a href="#s6">Analytical solution</a></li>
+<li><a href="#s7">Excess pore pressure</a></li>
+<li><a href="#s8">Total pore pressure</a></li>
+<li><a href="#s9">Degree of consolidation</a></li>
+<li><a href="#s10">Participation question 7.4</a></li>
+<li><a href="#s12">Solution approximations</a></li>
+<li><a href="#s13">Example 7.5</a></li>
+<li><a href="#s14">Determining the coefficient of consolidation</a></li>
+<li><a href="#s15">Casagrande's method</a></li>
+<li><a href="#s16">Example 7.6</a></li>
+<li><a href="#s17">Secondary consolidation</a></li>
+<li><a href="#s18">Example 7.7</a></li>
+<li><a href="#s19">Participation question 7.5</a></li>
+<li><a href="#s20">Consolidation due to radial flow</a></li>
+<li><a href="#s21">Case history: Kansai International Airport</a></li>
+<li><a href="#s22">Soils at the Kansai bay</a></li>
+<li><a href="#s23">Measured and predicted settlements</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+							<li > 
+								<div class='textBox' >
+							
+								We learned how to <strong style='color:black'>calculate</strong> the coefficient of compressibility (\(C_c\)) and recompression (\(C_r\)) of fine grained soils.
+								</div>
+							
+								 </li>
+							<li > We learned how to <strong style='color:black'>calculate</strong> the preconsolidation pressure (\(\sigma'_c\)) and the overconsolidation ratio (\(OCR\)). </li>
+							<li > <div class='textBox' >
+								We learned about the relationship between the \(OCR\) and the stress history of soils.
+							</div>
+								
+								 </li>							
+							<li >  We learned how to <strong style='color:black'>calculate</strong> primary consolidation settlements in normally and overconsolidated soils.</li>							
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+					<div class='container'>
+					<div class='col' style="--colw:50%">
+						<ul class="contentStyle" >
+							<li class="l1">Rate of consolidation.</li>
+							<li class="l1">The coefficient of consolidation</li>
+							<li class="l1">Degree of consolidation</li>
+							<li class="l1">Secondary consolidation</li>
+							<li class="l1">Preloading and vertical drains</li>							
+						</ul>	
+					</div>
+					<div class='col' style="--colw:50%">
+						<div class='container'>
+							<div class='col' style="--colw:50%">
+								<div class="stickynote" >
+									<p > Objectives covered in this lecture</p>
+									<ul>
+										<li>[O3]: Develop an understanding of how to evaluate the stiffness/compressibility of soils and the role of seepage and permeability on time-dependent consolidation/settlement.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="--colw:50%">
+							<div class='stickynote' >
+								<p >After this lecture we will able to:</p>
+								<ul >
+									<li>Estimate the end of primary consolidation.</li>					
+									<li>Calculate the coefficient of consolidation of soils.</li>
+									<li>Calculate the time-dependent settlement and degree of consolidation.</li>
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+			
+
+        
+</section>
+
+<section class="block" id="s2" data-anchor="process-of-consolidation">
+<h2 class="block-title">Process of consolidation</h2>
+
+
+<img loading="lazy" src="figures/PC_process.svg" style="width:100%" alt=""/>
+
+
+
+
+
+<div class="sol" data-id="derivation-terzaghi" style="--sol-line: 1.15; font-size: 1em">
+
+  <div class="sol-cols" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 24%">
+      <span class="sol-fig" >
+        <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/derivation-element.svg" style="width: 100%"
+             alt="1D consolidation: a saturated soil element of height dz, with flow q in entering at the bottom, q out leaving at the top, and a volume change dV not equal to zero.">
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">By mass conservation</span> <br>
+        \(q_{in}-q_{out}=\dfrac{\partial V}{\partial t}\;\longrightarrow\; q-\Big(\)
+        <span class="blank math" data-bid="Rate_Consolidation.0c8f2e80-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(\Big)=\dfrac{\partial V}{\partial t}\;\longrightarrow\;-\dfrac{\partial q}{\partial z}dz=\dfrac{\partial V}{\partial t}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Invoking Darcy's law</span>
+        \(q=-k\dfrac{\partial h}{\partial z}\cdot 1\) <br>
+        \(-\dfrac{\partial q}{\partial z}dz=\)
+        <span class="blank math" data-bid="Rate_Consolidation.1e2383c6-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=k\underbrace{\dfrac{\partial^2 (z+h_w)}{\partial z^2}}_{\textcolor{red}{\text{Use total head definition}}}dz=k\dfrac{\partial^2 h_w}{\partial z^2}dz=\)
+        <span class="blank math" data-bid="Rate_Consolidation.5face503-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="lead">Invoking stress-strain relationships</span> <br>
+    \(\varepsilon_v=\varepsilon_a=-\dfrac{\Delta V}{V}\;\Longrightarrow\;\)
+    <span class="blank math" data-bid="Rate_Consolidation.9fc8897d-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    &emsp; Thus: \(\dfrac{\partial V}{\partial t}=\)
+    <span class="blank math" data-bid="Rate_Consolidation.f60ac726-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+    <span class="blank math" data-bid="Rate_Consolidation.2077c079-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+  </div>
+
+  <div class="sol-cols" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 24%">
+      <span class="sol-fig" >
+        <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/derivation-curve.svg" style="width: 100%"
+             alt="Consolidation curve: axial strain against effective stress, with m v equal to the slope of its tangent, the derivative of axial strain with respect to effective stress.">
+      </span>
+    </div>
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Now invoke effective stress principle</span> <br>
+        \(\dfrac{\partial(\sigma-u)}{\partial t}=\)
+        <span class="blank math" data-bid="Rate_Consolidation.1590bda3-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:37ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(\;\longrightarrow\;\dfrac{k}{\gamma_w}\dfrac{\partial^2 u}{\partial z^2}\textcolor{red}{\cancel{\textcolor{black}{dz}}}=\textcolor{red}{\cancel{\textcolor{black}{dz}}}\,m_v\dfrac{\partial u}{\partial t}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="flex: 0 0 30%">
+
+      <div class="step result">
+        <span class="lead">Terzaghi's 1D consolidation equation</span> <br>
+        <span class="blank math ans" data-bid="Rate_Consolidation.4a150495-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</section>
+
+<section class="block" id="s3" data-anchor="terzaghi-s-consolidation-theory">
+<h2 class="block-title">Terzaghi's Consolidation Theory</h2>
+
+	
+	<div class='textBox' >
+	Results by balancing the <span class="blank" data-bid="Rate_Consolidation.53008499-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> and its volume with the <span class="blank" data-bid="Rate_Consolidation.ee5c1587-0" style="min-width:38ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+	<div class="container">
+		<div class="col" style="--colw:50%">
+			<div class='equationBox' >
+			\(\cfrac{\partial u}{\partial t}= C_v \cfrac{\partial ^2 u}{\partial z^2}\)			</div>
+			<div class='equationBox' >
+			\(C_v= \cfrac{k}{\gamma_w m_v}\)			</div>
+		</div>
+		<div class="col" style="--colw:50%">
+			<ul style="font-size: 1em">
+				<li>\(u=\) Excess pore water pressure</li>
+				<li>\(t=\) time</li>
+				<li>\(z=\) Direction of flow</li>
+				<li>\(C_v=\) <strong style="color:black">Coefficient of consolidation</strong>					
+				</li>
+				<li>\(m_v=\) Coefficient of volume change</li>
+
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<section class="block" id="s4" data-anchor="drainage-length">
+<h2 class="block-title">Drainage length</h2>
+
+
+<div class='defBox' name='Drainage length' >
+<strong style='color:green'>\(H_{dr}\):</strong> Is the length of the shortest path that a water particle will travel to reach a drainage boundary condition.
+</div>
+<figure>
+	<img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/hdr.svg" style="width:100%" data-preload/>
+	<footer ><small></small></footer>
+  </figure>
+
+</section>
+
+<section class="block" id="s5" data-anchor="normalized-time-and-depth">
+<h2 class="block-title">Normalized time and depth</h2>
+
+
+<div class='defBox' name='Normalized time' >
+<strong style='color:green'>\(T_v\):</strong> Is a dimensionless parameter that maps the time as a function of the coefficient of consolidation and drainage length. <br>
+
+<div class='equationBox'>
+\(T_v= \cfrac{C_v t}{H^2_{dr}}\)
+</div>
+</div>
+
+<div class='defBox' name='Normalized depth' >
+<strong style='color:green'>\(Z\):</strong> Maps the depth of a compressible soil using the drainage length.
+
+<div class='equationBox'>
+\(Z=z/H_{dr}\)
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s6" data-anchor="analytical-solution">
+<h2 class="block-title">Analytical solution</h2>
+
+	
+<div class='textBox' >
+It is possible to <span class="blank" data-bid="Rate_Consolidation.2232d81b-0" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> solve the Terzaghi's 1D consolidation theory. The following assumptions are considered:
+<ul>
+	<li> The soil has <span class="blank" data-bid="Rate_Consolidation.a0f082ea-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> compressibility.</li>
+	<li> The initial pore pressure distribution is <span class="blank" data-bid="Rate_Consolidation.f401aebd-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>	
+</ul>
+</div>
+
+<div class='equationBox' style="font-size: 0.9em">
+$$\Delta u(z,t)=\Delta \sigma \sum_{n=0}^{\infty} \cfrac{4}{(2n+1)\pi}\exp \left[- \cfrac{(2n+1)^2 \pi^2 }{4}T_v\right] \sin \left[\cfrac{(2n+1)\pi}{2}Z\right]$$
+</div>
+
+</section>
+
+<section class="block" id="s7" data-anchor="excess-pore-pressure">
+<h2 class="block-title">Excess pore pressure</h2>
+
+	
+<figure  >
+<img loading="lazy" src='../../Rate_Consolidation/FiguresGeneral/excess_pore_pressure_dissipation.gif' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+
+
+
+	
+	<figure >
+	  <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/solution.svg" style="width:100%" data-preload/>
+	  <footer ><small></small></footer>
+	</figure>
+
+</section>
+
+<section class="block" id="s8" data-anchor="total-pore-pressure">
+<h2 class="block-title">Total pore pressure</h2>
+
+
+<figure  >
+	<img loading="lazy" src='../../Rate_Consolidation/FiguresGeneral/pore_pressure_dissipation.gif' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+
+
+
+	<figure  >
+	  <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/withhydrostatic.svg" style="width:100%" data-preload/>
+	  <footer ><small></small></footer>
+	</figure>
+
+</section>
+
+<section class="block" id="s9" data-anchor="degree-of-consolidation">
+<h2 class="block-title">Degree of consolidation</h2>
+
+	
+	<div class='textBox' >
+	We have determined how the <span class="blank" data-bid="Rate_Consolidation.13bde2ab-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> <strong style='color:green'>\(u\)</strong> changes with time but not the <strong style='color:black'>settlement</strong>. Therefore, we need to introduce a smart mapping between the excess pore pressures and the settlements.
+	</div>
+
+	<div >	<div class='defBox' name='Degree of consolidation' >
+		<strong style='color:green'>\(U\)[%]:</strong> Describes the percentage of settlement with respect to the primary consolidation settlement. <br>
+		<div class='equationBox'>
+		\( U(t)=\cfrac{\delta(t)}{\delta_{pc}} \times 100 \)
+		</div>
+	</div></div>
+
+
+
+	<ul >
+		<li >\(t=0 \) \(\longrightarrow\) \(\delta=0\) \(\longrightarrow\) \(U=0\%\)</li>
+
+		<li >\(t= \infty \) \(\longrightarrow\) \(\delta=\delta_{pc}\) \(\longrightarrow\) \(U=100\%\)</li>
+	</ul>
+
+</section>
+
+<section class="block check-yourself" id="s10" data-anchor="participation-question-7-4">
+<h2 class="block-title">Participation question 7.4</h2>
+
+
+<div class='InquiryBox' >
+	The settlement due to primary consolidation of a clay layer is 15.6 ft. What would be the settlement at <strong style='color:orange'>50%</strong> of the consolidation process.
+</div>
+
+
+<ol class='iClicker' >
+<li class='l2'>0 ft</li>
+<li class='l2'>15.6 ft</li>
+<li class='l2'>7 ft</li>
+<li class='l2'>7.8 ft</li>
+<li class='l2'>8 ft</li>
+</ol>
+
+</section>
+
+<section class="block" id="s11" data-anchor="s11">
+
+<div class='textBox' >
+Now we need to link the excess pore pressure to the degree consolidation.
+</div>
+
+<p > \( \cfrac{\Delta u (t,z)}{\Delta u_0} \)</p>
+<p > \( U_z(t,z)= 1-\cfrac{\Delta u (t,z)}{\Delta u_0} \)</p>
+<p > \( U(t)= \int_{Z=0}^{Z=1} U_z(t, z) dZ=\int_{Z=0}^{Z=1} 1-\cfrac{\Delta u (t,z)}{\Delta u_0} \) </p>
+<div ><div class='equationBox'>
+	\(U(t)= 1- \sum_{n=0}^{\infty} \cfrac{8}{\pi^2 (2n+1)^2} \exp \left[- \cfrac{(2n+1)^2 \pi^2 }{4}T_v\right]\)
+</div></div>
+
+
+
+
+	<div class='container'>
+	<div class='col' style='--colw:22%'>
+	<table style="font-size: 0.8em; background-color: antiquewhite">
+	<tr>
+		<th>\(U\) [%]</th>
+		<th>\(T_v\)</th>
+
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>0.00196</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>0.00785</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>0.0177</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>0.0314</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>0.0491</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>0.0707</td>
+	</tr>
+	<tr>
+		<td>35</td>
+		<td>0.0962</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>0.126</td>
+	</tr>
+	<tr>
+		<td>45</td>
+		<td>0.159</td>
+	</tr>
+	<tr>
+		<td style="font-weight: bold; color: green">50</td>
+		<td style="font-weight: bold; color: green">0.197</td>
+	</tr>		
+	</table>
+	</div>
+	<div class='col' style='--colw:18%'>
+	
+	<table style="font-size: 0.8em; background-color: antiquewhite">
+		<tr>
+			<th>\(U\) [%]</th>
+			<th>\(T_v\)</th>
+	
+		</tr>		
+		<tr>
+			<td>55</td>
+			<td>0.239</td>
+		</tr>
+		<tr>
+			<td>60</td>
+			<td>0.286</td>
+		</tr>
+		<tr>
+			<td>65</td>
+			<td>0.340</td>
+		</tr>
+		<tr>
+			<td>70</td>
+			<td>0.403</td>
+		</tr>
+		<tr>
+			<td>75</td>
+			<td>0.477</td>
+		</tr>
+		<tr>
+			<td>80</td>
+			<td>0.567</td>
+		</tr>
+		<tr>
+			<td>85</td>
+			<td>0.676</td>
+		</tr>
+		<tr>
+			<td style="font-weight: bold; color: green">90</td>
+			<td style="font-weight: bold; color: green">0.848</td>
+		</tr>
+		<tr>
+			<td style="font-weight: bold; color: green">95</td>
+			<td style="font-weight: bold; color: green">1.129</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>\(\infty\)</td>
+		</tr>
+	
+			
+		</table>
+	</div>
+	
+	<div class='col' style='--colw:60%'>
+		<h4>Graphical and Tabulated solution</h4>
+	<figure >
+	<img loading="lazy" src='../../Rate_Consolidation/FiguresGeneral/degree_of_consolidation.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+
+
+
+
+</section>
+
+<section class="block" id="s12" data-anchor="solution-approximations">
+<h2 class="block-title">Solution approximations</h2>
+
+	
+<table style="background-color: antiquewhite">
+	<tr style="font-weight: bold">
+		<td>Ind. variable</td>
+		<td>Equation</td>
+		<td>Range of validity</td>
+	</tr>
+	<tr>
+		<td>\(T_v\)</td>
+		<td>\(T_v=\cfrac{\pi}{4}(U/100)^2\)</td>
+		<td>\(U < 60\%\)</td>
+	</tr>
+	<tr>
+		<td>\(T_v\)</td>
+		<td>\(T_v=1.781-0.933 \log(100-U)\)</td>
+		<td>\(U \geq 60\%\)</td>
+	</tr>
+	<tr>
+		<td>\(U\) [%]</td>
+		<td>\(U=2 \sqrt{\cfrac{T_v}{\pi}} \times 100\)</td>
+		<td>\(T_v \leq 0.2\)</td>
+	</tr>
+	<tr>
+		<td>\(U\) [%]</td>
+		<td>\(U=[1-\frac{8}{\pi^2}\exp(-\pi ^2 T_v /4)] \times 100\)</td>
+		<td>\(T_v>0.2\)</td>
+	</tr>
+</table>
+
+
+</section>
+
+<section class="block" id="s13" data-anchor="example-7-5">
+<h2 class="block-title">Example 7.5</h2>
+
+
+<div class='textBox' >
+Calculate the value of \(T_v\) for degrees of consolidation equal to 50%, 90%, and 95% using the approximate solution.
+</div>
+<div class='ProblemBox' >
+
+<div class="sol" data-id="ex-7-5" style="--sol-line: 1.2; font-size: 1em">
+
+  <div class="step">
+    <span class="lead">Data</span>
+    \(U=50\%,\ 90\%,\) and \(95\%\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    Approximation to solution
+  </div>
+
+  
+    
+
+      <div class="step">
+        <span class="lead">\(U=50\%\)</span> <br>
+        Use: \(T_v=\dfrac{\pi}{4}\left(U/100\right)^2\) <br>
+        \(T_v=\) <span class="blank math" data-bid="Rate_Consolidation.a6f6e000-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:32ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.7c8f7afd-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+      <div class="step">
+        <span class="lead">\(U=90\%\)</span> <br>
+        Use: \(T_v=1.781-0.933\log(100-U)\) <br>
+        \(T_v=\) <span class="blank math" data-bid="Rate_Consolidation.6534a871-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.92a7f83c-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+    
+
+
+      <div class="step">
+        <span class="lead">\(U=95\%\)</span> <br>
+        Use: \(T_v=1.781-0.933\log(100-U)\) <br>
+        \(T_v=\) <span class="blank math" data-bid="Rate_Consolidation.6534a871-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.92a7f83c-1" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+      </div>
+
+  
+  
+
+</div>
+
+</div>
+
+</section>
+
+<section class="block" id="s14" data-anchor="determining-the-coefficient-of-consolida">
+<h2 class="block-title">Determining the coefficient of consolidation</h2>
+
+	
+	<ul>
+		<li > Need the time-settlement curve </li>
+		<li > Drainage conditions must be known (single vs double drainage) </li>
+		<li > Determine times corresponding to known degrees of consolidation (e.g., \(t_{50}\), \(t_{90}\)) </li>
+
+	</ul>
+	<p >Methods to determine \(C_v\)</p>
+
+	<ul>
+		<li > <strong style="color:black">Casagrande (1940)</strong> \(\longrightarrow\) \(t_{50}\) </li>
+		<li > <strong style="color:black">Taylor (1948)</strong> \(\longrightarrow\) \(t_{90}\) </li>
+		<li > Robinson and Allam (1996) \(\longrightarrow\) \(t_{22}\) </li>
+		<li > Mesri et al. (1999) \(\longrightarrow\) \(t_{70}\) </li>
+		<li > Feng and Lee (2001) \(\longrightarrow\) \(t_{60}\) </li>
+	</ul>
+
+</section>
+
+<section class="block" id="s15" data-anchor="casagrande-s-method">
+<h2 class="block-title">Casagrande's method</h2>
+
+	
+<img loading="lazy" src="figures/Consol_time.svg" style="width:100%" alt=""/>
+
+<div class='equationBox' >
+\( C_v= 0.197 \cfrac{H_{dr}^2}{t_{50}} \)
+</div>
+
+
+
+	<div class='findingBox' >
+		Steps to calculate settlement due to P.C. with time:
+	</div>
+	
+	<ol style="font-size:1em">
+		<li>For a time \(t\), calculate the corresponding dimensionless time \(T_v\): <br>
+			\(T_v=\cfrac{C_v t}{H_{dr}^2}\)
+		
+		</li>
+		<li>Use any of i) the analytical solution, ii) approximate solutions, iii) tabulated values and obtain the corresponding degree of consolidation \(U(t)\)</li>
+		<li>Determine the final settlement from primary consolidation \(\delta_{pc}\)</li>
+		<li>Apply the definition of degree of consolidation and determine the settlement at time \(t\): <br>
+			\(U(t)=\cfrac{\delta(t)}{\delta_{pc}}\)
+
+		</li>
+	</ol>
+
+
+</section>
+
+<section class="block" id="s16" data-anchor="example-7-6">
+<h2 class="block-title">Example 7.6</h2>
+
+	
+	<div class='textBox' style='font-size: 1em'>	<p>For Example 7.1, determine the time required to obtain 95% degree of consolidation if the clay's coefficient of consolidation is \(C_v=15\) m\(^2\)/yr (Boston's blue clay) or \(C_v=0.4\) m\(^2\)/yr (Mexico City clay). In both cases plot settlement vs. time.</p> 
+
+		
+</div>
+<figure>
+	<img loading="lazy" src='../../Rate_Consolidation/FiguresGeneral/Profile_ex61.svg' style='width:45%'/>
+</figure>
+<div class='ProblemBox' >
+<div class="sol" data-id="ex-7-6" style="--sol-line: 1.2; font-size: 1em">
+
+  
+
+  <div class="step">
+    <span class="lead">Data</span>
+    \(\delta_{pc}=0.509\unit{m}\), \(C_v=15\unit{m^2/yr}\), \(C_v=0.4\unit{m^2/yr}\), \(U=95\%\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Principles</span> <br>
+    \(\delta(t)=\delta_{pc}\,U(t)/100\) &emsp; \(T_v=\dfrac{C_v t}{H_{dr}^2}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Assume \(C_v=15\unit{m^2/yr}\)</span> <br>
+    \(T_v=\) <span class="blank" data-bid="Rate_Consolidation.0b077559-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    <span class="note">From table for \(U=95\%\).</span> <br>
+    \(t=\dfrac{T_v H_{dr}^2}{C_v}=\)
+    <span class="blank math" data-bid="Rate_Consolidation.7e573f27-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+    \(=\) <span class="blank ans" data-bid="Rate_Consolidation.1a83932e-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{yrs}\)
+  </div>
+
+  
+
+
+      <div class="step">
+        <span class="lead">Assume \(C_v=0.4\unit{m^2/yr}\)</span> <br>
+        \(t=\) <span class="blank math" data-bid="Rate_Consolidation.7c515965-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.e86587c1-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{yrs}\)
+        <span class="note">Depending on load and material, time can go up to centuries.</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">Calculate settlement vs. time</span> <br>
+        Use a list of known times, e.g. \(t=0\) to \(75\unit{yrs}\). <br>
+        Sample calculation for \(t=25\unit{yrs}\) <br>
+        a) for \(C_v=15\unit{m^2/yr}\): \(T_v=\dfrac{C_v t}{H_{dr}^2}=\)
+        <span class="blank math" data-bid="Rate_Consolidation.904dd6dc-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Rate_Consolidation.8914a120-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(U[\%]=\left[1-\dfrac{8}{\pi^2}\exp(-\pi^2T_v/4)\right]\times100\) <br>
+        \(\phantom{U[\%]}=\) <span class="blank math" data-bid="Rate_Consolidation.39c18af8-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        \(=\) <span class="blank" data-bid="Rate_Consolidation.925baae4-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span>\(\%\)
+      </div>
+
+
+      <div class="step">
+        \(\delta(25\unit{yr})=\) <span class="blank math" data-bid="Rate_Consolidation.c221ce55-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.edb125c2-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+      <div class="step">
+        b) for \(C_v=0.4\unit{m^2/yr}\): <br>
+        \(T_v=\dfrac{C_v t}{H_{dr}^2}=\) <span class="blank math" data-bid="Rate_Consolidation.904dd6dc-1" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:29ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank" data-bid="Rate_Consolidation.8914a120-1" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        From table: \(U[\%]=\) <span class="blank" data-bid="Rate_Consolidation.ad2b1ea4-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\%\)
+      </div>
+
+      <div class="step result">
+        \(\delta(25\unit{yr})=\) <span class="blank math" data-bid="Rate_Consolidation.19852f95-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.edb125c2-1" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+        <span class="note">You can repeat this process in a spreadsheet.</span>
+      </div>
+
+
+  
+
+  
+  <div class="step">
+    <span class="lead">Repeat for the list of times</span>
+    \(H_{dr}=5\unit{m}\), \(\delta_{pc}=0.509\unit{m}\)
+  </div>
+
+      <table class="sol-table">
+        <tr><th rowspan="2">\(t\) (yr)</th><th colspan="3">Boston, \(C_v=15\unit{m^2/yr}\)</th><th colspan="3">Mexico City, \(C_v=0.4\unit{m^2/yr}\)</th></tr>
+        <tr><th>\(T_v\)</th><th>\(U\) (%)</th><th>\(\delta\) (m)</th><th>\(T_v\)</th><th>\(U\) (%)</th><th>\(\delta\) (m)</th></tr>
+        <tr><td class="lbl">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="lbl">0.25</td><td>0.150</td><td>43.7</td><td>0.222</td><td>0.004</td><td>7.1</td><td>0.036</td></tr>
+        <tr><td class="lbl">0.5</td><td>0.300</td><td>61.3</td><td>0.312</td><td>0.008</td><td>10.1</td><td>0.051</td></tr>
+        <tr><td class="lbl">1</td><td>0.600</td><td>81.6</td><td>0.415</td><td>0.016</td><td>14.3</td><td>0.073</td></tr>
+        <tr><td class="lbl">1.88</td><td>1.128</td><td>95.0</td><td>0.483</td><td>0.030</td><td>19.6</td><td>0.100</td></tr>
+        <tr><td class="lbl">5</td><td>3.000</td><td>100.0</td><td>0.509</td><td>0.080</td><td>31.9</td><td>0.162</td></tr>
+        <tr><td class="lbl">10</td><td>6.000</td><td>100.0</td><td>0.509</td><td>0.160</td><td>45.1</td><td>0.230</td></tr>
+        <tr><td class="lbl">25</td><td>15.00</td><td>100.0</td><td>0.509</td><td>0.400</td><td>69.8</td><td>0.355</td></tr>
+        <tr><td class="lbl">50</td><td>30.00</td><td>100.0</td><td>0.509</td><td>0.800</td><td>88.7</td><td>0.452</td></tr>
+        <tr><td class="lbl">70.6</td><td>42.36</td><td>100.0</td><td>0.509</td><td>1.130</td><td>95.0</td><td>0.484</td></tr>
+        <tr><td class="lbl">75</td><td>45.00</td><td>100.0</td><td>0.509</td><td>1.200</td><td>95.8</td><td>0.488</td></tr>
+      </table>
+      <span class="sol-fig" >
+        <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/ex-7-6-settlement.svg" style="width: 75%"
+             alt="Settlement versus time for 0 to 75 years. The Boston blue clay reaches 95% of the 0.509 m settlement at 1.88 years; the Mexico City clay reaches it at 70.6 years.">
+      </span>
+
+</div>
+</div>
+
+</section>
+
+<section class="block" id="s17" data-anchor="secondary-consolidation">
+<h2 class="block-title">Secondary consolidation</h2>
+
+	
+<div class='defBox' name='Secondary consolidation' style='font-size: 1em'> <strong style='color:green'> \(\delta_{sc}\): </strong> Occurs after all excess pore pressure is dissipated. This is also known as <strong style="color:black">creep</strong>. 
+<div class='equationBox'> \( \delta_{sc}= \cfrac{ C_{\alpha} H_o}{1+e_o} \log \left(  \cfrac{t_f}{t_{EOP}} \right) \) </div>
+</div>
+
+<div class='container'>
+<div class='col' style="--colw:50%">
+	<figure>
+		<img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/secondary_new.svg" style="width:100%" data-preload/>
+		<footer ><small></small></footer>
+	  </figure>
+</div>
+<div class='col' style="--colw:50%">
+<ul>
+	<li>Is a time dependent slippage between grains, breaking, bending,..</li>
+	<li>Occurs in all type of soils, specially in peats, organic clay, and sensitive clay.</li>
+
+</ul>
+</div>
+</div>
+
+
+
+</section>
+
+<section class="block" id="s18" data-anchor="example-7-7">
+<h2 class="block-title">Example 7.7</h2>
+
+
+<div class='textBox' style='font-size: 1em'> <p> The clay of Example 7.1 is Boston blue clay (Example 7.6) with \(C_\alpha=0.0351\). Find the secondary compression settlement 10 yrs after primary consolidation ends. </p>
+</div>
+
+<div class='ProblemBox' >
+	
+<div class="sol" data-id="ex-7-7" style="--sol-line: 1.2; font-size: 1em">
+
+
+      <div class="step">
+        <span class="lead">Data</span>
+        \(H_0=10\unit{m}\), \(C_\alpha=0.0351\), \(e_0=1.161\) <br>
+        \(t_{95\%}=1.88\unit{yrs}\) (Assuming Boston clay properties)
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span> <br>
+        \(\delta_{sc}=\dfrac{C_\alpha H_0}{1+e_0}\log\left(t_f/t_{EOP}\right)\)
+      </div>
+
+
+      <div class="step">
+        <span class="lead">Final time</span> <br>
+        \(t_f=\) <span class="blank math" data-bid="Rate_Consolidation.49bf0ff1-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Rate_Consolidation.19259d36-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{yrs}\)
+        <span class="note">Starting calculation at 95% of consolidation.</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Secondary compression settlement</span> <br>
+        \(\delta_{sc}=\) <span class="blank math" data-bid="Rate_Consolidation.0520a609-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\)
+        <span class="blank ans" data-bid="Rate_Consolidation.789a1232-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{m}\)
+      </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<section class="block check-yourself" id="s19" data-anchor="participation-question-7-5">
+<h2 class="block-title">Participation question 7.5</h2>
+
+
+<div class='InquiryBox' >
+	How can we accelerate the time of primary consolidation?
+</div>
+<ol class='iClicker' >
+	<li class='l2'>Increasing the surcharge load.</li>
+	<li class='l2'>Increasing the permeability of the soil</li>
+	<li class='l2'>Reducing the water path length</li>
+	<li class='l2'>None is possible</li>	
+	</ol>
+
+
+</section>
+
+<section class="block" id="s20" data-anchor="consolidation-due-to-radial-flow">
+<h2 class="block-title">Consolidation due to radial flow</h2>
+
+	
+	<figure>
+	  <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/radial_consolidation.svg" style="width:100%" data-preload/>
+	  <footer ><small></small></footer>
+	</figure>
+
+	<div class="container">
+		<div class="col">
+
+		</div>
+		<div class="col">
+	                <p >
+						<div class='equationBox'>  \( \cfrac{\partial u}{\partial t}= C_v \cfrac{\partial^2 u}{\partial z^2}+ C_{vr}\left[\cfrac{\partial ^2 u}{\partial z^2}+ \cfrac{1}{r} \cfrac{\partial u}{\partial r}\right] \)</div>
+					</p>
+		</div>
+	</div>
+
+	
+		<div class="embed-placeholder" data-src="https://www.youtube.com/embed/eTGa0fG9HWY?autoplay=0&rel=0&modestbranding=1" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>	
+
+
+</section>
+
+<section class="block" id="s21" data-anchor="case-history-kansai-international-airpor">
+<h2 class="block-title">Case history: Kansai International Airport</h2>
+
+	
+<div class="container">
+	<div class="col" style="--colw:50%">
+            <figure>
+              <img loading="lazy" src="https://www.researchgate.net/profile/Jian-Chu-5/publication/258311283/figure/fig46/AS:645337597349888@1530871881269/Kansai-International-airport-Phase-2-in-front-and-Phase-1-in-the-back.png" style="width:100%" data-preload/>
+              <footer ><small></small></footer>
+            </figure>
+	</div>
+	<div class="col" style="--colw:50%">
+		<div class='textBox' >
+		<ul>
+			<li >Constructed in the Osaka Bay in 18 m to 20 m depth.</li>
+			<li >Objective was to avoid noise pollution and land acquisition disputes.</li>
+			<li ><strong style='color:green'>2.2 million</strong> vertical sand drains used.</li>
+			<li >The island is predicted to settle below sea level by 2067.</li>
+		</ul>
+		</div>
+	</div>
+</div>
+
+</section>
+
+<section class="block" id="s22" data-anchor="soils-at-the-kansai-bay">
+<h2 class="block-title">Soils at the Kansai bay</h2>
+
+	
+	<figure >
+	  <img loading="lazy" src="../../Rate_Consolidation/FiguresGeneral/soils_kansai.svg" style="width:100%" data-preload/>
+	  <footer ><small>From Mesri and Funk (2015)</small></footer>
+	</figure>
+
+
+</section>
+
+<section class="block" id="s23" data-anchor="measured-and-predicted-settlements">
+<h2 class="block-title">Measured and predicted settlements</h2>
+
+
+<figure >
+<img loading="lazy" src='../../Rate_Consolidation/FiguresGeneral/Kansai_settlements.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em>From Mesri and Funk (2015)</em> </footer>
+</figure>
+
+
+<div class='InquiryBox' >
+What problems can arise due to the staggering settlement of the Kansai airport islands?
+</div>
+
+<ul >
+	<li >Sea level rise and settlement will interrupt operations.</li>
+	<li >Even if not at SLE yet, the airport becomes more susceptible to weather and natural disasters.</li>
+	<li >This is turn, makes the operation of the airport riskier and more expensive.</li>
+	<li >In the long term, without extraordinary measurements, the airport is doomed to be lost.</li>
+</ul>
+
+
+
+<div class='InquiryBox' >
+What engineering solutions have been implemented so far?
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:50%'>
+<ul >
+	<li >Adding fill. However, this exacerbates the settlement problem.</li>
+	<li >Using light-weight materials, but these are usually more expensive.</li>
+	<li >Rising up the terminals.</li>
+</ul>
+</div>
+<div class='col' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2020/08/GettyImages-1026776432-1-1000x667.jpg' width='80%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+<figure >
+<img loading="lazy" src='https://cdn-xtech.nikkei.com/atcl/nxt/mag/ncr/18/00033/101500004/02.jpg?__scale=w:500,h:333&_sh=020f003b0b' width='80%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

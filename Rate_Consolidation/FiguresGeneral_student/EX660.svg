@@ -298,8 +298,7 @@
          style="stroke-width:0.264583"
          x="1.3213557"
          y="18.220852">Tv= </tspan></text>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="5.6032648"
@@ -310,13 +309,11 @@
          style="fill:#000080;stroke-width:0.264583"
          x="5.6032648"
          y="18.220852">1.129</tspan></text>
--->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide);stroke-dasharray:none"
        d="m 11.607263,17.331081 h 5.085304"
-       id="path21" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       id="path21" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:2.2142px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="17.362514"
@@ -327,7 +324,6 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="17.362514"
          y="18.07221">from table for U=95%</tspan></text>
--->
     <g class="fragment"
        id="g27"
        transform="translate(-5.9984633,2.6832484)">
@@ -395,8 +391,7 @@
            x="49.465168"
            y="17.874577">Cv</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g32"
        transform="translate(-5.224468,0.44849279)">
       <text
@@ -442,9 +437,7 @@
              y="10.353079">2</tspan></text>
       </g>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g31"
        transform="translate(-5.4938677,0.18189776)">
       <path
@@ -467,9 +460,7 @@
            y="11.175052"
            id="tspan35">drainage</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000080;stroke-width:0.264583"
        x="55.634502"
@@ -480,9 +471,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="55.634502"
          y="20.32999">15</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#008000"
        x="66.044426"
@@ -493,6 +482,5 @@
          style="stroke-width:0.264583;fill:#008000"
          x="66.044426"
          y="18.375952">=1.88 yrs</tspan></text>
--->
   </g>
 </svg>
