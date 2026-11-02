@@ -39,7 +39,7 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #7abbe6;
-$barprogress_color: #7abbe6;
+$barprogress_color: #e6d07a;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: darken( #7abbe6, 25% );
 
@@ -54,7 +54,7 @@ $heading4Size: 1.0em;
   text-align: center;
   font-style: bold;
   border-bottom-style: solid;
-  border-bottom-color: #d6d2c4;
+  // border-bottom-color: #d6d2c4;
   padding-bottom: 0px;
   border-bottom-width: 3px;
   font-size: $heading1Size;

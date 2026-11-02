@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         svgPaths.forEach(path => {
             const tagType = getTagType(path);
 
-            // Select case based on the tag type
+            // Select case based on the tag type            
 
             // If the tag type is path
             if (tagType === 'path') {
-                // If path has dash style then save it 
+                // If path has dash style then save it
+                
+                
                 if (path.style.strokeDasharray) {
                     path.setAttribute('ns1:stroke-dasharray', path.style.strokeDasharray);
                     
