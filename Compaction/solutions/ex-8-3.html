@@ -1,0 +1,81 @@
+<!-- Example 8.3 — theoretical maximum dry unit weight and the zero air voids line.
+     Two parts:
+       part 1 = statement slide, two columns as on the handwritten slide:
+                data, principles, gamma_w | results in pcf and kN/m3
+       part 2 = list of water contents and plot (replaces the Google Sheet slide)
+     Legacy figure: FiguresGeneral/EX330.svg.
+     The plot is FiguresGeneral/ex-8-3-zav.svg (matplotlib). -->
+<div class="sol" data-id="ex-8-3" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <!-- ============ part 1 — maximum dry unit weight ============ -->
+
+  <div class="sol-cols" data-part="1">
+    <div class="sol-col">
+
+      <div class="step" data-part="1">
+        <span class="lead">Data</span>
+        \(w=6\%\), \(G_s=2.66\)
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Principles</span> <br>
+        \(\gamma_{d,max}=\dfrac{\gamma_w G_s}{1+wG_s}\)
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Unit weight of water</span> <br>
+        \(\gamma_w=9.81\unit{kN/m^3}\) or
+        \(\underbrace{\gamma_w=62.4\unit{pcf}}_{\textcolor{red}{\text{Let's work with this}}}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="1">
+        <span class="lead">In pcf</span> <br>
+        \(\gamma_{d,max}=\)
+          <span class="fill">\(\dfrac{62.4\times2.66}{1+\underbrace{0.06}_{\textcolor{red}{\substack{w\\ \text{in}\\ \text{[-] form}}}}\times2.66}\)</span> \(=\)
+        <span class="ans">143.1</span> \(\unit{pcf}\)
+      </div>
+
+      <div class="step result" data-part="1">
+        <span class="lead">In kN/m\(^3\)</span> <br>
+        \(\gamma_{d,max}=\) <span class="fill">\(\dfrac{9.81\times2.66}{1+0.06\times2.66}\)</span> \(=\)
+        <span class="ans">22.5</span> \(\unit{kN/m^3}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==== part 2 — more water contents, ZAV and lines of equal saturation ==== -->
+
+  <!-- Printed in full (no blanks). The table sits outside the steps so it is on
+       screen at once instead of being typed cell by cell. It starts at 5%, not 6%,
+       so it does not print the answer of part 1 in the book. -->
+  <div class="step" data-part="2">
+    <span class="lead">Repeat for a list of water contents to plot the lines</span> <br>
+    \(\gamma_d=\dfrac{\gamma_w G_s}{1+wG_s/S}\) with \(S=100\%\) (ZAV), \(80\%\) and \(60\%\)
+  </div>
+
+  <div class="sol-cols" data-part="2" style="align-items: center">
+    <div class="sol-col" style="flex: 0 0 42%">
+      <table class="sol-table" style="font-size: 0.9em">
+        <tr><th rowspan="2">\(w\) (%)</th><th colspan="3">\(\gamma_d\) (pcf)</th></tr>
+        <tr><th>\(S=100\%\)</th><th>\(S=80\%\)</th><th>\(S=60\%\)</th></tr>
+        <tr><td class="lbl">5</td><td>146.5</td><td>142.3</td><td>135.9</td></tr>
+        <tr><td class="lbl">10</td><td>131.1</td><td>124.6</td><td>115.0</td></tr>
+        <tr><td class="lbl">15</td><td>118.6</td><td>110.7</td><td>99.7</td></tr>
+        <tr><td class="lbl">20</td><td>108.3</td><td>99.7</td><td>88.0</td></tr>
+        <tr><td class="lbl">25</td><td>99.7</td><td>90.6</td><td>78.7</td></tr>
+        <tr><td class="lbl">30</td><td>92.3</td><td>83.1</td><td>71.2</td></tr>
+      </table>
+    </div>
+    <div class="sol-col">
+      <span class="sol-fig" style="margin: 0">
+        <img src="FiguresGeneral/ex-8-3-zav.svg" style="width: 86%"
+             alt="Dry unit weight versus water content from 4 to 32 percent for G_s = 2.66. The zero air voids line is on top, with the lines of 80 and 60 percent saturation below it. All three fall as water content rises.">
+      </span>
+    </div>
+  </div>
+
+</div>

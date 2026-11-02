@@ -1,0 +1,51 @@
+<!-- Example 8.1 — relative density and dry unit weight limits of uniform spheres.
+     Two columns, as on the handwritten slide:
+       data, principles, limiting void ratios | relative density, dry unit weights
+     The porosities are the cubic and rhombohedral packings of FiguresGeneral/spheres.svg.
+     Legacy figure: FiguresGeneral/EX310.svg. -->
+<div class="sol" data-id="ex-8-1" style="--sol-line: 1.15; font-size: 0.5em;">
+
+  <div class="sol-cols">
+    <div class="sol-col">
+
+      <div class="step">
+        <span class="lead">Data</span>
+        \(n_{max}=0.476\), \(n_{min}=0.26\), \(e=0.5\), \(G_s=2.65\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Principles</span> <br>
+        \(D_r=\dfrac{e_{max}-\overbrace{e}^{\textcolor{red}{\substack{\text{current} \\ \text{void} \\ \text{ratio}}}}}{e_{max}-e_{min}}\times100\)
+        &emsp; \(\underbrace{\gamma_d}_{\textcolor{red}{\text{dry density}}}=\dfrac{\gamma_w G_s}{1+e}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">Calculate \(e_{max}\) and \(e_{min}\)</span> <br>
+        Recall: \(n=\dfrac{e}{1+e}\Rightarrow e=\dfrac{n}{1-n}\) <br>
+        \(e_{max}=\dfrac{n_{max}}{1-n_{max}}=\) <span class="fill">\(\dfrac{0.476}{0.524}\)</span> \(=\) <span class="fill">0.908</span> <br>
+        \(e_{min}=\dfrac{n_{min}}{1-n_{min}}=\) <span class="fill">\(\dfrac{0.26}{0.74}\)</span> \(=\) <span class="fill">0.351</span>
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step">
+        <span class="lead">Calculate relative density</span> <br>
+        \(D_r=\) <span class="fill">\(\dfrac{0.908-\overbrace{0.5}^{\textcolor{red}{\substack{\text{current} \\ \text{void} \\ \text{ratio}}}}}{0.908-0.351}\times100\)</span> \(=\)
+        <span class="ans">73.3</span> \(\%\)
+      </div>
+
+      <div class="step result">
+        <span class="lead">Calculate max. and min. dry density</span> <br>
+        \(\gamma_{d,max}=\dfrac{\gamma_w G_s}{1+e_{min}}=\)
+        <span class="fill">\(\dfrac{\overbrace{62.4}^{\textcolor{red}{\text{lb/ft}^3}}\times2.65}{1+0.351}\)</span> \(=\)
+        <span class="ans">122</span> \(\unit{pcf}\) <br>
+        \(\gamma_{d,min}=\dfrac{\gamma_w G_s}{1+e_{max}}=\)
+        <span class="fill">\(\dfrac{62.4\times2.65}{1+0.908}\)</span> \(=\)
+        <span class="ans">86.7</span> \(\unit{pcf}\)
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,59 @@
+<!-- Example 8.5 — field dry unit weight and water content range from a relative compaction.
+     Two columns, as on the handwritten slide: plot | data, principles, sample calculation, table.
+     Values from the approved Example 8.4, with the test point at w = 10% that gives
+     the 95% range its dry limit.
+     Legacy figure: FiguresGeneral/EX350.svg.
+     The plot is FiguresGeneral/ex-8-5-rc.svg (matplotlib), animated on click. -->
+<div class="sol" data-id="ex-8-5" style="--sol-line: 1.2; font-size: 0.56em;">
+
+  <div class="sol-cols">
+    <div class="sol-col" style="flex: 1 1 0">
+      <span class="sol-fig" style="margin: 0">
+        <!-- The curve is on screen from the start: it was interpreted in Example 8.4.
+             Each click adds the next layer, for 98% then 95%: horizontal line, label,
+             dry vertical, wet vertical. External_svg.js draws them; the book and
+             student builds strip them. -->
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-8-5-rc.svg" style="width:100%"
+                aria-label="Compaction curve of Example 8.4 with its peak marked. Clicking draws horizontal lines at the dry unit weights for 98 and 95 percent relative compaction, and vertical lines from where they cross the curve down to the water content axis."></object>
+      </span>
+    </div>
+    <div class="sol-col" style="flex: 1.15 1 0; border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step">
+        <span class="lead">Data</span>
+        \(\gamma_{d,max}=106\unit{pcf}\), \(w_{opt}=17.6\%\), \(G_s=2.67\)
+      </div>
+
+      <br>
+
+      <div class="step">
+        <span class="lead">Principles</span>
+        \(RC=\dfrac{\gamma_{d,field}}{\gamma_{d,max}}\times100\)
+      </div>
+
+      <br>
+
+      <div class="step">
+        <span class="lead">Sample calculation (\(RC=98\%\))</span> <br>
+        \(\gamma_{d,field}=0.98\times\gamma_{d,max}=\) <span class="fill">\(0.98\times106\)</span> \(=\)
+        <span class="fill">103.9</span> \(\unit{pcf}\) <br>
+        For \(RC=95\%\): \(\gamma_{d,field}=\) <span class="fill">\(0.95\times106\)</span> \(=\)
+        <span class="fill">100.7</span> \(\unit{pcf}\)
+      </div>
+
+      <br>
+
+      <div class="step">
+        <span class="lead">Read the water contents off the curve</span>
+      </div>
+
+      <table class="sol-table">
+        <tr><th>\(RC\)</th><th>Min \(\gamma_{d,field}\) (pcf)</th><th>\(w\) range (%)</th></tr>
+        <tr><td class="lbl">\(98\%\)</td><td><span class="ans">103.9</span></td><td><span class="ans">13.9</span> to <span class="ans">21.6</span></td></tr>
+        <tr><td class="lbl">\(95\%\)</td><td><span class="ans">100.7</span></td><td><span class="ans">11.0</span> to <span class="ans">24.2</span></td></tr>
+      </table>
+
+    </div>
+  </div>
+
+</div>

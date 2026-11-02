@@ -1,0 +1,68 @@
+<!-- Example 8.2 — compaction effort of a Proctor test, in SI and US units.
+     Two parts:
+       part 1 = statement slide, two columns: data, principles | SI substitution, conversion
+       part 2 = new slide: US data, US substitution
+     The handwritten slide has all of this on one slide, but with the statement above
+     it does not fit, so the US calculation moved to its own slide.
+     N_l = 5 as in the statement; the handwritten Data block says 3 (see ex-8-2.md).
+     Legacy figure: FiguresGeneral/EX320.svg. -->
+<div class="sol" data-id="ex-8-2" style="--sol-line: 1.2; font-size: 0.52em;">
+
+  <!-- ============ part 1 — data, principles | SI units ============ -->
+
+  <div class="sol-cols" data-part="1">
+    <div class="sol-col" style="flex: 0.8 1 0">
+
+      <div class="step" data-part="1">
+        <span class="lead">Data</span>
+        \(h_d=45.7\unit{cm}\), \(m_h=4.54\unit{kg}\) <br>
+        \(V=943\unit{cm^3}\), \(N_b=25\)/layer, \(N_l=5\)
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Principles</span>
+        \(E_{comp}=m_h g\,\dfrac{h_d N_b N_l}{V}\) <br>
+        Note: this equation is unit-consistent
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="1">
+        <span class="lead">Substitute in SI units</span> <br>
+        \(E_{comp}=\)
+        <span class="fill">\(\underbrace{4.54\times9.81}_{\textcolor{red}{\text{N}}}\times\underbrace{\dfrac{45.7\times25\times5}{943}}_{\textcolor{red}{\text{cm/cm}^3}}\)</span>
+        \(=\) <span class="fill">270</span> \(\unit{N\,cm/cm^3}\)
+      </div>
+
+      <div class="step result" data-part="1">
+        <span class="lead">Convert to kJ/m\(^3\)</span> <br>
+        \(E_{comp}=270\unit{N\,cm/cm^3}\times\dfrac{(100\unit{cm})^2}{\unit{m^2}}=\)
+        <span class="fill">2,700,000</span> \(\overbrace{\unit{N\,m}}^{\textcolor{red}{\text{Jules}}}/\unit{m^3}=\)
+        <span class="ans">2,700</span> \(\unit{kJ/m^3}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==== part 2 — US units ==== -->
+
+  <div data-part="2" style="font-size: 1em">
+
+    <div class="step" data-part="2">
+      <span class="lead">Convert the data to US units</span> <br>
+      \(h_d=45.7\unit{cm}=\) <span class="fill">18</span> \(\unit{in}\) &emsp;
+      \(m_h=4.54\unit{kg}=\) <span class="fill">10</span> \(\unit{lb}\) &emsp;
+      \(V=\) <span class="fill">1/30</span> \(\unit{ft^3}\)
+    </div>
+
+    <div class="step result" data-part="2">
+      <span class="lead">Substitute in US units</span> <br>
+      \(E_{comp}=\)
+      <span class="fill">\(\underbrace{10}_{\textcolor{red}{\substack{\text{no gravity since}\\\text{lb is force}}}}\times\dfrac{\overbrace{(18/12)}^{\textcolor{red}{\text{in ft}}}\times25\times5}{1/30}\)</span> \(=\)
+      <span class="ans">56,250</span> \(\unit{lb\text{-}ft/ft^3}\)
+    </div>
+
+  </div>
+
+</div>

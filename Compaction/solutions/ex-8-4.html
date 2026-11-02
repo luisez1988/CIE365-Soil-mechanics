@@ -1,0 +1,71 @@
+<!-- Example 8.4 — interpreting a modified Proctor test.
+     Two parts, matching the deck's two slides:
+       part 1 = statement slide, beside the data table: data, principles
+       part 2 = two-column slide: plot | peak, void ratio, saturation
+     Part labels follow the statement, (i) to (iv).
+     Legacy figures: FiguresGeneral/EX340.svg (part 1) + EX341.svg (part 2).
+     The plot is FiguresGeneral/ex-8-4-proctor.svg (matplotlib), animated on click.
+     Its peak labels sit in the .Animate layers, so they never reach the book. -->
+<div class="sol" data-id="ex-8-4" style="--sol-line: 1.2; font-size: 0.58em;">
+
+  <!-- ============ part 1 — data, principles ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    Given in table, \(G_s=2.67\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span> <br>
+    \(\gamma_{d,theory}=\dfrac{\gamma_w G_s}{1+wG_s/S}\) &emsp; \(Se=wG_s\)
+  </div>
+
+  <!-- ==== part 2 — plot | peak, e, S ==== -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.1 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">(iv) Plot the data, the ZAV and the line of \(S\) at the optimum</span>
+      </div>
+
+      <!-- Outside the step so the axes and test points are on screen at once. Each
+           click on the plot adds the next layer, in the order of the legacy figure:
+           curve, peak guide lines, the two labels, ZAV, line of S at the optimum.
+           External_svg.js draws them; the book and student builds strip them. -->
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-8-4-proctor.svg" style="width:100%"
+                aria-label="Axes of dry unit weight against water content with the seven test points. Clicking draws the compaction curve through them, the guide lines from its peak, the zero air voids line, and the line of equal saturation through the peak."></object>
+      </span>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="2">
+        <span class="lead">(i), (ii) According to the plot</span> <br>
+        \(\gamma_{d,max}=\) <span class="ans">106</span> \(\unit{pcf}\) <br>
+        \(w_{opt}=\) <span class="ans">17.6</span> \(\%\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="2">
+        <span class="lead">(iii) Void ratio</span> <br>
+        \(\gamma_d=\dfrac{\gamma_w G_s}{1+e}\Rightarrow1+e=\dfrac{\gamma_w}{\gamma_d}G_s\) <br>
+        \(1+e=\) <span class="fill">\(\dfrac{62.4}{106}\times2.67\)</span> \(=\)
+        <span class="fill">1.572</span> \(\Rightarrow e=\) <span class="ans">0.572</span>
+      </div>
+
+      <br>
+
+      <div class="step result" data-part="2">
+        <span class="lead">(iii) Saturation</span> <br>
+        \(S=\dfrac{wG_s}{e}=\) <span class="fill">\(\dfrac{0.176\times2.67}{0.572}\)</span> \(=\)
+        <span class="fill">0.822</span> <br>
+        \(S=\) <span class="ans">82.2</span> \(\%\)
+      </div>
+
+    </div>
+  </div>
+
+</div>
