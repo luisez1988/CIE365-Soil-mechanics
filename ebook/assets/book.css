@@ -295,6 +295,34 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1.2rem 3rem; }
   .col.bordered { border-right: none; border-bottom: 2px dashed #555; padding-bottom: 0.6rem; }
 }
 
+/* Photo mosaic (ported from the slide theme's .wall/.item): images flow
+   top-to-bottom through equal-width columns with no gaps. */
+.wall {
+  column-count: 4;
+  column-gap: 0;
+  margin: 0.6rem 0;
+  padding: 0;
+  width: 100%;
+}
+.wall .item {
+  background-color: rgba(92, 125, 156, 0.05);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  break-inside: avoid;
+}
+.wall .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@media (max-width: 700px) {
+  .wall { column-count: 2; }
+}
+
 /* --------------------------------------------------------------------------
    Semantic boxes (ported from the slide theme)
    -------------------------------------------------------------------------- */
