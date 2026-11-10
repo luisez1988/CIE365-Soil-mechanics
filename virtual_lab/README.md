@@ -32,6 +32,7 @@ virtual_lab/
     stress/                      induced vertical stress (Example 6.2/6.3 default scenario)
     oedometer/                   incremental-loading consolidation test (ASTM D2435)
     settlement/                  primary-consolidation settlement of a layered profile under surface loads
+    mohr/                        Mohr's circle of 2D stress (Example 9.1 default)
 ```
 
 ## Embedding in a deck
@@ -126,6 +127,25 @@ virtual_lab/
 - **Hash keys**: `u`, `gwt`, `nsub`, `sax`, `sec`, `sl`, `W`, `map`, `def`, `dsc`, `pv0`, `ppc`, `pds`, `pvf`, `ld`,
   and `ly`. `ly` holds the layers as `name,f|c,H,γ,γsat,e0,Cc,Cr,o|p,OCR,POP` joined by `;`. Example 7.4:
   `#u=US&gwt=0&W=40&ly=CH clay,f,25,125,125,0.95,0.33,0.04,o,1.5,0&ld=s,6000,0,0,0,15,20,0,1`
+
+## Model notes (Mohr's circle)
+
+- **Sign convention** (the State of Stress deck): compression +, shear + when it turns the element counter-clockwise,
+  angles + counter-clockwise from the horizontal. τxy is the shear on the vertical (x) faces, so
+  σα = (σx+σy)/2 + (σy−σx)/2·cos2α + τxy·sin2α and τα = (σy−σx)/2·sin2α − τxy·cos2α. The horizontal plane plots at
+  (σy, −τxy), the vertical plane at (σx, τxy), and the pole is (σx, −τxy).
+- **Element**: drawn at θ (angle of its x′ axis from the horizontal). The input boxes show the stresses on the element as drawn; typing σx, σy or τxy makes that element the original one (θ0 = θ), and the circle is rebuilt from it. The original element is drawn dashed and its planes are marked y0 and x0 on the circle. Its y′ faces (red) are the planes at θ, its x′ faces (blue) the
+  planes at θ + 90°. Normal arrows point at the face for compression; shear arrows follow the sign convention.
+- **Circle interactions**: dragging the y′ or x′ point sets θ; dragging the rim scales the radius, and dragging the
+  inside slides the centre along σ. Both keep the angle of the horizontal plane's point, and rewrite σx, σy, τxy.
+  Shift snaps angles to 5°.
+- **Tensor**: [[σx′, τx′y′], [τx′y′, σy′]] in the rotated frame, where τx′y′ is the x′-face value and appears in both
+  off-diagonal places (the tensor is symmetric); and diag(σ3, σ1) at θ = α1.
+- **View**: σ = 0 stays in view only when the circle is close to it; otherwise the τ axis is drawn broken at the left.
+- **Checks**: `index.html?autotest=1` runs `VLab.Mohr.selfTest()` (Example 9.1: σ1, σ3, α1, the 25° plane, the pole,
+  and the pole-ray property for several planes).
+- **Hash keys**: `sx`, `sy`, `txy` (horizontal frame), `th`, `th0`, `pr`, `ts`, `pole`, `cen`, `orig`, `aon`, `a`, `u`. Example 9.2 with the pole on:
+  `experiments/mohr/index.html#pole=true&aon=true&a=25`
 
 ## Adding an experiment
 

@@ -208,3 +208,38 @@ body.vl-embed .vl-head { display: none; }
 .st-modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 .st-wide th, .st-wide td { text-align: right; }
 .vl-number input[type="text"] { width: 130px; }
+
+/* Mohr's circle lab: full-stage plot with the element (top left) and the tensor (bottom right) floating on it. */
+.mc-main { grid-template-columns: minmax(0, 1fr) 250px; }
+.mc-stage { position: relative; min-height: 0; overflow: hidden; }
+.mc-stage > canvas { position: absolute; left: 0; top: 0; display: block; touch-action: none; outline: none; }
+.mc-card { position: absolute; z-index: 2; background: color-mix(in srgb, var(--vl-panel) 92%, transparent);
+  border: 1px solid var(--vl-line); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.mc-card-head { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--vl-muted);
+  padding: 6px 10px 0; }
+.mc-sub { text-transform: none; letter-spacing: 0; }
+.mc-elem { left: 10px; top: 10px; width: 262px; }
+.mc-elem-cv { position: relative; height: 224px; }
+.mc-elem-cv canvas { position: absolute; left: 0; top: 0; display: block; touch-action: none; cursor: grab; outline: none; }
+.mc-elem-cv canvas:focus-visible { box-shadow: inset 0 0 0 2px var(--vl-accent); }
+.mc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; padding: 0 10px; }
+.mc-inputs label { display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 13px; }
+.mc-inputs input { width: 72px; font: inherit; font-size: 13px; text-align: right; color: var(--vl-ink);
+  background: var(--vl-bg); border: 1px solid var(--vl-line); border-radius: 5px; padding: 1px 4px; }
+.mc-note { margin: 4px 10px 8px; font-size: 11.5px; color: var(--vl-muted); line-height: 1.3; }
+.mc-tensor { right: 10px; bottom: 10px; padding: 0 12px 8px; font-size: 14px; }
+.mc-tensor .mc-card-head { padding: 6px 0 2px; }
+.mc-trow { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.mc-mat { display: inline-grid; grid-template-columns: auto auto; gap: 2px 14px; padding: 2px 8px;
+  border-left: 2px solid var(--vl-ink); border-right: 2px solid var(--vl-ink); border-radius: 6px;
+  font-variant-numeric: tabular-nums; text-align: right; }
+.mc-mat span { min-width: 3.6em; }
+.mc-panel .vl-results { margin-top: 2px; }
+.mc-sw { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
+.mc-hint { color: var(--vl-muted); font-size: 12px; margin: 10px 0 0; line-height: 1.35; }
+.mc-hint b { color: var(--vl-ink); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .mc-stage { height: 520px; }
+  .mc-elem { transform: scale(.82); transform-origin: top left; }
+}

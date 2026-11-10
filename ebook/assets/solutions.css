@@ -126,6 +126,14 @@
   font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important;
 }
 
+/* The radical sign has the same problem: a \sqrt over a superscript takes its
+   surd from MathJax's Size fonts, and Caveat drew a small detached tick instead,
+   floating below the bar. Only the surd glyph goes back to MathJax's faces; the
+   radicand stays in Caveat. */
+.sol mjx-surd mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S2, MJXTEX-S3, MJXTEX-S4, MJXTEX !important;
+}
+
 /* The deck is authored at 1280x720 with --r-main-font-size: 40px. A solution
    carries far more lines than a normal slide, so it is set well down from that
    — a six-step solution plus a problem statement has to fit in 720px. */

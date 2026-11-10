@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohr's Circle</title>
+  <link rel="stylesheet" href="../../core/vlab.css">
+</head>
+<body>
+  <div class="vl-app">
+    <header class="vl-head">
+      <h1>Mohr's circle of stress</h1>
+      <p>2D state of stress at a point. Set the stresses on the original element, or drag the circle, and watch
+        the element, the stresses on any plane, the principal stresses, the maximum shear and the pole respond.</p>
+    </header>
+    <div class="vl-main mc-main">
+      <div class="mc-stage" id="stage">
+        <canvas id="mohr" tabindex="0" aria-label="Mohr's circle: shear stress against normal stress"></canvas>
+
+        <div class="mc-card mc-elem" id="elemCard">
+          <div class="mc-card-head">Element <span class="mc-sub" id="elemTitle"></span></div>
+          <div class="mc-elem-cv"><canvas id="elem" tabindex="0"
+               aria-label="Stress element: drag or use the arrow keys to rotate it"></canvas></div>
+          <div class="mc-inputs">
+            <label><span>&sigma;<sub>x</sub></span><input id="in-sx" type="number" step="any"></label>
+            <label><span>&sigma;<sub>y</sub></span><input id="in-sy" type="number" step="any"></label>
+            <label><span>&tau;<sub>xy</sub></span><input id="in-txy" type="number" step="any"></label>
+            <label><span>&theta; (&deg;)</span><input id="in-th" type="number" step="any"></label>
+          </div>
+          <p class="mc-note">Typing a stress makes this the original element (&theta;<sub>0</sub> = &theta;).
+            &theta; from horizontal, counter-clockwise +.</p>
+        </div>
+
+        <div class="mc-card mc-tensor" id="tensor"></div>
+      </div>
+      <aside class="vl-panel mc-panel" id="panel"></aside>
+    </div>
+  </div>
+  <pre id="selftest" hidden></pre>
+  <script src="../../core/controls.js"></script>
+  <script src="mohr.js"></script>
+</body>
+</html>

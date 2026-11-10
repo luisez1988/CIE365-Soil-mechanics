@@ -88,6 +88,12 @@
       "skip_indices": []
     },
     {
+      "dir": "State_Stress",
+      "title": "",
+      "skip_titles": [],
+      "skip_indices": []
+    },
+    {
       "dir": "Shear_strength",
       "title": "",
       "skip_titles": [],
