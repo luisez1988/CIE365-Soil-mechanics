@@ -607,7 +607,9 @@
       arrow: 'Press and drag; the arrowhead lands where you let go. Shift snaps the angle.',
       circle: 'Press at the centre and drag out to the radius.',
       ink: 'Press and draw freehand.',
-      erase: 'Click or drag across a mark to erase it.'
+      erase: 'Click or drag across a mark to erase it.',
+      compass: 'Click to plant the needle. Then press where the pencil goes and swing ' +
+               'round to draw an arc. Double-click or Enter: full circle. Esc: move the needle.'
     };
 
     var drawTimer = null;
@@ -746,6 +748,7 @@
 
     function nodeNameFor(tool) {
       if (tool === 'arrow') return 'path';   // shaft and head in one subpath set
+      if (tool === 'arc') return 'path';
       if (tool === 'circle') return 'circle';
       if (tool === 'ink') return 'polyline';
       return 'line';
@@ -806,7 +809,23 @@
       case 'ink':
         node.setAttribute('points', p.join(' '));
         break;
+      case 'arc':
+        node.setAttribute('d', arcPath(p[0], p[1], p[2], p[3], p[4]));
+        break;
       }
+    }
+
+    /* Compass mark: centre, radius, start and end angle (radians, screen
+       orientation: y down, so a growing angle turns clockwise on screen). */
+    function arcPath(cx, cy, r, a0, a1) {
+      function at(a) { return rnd(cx + r * Math.cos(a)) + ' ' + rnd(cy + r * Math.sin(a)); }
+      var sw = a1 - a0, flag = sw >= 0 ? 1 : 0;
+      if (Math.abs(sw) >= 2 * Math.PI - 1e-4) {      // a full turn: two half arcs
+        return 'M' + at(a0) + 'A' + r + ' ' + r + ' 0 1 ' + flag + ' ' + at(a0 + Math.PI) +
+               'A' + r + ' ' + r + ' 0 1 ' + flag + ' ' + at(a0);
+      }
+      return 'M' + at(a0) + 'A' + r + ' ' + r + ' 0 ' + (Math.abs(sw) > Math.PI ? 1 : 0) +
+             ' ' + flag + ' ' + at(a1);
     }
 
     function shapeFor(d) {
@@ -882,6 +901,13 @@
         }
         // a single-sample stroke has no segment to measure against
         return p.length === 2 ? hyp(x - p[0], y - p[1]) : best;
+      case 'arc':
+        var sw = p[4] - p[3], dir = sw >= 0 ? 1 : -1;
+        var t = ((Math.atan2(y - p[1], x - p[0]) - p[3]) * dir) % (2 * Math.PI);
+        if (t < 0) t += 2 * Math.PI;
+        if (t <= Math.abs(sw)) return Math.abs(hyp(x - p[0], y - p[1]) - p[2]);
+        return Math.min(hyp(x - p[0] - p[2] * Math.cos(p[3]), y - p[1] - p[2] * Math.sin(p[3])),
+                        hyp(x - p[0] - p[2] * Math.cos(p[4]), y - p[1] - p[2] * Math.sin(p[4])));
       }
       return Infinity;
     }
@@ -996,7 +1022,7 @@
        meant for one of our own controls. */
     function resolveHost(target) {
       if (!target || !target.closest) return null;
-      if (target.closest('.toolbar, .toolbar-toggle, .draw-bar, .qa-overlay, .fnote, #sym-bar')) {
+      if (target.closest('.toolbar, .toolbar-toggle, .draw-bar, .qa-overlay, .fnote, #sym-bar, .geo-protractor')) {
         return null;
       }
       var block = target.closest('.block');
@@ -1016,6 +1042,7 @@
       var host = resolveHost(e.target);
       if (!host) return;
       e.preventDefault();
+      if (drawTool === 'compass') { compassDown(e, host); return; }
 
       var surf = surfaceFor(host);
       var rect = surf.getBoundingClientRect();   // read once, reused all stroke
@@ -1097,6 +1124,440 @@
       host.addEventListener('pointercancel', onCancel);
     }
 
+    /* ---- geometry tools: compass + protractor ----
+
+       Compass     a drawing tool (data-tool="compass"). Press to plant the
+                   needle; the next press puts the pencil down at that radius
+                   and dragging swings it round (at most one turn per stroke).
+                   Later strokes reuse the same opening. Double-click or Enter
+                   draws the full circle; Esc lifts the needle to re-plant it.
+                   The marks are stored as 'arc' records (or 'circle' for a
+                   full turn), so erase and undo work as for any mark.
+       Protractor  a measuring overlay, never stored. Drag the centre ring to
+                   move it, the top knob to rotate (Shift: 5 deg steps), the
+                   end knob to resize. Wheel over it rotates (Ctrl: resize).
+                   Keys while shown: arrows move, [ ] rotate, + - resize,
+                   0 resets the angle, Esc hides it.
+
+       The compass preview lives in a fixed full-viewport SVG and is
+       re-projected from host coordinates on every render, so scrolling while
+       the needle is planted keeps it on the spot it was planted on. */
+
+    var compass = { state: 'place', host: null, cx: 0, cy: 0, r: 0, rPx: 80,
+                    sweep: null, pointer: null };
+    var geoSvg = null;
+
+    function geoOverlay() {
+      if (geoSvg) return geoSvg;
+      geoSvg = svgEl('svg', { 'class': 'geo-overlay', 'aria-hidden': 'true' });
+      document.body.appendChild(geoSvg);
+      return geoSvg;
+    }
+
+    function compassReset() {
+      compass.state = 'place';
+      compass.host = null;
+      compass.sweep = null;
+      renderGeo();
+    }
+
+    /* host-local -> screen px, read fresh each time */
+    function compassScreen() {
+      var surf = findSurface(compass.host) || surfaceFor(compass.host);
+      var r = surf.getBoundingClientRect(), W = Math.max(1, r.width);
+      return { x: r.left + compass.cx * W, y: r.top + compass.cy * W, W: W, rect: r };
+    }
+
+    function compassGraphic(cx, cy, px, py, side) {
+      var dx = px - cx, dy = py - cy, r = hyp(dx, dy);
+      var ux = r > 1 ? dx / r : 1, uy = r > 1 ? dy / r : 0;
+      var L = Math.max(120, r * 0.62);
+      var h = Math.sqrt(Math.max(0, L * L - r * r / 4));
+      var nx = uy * side, ny = -ux * side;
+      var hx = cx + dx / 2 + nx * h, hy = cy + dy / 2 + ny * h;
+      var out = [];
+      function ln(x1, y1, x2, y2, w, c, cap) {
+        out.push(svgEl('line', { x1: x1, y1: y1, x2: x2, y2: y2, stroke: c,
+          'stroke-width': w, 'stroke-linecap': cap || 'round' }));
+      }
+      function leg(tx, ty, tip) {
+        var vx = (tx - hx) / L, vy = (ty - hy) / L;
+        var bx = tx - vx * tip, by = ty - vy * tip;
+        ln(hx, hy, bx, by, 8, '#3c4249');
+        ln(hx, hy, bx, by, 4.5, '#c3cad1');
+        return { vx: vx, vy: vy, bx: bx, by: by };
+      }
+      var n = leg(cx, cy, 14);
+      ln(n.bx, n.by, cx, cy, 1.6, '#222');
+      var p = leg(px, py, 30);
+      var ex = px - p.vx * 10, ey = py - p.vy * 10, qx = -p.vy, qy = p.vx;
+      ln(p.bx, p.by, ex, ey, 8, '#3c4249', 'butt');
+      ln(p.bx, p.by, ex, ey, 5.5, drawColor, 'butt');
+      out.push(svgEl('path', { d: 'M' + (ex + qx * 3.6) + ' ' + (ey + qy * 3.6) + 'L' + px + ' ' + py +
+        'L' + (ex - qx * 3.6) + ' ' + (ey - qy * 3.6) + 'Z', fill: '#e8cc9c', stroke: '#3c4249',
+        'stroke-width': 0.8 }));
+      out.push(svgEl('path', { d: 'M' + (px - p.vx * 4 + qx * 1.4) + ' ' + (py - p.vy * 4 + qy * 1.4) +
+        'L' + px + ' ' + py + 'L' + (px - p.vx * 4 - qx * 1.4) + ' ' + (py - p.vy * 4 - qy * 1.4) + 'Z',
+        fill: drawColor }));
+      ln(hx, hy, hx + nx * 24, hy + ny * 24, 7, '#3c4249');
+      ln(hx, hy, hx + nx * 24, hy + ny * 24, 4, '#7b848d');
+      out.push(svgEl('circle', { cx: hx, cy: hy, r: 8, fill: '#c3cad1', stroke: '#3c4249', 'stroke-width': 1.6 }));
+      out.push(svgEl('circle', { cx: hx, cy: hy, r: 2.4, fill: '#3c4249' }));
+      return out;
+    }
+
+    function renderGeo() {
+      var svg = geoOverlay();
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      var on = drawMode && drawTool === 'compass';
+      svg.style.display = on ? '' : 'none';
+      if (!on) return;
+      var ptr = compass.pointer;
+      if (compass.state === 'place') {
+        if (!ptr) return;
+        compassGraphic(ptr.x, ptr.y, ptr.x + compass.rPx, ptr.y, 1).forEach(function (n) { svg.appendChild(n); });
+        return;
+      }
+      if (!compass.host || !document.contains(compass.host)) { compass.state = 'place'; return; }
+      var c = compassScreen(), px, py, r;
+      if (compass.state === 'open') {
+        px = ptr ? ptr.x : c.x + compass.rPx; py = ptr ? ptr.y : c.y;
+        r = hyp(px - c.x, py - c.y);
+      } else {
+        r = compass.r * c.W;
+        var a = compass.sweep ? compass.sweep.last
+          : (ptr ? Math.atan2(ptr.y - c.y, ptr.x - c.x) : 0);
+        px = c.x + r * Math.cos(a); py = c.y + r * Math.sin(a);
+      }
+      if (r > 2) {
+        svg.appendChild(svgEl('circle', { cx: c.x, cy: c.y, r: r, fill: 'none', stroke: drawColor,
+          'stroke-opacity': 0.3, 'stroke-width': 1.3, 'stroke-dasharray': '7 8' }));
+      }
+      if (compass.sweep && Math.abs(compass.sweep.swept) > 1e-3) {
+        var s = compass.sweep;
+        svg.appendChild(svgEl('path', { d: arcPath(c.x, c.y, r, s.a0, s.a0 + s.swept), fill: 'none',
+          stroke: drawColor, 'stroke-width': drawW, 'stroke-linecap': 'round' }));
+      }
+      compassGraphic(c.x, c.y, px, py, px - c.x >= 0 ? 1 : -1).forEach(function (n) { svg.appendChild(n); });
+    }
+
+    function compassDown(e, hostAt) {
+      if (compass.state === 'place' || !compass.host || !document.contains(compass.host)) {
+        var rect0 = surfaceFor(hostAt).getBoundingClientRect();
+        var p0 = localPt(rect0, e.clientX, e.clientY);
+        compass.host = hostAt;
+        compass.cx = p0.x; compass.cy = p0.y;
+        compass.state = 'open';
+        compass.pointer = { x: e.clientX, y: e.clientY };
+        setHint('Needle planted. Press where the pencil should touch and swing round.');
+        renderGeo();
+        return;
+      }
+      var c = compassScreen();
+      var dx = e.clientX - c.x, dy = e.clientY - c.y;
+      if (compass.state === 'open') {
+        if (hyp(dx, dy) < 3) return;
+        compass.r = rnd(hyp(dx, dy) / c.W);
+        compass.rPx = hyp(dx, dy);
+        compass.state = 'locked';
+      }
+      var a = Math.atan2(dy, dx);
+      compass.sweep = { a0: a, last: a, swept: 0 };
+      compass.pointer = { x: e.clientX, y: e.clientY };
+      renderGeo();
+
+      function onMove(ev) {
+        var s = compass.sweep;
+        if (!s) return;
+        compass.pointer = { x: ev.clientX, y: ev.clientY };
+        var cc = compassScreen();
+        var d = Math.atan2(ev.clientY - cc.y, ev.clientX - cc.x) - s.last;
+        while (d > Math.PI) d -= 2 * Math.PI;
+        while (d <= -Math.PI) d += 2 * Math.PI;
+        if (Math.abs(s.swept + d) > 2 * Math.PI) {     // one turn per stroke at most
+          d = (s.swept + d > 0 ? 1 : -1) * 2 * Math.PI - s.swept;
+        }
+        s.last += d;
+        s.swept += d;
+        renderGeo();
+      }
+      function onUp() {
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', onUp);
+        window.removeEventListener('pointercancel', onUp);
+        var s = compass.sweep;
+        compass.sweep = null;
+        if (s && Math.abs(s.swept) > 0.03) {
+          var full = Math.abs(s.swept) >= 2 * Math.PI - 1e-3;
+          commit(full ? compassCircleRec()
+            : { id: newDrawId(), anchor: anchorOf(compass.host), fig: figOf(compass.host),
+                tool: 'arc', color: drawColor, w: drawW,
+                pts: [compass.cx, compass.cy, compass.r, rnd(s.a0), rnd(s.a0 + s.swept)] });
+          setHint(full ? 'Circle drawn.' : 'Arc drawn. Swing again, or Esc to move the needle.');
+        }
+        renderGeo();
+      }
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', onUp);
+      window.addEventListener('pointercancel', onUp);
+    }
+
+    function compassCircleRec() {
+      return { id: newDrawId(), anchor: anchorOf(compass.host), fig: figOf(compass.host),
+               tool: 'circle', color: drawColor, w: drawW,
+               pts: [compass.cx, compass.cy, rnd(compass.cx + compass.r), compass.cy] };
+    }
+
+    /* Double-click / Enter: a whole circle at the current opening. In the
+       'open' state the radius is taken from the pointer. */
+    function compassFull() {
+      if (compass.state === 'place' || !compass.host) return;
+      if (compass.state === 'open') {
+        var ptr = compass.pointer;
+        if (!ptr) return;
+        var c = compassScreen(), r = hyp(ptr.x - c.x, ptr.y - c.y);
+        if (r < 3) return;
+        compass.r = rnd(r / c.W);
+        compass.rPx = r;
+        compass.state = 'locked';
+      }
+      // the two clicks of a double-click each left a tiny or empty sweep;
+      // nothing was committed for them (below the 0.03 rad threshold)
+      commit(compassCircleRec());
+      setHint('Circle drawn.');
+      renderGeo();
+    }
+
+    var protractor = { visible: false, cx: 0, cy: 0, angle: 0, scale: 1, svg: null, drag: null };
+    var PROT_R = 260;
+
+    function fmtDeg(a) { return (Math.round(a * 10) / 10).toFixed(1) + '°'; }
+    function normDeg(a) { return ((a + 180) % 360 + 360) % 360 - 180; }
+    function f2(v) { return Math.round(v * 100) / 100; }
+
+    function buildProtractor() {
+      var R = PROT_R, ink = '#0b4f75', ink2 = '#a8322a';
+      var nss = ' vector-effect="non-scaling-stroke"';
+      var s = '<path d="M ' + (-R) + ' 0 A ' + R + ' ' + R + ' 0 0 1 ' + R + ' 0 Z" fill="rgba(190,232,255,0.42)" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+      [R - 24, R - 70].forEach(function (r) {
+        s += '<path d="M ' + (-r) + ' 0 A ' + r + ' ' + r + ' 0 0 1 ' + r + ' 0" fill="none" stroke="' + ink + '" stroke-opacity="0.5" stroke-width="1"' + nss + '/>';
+      });
+      s += '<path d="M -28 0 A 28 28 0 0 1 28 0" fill="none" stroke="' + ink + '" stroke-width="1"' + nss + '/>';
+      var t1 = '', t5 = '', rays = '', labels = '';
+      for (var d = 0; d <= 180; d++) {
+        var a = d * Math.PI / 180, co = Math.cos(a), si = Math.sin(a);
+        var len = d % 10 === 0 ? 22 : (d % 5 === 0 ? 14 : 8);
+        var seg = 'M ' + f2(R * co) + ' ' + f2(-R * si) + ' L ' + f2((R - len) * co) + ' ' + f2(-(R - len) * si) + ' ';
+        if (d % 5 === 0) t5 += seg; else t1 += seg;
+        if (d % 10 === 0) {
+          if (d > 0 && d < 180) rays += 'M ' + f2(28 * co) + ' ' + f2(-28 * si) + ' L ' + f2((R - 70) * co) + ' ' + f2(-(R - 70) * si) + ' ';
+          var x1 = f2((R - 36) * co), y1 = f2(-(R - 36) * si), x2 = f2((R - 56) * co), y2 = f2(-(R - 56) * si);
+          labels += '<text x="' + x1 + '" y="' + y1 + '" transform="rotate(' + (90 - d) + ' ' + x1 + ' ' + y1 + ')" font-size="13" fill="' + ink + '">' + d + '</text>';
+          labels += '<text x="' + x2 + '" y="' + y2 + '" transform="rotate(' + (90 - d) + ' ' + x2 + ' ' + y2 + ')" font-size="10.5" fill="' + ink2 + '">' + (180 - d) + '</text>';
+        }
+      }
+      s += '<path d="' + t1 + '" stroke="' + ink + '" stroke-width="0.8"' + nss + '/>';
+      s += '<path d="' + t5 + '" stroke="' + ink + '" stroke-width="1.4"' + nss + '/>';
+      s += '<path d="' + rays + '" stroke="' + ink + '" stroke-opacity="0.35" stroke-width="1"' + nss + '/>';
+      s += '<g font-family="sans-serif" text-anchor="middle" dominant-baseline="middle">' + labels + '</g>';
+      s += '<line x1="' + (-R) + '" y1="0" x2="' + R + '" y2="0" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+      s += '<line x1="0" y1="-12" x2="0" y2="12" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+
+      var svg = svgEl('svg', { 'class': 'geo-protractor' });
+      var g = svgEl('g', {});
+      g.innerHTML = s;
+      svg.appendChild(g);
+      function handle(kind, markup) {
+        var h = svgEl('g', {});
+        h.innerHTML = markup;
+        h.querySelector('[data-grip]').addEventListener('pointerdown', protractorGrab(kind));
+        g.appendChild(h);
+        return h;
+      }
+      var grip = 'pointer-events:auto;touch-action:none;';
+      protractor.hMove = handle('move',
+        '<circle data-grip r="17" fill="none" stroke="rgba(11,79,117,0.55)" stroke-width="10" style="' + grip + 'cursor:move;pointer-events:stroke"><title>Drag to move</title></circle>');
+      protractor.hRot = handle('rotate',
+        '<line x1="0" y1="12" x2="0" y2="34" stroke="' + ink + '" stroke-width="2"/>' +
+        '<circle data-grip r="12" fill="' + ink + '" stroke="#fff" stroke-width="2" style="' + grip + 'cursor:grab"><title>Drag to rotate (Shift: 5° steps)</title></circle>' +
+        '<text y="1" fill="#fff" font-size="15" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" style="pointer-events:none">↻</text>');
+      protractor.hScale = handle('scale',
+        '<line x1="-28" y1="0" x2="-10" y2="0" stroke="' + ink + '" stroke-width="2"/>' +
+        '<rect data-grip x="-10" y="-10" width="20" height="20" rx="3" fill="' + ink + '" stroke="#fff" stroke-width="2" style="' + grip + 'cursor:ew-resize"><title>Drag to resize</title></rect>' +
+        '<text y="1" fill="#fff" font-size="13" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" style="pointer-events:none">↔</text>');
+      var label = svgEl('text', { 'text-anchor': 'middle', 'dominant-baseline': 'middle',
+        style: 'font: bold 15px sans-serif; fill: #0b4f75; stroke: #fff; stroke-width: 4px; paint-order: stroke; pointer-events: none;' });
+      svg.appendChild(label);
+      protractor.svg = svg;
+      protractor.group = g;
+      protractor.label = label;
+      svg.addEventListener('pointermove', protractorDrag);
+      svg.addEventListener('pointerup', protractorDrop);
+      svg.addEventListener('pointercancel', protractorDrop);
+    }
+
+    /* The svg is absolutely positioned on <body>; its own page origin is
+       measured each time, so a positioned or offset body cannot shift it. */
+    function protOrigin() {
+      var r = protractor.svg.getBoundingClientRect();
+      return { x: r.left + window.pageXOffset, y: r.top + window.pageYOffset };
+    }
+
+    function applyProtractor() {
+      var p = protractor, s = p.scale, R = PROT_R, o = protOrigin();
+      var x = p.cx - o.x, y = p.cy - o.y;
+      p.group.setAttribute('transform', 'translate(' + x + ' ' + y + ') rotate(' + (-p.angle) + ') scale(' + s + ')');
+      p.hMove.setAttribute('transform', 'scale(' + (1 / s) + ')');
+      p.hRot.setAttribute('transform', 'translate(0 ' + (-(R + 46 / s)) + ') scale(' + (1 / s) + ')');
+      p.hScale.setAttribute('transform', 'translate(' + (R + 38 / s) + ' 0) scale(' + (1 / s) + ')');
+      var phi = -p.angle * Math.PI / 180, ly = 34;
+      p.label.setAttribute('x', x - ly * Math.sin(phi));
+      p.label.setAttribute('y', y + ly * Math.cos(phi));
+      p.label.textContent = '↺ ' + fmtDeg(p.angle);
+    }
+
+    function showProtractor() {
+      if (!protractor.svg) buildProtractor();
+      if (!protractor.svg.parentNode) document.body.appendChild(protractor.svg);
+      protractor.svg.style.display = '';
+      protractor.visible = true;
+      protractor.scale = Math.max(0.35, Math.min(1, window.innerWidth * 0.32 / PROT_R));
+      protractor.cx = window.pageXOffset + window.innerWidth / 2;
+      protractor.cy = window.pageYOffset + window.innerHeight * 0.62;
+      protractor.angle = 0;
+      protractor.drag = null;
+      applyProtractor();
+      syncProtractorBtn();
+    }
+
+    function hideProtractor() {
+      if (protractor.svg) protractor.svg.style.display = 'none';
+      protractor.visible = false;
+      protractor.drag = null;
+      syncProtractorBtn();
+    }
+
+    function syncProtractorBtn() {
+      var b = document.getElementById('btn-draw-protractor');
+      if (b) b.setAttribute('aria-pressed', String(protractor.visible));
+    }
+
+    function clampScale(s) { return Math.min(3.5, Math.max(0.2, s)); }
+
+    function pointerAngle(x, y) {
+      return -Math.atan2(y - protractor.cy, x - protractor.cx) * 180 / Math.PI;
+    }
+
+    function protractorGrab(kind) {
+      return function (evt) {
+        if (evt.pointerType === 'mouse' && evt.button !== 0) return;
+        evt.preventDefault();
+        evt.stopPropagation();
+        try { protractor.svg.setPointerCapture(evt.pointerId); } catch (err) { /* not fatal */ }
+        protractor.drag = {
+          kind: kind, id: evt.pointerId, x0: evt.pageX, y0: evt.pageY,
+          cx0: protractor.cx, cy0: protractor.cy, a0: protractor.angle, s0: protractor.scale,
+          p0: pointerAngle(evt.pageX, evt.pageY),
+          d0: Math.max(1, hyp(evt.pageX - protractor.cx, evt.pageY - protractor.cy))
+        };
+      };
+    }
+
+    function protractorDrag(evt) {
+      var d = protractor.drag;
+      if (!d || evt.pointerId !== d.id) return;
+      evt.preventDefault();
+      if (d.kind === 'move') {
+        protractor.cx = d.cx0 + evt.pageX - d.x0;
+        protractor.cy = d.cy0 + evt.pageY - d.y0;
+      } else if (d.kind === 'rotate') {
+        var a = d.a0 + pointerAngle(evt.pageX, evt.pageY) - d.p0;
+        if (evt.shiftKey) a = Math.round(a / 5) * 5;
+        protractor.angle = normDeg(a);
+      } else {
+        protractor.scale = clampScale(d.s0 * hyp(evt.pageX - protractor.cx, evt.pageY - protractor.cy) / d.d0);
+      }
+      applyProtractor();
+    }
+
+    function protractorDrop(evt) {
+      var d = protractor.drag;
+      if (!d || evt.pointerId !== d.id) return;
+      protractor.drag = null;
+      try { protractor.svg.releasePointerCapture(evt.pointerId); } catch (err) { /* not fatal */ }
+    }
+
+    function overProtractor(pageX, pageY) {
+      if (!protractor.visible) return false;
+      var p = protractor, phi = p.angle * Math.PI / 180;
+      var dx = pageX - p.cx, dy = pageY - p.cy;
+      var lx = (dx * Math.cos(phi) - dy * Math.sin(phi)) / p.scale;
+      var ly = (dx * Math.sin(phi) + dy * Math.cos(phi)) / p.scale;
+      var m = 40 / p.scale;
+      return hyp(lx, ly) <= PROT_R + m && ly <= m;
+    }
+
+    window.addEventListener('wheel', function (evt) {
+      if (!overProtractor(evt.pageX, evt.pageY)) return;
+      evt.preventDefault();
+      var d = evt.deltaY || evt.deltaX;
+      if (evt.deltaMode === 1) d *= 33;
+      if (!d) return;
+      if (evt.ctrlKey) protractor.scale = clampScale(protractor.scale * Math.exp(-d / 100 * 0.05));
+      else protractor.angle = normDeg(protractor.angle - d / 100 * (evt.shiftKey ? 15 : 1));
+      applyProtractor();
+    }, { passive: false });
+
+    function protractorKey(evt) {
+      if (evt.ctrlKey || evt.metaKey || evt.altKey) return false;
+      var p = protractor, big = evt.shiftKey;
+      switch (evt.code) {
+      case 'ArrowLeft': p.cx -= big ? 10 : 1; break;
+      case 'ArrowRight': p.cx += big ? 10 : 1; break;
+      case 'ArrowUp': p.cy -= big ? 10 : 1; break;
+      case 'ArrowDown': p.cy += big ? 10 : 1; break;
+      case 'BracketLeft': p.angle = normDeg(p.angle + (big ? 15 : 1)); break;
+      case 'BracketRight': p.angle = normDeg(p.angle - (big ? 15 : 1)); break;
+      case 'Equal': case 'NumpadAdd': p.scale = clampScale(p.scale * 1.05); break;
+      case 'Minus': case 'NumpadSubtract': p.scale = clampScale(p.scale / 1.05); break;
+      case 'Digit0': case 'Numpad0': p.angle = 0; break;
+      case 'Escape': hideProtractor(); return true;
+      default: return false;
+      }
+      applyProtractor();
+      return true;
+    }
+
+    /* Capture phase on window, so these run before the chapter's own
+       keydown handlers (Esc there leaves draw mode). Typing in a blank, a
+       note or the Q&A box is never intercepted. */
+    window.addEventListener('keydown', function (evt) {
+      var t = evt.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName))) return;
+      var handled = false;
+      if (drawMode && drawTool === 'compass' && compass.state !== 'place') {
+        if (evt.key === 'Escape') { compassReset(); setHint(HINTS.compass); handled = true; }
+        else if (evt.key === 'Enter') { compassFull(); handled = true; }
+      }
+      if (!handled && protractor.visible) handled = protractorKey(evt);
+      if (handled) { evt.preventDefault(); evt.stopPropagation(); }
+    }, true);
+
+    document.addEventListener('dblclick', function (e) {
+      if (drawMode && drawTool === 'compass' && resolveHost(e.target)) compassFull();
+    });
+    document.addEventListener('pointermove', function (e) {
+      if (!drawMode || drawTool !== 'compass' || compass.sweep) return;
+      compass.pointer = { x: e.clientX, y: e.clientY };
+      renderGeo();
+    }, { passive: true });
+    window.addEventListener('scroll', function () { if (drawMode && drawTool === 'compass') renderGeo(); },
+                            { passive: true });
+    window.addEventListener('resize', function () {
+      if (drawMode && drawTool === 'compass') renderGeo();
+      if (protractor.visible) applyProtractor();
+    });
+
     /* Sieve worksheets are 5-6 columns wide and the chapters set them at
        font-size 0.6em with width:100%, so on a phone they overflow the viewport
        and the student types into a cell that is half off-screen. Wrapping is
@@ -1124,6 +1585,30 @@
       if (!bar || !btn) return;   // chapter not yet rebuilt with the palette
       drawHint = document.getElementById('draw-hint');
 
+      /* Compass and protractor are added here rather than in the chapter
+         template, so every already-built chapter gets them without a rebuild. */
+      (function addGeometryButtons() {
+        var group = bar.querySelector('[aria-label="Drawing tool"]') || bar.querySelector('.draw-group');
+        if (!group || bar.querySelector('[data-tool="compass"]')) return;
+        var eraseBtn = group.querySelector('[data-tool="erase"]');
+        var cb = document.createElement('button');
+        cb.className = 'dtool';
+        cb.type = 'button';
+        cb.setAttribute('data-tool', 'compass');
+        cb.setAttribute('aria-pressed', 'false');
+        cb.title = 'Compass: plant the needle, then swing the pencil round to draw arcs or circles';
+        cb.textContent = '⊙ Compass';
+        group.insertBefore(cb, eraseBtn);
+        var pb = document.createElement('button');
+        pb.id = 'btn-draw-protractor';
+        pb.type = 'button';
+        pb.setAttribute('aria-pressed', 'false');
+        pb.title = 'Show a protractor to measure angles. Drag its ring to move, the top knob to ' +
+                   'rotate, the end knob to resize; [ ] rotate, + - resize, 0 resets, Esc hides';
+        pb.textContent = '◠ Protractor';
+        group.insertBefore(pb, eraseBtn);
+      })();
+
       var prefs = loadJSON(PENKEY, {});
       if (prefs.tool && prefs.tool !== 'erase') drawTool = prefs.tool;
       if (prefs.color) drawColor = prefs.color;
@@ -1147,6 +1632,8 @@
         drawTool = name;
         press('.dtool', 'data-tool', name);
         document.body.classList.toggle('tool-erase', name === 'erase');
+        if (name !== 'compass') compass.state = 'place';
+        renderGeo();
         setHint(HINTS[name] || '');
         savePrefs();
       }
@@ -1196,7 +1683,12 @@
             document.activeElement.blur();
           }
           setHint(HINTS[drawTool] || '');
+        } else {
+          compass.state = 'place';
+          compass.sweep = null;
+          hideProtractor();          // the measuring overlay goes with the palette
         }
+        renderGeo();
       }
 
       setTool(drawTool);
@@ -1214,6 +1706,10 @@
         if (t.hasAttribute('data-color')) { setColor(t.getAttribute('data-color')); return; }
         if (t.hasAttribute('data-w')) { setWidth(parseFloat(t.getAttribute('data-w'))); return; }
         if (t.id === 'btn-draw-finger') { setFinger(!fingerDraw); return; }
+        if (t.id === 'btn-draw-protractor') {
+          if (protractor.visible) hideProtractor(); else showProtractor();
+          return;
+        }
         if (t.id === 'btn-draw-undo') { undoLast(); return; }
         if (t.id === 'btn-draw-done') { setDrawMode(false); return; }
         if (t.id === 'btn-draw-clear') {

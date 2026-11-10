@@ -633,6 +633,30 @@ td .blank, th .blank {
   overflow: hidden;
 }
 
+/* Geometry tools. The compass preview is a fixed, click-through layer over the
+   viewport; the protractor is absolutely positioned on the page so it scrolls
+   with what it measures, and only its three grips take the pointer. Both sit
+   above the marks (20) and notes (30) but under the draw bar (49). */
+.geo-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  pointer-events: none;
+  overflow: visible;
+}
+.geo-protractor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 41;
+  pointer-events: none;
+  overflow: visible;
+}
+
 body.draw-mode main { user-select: none; -webkit-user-select: none; }
 body.draw-mode .block { cursor: crosshair; }
 body.draw-mode.tool-erase .block { cursor: cell; }
@@ -952,6 +976,7 @@ body.symbar-open .toolbar-toggle { display: none; }
      above — the surface must stay absolutely positioned or the marks detach
      from what they annotate. */
   .draw-bar { display: none !important; }
+  .geo-overlay, .geo-protractor { display: none !important; }
   .sym-bar { display: none !important; }
   /* the scroll wrapper must not clip a wide table on paper */
   .table-scroll { overflow: visible; }
