@@ -1,0 +1,199 @@
+<!-- Example 9.1 — principal stresses, stresses on a plane at 25 deg, Mohr's circle.
+     Four parts, matching the deck's four slides and the legacy figures:
+       part 1 = EX710  data and principles (beside the element)
+       part 2 = EX711  (a) principal stresses by the full equations | rotated system
+       part 3 = EX712  (b) plane at 25 deg by the full equations | method 2, simplified equations
+       part 4 = EX713  (b) by method 2 | (c) Mohr's circle
+     The rotated-system sketch and the Mohr's circle are lifted from EX711/EX713 into
+     FiguresGeneral/ex-9-1-axes.svg and ex-9-1-mohr.svg (classes and positions kept,
+     lettering in Caveat). The circle's construction draws on click, as before.
+     The legacy sigma_1 line used 62.5 for the third term; it is 62.4, so 340.1 kPa
+     (see ex-9-1.md). -->
+<div class="sol" data-id="ex-9-1" style="--sol-line: 1.25; font-size: 0.6em;">
+
+  <!-- ============ part 1 — data and principles ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Data</span>
+    \(\sigma_y=300\unit{kPa}\), \(\sigma_x=200\unit{kPa}\), \(\tau_{xy}=-75\unit{kPa}\), \(\alpha=25^\circ\)
+    <span class="note">\(\tau_{xy}\) is clockwise</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span>
+    many ways to solve. Method 1, using the full analytical solutions: <br>
+    \(\sigma_\alpha=\dfrac{\sigma_x+\sigma_y}{2}+\dfrac{\sigma_y-\sigma_x}{2}\cos(2\alpha)+\tau_{xy}\sin(2\alpha)\) <br>
+    \(\tau_\alpha=\dfrac{\sigma_y-\sigma_x}{2}\sin(2\alpha)-\tau_{xy}\cos(2\alpha)\)
+  </div>
+
+  <!-- ============ part 2 — (a) principal stresses, method 1 ============ -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.15 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">(a) Principal stresses</span>
+        \(\tau_\alpha=0\) <br>
+        \(\tan(2\alpha)=\dfrac{2\tau_{xy}}{\sigma_y-\sigma_x}\;\Rightarrow\;
+        \boxed{\alpha=\dfrac{1}{2}\arctan\left(\dfrac{2\tau_{xy}}{\sigma_y-\sigma_x}\right)}\)
+        <span class="note">Answer the question: What \(\alpha\) makes \(\tau=0\)?</span>
+      </div>
+
+      <br>
+
+      <div class="step" data-part="2">
+        <span class="lead">Orientation</span>
+        \(\alpha=\) <span class="fill">\(0.5\arctan\left(\dfrac{2(-75)}{300-200}\right)\)</span>
+        \(=\) <span class="ans">\(-28.2\)</span>\(^\circ\)
+        <span class="note">Be careful to preserve the sign convention</span>
+      </div>
+
+      <br>
+
+      <div class="step" data-part="2">
+        <span class="lead">Now find the principal stress</span> <br>
+        \(\sigma_\alpha=\) <span class="fill">\(\dfrac{200+300}{2}+\dfrac{300-200}{2}\cos(-2\times28.2)\ldots\)</span> <br>
+        &emsp;&emsp; <span class="fill">\(\ldots+(-75)\sin(-2\times28.2)\)</span> <br> <br>
+        \(\sigma_\alpha=\) <span class="fill">\(250+27.7+62.4\)</span> \(=\) <span class="ans">340.1</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="sol-cols">
+        <div class="sol-col" style="flex: 0 0 42%">
+          <span class="sol-fig" style="margin: 0">
+            <object class="Animation fragment" type="image/svg+xml" data="FiguresGeneral/ex-9-1-axes.svg" style="width:100%"
+                    aria-label="Sketch of the original x-y axes and the element rotated by alpha = -28.2 degrees, with the angle beta to the orthogonal direction."></object>
+          </span>
+        </div>
+        <div class="sol-col">
+          <div class="step" data-part="2">
+            <span class="lead">Orthogonal direction</span>
+            \(\beta=90^\circ+\alpha\) <br>
+            \(\beta=\) <span class="fill">\(90-28.2\)</span> \(=\) <span class="fill">61.8</span>\(^\circ\)
+          </div>
+        </div>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">Stress on the orthogonal plane</span> <br>
+        \(\sigma_\beta=\) <span class="fill">\(\dfrac{200+300}{2}+\dfrac{300-200}{2}\cos(2\times61.8)\ldots\)</span> <br>
+        &emsp;&emsp; <span class="fill">\(\ldots+(-75)\sin(2\times61.8)\)</span> <br> <br>
+        \(\sigma_\beta=\) <span class="fill">\(250-27.7-62.4\)</span> \(=\) <span class="ans">160</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step result" data-part="2">
+        <span class="lead">Therefore</span>
+        \(\sigma_1=\) <span class="ans">340.1</span> \(\unit{kPa}\) &emsp;
+        \(\sigma_3=\) <span class="ans">160</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ part 3 — (b) by method 1 | method 2 ============ -->
+
+  <div class="sol-cols" data-part="3">
+    <div class="sol-col">
+
+      <div class="step" data-part="3">
+        <span class="lead">(b) Normal stress on the plane at 25&deg; from the horizontal</span> <br>
+        \(\sigma_\alpha=\dfrac{\sigma_x+\sigma_y}{2}+\dfrac{\sigma_y-\sigma_x}{2}\cos(2\alpha)+\tau_{xy}\sin(2\alpha)\) <br>
+        \(\sigma_\alpha=\) <span class="fill">\(\dfrac{200+300}{2}+\dfrac{300-200}{2}\cos(2\times25)\ldots\)</span> <br>
+        &emsp;&emsp; <span class="fill">\(\ldots+(-75)\sin(2\times25)\)</span> <br> <br>
+        \(\sigma_\alpha=\) <span class="fill">\(250+32.1-57.5\)</span> \(=\) <span class="ans">225</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="3">
+        <span class="lead">(b) Shear stress on the plane</span> <br>
+        \(\tau_\alpha=\dfrac{\sigma_y-\sigma_x}{2}\sin(2\alpha)-\tau_{xy}\cos(2\alpha)\) <br>
+        \(\tau_\alpha=\) <span class="fill">\(\dfrac{300-200}{2}\sin(2\times25)-(-75)\cos(2\times25)\)</span> <br>
+        \(\tau_\alpha=\) <span class="fill">\(38.3+48.2\)</span> \(=\) <span class="ans">86.5</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="3">
+        <span class="lead">Method 2, simplified equations. First find the mean stress</span> <br>
+        \(\sigma_m=0.5(\sigma_x+\sigma_y)=\) <span class="fill">\(0.5(200+300)\)</span> \(=\) <span class="fill">250</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="3">
+        <span class="lead">Deviatoric stress</span> <br>
+        \(\sigma_d=\sqrt{(\sigma_x-\sigma_y)^2+4\tau_{xy}^2}\) <br>
+        \(\sigma_d=\) <span class="fill">\(\sqrt{(200-300)^2+4\times75^2}\)</span> \(=\) <span class="fill">180.3</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="3">
+        <span class="lead">(a) Principal stresses</span>
+        \(\sigma_{1,3}=\sigma_m\pm0.5\sigma_d\) <br>
+        \(\sigma_1=\) <span class="fill">\(250+0.5\times180.3\)</span> \(=\) <span class="ans">340.1</span> \(\unit{kPa}\) <br> <br>
+        \(\sigma_3=\) <span class="fill">\(250-0.5\times180.3\)</span> \(=\) <span class="ans">160</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ part 4 — (b) by method 2 | (c) Mohr's circle ============ -->
+
+  <div class="sol-cols" data-part="4">
+    <div class="sol-col" style="flex: 0.95 1 0">
+
+      <div class="sol-cols">
+        <div class="sol-col">
+          <div class="step" data-part="4">
+            <span class="lead">(b) Stress acting at 25&deg; from the horizontal</span> <br>
+            \(\sigma_\alpha=\sigma_m+0.5\sigma_d\cos(2\alpha)\)
+            <span class="note">In this equation the angle is measured from the principal stresses</span>
+          </div>
+        </div>
+        <div class="sol-col" style="flex: 0 0 38%">
+          <span class="sol-fig" style="margin: 0">
+            <object class="Animation fragment" type="image/svg+xml" data="FiguresGeneral/ex-9-1-axes.svg" style="width:100%"
+                    aria-label="Sketch of the original x-y axes and the element rotated by alpha = -28.2 degrees, with the angle beta to the orthogonal direction."></object>
+          </span>
+        </div>
+      </div>
+
+      <div class="step" data-part="4">
+        <span class="lead">Normal stress</span> <br>
+        \(\sigma_\alpha=\) <span class="fill">\(250+0.5\times180.3\cos(2(25+28.2))\)</span> \(=\) <span class="ans">225</span> \(\unit{kPa}\)
+        <span class="note">\(25+28.2\) is the angle to rotate from the principal stress configuration</span>
+      </div>
+
+      <div class="step" data-part="4">
+        <span class="lead">Shear stress</span> <br>
+        \(\tau_\alpha=0.5\sigma_d\sin(2\alpha)\) <br>
+        \(\tau_\alpha=\) <span class="fill">\(0.5\times180.3\sin(2(25+28.2))\)</span> \(=\) <span class="ans">86.5</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em;">
+
+      <div class="step" data-part="4">
+        <span class="lead">(c) Plot Mohr's circle</span>
+      </div>
+
+      <!-- Outside the step so the axes are on screen at once. Each click on the plot
+           draws the next layer, in the legacy order: the two stress points, the
+           diameter, the circle, sigma_3 and sigma_1, the -56 deg and 50 deg angles,
+           and the point (225, 87). The book and student builds strip these layers. -->
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-1-mohr.svg" style="width:100%"
+                aria-label="Axes of shear stress against normal stress in kPa. Clicking plots the points (200, -75) and (300, 75), the diameter and the circle, sigma 3 = 160 kPa and sigma 1 = 340 kPa, the angles of -56 and 50 degrees, and the point (225, 87) for the plane at 25 degrees."></object>
+      </span>
+
+    </div>
+  </div>
+
+</div>

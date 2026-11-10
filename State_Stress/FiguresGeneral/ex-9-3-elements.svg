@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) --><svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="22.8mm" height="11.9mm" viewBox="48.3 4.2 22.8 11.9" version="1.1" id="svg1" inkscape:version="1.4 (86a8ad7, 2024-10-11)">
+  <!-- Extracted from EX730.svg for Example solution ex-9-3-elements: drawings, classes and positions kept; font changed to Caveat; step-reveal class removed. --><style>@font-face{font-family:'Caveat';font-weight:400 700;src:url('../../assets/fonts/caveat-latin.woff2') format('woff2');}</style><sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#111111" borderopacity="1" inkscape:showpageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="1" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:zoom="2.9006173" inkscape:cx="113.76889" inkscape:cy="24.477548" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"/>
+  <defs id="defs1">
+    <marker style="overflow:visible" id="ArrowWide" refX="0" refY="0" orient="auto-start-reverse" inkscape:stockid="Wide arrow" markerWidth="1" markerHeight="1" viewBox="0 0 1 1" inkscape:isstock="true" inkscape:collect="always" preserveAspectRatio="xMidYMid">
+      <path style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt" d="M 3,-3 0,0 3,3" transform="rotate(180,0.125,0)" sodipodi:nodetypes="ccc" id="path1"/>
+    </marker>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <g id="g26" transform="translate(-2.0016496)">
+      <g id="g25">
+        <rect style="fill:#ffb380;stroke:#000000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke" id="rect23" width="3.792505" height="3.792505" x="51.56052" y="8.9856644"/>
+        <path style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)" d="M 53.45677,5.6640923 V 8.6499305" id="path24" sodipodi:nodetypes="cc"/>
+        <path style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)" d="M 57.60047,10.881917 H 55.556684" id="path25" sodipodi:nodetypes="cc"/>
+      </g>
+      <text xml:space="preserve" style="font-size:3.175px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583" x="50.767788" y="15.584357" id="text25"><tspan sodipodi:role="line" id="tspan25" style="fill:#ff0000;stroke-width:0.264583" x="50.767788" y="15.584357">Total</tspan></text>
+    </g>
+    <g id="g27" transform="translate(-2.0016496)">
+      <g id="g23" transform="translate(1.4512411,2.1929866)">
+        <rect style="fill:#ffb380;stroke:#000000;stroke-width:0.165;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:0.94902;paint-order:markers fill stroke" id="rect22" width="3.792505" height="3.792505" x="60.872791" y="6.7926779"/>
+        <path style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)" d="M 62.769042,3.4711057 V 6.4569439" id="path22" sodipodi:nodetypes="cc"/>
+        <path style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ArrowWide)" d="M 66.912742,8.6889304 H 64.868956" id="path23" sodipodi:nodetypes="cc"/>
+      </g>
+      <text xml:space="preserve" style="font-size:3.175px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#000080;stroke-width:0.264583" x="62.08358" y="15.584357" id="text26"><tspan sodipodi:role="line" id="tspan26" style="fill:#000080;stroke-width:0.264583" x="62.08358" y="15.584357">Effc.</tspan></text>
+    </g>
+    <text class="Animate" xml:space="preserve" style="font-size:2.37793px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583" x="51.828384" y="6.4855695" id="text27"><tspan sodipodi:role="line" id="tspan27" style="fill:#ff0000;stroke-width:0.264583" x="51.828384" y="6.4855695">3.75 ksf</tspan></text>
+    <text class="Animate" xml:space="preserve" style="font-size:2.37793px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583" x="53.311874" y="9.7246418" id="text28"><tspan sodipodi:role="line" id="tspan28" style="fill:#ff0000;stroke-width:0.264583" x="53.311874" y="9.7246418">2.88 ksf</tspan></text>
+    <text class="Animate" xml:space="preserve" style="font-size:2.37793px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#000080;stroke-width:0.264583" x="62.634941" y="6.4855695" id="text29"><tspan sodipodi:role="line" id="tspan29" style="fill:#000080;stroke-width:0.264583" x="62.634941" y="6.4855695">2.5 ksf</tspan></text>
+    <text class="Animate" xml:space="preserve" style="font-size:2.37793px;line-height:0.95;font-family:'Caveat', 'Cambria Math', 'Times New Roman', serif;-inkscape-font-specification:'Caveat', 'Cambria Math', 'Times New Roman', serif;font-variant-ligatures:none;fill:#000080;stroke-width:0.264583" x="64.118431" y="9.7246418" id="text30"><tspan sodipodi:role="line" id="tspan30" style="fill:#000080;stroke-width:0.264583" x="64.118431" y="9.7246418">1.63 ksf</tspan></text>
+  </g>
+</svg>

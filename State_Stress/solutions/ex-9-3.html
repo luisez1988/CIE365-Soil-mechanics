@@ -1,0 +1,110 @@
+<!-- Example 9.3 — total and effective stress Mohr's circles at point A.
+     Three parts, matching the deck's three slides and the legacy figures:
+       part 1 = EX730  in-situ stresses | total and effective elements
+       part 2 = EX731  (a), (b) the two circles and the 38 deg plane by the pole
+       part 3 = EX732  (b) by the equations (beside the participation question)
+     The element sketches and the whole Mohr's-circle plot are lifted into
+     FiguresGeneral/ex-9-3-elements.svg and ex-9-3-mohr.svg (classes and positions
+     kept, lettering in Caveat); their values and constructions draw on click.
+     The statement now says the same unit weight applies above the water table, as
+     the legacy solution assumed (see ex-9-3.md). -->
+<div class="sol" data-id="ex-9-3" style="--sol-line: 1.25; font-size: 0.6em;">
+
+  <!-- ============ part 1 — in-situ stresses ============ -->
+
+
+
+  <div class="sol-cols" data-part="1">
+    <div class="sol-col">
+
+        <div class="step" data-part="1">
+    <span class="lead">Data</span> given in figure &emsp;
+    <strong>Principles:</strong> in-situ stresses, Mohr's circle
+  </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Vertical total stress</span>
+        \(\sigma_v=\) <span class="fill">\(125\times30\)</span> \(=\)
+        <span class="fill">3750</span> \(\unit{psf}=\) <span class="ans">3.75</span> \(\unit{ksf}\)
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Vertical effective stress</span>
+        \(\sigma'_v=\) <span class="fill">\(3750-(20\times62.4)\)</span> \(=\)
+        <span class="fill">2502</span> \(\unit{psf}=\) <span class="ans">2.5</span> \(\unit{ksf}\)
+      </div>
+
+
+
+    </div>
+    <div class="sol-col" style="flex: 0 0 30%">
+      <!-- Click the sketch to write each value on its element, as before. -->
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-3-elements.svg" style="width:100%"
+                aria-label="Total and effective stress elements at A. Clicking writes 3.75 and 2.88 ksf on the total element and 2.5 and 1.63 ksf on the effective element."></object>
+      </span>
+    </div>
+  </div>
+
+        <div class="step" data-part="1">
+        <span class="lead">Horizontal effective stress</span>
+        \(\sigma'_h=\) <span class="fill">\(2.5\times0.65\)</span> \(=\) <span class="ans">1.63</span> \(\unit{ksf}\)
+      </div>
+
+      <div class="step" data-part="1">
+        <span class="lead">Horizontal total stress</span>
+        \(\sigma_h=\) <span class="fill">\(1.63+(20\times62.4/1000)\)</span> \(=\) <span class="ans">2.88</span> \(\unit{ksf}\)
+      </div>
+
+  <!-- ============ part 2 — the circles and the pole ============ -->
+
+  <div class="step" data-part="2">
+    <span class="lead">(a), (b) Total and effective stress circles, and the plane at 38&deg; from the pole</span>
+  </div>
+
+  <!-- Outside the step so the axes and the elements are on screen at once. Each click
+       draws the next layer in the legacy order. -->
+  <span class="sol-fig" data-part="2" style="margin: 0 auto; width: 92%">
+    <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-3-mohr.svg" style="width:100%"
+            aria-label="Axes of shear stress against normal stress in ksf. Clicking plots the total stress circle through 2.88 and 3.75 ksf, its pole and the 38 degree line to (3.42, 0.42), then the effective stress circle through 1.63 and 2.5 ksf, its pole and the 38 degree line to (2.17, 0.42), with the note that shear stresses are not affected by pore pressure."></object>
+  </span>
+
+  <!-- ============ part 3 — (b) by the equations ============ -->
+
+  <div class="step" data-part="3">
+    <span class="lead">Using equations, for the total stress first</span> <br>
+    \(\sigma_m=0.5(\sigma_v+\sigma_h)=\) <span class="fill">\(0.5(3.75+2.88)\)</span> \(=\) <span class="fill">3.32</span> \(\unit{ksf}\) <br>
+    \(\sigma_d=\sigma_1-\sigma_3=\) <span class="fill">\(3.75-2.88\)</span> \(=\) <span class="fill">0.87</span> \(\unit{ksf}\)
+  </div>
+
+    <br>
+  <div class="step" data-part="3">
+    <span class="lead">Normal stress</span>
+    \(\sigma_\alpha=\sigma_m+0.5\sigma_d\cos(2\alpha)\) <br>
+    \(\sigma_\alpha=\) <span class="fill">\(3.32+0.5\times0.87\cos(2\times38)\)</span> \(=\) <span class="ans">3.42</span> \(\unit{ksf}\)
+  </div>
+
+  <br>
+
+  <div class="step" data-part="3">
+    <span class="lead">Shear stress</span>
+    \(\tau_\alpha=0.5\sigma_d\sin(2\alpha)\) <br>
+    \(\tau_\alpha=\) <span class="fill">\(0.5\times0.87\sin(2\times38)\)</span> \(=\) <span class="ans">0.42</span> \(\unit{ksf}\)
+  </div>
+
+  <br>
+
+  <div class="step" data-part="3">
+    <span class="lead">For the effective stress</span>
+    \(\tau_\alpha=\) <span class="ans">0.42</span> \(\unit{ksf}\)
+    <span class="note">Because shear is not affected by pore pressure</span>
+  </div>
+
+  <br>
+
+  <div class="step" data-part="3">
+    <span class="lead">Effective normal stress</span>
+    \(\sigma'_\alpha=\sigma_\alpha-u=\) <span class="fill">\(3.42-(20\times62.4/1000)\)</span> \(=\) <span class="ans">2.17</span> \(\unit{ksf}\)
+  </div>
+
+</div>

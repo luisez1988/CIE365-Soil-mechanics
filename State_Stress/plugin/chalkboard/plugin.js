@@ -359,9 +359,13 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 	var drawing = false;
 	var erasing = false;
-	var lining = false;
-	var circling= false;
-	var protractor= false;
+
+	// Geometry tools (see "Geometry tools" section below)
+	var ruler = { active: false, start: null, doneAt: 0 };
+	var compass = { active: false, state: 'place', cx: 0, cy: 0, r: 80, side: 1, sweeping: false, lastAng: 0, swept: 0 };
+	var protractor = { visible: false, mode: 0, cx: 0, cy: 0, angle: 0, scale: 1.05, svg: null, group: null, drag: null };
+	var shiftHeld = false;
+	var toolClick = false; // the last mousedown was consumed by the ruler/compass
 
 	var slideStart = Date.now();
 	var slideIndices = {
@@ -523,6 +527,19 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 		// drawingCanvas[ id ].canvas_tools = canvas_tools;
 		drawingCanvas[ id ].context = canvas.getContext( '2d' );
 		// drawingCanvas[ id ].context_tools = canvas_tools.getContext( '2d' );
+
+		// Transparent layer on top of the drawing for tool previews (ruler line,
+		// compass). Never recorded, never receives pointer events.
+		var overlay = document.createElement( 'canvas' );
+		overlay.width = drawingCanvas[ id ].width;
+		overlay.height = drawingCanvas[ id ].height;
+		overlay.style.position = 'absolute';
+		overlay.style.left = '0px';
+		overlay.style.top = '0px';
+		overlay.style.pointerEvents = 'none';
+		container.appendChild( overlay );
+		drawingCanvas[ id ].overlay = overlay;
+
 		setupCanvasEvents( container );
 
 		document.querySelector( '.reveal' ).appendChild( container );
@@ -965,6 +982,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 	 */
 	function showChalkboard() {
 //console.log("showChalkboard");
+		cancelTools();
 		clearTimeout( touchTimeout );
 		touchTimeout = null;
 		drawingCanvas[ 0 ].sponge.style.visibility = 'hidden'; // make sure that the sponge from touch events is hidden
@@ -979,6 +997,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 	 * Closes open chalkboard.
 	 */
 	function closeChalkboard() {
+		cancelTools();
 		clearTimeout( touchTimeout );
 		touchTimeout = null;
 		drawingCanvas[ 0 ].sponge.style.visibility = 'hidden'; // make sure that the sponge from touch events is hidden
@@ -1448,122 +1467,584 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 		}
 	};
 
-	function drawCircle(centerX, centerY, toX, toY, colorIdx) {
-		var ctx = drawingCanvas[ mode ].context;
-		var scale = drawingCanvas[ mode ].scale;
-		var xOffset = drawingCanvas[ mode ].xOffset;
-		var yOffset = drawingCanvas[ mode ].yOffset;
-		var R=0;
-		// Need to create a record circle event capable of redrawing itself
-
-
-		if (
-			centerX * scale + xOffset > 0 &&
-			centerY * scale + yOffset > 0 &&
-			centerX * scale + xOffset < drawingCanvas[ mode ].width &&
-			centerY * scale + yOffset < drawingCanvas[ mode ].height &&
-			toX * scale + xOffset > 0 &&
-			toY * scale + yOffset > 0 &&
-			toX * scale + xOffset < drawingCanvas[ mode ].width &&
-			toY * scale + yOffset < drawingCanvas[ mode ].height
-		) {
-	 R = Math.sqrt(((centerX-toX)*scale)**2+((centerY-toY)*scale)**2);
-	 var dtheta= 2*Math.PI/100
-	 var theta=0.0
-	 var xl= centerX * scale + xOffset + R *Math.cos(theta)
-	 var yl= centerY * scale + yOffset + R *Math.sin(theta)
-	 var xn=0.0
-	 var yn=0.0
-	 for (var i = 0; i < 100; i++) {
-	 	theta=theta+dtheta
-		xn=centerX * scale + xOffset + R *Math.cos(theta)
-		yn=centerY * scale + yOffset + R *Math.sin(theta)
-		recordEvent( {
-			type: 'draw',
-			color: colorIdx,
-			x1: (xl-xOffset)/scale,
-			y1: (yl-yOffset)/scale,
-			x2: (xn-xOffset)/scale,
-			y2: (yn-yOffset)/scale,
-		} );
-		draw[ mode ]( ctx, xl, yl, xn, yn, colorIdx );
-		xl=xn;
-		yl=yn;
-	 }
-	};
-	};
-	var clicks = 0;
-	var lastClick = [0, 0];
-
-
-	function drawMyLine(fromX, fromY, toX, toY, colorIdx) {
-		if (clicks != 1) {
-				clicks++;
-				var ctx = drawingCanvas[ mode ].context;
-				var scale = drawingCanvas[ mode ].scale;
-				var xOffset = drawingCanvas[ mode ].xOffset;
-				var yOffset = drawingCanvas[ mode ].yOffset;
-				lastX = toX * scale + xOffset;
-				lastY = toY * scale + yOffset;
-		} else {
-				drawSegment( fromX, fromY, toX, toY, colorIdx )
-				clicks = 0;
-				lining = false;
-		}
-	};
-
-	function drawMyCircle(centerX, centerY, toX, toY, colorIdx){
-		if (clicks != 1) {
-				clicks++;
-				var ctx = drawingCanvas[ mode ].context;
-				var scale = drawingCanvas[ mode ].scale;
-				var xOffset = drawingCanvas[ mode ].xOffset;
-				var yOffset = drawingCanvas[ mode ].yOffset;
-				lastX = toX * scale + xOffset;
-				lastY = toY * scale + yOffset;
-		} else {
-
-				drawCircle( centerX, centerY, toX, toY, colorIdx );
-				clicks = 0;
-				circling = false;
-		}
-	};
-
 	function stopDrawing() {
 		drawing = false;
 	};
 
-	function start_line(){
-		lining = true;
-	};
+/*****************************************************************
+ ** Geometry tools: ruler, compass, protractor
+ **
+ ** Ruler       Double-click to arm. Click the start point; a faded dashed
+ **             line follows the mouse (with its angle). Click again to
+ **             draw it. Hold Shift to snap to 15 deg steps.
+ ** Compass     Shift+click to arm. Click to plant the needle, move to open
+ **             the legs, then press and swing around the needle to draw
+ **             (arcs or a full turn). Enter draws a full circle. The
+ **             opening stays set until the compass is put away.
+ ** Protractor  Ctrl+click to show / hide. Drag the centre ring to move it,
+ **             the top knob to rotate, the end knob to resize.
+ **             Wheel over it = rotate (Shift = 15 deg), Ctrl+wheel = resize.
+ **             Keys while shown: arrows move (Shift = x10), [ ] rotate
+ **             (Shift = 15 deg), + - resize, 0 resets the angle, Esc hides.
+ ** Esc or right-click puts the ruler / compass away.
+ **
+ ** Previews live on drawingCanvas[id].overlay and are never recorded; only
+ ** the confirmed line / arc is recorded, as ordinary 'draw' events.
+ ******************************************************************/
 
-	function stop_lining(){
-		lining = false
-	};
+	var PROTRACTOR_R = 260; // protractor radius in its own units (scale 1)
+	var SVGNS = 'http://www.w3.org/2000/svg';
 
-	function start_circling(){
-		circling=true;
-	};
+	function toData( px, py ) {
+		var c = drawingCanvas[ mode ];
+		return { x: ( px - c.xOffset ) / c.scale, y: ( py - c.yOffset ) / c.scale };
+	}
 
+	// current pen colour, optionally with its alpha replaced ("watered down")
+	function penColor( alpha ) {
+		var c = pens[ mode ][ color[ mode ] ].color;
+		if ( alpha == undefined || !/^rgba/i.test( c ) ) return c;
+		return c.replace( /[\d.]+\s*\)\s*$/, alpha + ')' );
+	}
 
+	function penWidth() {
+		return mode == 1 ? chalkWidth : boardmarkerWidth;
+	}
 
-	function switch_protractor( xMouse, yMouse){
-		if (!protractor){
-			var ctx = drawingCanvas[ mode ].context
-			var img=new Image()
-			img.src=path + 'img/Portractor.png';
-			img.onload=function(){
-			ctx.drawImage(img, xMouse-546/2,yMouse-277,546,277);
+	function toolCursor() {
+		drawingCanvas[ mode ].canvas.style.cursor = 'crosshair';
+	}
+
+	function cancelTools() {
+		ruler.active = false;
+		ruler.start = null;
+		compass.active = false;
+		compass.sweeping = false;
+		for ( var id = 0; id < 2; id++ ) {
+			if ( drawingCanvas[ id ] && drawingCanvas[ id ].overlay ) clearOverlay( id );
+		}
+		if ( drawingCanvas[ mode ] && drawingCanvas[ mode ].canvas ) {
+			drawingCanvas[ mode ].canvas.style.cursor = pens[ mode ][ color[ mode ] ].cursor;
+		}
+	}
+
+	function clearOverlay( id ) {
+		var o = drawingCanvas[ id ].overlay;
+		o.getContext( '2d' ).clearRect( 0, 0, o.width, o.height );
+	}
+
+	function renderOverlay() {
+		clearOverlay( 0 );
+		clearOverlay( 1 );
+		var ctx = drawingCanvas[ mode ].overlay.getContext( '2d' );
+		if ( ruler.active ) renderRuler( ctx );
+		if ( compass.active ) renderCompass( ctx );
+	}
+
+	function drawTag( ctx, text, x, y ) {
+		ctx.save();
+		ctx.setLineDash( [] );
+		ctx.font = 'bold 15px sans-serif';
+		ctx.textAlign = 'left';
+		ctx.textBaseline = 'middle';
+		var w = ctx.measureText( text ).width + 12;
+		ctx.fillStyle = 'rgba(0,0,0,0.6)';
+		ctx.fillRect( x, y - 11, w, 22 );
+		ctx.fillStyle = '#fff';
+		ctx.fillText( text, x + 6, y );
+		ctx.restore();
+	}
+
+	function fmtDeg( a ) {
+		return ( Math.round( a * 10 ) / 10 ).toFixed( 1 ) + '°';
+	}
+
+	function normDeg( a ) {
+		a = ( ( a + 180 ) % 360 + 360 ) % 360 - 180;
+		return a;
+	}
+
+	/* ---------------- Ruler ---------------- */
+
+	function startRuler() {
+		cancelTools();
+		ruler.active = true;
+		ruler.start = null;
+		toolCursor();
+		renderOverlay();
+	}
+
+	function rulerEnd( snap ) {
+		var x = mouseX, y = mouseY;
+		if ( snap && ruler.start ) {
+			var dx = x - ruler.start.x, dy = y - ruler.start.y;
+			var len = Math.hypot( dx, dy );
+			var step = Math.PI / 12;
+			var a = Math.round( Math.atan2( dy, dx ) / step ) * step;
+			x = ruler.start.x + len * Math.cos( a );
+			y = ruler.start.y + len * Math.sin( a );
+		}
+		return { x: x, y: y };
+	}
+
+	function renderRuler( ctx ) {
+		ctx.save();
+		ctx.lineCap = 'round';
+		if ( !ruler.start ) {
+			ctx.restore();
+			return;
+		}
+		var s = ruler.start, e = rulerEnd( shiftHeld );
+		ctx.setLineDash( [ 14, 10 ] );
+		ctx.lineWidth = Math.max( 2, penWidth() * 0.8 );
+		ctx.strokeStyle = penColor( 0.45 );
+		ctx.beginPath();
+		ctx.moveTo( s.x, s.y );
+		ctx.lineTo( e.x, e.y );
+		ctx.stroke();
+		ctx.setLineDash( [] );
+		ctx.fillStyle = penColor( 0.6 );
+		ctx.beginPath();
+		ctx.arc( s.x, s.y, 4, 0, 2 * Math.PI );
+		ctx.fill();
+		ctx.restore();
+		// angle measured counter-clockwise from the horizontal, like on paper
+		var ang = -Math.atan2( e.y - s.y, e.x - s.x ) * 180 / Math.PI;
+		if ( Math.hypot( e.x - s.x, e.y - s.y ) > 20 ) drawTag( ctx, fmtDeg( ang ), e.x + 14, e.y + 18 );
+	}
+
+	function rulerClick( snap ) {
+		if ( !ruler.start ) {
+			ruler.start = { x: mouseX, y: mouseY };
+			renderOverlay();
+			return;
+		}
+		var e = rulerEnd( snap );
+		if ( Math.hypot( e.x - ruler.start.x, e.y - ruler.start.y ) < 3 ) return; // same spot: ignore
+		var a = toData( ruler.start.x, ruler.start.y ), b = toData( e.x, e.y );
+		drawSegment( a.x, a.y, b.x, b.y, color[ mode ] );
+		ruler.doneAt = Date.now();
+		cancelTools();
+	}
+
+	/* ---------------- Compass ---------------- */
+
+	function startCompass() {
+		cancelTools();
+		compass.active = true;
+		compass.state = 'place';
+		compass.sweeping = false;
+		toolCursor();
+		renderOverlay();
+	}
+
+	// side on which the hinge sits so that it points "up" on screen
+	function upSide( dx, dy ) {
+		return dx >= 0 ? 1 : -1;
+	}
+
+	function renderCompass( ctx ) {
+		var c = compass, cx, cy, px, py, side;
+		if ( c.state == 'place' ) {
+			// carry the compass with its last opening, needle at the mouse
+			cx = mouseX; cy = mouseY; px = cx + c.r; py = cy; side = 1;
+		} else if ( c.state == 'open' ) {
+			cx = c.cx; cy = c.cy; px = mouseX; py = mouseY;
+			side = upSide( px - cx, py - cy );
+		} else {
+			var a = c.sweeping ? c.lastAng : Math.atan2( mouseY - c.cy, mouseX - c.cx );
+			cx = c.cx; cy = c.cy;
+			px = cx + c.r * Math.cos( a ); py = cy + c.r * Math.sin( a );
+			side = c.sweeping ? c.side : upSide( px - cx, py - cy );
+		}
+		var r = Math.hypot( px - cx, py - cy );
+		if ( c.state != 'place' && r > 2 ) {
+			// faint dashed guide of the circle the current opening gives
+			ctx.save();
+			ctx.setLineDash( [ 8, 10 ] );
+			ctx.lineWidth = 1.5;
+			ctx.strokeStyle = penColor( 0.3 );
+			ctx.beginPath();
+			ctx.arc( cx, cy, r, 0, 2 * Math.PI );
+			ctx.stroke();
+			ctx.restore();
+		}
+		drawCompassGraphic( ctx, cx, cy, px, py, side );
+	}
+
+	function drawCompassGraphic( ctx, cx, cy, px, py, side ) {
+		var dx = px - cx, dy = py - cy, r = Math.hypot( dx, dy );
+		var ux = r > 1 ? dx / r : 1, uy = r > 1 ? dy / r : 0;
+		var L = Math.max( 170, r * 0.62 ); // leg length (legs stretch for huge circles)
+		var h = Math.sqrt( L * L - r * r / 4 );
+		var nx = uy * side, ny = -ux * side; // unit normal pointing to the hinge
+		var hx = cx + dx / 2 + nx * h, hy = cy + dy / 2 + ny * h;
+
+		function leg( tx, ty, tipLen ) {
+			var vx = ( tx - hx ) / L, vy = ( ty - hy ) / L;
+			var bx = tx - vx * tipLen, by = ty - vy * tipLen;
+			ctx.lineWidth = 10; ctx.strokeStyle = '#3c4249';
+			ctx.beginPath(); ctx.moveTo( hx, hy ); ctx.lineTo( bx, by ); ctx.stroke();
+			ctx.lineWidth = 6; ctx.strokeStyle = '#c3cad1';
+			ctx.beginPath(); ctx.moveTo( hx, hy ); ctx.lineTo( bx, by ); ctx.stroke();
+			return { vx: vx, vy: vy, bx: bx, by: by };
+		}
+
+		ctx.save();
+		ctx.setLineDash( [] );
+		ctx.lineCap = 'round';
+		ctx.lineJoin = 'round';
+
+		// needle leg
+		var n = leg( cx, cy, 18 );
+		ctx.lineWidth = 2; ctx.strokeStyle = '#222';
+		ctx.beginPath(); ctx.moveTo( n.bx, n.by ); ctx.lineTo( cx, cy ); ctx.stroke();
+
+		// pencil leg: steel arm, then a pencil in the pen colour with a wooden tip
+		var p = leg( px, py, 40 );
+		var ex = px - p.vx * 13, ey = py - p.vy * 13; // end of the painted pencil body
+		var qx = -p.vy, qy = p.vx;                     // across the pencil
+		ctx.lineCap = 'butt';
+		ctx.lineWidth = 10; ctx.strokeStyle = '#3c4249';
+		ctx.beginPath(); ctx.moveTo( p.bx, p.by ); ctx.lineTo( ex, ey ); ctx.stroke();
+		ctx.lineWidth = 7; ctx.strokeStyle = penColor( 1 );
+		ctx.beginPath(); ctx.moveTo( p.bx, p.by ); ctx.lineTo( ex, ey ); ctx.stroke();
+		ctx.fillStyle = '#e8cc9c'; ctx.strokeStyle = '#3c4249'; ctx.lineWidth = 1;
+		ctx.beginPath();
+		ctx.moveTo( ex + qx * 4.5, ey + qy * 4.5 ); ctx.lineTo( px, py ); ctx.lineTo( ex - qx * 4.5, ey - qy * 4.5 );
+		ctx.closePath(); ctx.fill(); ctx.stroke();
+		ctx.fillStyle = penColor( 1 );
+		ctx.beginPath();
+		ctx.moveTo( px - p.vx * 5 + qx * 1.8, py - p.vy * 5 + qy * 1.8 ); ctx.lineTo( px, py );
+		ctx.lineTo( px - p.vx * 5 - qx * 1.8, py - p.vy * 5 - qy * 1.8 );
+		ctx.closePath(); ctx.fill();
+
+		// handle and hinge
+		ctx.lineCap = 'round';
+		ctx.lineWidth = 9; ctx.strokeStyle = '#3c4249';
+		ctx.beginPath(); ctx.moveTo( hx, hy ); ctx.lineTo( hx + nx * 30, hy + ny * 30 ); ctx.stroke();
+		ctx.lineWidth = 5; ctx.strokeStyle = '#7b848d';
+		ctx.beginPath(); ctx.moveTo( hx, hy ); ctx.lineTo( hx + nx * 30, hy + ny * 30 ); ctx.stroke();
+		ctx.fillStyle = '#c3cad1'; ctx.strokeStyle = '#3c4249'; ctx.lineWidth = 2;
+		ctx.beginPath(); ctx.arc( hx, hy, 10, 0, 2 * Math.PI ); ctx.fill(); ctx.stroke();
+		ctx.fillStyle = '#3c4249';
+		ctx.beginPath(); ctx.arc( hx, hy, 3, 0, 2 * Math.PI ); ctx.fill();
+		ctx.restore();
+	}
+
+	function compassDown() {
+		var c = compass;
+		if ( c.state == 'place' ) {
+			c.cx = mouseX; c.cy = mouseY;
+			c.state = 'open';
+		} else {
+			if ( c.state == 'open' ) {
+				var r = Math.hypot( mouseX - c.cx, mouseY - c.cy );
+				if ( r < 3 ) return;
+				c.r = r;
+				c.state = 'locked';
+			}
+			// press = put the pencil on the board where the mouse points
+			c.lastAng = Math.atan2( mouseY - c.cy, mouseX - c.cx );
+			c.side = upSide( Math.cos( c.lastAng ), Math.sin( c.lastAng ) );
+			c.swept = 0;
+			c.sweeping = true;
+		}
+		renderOverlay();
+	}
+
+	function compassArc( a0, a1 ) {
+		var c = compass;
+		var n = Math.max( 1, Math.ceil( Math.abs( a1 - a0 ) * c.r / 4 ) ); // ~4 px chords
+		var step = ( a1 - a0 ) / n;
+		for ( var i = 0; i < n; i++ ) {
+			var p = toData( c.cx + c.r * Math.cos( a0 + i * step ), c.cy + c.r * Math.sin( a0 + i * step ) );
+			var q = toData( c.cx + c.r * Math.cos( a0 + ( i + 1 ) * step ), c.cy + c.r * Math.sin( a0 + ( i + 1 ) * step ) );
+			drawSegment( p.x, p.y, q.x, q.y, color[ mode ] );
+		}
+	}
+
+	function compassSweep() {
+		var c = compass;
+		var a = Math.atan2( mouseY - c.cy, mouseX - c.cx );
+		var d = a - c.lastAng;
+		while ( d > Math.PI ) d -= 2 * Math.PI;
+		while ( d <= -Math.PI ) d += 2 * Math.PI;
+		// at most one full turn per stroke, so chalk does not pile up
+		if ( Math.abs( c.swept + d ) > 2 * Math.PI ) {
+			d = Math.sign( c.swept + d ) * 2 * Math.PI - c.swept;
+		}
+		if ( Math.abs( d ) < 1e-6 ) return;
+		compassArc( c.lastAng, c.lastAng + d );
+		c.lastAng += d;
+		c.swept += d;
+	}
+
+	function compassFullCircle() {
+		var c = compass;
+		if ( c.state == 'place' ) return;
+		if ( c.state == 'open' ) {
+			var r = Math.hypot( mouseX - c.cx, mouseY - c.cy );
+			if ( r < 3 ) return;
+			c.r = r;
+			c.state = 'locked';
+		}
+		var a = Math.atan2( mouseY - c.cy, mouseX - c.cx );
+		compassArc( a, a + 2 * Math.PI );
+		renderOverlay();
+	}
+
+	/* ---------------- Protractor ---------------- */
+
+	function f1( v ) { return Math.round( v * 100 ) / 100; }
+
+	function buildProtractor() {
+		var R = PROTRACTOR_R, ink = '#0b4f75', ink2 = '#a8322a';
+		var nss = ' vector-effect="non-scaling-stroke"';
+		var s = '';
+		s += '<path d="M ' + ( -R ) + ' 0 A ' + R + ' ' + R + ' 0 0 1 ' + R + ' 0 Z" fill="rgba(190,232,255,0.42)" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+		[ R - 24, R - 70 ].forEach( function ( r ) {
+			s += '<path d="M ' + ( -r ) + ' 0 A ' + r + ' ' + r + ' 0 0 1 ' + r + ' 0" fill="none" stroke="' + ink + '" stroke-opacity="0.5" stroke-width="1"' + nss + '/>';
+		} );
+		s += '<path d="M -28 0 A 28 28 0 0 1 28 0" fill="none" stroke="' + ink + '" stroke-width="1"' + nss + '/>';
+		var t1 = '', t5 = '', rays = '', labels = '';
+		for ( var d = 0; d <= 180; d++ ) {
+			var a = d * Math.PI / 180, co = Math.cos( a ), si = Math.sin( a );
+			var len = d % 10 == 0 ? 22 : ( d % 5 == 0 ? 14 : 8 );
+			var seg = 'M ' + f1( R * co ) + ' ' + f1( -R * si ) + ' L ' + f1( ( R - len ) * co ) + ' ' + f1( -( R - len ) * si ) + ' ';
+			if ( d % 5 == 0 ) t5 += seg; else t1 += seg;
+			if ( d % 10 == 0 ) {
+				if ( d > 0 && d < 180 ) rays += 'M ' + f1( 28 * co ) + ' ' + f1( -28 * si ) + ' L ' + f1( ( R - 70 ) * co ) + ' ' + f1( -( R - 70 ) * si ) + ' ';
+				var x1 = f1( ( R - 36 ) * co ), y1 = f1( -( R - 36 ) * si );
+				var x2 = f1( ( R - 56 ) * co ), y2 = f1( -( R - 56 ) * si );
+				labels += '<text x="' + x1 + '" y="' + y1 + '" transform="rotate(' + ( 90 - d ) + ' ' + x1 + ' ' + y1 + ')" font-size="13" fill="' + ink + '">' + d + '</text>';
+				labels += '<text x="' + x2 + '" y="' + y2 + '" transform="rotate(' + ( 90 - d ) + ' ' + x2 + ' ' + y2 + ')" font-size="10.5" fill="' + ink2 + '">' + ( 180 - d ) + '</text>';
+			}
+		}
+		s += '<path d="' + t1 + '" stroke="' + ink + '" stroke-width="0.8"' + nss + '/>';
+		s += '<path d="' + t5 + '" stroke="' + ink + '" stroke-width="1.4"' + nss + '/>';
+		s += '<path d="' + rays + '" stroke="' + ink + '" stroke-opacity="0.35" stroke-width="1"' + nss + '/>';
+		s += '<g font-family="sans-serif" text-anchor="middle" dominant-baseline="middle">' + labels + '</g>';
+		s += '<line x1="' + ( -R ) + '" y1="0" x2="' + R + '" y2="0" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+		s += '<line x1="0" y1="-12" x2="0" y2="12" stroke="' + ink + '" stroke-width="1.5"' + nss + '/>';
+
+		var svg = document.createElementNS( SVGNS, 'svg' );
+		svg.setAttribute( 'class', 'chalkboard-protractor' );
+		svg.style.cssText = 'position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible;';
+		var g = document.createElementNS( SVGNS, 'g' );
+		g.innerHTML = s;
+		svg.appendChild( g );
+
+		// handles (drawn at constant screen size, see applyProtractor)
+		function handle( kind, markup ) {
+			var h = document.createElementNS( SVGNS, 'g' );
+			h.innerHTML = markup;
+			h.querySelector( '[data-grip]' ).addEventListener( 'pointerdown', protractorGrab( kind ) );
+			g.appendChild( h );
+			return h;
+		}
+		var grip = 'pointer-events:auto;touch-action:none;';
+		protractor.hMove = handle( 'move',
+			'<circle data-grip r="17" fill="none" stroke="rgba(11,79,117,0.55)" stroke-width="10" style="' + grip + 'cursor:move;pointer-events:stroke"><title>Drag to move</title></circle>' );
+		protractor.hRot = handle( 'rotate',
+			'<line x1="0" y1="12" x2="0" y2="34" stroke="' + ink + '" stroke-width="2"/>' +
+			'<circle data-grip r="12" fill="' + ink + '" stroke="#fff" stroke-width="2" style="' + grip + 'cursor:grab"><title>Drag to rotate (Shift: 5° steps)</title></circle>' +
+			'<text y="1" fill="#fff" font-size="15" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" style="pointer-events:none">↻</text>' );
+		protractor.hScale = handle( 'scale',
+			'<line x1="-28" y1="0" x2="-10" y2="0" stroke="' + ink + '" stroke-width="2"/>' +
+			'<rect data-grip x="-10" y="-10" width="20" height="20" rx="3" fill="' + ink + '" stroke="#fff" stroke-width="2" style="' + grip + 'cursor:ew-resize"><title>Drag to resize</title></rect>' +
+			'<text y="1" fill="#fff" font-size="13" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" style="pointer-events:none">↔</text>' );
+
+		var label = document.createElementNS( SVGNS, 'text' );
+		label.setAttribute( 'text-anchor', 'middle' );
+		label.setAttribute( 'dominant-baseline', 'middle' );
+		label.setAttribute( 'style', 'font: bold 15px sans-serif; fill: #0b4f75; stroke: #fff; stroke-width: 4px; paint-order: stroke; pointer-events: none;' );
+		svg.appendChild( label );
+
+		protractor.svg = svg;
+		protractor.group = g;
+		protractor.label = label;
+
+		svg.addEventListener( 'pointermove', protractorDrag );
+		svg.addEventListener( 'pointerup', protractorDrop );
+		svg.addEventListener( 'pointercancel', protractorDrop );
+	}
+
+	// protractor-local (unscaled) -> screen
+	function protractorToScreen( lx, ly ) {
+		var p = protractor, phi = -p.angle * Math.PI / 180;
+		lx *= p.scale; ly *= p.scale;
+		return { x: p.cx + lx * Math.cos( phi ) - ly * Math.sin( phi ), y: p.cy + lx * Math.sin( phi ) + ly * Math.cos( phi ) };
+	}
+
+	// screen -> protractor-local (unscaled)
+	function screenToProtractor( x, y ) {
+		var p = protractor, phi = p.angle * Math.PI / 180;
+		var dx = x - p.cx, dy = y - p.cy;
+		return { x: ( dx * Math.cos( phi ) - dy * Math.sin( phi ) ) / p.scale, y: ( dx * Math.sin( phi ) + dy * Math.cos( phi ) ) / p.scale };
+	}
+
+	function overProtractor( x, y ) {
+		if ( !protractor.visible || protractor.mode != mode ) return false;
+		var l = screenToProtractor( x, y );
+		var m = 40 / protractor.scale;
+		return Math.hypot( l.x, l.y ) <= PROTRACTOR_R + m && l.y <= m;
+	}
+
+	function applyProtractor() {
+		var p = protractor, s = p.scale, R = PROTRACTOR_R;
+		p.group.setAttribute( 'transform', 'translate(' + p.cx + ' ' + p.cy + ') rotate(' + ( -p.angle ) + ') scale(' + s + ')' );
+		p.hMove.setAttribute( 'transform', 'scale(' + ( 1 / s ) + ')' );
+		p.hRot.setAttribute( 'transform', 'translate(0 ' + ( -( R + 46 / s ) ) + ') scale(' + ( 1 / s ) + ')' );
+		p.hScale.setAttribute( 'transform', 'translate(' + ( R + 38 / s ) + ' 0) scale(' + ( 1 / s ) + ')' );
+		var lp = protractorToScreen( 0, 34 / s );
+		p.label.setAttribute( 'x', lp.x );
+		p.label.setAttribute( 'y', lp.y );
+		p.label.textContent = '↺ ' + fmtDeg( p.angle );
+	}
+
+	function showProtractor( x, y ) {
+		if ( !protractor.svg ) buildProtractor();
+		drawingCanvas[ mode ].container.appendChild( protractor.svg );
+		protractor.svg.style.display = '';
+		protractor.visible = true;
+		protractor.mode = mode;
+		protractor.cx = x;
+		protractor.cy = y;
+		protractor.angle = 0;
+		protractor.drag = null;
+		applyProtractor();
+	}
+
+	function hideProtractor() {
+		if ( protractor.svg ) protractor.svg.style.display = 'none';
+		protractor.visible = false;
+		protractor.drag = null;
+	}
+
+	function toggleProtractor( x, y ) {
+		if ( protractor.visible ) hideProtractor();
+		else showProtractor( x, y );
+	}
+
+	function clampScale( s ) {
+		return Math.min( 3.5, Math.max( 0.25, s ) );
+	}
+
+	function pointerAngle( x, y ) {
+		return -Math.atan2( y - protractor.cy, x - protractor.cx ) * 180 / Math.PI;
+	}
+
+	function protractorGrab( kind ) {
+		return function ( evt ) {
+			if ( evt.button != 0 ) return;
+			evt.preventDefault();
+			evt.stopPropagation();
+			protractor.svg.setPointerCapture( evt.pointerId );
+			protractor.drag = {
+				kind: kind,
+				id: evt.pointerId,
+				x0: evt.pageX, y0: evt.pageY,
+				cx0: protractor.cx, cy0: protractor.cy,
+				a0: protractor.angle, s0: protractor.scale,
+				p0: pointerAngle( evt.pageX, evt.pageY ),
+				d0: Math.max( 1, Math.hypot( evt.pageX - protractor.cx, evt.pageY - protractor.cy ) )
 			};
-			protractor=true;
-
-		}else{
-			switchBoard( board + 1 );
-			switchBoard( board - 1 );
-			protractor=false;
-
 		};
-	};
+	}
+
+	function protractorDrag( evt ) {
+		var d = protractor.drag;
+		if ( !d || evt.pointerId != d.id ) return;
+		evt.preventDefault();
+		if ( d.kind == 'move' ) {
+			protractor.cx = d.cx0 + evt.pageX - d.x0;
+			protractor.cy = d.cy0 + evt.pageY - d.y0;
+		} else if ( d.kind == 'rotate' ) {
+			var a = d.a0 + pointerAngle( evt.pageX, evt.pageY ) - d.p0;
+			if ( evt.shiftKey ) a = Math.round( a / 5 ) * 5;
+			protractor.angle = normDeg( a );
+		} else {
+			protractor.scale = clampScale( d.s0 * Math.hypot( evt.pageX - protractor.cx, evt.pageY - protractor.cy ) / d.d0 );
+		}
+		applyProtractor();
+	}
+
+	function protractorDrop( evt ) {
+		var d = protractor.drag;
+		if ( !d || evt.pointerId != d.id ) return;
+		protractor.drag = null;
+		try { protractor.svg.releasePointerCapture( evt.pointerId ); } catch ( e ) {}
+	}
+
+	function protractorWheel( evt ) {
+		if ( !overProtractor( evt.pageX, evt.pageY ) ) return;
+		evt.preventDefault();
+		evt.stopPropagation();
+		var d = evt.deltaY || evt.deltaX;
+		if ( evt.deltaMode == 1 ) d *= 33; // lines -> pixels
+		if ( !d ) return;
+		if ( evt.ctrlKey ) {
+			protractor.scale = clampScale( protractor.scale * Math.exp( -d / 100 * 0.05 ) );
+		} else {
+			// one mouse-wheel notch (100) = 1 deg, or 15 deg with Shift
+			protractor.angle = normDeg( protractor.angle - d / 100 * ( evt.shiftKey ? 15 : 1 ) );
+		}
+		applyProtractor();
+	}
+
+	function protractorKey( evt ) {
+		if ( evt.ctrlKey || evt.metaKey || evt.altKey ) return false;
+		var p = protractor, big = evt.shiftKey;
+		switch ( evt.code ) {
+		case 'ArrowLeft': p.cx -= big ? 10 : 1; break;
+		case 'ArrowRight': p.cx += big ? 10 : 1; break;
+		case 'ArrowUp': p.cy -= big ? 10 : 1; break;
+		case 'ArrowDown': p.cy += big ? 10 : 1; break;
+		case 'BracketLeft': p.angle = normDeg( p.angle + ( big ? 15 : 1 ) ); break;  // counter-clockwise
+		case 'BracketRight': p.angle = normDeg( p.angle - ( big ? 15 : 1 ) ); break; // clockwise
+		case 'Equal': case 'NumpadAdd': p.scale = clampScale( p.scale * 1.05 ); break;
+		case 'Minus': case 'NumpadSubtract': p.scale = clampScale( p.scale / 1.05 ); break;
+		case 'Digit0': case 'Numpad0': p.angle = 0; break;
+		case 'Escape': hideProtractor(); return true;
+		default: return false;
+		}
+		applyProtractor();
+		return true;
+	}
+
+	// Keys are caught in the capture phase so that Reveal does not also act on
+	// them (e.g. Esc = overview, arrows = next slide) while a tool is in use.
+	window.addEventListener( 'keydown', function ( evt ) {
+		if ( evt.key === 'Shift' ) {
+			shiftHeld = true;
+			if ( ruler.active ) renderOverlay();
+			return;
+		}
+		var handled = false;
+		if ( ruler.active || compass.active ) {
+			if ( evt.key === 'Escape' ) {
+				cancelTools();
+				handled = true;
+			} else if ( compass.active && evt.key === 'Enter' ) {
+				compassFullCircle();
+				handled = true;
+			}
+		}
+		if ( !handled && protractor.visible ) handled = protractorKey( evt );
+		if ( handled ) {
+			evt.preventDefault();
+			evt.stopImmediatePropagation();
+		}
+	}, true );
+
+	window.addEventListener( 'keyup', function ( evt ) {
+		if ( evt.key === 'Shift' ) {
+			shiftHeld = false;
+			if ( ruler.active ) renderOverlay();
+		}
+	}, true );
+
 /*****************************************************************
  ** User interface
  ******************************************************************/
@@ -1660,90 +2141,100 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 		canvas.addEventListener( 'mousedown', function ( evt ) {
 			evt.preventDefault();
-			if (lining){
-				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
-					var scale = drawingCanvas[ mode ].scale;
-					var xOffset = drawingCanvas[ mode ].xOffset;
-					var yOffset = drawingCanvas[ mode ].yOffset;
-					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
-					mouseX = evt.pageX;
-					mouseY = evt.pageY;
-				drawMyLine(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
-			}}else if (circling) {
-				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
-					var scale = drawingCanvas[ mode ].scale;
-					var xOffset = drawingCanvas[ mode ].xOffset;
-					var yOffset = drawingCanvas[ mode ].yOffset;
-					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
-					mouseX = evt.pageX;
-					mouseY = evt.pageY;
-				drawMyCircle(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
+			toolClick = false;
+			if ( readOnly || evt.target.getAttribute( 'data-chalkboard' ) != mode ) return;
 
-			}}else {
-				if ( !readOnly && evt.target.getAttribute( 'data-chalkboard' ) == mode ) {
-	//console.log( "mousedown: " + evt.button );
-					var scale = drawingCanvas[ mode ].scale;
-					var xOffset = drawingCanvas[ mode ].xOffset;
-					var yOffset = drawingCanvas[ mode ].yOffset;
+			var scale = drawingCanvas[ mode ].scale;
+			var xOffset = drawingCanvas[ mode ].xOffset;
+			var yOffset = drawingCanvas[ mode ].yOffset;
+			mouseX = evt.pageX;
+			mouseY = evt.pageY;
 
-					mouseX = evt.pageX;
-					mouseY = evt.pageY;
-
-					if ( evt.button == 2 || evt.button == 1 ) {
-						startErasing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
-						// broadcast
-						var message = new CustomEvent( messageType );
-						message.content = {
-							sender: 'chalkboard-plugin',
-							type: 'erase',
-							timestamp: Date.now() - slideStart,
-							mode,
-							board,
-							x: ( mouseX - xOffset ) / scale,
-							y: ( mouseY - yOffset ) / scale
-						};
-						document.dispatchEvent( message );
-					} else {
-						startDrawing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
-					}
+			if ( ruler.active || compass.active ) {
+				if ( evt.button == 2 ) {             // right-click puts the tool away
+					cancelTools();
+					toolClick = true;
+					return;
+				}
+				if ( evt.button != 0 || evt.ctrlKey ) return;
+				if ( ruler.active ) {
+					toolClick = true;
+					rulerClick( evt.shiftKey );   // Shift = snap, not "compass"
+				} else if ( !evt.shiftKey ) {      // Shift+click = put the compass away (click handler)
+					toolClick = true;
+					compassDown();
+				}
+				return;
 			}
-		}
-	});
 
-
-
-
-		canvas.addEventListener('dblclick', function ( evt ) {
-			evt.preventDefault();
-			drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
-			stopDrawing();
-			stopErasing();
-			start_line();
+			if ( evt.button == 2 || evt.button == 1 ) {
+				startErasing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
+				// broadcast
+				var message = new CustomEvent( messageType );
+				message.content = {
+					sender: 'chalkboard-plugin',
+					type: 'erase',
+					timestamp: Date.now() - slideStart,
+					mode,
+					board,
+					x: ( mouseX - xOffset ) / scale,
+					y: ( mouseY - yOffset ) / scale
+				};
+				document.dispatchEvent( message );
+			} else {
+				startDrawing( ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale );
+			}
 		});
 
-		canvas.addEventListener('click', ( evt ) =>{
-			var shifted= evt.shiftKey;
-			var ctled=evt.ctrlKey;
-			if (shifted){
+		// double-click: arm the ruler
+		canvas.addEventListener( 'dblclick', function ( evt ) {
+			evt.preventDefault();
+			if ( readOnly || evt.target.getAttribute( 'data-chalkboard' ) != mode ) return;
+			if ( ruler.active || compass.active ) return;
+			if ( Date.now() - ruler.doneAt < 600 ) return; // the two clicks that just finished a line
+			stopDrawing();
+			stopErasing();
+			startRuler();
+		});
+
+		// Shift+click: compass on/off.  Ctrl+click: protractor on/off.
+		canvas.addEventListener( 'click', function ( evt ) {
+			if ( toolClick ) {
+				toolClick = false;
+				return;
+			}
+			if ( readOnly || evt.target.getAttribute( 'data-chalkboard' ) != mode ) return;
+			if ( evt.ctrlKey ) {
 				evt.preventDefault();
-				drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
 				stopDrawing();
 				stopErasing();
-				start_circling();
-			};
-			if (ctled){
+				toggleProtractor( evt.pageX, evt.pageY );
+			} else if ( evt.shiftKey ) {
 				evt.preventDefault();
 				stopDrawing();
 				stopErasing();
 				mouseX = evt.pageX;
 				mouseY = evt.pageY;
-				switch_protractor(mouseX, mouseY);
-			};
+				if ( compass.active ) cancelTools();
+				else startCompass();
+			}
 		});
 
+		canvas.addEventListener( 'wheel', protractorWheel, passiveSupported ? { passive: false } : false );
+
 		canvas.addEventListener( 'mousemove', function ( evt ) {
-			if (!lining || !circling){
 			evt.preventDefault();
+			if ( ruler.active || compass.active ) {
+				mouseX = evt.pageX;
+				mouseY = evt.pageY;
+				shiftHeld = evt.shiftKey;
+				if ( compass.sweeping ) {
+					if ( evt.buttons & 1 ) compassSweep();
+					else compass.sweeping = false; // button released outside the window
+				}
+				renderOverlay();
+				return;
+			}
 //console.log("Mouse move");
 			if ( drawing || erasing ) {
 				var scale = drawingCanvas[ mode ].scale;
@@ -1790,11 +2281,19 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 				}
 
 			}
-		}} );
+		} );
 
 
 		canvas.addEventListener( 'mouseup', function ( evt ) {
 			evt.preventDefault();
+			if ( compass.sweeping ) {
+				compass.sweeping = false;
+				renderOverlay();
+			}
+			if ( ruler.active || compass.active ) {
+				toolCursor();
+				return;
+			}
 			drawingCanvas[ mode ].canvas.style.cursor = pens[ mode ][ color[ mode ] ].cursor;
 			if ( drawing || erasing ) {
 				stopDrawing();
@@ -1819,6 +2318,8 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 			drawingCanvas[ id ].canvas.height = drawingCanvas[ id ].height;
 			drawingCanvas[ id ].context.canvas.width = drawingCanvas[ id ].width;
 			drawingCanvas[ id ].context.canvas.height = drawingCanvas[ id ].height;
+			drawingCanvas[ id ].overlay.width = drawingCanvas[ id ].width;
+			drawingCanvas[ id ].overlay.height = drawingCanvas[ id ].height;
 
 			drawingCanvas[ id ].scale = Math.min( drawingCanvas[ id ].width / storage[ id ].width, drawingCanvas[ id ].height / storage[ id ].height );
 			drawingCanvas[ id ].xOffset = ( drawingCanvas[ id ].width - storage[ id ].width * drawingCanvas[ id ].scale ) / 2;
@@ -1856,6 +2357,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 	Reveal.addEventListener( 'slidechanged', function ( evt ) {
 //		clearTimeout( slidechangeTimeout );
 //console.log('slidechanged');
+		hideProtractor();
 		if ( !printMode ) {
 			slideStart = Date.now() - getSlideDuration();
 			slideIndices = Reveal.getIndices();
@@ -1928,6 +2430,8 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 	} );
 
 	function toggleNotesCanvas() {
+		cancelTools();
+		hideProtractor();
 		if ( !readOnly ) {
 			if ( mode == 1 ) {
 				toggleChalkboard();
@@ -1964,6 +2468,8 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 	function toggleChalkboard() {
 //console.log("toggleChalkboard " + mode);
+		cancelTools();
+		hideProtractor();
 		if ( mode == 1 ) {
 			if ( !readOnly ) {
 				recordEvent( { type: 'close' } );
