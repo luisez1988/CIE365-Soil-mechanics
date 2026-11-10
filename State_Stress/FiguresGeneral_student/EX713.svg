@@ -289,8 +289,7 @@
            y="7.1034665"
            style="stroke-width:0.264583">d</tspan></text>
     </g>
-      <!-- STUDENT_HIDDEN
-<text class="Animate"
+      <text class="Animate"
          xml:space="preserve"
          style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;white-space:pre;inline-size:20.8141;display:inline;fill:#ff0000;stroke-width:0.264583"
          x="32.891788"
@@ -309,7 +308,6 @@
            x="32.891788"
            y="11.959741"
            id="tspan25">principal stresses</tspan></text>
--->
 
       <g class="fragment"
          id="g172"
@@ -469,8 +467,7 @@
              y="7.5038996"
              style="stroke-width:0.264583">α</tspan></text>
       </g>
-      <!-- STUDENT_HIDDEN
-<text class="Animate"
+      <text class="Animate"
          xml:space="preserve"
          style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
          x="11.606918"
@@ -481,10 +478,8 @@
            style="fill:#000080;stroke-width:0.264583"
            x="11.606918"
            y="20.677038">250+0.5*180.3*cos(2*(25+28.2))=</tspan></text>
--->
 
-      <!-- STUDENT_HIDDEN
-<g class="Animate"
+      <g class="Animate"
          id="g13">
         <path
            style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -507,7 +502,6 @@
              y="32.122198"
              id="tspan35">configuration</tspan></text>
       </g>
--->
 
       <g class="fragment"
          id="g28">
@@ -527,8 +521,7 @@
            d="m 10.428512,20.332098 c 1.339785,1.224846 -0.8699899,2.213196 -0.5308335,3.400243 0.2395215,0.838327 1.3972815,1.613122 1.0642435,2.612234 -0.236244,0.708731 -0.854007,1.415394 -0.53341,2.063988"
            id="path27" />
       </g>
-      <!-- STUDENT_HIDDEN
-<text class="Animate"
+      <text class="Animate"
          xml:space="preserve"
          style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
          x="11.766891"
@@ -539,7 +532,6 @@
            style="fill:#008000;stroke-width:0.264583"
            x="11.766891"
            y="29.835539">225 kPa</tspan></text>
--->
       <text 
          xml:space="preserve"
          style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583"
@@ -614,8 +606,7 @@
                y="38.017723"
                style="stroke-width:0.264583">α</tspan></text>
         </g>
-        <!-- STUDENT_HIDDEN
-<text class="Animate"
+        <text class="Animate"
            xml:space="preserve"
            style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
            x="15.614717"
@@ -626,9 +617,7 @@
              style="stroke-width:0.264583;fill:#000080"
              x="15.614717"
              y="38.002579">0.5*180.3*sin(2*(25+28.2))=</tspan></text>
--->
-        <!-- STUDENT_HIDDEN
-<text class="Animate"
+        <text class="Animate"
            xml:space="preserve"
            style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#008000;stroke-width:0.264583"
            x="46.526554"
@@ -639,7 +628,6 @@
              style="fill:#008000;stroke-width:0.264583"
              x="46.526554"
              y="38.161484">86.5 kPa</tspan></text>
--->
       </g>
     </g>
     <text class="fragment"
@@ -969,12 +957,11 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 54.741846,34.28801 v 1.366128"
        id="path76" />
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.49500002, 0.49500002;stroke-dashoffset:0;marker-mid:url(#Dot)"
        d="M 54.741846,34.971074 H 67.981697 V 24.956745"
-       id="path78" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       id="path78" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#ff0000"
        x="56.211403"
@@ -985,13 +972,11 @@
          style="stroke-width:0.264583;fill:#ff0000"
          x="56.211403"
          y="37.850903">(200, -75)</tspan></text>
--->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#808080;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.49500002, 0.49500002;stroke-dashoffset:0;marker-mid:url(#marker82)"
        d="m 81.210866,24.956745 0.01717,-9.860461 H 54.774575"
-       id="path81" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       id="path81" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#ff0000;stroke-width:0.264583"
        x="81.954689"
@@ -1002,17 +987,15 @@
          style="fill:#ff0000;stroke-width:0.264583"
          x="81.954689"
          y="14.246664">(300, 75)</tspan></text>
--->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 67.981697,34.971074 81.228035,15.096284"
-       id="path83" /> -->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+       id="path83" />
+    <path class="Animate"
        id="path84"
        style="fill:none;stroke:#008000;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-opacity:0.94902;paint-order:markers fill stroke"
-       d="M 86.436383,24.956744 A 11.903891,11.912439 0 0 1 74.532492,36.869183 11.903891,11.912439 0 0 1 62.6286,24.956744 11.903891,11.912439 0 0 1 74.532492,13.044305 11.903891,11.912439 0 0 1 86.436383,24.956744 Z" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       d="M 86.436383,24.956744 A 11.903891,11.912439 0 0 1 74.532492,36.869183 11.903891,11.912439 0 0 1 62.6286,24.956744 11.903891,11.912439 0 0 1 74.532492,13.044305 11.903891,11.912439 0 0 1 86.436383,24.956744 Z" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#008000"
        x="79.749435"
@@ -1023,10 +1006,8 @@
          style="stroke-width:0.264583;fill:#008000"
          x="79.749435"
          y="39.153419">Mohr-circle</tspan></text>
--->
     
-    <!-- STUDENT_HIDDEN
-<g class="Animate">
+    <g class="Animate">
     <rect 
        style="fill:#ff00ff;stroke:#ff00ff;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94902;paint-order:markers fill stroke"
        id="rect84"
@@ -1034,9 +1015,7 @@
        height="0.73587239"
        x="62.284569"
        y="24.523567" /> </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g86"
        style="fill:#ff00ff"
        transform="translate(-10.476965,13.002662)">
@@ -1062,9 +1041,7 @@
            x="62.74588"
            y="11.267643">3</tspan></text>
     </g>
--->
-   <!-- STUDENT_HIDDEN
-<g class="Animate">
+   <g class="Animate">
     <rect
        style="fill:#ff00ff;stroke:#ff00ff;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94902;paint-order:markers fill stroke"
        id="rect86"
@@ -1072,9 +1049,7 @@
        height="0.73587239"
        x="86.091599"
        y="24.523567" /> </g>
--->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g88">
       <text
          xml:space="preserve"
@@ -1098,14 +1073,12 @@
            x="87.723083"
            y="24.270306">1</tspan></text>
     </g>
--->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#0000ff;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker89)"
        d="m 77.915925,20.141406 c 1.94345,0.896186 3.041763,2.501235 3.294941,4.815147"
        id="path88"
-       sodipodi:nodetypes="cc" /> -->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+       sodipodi:nodetypes="cc" />
+    <g class="Animate"
        id="g90"
        style="fill:#0000ff"
        transform="translate(-0.69453125,-6.9589775)">
@@ -1132,19 +1105,17 @@
            x="80.336594"
            y="29.691776">o</tspan></text>
     </g>
--->
 
-    <!-- STUDENT_HIDDEN <path class="Animate"
+    <path class="Animate"
        style="fill:none;stroke:#800000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
        d="M 74.656142,24.956745 71.257167,13.5041"
-       id="path91" /> -->
-    <!-- STUDENT_HIDDEN <path class="Animate"
+       id="path91" />
+    <path class="Animate"
        style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker89)"
        d="M 77.915925,20.141406 C 76.068562,19.488621 74.693052,19.458422 73.168607,19.944583"
        id="path92"
-       sodipodi:nodetypes="cc" /> -->
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+       sodipodi:nodetypes="cc" />
+    <g class="Animate"
        id="g93"
        style="fill:#800000"
        transform="translate(-4.2514826,9.2653302)">
@@ -1171,13 +1142,11 @@
            x="80.70385"
            y="8.2598448">o</tspan></text>
     </g>
--->
-        <!-- STUDENT_HIDDEN <path class="Animate"
+        <path class="Animate"
        style="fill:none;stroke:#800000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.33000001, 0.66000003;stroke-dashoffset:0;marker-mid:url(#marker82)"
        d="M 71.257395,24.956745 V 13.504034 H 54.765646"
-       id="path90" /> -->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+       id="path90" />
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#800000"
        x="60.792961"
@@ -1188,6 +1157,5 @@
          style="stroke-width:0.264583;fill:#800000"
          x="60.792961"
          y="12.332613">(225, 87)</tspan></text>
--->
   </g>
 </svg>

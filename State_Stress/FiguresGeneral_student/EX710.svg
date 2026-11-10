@@ -121,8 +121,7 @@
            x="37.141636"
            y="2.8031161">xy</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<g class="Animate"
+    <g class="Animate"
        id="g8">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
@@ -140,7 +139,6 @@
            x="38.406227"
            y="5.0911908">Clockwise</tspan></text>
     </g>
--->
     <g class="fragment"
        id="g10"
        transform="translate(-2.5799842,-3.1240961)">

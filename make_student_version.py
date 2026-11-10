@@ -13,33 +13,38 @@ def force_rmtree(path: Path):
     shutil.rmtree(path, onerror=remove_readonly)
 
 
-def mark_as_student(content: str) -> str:
+def mark_build(content: str, build: str) -> str:
     """
-    Adds `class="student"` to the <html> element, marking the file as the
-    student build so stylesheets can target it.
+    Adds `class="student"` or `class="professor"` to the <html> element,
+    marking which build the file is so stylesheets and scripts can target it.
 
     reveal.js puts its own `print-pdf` class on <html> during PDF export, so the
     pair `html.print-pdf.student` identifies "student build, exporting to PDF" —
     which is what assets/solutions.css uses to blank the .fill/.ans answers.
-    Nothing changes on screen or in the professor build.
+
+    Both markers also tell assets/solution-plugin.js to turn the
+    <object class="Animation"> figures inside the solutions (fetched at runtime,
+    so this script never sees them) into <img>s, the same swap done here:
+    student → FiguresGeneral_student/ (answers removed),
+    professor → FiguresGeneral/ (fully annotated, prints at full size).
     """
     m = re.search(r'<html\b([^>]*)>', content, re.IGNORECASE)
     if not m:
-        print("  [WARN] No <html> tag found — student marker NOT added, "
-              "answers will show in the PDF export")
+        print(f"  [WARN] No <html> tag found — {build} marker NOT added, "
+              "solution figures stay <object>s")
         return content
 
     attrs = m.group(1)
     cls   = re.search(r'class=(["\'])(.*?)\1', attrs, re.IGNORECASE)
 
     if cls:
-        if 'student' in cls.group(2).split():
+        if build in cls.group(2).split():
             return content
-        attrs = attrs[:cls.start()] + f'class="{cls.group(2)} student"' + attrs[cls.end():]
+        attrs = attrs[:cls.start()] + f'class="{cls.group(2)} {build}"' + attrs[cls.end():]
     else:
-        attrs = attrs + ' class="student"'
+        attrs = attrs + f' class="{build}"'
 
-    print("  [HTML] Marked <html class=\"student\"> (hides answers in ?print-pdf)")
+    print(f"  [HTML] Marked <html class=\"{build}\">")
     return content[:m.start()] + f'<html{attrs}>' + content[m.end():]
 
 
@@ -51,7 +56,8 @@ def transform_html(input_path: Path, output_path: Path,
     Transforms <object class='Animation' ... data='FiguresGeneral/x.svg'>
     into <img src='{figures_dst_folder}/x.svg'> in the HTML file.
     If figures_dst_folder is None, the original figures_folder name is kept.
-    If student is True, also marks the file as the student build.
+    Marks the file as the student build if student is True, else as the
+    professor build.
     """
     with open(input_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -79,8 +85,7 @@ def transform_html(input_path: Path, output_path: Path,
 
     print(f"  [HTML] Converted {count} Animation objects → <img> tags")
 
-    if student:
-        modified = mark_as_student(modified)
+    modified = mark_build(modified, 'student' if student else 'professor')
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(modified)
