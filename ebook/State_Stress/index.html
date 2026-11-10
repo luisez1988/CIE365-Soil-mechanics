@@ -321,7 +321,7 @@ window.MathJax = {
 	<div class='col' style="--colw:60%">
 	
 		<figure>
-		<img loading="lazy" src='../../State_Stress/FiguresGeneral/sign_convention.svg' width='100%'/>
+		<img loading="lazy" src='../../State_Stress/FiguresGeneral/sign_convention.svg' width='50%'/>
 		<footer style='font-size: 0.8em'> <em></em> </footer>
 		</figure>
 	
@@ -1586,17 +1586,17 @@ window.MathJax = {
 <div class='textBox' >
 For the element in the figure below find: (a) the principal stresses and their orientation using the analytical solutions, (b) the stresses acting on a plane oriented 25 deg. from the horizontal. (c) Check the results using the Mohr's circle method.
 </div>
-<div class="container">
-	<div class="col" style="--colw:40%">
+<div class="container" style="display: block">
+	<div class="col" style="--colw:40%; width: 40%; margin: 0 auto">
 			<figure>
 			  <img loading="lazy" src="../../State_Stress/FiguresGeneral/example62.svg" style="width:80%" data-preload/>
 			  <footer ><small></small></footer>
 			</figure>
 	</div>
-	<div class="col"  style="--colw:60%">
+	<div class="col"  style="--colw:60%; width: 100%">
 		<div class='ProblemBox' >
 		
-<div class="sol" data-id="ex-9-1" style="--sol-line: 1.25; font-size: 0.6em">
+<div class="sol" data-id="ex-9-1" style="--sol-line: 1.25">
 
   
 
@@ -1615,8 +1615,7 @@ For the element in the figure below find: (a) the principal stresses and their o
 
   
 
-  <div class="sol-cols">
-    <div class="sol-col" style="flex: 1.15 1 0">
+  <div class="sol-stack">
 
       <div class="step">
         <span class="lead">(a) Principal stresses</span>
@@ -1644,23 +1643,19 @@ For the element in the figure below find: (a) the principal stresses and their o
         \(\sigma_\alpha=\) <span class="blank math" data-bid="State_Stress.d53e4ccd-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="State_Stress.588a76dc-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
       </div>
 
-    </div>
-    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em">
+    
 
-      <div class="sol-cols">
-        <div class="sol-col" style="flex: 0 0 42%">
-          <span class="sol-fig" >
+      <div class="sol-stack">
+          <span class="sol-fig" style="width: 19.5%; min-width: min(100%, 140px)">
             <img loading="lazy" src="figures/ex-9-1-axes.svg" style="width:100%" alt=""/>
           </span>
-        </div>
-        <div class="sol-col">
+        
           <div class="step">
             <span class="lead">Orthogonal direction</span>
             \(\beta=90^\circ+\alpha\) <br>
             \(\beta=\) <span class="blank math" data-bid="State_Stress.12f0ed13-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="State_Stress.2d02914d-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
           </div>
         </div>
-      </div>
 
       <div class="step">
         <span class="lead">Stress on the orthogonal plane</span> <br>
@@ -1678,12 +1673,10 @@ For the element in the figure below find: (a) the principal stresses and their o
       </div>
 
     </div>
-  </div>
 
   
 
-  <div class="sol-cols">
-    <div class="sol-col">
+  <div class="sol-stack">
 
       <div class="step">
         <span class="lead">(b) Normal stress on the plane at 25&deg; from the horizontal</span> <br>
@@ -1702,8 +1695,7 @@ For the element in the figure below find: (a) the principal stresses and their o
         \(\tau_\alpha=\) <span class="blank math" data-bid="State_Stress.17fa090b-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="State_Stress.1ac31c20-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
       </div>
 
-    </div>
-    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em">
+    
 
       <div class="step">
         <span class="lead">Method 2, simplified equations. First find the mean stress</span> <br>
@@ -1728,27 +1720,22 @@ For the element in the figure below find: (a) the principal stresses and their o
       </div>
 
     </div>
-  </div>
 
   
 
-  <div class="sol-cols">
-    <div class="sol-col" style="flex: 0.95 1 0">
+  <div class="sol-stack">
 
-      <div class="sol-cols">
-        <div class="sol-col">
+      <div class="sol-stack">
           <div class="step">
             <span class="lead">(b) Stress acting at 25&deg; from the horizontal</span> <br>
             \(\sigma_\alpha=\sigma_m+0.5\sigma_d\cos(2\alpha)\)
             <span class="note">In this equation the angle is measured from the principal stresses</span>
           </div>
-        </div>
-        <div class="sol-col" style="flex: 0 0 38%">
-          <span class="sol-fig" >
+        
+          <span class="sol-fig" style="width: 18.5%; min-width: min(100%, 140px)">
             <img loading="lazy" src="figures/ex-9-1-axes.svg" style="width:100%" alt=""/>
           </span>
         </div>
-      </div>
 
       <div class="step">
         <span class="lead">Normal stress</span> <br>
@@ -1762,20 +1749,18 @@ For the element in the figure below find: (a) the principal stresses and their o
         \(\tau_\alpha=\) <span class="blank math" data-bid="State_Stress.24e8899a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:36ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="State_Stress.59056461-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
       </div>
 
-    </div>
-    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em">
+    
 
       <div class="step">
         <span class="lead">(c) Plot Mohr's circle</span>
       </div>
 
       
-      <span class="sol-fig" >
+      <span class="sol-fig" style="width: 51.3%; min-width: min(100%, 140px)">
         <img loading="lazy" src="figures/ex-9-1-mohr.svg" style="width:100%" alt=""/>
       </span>
 
     </div>
-  </div>
 
 </div>
 
@@ -1784,21 +1769,15 @@ For the element in the figure below find: (a) the principal stresses and their o
 </div>
 
 
-<div class='ProblemBox' style='height: 650px'>
-
-</div>
 
 
 
-<div class='ProblemBox' style='height: 650px'>
-
-</div>
 
 
 
-<div class='ProblemBox' >
-	
-</div>
+
+
+
 
 
 </section>
@@ -1828,7 +1807,7 @@ For the element in the figure below find: (a) the principal stresses and their o
 </div>
 <div class='ProblemBox' >
 	
-<div class="sol" data-id="ex-9-2" style="--sol-line: 1.25; font-size: 0.56em">
+<div class="sol" data-id="ex-9-2" style="--sol-line: 1.25">
 
   <div class="step">
     <span class="lead">Data</span>
@@ -1853,24 +1832,23 @@ For the element in the figure below find: (a) the principal stresses and their o
 <div class='textBox' >
 For point A in the soil profile below (same \(\gamma\) above the water table): (a) Plot the Mohr's circles for the total and effective stresses. (b) Find the shear and normal stresses on a plane inclined at 38 degrees from the horizontal. (c) What is the effect of pore pressure on the shear stresses?
 </div>
-<div class='container'>
-<div class='col' style='--colw:30%'>
+<div class='container' style="display: block">
+<div class='col' style="--colw:30%; width: 30%; margin: 0 auto">
 <figure>
 <img loading="lazy" src='../../State_Stress/FiguresGeneral/Profile.svg' width='100%'/>
 <footer style='font-size: 0.8em'> <em></em> </footer>
 </figure>
 </div>
-<div class='col' style='--colw:70%'>
+<div class='col' style="--colw:70%; width: 100%">
 <div class='ProblemBox' >
 
-<div class="sol" data-id="ex-9-3" style="--sol-line: 1.25; font-size: 0.6em">
+<div class="sol" data-id="ex-9-3" style="--sol-line: 1.25">
 
   
 
 
 
-  <div class="sol-cols">
-    <div class="sol-col">
+  <div class="sol-stack">
 
         <div class="step">
     <span class="lead">Data</span> given in figure &emsp;
@@ -1891,14 +1869,12 @@ For point A in the soil profile below (same \(\gamma\) above the water table): (
 
 
 
-    </div>
-    <div class="sol-col" style="flex: 0 0 30%">
+    
       
-      <span class="sol-fig" >
+      <span class="sol-fig" style="width: 30.0%; min-width: min(100%, 140px)">
         <img loading="lazy" src="figures/ex-9-3-elements.svg" style="width:100%" alt=""/>
       </span>
     </div>
-  </div>
 
         <div class="step">
         <span class="lead">Horizontal effective stress</span>
@@ -1967,22 +1943,16 @@ For point A in the soil profile below (same \(\gamma\) above the water table): (
 
 
 
-<div class='ProblemBox' >
 
-</div>
 
 
 </section>
 
 <section class="block check-yourself" id="s10" data-anchor="s10">
 
-<div class='container'>
-<div class='col' style='--colw:50%'>
-<div class='ProblemBox' style='height: 650px'>
+<div class='container' style="display: block">
 
-</div>
-</div>
-<div class='col' style='--colw:50%'>
+<div class='col' style="--colw:50%; width: 50%; margin: 0 auto">
 <div class='InquiryBox' >
 What is the horizontal distance (offset) between the total and effective stress circles?
 </div>
@@ -1996,6 +1966,12 @@ What is the horizontal distance (offset) between the total and effective stress 
 </div>
 </div>
 
+
+</section>
+
+<section class="block" id="s11" data-anchor="s11">
+
+<iframe loading="lazy" src="../../virtual_lab/experiments/mohr/index.html?embed=1&theme=light" width='100%' height='720px' style='border:0'></iframe>
 
 </section>
 </article>

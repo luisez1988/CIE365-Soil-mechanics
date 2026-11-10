@@ -5,12 +5,14 @@ Builds the interactive course ebook from the reveal.js lecture decks.
 The course name shown to students lives in ebook_src/config.json ("course");
 nothing else writes it.
 
-    python ebook_build.py                # build every chapter in ebook_src/config.json + TOC
     python ebook_build.py 1D_flow        # build one chapter + refresh TOC
+    python ebook_build.py --all          # rebuild EVERY chapter in ebook_src/config.json
     python ebook_build.py --list 1D_flow # print section indices/titles (to configure skips)
 
-The slides remain the source of truth; ebook/ is fully regenerated on each run
-and is safe to delete. The correct answers (contents of span.atb) are NEVER
+The slides remain the source of truth, but a chapter is regenerated wholesale:
+hand edits to ebook/<deck>/index.html are lost when that chapter is rebuilt, and
+students' answers are keyed to the blanks in it. Build one chapter at a time; a
+bare run does nothing (--all is required for everything). The correct answers (contents of span.atb) are NEVER
 written to the output — blanks ship as empty contenteditable spans whose only
 answer-derived attribute is a width hint.
 """
@@ -169,6 +171,107 @@ SOLUTION_DIV = re.compile(
     r'<div\b[^>]*class=["\'][^"\']*\bSolution\b[^"\']*["\'][^>]*>\s*</div>',
     re.IGNORECASE | re.DOTALL)
 
+# Left where a continuation slide's .Solution was (the solution is already
+# inlined in the first part's box); transform_body then drops the box around it.
+SOL_CONTINUED = '\x00solcont\x00'
+
+SOL_COLS_OPEN = re.compile(r'<div\b[^>]*class=["\'][^"\']*\bsol-cols\b[^"\']*["\'][^>]*>',
+                           re.IGNORECASE)
+SOL_COL_OPEN = re.compile(r'<div\b[^>]*class=["\'][^"\']*\bsol-col\b[^"\']*["\'][^>]*>',
+                          re.IGNORECASE)
+SOL_FIG_OPEN = re.compile(r'<span\b[^>]*class=["\'][^"\']*\bsol-fig\b[^"\']*["\'][^>]*>',
+                          re.IGNORECASE)
+
+
+def _col_share(tag: str):
+    """(fixed_fraction or None, grow) for one .sol-col, from its inline flex.
+    Default matches assets/solutions.css: .sol .sol-col { flex: 1 1 0 }."""
+    m = re.search(r'flex\s*:\s*([^;"\']+)', tag)
+    if not m:
+        return None, 1.0
+    parts = m.group(1).split()
+    basis = parts[2] if len(parts) > 2 else ''
+    if basis.endswith('%'):
+        return float(basis[:-1]) / 100.0, 0.0
+    try:
+        return None, float(parts[0])
+    except ValueError:
+        return None, 1.0
+
+
+def _scale_figs(html: str, frac: float) -> str:
+    """Size each .sol-fig to the share of the solution width it had on the slide."""
+    if abs(frac - 1.0) < 1e-6:
+        return html
+
+    def repl(m):
+        tag = m.group(0)
+        st = re.search(r'style=(["\'])(.*?)\1', tag, re.DOTALL)
+        css = st.group(2) if st else ''
+        w = re.search(r'(?<![-\w])width\s*:\s*([\d.]+)\s*%', css)
+        own = float(w.group(1)) / 100.0 if w else 1.0
+        css = re.sub(r'(?<![-\w])(?:min-)?width\s*:\s*[^;]*;?', '', css).strip().strip(';')
+        new = 'width: %.1f%%; min-width: min(100%%, 140px)' % (100.0 * frac * own)
+        css = (css + '; ' + new) if css else new
+        if st:
+            return tag[:st.start()] + 'style="%s"' % css + tag[st.end():]
+        return tag[:-1] + ' style="%s">' % css
+    return SOL_FIG_OPEN.sub(repl, html)
+
+
+def flatten_sol_cols(html: str, frac: float = 1.0) -> str:
+    """Book layout for a solution: one column. Each .sol-cols row becomes a
+    .sol-stack with its columns' contents in order, and every figure keeps the
+    fraction of the width it had on the slide (a 42% column inside the right
+    half stays ~20% wide), so figures are not blown up to full width."""
+    out = []
+    pos = 0
+    while True:
+        m = SOL_COLS_OPEN.search(html, pos)
+        if not m:
+            out.append(_scale_figs(html[pos:], frac))
+            break
+        out.append(_scale_figs(html[pos:m.start()], frac))
+        end = find_balanced_end(html, m.end(), 'div')
+        if end == -1:
+            out.append(html[m.start():])
+            break
+        inner = html[m.end():end - len('</div>')]
+        cols = []
+        p = 0
+        while True:
+            c = SOL_COL_OPEN.search(inner, p)
+            if not c:
+                break
+            # only direct children: skip a match that sits inside an earlier column
+            ce = find_balanced_end(inner, c.end(), 'div')
+            if ce == -1:
+                break
+            cols.append((c.group(0), inner[c.end():ce - len('</div>')]))
+            p = ce
+        fixed = sum(f for f, _ in (_col_share(t) for t, _ in cols) if f is not None)
+        grow = sum(g for f, g in (_col_share(t) for t, _ in cols) if f is None)
+        rest = max(0.0, 1.0 - fixed)
+        parts = []
+        for tag, body in cols:
+            f, g = _col_share(tag)
+            share = f if f is not None else (rest * g / grow if grow else rest)
+            parts.append(flatten_sol_cols(body, frac * share))
+        out.append('<div class="sol-stack">' + ''.join(parts) + '</div>')
+        pos = end
+    return ''.join(out)
+
+
+def book_solution(body: str) -> str:
+    """Slide-only sizing out, one column in: the root .sol drops its
+    font-size (the book sets type at 1em), and .sol-cols are flattened."""
+    def root(m):
+        tag = re.sub(r'font-size\s*:\s*[^;"\']*;?\s*', '', m.group(0))
+        return re.sub(r'style=(["\'])\s*([^"\']*?)\s*;?\s*\1',
+                      lambda s: 'style="%s"' % s.group(2) if s.group(2) else '', tag)
+    body = re.sub(r'<div\b[^>]*class=["\']sol["\'][^>]*>', root, body, count=1)
+    return flatten_sol_cols(body)
+
 
 def expand_solutions(html: str, deck: str, state: dict) -> str:
     """Inline <div class='Solution' data-src='solutions/x.html'></div>.
@@ -185,13 +288,13 @@ def expand_solutions(html: str, deck: str, state: dict) -> str:
             return ''
         src = src_m.group(1)
         if src in state['seen']:
-            return ''                      # continuation slide: already inlined
+            return SOL_CONTINUED           # continuation slide: already inlined
         state['seen'].add(src)
         path = REPO / deck / src
         if not path.exists():
             state['missing'].append(src)
             return ''
-        body = strip_comments(path.read_text(encoding='utf-8', errors='replace'))
+        body = book_solution(strip_comments(path.read_text(encoding='utf-8', errors='replace')))
         # data-part splits a solution across two slides; data-slide carries the
         # short form of a note for the slide's tight vertical budget. Both are
         # slide-only hints -- a scrolling page takes the whole thing at full
@@ -232,6 +335,104 @@ def strip_position_margins(html: str) -> str:
     return re.sub(r'style=(["\'])(.*?)\1', repl, html)
 
 
+def strip_problembox_height(html: str) -> str:
+    """A fixed height on a ProblemBox reserves room on a 720 px slide; in the
+    book it leaves a tall empty box."""
+    def repl(m):
+        tag = m.group(0)
+        if not re.search(r'class=["\'][^"\']*\bProblemBox\b', tag):
+            return tag
+        tag = re.sub(r'(?<![-\w])height\s*:\s*[^;"\']*;?\s*', '', tag)
+        return re.sub(r'\sstyle=(["\'])\s*\1', '', tag)
+    return re.sub(r'<div\b[^>]*>', repl, html)
+
+
+def add_style(tag: str, css: str) -> str:
+    """Append declarations to an opening tag's style attribute (or add one)."""
+    st = re.search(r'style=(["\'])(.*?)\1', tag, re.DOTALL)
+    if st:
+        old = st.group(2).strip().rstrip(';')
+        return tag[:st.start()] + 'style="%s"' % ((old + '; ' if old else '') + css) + tag[st.end():]
+    return re.sub(r'\s*/?>$', lambda e: ' style="%s"%s' % (css, e.group(0).strip()), tag, count=1)
+
+
+CONTAINER_OPEN = re.compile(r'<div\b[^>]*class=["\'](?:[^"\']*\s)?container(?:\s[^"\']*)?["\'][^>]*>',
+                            re.IGNORECASE)
+COL_OPEN = re.compile(r'<div\b[^>]*class=["\'](?:[^"\']*\s)?col(?:\s[^"\']*)?["\'][^>]*>',
+                      re.IGNORECASE)
+
+
+def stack_columns(html: str) -> str:
+    """Example blocks read top to bottom in the book: each deck .container
+    becomes a single column. The column holding the worked solution takes the
+    full width; any other column (the problem sketch, the soil profile) keeps
+    its slide width and is centred, so its figure keeps its slide proportion."""
+    out = []
+    pos = 0
+    while True:
+        m = CONTAINER_OPEN.search(html, pos)
+        if not m:
+            out.append(html[pos:])
+            break
+        end = find_balanced_end(html, m.end(), 'div')
+        if end == -1:
+            out.append(html[pos:])
+            break
+        out.append(html[pos:m.start()])
+        out.append(add_style(m.group(0), 'display: block'))
+        inner = html[m.end():end - len('</div>')]
+        p = 0
+        while True:
+            c = COL_OPEN.search(inner, p)
+            if not c:
+                out.append(inner[p:])
+                break
+            ce = find_balanced_end(inner, c.end(), 'div')
+            if ce == -1:
+                out.append(inner[p:])
+                break
+            out.append(inner[p:c.start()])
+            body = inner[c.end():ce]
+            if 'ProblemBox' in body or SOL_CONTINUED in body:
+                tag = add_style(c.group(0), 'width: 100%')
+            else:
+                w = re.search(r'--colw\s*:\s*([\d.]+%)', c.group(0))
+                tag = add_style(c.group(0), 'width: %s; margin: 0 auto' % (w.group(1) if w else '50%'))
+            out.append(tag + body)
+            p = ce
+        out.append('</div>')
+        pos = end
+    return ''.join(out)
+
+
+def drop_continued_boxes(html: str) -> str:
+    """Remove the ProblemBox (and then any column left empty) of a slide whose
+    solution part was already inlined in the first part's box."""
+    html = re.sub(r'<div\b[^>]*class=["\'][^"\']*\bProblemBox\b[^"\']*["\'][^>]*>\s*%s\s*</div>'
+                  % re.escape(SOL_CONTINUED), '', html, flags=re.IGNORECASE)
+    html = re.sub(r'<div\b[^>]*class=["\'](?:[^"\']*\s)?col(?:\s[^"\']*)?["\'][^>]*>\s*</div>',
+                  '', html, flags=re.IGNORECASE)
+    return html.replace(SOL_CONTINUED, '')
+
+
+def rewrite_local_iframes(html: str, deck: str) -> str:
+    """Apps embedded from this repo (e.g. ../virtual_lab/...) are linked
+    relative to the deck folder; the chapter sits one level deeper
+    (ebook/<deck>/), so re-root the path. External iframes are handled later."""
+    def repl(m):
+        tag = m.group(0)
+        s = re.search(r'src=(["\'])([^"\']+)\1', tag)
+        if not s or re.match(r'(?:[a-z]+:|//|#)', s.group(2), re.IGNORECASE):
+            return tag
+        src = s.group(2)
+        new = '../' + src if src.startswith('../') else '../../%s/%s' % (deck, src.lstrip('./'))
+        tag = tag[:s.start()] + 'src="%s"' % new + tag[s.end():]
+        if 'loading=' not in tag:
+            tag = tag.replace('<iframe', '<iframe loading="lazy"', 1)
+        return tag
+    return re.sub(r'<iframe\b[^>]*>', repl, html, flags=re.IGNORECASE)
+
+
 def balance_divs(html: str) -> str:
     """Close (or drop) unbalanced <div>s so a slide cannot leak layout into the
     next one. The decks rely on </section> to auto-close stray divs, which is
@@ -255,6 +456,8 @@ def balance_divs(html: str) -> str:
 
 
 def transform_body(body: str, deck: str, anim_svgs: set, sol_state: dict) -> str:
+    # a part that hosts a worked solution is an example: laid out as one column
+    is_example = bool(SOLUTION_DIV.search(body))
     # first: pull worked solutions in from solutions/*.html, so everything below
     # (fragment stripping, blank conversion) sees them as ordinary slide markup
     body = expand_solutions(body, deck, sol_state)
@@ -271,6 +474,11 @@ def transform_body(body: str, deck: str, anim_svgs: set, sol_state: dict) -> str
     body = rewrite_figure_paths(body, deck)
     body = colwidth_to_var(body)
     body = strip_position_margins(body)
+    body = strip_problembox_height(body)
+    if is_example:
+        body = stack_columns(body)        # after the margin strip: keeps its centring
+    body = drop_continued_boxes(body)
+    body = rewrite_local_iframes(body, deck)
     body = re.sub(r'\sclass=(["\'])\s*\1', '', body)  # empty class leftovers
     body = re.sub(r'<img\b(?![^>]*\bloading=)', '<img loading="lazy"', body)
     # slides autoplay videos silently; in the book give students controls, and
@@ -613,6 +821,7 @@ def validate_chapter(page: str, answers, deck: str, out_dir: Path):
     for attr, quote, path in re.findall(r'(src|data)=(["\'])([^"\']+)\2', page):
         if path.startswith(('http', 'data:', '#')):
             continue
+        path = re.split(r'[?#]', path)[0]      # app iframes carry ?embed=1&theme=...
         target = (out_dir / path).resolve()
         if not target.exists():
             problems.append('missing figure: %s' % path)
@@ -721,7 +930,14 @@ def main(argv):
         return 0
 
     chapters = config['chapters']
-    if argv:
+    if not argv:
+        # a bare run used to rebuild every chapter, wiping hand edits and the
+        # chapters students are working in; that now has to be asked for
+        print('usage: python ebook_build.py <deck_dir>   build ONE chapter (+ assets, TOC)\n'
+              '       python ebook_build.py --all        rebuild EVERY chapter (destructive)\n'
+              '       python ebook_build.py --list <deck_dir>')
+        return 1
+    if argv[0] != '--all':
         chapters = [c for c in chapters if c['dir'] == argv[0]]
         if not chapters:
             print('[ERROR] "%s" not in ebook_src/config.json chapters' % argv[0])
