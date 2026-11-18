@@ -125,7 +125,7 @@
 							<div class="qrCode" name="https://drive.google.com/file/d/1O2fsObvrtn_-DnW4aX6CAm2Zn2DZpFmS/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 8: Shear strength">
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 9: Shear strength">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 							<p style="color:#faffff; font-size:35px">Fall 2026</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
@@ -554,7 +554,7 @@ This is known as the <span class='atb'>drained condition</span>.
 	</section>
 
 	<section >
-	<h1>Example 8.4</h1>
+	<h1>Example 9.4</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	The figure shows the results of three direct shear tests on a silty sand sample. Find: (a) the peak friction angle, and (b) the secant friction angle at \(\delta x/D=0.05\). \(D=2.5\) in.
 	</div>
@@ -564,15 +564,22 @@ This is known as the <span class='atb'>drained condition</span>.
 	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/DST_data.svg'></object>
 	</div>
 	<div class='col' style='width: 50%;'>
-	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/EX740.svg'></object>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-4.html' data-part='1'></div>
 	</div>
 	</div>
 	</div>
-	
+
 	</section>
 
 	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-4.html' data-part='2'></div>
+	</div>
+	</section>
+
+	<!-- Previous working slide of Example 9.4 (Google Sheet + EX741), replaced by solutions/ex-9-4.html part 2. Kept hidden. -->
+	<section data-visibility="hidden">
 	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 	<div class='container'>
 	<div class='col' style='width: 50%;'>
@@ -584,6 +591,109 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 	</div>
 	
+	</section>
+
+	<section >
+	<h1>Triaxial test (TX)</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_apparatus.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<ul style='font-size: 0.85em;'>
+		<!-- <li class='fragment'>A <strong style='color:black'>cylindrical</strong> sample in a rubber <span class='atb'>membrane</span> sits inside a water-filled cell.</li> -->
+		<li class='fragment'><strong style='color:black'>Stage 1:</strong> <span class='atb'>cell pressure</span> \(\sigma_3\) all around. Drainage <strong style='color:green'>open</strong> \(\implies\) consolidated.</li>
+		<li class='fragment'><strong style='color:black'>Stage 2:</strong> axial stress <span class='atb'>increased</span> at constant \(\sigma_3\) until failure, <strong style='color:green'>drained</strong> or <strong style='color:red'>undrained</strong>.</li>
+		<li class='fragment'>\(\sigma_1\) is axial and \(\sigma_2=\sigma_3\): the <span class='atb'>principal stresses</span> are known.</li>
+	</ul>
+	<br>
+	Three flavors:
+	<ol>
+		<li class='fragment'>Consolidated-drained (CD)</li>
+		<li class='fragment'>Consolidated-undrained (CU)</li>
+		<li class='fragment'>Unconsolidated-undrained (UU)</li>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>Drained triaxial test (CD)</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_drained_shear.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<ul style='font-size: 0.85em;'>
+		<li class='fragment'><strong style='color:black'>Shearing stage:</strong> drainage valve <span class='atb'>open</span> and <span class='atb'>slow</span> loading, so \(\Delta u \approx 0\) and \(\sigma'=\sigma\).</li>
+		<li class='fragment'><strong style='color:blue'>Measured:</strong> load \(P\), displacement \(\delta\), <span class='atb'>volume change</span> \(\Delta V\), cell pressure \(\sigma_3\).</li>
+		<li class='fragment'><strong style='color:black'>Computed:</strong> \(\varepsilon_a=\delta/H_0\), \(\varepsilon_v=\Delta V/V_0\), \(A=A_0 \, (1-\varepsilon_v)/(1-\varepsilon_a)\).</li>
+	</ul>
+
+	<div class='equationBox fragment' style='font-size: 0.9em; margin-top: 30px;'>
+	\( \sigma_d=\sigma_1-\sigma_3=\cfrac{P}{A} \qquad \sigma'_1=\sigma'_3+\sigma_d \)
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>CD triaxial data interpretation</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_interpretation.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<div class='defBox fragment' name='Failure circle' style='margin-top: 0px;margin-left: 0px;font-size: 0.9em;'>
+	\(\sigma'_{1f}=\sigma'_3+\sigma_{d,f}\): one <span class='atb'>Mohr circle</span> per test.
+	</div>
+	<div class='defBox fragment' name='Peak friction angle' style='margin-top: 5px;margin-left: 0px;font-size: 0.9em;'>
+	<strong style='color:green'>\(\phi'_p\)</strong>: envelope tangent to the <strong style='color:black'>peak</strong> circles (\(\sigma_{d,p}\)).
+	</div>
+	<div class='defBox fragment' name='Critical friction angle' style='margin-top: 5px;margin-left: 0px;font-size: 0.9em;'>
+	<strong style='color:red'>\(\phi'_c\)</strong>: envelope tangent to the circles at <strong style='color:black'>very large</strong> strains.
+	</div>
+	<div class='equationBox fragment' style='margin-top: 30px;font-size: 0.85em;'>
+	For \(c'=0\): \( \sin\phi'=\cfrac{\sigma_{d,f}}{2\sigma'_3+\sigma_{d,f}} \)
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>Example 9.5</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	The figure shows the results of three consolidated-drained triaxial tests on a dense sand (cell pressures 10, 20 and 40 kPa). Find: (a) the peak friction angle, and (b) the critical state friction angle.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 55%;'>
+	<object style='width:100%'  class='Animation' type='image/svg+xml' data='FiguresGeneral/TX_data.svg'></object>
+	</div>
+	<div class='col' style='width: 45%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;min-height: 360px;'>
+	<div class='Solution' data-src='solutions/ex-9-5.html' data-part='1'></div>
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-5.html' data-part='2'></div>
+	</div>
 	</section>
 
 <!-- <section >
@@ -932,7 +1042,7 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 
 	<figure>
-	<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1200px-Landslide_in_Cusco%2C_Peru_-_2018.jpg' width='100%'/>
+	<img src='https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1920px-Landslide_in_Cusco%2C_Peru_-_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20180316193541' width='100%'/>
 	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 	</figure>
 
@@ -950,6 +1060,46 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 
 	
+	</section>
+
+	<section >
+	<h1>Example 9.6</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;font-size: 0.75em;'>
+	Point \(A\) is at the middle of the base of the shaded slice (\(\alpha=40^\circ\)). The element shows the total stresses at \(A\), and the water table, which seeps out on the slope face, is \(h_w=4\) m above \(A\). Soil: \(\phi'_p=36^\circ\), \(c'_p=10\) kPa; \(\phi'_c=32^\circ\), \(c'_c=0\). Determine: (a) the factor of safety on the slice base, (b) the effective stress Mohr's circle at \(A\) against the M-C lines, and (c) the principal stresses.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/slope_example.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;min-height: 340px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='1'></div>
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='2'></div>
+	</div>
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='3'></div>
+	</div>
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 600px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='4'></div>
+	</div>
 	</section>
 
 	<!-- <section >
@@ -984,12 +1134,12 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 	</section>
 
-	<section >
+	<!-- <section >
 
 
 		<iframe class="stretch" src="https://www.youtube.com/embed/KwvyfS9Icyc?autoplay=1&rel=0&modestbranding=1" data-preload></iframe>
 	
-	</section>
+	</section> -->
 
 
 
@@ -1085,7 +1235,7 @@ Reveal.initialize({
    // Worked-example solutions (see SOLUTIONS.md).
    solution: {
 	   sound: true,           // chalk while typing, solution fragments only
-	   charsPerSecond: 20,    // typing speed — the one dial. Lower is slower.
+	   charsPerSecond: 5,    // typing speed — the one dial. Lower is slower.
    },
 
    spotlight: {

@@ -1,0 +1,77 @@
+<!-- Example 9.4 — peak and secant friction angles from three direct shear tests.
+     Two parts, matching the deck's two slides:
+       part 1 = beside the test data (DST_data.svg): principles, secant displacement, readings
+       part 2 = the tau-sigma plot (FiguresGeneral/ex-9-4-envelopes.svg) | best fit, (a) and (b)
+     The readings are the author's (EX740) and match the guide lines of DST_data.svg.
+     Envelopes through the origin, as on EX741 (see ex-9-4.md). -->
+<div class="sol" data-id="ex-9-4" style="--sol-line: 1.25; font-size: 0.65em;">
+
+  <!-- ============ part 1 — principles and readings ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Principles</span>
+    \(\tau_f=c'+\sigma'_n\tan\phi'\)
+    <span class="note" data-slide="Sand: fit through the origin (small \(c'\) is not reported)">For a sand the envelope is fitted through the origin. A fit with a free intercept gives a small \(c'\) of about 1 psi, but such small cohesion values are not reported for a clean sand without fines.</span>
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">(b) Secant</span>
+    \(\delta x=0.05\,D=\) <span class="fill">\(0.05\times2.5\)</span> \(=\) <span class="fill">0.125</span> \(\unit{in}\)
+  </div>
+
+  <div class="step" data-part="1">
+    <span class="lead">Readings</span>
+    <table class="sol-table">
+      <tr><th>\(\sigma'_n\) (psi)</th><th>\(\tau_p\) (psi)</th><th>\(\tau_s\) (psi)</th></tr>
+      <tr><td>20.6</td><td><span class="fill">19.1</span></td><td><span class="fill">18.4</span></td></tr>
+      <tr><td>15</td><td><span class="fill">14.4</span></td><td><span class="fill">13.4</span></td></tr>
+      <tr><td>10.4</td><td><span class="fill">10.2</span></td><td><span class="fill">9.5</span></td></tr>
+    </table>
+    <span class="note">\(\tau_p\): highest point of each curve. \(\tau_s\): all three curves at the same \(\delta x\)</span>
+  </div>
+
+  <!-- ============ part 2 — plot | envelopes ============ -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.15 1 0">
+      <!-- Outside the steps so the axes are on screen at once; each click on the plot
+           draws the next item: the three peak points, the peak line and its angle, then
+           the secant points, line and angle. -->
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-4-envelopes.svg" style="width:100%"
+                aria-label="Axes of shear stress against effective normal stress in psi. Clicking plots the three peak points and the line through the origin at about 43 degrees, then the three secant points and the line at about 42 degrees."></object>
+      </span>
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 1em; flex: 1 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">Best line through the origin</span> <br>
+        \(\tau=\sigma'_n\tan\phi'\). Minimize \(\sum\left(\tau-\sigma'_n\tan\phi'\right)^2\): <br>
+        \(\tan\phi'=\dfrac{\sum\sigma'_n\tau}{\sum\sigma'^2_n}\)
+        <span class="note" data-slide="Least squares: set the derivative with respect to \(\tan\phi'\) to zero">Least squares: the derivative of \(\sum(\tau-\sigma'_n\tan\phi')^2\) with respect to \(\tan\phi'\) is \(-2\sum\sigma'_n(\tau-\sigma'_n\tan\phi')\). Setting it to zero gives the slope of the best line through the origin.</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">(a) Peak envelope</span> <br>
+        \(\tan\phi'_p=\dfrac{\sum\sigma'_n\tau_p}{\sum\sigma'^2_n}=\) <span class="fill">0.945</span> &ensp;
+        \(\phi'_p=\) <span class="ans">43</span>\(^\circ\)
+        <!-- <span class="note">Each test alone gives 44.4&deg;, 43.8&deg; and 42.8&deg;: \(\phi'_p\) drops slightly as \(\sigma'_n\) rises</span> -->
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">(b) Secant envelope</span> <br>
+        \(\tan\phi'_s=\dfrac{\sum\sigma'_n\tau_s}{\sum\sigma'^2_n}=\) <span class="fill">0.896</span> &ensp;
+        \(\phi'_s=\) <span class="ans">42</span>\(^\circ\)
+      </div>
+
+      <br>
+
+      <div class="step result" data-part="2">
+        <span class="lead">Therefore</span>
+        \(\phi'_p\approx\) <span class="ans">43</span>\(^\circ\) &emsp; \(\phi'_s\approx\) <span class="ans">42</span>\(^\circ\)
+      </div>
+
+    </div>
+  </div>
+
+</div>

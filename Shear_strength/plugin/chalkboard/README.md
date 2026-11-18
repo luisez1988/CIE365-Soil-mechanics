@@ -64,6 +64,31 @@ to the ```head``` section of you HTML-file.
 - Press the 'x' key to cycle colors forward
 - Press the 'y' key to cycle colors backward
 
+### Geometry tools (local addition)
+Work on both the notes canvas and the chalkboard. Previews are never recorded;
+only the confirmed line or arc is saved, as ordinary pen strokes.
+
+**Ruler (straight line)** - *double-click* to arm.
+- Click the start point; a faded, dashed reference line follows the mouse and shows its angle.
+- Hold *Shift* to snap to 15° steps.
+- Click again to draw the line. *Esc* or right-click cancels.
+
+**Compass** - *Shift+click* to arm (Shift+click again puts it away).
+- Click to plant the needle.
+- Move the mouse to open the legs (a faint dashed circle shows the result).
+- Press and swing around the needle to draw: arcs, or a full turn (it stops at one turn).
+  The opening stays set, so you can press and swing again.
+- *Enter* draws the full circle at once. *Esc* or right-click puts the compass away.
+
+**Protractor** - *Ctrl+click* to show it there / hide it. You can draw straight through it.
+- Drag the centre ring to move, the top knob to rotate (Shift: 5° steps), the end knob to resize.
+- Mouse wheel over it rotates 1° per notch (Shift: 15°); Ctrl+wheel resizes.
+- Keys while it is shown: arrows move (Shift: ×10), `[` / `]` rotate counter-clockwise / clockwise
+  1° (Shift: 15°), `+` / `-` resize, `0` resets the angle, `Esc` hides it.
+  Arrow keys move the protractor rather than the slides until it is hidden.
+- The label under the centre shows the rotation (counter-clockwise positive).
+- Hidden automatically on slide change or when switching between notes and chalkboard.
+
 ## Playback
 
 If the `autoSlide` feature is set or if the `audio-slideshow` plugin is used, pre-recorded chalkboard drawings can be played. The slideshow plays back the user interaction with the chalkboard in the same way as it was conducted when recording the data.

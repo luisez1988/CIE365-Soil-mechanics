@@ -1,0 +1,72 @@
+<!-- Example 9.5 — CD triaxial tests on a dense sand: peak and critical friction angles.
+     Two parts:
+       part 1 = beside the test data (TX_data.svg): peak and critical readings, sigma'_1 at failure
+       part 2 = two Mohr's circle plots stacked in one column, peak above
+                (FiguresGeneral/ex-9-5-mohr-peak.svg) and critical below
+                (FiguresGeneral/ex-9-5-mohr-critical.svg) | best tangent, (a) and (b)
+     Each plot starts with the axes only; each click draws the next layer: the two principal
+     stresses of a test, its circle (three times), then the tangent through the origin.
+     Fits through the origin (clean sand, c' = 0), as requested in the review of ex-9-5.md.
+     The deviator stress is sigma_d = sigma_1 - sigma_3, as in the State of stress notes. -->
+<div class="sol" data-id="ex-9-5" style="--sol-line: 1.25; font-size: 0.65em;">
+
+  <!-- ============ part 1 — readings ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Readings, with \(\sigma'_1=\sigma'_3+\sigma_d\)</span>
+    <table class="sol-table">
+      <tr><th>\(\sigma'_3\)</th><th>\(\sigma_{d,p}\)</th><th>\(\sigma'_{1p}\)</th><th>\(\sigma_{d,c}\)</th><th>\(\sigma'_{1c}\)</th></tr>
+      <tr><td>10</td><td><span class="fill">39</span></td><td><span class="fill">49</span></td><td><span class="fill">20</span></td><td><span class="fill">30</span></td></tr>
+      <tr><td>20</td><td><span class="fill">56</span></td><td><span class="fill">76</span></td><td><span class="fill">41</span></td><td><span class="fill">61</span></td></tr>
+      <tr><td>40</td><td><span class="fill">95</span></td><td><span class="fill">135</span></td><td><span class="fill">82</span></td><td><span class="fill">122</span></td></tr>
+    </table>
+    all in kPa
+    <span class="note">Peak: maximum of \(\sigma_d\). Critical: \(\sigma_d\) at large strain, where the volume stops changing</span>
+  </div>
+
+  <!-- ============ part 2 — Mohr's circles | tangent fits ============ -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1.18 1 0">
+      <!-- Outside the steps so both sets of axes are on screen at once. -->
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-5-mohr-peak.svg" style="width:100%"
+                aria-label="Peak condition: axes of shear stress against effective normal stress in kPa, drawn to the same scale. Clicking plots sigma'3 and sigma'1 of each test and its Mohr circle (10 to 49, 20 to 76 and 40 to 135 kPa), then the best tangent through the origin at about 34 degrees."></object>
+      </span>
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-5-mohr-critical.svg" style="width:100%"
+                aria-label="Critical condition: same axes. Clicking plots sigma'3 and sigma'1 of each test and its dashed Mohr circle (10 to 30, 20 to 61 and 40 to 122 kPa), then the tangent through the origin at about 30 degrees."></object>
+      </span>
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em; flex: 1 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">Best tangent through the origin</span> <br>
+        \(\sigma_m=\dfrac{\sigma'_1+\sigma'_3}{2}\), \(R=\dfrac{\sigma_d}{2}\); tangent: \(\sigma_m\sin\phi'=R\) <br>
+        min \(\sum\left(\sigma_m\sin\phi'-R\right)^2\) \(\Rightarrow\) \(\sin\phi'=\dfrac{\sum s\,t}{\sum \sigma_m^2}\)
+        <span class="note" data-slide="Least squares: set the derivative with respect to \(\sin\phi'\) to zero"></span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">(a) Peak</span>
+        \(\sin\phi'_p=\dfrac{\sum \sigma_m\,R}{\sum \sigma_m^2}=\) <span class="fill">0.561</span> &ensp;
+        \(\phi'_p\approx\) <span class="ans">34</span>\(^\circ\)
+        <span class="note">Clean sand: \(c'=0\)</span>
+      </div>
+
+      <div class="step" data-part="2">
+        <span class="lead">(b) Critical</span>
+        \(\sin\phi'_c=\dfrac{\sum \sigma_m\,R}{\sum \sigma_m^2}=\) <span class="fill">0.506</span> &ensp;
+        \(\phi'_c\approx\) <span class="ans">30</span>\(^\circ\)
+        <span class="note">The three critical circles touch the same line</span>
+      </div>
+
+      <div class="step result" data-part="2">
+        <span class="lead">Therefore</span>
+        \(\phi'_p\approx\) <span class="ans">34</span>\(^\circ\) \(>\) \(\phi'_c\approx\) <span class="ans">30</span>\(^\circ\)
+      </div>
+
+    </div>
+  </div>
+
+</div>

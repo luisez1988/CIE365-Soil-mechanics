@@ -1,0 +1,127 @@
+<!-- Example 9.6 — stresses at the base of a slice in a slope with seepage.
+     Four parts, one per slide:
+       part 1 = beside the slope (slope_example.svg): pore pressure, normal stress on the base
+       part 2 = shear and effective stress on the base | (a) factors of safety
+       part 3 = (b) Mohr's circle (FiguresGeneral/ex-9-6-mohr.svg) | circle and comparison
+       part 4 = (c) principal stresses | orientation
+     The Mohr plot starts with the axes; clicks draw the two stress points, the diameter, the
+     circle, the critical and peak lines, the base point and the principal stresses.
+     Sign convention of Example 9.1: clockwise shear is negative, tau_xy = -15 kPa. -->
+<div class="sol" data-id="ex-9-6" style="--sol-line: 1.25; font-size: 0.65em;">
+
+  <!-- ============ part 1 — pore pressure and normal stress on the base ============ -->
+
+  <div class="step" data-part="1">
+    <span class="lead">Pore pressure at \(A\)</span>
+    \(u=\gamma_w h_w=\) <span class="fill">\(9.81\times4\)</span> \(=\) <span class="fill">39.2</span> \(\unit{kPa}\)
+    <span class="note">\(h_w\) is measured vertically up to the water table</span>
+  </div>
+
+  <br>
+
+  <div class="step" data-part="1">
+    <span class="lead">Normal stress on the base</span> <br>
+    \(\sigma_n=\dfrac{\sigma_x+\sigma_y}{2}+\dfrac{\sigma_y-\sigma_x}{2}\cos2 \alpha+\tau_{xy}\sin2 \alpha\) <br>
+    \(\sigma_n=\) <span class="fill">\(130+40\cos80^\circ-15\sin80^\circ\)</span> \(=\) <span class="fill">122.2</span> \(\unit{kPa}\)
+    <span class="note">Clockwise shear: \(\tau_{xy}=-15\unit{kPa}\), as in Example 9.1</span>
+  </div>
+
+  <!-- ============ part 2 — base stresses | (a) factors of safety ============ -->
+
+  <div class="sol-cols" data-part="2">
+    <div class="sol-col" style="flex: 1 1 0">
+
+      <div class="step" data-part="2">
+        <span class="lead">Shear stress on the base</span> <br>
+        \(\tau_m=\dfrac{\sigma_y-\sigma_x}{2}\sin2 \alpha-\tau_{xy}\cos2 \alpha\) <br>
+        \(\tau_m=\) <span class="fill">\(40\sin80^\circ+15\cos80^\circ\)</span> \(=\) <span class="fill">42.0</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="2">
+        <span class="lead">Effective normal stress</span> <br>
+        \(\sigma'_n=\sigma_n-u=\) <span class="fill">\(122.2-39.2\)</span> \(=\) <span class="fill">82.9</span> \(\unit{kPa}\)
+        <span class="note">Water can't carry shear stress, only normal stress changes</span>
+      </div>
+
+      <br>
+
+            <div class="step" data-part="2">
+        <span class="lead">(a) Peak strength</span> <br>
+        \(\tau_f=c'_p+\sigma'_n\tan\phi'_p=\) <span class="fill">\(10+82.9\tan36^\circ\)</span> \(=\) <span class="fill">70.2</span> \(\unit{kPa}\) <br>
+        \(\tau_m=\) <span class="fill">\(42.0\)</span> \(\unit{kPa}\) <br>
+        \(FS_p=\dfrac{\tau_f}{\tau_m}=\) <span class="fill">\(\dfrac{70.2}{42.0}\)</span> \(=\) <span class="ans">1.67</span>
+        <span class="note">\(m\) stands for mobilized shear stress at the base</span>
+      </div>
+
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em; flex: 1 1 0">
+
+
+
+      <br>
+
+      <div class="step" data-part="2">
+        <span class="lead">(a) Critical strength</span> <br>
+        \(\tau_f=\sigma'_n\tan\phi'_c=\) <span class="fill">\(82.9\tan32^\circ\)</span> \(=\) <span class="fill">51.8</span> \(\unit{kPa}\) <br>
+        \(\tau_m=\) <span class="fill">\(42.0\)</span> \(\unit{kPa}\) <br>
+        \(FS_c=\dfrac{\tau_f}{\tau_m}=\) <span class="fill">\(\dfrac{51.8}{42.0}\)</span> \(=\) <span class="ans">1.23</span>
+        <span class="note">Use \(\phi'_c\) with \(c'=0\) for large deformations</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ part 3 — (b) Mohr's circle ============ -->
+
+  <div class="sol-cols" data-part="3">
+    <div class="sol-col" style="flex: 1.45 1 0">
+      <span class="sol-fig" style="margin: 0">
+        <object class="Animation" type="image/svg+xml" data="FiguresGeneral/ex-9-6-mohr.svg" style="width:100%"
+                aria-label="Axes of shear stress against effective normal stress in kPa. Clicking plots the points (50.8, -15) and (130.8, 15), the diameter, the circle with centre 90.8 and radius 42.7, the critical line at 32 degrees, the peak line at 36 degrees with c' = 10 kPa, the base point (82.9, 42.0), and sigma'3 = 48.0 and sigma'1 = 133.5 kPa."></object>
+      </span>
+    </div>
+    <div class="sol-col" style="border-left: 2px solid #000; padding-left: 0.8em; flex: 1 1 0">
+
+      <div class="step" data-part="3">
+        <span class="lead">(b) Effective stresses at \(A\)</span> <br>
+        \(\sigma'_x=\) <span class="fill">\(90-39.2\)</span> \(=\) <span class="fill">50.8</span> \(\unit{kPa}\) <br>
+        \(\sigma'_y=\) <span class="fill">\(170-39.2\)</span> \(=\) <span class="fill">130.8</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step" data-part="3">
+        <span class="lead">(b) Circle</span> <br>
+         \(\sigma_m=\dfrac{\sigma'_x+\sigma'_y}{2}=\) <span class="fill">90.8</span> \(\unit{kPa}\) <br>
+        radius \(=\sqrt{\left(\dfrac{\sigma'_y-\sigma'_x}{2}\right)^2+\tau_{xy}^2}=\) <span class="fill">42.7</span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+            <div class="step" data-part="3">
+        <span class="lead">(c) Effective principal stresses</span> <br>
+        \(\sigma'_{1,3}=\text{centre}\pm\text{radius}=\) <span class="fill">\(90.8\pm42.7\)</span> <br>
+        \(\sigma'_1=\) <span class="ans">133.5</span> \(\unit{kPa}\) &emsp; \(\sigma'_3=\) <span class="ans">48.0</span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ part 4 — (c) principal stresses | orientation ============ -->
+
+
+      <div class="step" data-part="4">
+        <span class="lead">(c) Total principal stresses</span> <br>
+        \(\sigma=\sigma'+u\): &ensp; \(\sigma_1=\) <span class="ans">172.7</span> \(\unit{kPa}\) &emsp; \(\sigma_3=\) <span class="ans">87.3</span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step" data-part="4">
+        <span class="lead">(c) Orientation</span> <br>
+        \(n=\dfrac{1}{2}\arctan\left(\dfrac{2\tau_{xy}}{\sigma_y-\sigma_x}\right)=\) <span class="fill">\(\dfrac{1}{2}\arctan\left(\dfrac{2(-15)}{170-90}\right)\)</span> \(=\) <span class="ans">&minus;10.3</span>\(^\circ\)
+        <span class="note">\(\sigma_1\) acts on this plane; \(\sigma_3\) on the plane at 79.7&deg;</span>
+      </div>
+
+
+</div>
