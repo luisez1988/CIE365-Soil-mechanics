@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 9: Shear strength · CE342 · Eng. Behavior of Soils &amp; Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/book.css">
+<link rel="stylesheet" href="../assets/solutions.css">
+<script src="../assets/mathjax-macros.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    macros: window.SOL_MACROS
+  },
+  options: {
+    ignoreHtmlClass: 'blank',
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+</head>
+<body data-page="chapter" data-chapter="Shear_strength" data-total="106" data-qa-endpoint="https://script.google.com/macros/s/AKfycbx-8IYhcQ8Zn1TlCLByMVP9WrHUj9qCc9QmKJFlk2N4BmHhICJb8Pef0n7ruu7LTcd9/exec" data-course-code="CE342">
+
+<header class="book-header">
+  <a class="back-link" href="../index.html">&larr; Contents</a>
+  <div class="course-tag">CE342 · Eng. Behavior of Soils &amp; Foundations</div>
+  <h1>Module 9: Shear strength</h1>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <span class="progress-label"><b id="prog-count">0</b>/<span id="prog-total">106</span> blanks filled</span>
+  <span class="progress-bar"><span id="prog-fill"></span></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-actions">
+    <button id="btn-ask" type="button" hidden title="Send a question about this chapter to your instructor">&#10067; Ask a question</button>
+    <button id="btn-addnote" type="button" title="Add a sticky note you can drag anywhere on the page">&#128221; Add note</button>
+    <button id="btn-draw" type="button" aria-pressed="false" aria-controls="draw-bar"
+            title="Draw on the page: mark points on figures and annotate diagrams">&#9998; Draw</button>
+    <button id="btn-export" type="button" title="Download your answers as a backup file">&#11015; Save notes</button>
+    <button id="btn-import" type="button" title="Load answers from a backup file">&#11014; Load notes</button>
+    <button id="btn-print" type="button" title="Print or save as PDF with your answers">&#128424; Print</button>
+    <button id="btn-clear" type="button" class="danger" title="Erase every answer in this chapter">&#10005; Clear</button>
+  </span>
+  <input type="file" id="file-import" accept=".json,application/json" hidden>
+</div>
+
+<div class="draw-bar" id="draw-bar" hidden>
+  <span class="draw-group" role="group" aria-label="Drawing tool">
+    <button class="dtool" type="button" data-tool="point" aria-pressed="true" title="Place a point">&#9679; Point</button>
+    <button class="dtool" type="button" data-tool="line" aria-pressed="false" title="Drag to draw a straight line (hold Shift to snap the angle)">&#9585; Line</button>
+    <button class="dtool" type="button" data-tool="arrow" aria-pressed="false" title="Drag to draw an arrow (hold Shift to snap the angle)">&#8599; Arrow</button>
+    <button class="dtool" type="button" data-tool="circle" aria-pressed="false" title="Drag from the centre out to the radius">&#9711; Circle</button>
+    <button class="dtool" type="button" data-tool="ink" aria-pressed="false" title="Draw freehand">&#9998; Freehand</button>
+    <button class="dtool" type="button" data-tool="erase" aria-pressed="false" title="Erase marks: click one, or drag across several">&#9003; Erase</button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Colour">
+    <button class="dcolor" type="button" data-color="#cc0000" style="background:#cc0000" aria-pressed="true" title="Red"></button>
+    <button class="dcolor" type="button" data-color="#1f5fbf" style="background:#1f5fbf" aria-pressed="false" title="Blue"></button>
+    <button class="dcolor" type="button" data-color="#12794a" style="background:#12794a" aria-pressed="false" title="Green"></button>
+    <button class="dcolor" type="button" data-color="#e07b00" style="background:#e07b00" aria-pressed="false" title="Orange"></button>
+    <button class="dcolor" type="button" data-color="#1d1d1f" style="background:#1d1d1f" aria-pressed="false" title="Black"></button>
+  </span>
+  <span class="draw-group" role="group" aria-label="Thickness">
+    <button class="dwidth" type="button" data-w="1.5" aria-pressed="false" title="Thin">&#183;</button>
+    <button class="dwidth" type="button" data-w="3" aria-pressed="true" title="Medium">&#8226;</button>
+    <button class="dwidth" type="button" data-w="6" aria-pressed="false" title="Thick">&#9679;</button>
+  </span>
+  <span class="draw-group">
+    <button id="btn-draw-finger" type="button" aria-pressed="false" title="Draw with a fingertip. Off by default so a finger scrolls the page and a stylus draws.">&#9757; Finger</button>
+    <button id="btn-draw-undo" type="button" title="Undo the last mark or erase">&#8630; Undo</button>
+    <button id="btn-draw-clear" type="button" class="danger" title="Erase every mark in this chapter">&#10005; Clear marks</button>
+    <button id="btn-draw-done" type="button" title="Leave drawing mode and go back to typing">&#10003; Done</button>
+  </span>
+  <span class="draw-hint" id="draw-hint" aria-live="polite"></span>
+</div>
+
+<button id="btn-tools" type="button" class="toolbar-toggle" aria-expanded="true"
+        aria-controls="toolbar" title="Show or hide the toolbar">&#9650; Hide tools</button>
+
+<main>
+<nav class="chapter-nav">
+  <h3>In this chapter</h3>
+  <ol>
+<li><a href="#s0">Recap</a></li>
+<li><a href="#s1">Contents</a></li>
+<li><a href="#s2">Mohr-Coulomb model</a></li>
+<li><a href="#s3">Soil Dilatancy</a></li>
+<li><a href="#s4">Effect of water on the shear strength</a></li>
+<li><a href="#s5">Drained vs. undrained in practice</a></li>
+<li><a href="#s6">Measuring shear strength of soils</a></li>
+<li><a href="#s7">Direct shear test (DST)</a></li>
+<li><a href="#s8">DST data interpretation</a></li>
+<li><a href="#s9">Example 9.4</a></li>
+<li><a href="#s10">Triaxial test (TX)</a></li>
+<li><a href="#s11">Drained triaxial test (CD)</a></li>
+<li><a href="#s12">CD triaxial data interpretation</a></li>
+<li><a href="#s13">Example 9.5</a></li>
+<li><a href="#s14">Strength parameters of sand</a></li>
+<li><a href="#s15">\(K_0\) formula</a></li>
+<li><a href="#s16">Typical values of sand parameters</a></li>
+<li><a href="#s17">Drained strength of clay</a></li>
+<li><a href="#s18">Undrained strength of clay</a></li>
+<li><a href="#s19">Example 9.6</a></li>
+<li><a href="#s20">What's next?</a></li>
+<li><a href="#s21">Dr. Z's guarantee</a></li>
+  </ol>
+</nav>
+
+<article class="chapter">
+<section class="block" id="s0" data-anchor="recap">
+<h2 class="block-title">Recap</h2>
+
+				    
+						<ul>
+							<li > <div class='textBox' >
+								We learned how to <strong style='color:black'>calculate</strong> stresses acting at any direction.
+							</div>
+
+								</li>
+							<li > We learned how to <strong style='color:black'>calculate</strong> the magnitude and direction of principal stresses, the mean stress, and the deviator stress. </li>
+							<li > <div class='textBox' >
+								We learned how to <strong style='color:black'>locate</strong> the pole and solve problems graphically.
+							</div>
+								
+							</li>
+						</ul>
+				
+</section>
+
+<section class="block" id="s1" data-anchor="contents">
+<h2 class="block-title">Contents</h2>
+
+					
+
+					<div class='container'>
+					<div class='col' style="--colw:50%">
+						<ul class="contentStyle">
+							<li class="l1">Mohr-Coulomb model</li>
+							<li class="l1">Friction and dilation</li>
+							<li class="l1">Direct and simple shear test</li>
+							<li class="l1">Triaxial test</li>
+							<li class="l1">Strength of sands </li>
+							<li class="l1">Strength of clay </li>							
+						</ul>
+					</div>
+					<div class='col' style="--colw:50%">
+						<div class='container'>
+							<div class='col' style="--colw:50%">
+								<div class="stickynote" >
+									<p > Objectives covered in this lecture</p>
+									<ul>
+										<li>[O4]: Develop an understanding of stress state and shear strength of soils and its role in the overall stability of
+											earthen systems.</li>
+									</ul>
+								</div>
+							</div>
+							<div class='col' style="--colw:50%">
+							<div class='stickynote' >
+								<p >After this lecture we will able to:</p>
+								<ul >
+									<li>To calculate drained strength properties for sand.</li>					
+									<li>To calculate drained and undrained strength properties for clay.</li>
+									
+								</ul>
+							</div>
+							</div>
+							</div>
+					</div>
+					</div>
+				
+</section>
+
+<section class="block" id="s2" data-anchor="mohr-coulomb-model">
+<h2 class="block-title">Mohr-Coulomb model</h2>
+
+	
+	<div class='textBox' >
+	Consider a block sliding on a plane as <strong style='color:green'>analogous</strong> to a grain of soil sliding on another.
+	</div>
+<div class="container">
+	<div class="col" style="--colw:25%">
+      <figure>
+	  <img loading="lazy" src='../../Shear_strength/FiguresGeneral/sliding_block.svg' width='100%'/>
+	  <footer style='font-size: 0.8em'> <em></em> </footer>
+	  </figure>
+	</div>
+	<div class="col"  style="--colw:75%">
+		<figure>
+		<img loading="lazy" src='../../Shear_strength/FiguresGeneral/MC.svg' width='100%'/>
+		<footer style='font-size: 0.8em'> <em></em> </footer>
+		</figure>
+	</div>
+</div>
+
+<div class='container' >
+<div class='col bordered' style='--colw:50%'>
+\( \begin{align}
+f &= W \sin \theta \\
+W \cos \theta \tan \phi &= W \sin \theta \\
+\tan \phi &= \tan \theta \\
+\phi &= \theta
+\end{align} \)
+</div>
+<div class='col bordered' style='--colw:50%'>
+<figure>
+<img loading="lazy" src='https://miro.medium.com/v2/resize:fit:430/0*1ULfiQPAhd8YRFXy.' width='80%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+
+<div class='InquiryBox' >
+What are the valid states of stress according to the Mohr-Coulomb model?
+</div>
+
+<img loading="lazy" src="figures/Mohr_circle_states.svg" style="width:100%" alt=""/>
+
+
+
+<div class='InquiryBox' >
+What if the block is <strong style='color:orange'>adhered</strong> to the plane?
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:25%'>
+<figure>
+<img loading="lazy" src='../../Shear_strength/FiguresGeneral/sliding_block_adhered.svg' width='100%'/>
+<footer style='font-size: 0.8em'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='--colw:75%'>
+<p>The <span class="blank" data-bid="Shear_strength.f50f3349-0" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> <strong style='color:green'>\(c'\)</strong> between soil particles <strong style='color:green'>adds shear strength</strong> to the soil. <br>
+<div class='equationBox'>
+\( \tau_f= S= c'+\sigma_n' \tan \phi' \)
+</div>
+</p>
+</div>
+</div>
+
+<div class='container'>
+<div class='col' style='--colw:60%'>
+<img loading="lazy" src="figures/MC_with_cohesion.svg" style="width:100%" alt=""/>
+</div>
+<div class='col' style='--colw:40%'>
+<div class='findingBox' >
+The Mohr-Coulomb model is a <strong style='color:green'>linearization</strong> of the shear strength of soils. This is not necessarily true for all soils. 
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+<section class="block" id="s3" data-anchor="soil-dilatancy">
+<h2 class="block-title">Soil Dilatancy</h2>
+
+	
+	<div class='textBox' >
+	Soil dilatancy is the <strong style='color:black'>increase</strong> in <span class="blank" data-bid="Shear_strength.93c2119f-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> of a soil mass when it is <strong style='color:black'>sheared</strong>. It has a significant effect on the <span class="blank" data-bid="Shear_strength.cbee563a-0" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span> of soils.
+	</div>
+	
+	<div class='container'>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>Loose sand</h4>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/loose_balls.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>Dense sand</h4>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/dense_balls.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+	
+	
+	
+
+	
+<div class="embed-placeholder" data-src="https://www.youtube.com/embed/XCOPNMDhXkM?autoplay=0&end=134&rel=0&modestbranding=1" role="button" tabindex="0">📊 Interactive worksheet — click to load</div>
+	
+
+
+	<div class='InquiryBox' >
+	What factors affect the friction angle of sands❓
+	</div>
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<div class='textBox' >
+		<ul>
+			<li >\(\uparrow\) <span class="blank" data-bid="Shear_strength.e9769885-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies \uparrow \phi'\)  </li>
+			<li >\(\uparrow\) <span class="blank" data-bid="Shear_strength.10eb8071-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies \downarrow \phi'\) </li>
+			<li >Particle <span class="blank" data-bid="Shear_strength.177b91e9-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span>: \(\uparrow\) angularity \(\implies \uparrow \phi'\)</li>
+			<li >\(\uparrow\) <span class="blank" data-bid="Shear_strength.dc2d9413-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies \downarrow \phi'\)</li>
+			<li >\(\uparrow\) <span class="blank" data-bid="Shear_strength.905bc018-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\implies \uparrow \phi'\)</li>
+			<li ><span class="blank" data-bid="Shear_strength.721869a7-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> controls <strong style='color:black'>base</strong> coefficient of friction.</li>
+			
+			
+		</ul>
+	</div>	
+	
+	</div>
+	<div class='col' style='--colw:50%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/seed_and_lee.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em>Modified from Seed and Lee (1967)</em> </footer>
+	</figure>
+	</div>
+	</div>
+	
+</section>
+
+<section class="block" id="s4" data-anchor="effect-of-water-on-the-shear-strength">
+<h2 class="block-title">Effect of water on the shear strength</h2>
+
+
+<div class='container'>
+<div class='col' style='--colw:60%'>
+<img loading="lazy" src="figures/shear_undrained.svg" style="width:100%" alt=""/>
+</div>
+<div class='col' style='--colw:40%'>
+<ul>
+	<li >Water <strong style='color:red'>can't</strong> scape the soil fabric.</li>
+	<li >Shear occurs with \(\Delta V=0\) or <span class="blank" data-bid="Shear_strength.334710db-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>.</li>
+	<li ><span class="blank" data-bid="Shear_strength.7f267191-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> <strong style='color:blue'>pore water pressure</strong> is generated.</li>
+</ul>
+
+<div class='findingBox' >
+This is known as the <span class="blank" data-bid="Shear_strength.d5cbae1b-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+</div>
+</div>
+</div>
+
+
+<div class='container'>
+<div class='col' style='--colw:60%'>
+<img loading="lazy" src="figures/shear_drained.svg" style="width:100%" alt=""/>
+</div>
+<div class='col' style='--colw:40%'>
+<ul>
+	<li >Water <strong style='color:green'>drains instantaneously</strong>.</li>
+	<li >Volume <span class="blank" data-bid="Shear_strength.0a36ea4b-0" style="min-width:8ch" contenteditable="plaintext-only" spellcheck="false"></span> during shearing \(\Delta V \neq 0\).</li>
+	<li ><strong style='color:blue'>Excess pore pressure</strong> is <strong style='color:red'>not</strong> generated.</li>
+
+</ul>
+
+<div class='findingBox' >
+This is known as the <span class="blank" data-bid="Shear_strength.cbb574d7-0" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+</div>
+</div>
+</div>
+
+
+
+	<div class='container'>
+	<div class='col' style='--colw:55%'>
+	<img loading="lazy" src="figures/shear_true.svg" style="width:100%" alt=""/>
+	</div>
+	<div class='col' style='--colw:45%'>
+	<ul>
+		<li >If <strong style='color:blue'>consolidation</strong> is faster than <strong style='color:green'>shear rate</strong> \(\implies\) <span class="blank" data-bid="Shear_strength.40605ce5-0" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span> and \(\Delta u \approx 0\).</li>
+		<li >if <strong style='color:blue'>consolidation</strong> is slower than <strong style='color:green'>shear rate</strong> \(\implies\) <span class="blank" data-bid="Shear_strength.92002abd-0" style="min-width:28ch" contenteditable="plaintext-only" spellcheck="false"></span> and \(\Delta u \neq 0\).</li>
+		
+	
+	</ul>
+	
+	<div class='findingBox' >
+	<strong style='color:green'>Drained</strong> and <strong style='color:red'>undrained</strong> behavior are <span class="blank" data-bid="Shear_strength.9bfe1d6f-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+	</div>
+	</div>
+	
+	
+</section>
+
+<section class="block" id="s5" data-anchor="drained-vs-undrained-in-practice">
+<h2 class="block-title">Drained vs. undrained in practice</h2>
+
+	
+	<img loading="lazy" src="figures/real_undrained.svg" style="width:100%" alt=""/>
+
+	<div class='findingBox' >
+		For <strong style='color:green'>NC clays</strong> on loading stress path <span class="blank" data-bid="Shear_strength.7e73e14c-0" style="min-width:12ch" contenteditable="plaintext-only" spellcheck="false"></span> condition is <strong style='color:red'>critical</strong>. At this time the behavior is similar to <span class="blank" data-bid="Shear_strength.1fb4ed43-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>	
+	
+	
+		
+		<img loading="lazy" src="figures/real_drained.svg" style="width:100%" alt=""/>
+	
+		<div class='findingBox' >
+			For heavily <strong style='color:green'>OC clays</strong> on unloading stress path <span class="blank" data-bid="Shear_strength.2b88c46e-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> condition is <strong style='color:red'>critical</strong>. At this time the behavior is similar to <span class="blank" data-bid="Shear_strength.1fb4ed43-1" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+		</div>	
+		
+	
+</section>
+
+<section class="block" id="s6" data-anchor="measuring-shear-strength-of-soils">
+<h2 class="block-title">Measuring shear strength of soils</h2>
+
+	
+	<div class='textBox' >
+	The shear strength of soils is measured in the <strong style='color:black'>laboratory</strong> or <span class="blank" data-bid="Shear_strength.7843ce25-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> using different tests. The most common tests are:
+	</div>
+	<div class='container'>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>Laboratory tests</h4>
+	<ol>
+		<li >Direct shear test (DST).</li>
+		<li >Triaxial test (TX).</li>
+		<li >Direct simple shear test (DSS).</li>
+		<li >Ring shear test.</li>
+		<li >Laboratory vane shear test.</li>
+		
+	</ol>
+	</div>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>In-situ tests</h4>
+	<ol>
+		<li >Standard penetration test (SPT).</li>
+		<li >Cone penetration test (CPT).</li>
+		<li >Vane shear test.</li>
+	</ol>
+	</div>
+	</div>
+
+
+	
+	
+</section>
+
+<section class="block" id="s7" data-anchor="direct-shear-test-dst">
+<h2 class="block-title">Direct shear test (DST)</h2>
+
+	
+		<div class="container">
+			<div class="col" style="--colw:50%">
+			<span class="blank" data-bid="Shear_strength.db616a95-0" style="min-width:23ch" contenteditable="plaintext-only" spellcheck="false"></span>
+						<figure>
+						  <img loading="lazy" src="../../Shear_strength/FiguresGeneral/DST_initial.svg" style="width:100%" data-preload/>
+						  <footer ><small></small></footer>
+						</figure>
+			</div>
+			<div class="col" style="--colw:50%">
+						<span class="blank" data-bid="Shear_strength.6dd79da2-0" style="min-width:21ch" contenteditable="plaintext-only" spellcheck="false"></span>
+						<figure>
+						  <img loading="lazy" src="../../Shear_strength/FiguresGeneral/DST_final.svg" style="width:100%" data-preload/>
+						  <footer ><small></small></footer>
+						</figure>
+			</div>
+		</div>
+
+
+	<div class='textBox' >
+	During a <strong style='color:black'>DST</strong> the <strong style='color:green'>normal</strong> and <strong style='color:red'>shear</strong> stresses, and the <strong style='color:blue'>axial and lateral</strong> <span class="blank" data-bid="Shear_strength.e6aef383-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> are measured.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/DST_measurements.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:50%'>
+	<p>
+		<ul><li >At least <span class="blank" data-bid="Shear_strength.3f5bab05-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> needed.</li>
+		<li >Can get <span class="blank" data-bid="Shear_strength.fb1bf28c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> shear stresses.</li>
+		<li >Must <span class="blank" data-bid="Shear_strength.6854da5f-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> results in \(\tau\) vs \(\sigma\) to get parameters.</li>
+		</ul>
+
+		
+	</p>
+	<div class='findingBox' >
+	<strong style='color:black'>Note:</strong> You can <strong style='color:black'>normalize</strong> the displacements using <strong style='color:blue'> \(\delta x/D\)</strong> and <strong style='color:blue'>\(\delta y/ H\)</strong>. However, these are not <span class="blank" data-bid="Shear_strength.c6f3d3c6-0" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+	</div>
+	</div>
+	</div>
+	
+	
+</section>
+
+<section class="block" id="s8" data-anchor="dst-data-interpretation">
+<h2 class="block-title">DST data interpretation</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/DST_interpretation.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:50%'>
+	<div class='defBox' name='Peak friction angle' >
+	<strong style='color:green'>\(\phi'_p\)</strong> is obtained using <strong style='color:black'>peak</strong> shear stresses.
+	</div>
+	<div class='defBox' name='Secant fiction angle' >
+	<strong style='color:blue'>\(\phi'_s\)</strong> obtained at <strong style='color:black'>specific deformations</strong> (e.g., \(\delta x/D= 0.1\)).
+	</div>
+
+	<div class='defBox' name='Critical friction angle' >
+	<strong style='color:red'>\(\phi'_c\)</strong> is obtained at <strong style='color:black'>very large</strong> deformations.
+	</div>
+	</div>
+	</div>
+	
+	
+</section>
+
+<section class="block" id="s9" data-anchor="example-9-4">
+<h2 class="block-title">Example 9.4</h2>
+
+	
+	<div class='textBox' >
+	The figure shows the results of three direct shear tests on a silty sand sample. Find: (a) the peak friction angle, and (b) the secant friction angle at \(\delta x/D=0.05\). \(D=2.5\) in.
+	</div>
+
+	<div class='container' style="display: block">
+	<div class='col' style="--colw:50%; width: 50%; margin: 0 auto">
+	<img loading="lazy" src="figures/DST_data.svg" style="width:100%" alt=""/>
+	</div>
+	<div class='col' style="--colw:50%; width: 100%">
+	<div class='ProblemBox' >
+	
+<div class="sol" data-id="ex-9-4" style="--sol-line: 1.25">
+
+  
+
+  <div class="step">
+    <span class="lead">Principles</span>
+    \(\tau_f=c'+\sigma'_n\tan\phi'\)
+    <span class="note">For a sand the envelope is fitted through the origin. A fit with a free intercept gives a small \(c'\) of about 1 psi, but such small cohesion values are not reported for a clean sand without fines.</span>
+  </div>
+
+  <div class="step">
+    <span class="lead">(b) Secant</span>
+    \(\delta x=0.05\,D=\) <span class="blank math" data-bid="Shear_strength.f5bb640a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:19ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.62224257-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{in}\)
+  </div>
+
+  <div class="step">
+    <span class="lead">Readings</span>
+    <table class="sol-table">
+      <tr><th>\(\sigma'_n\) (psi)</th><th>\(\tau_p\) (psi)</th><th>\(\tau_s\) (psi)</th></tr>
+      <tr><td>20.6</td><td><span class="blank" data-bid="Shear_strength.faec328b-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.50ea1273-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td>15</td><td><span class="blank" data-bid="Shear_strength.be994776-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.d88a1ee3-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td>10.4</td><td><span class="blank" data-bid="Shear_strength.22c95377-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.453a2645-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+    <span class="note">\(\tau_p\): highest point of each curve. \(\tau_s\): all three curves at the same \(\delta x\)</span>
+  </div>
+
+  
+
+  <div class="sol-stack">
+      
+      <span class="sol-fig" style="width: 53.5%; min-width: min(100%, 140px)">
+        <img loading="lazy" src="figures/ex-9-4-envelopes.svg" style="width:100%" alt=""/>
+      </span>
+    
+
+      <div class="step">
+        <span class="lead">Best line through the origin</span> <br>
+        \(\tau=\sigma'_n\tan\phi'\). Minimize \(\sum\left(\tau-\sigma'_n\tan\phi'\right)^2\): <br>
+        \(\tan\phi'=\dfrac{\sum\sigma'_n\tau}{\sum\sigma'^2_n}\)
+        <span class="note">Least squares: the derivative of \(\sum(\tau-\sigma'_n\tan\phi')^2\) with respect to \(\tan\phi'\) is \(-2\sum\sigma'_n(\tau-\sigma'_n\tan\phi')\). Setting it to zero gives the slope of the best line through the origin.</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">(a) Peak envelope</span> <br>
+        \(\tan\phi'_p=\dfrac{\sum\sigma'_n\tau_p}{\sum\sigma'^2_n}=\) <span class="blank" data-bid="Shear_strength.deac236f-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> &ensp;
+        \(\phi'_p=\) <span class="blank ans" data-bid="Shear_strength.d0e9a711-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+        
+      </div>
+
+      <div class="step">
+        <span class="lead">(b) Secant envelope</span> <br>
+        \(\tan\phi'_s=\dfrac{\sum\sigma'_n\tau_s}{\sum\sigma'^2_n}=\) <span class="blank" data-bid="Shear_strength.d56e38ed-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> &ensp;
+        \(\phi'_s=\) <span class="blank ans" data-bid="Shear_strength.6072ecf0-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+      </div>
+
+      <br>
+
+      <div class="step result">
+        <span class="lead">Therefore</span>
+        \(\phi'_p\approx\) <span class="blank ans" data-bid="Shear_strength.f37bb2ba-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\) &emsp; \(\phi'_s\approx\) <span class="blank ans" data-bid="Shear_strength.5047b9d7-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+      </div>
+
+    </div>
+
+</div>
+
+	</div>
+	</div>
+	</div>
+
+	
+
+	
+	
+
+
+</section>
+
+<section class="block" id="s10" data-anchor="triaxial-test-tx">
+<h2 class="block-title">Triaxial test (TX)</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:45%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/TX_apparatus.svg' width='90%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:55%'>
+	<ul style='font-size: 0.85em'>
+		
+		<li ><strong style='color:black'>Stage 1:</strong> <span class="blank" data-bid="Shear_strength.8e7b148b-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\sigma_3\) all around. Drainage <strong style='color:green'>open</strong> \(\implies\) consolidated.</li>
+		<li ><strong style='color:black'>Stage 2:</strong> axial stress <span class="blank" data-bid="Shear_strength.d3111d39-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> at constant \(\sigma_3\) until failure, <strong style='color:green'>drained</strong> or <strong style='color:red'>undrained</strong>.</li>
+		<li >\(\sigma_1\) is axial and \(\sigma_2=\sigma_3\): the <span class="blank" data-bid="Shear_strength.5390810c-0" style="min-width:20ch" contenteditable="plaintext-only" spellcheck="false"></span> are known.</li>
+	</ul>
+	<br>
+	Three flavors:
+	<ol>
+		<li >Consolidated-drained (CD)</li>
+		<li >Consolidated-undrained (CU)</li>
+		<li >Unconsolidated-undrained (UU)</li>
+	</div>
+	</div>
+
+	
+</section>
+
+<section class="block" id="s11" data-anchor="drained-triaxial-test-cd">
+<h2 class="block-title">Drained triaxial test (CD)</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:45%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/TX_drained_shear.svg' width='90%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:55%'>
+	<ul style='font-size: 0.85em'>
+		<li ><strong style='color:black'>Shearing stage:</strong> drainage valve <span class="blank" data-bid="Shear_strength.76e7a0e9-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> and <span class="blank" data-bid="Shear_strength.ce53d396-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> loading, so \(\Delta u \approx 0\) and \(\sigma'=\sigma\).</li>
+		<li ><strong style='color:blue'>Measured:</strong> load \(P\), displacement \(\delta\), <span class="blank" data-bid="Shear_strength.27dd7d0f-0" style="min-width:15ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\Delta V\), cell pressure \(\sigma_3\).</li>
+		<li ><strong style='color:black'>Computed:</strong> \(\varepsilon_a=\delta/H_0\), \(\varepsilon_v=\Delta V/V_0\), \(A=A_0 \, (1-\varepsilon_v)/(1-\varepsilon_a)\).</li>
+	</ul>
+
+	<div class='equationBox' style='font-size: 0.9em'>
+	\( \sigma_d=\sigma_1-\sigma_3=\cfrac{P}{A} \qquad \sigma'_1=\sigma'_3+\sigma_d \)
+	</div>
+	</div>
+	</div>
+
+	
+</section>
+
+<section class="block" id="s12" data-anchor="cd-triaxial-data-interpretation">
+<h2 class="block-title">CD triaxial data interpretation</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:45%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/TX_interpretation.svg' width='90%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:55%'>
+	<div class='defBox' name='Failure circle' style='font-size: 0.9em'>
+	\(\sigma'_{1f}=\sigma'_3+\sigma_{d,f}\): one <span class="blank" data-bid="Shear_strength.46a9870a-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> per test.
+	</div>
+	<div class='defBox' name='Peak friction angle' style='font-size: 0.9em'>
+	<strong style='color:green'>\(\phi'_p\)</strong>: envelope tangent to the <strong style='color:black'>peak</strong> circles (\(\sigma_{d,p}\)).
+	</div>
+	<div class='defBox' name='Critical friction angle' style='font-size: 0.9em'>
+	<strong style='color:red'>\(\phi'_c\)</strong>: envelope tangent to the circles at <strong style='color:black'>very large</strong> strains.
+	</div>
+	<div class='equationBox' style='font-size: 0.85em'>
+	For \(c'=0\): \( \sin\phi'=\cfrac{\sigma_{d,f}}{2\sigma'_3+\sigma_{d,f}} \)
+	</div>
+	</div>
+	</div>
+
+	
+</section>
+
+<section class="block" id="s13" data-anchor="example-9-5">
+<h2 class="block-title">Example 9.5</h2>
+
+	
+	<div class='textBox' >
+	The figure shows the results of three consolidated-drained triaxial tests on a dense sand (cell pressures 10, 20 and 40 kPa). Find: (a) the peak friction angle, and (b) the critical state friction angle.
+	</div>
+
+	<div class='container' style="display: block">
+	<div class='col' style="--colw:55%; width: 55%; margin: 0 auto">
+	<img loading="lazy" src="figures/TX_data.svg" style="width:100%" alt=""/>
+	</div>
+	<div class='col' style="--colw:45%; width: 100%">
+	<div class='ProblemBox' style='min-height: 360px'>
+	
+<div class="sol" data-id="ex-9-5" style="--sol-line: 1.25">
+
+  
+
+  <div class="step">
+    <span class="lead">Readings, with \(\sigma'_1=\sigma'_3+\sigma_d\)</span>
+    <table class="sol-table">
+      <tr><th>\(\sigma'_3\)</th><th>\(\sigma_{d,p}\)</th><th>\(\sigma'_{1p}\)</th><th>\(\sigma_{d,c}\)</th><th>\(\sigma'_{1c}\)</th></tr>
+      <tr><td>10</td><td><span class="blank" data-bid="Shear_strength.c11f4cb1-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.9fd0016d-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.e139b248-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.ba936b84-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td>20</td><td><span class="blank" data-bid="Shear_strength.49fa92bc-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.8ae402aa-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.f6986d49-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.6782c367-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+      <tr><td>40</td><td><span class="blank" data-bid="Shear_strength.88f2784a-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.cdc812b7-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.ad05a177-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span></td><td><span class="blank" data-bid="Shear_strength.6f06832b-0" style="min-width:5ch" contenteditable="plaintext-only" spellcheck="false"></span></td></tr>
+    </table>
+    all in kPa
+    <span class="note">Peak: maximum of \(\sigma_d\). Critical: \(\sigma_d\) at large strain, where the volume stops changing</span>
+  </div>
+
+  
+
+  <div class="sol-stack">
+      
+      <span class="sol-fig" style="width: 54.1%; min-width: min(100%, 140px)">
+        <img loading="lazy" src="figures/ex-9-5-mohr-peak.svg" style="width:100%" alt=""/>
+      </span>
+      <span class="sol-fig" style="width: 54.1%; min-width: min(100%, 140px)">
+        <img loading="lazy" src="figures/ex-9-5-mohr-critical.svg" style="width:100%" alt=""/>
+      </span>
+    
+
+      <div class="step">
+        <span class="lead">Best tangent through the origin</span> <br>
+        \(\sigma_m=\dfrac{\sigma'_1+\sigma'_3}{2}\), \(R=\dfrac{\sigma_d}{2}\); tangent: \(\sigma_m\sin\phi'=R\) <br>
+        min \(\sum\left(\sigma_m\sin\phi'-R\right)^2\) \(\Rightarrow\) \(\sin\phi'=\dfrac{\sum s\,t}{\sum \sigma_m^2}\)
+        <span class="note"></span>
+      </div>
+
+      <div class="step">
+        <span class="lead">(a) Peak</span>
+        \(\sin\phi'_p=\dfrac{\sum \sigma_m\,R}{\sum \sigma_m^2}=\) <span class="blank" data-bid="Shear_strength.1d928287-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> &ensp;
+        \(\phi'_p\approx\) <span class="blank ans" data-bid="Shear_strength.b2ffe655-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+        <span class="note">Clean sand: \(c'=0\)</span>
+      </div>
+
+      <div class="step">
+        <span class="lead">(b) Critical</span>
+        \(\sin\phi'_c=\dfrac{\sum \sigma_m\,R}{\sum \sigma_m^2}=\) <span class="blank" data-bid="Shear_strength.3d26c7af-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> &ensp;
+        \(\phi'_c\approx\) <span class="blank ans" data-bid="Shear_strength.463bc988-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+        <span class="note">The three critical circles touch the same line</span>
+      </div>
+
+      <div class="step result">
+        <span class="lead">Therefore</span>
+        \(\phi'_p\approx\) <span class="blank ans" data-bid="Shear_strength.a0e46068-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\) \(>\) \(\phi'_c\approx\) <span class="blank ans" data-bid="Shear_strength.a7e30d16-0" style="min-width:4ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+      </div>
+
+    </div>
+
+</div>
+
+	</div>
+	</div>
+	</div>
+
+	
+
+	
+	
+</section>
+
+<section class="block" id="s14" data-anchor="strength-parameters-of-sand">
+<h2 class="block-title">Strength parameters of sand</h2>
+
+	
+	<div class='textBox' style='text-align: left'>
+	Sand is a <span class="blank" data-bid="Shear_strength.93b4f513-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> material. When loaded, water can drain rapidly and therefore behave in a <span class="blank" data-bid="Shear_strength.94816293-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span> manner. Thus, we often use <span class="blank" data-bid="Shear_strength.492ea0ed-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span> parameters.
+
+	<div class='equationBox'>
+		\(\tau_f=\sigma'_{nf} \tan \phi'\)
+		</div>
+	</div>
+
+	
+	<div class="container">
+		<div class="col" style="--colw:50%">
+			<div class='findingBox' >
+				<strong style="color:green">Sands have \(c'=0\) unless there is cementation</strong>. However, different friction angles exist depending on deformation level or definition of <strong style="color:red">failure</strong>.
+			</div>
+			
+		</div>
+		<div class="col" style="--colw:50%">
+			
+		 <ul>
+			<li>\(\phi'_p=\) peak friction angle</li>
+			<li>\(\phi'_s=\) secant friction angle</li>
+			<li>\(\phi'_r=\) repose friction angle</li>
+			<li>\(\phi'_c=\) critical friction angle</li>
+		 </ul>
+			
+		</div>
+	</div>
+
+
+</section>
+
+<section class="block" id="s15" data-anchor="k-0-formula">
+<h2 class="block-title">\(K_0\) formula</h2>
+
+	
+<div class='textBox' style='text-align: left'>
+	<p>Analytical and empirical expressions have been developed for \(K_0\) as a function of the friction angle. These equations are often used to determine \(K_0\) for sand</p>
+
+</div>
+
+<div class='equationBox' >
+	<p>\(K_0^{nc}=1-\sin \phi'_c\) \(\longrightarrow\) For NC soil (Jacky 1944)</p>
+	<p>\(K_0^{oc}=K_0^{nc} OCR^{0.5}\) \(\longrightarrow\) For OC soil (Meyerhof 1976)</p>
+</div>
+
+
+
+
+
+
+
+</section>
+
+<section class="block" id="s16" data-anchor="typical-values-of-sand-parameters">
+<h2 class="block-title">Typical values of sand parameters</h2>
+
+
+<figure>
+	<img loading="lazy" src="../../Shear_strength/FiguresGeneral/phi_values.PNG" style="width:100%" data-preload/>
+	<footer ><small>Budhu 2015</small></footer>
+  </figure>
+  <div class='findingBox' >
+  <strong style='color:green'>Note:</strong> \(N\), and \(N_{60}\) are the number of blows and corrected blows per meter of penetration obtained from the <strong style='color:green'>Standard penetration test</strong>.
+  </div>
+
+</section>
+
+<section class="block" id="s17" data-anchor="drained-strength-of-clay">
+<h2 class="block-title">Drained strength of clay</h2>
+
+		
+		<div class='textBox' >
+			Normally consolidated clay <span class="blank" data-bid="Shear_strength.386677a8-0" style="min-width:11ch" contenteditable="plaintext-only" spellcheck="false"></span> and heavily overconsolidated clay <span class="blank" data-bid="Shear_strength.8c8c2f6a-0" style="min-width:9ch" contenteditable="plaintext-only" spellcheck="false"></span>.
+		</div>
+	<div class='container'>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>N.C. clay</h4>
+	<p>For normally consolidated clay \(c'=0\).</p>
+	<div class='equationBox'>
+	\( \tau_f= \sigma'_{nf} \tan \phi' \)
+	</div>
+	</div>
+	<div class='col bordered' style='--colw:50%'>
+	<h4>Heavily O.C. clay</h4>
+	<p>For overconsolidated clay, cohesion is observed. This cohesion is not necessarily due to cementation but due to suction during dilation.</p>
+	<div class='equationBox'>
+	\( \tau_f= c' +  \sigma'_{nf} \tan \phi' \)
+	</div>
+	</div>
+	</div>
+	
+</section>
+
+<section class="block" id="s18" data-anchor="undrained-strength-of-clay">
+<h2 class="block-title">Undrained strength of clay</h2>
+
+	
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/undrained_circles.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='--colw:50%'>
+	<div class='textBox' >
+	When <strong style='color:red'>undrained</strong>, soils develop <span class="blank" data-bid="Shear_strength.1178aaa5-0" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span>. The result of undrained tests are states of stress shifted to the right and of equal magnitude in the <strong style='color:red'>total stress space</strong>.
+	</div>
+
+	<p>The undrained shear strength \(S_u\) is defined with \(\phi=0\):</p>
+	<div class='equationBox' >
+	\( \tau_f= S_u=c_u \)
+	</div>
+	</div>
+	</div>
+	
+
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<div class='textBox' >
+	The undrained shear strength is related to the consolidation effective stress. 
+	</div>
+
+	<div class='equationBox' >
+	\( \cfrac{S_u}{\sigma'_{vo}}= k \ OCR^b \)
+	</div>
+	<p>Where: <br>
+	\(k=\) Constant between 0.23-0.31 <br>
+	\(b \approx 0.8\) Constant <br>
+	</p>
+	</div>
+	<div class='col' style='--colw:50%'>
+		<p>Typical values of undrained shear strength as a function of soil consistency and SPT results. </p>
+
+		<figure >
+			<img loading="lazy" src="../../Shear_strength/FiguresGeneral/SuValues.PNG" style="width:100%" data-preload/>
+			<footer ><small>Budhu (2013)</small></footer>
+		  </figure>
+	</div>
+	</div>
+	<div class='findingBox' >
+	Note: The equation shown in this slide is often known as the <span class="blank" data-bid="Shear_strength.dccc2fcf-0" style="min-width:18ch" contenteditable="plaintext-only" spellcheck="false"></span>. Parameters \(k\) and \(b\) are obtained using such procedure. 
+	</div>
+	
+
+	<div class='InquiryBox' >
+	How is the shear strength of soils used in practice?
+	</div>
+
+	<div class='container'>
+	<div class='col' style='--colw:50%'>
+	<div class='textBox' >
+		Examples include: <br>
+	<ol>
+		<li>Slope stability analysis</li>
+		<li>Shallow and deep foundations</li>
+		<li>Tunneling</li>
+		<li>Deep excavations</li>
+	</ol>
+	</div>
+
+	<figure>
+	<img loading="lazy" src='https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1920px-Landslide_in_Cusco%2C_Peru_-_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20180316193541' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+
+	</div>
+	<div class='col' style='--colw:50%'>
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/slope_stability.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+
+	<div class='equationBox'>
+	\( FS= \cfrac{\tau_f}{\tau_{mob}}= \cfrac{S}{\tau_{mob}}\)
+	</div>
+	</div>
+	</div>
+
+	
+	
+</section>
+
+<section class="block" id="s19" data-anchor="example-9-6">
+<h2 class="block-title">Example 9.6</h2>
+
+	
+	<div class='textBox' style='font-size: 0.75em'>
+	Point \(A\) is at the middle of the base of the shaded slice (\(\alpha=40^\circ\)). The element shows the total stresses at \(A\), and the water table, which seeps out on the slope face, is \(h_w=4\) m above \(A\). Soil: \(\phi'_p=36^\circ\), \(c'_p=10\) kPa; \(\phi'_c=32^\circ\), \(c'_c=0\). Determine: (a) the factor of safety on the slice base, (b) the effective stress Mohr's circle at \(A\) against the M-C lines, and (c) the principal stresses.
+	</div>
+
+	<div class='container' style="display: block">
+	<div class='col' style="--colw:50%; width: 50%; margin: 0 auto">
+	<figure>
+	<img loading="lazy" src='../../Shear_strength/FiguresGeneral/slope_example.svg' width='100%'/>
+	<footer style='font-size: 0.8em'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style="--colw:50%; width: 100%">
+	<div class='ProblemBox' style='min-height: 340px'>
+	
+<div class="sol" data-id="ex-9-6" style="--sol-line: 1.25">
+
+  
+
+  <div class="step">
+    <span class="lead">Pore pressure at \(A\)</span>
+    \(u=\gamma_w h_w=\) <span class="blank math" data-bid="Shear_strength.94d03294-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.704669fe-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+    <span class="note">\(h_w\) is measured vertically up to the water table</span>
+  </div>
+
+  <br>
+
+  <div class="step">
+    <span class="lead">Normal stress on the base</span> <br>
+    \(\sigma_n=\dfrac{\sigma_x+\sigma_y}{2}+\dfrac{\sigma_y-\sigma_x}{2}\cos2 \alpha+\tau_{xy}\sin2 \alpha\) <br>
+    \(\sigma_n=\) <span class="blank math" data-bid="Shear_strength.e7604a4e-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:39ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.a8b606d7-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+    <span class="note">Clockwise shear: \(\tau_{xy}=-15\unit{kPa}\), as in Example 9.1</span>
+  </div>
+
+  
+
+  <div class="sol-stack">
+
+      <div class="step">
+        <span class="lead">Shear stress on the base</span> <br>
+        \(\tau_m=\dfrac{\sigma_y-\sigma_x}{2}\sin2 \alpha-\tau_{xy}\cos2 \alpha\) <br>
+        \(\tau_m=\) <span class="blank math" data-bid="Shear_strength.03fad72f-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:35ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.1c8ebf91-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step">
+        <span class="lead">Effective normal stress</span> <br>
+        \(\sigma'_n=\sigma_n-u=\) <span class="blank math" data-bid="Shear_strength.8cd6d2e1-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:16ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.f2907ac8-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+        <span class="note">Water can't carry shear stress, only normal stress changes</span>
+      </div>
+
+      <br>
+
+            <div class="step">
+        <span class="lead">(a) Peak strength</span> <br>
+        \(\tau_f=c'_p+\sigma'_n\tan\phi'_p=\) <span class="blank math" data-bid="Shear_strength.c3d80105-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:25ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.7c3f4114-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        \(\tau_m=\) <span class="blank math" data-bid="Shear_strength.b0624cd2-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        \(FS_p=\dfrac{\tau_f}{\tau_m}=\) <span class="blank math" data-bid="Shear_strength.1ce91d2c-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="Shear_strength.30f0b26c-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">\(m\) stands for mobilized shear stress at the base</span>
+      </div>
+
+    
+
+
+
+      <br>
+
+      <div class="step">
+        <span class="lead">(a) Critical strength</span> <br>
+        \(\tau_f=\sigma'_n\tan\phi'_c=\) <span class="blank math" data-bid="Shear_strength.3f3cd00a-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:22ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.380f1c75-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        \(\tau_m=\) <span class="blank math" data-bid="Shear_strength.345c7671-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:10ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        \(FS_c=\dfrac{\tau_f}{\tau_m}=\) <span class="blank math" data-bid="Shear_strength.45c3af89-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:24ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="Shear_strength.fd99fbfa-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span>
+        <span class="note">Use \(\phi'_c\) with \(c'=0\) for large deformations</span>
+      </div>
+
+    </div>
+
+  
+
+  <div class="sol-stack">
+      <span class="sol-fig" style="width: 59.2%; min-width: min(100%, 140px)">
+        <img loading="lazy" src="figures/ex-9-6-mohr.svg" style="width:100%" alt=""/>
+      </span>
+    
+
+      <div class="step">
+        <span class="lead">(b) Effective stresses at \(A\)</span> <br>
+        \(\sigma'_x=\) <span class="blank math" data-bid="Shear_strength.e5887195-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.f575d94a-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        \(\sigma'_y=\) <span class="blank math" data-bid="Shear_strength.0b77dbba-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:14ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank" data-bid="Shear_strength.19ed5fb9-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+      <div class="step">
+        <span class="lead">(b) Circle</span> <br>
+         \(\sigma_m=\dfrac{\sigma'_x+\sigma'_y}{2}=\) <span class="blank" data-bid="Shear_strength.fbd80acd-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) <br>
+        radius \(=\sqrt{\left(\dfrac{\sigma'_y-\sigma'_x}{2}\right)^2+\tau_{xy}^2}=\) <span class="blank" data-bid="Shear_strength.9ce36d3d-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <br>
+
+            <div class="step">
+        <span class="lead">(c) Effective principal stresses</span> <br>
+        \(\sigma'_{1,3}=\text{centre}\pm\text{radius}=\) <span class="blank math" data-bid="Shear_strength.07c362a8-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:17ch" contenteditable="plaintext-only" spellcheck="false"></span> <br>
+        \(\sigma'_1=\) <span class="blank ans" data-bid="Shear_strength.a9a4a7c3-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) &emsp; \(\sigma'_3=\) <span class="blank ans" data-bid="Shear_strength.05dfd1ac-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+    </div>
+
+  
+
+
+      <div class="step">
+        <span class="lead">(c) Total principal stresses</span> <br>
+        \(\sigma=\sigma'+u\): &ensp; \(\sigma_1=\) <span class="blank ans" data-bid="Shear_strength.81b191ba-0" style="min-width:7ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\) &emsp; \(\sigma_3=\) <span class="blank ans" data-bid="Shear_strength.62ad9297-0" style="min-width:6ch" contenteditable="plaintext-only" spellcheck="false"></span> \(\unit{kPa}\)
+      </div>
+
+      <div class="step">
+        <span class="lead">(c) Orientation</span> <br>
+        \(n=\dfrac{1}{2}\arctan\left(\dfrac{2\tau_{xy}}{\sigma_y-\sigma_x}\right)=\) <span class="blank math" data-bid="Shear_strength.1f6e1036-0" data-math="1" title="Math answer — plain text is fine, e.g. pi*7.6^2/4" style="min-width:40ch" contenteditable="plaintext-only" spellcheck="false"></span> \(=\) <span class="blank ans" data-bid="Shear_strength.471872e7-0" style="min-width:13ch" contenteditable="plaintext-only" spellcheck="false"></span>\(^\circ\)
+        <span class="note">\(\sigma_1\) acts on this plane; \(\sigma_3\) on the plane at 79.7&deg;</span>
+      </div>
+
+
+</div>
+
+	</div>
+	</div>
+	</div>
+
+	
+
+	
+	
+
+	
+	
+
+	
+	
+</section>
+
+<section class="block" id="s20" data-anchor="what-s-next">
+<h2 class="block-title">What's next?</h2>
+
+		
+	<p>Geotechnical engineering is a fascinating discipline of Civil Engineering. It is a challenging and rewarding profession.</p>
+	<p>You have completed your first course in geotechnical engineering. <strong style="color:black">CONGRATULATIONS!!!</strong></p>
+	<p>how can I know more about GE?</p>
+			<ol>
+				<li>CE 443: Engineering Geology</li>
+			    <li>CE 444: Seepage, Earth Embankments, and Retaining Structures</li>
+				<li>CE 445: An Introduction to Foundation Engineering</li>
+				<li>More at Graduate Level Courses</li>
+
+			</ol>
+
+	
+</section>
+
+<section class="block" id="s21" data-anchor="dr-z-s-guarantee">
+<h2 class="block-title">Dr. Z's guarantee</h2>
+
+	
+
+	<div class='textBox' >
+	After you pass this course you have my <strong style='color:#000'>guarantee</strong> that I will be available for you for <strong style='color:#000'>professional consultation</strong>. Just send me an email if you are working on a project and need help understanding the geotechnical aspects of it. I will be happy to help you.
+	</div>
+	
+
+
+
+
+</section>
+</article>
+
+<section class="qa-block" id="qa-block" hidden>
+  <h2 class="block-title">Questions &amp; answers</h2>
+  <p class="qa-note">Questions asked by classmates about this chapter, with the instructor's answers.
+  Questions are shown anonymously. Use <em>Ask a question</em> in the toolbar to submit yours.</p>
+  <div id="qa-status">Loading questions…</div>
+  <div id="qa-list"></div>
+</section>
+</main>
+
+<div class="qa-overlay" id="qa-overlay" hidden>
+  <div class="qa-panel" role="dialog" aria-modal="true" aria-labelledby="qa-title">
+    <h3 id="qa-title">Ask a question about this chapter</h3>
+    <p class="qa-privacy">Your student ID is used only to check that you are registered in the class.
+    Your question will be shown <strong>anonymously</strong> once it is answered — your name and ID
+    are never displayed.</p>
+    <label for="qa-id">Student ID</label>
+    <input type="text" id="qa-id" inputmode="numeric" autocomplete="off" placeholder="e.g. 200123456">
+    <label for="qa-text">Your question</label>
+    <textarea id="qa-text" rows="4" maxlength="1000" placeholder="What would you like to ask?"></textarea>
+    <input type="text" id="qa-website" name="website" tabindex="-1" aria-hidden="true" autocomplete="off">
+    <div class="qa-msg" id="qa-msg" hidden></div>
+    <div class="qa-actions">
+      <button type="button" id="qa-cancel">Cancel</button>
+      <button type="button" id="qa-send" class="primary">Send question</button>
+    </div>
+  </div>
+</div>
+
+<footer class="book-footer">
+  <p>CE342 · Eng. Behavior of Soils &amp; Foundations — interactive course notes. Your answers are stored in this browser only;
+  use <em>Save notes</em> to back them up or move them to another device.</p>
+  <p class="license-line">By Luis Zambrano-Cruzatty ·
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank">CC BY-NC-SA 4.0</a>
+  · These notes are partially derived from the course pack by Drs. Rahman, Montoya, Cabas, and Martinez.</p>
+</footer>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
