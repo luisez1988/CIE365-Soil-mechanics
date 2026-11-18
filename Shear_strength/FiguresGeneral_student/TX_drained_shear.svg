@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2in"
+   height="2in"
+   viewBox="0 0 50.8 50.8"
+   version="1.1"
+   id="svg93"
+   sodipodi:docname="TX_drained_shear.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview93"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="in"
+     inkscape:zoom="4.6735339"
+     inkscape:cx="72.857073"
+     inkscape:cy="105.80858"
+     inkscape:window-width="2880"
+     inkscape:window-height="1514"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg93" />
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path94" />
+    </marker>
+    <pattern
+       id="hatch"
+       patternUnits="userSpaceOnUse"
+       width="1.1"
+       height="1.1"
+       patternTransform="rotate(45)">
+      <rect
+         width="1.1"
+         height="1.1"
+         fill="#999999"
+         id="rect1" />
+      <line
+         x1="0"
+         y1="0"
+         x2="0"
+         y2="1.1"
+         stroke="#000000"
+         stroke-width="0.22"
+         id="line1" />
+    </pattern>
+    <marker
+       id="arr_red"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="4.5"
+       markerHeight="4.5"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#ff0000"
+         id="path1" />
+    </marker>
+    <marker
+       id="arr_blue"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="4.5"
+       markerHeight="4.5"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#0000ff"
+         id="path2" />
+    </marker>
+    <marker
+       id="arr_green"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="4.5"
+       markerHeight="4.5"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#008000"
+         id="path3" />
+    </marker>
+    <marker
+       id="arr_black"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="4.5"
+       markerHeight="4.5"
+       orient="auto-start-reverse">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#000000"
+         id="path4" />
+    </marker>
+  </defs>
+  <rect
+     x="3.5"
+     y="5.5"
+     width="23"
+     height="26.5"
+     style="fill:#80e5ff;stroke:none;stroke-width:0.365"
+     id="rect4" />
+  <line
+     x1="3.5"
+     y1="5.5"
+     x2="3.5"
+     y2="32"
+     style="fill:none;stroke:#000000;stroke-width:0.5"
+     id="line4" />
+  <line
+     x1="26.5"
+     y1="5.5"
+     x2="26.5"
+     y2="32"
+     style="fill:none;stroke:#000000;stroke-width:0.5"
+     id="line5" />
+  <rect
+     x="3.5"
+     y="3.5"
+     width="23"
+     height="2"
+     style="fill:url(#hatch);stroke:#000000;stroke-width:0.365"
+     id="rect5" />
+  <rect
+     x="1.5"
+     y="32"
+     width="27"
+     height="3.5"
+     style="fill:url(#hatch);stroke:#000000;stroke-width:0.365"
+     id="rect6" />
+  <rect
+     x="7"
+     y="28.5"
+     width="14"
+     height="3.5"
+     style="fill:url(#hatch);stroke:#000000;stroke-width:0.365"
+     id="rect7" />
+  <rect
+     x="8"
+     y="11.2"
+     width="12"
+     height="17.3"
+     style="fill:#ffccaa;stroke:none;stroke-width:0.365"
+     id="rect8" />
+  <rect
+     x="8"
+     y="11.2"
+     width="12"
+     height="1.3"
+     style="fill:#004455;stroke:none;stroke-width:0.365"
+     id="rect9" />
+  <rect
+     x="8"
+     y="27.2"
+     width="12"
+     height="1.3"
+     style="fill:#004455;stroke:none;stroke-width:0.365"
+     id="rect10" />
+  <rect
+     x="7.8"
+     y="10.9"
+     width="12.4"
+     height="17.9"
+     style="fill:none;stroke:#ff0000;stroke-width:0.35"
+     id="rect11" />
+  <path
+     d="M7.8,12.5 C5.6,16 5.6,23 7.8,27.5"
+     style="fill:none;stroke:#ff0000;stroke-width:0.35;stroke-dasharray:0.9,0.6"
+     id="path11" />
+  <path
+     d="M20.2,12.5 C22.4,16 22.4,23 20.2,27.5"
+     style="fill:none;stroke:#ff0000;stroke-width:0.35;stroke-dasharray:0.9,0.6"
+     id="path12" />
+  <rect
+     x="7"
+     y="8.7"
+     width="14"
+     height="2.2"
+     style="fill:url(#hatch);stroke:#000000;stroke-width:0.365"
+     id="rect12" />
+  <text
+     x="14"
+     y="20.3"
+     style="font-family:'Times New Roman';font-size:3.175px;fill:#000000;text-anchor:middle"
+     id="text12">Soil</text>
+  <rect
+     x="13.1"
+     y="2.2"
+     width="1.8"
+     height="6.5"
+     style="fill:url(#hatch);stroke:#000000;stroke-width:0.365"
+     id="rect13" />
+  <text
+     x="17.6"
+     y="2.3"
+     style="font-family:'Times New Roman';font-size:2.9px;fill:#008000;text-anchor:start"
+     id="text13">Slow rate</text>
+  <circle
+     cx="14"
+     cy="1.4"
+     r="1.2"
+     style="fill:#999999;stroke:#000000;stroke-width:0.3"
+     id="circle13" />
+  <circle
+     cx="14"
+     cy="1.4"
+     r="0.5"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.25"
+     id="circle14" />
+  <text
+     x="12.2"
+     y="2.3"
+     style="font-family:'Times New Roman';font-size:3.175px;fill:#0000ff;text-anchor:end;font-style:italic"
+     id="text14">P</text>
+  <line
+     x1="21"
+     y1="9.5"
+     x2="23.5"
+     y2="9.5"
+     style="fill:none;stroke:#000000;stroke-width:0.5"
+     id="line14" />
+  <line
+     x1="23.5"
+     y1="9.5"
+     x2="23.5"
+     y2="8.7"
+     style="fill:none;stroke:#000000;stroke-width:0.35"
+     id="line15" />
+  <circle
+     cx="23.5"
+     cy="7.0"
+     r="1.6"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.4"
+     id="circle15" />
+  <line
+     x1="24.55"
+     y1="7.0"
+     x2="24.95"
+     y2="7.0"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line16" />
+  <line
+     x1="24.75570357417579"
+     y1="7.3364647586332765"
+     x2="24.90059244811915"
+     y2="7.375287615398655"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line17" />
+  <line
+     x1="24.40932667397366"
+     y1="7.525"
+     x2="24.755736835487436"
+     y2="7.725"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line18" />
+  <line
+     x1="24.419238815542514"
+     y1="7.919238815542512"
+     x2="24.525304832720494"
+     y2="8.025304832720494"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line19" />
+  <line
+     x1="24.025"
+     y1="7.909326673973661"
+     x2="24.225"
+     y2="8.255736835487436"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line20" />
+  <line
+     x1="23.836464758633277"
+     y1="8.255703574175788"
+     x2="23.875287615398655"
+     y2="8.400592448119149"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line21" />
+  <line
+     x1="23.5"
+     y1="8.05"
+     x2="23.5"
+     y2="8.45"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line22" />
+  <line
+     x1="23.163535241366723"
+     y1="8.255703574175788"
+     x2="23.124712384601345"
+     y2="8.400592448119149"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line23" />
+  <line
+     x1="22.975"
+     y1="7.909326673973661"
+     x2="22.775"
+     y2="8.255736835487436"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line24" />
+  <line
+     x1="22.580761184457486"
+     y1="7.919238815542512"
+     x2="22.474695167279506"
+     y2="8.025304832720494"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line25" />
+  <line
+     x1="22.59067332602634"
+     y1="7.525"
+     x2="22.244263164512564"
+     y2="7.725"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line26" />
+  <line
+     x1="22.24429642582421"
+     y1="7.336464758633277"
+     x2="22.09940755188085"
+     y2="7.375287615398656"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line27" />
+  <line
+     x1="22.45"
+     y1="7.0"
+     x2="22.05"
+     y2="7.0"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line28" />
+  <line
+     x1="22.24429642582421"
+     y1="6.663535241366723"
+     x2="22.09940755188085"
+     y2="6.624712384601345"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line29" />
+  <line
+     x1="22.59067332602634"
+     y1="6.475"
+     x2="22.244263164512564"
+     y2="6.2749999999999995"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line30" />
+  <line
+     x1="22.580761184457486"
+     y1="6.080761184457488"
+     x2="22.474695167279506"
+     y2="5.974695167279506"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line31" />
+  <line
+     x1="22.974999999999998"
+     y1="6.09067332602634"
+     x2="22.775"
+     y2="5.744263164512564"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line32" />
+  <line
+     x1="23.163535241366723"
+     y1="5.744296425824211"
+     x2="23.124712384601345"
+     y2="5.599407551880851"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line33" />
+  <line
+     x1="23.5"
+     y1="5.95"
+     x2="23.5"
+     y2="5.55"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line34" />
+  <line
+     x1="23.836464758633277"
+     y1="5.744296425824211"
+     x2="23.875287615398655"
+     y2="5.599407551880851"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line35" />
+  <line
+     x1="24.025"
+     y1="6.090673326026339"
+     x2="24.225"
+     y2="5.744263164512564"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line36" />
+  <line
+     x1="24.41923881554251"
+     y1="6.080761184457488"
+     x2="24.525304832720494"
+     y2="5.9746951672795054"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line37" />
+  <line
+     x1="24.40932667397366"
+     y1="6.475"
+     x2="24.755736835487436"
+     y2="6.2749999999999995"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line38" />
+  <line
+     x1="24.75570357417579"
+     y1="6.6635352413667235"
+     x2="24.90059244811915"
+     y2="6.624712384601345"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line39" />
+  <line
+     x1="23.5"
+     y1="7.0"
+     x2="24.419253331742773"
+     y2="6.228654868376153"
+     style="fill:none;stroke:#ff0000;stroke-width:0.45"
+     id="line40" />
+  <circle
+     cx="23.5"
+     cy="7.0"
+     r="0.35"
+     fill="#ff0000"
+     id="circle40" />
+  <text
+     x="21.3"
+     y="7.8"
+     style="font-family:'Times New Roman';font-size:3.175px;fill:#0000ff;text-anchor:end;font-style:italic"
+     id="text40">δ</text>
+  <line
+     x1="4.2"
+     y1="15.5"
+     x2="7.4"
+     y2="15.5"
+     style="stroke:#ff0000;stroke-width:0.4"
+     marker-end="url(#arr_red)"
+     id="line41" />
+  <line
+     x1="23.8"
+     y1="15.5"
+     x2="20.6"
+     y2="15.5"
+     style="stroke:#ff0000;stroke-width:0.4"
+     marker-end="url(#arr_red)"
+     id="line42" />
+  <line
+     x1="4.2"
+     y1="23.5"
+     x2="7.4"
+     y2="23.5"
+     style="stroke:#ff0000;stroke-width:0.4"
+     marker-end="url(#arr_red)"
+     id="line43" />
+  <line
+     x1="23.8"
+     y1="23.5"
+     x2="20.6"
+     y2="23.5"
+     style="stroke:#ff0000;stroke-width:0.4"
+     marker-end="url(#arr_red)"
+     id="line44" />
+  <text
+     x="4.0"
+     y="13.4"
+     style="font-family:'Times New Roman';font-size:3.175px;fill:#ff0000;text-anchor:start;font-style:italic"
+     id="text44">σ</text>
+  <text
+     x="5.6"
+     y="14.1"
+     style="font-family:'Times New Roman';font-size:2.2px;fill:#ff0000;text-anchor:start"
+     id="text45">3</text>
+  <polyline
+     points="26.5,4.5 43,4.5"
+     style="fill:none;stroke:#0033aa;stroke-width:0.95;stroke-linejoin:round"
+     id="polyline45" />
+  <polyline
+     points="26.5,4.5 43,4.5"
+     style="fill:none;stroke:#80c8ff;stroke-width:0.49999999999999994;stroke-linejoin:round"
+     id="polyline46" />
+  <rect
+     x="32.4"
+     y="3.675"
+     width="2.2"
+     height="1.6500000000000001"
+     rx="0.3"
+     style="fill:#80c8ff;stroke:#0033aa;stroke-width:0.35"
+     id="rect46" />
+  <line
+     x1="33.5"
+     y1="3.675"
+     x2="33.5"
+     y2="2.7399999999999998"
+     style="fill:none;stroke:#0033aa;stroke-width:0.5"
+     id="line46" />
+  <line
+     x1="32.4"
+     y1="2.7399999999999998"
+     x2="34.6"
+     y2="2.7399999999999998"
+     style="fill:none;stroke:#ff0000;stroke-width:0.6"
+     id="line47" />
+  <rect
+     x="43"
+     y="1.3"
+     width="6.8"
+     height="6.4"
+     style="fill:#999999;stroke:#000000;stroke-width:0.365"
+     id="rect47" />
+  <text
+     x="46.4"
+     y="4.0"
+     style="font-family:'Times New Roman';font-size:2.8px;fill:#ff0000;text-anchor:middle;font-style:italic"
+     id="text47">σ</text>
+  <text
+     x="47.6"
+     y="4.6"
+     style="font-family:'Times New Roman';font-size:2.0px;fill:#ff0000;text-anchor:start"
+     id="text48">3</text>
+  <text
+     x="46.4"
+     y="6.8"
+     style="font-family:'Times New Roman';font-size:2.3px;fill:#ff0000;text-anchor:middle"
+     id="text49">const.</text>
+  <text
+     x="35.6"
+     y="2.6"
+     style="font-family:'Times New Roman';font-size:2.6px;fill:#008000;text-anchor:start"
+     id="text50">Open</text>
+  <text
+     x="28.3"
+     y="8.6"
+     style="font-family:'Times New Roman';font-size:2.5px;fill:#000000;text-anchor:start"
+     id="text51">Cell pressure</text>
+  <path
+     id="polyline51"
+     style="fill:none;stroke:#0033aa;stroke-width:0.95;stroke-linejoin:round"
+     d="M 19,28.500001 19,46.5 h 22.5"
+     sodipodi:nodetypes="ccc" />
+  <path
+     id="polyline52"
+     style="fill:none;stroke:#80c8ff;stroke-width:0.5;stroke-linejoin:round"
+     d="M 19,27.200001 19,46.5 h 22.5"
+     sodipodi:nodetypes="ccc" />
+  <rect
+     x="27.9"
+     y="45.675"
+     width="2.2"
+     height="1.6500000000000001"
+     rx="0.3"
+     style="fill:#80c8ff;stroke:#0033aa;stroke-width:0.35"
+     id="rect52" />
+  <line
+     x1="29"
+     y1="45.675"
+     x2="29"
+     y2="44.74"
+     style="fill:none;stroke:#0033aa;stroke-width:0.5"
+     id="line52" />
+  <line
+     x1="27.9"
+     y1="44.74"
+     x2="30.1"
+     y2="44.74"
+     style="fill:none;stroke:#ff0000;stroke-width:0.6"
+     id="line53" />
+  <text
+     x="25.5"
+     y="43.3"
+     style="font-family:'Times New Roman';font-size:2.6px;fill:#008000;text-anchor:start"
+     id="text53">Open</text>
+  <text
+     x="20.5"
+     y="49.8"
+     style="font-family:'Times New Roman';font-size:2.6px;fill:#000000;text-anchor:start"
+     id="text54">Drainage</text>
+  <rect
+     x="41"
+     y="36.5"
+     width="3"
+     height="10.5"
+     style="fill:#80e5ff;stroke:none;stroke-width:0.365"
+     id="rect54" />
+  <polyline
+     points="41,28.5 41,47.0 44,47.0 44,28.5"
+     style="fill:none;stroke:#000000;stroke-width:0.365;stroke-linejoin:round"
+     id="polyline54" />
+  <line
+     x1="41"
+     y1="30.555555555555557"
+     x2="42.05"
+     y2="30.555555555555557"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line54" />
+  <line
+     x1="41"
+     y1="32.611111111111114"
+     x2="42.05"
+     y2="32.611111111111114"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line55" />
+  <line
+     x1="41"
+     y1="34.666666666666664"
+     x2="42.05"
+     y2="34.666666666666664"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line56" />
+  <line
+     x1="41"
+     y1="36.72222222222222"
+     x2="42.05"
+     y2="36.72222222222222"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line57" />
+  <line
+     x1="41"
+     y1="38.77777777777778"
+     x2="42.05"
+     y2="38.77777777777778"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line58" />
+  <line
+     x1="41"
+     y1="40.833333333333336"
+     x2="42.05"
+     y2="40.833333333333336"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line59" />
+  <line
+     x1="41"
+     y1="42.888888888888886"
+     x2="42.05"
+     y2="42.888888888888886"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line60" />
+  <line
+     x1="41"
+     y1="44.94444444444444"
+     x2="42.05"
+     y2="44.94444444444444"
+     style="fill:none;stroke:#000000;stroke-width:0.18"
+     id="line61" />
+  <text
+     x="44.5"
+     y="32.4"
+     style="font-family:'Times New Roman';font-size:2.7px;fill:#0000ff;text-anchor:start"
+     id="text62">Δ</text>
+  <text
+     x="46.3"
+     y="32.4"
+     style="font-family:'Times New Roman';font-size:2.7px;fill:#0000ff;text-anchor:start;font-style:italic"
+     id="text63">V</text>
+  <text
+     x="37.6"
+     y="27.3"
+     style="font-family:'Times New Roman';font-size:2.6px;fill:#000000;text-anchor:start"
+     id="text64">Burette</text>
+  <polyline
+     points="9.5,32 9.5,38.2"
+     style="fill:none;stroke:#0033aa;stroke-width:0.75951;stroke-linejoin:round"
+     id="polyline64"
+     transform="matrix(1,0,0,1.564516,0,-21.56451)" />
+  <path
+     id="polyline65"
+     style="fill:none;stroke:#80c8ff;stroke-width:0.5;stroke-linejoin:round"
+     d="M 9.5,27.200001 9.5,38.2"
+     sodipodi:nodetypes="cc" />
+  <circle
+     cx="9.5"
+     cy="40.6"
+     r="2.4"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.4"
+     id="circle65" />
+  <line
+     x1="11.35"
+     y1="40.6"
+     x2="11.75"
+     y2="40.6"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line65" />
+  <line
+     x1="11.528444235207044"
+     y1="41.1435199947153"
+     x2="11.673333109150404"
+     y2="41.182342851480676"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line66" />
+  <line
+     x1="11.102146997001212"
+     y1="41.525"
+     x2="11.448557158514987"
+     y2="41.725"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line67" />
+  <line
+     x1="10.98492424049175"
+     y1="42.08492424049175"
+     x2="11.090990257669732"
+     y2="42.19099025766973"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line68" />
+  <line
+     x1="10.425"
+     y1="42.202146997001215"
+     x2="10.625"
+     y2="42.54855715851499"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line69" />
+  <line
+     x1="10.043519994715293"
+     y1="42.62844423520704"
+     x2="10.082342851480671"
+     y2="42.77333310915041"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line70" />
+  <line
+     x1="9.5"
+     y1="42.45"
+     x2="9.5"
+     y2="42.85"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line71" />
+  <line
+     x1="8.956480005284707"
+     y1="42.62844423520704"
+     x2="8.917657148519329"
+     y2="42.77333310915041"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line72" />
+  <line
+     x1="8.575000000000001"
+     y1="42.202146997001215"
+     x2="8.375"
+     y2="42.54855715851499"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line73" />
+  <line
+     x1="8.01507575950825"
+     y1="42.08492424049175"
+     x2="7.909009742330268"
+     y2="42.19099025766973"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line74" />
+  <line
+     x1="7.897853002998788"
+     y1="41.525"
+     x2="7.551442841485013"
+     y2="41.725"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line75" />
+  <line
+     x1="7.4715557647929565"
+     y1="41.1435199947153"
+     x2="7.326666890849596"
+     y2="41.182342851480676"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line76" />
+  <line
+     x1="7.65"
+     y1="40.6"
+     x2="7.25"
+     y2="40.6"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line77" />
+  <line
+     x1="7.4715557647929565"
+     y1="40.056480005284705"
+     x2="7.326666890849596"
+     y2="40.017657148519326"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line78" />
+  <line
+     x1="7.897853002998788"
+     y1="39.675000000000004"
+     x2="7.551442841485013"
+     y2="39.475"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line79" />
+  <line
+     x1="8.01507575950825"
+     y1="39.11507575950825"
+     x2="7.909009742330268"
+     y2="39.00900974233027"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line80" />
+  <line
+     x1="8.575"
+     y1="38.99785300299879"
+     x2="8.375"
+     y2="38.651442841485014"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line81" />
+  <line
+     x1="8.956480005284707"
+     y1="38.57155576479296"
+     x2="8.917657148519329"
+     y2="38.426666890849596"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line82" />
+  <line
+     x1="9.5"
+     y1="38.75"
+     x2="9.5"
+     y2="38.35"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line83" />
+  <line
+     x1="10.043519994715293"
+     y1="38.571555764792954"
+     x2="10.082342851480671"
+     y2="38.426666890849596"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line84" />
+  <line
+     x1="10.425"
+     y1="38.99785300299879"
+     x2="10.625"
+     y2="38.651442841485014"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line85" />
+  <line
+     x1="10.98492424049175"
+     y1="39.11507575950825"
+     x2="11.09099025766973"
+     y2="39.00900974233027"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line86" />
+  <line
+     x1="11.10214699700121"
+     y1="39.675"
+     x2="11.448557158514987"
+     y2="39.475"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line87" />
+  <line
+     x1="11.528444235207044"
+     y1="40.056480005284705"
+     x2="11.673333109150404"
+     y2="40.017657148519326"
+     style="fill:none;stroke:#000000;stroke-width:0.15"
+     id="line88" />
+  <line
+     x1="9.5"
+     y1="40.6"
+     x2="7.7"
+     y2="40.6"
+     style="fill:none;stroke:#ff0000;stroke-width:0.45"
+     id="line89" />
+  <circle
+     cx="9.5"
+     cy="40.6"
+     r="0.35"
+     fill="#ff0000"
+     id="circle89" />
+  <circle
+     cx="9.5"
+     cy="40.6"
+     r="2.4"
+     style="fill:none;stroke:#ff0000;stroke-width:0.45"
+     id="circle90" />
+  <text
+     x="6.4"
+     y="46.3"
+     style="font-family:'Times New Roman';font-size:2.9px;fill:#0000ff;text-anchor:start"
+     id="text90">Δ</text>
+  <text
+     x="8.3"
+     y="46.3"
+     style="font-family:'Times New Roman';font-size:2.9px;fill:#0000ff;text-anchor:start;font-style:italic"
+     id="text91">u</text>
+  <text
+     x="10.2"
+     y="46.3"
+     style="font-family:'Times New Roman';font-size:2.9px;fill:#0000ff;text-anchor:start"
+     id="text92">= 0</text>
+  <text
+     x="9.5"
+     y="49.6"
+     style="font-family:'Times New Roman';font-size:2.6px;fill:#000000;text-anchor:middle"
+     id="text93">Pore pressure</text>
+  <path
+     style="fill:#005500;stroke:#008000;stroke-width:0.3;stroke-miterlimit:4.1;marker-end:url(#ArrowWide);stroke-opacity:0.99215686"
+     d="M 16.565625,0.44034672 V 2.9223009"
+     id="path93" />
+</svg>

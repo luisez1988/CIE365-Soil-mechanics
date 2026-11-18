@@ -207,8 +207,7 @@
            x="15.940033"
            y="12.432099">(psi)</tspan></text>
     </g>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="7.3006558"
@@ -219,9 +218,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="7.3006558"
          y="16.736628">20.6</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="7.3006558"
@@ -232,9 +229,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="7.3006558"
          y="20.077194">15</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="7.3006558"
@@ -245,9 +240,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="7.3006558"
          y="23.417761">10.4</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="18.170502"
@@ -258,9 +251,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="18.170502"
          y="16.736628">19.1</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="18.170502"
@@ -271,9 +262,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="18.170502"
          y="20.077194">14.4</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="18.170502"
@@ -284,7 +273,6 @@
          style="fill:#000080;stroke-width:0.264583"
          x="18.170502"
          y="23.417761">10.2</tspan></text>
--->
     <path class="fragment"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 25.895321,10.672196 V 23.725793"
@@ -348,8 +336,7 @@
          id="tspan21"
          x="4.889606"
          y="29.605316">δx=</tspan></text>
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;stroke-width:0.264583;fill:#000080"
        x="9.0944443"
@@ -360,10 +347,8 @@
          style="stroke-width:0.264583;fill:#000080"
          x="9.0944443"
          y="29.620819">0.05*2.5=0.125</tspan></text>
--->
 
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="29.38319"
@@ -374,9 +359,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="29.38319"
          y="16.736628">18.4</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="29.38319"
@@ -387,9 +370,7 @@
          style="fill:#000080;stroke-width:0.264583"
          x="29.38319"
          y="20.077194">13.4</tspan></text>
--->
-    <!-- STUDENT_HIDDEN
-<text class="Animate"
+    <text class="Animate"
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Gunny Rewritten';-inkscape-font-specification:'Gunny Rewritten';font-variant-ligatures:none;fill:#000080;stroke-width:0.264583"
        x="29.38319"
@@ -400,6 +381,5 @@
          style="fill:#000080;stroke-width:0.264583"
          x="29.38319"
          y="23.417761">9.5</tspan></text>
--->
   </g>
 </svg>

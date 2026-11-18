@@ -19,6 +19,39 @@
 		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
 		<!-- Shares the screen -->
 	
+		<!-- worked-example solutions: shared with the ebook (see SOLUTIONS.md) -->
+		<link rel="stylesheet" href="../assets/solutions.css">
+
+		<!-- MathJax 3, configured directly.
+		     The reveal `math` plugin's default export (RevealMath) is the MathJax *2*
+		     wrapper: it ends in MathJax.Hub.Config(), which does not exist in MathJax 3,
+		     so its callback threw and every option below it was silently dead. Equations
+		     rendered only because MathJax 3 auto-typesets the document on startup.
+		     Configuring MathJax here instead gives us working macros and a real
+		     Reveal.layout() once typesetting settles. -->
+		<script src="../assets/mathjax-macros.js"></script>
+		<script>
+		window.MathJax = {
+			tex: {
+				inlineMath: [['\\(', '\\)']],
+				displayMath: [['\\[', '\\]'], ['$$', '$$']],
+				macros: window.SOL_MACROS
+			},
+			options: {
+				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			startup: {
+				ready: function () {
+					MathJax.startup.defaultReady();
+					MathJax.startup.promise.then(function () {
+						if (window.Reveal && Reveal.layout) Reveal.layout();
+					});
+				}
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" async></script>
+
 	</head>
 	  <body onload="init_api()">
 	
@@ -37,7 +70,7 @@
 	
 					<div class='footer'>
 						CE 342
-						Spring 2026
+						Fall 2026
 					</div>
 	
 					<style>
@@ -70,6 +103,21 @@
 			border: 10px solid #296B64;
 		  }
 		</style>
+		<!-- <section>
+		<h1>Announcements</h1>
+		<ul>
+		<li><strong style='color:#000'>Course evaluations</strong>: If you liked this course give it a thumbs up! </li>
+		<li>If you did not like it, please provide feedback so I can improve!</li>
+
+		<li>Will post HM7 solution after class</li>
+		<li>HM8 posted and due on Dec. 2. Solution will be posted together with the assignment soon. </li>
+	
+		<li>Extra credit homework Dec. 2 at 8:30 AM. Only for students with more than 80% attendance.</li>
+	
+		</ul>
+
+		
+		</section> -->
 				<!-- <section> -->
 					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
@@ -77,9 +125,9 @@
 							<div class="qrCode" name="https://drive.google.com/file/d/1O2fsObvrtn_-DnW4aX6CAm2Zn2DZpFmS/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 8: Shear strength">
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 9: Shear strength">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-							<p style="color:#faffff; font-size:35px">Spring 2026</p>
+							<p style="color:#faffff; font-size:35px">Fall 2026</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
 							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
 						</div>
@@ -506,7 +554,7 @@ This is known as the <span class='atb'>drained condition</span>.
 	</section>
 
 	<section >
-	<h1>Example 8.4</h1>
+	<h1>Example 9.4</h1>
 	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
 	The figure shows the results of three direct shear tests on a silty sand sample. Find: (a) the peak friction angle, and (b) the secant friction angle at \(\delta x/D=0.05\). \(D=2.5\) in.
 	</div>
@@ -516,15 +564,22 @@ This is known as the <span class='atb'>drained condition</span>.
 	<img src="FiguresGeneral_student/DST_data.svg" style="width:100%"/>
 	</div>
 	<div class='col' style='width: 50%;'>
-	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
-	<img src="FiguresGeneral_student/EX740.svg" style="width:100%"/>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-4.html' data-part='1'></div>
 	</div>
 	</div>
 	</div>
-	
+
 	</section>
 
 	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-4.html' data-part='2'></div>
+	</div>
+	</section>
+
+	<!-- Previous working slide of Example 9.4 (Google Sheet + EX741), replaced by solutions/ex-9-4.html part 2. Kept hidden. -->
+	<section data-visibility="hidden">
 	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
 	<div class='container'>
 	<div class='col' style='width: 50%;'>
@@ -536,6 +591,109 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 	</div>
 	
+	</section>
+
+	<section >
+	<h1>Triaxial test (TX)</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_apparatus.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<ul style='font-size: 0.85em;'>
+		<!-- <li class='fragment'>A <strong style='color:black'>cylindrical</strong> sample in a rubber <span class='atb'>membrane</span> sits inside a water-filled cell.</li> -->
+		<li class='fragment'><strong style='color:black'>Stage 1:</strong> <span class='atb'>cell pressure</span> \(\sigma_3\) all around. Drainage <strong style='color:green'>open</strong> \(\implies\) consolidated.</li>
+		<li class='fragment'><strong style='color:black'>Stage 2:</strong> axial stress <span class='atb'>increased</span> at constant \(\sigma_3\) until failure, <strong style='color:green'>drained</strong> or <strong style='color:red'>undrained</strong>.</li>
+		<li class='fragment'>\(\sigma_1\) is axial and \(\sigma_2=\sigma_3\): the <span class='atb'>principal stresses</span> are known.</li>
+	</ul>
+	<br>
+	Three flavors:
+	<ol>
+		<li class='fragment'>Consolidated-drained (CD)</li>
+		<li class='fragment'>Consolidated-undrained (CU)</li>
+		<li class='fragment'>Unconsolidated-undrained (UU)</li>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>Drained triaxial test (CD)</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_drained_shear.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<ul style='font-size: 0.85em;'>
+		<li class='fragment'><strong style='color:black'>Shearing stage:</strong> drainage valve <span class='atb'>open</span> and <span class='atb'>slow</span> loading, so \(\Delta u \approx 0\) and \(\sigma'=\sigma\).</li>
+		<li class='fragment'><strong style='color:blue'>Measured:</strong> load \(P\), displacement \(\delta\), <span class='atb'>volume change</span> \(\Delta V\), cell pressure \(\sigma_3\).</li>
+		<li class='fragment'><strong style='color:black'>Computed:</strong> \(\varepsilon_a=\delta/H_0\), \(\varepsilon_v=\Delta V/V_0\), \(A=A_0 \, (1-\varepsilon_v)/(1-\varepsilon_a)\).</li>
+	</ul>
+
+	<div class='equationBox fragment' style='font-size: 0.9em; margin-top: 30px;'>
+	\( \sigma_d=\sigma_1-\sigma_3=\cfrac{P}{A} \qquad \sigma'_1=\sigma'_3+\sigma_d \)
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>CD triaxial data interpretation</h1>
+	<div class='container'>
+	<div class='col' style='width: 45%;'>
+	<figure>
+	<img src='FiguresGeneral/TX_interpretation.svg' width='90%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 55%;'>
+	<div class='defBox fragment' name='Failure circle' style='margin-top: 0px;margin-left: 0px;font-size: 0.9em;'>
+	\(\sigma'_{1f}=\sigma'_3+\sigma_{d,f}\): one <span class='atb'>Mohr circle</span> per test.
+	</div>
+	<div class='defBox fragment' name='Peak friction angle' style='margin-top: 5px;margin-left: 0px;font-size: 0.9em;'>
+	<strong style='color:green'>\(\phi'_p\)</strong>: envelope tangent to the <strong style='color:black'>peak</strong> circles (\(\sigma_{d,p}\)).
+	</div>
+	<div class='defBox fragment' name='Critical friction angle' style='margin-top: 5px;margin-left: 0px;font-size: 0.9em;'>
+	<strong style='color:red'>\(\phi'_c\)</strong>: envelope tangent to the circles at <strong style='color:black'>very large</strong> strains.
+	</div>
+	<div class='equationBox fragment' style='margin-top: 30px;font-size: 0.85em;'>
+	For \(c'=0\): \( \sin\phi'=\cfrac{\sigma_{d,f}}{2\sigma'_3+\sigma_{d,f}} \)
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<h1>Example 9.5</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	The figure shows the results of three consolidated-drained triaxial tests on a dense sand (cell pressures 10, 20 and 40 kPa). Find: (a) the peak friction angle, and (b) the critical state friction angle.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 55%;'>
+	<img src="FiguresGeneral_student/TX_data.svg" style="width:100%"/>
+	</div>
+	<div class='col' style='width: 45%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;min-height: 360px;'>
+	<div class='Solution' data-src='solutions/ex-9-5.html' data-part='1'></div>
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-5.html' data-part='2'></div>
+	</div>
 	</section>
 
 <!-- <section >
@@ -884,7 +1042,7 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 
 	<figure>
-	<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1200px-Landslide_in_Cusco%2C_Peru_-_2018.jpg' width='100%'/>
+	<img src='https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1920px-Landslide_in_Cusco%2C_Peru_-_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20180316193541' width='100%'/>
 	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 	</figure>
 
@@ -902,6 +1060,46 @@ This is known as the <span class='atb'>drained condition</span>.
 	</div>
 
 	
+	</section>
+
+	<section >
+	<h1>Example 9.6</h1>
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;font-size: 0.75em;'>
+	Point \(A\) is at the middle of the base of the shaded slice (\(\alpha=40^\circ\)). The element shows the total stresses at \(A\), and the water table, which seeps out on the slope face, is \(h_w=4\) m above \(A\). Soil: \(\phi'_p=36^\circ\), \(c'_p=10\) kPa; \(\phi'_c=32^\circ\), \(c'_c=0\). Determine: (a) the factor of safety on the slice base, (b) the effective stress Mohr's circle at \(A\) against the M-C lines, and (c) the principal stresses.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/slope_example.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 50%;'>
+	<div class='ProblemBox' style='margin-top: 10px;margin-left: 0px;min-height: 340px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='1'></div>
+	</div>
+	</div>
+	</div>
+
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='2'></div>
+	</div>
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='3'></div>
+	</div>
+	</section>
+
+	<section >
+	<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px; height: 600px;'>
+	<div class='Solution' data-src='solutions/ex-9-6.html' data-part='4'></div>
+	</div>
 	</section>
 
 	<!-- <section >
@@ -928,12 +1126,20 @@ This is known as the <span class='atb'>drained condition</span>.
 
 	</section>
 
-	<section >
+	<section>
+	<h1>Dr. Z's guarantee</h1>
+
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	After you pass this course you have my <strong style='color:#000'>guarantee</strong> that I will be available for you for <strong style='color:#000'>professional consultation</strong>. Just send me an email if you are working on a project and need help understanding the geotechnical aspects of it. I will be happy to help you.
+	</div>
+	</section>
+
+	<!-- <section >
 
 
 		<iframe class="stretch" src="https://www.youtube.com/embed/KwvyfS9Icyc?autoplay=1&rel=0&modestbranding=1" data-preload></iframe>
 	
-	</section>
+	</section> -->
 
 
 
@@ -993,11 +1199,14 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@4.4.0/plugin/math/math.js"></script>
 <script src="plugin/chalkboard/plugin.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
-<script src="plugin/Animated_lines/animate_svg.js"></script>
+<!-- animate_svg.js removed: it expects inline SVG, but every figure here is an
+     <object>, so External_svg.js does all the real work. It also threw a
+     TypeError on load and on every hashchange (it looks up <section> ids that
+     do not exist in this deck). -->
 <script src="plugin/Animated_lines/External_svg.js"></script>
+<script src="../assets/solution-plugin.js"></script>
 <!-- <script src="plugin/audio-slideshow/plugin.js"></script>
 <script src="plugin/audio-slideshow/RecordRTC.js"></script>
 <script src="plugin/audio-slideshow/recorder.js"></script> -->
@@ -1021,21 +1230,12 @@ Reveal.initialize({
    autoPlayMedia: true,
    width: 1280,
    height: 720,
-   math: {
-	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-	   config: 'TeX-AMS_HTML-full',
-	   tex2jax: {
-		   inlineMath: [['\\(','\\)']],
-		   displayMath: [['\\[','\\]']],
-		   balanceBraces: true,
-		   processEscapes: false,
-		   processRefs: true,
-		   processEnvironments: true,
-		   preview: 'TeX',
-		   skipTags: ['script','noscript','style','textarea','pre','code'],
-		   ignoreClass: 'tex2jax_ignore',
-		   processClass: 'tex2jax_process'
-	   },
+   // MathJax is configured in <head> (window.MathJax), not here — see the note there.
+
+   // Worked-example solutions (see SOLUTIONS.md).
+   solution: {
+	   sound: true,           // chalk while typing, solution fragments only
+	   charsPerSecond: 5,    // typing speed — the one dial. Lower is slower.
    },
 
    spotlight: {
@@ -1160,7 +1360,7 @@ Reveal.initialize({
 	   // ...
    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    // Learn about plugins: https://revealjs.com/plugins/
-   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+   plugins: [ RevealCustomControls, RevealSolution,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
 					   ],
 						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
 	   });
